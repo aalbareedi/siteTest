@@ -51,7 +51,6 @@ a {
 }
 
 .myNameKey {
-  color: orange;
   font-family: "Tomorrow", sans-serif;
   letter-spacing: 0.4px;
   word-spacing: 1.2px;
@@ -126,7 +125,7 @@ a {
 }
 
 .navWindow {
-  height: 100vh;
+  top: 0px;
   bottom: 0px;
   width: 100%;
   position: fixed;
@@ -171,7 +170,7 @@ a {
 }
 
 .navMenu {
-  height: 500px;
+  height: calc(100vh - 88px);
   position: absolute;
   bottom: -100vh;
   -webkit-transition: bottom 0.3s;
