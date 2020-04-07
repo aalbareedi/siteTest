@@ -39,7 +39,7 @@ a {
 }
 
 #lastIntroBox {
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .myNameKey {
@@ -73,7 +73,7 @@ a {
 .landingText {
   font-family: "Tomorrow", sans-serif;
   width: 268px;
-  margin: 70px auto 0px auto;
+  margin: 0px auto 0px auto;
   line-height: 36px;
 }
 
@@ -115,7 +115,6 @@ a {
 }
 
 .navWindow {
-  background-color: gray;
   height: 100vh;
   bottom: 0px;
   width: 100%;
