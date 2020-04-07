@@ -57,10 +57,15 @@ a {
   margin-bottom: 10px;
 }
 
+.period {
+  font-family: "Tomorrow", sans-serif;
+  margin-left: 1px;
+}
+
 .myNameKey {
   font-family: "Tomorrow", sans-serif;
   letter-spacing: 0.4px;
-  word-spacing: 1.2px;
+  word-spacing: 4px;
 }
 
 .myNameValue {
@@ -75,6 +80,7 @@ a {
 .jobTitleKey {
   font-family: "Tomorrow", sans-serif;
   letter-spacing: 0.4px;
+  word-spacing: 1px;
 }
 
 .jobTitleValue {

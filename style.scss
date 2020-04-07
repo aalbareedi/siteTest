@@ -48,6 +48,17 @@ a {
 #lastIntroBox {
   margin-bottom: 10px;
 }
+// .period {
+//   position: absolute;
+//   right: 0px;
+//   top: -7px;
+//   font-size: 23px;
+//   font-family: "Tomorrow", sans-serif;
+// }
+.period {
+  font-family: "Tomorrow", sans-serif;
+  margin-left: 1px;
+}
 .myNameKey {
   // color: orange;
   // display: inline-block;
@@ -57,7 +68,7 @@ a {
   // font-family: "Kite One", sans-serif;
   font-family: "Tomorrow", sans-serif;
   letter-spacing: 0.4px;
-  word-spacing: 1.2px;
+  word-spacing: 4px;
 }
 .myNameValue {
   position: absolute;
@@ -71,6 +82,7 @@ a {
 .jobTitleKey {
   font-family: "Tomorrow", sans-serif;
   letter-spacing: 0.4px;
+  word-spacing: 1px;
 }
 .jobTitleValue {
   position: absolute;
