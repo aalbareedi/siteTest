@@ -19,6 +19,14 @@ a {
   opacity: 0 !important;
 }
 
+.openNavLogoBar {
+  top: 0px !important;
+}
+
+.openNavMenu {
+  bottom: 0vh !important;
+}
+
 .landing {
   background-color: darkgray;
   height: 100vh;
@@ -45,6 +53,7 @@ a {
 .myNameKey {
   font-family: "Tomorrow", sans-serif;
   letter-spacing: 0.4px;
+  word-spacing: 1.2px;
 }
 
 .myNameValue {
@@ -75,6 +84,7 @@ a {
   width: 268px;
   margin: 0px auto 0px auto;
   line-height: 36px;
+  letter-spacing: 0.4px;
 }
 
 .navToggleBtn {
@@ -119,17 +129,56 @@ a {
   bottom: 0px;
   width: 100%;
   position: fixed;
-  display: none;
 }
 
-.navGrid {
+.navLogoBar {
+  background-color: lightgray;
+  width: 100%;
+  height: 88px;
+  position: absolute;
+  top: -88px;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+  border-bottom: 2px solid gray;
+}
+
+.navLogoImg {
+  display: block;
+  position: absolute;
+  width: 94px;
+  left: 18px;
+  top: 10px;
+}
+
+.navMyName {
+  position: absolute;
+  right: 21px;
+  top: 20px;
+  font-family: "Fjalla One", sans-serif;
+  letter-spacing: 0.6px;
+  font-size: 28px;
+}
+
+.navJobTitle {
+  position: absolute;
+  right: 22px;
+  top: 52px;
+  font-family: "Fjalla One", sans-serif;
+  font-family: "Tomorrow", sans-serif;
+  letter-spacing: 0.3px;
+  font-size: 17px;
+}
+
+.navMenu {
   height: calc(100vh - 88px);
   position: absolute;
-  bottom: 0px;
+  bottom: -100vh;
+  -webkit-transition: bottom 0.3s;
+  transition: bottom 0.3s;
   width: 100%;
 }
 
-.navGridOption {
+.navMenuOption {
   background-color: gray;
   font-family: "Fjalla One", sans-serif;
   font-size: 28px;
@@ -145,41 +194,5 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.navLogoBar {
-  background-color: lightgray;
-  width: 100%;
-  height: 88px;
-  position: absolute;
-  top: 0px;
-  border-bottom: 2px solid gray;
-}
-
-.navLogoImg {
-  display: block;
-  position: absolute;
-  width: 94px;
-  left: 12px;
-  top: 10px;
-}
-
-.navMyName {
-  position: absolute;
-  right: 14px;
-  top: 20px;
-  font-family: "Fjalla One", sans-serif;
-  letter-spacing: 0.6px;
-  font-size: 28px;
-}
-
-.navJobTitle {
-  position: absolute;
-  right: 16px;
-  top: 52px;
-  font-family: "Fjalla One", sans-serif;
-  font-family: "Tomorrow", sans-serif;
-  letter-spacing: 0.3px;
-  font-size: 17px;
 }
 /*# sourceMappingURL=style.css.map */
