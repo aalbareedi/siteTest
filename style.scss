@@ -55,10 +55,9 @@ a {
 //   font-size: 23px;
 //   font-family: "Tomorrow", sans-serif;
 // }
-.period {
-  font-family: "Tomorrow", sans-serif;
-  margin-left: 1px;
-}
+// .period {
+//   font-family: "Tomorrow", sans-serif;
+// }
 .myNameKey {
   // color: orange;
   // display: inline-block;
@@ -67,7 +66,7 @@ a {
   // font-family: "Chathura", sans-serif;
   // font-family: "Kite One", sans-serif;
   font-family: "Tomorrow", sans-serif;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
   word-spacing: 4px;
 }
 .myNameValue {
@@ -81,8 +80,8 @@ a {
 }
 .jobTitleKey {
   font-family: "Tomorrow", sans-serif;
-  letter-spacing: 0.4px;
-  word-spacing: 1px;
+  letter-spacing: 0.5px;
+  word-spacing: 1.3px;
 }
 .jobTitleValue {
   position: absolute;
@@ -100,7 +99,8 @@ a {
   width: 268px;
   margin: 0px auto 0px auto;
   line-height: 36px;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
+  word-spacing: 3px;
 }
 
 .navToggleBtn {
@@ -154,25 +154,25 @@ a {
   display: block;
   position: absolute;
   width: 94px;
-  left: 18px;
+  left: 10px;
   top: 10px;
 }
 .navMyName {
   position: absolute;
-  right: 21px;
+  right: 17px;
   top: 20px;
   font-family: "Fjalla One", sans-serif;
   letter-spacing: 0.6px;
-  font-size: 28px;
+  font-size: 30px;
 }
 .navJobTitle {
   position: absolute;
-  right: 22px;
+  right: 18px;
   top: 52px;
   font-family: "Fjalla One", sans-serif;
   font-family: "Tomorrow", sans-serif;
-  letter-spacing: 0.3px;
-  font-size: 17px;
+  letter-spacing: 0.4px;
+  font-size: 18px;
 }
 .navMenu {
   height: calc(100% - 88px);
@@ -184,7 +184,7 @@ a {
 .navMenuOption {
   background-color: gray;
   font-family: "Fjalla One", sans-serif;
-  font-size: 28px;
+  font-size: 30px;
   letter-spacing: 0.6px;
   text-align: center;
   height: 33.33%;
