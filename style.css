@@ -51,7 +51,6 @@ a {
 }
 
 .myNameKey {
-  color: orange;
   font-family: "Tomorrow", sans-serif;
   letter-spacing: 0.4px;
   word-spacing: 1.2px;
@@ -129,6 +128,7 @@ a {
   height: 100vh;
   bottom: 0px;
   width: 100%;
+  position: fixed;
 }
 
 .navLogoBar {
