@@ -8,6 +8,6 @@ let navToggleBtn = document.querySelector(".navToggleBtn");
 let navLogoBar = document.querySelector(".navLogoBar");
 let navToggleIcon = document.querySelector(".navToggleIcon");
 let navMenu = document.querySelector(".navMenu");
-// let navLogoImg = document.querySelector(".navLogoImg");
+let navWindow = document.querySelector(".navWindow");
 // let logoTextTop = document.querySelector(".logoTextTop");
 // let logoTextBottom = document.querySelector(".logoTextBottom");

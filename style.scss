@@ -15,6 +15,9 @@ a {
 // .displayHidden {
 //   display: none !important;
 // }
+.unselectable {
+  user-select: none;
+}
 .opacityZero {
   opacity: 0 !important;
 }
@@ -43,10 +46,10 @@ a {
   margin: 0 auto 18px auto;
 }
 #lastIntroBox {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 .myNameKey {
-  color: orange;
+  // color: orange;
   // display: inline-block;
   // font-family: "Barlow Condensed", sans-serif;
   // font-family: "Jura", sans-serif;
@@ -97,8 +100,8 @@ a {
   /* color: rgba(255, 255, 255, 0.8); */
   position: fixed;
   border-radius: 50%;
-  height: 58px;
-  width: 58px;
+  height: 60px;
+  width: 60px;
   border: none;
   background-color: rgba(51, 51, 51, 0.4);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
