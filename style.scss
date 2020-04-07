@@ -46,7 +46,7 @@ a {
   margin-bottom: 40px;
 }
 .myNameKey {
-  // color: orange;
+  color: orange;
   // display: inline-block;
   // font-family: "Barlow Condensed", sans-serif;
   // font-family: "Jura", sans-serif;
@@ -159,7 +159,8 @@ a {
   font-size: 17px;
 }
 .navMenu {
-  height: calc(100vh - 88px);
+  // height: calc(100vh - 88px);
+  height: 500px;
   position: absolute;
   bottom: -100vh;
   transition: bottom 0.3s;
