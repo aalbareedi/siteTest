@@ -12,9 +12,9 @@ a {
   cursor: pointer;
   outline: none;
 }
-// .displayHidden {
-//   display: none !important;
-// }
+.displayHidden {
+  display: none !important;
+}
 .unselectable {
   user-select: none;
 }
@@ -27,6 +27,13 @@ a {
 .openNavMenu {
   bottom: 0vh !important;
 }
+.openNavWindow {
+  margin-left: 0vw !important;
+  transition: margin-left 0s 0s !important;
+}
+html {
+  background-color: darkgray;
+}
 
 .landing {
   background-color: darkgray;
@@ -34,11 +41,10 @@ a {
   width: 100%;
   position: fixed;
 }
-
 .landingLogoImg {
   display: block;
-  width: 278px;
-  margin: 12px auto 14px auto;
+  width: 230px;
+  margin: 12px auto 18px auto;
 }
 .introBox {
   position: relative;
@@ -55,12 +61,11 @@ a {
 //   font-size: 23px;
 //   font-family: "Tomorrow", sans-serif;
 // }
-// .period {
-//   font-family: "Tomorrow", sans-serif;
-// }
+.period {
+  font-family: "Tomorrow", sans-serif;
+}
 .myNameKey {
   // color: orange;
-  // display: inline-block;
   // font-family: "Barlow Condensed", sans-serif;
   // font-family: "Jura", sans-serif;
   // font-family: "Chathura", sans-serif;
@@ -73,7 +78,6 @@ a {
   position: absolute;
   top: -4px;
   right: 0;
-  // display: inline-block;
   font-family: "Fjalla One", sans-serif;
   letter-spacing: 0.6px;
   font-size: 20px;
@@ -87,7 +91,6 @@ a {
   position: absolute;
   right: 0;
   top: -4px;
-  // display: inline-block;
   // font-family: "Barlow Condensed", sans-serif;
   font-family: "Fjalla One", sans-serif;
   letter-spacing: 0.2px;
@@ -102,8 +105,8 @@ a {
   letter-spacing: 0.5px;
   word-spacing: 4px;
 }
-
 .navToggleBtn {
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,15 +134,14 @@ a {
   background-color: rgba(51, 51, 51, 0.4);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
-
 .navWindow {
-  // background-color: gray;
-  // height: 100vh;
+  z-index: 5;
   top: 0px;
   bottom: 0px;
+  margin-left: -105vw;
   width: 100%;
   position: fixed;
-  // display: none;
+  transition: margin-left 0s 0.3s;
 }
 .navLogoBar {
   background-color: lightgray;
@@ -191,4 +193,37 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#aboutBox {
+  position: fixed;
+  margin-left: -105vw;
+  width: 100vw;
+  height: 800px;
+  background-color: purple;
+  transition: margin-left 0.3s;
+}
+// .openAboutBox {
+//   margin-left: 0vw !important;
+// }
+.openBox {
+  margin-left: 0vw !important;
+}
+#portfolioBox {
+  position: fixed;
+  margin-left: -105vw;
+  width: 100vw;
+  height: 800px;
+  background-color: orange;
+  transition: margin-left 0.3s;
+}
+// .openPortfolioBox {
+//   margin-left: 0vw !important;
+// }
+#contactBox {
+  position: fixed;
+  margin-left: -105vw;
+  width: 100vw;
+  height: 800px;
+  background-color: green;
+  transition: margin-left 0.3s;
 }

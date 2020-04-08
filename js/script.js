@@ -1,4 +1,4 @@
-let nav = new SlideNav();
+// let nav = new SlideNav();
 
 // setTimeout(function() {
 //   alert(window.innerWidth + "," + window.innerHeight);

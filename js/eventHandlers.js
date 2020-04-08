@@ -3,18 +3,42 @@ document.addEventListener("touchstart", function () {}, true);
 
 navToggleBtn.onclick = function () {
   if (navLogoBar.classList.contains("openNavLogoBar") == false) {
-    // navWindow.classList.remove("displayHidden");
-    navLogoBar.classList.add("openNavLogoBar");
-    navToggleIcon.classList.add("is-active");
-    navMenu.classList.add("openNavMenu");
-    // openNavMenu();
+    openNavMenu();
   } else {
-    // navWindow.classList.add("displayHidden");
-    navLogoBar.classList.remove("openNavLogoBar");
-    navToggleIcon.classList.remove("is-active");
-    navMenu.classList.remove("openNavMenu");
-    // closeNavMenu();
+    closeNavMenu();
   }
+};
+
+navLogoBar.onclick = function () {
+  closeNavMenu();
+  landing.classList.remove("displayHidden");
+  aboutBox.classList.remove("openBox");
+  portfolioBox.classList.remove("openBox");
+  contactBox.classList.remove("openBox");
+};
+
+aboutLink.onclick = function () {
+  closeNavMenu();
+  aboutBox.classList.add("openBox");
+  landing.classList.add("displayHidden");
+  portfolioBox.classList.remove("openBox");
+  contactBox.classList.remove("openBox");
+};
+
+portfolioLink.onclick = function () {
+  closeNavMenu();
+  portfolioBox.classList.add("openBox");
+  landing.classList.add("displayHidden");
+  aboutBox.classList.remove("openBox");
+  contactBox.classList.remove("openBox");
+};
+
+contactLink.onclick = function () {
+  closeNavMenu();
+  contactBox.classList.add("openBox");
+  landing.classList.add("displayHidden");
+  aboutBox.classList.remove("openBox");
+  portfolioBox.classList.remove("openBox");
 };
 
 // body.onscroll = function () {

@@ -15,6 +15,10 @@ a {
   outline: none;
 }
 
+.displayHidden {
+  display: none !important;
+}
+
 .unselectable {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -34,6 +38,16 @@ a {
   bottom: 0vh !important;
 }
 
+.openNavWindow {
+  margin-left: 0vw !important;
+  -webkit-transition: margin-left 0s 0s !important;
+  transition: margin-left 0s 0s !important;
+}
+
+html {
+  background-color: darkgray;
+}
+
 .landing {
   background-color: darkgray;
   height: 100vh;
@@ -43,8 +57,8 @@ a {
 
 .landingLogoImg {
   display: block;
-  width: 278px;
-  margin: 12px auto 14px auto;
+  width: 230px;
+  margin: 12px auto 18px auto;
 }
 
 .introBox {
@@ -55,6 +69,10 @@ a {
 
 #lastIntroBox {
   margin-bottom: 10px;
+}
+
+.period {
+  font-family: "Tomorrow", sans-serif;
 }
 
 .myNameKey {
@@ -97,6 +115,7 @@ a {
 }
 
 .navToggleBtn {
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,10 +153,14 @@ a {
 }
 
 .navWindow {
+  z-index: 5;
   top: 0px;
   bottom: 0px;
+  margin-left: -105vw;
   width: 100%;
   position: fixed;
+  -webkit-transition: margin-left 0s 0.3s;
+  transition: margin-left 0s 0.3s;
 }
 
 .navLogoBar {
@@ -203,5 +226,39 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#aboutBox {
+  position: fixed;
+  margin-left: -105vw;
+  width: 100vw;
+  height: 800px;
+  background-color: purple;
+  -webkit-transition: margin-left 0.3s;
+  transition: margin-left 0.3s;
+}
+
+.openBox {
+  margin-left: 0vw !important;
+}
+
+#portfolioBox {
+  position: fixed;
+  margin-left: -105vw;
+  width: 100vw;
+  height: 800px;
+  background-color: orange;
+  -webkit-transition: margin-left 0.3s;
+  transition: margin-left 0.3s;
+}
+
+#contactBox {
+  position: fixed;
+  margin-left: -105vw;
+  width: 100vw;
+  height: 800px;
+  background-color: green;
+  -webkit-transition: margin-left 0.3s;
+  transition: margin-left 0.3s;
 }
 /*# sourceMappingURL=style.css.map */
