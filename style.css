@@ -58,7 +58,7 @@ html {
 .landingLogoImg {
   display: block;
   width: 180px;
-  margin: 12px auto 22px auto;
+  margin: 12px auto 20px auto;
 }
 
 .introBox {
@@ -108,7 +108,7 @@ html {
 .landingText {
   font-family: "Tomorrow", sans-serif;
   width: 268px;
-  margin: 0px auto 20px auto;
+  margin: 0px auto 14px auto;
   line-height: 36px;
   letter-spacing: 0.5px;
   word-spacing: 4px;
@@ -121,68 +121,10 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 168px;
+  width: 172px;
   position: absolute;
   left: 50%;
   margin-left: -136px;
-}
-
-.socialMediaBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: silver;
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
-  border: none;
-  font-size: 28px;
-  color: whitesmoke;
-  text-decoration: none;
-}
-
-.navToggleBtn {
-  z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  bottom: 40px;
-  right: 24px;
-  /* color: rgba(255, 255, 255, 0.8); */
-  position: fixed;
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  border: none;
-  background-color: rgba(51, 51, 51, 0.4);
-  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.backToTopBtn {
-  bottom: 14%;
-  right: 24px;
-  /* color: rgba(255, 255, 255, 0.8); */
-  position: fixed;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  border: none;
-  background-color: rgba(51, 51, 51, 0.4);
-  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .navWindow {
@@ -293,5 +235,49 @@ html {
   background-color: green;
   -webkit-transition: margin-left 0.3s;
   transition: margin-left 0.3s;
+}
+
+.navToggleBtn {
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 32px;
+  right: 24px;
+  /* color: rgba(255, 255, 255, 0.8); */
+  position: fixed;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  border: none;
+  background-color: rgba(51, 51, 51, 0.4);
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.socialMediaBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: silver;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  font-size: 28px;
+  color: whitesmoke;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
