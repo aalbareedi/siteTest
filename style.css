@@ -68,7 +68,7 @@ html {
 }
 
 #lastIntroBox {
-  margin-bottom: 22px;
+  margin-bottom: 10px;
 }
 
 .period {
@@ -142,7 +142,7 @@ html {
   height: 50px;
   border-radius: 8px;
   border: none;
-  font-size: 26px;
+  font-size: 28px;
   color: whitesmoke;
   text-decoration: none;
 }
