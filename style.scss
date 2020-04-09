@@ -101,7 +101,7 @@ html {
 .landingSocialMedia {
   display: flex;
   justify-content: space-between;
-  width: 172px;
+  width: 204px;
   position: absolute;
   left: 50%;
   margin-left: -136px;
@@ -207,12 +207,12 @@ html {
   justify-content: center;
   align-items: center;
   bottom: 32px;
-  right: 24px;
+  right: 18px;
   /* color: rgba(255, 255, 255, 0.8); */
   position: fixed;
   border-radius: 50%;
-  height: 60px;
-  width: 60px;
+  height: 58px;
+  width: 58px;
   border: none;
   background-color: rgba(51, 51, 51, 0.4);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
@@ -222,14 +222,33 @@ html {
   justify-content: center;
   align-items: center;
   background-color: silver;
-  width: 50px;
-  height: 50px;
+  width: 46px;
+  height: 46px;
   border-radius: 8px;
   // border: 2px solid silver;
   border: none;
   font-size: 28px;
   color: whitesmoke;
   text-decoration: none;
+}
+.hireMeBtn {
+  font-family: "Fjalla One", sans-serif;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  background-color: silver;
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  // border: 2px solid silver;
+  border: none;
+  font-size: 28px;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  padding: 0 3px;
+  letter-spacing: 0.5px;
 }
 // .backToTopBtn {
 //   bottom: 14%;
