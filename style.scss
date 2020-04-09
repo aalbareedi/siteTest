@@ -1,3 +1,11 @@
+// @mixin flexCenterXY {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+$mobileNav: 88px;
+
 * {
   /* Remove Gray Highlight When Tapping Links in Mobile Safari */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -40,6 +48,7 @@ html {
   height: 100vh;
   width: 100%;
   position: fixed;
+  margin-left: -105vw;
 }
 .landingLogoImg {
   display: block;
@@ -150,7 +159,7 @@ html {
 }
 .navMenu {
   height: calc(100% - 88px);
-  position: absolute;
+  position: fixed;
   bottom: -100vh;
   transition: bottom 0.3s;
   width: 100%;
@@ -167,12 +176,14 @@ html {
   align-items: center;
 }
 #aboutBox {
+  margin-top: $mobileNav;
   position: fixed;
   margin-left: -105vw;
   width: 100vw;
   height: 800px;
   background-color: purple;
   transition: margin-left 0.3s;
+  overflow: scroll;
 }
 // .openAboutBox {
 //   margin-left: 0vw !important;
@@ -181,23 +192,27 @@ html {
   margin-left: 0vw !important;
 }
 #portfolioBox {
+  margin-top: $mobileNav;
   position: fixed;
   margin-left: -105vw;
   width: 100vw;
   height: 800px;
   background-color: orange;
   transition: margin-left 0.3s;
+  overflow: scroll;
 }
 // .openPortfolioBox {
 //   margin-left: 0vw !important;
 // }
 #contactBox {
+  margin-top: $mobileNav;
   position: fixed;
   margin-left: -105vw;
   width: 100vw;
   height: 800px;
   background-color: green;
   transition: margin-left 0.3s;
+  overflow: scroll;
 }
 
 // BUTTONS

@@ -2,15 +2,11 @@
 document.addEventListener("touchstart", function () {}, true);
 
 navToggleBtn.onclick = function () {
-  if (navLogoBar.classList.contains("openNavLogoBar") == false) {
-    // openNavMenu();
-    navWindow.classList.add("openNavWindow");
+  if (navToggleIcon.classList.contains("is-active") == false) {
     navLogoBar.classList.add("openNavLogoBar");
     navToggleIcon.classList.add("is-active");
     navMenu.classList.add("openNavMenu");
   } else {
-    // closeNavMenu();
-    navWindow.classList.remove("openNavWindow");
     navToggleIcon.classList.remove("is-active");
     navMenu.classList.remove("openNavMenu");
 
@@ -26,51 +22,20 @@ navToggleBtn.onclick = function () {
 };
 
 navLogoBar.onclick = function () {
-  // navWindow.classList.remove("openNavWindow");
-  // navLogoBar.classList.remove("openNavLogoBar");
-  // navToggleIcon.classList.remove("is-active");
-  // navMenu.classList.remove("openNavMenu");
-  // closeNavMenu();
-  // landing.classList.remove("displayHidden");
-  // aboutBox.classList.remove("openBox");
-  // portfolioBox.classList.remove("openBox");
-  // contactBox.classList.remove("openBox");
+  navLogoBar.classList.remove("openNavLogoBar");
+  navigateToPage(landing);
 };
 
 aboutLink.onclick = function () {
-  // navWindow.classList.remove("openNavWindow");
-  // navLogoBar.classList.remove("openNavLogoBar");
-  navToggleIcon.classList.remove("is-active");
-  navMenu.classList.remove("openNavMenu");
-  // closeNavMenu();
-  aboutBox.classList.add("openBox");
-  landing.classList.add("displayHidden");
-  portfolioBox.classList.remove("openBox");
-  contactBox.classList.remove("openBox");
+  navigateToPage(aboutBox);
 };
 
 portfolioLink.onclick = function () {
-  // navWindow.classList.remove("openNavWindow");
-  // navLogoBar.classList.remove("openNavLogoBar");
-  navToggleIcon.classList.remove("is-active");
-  navMenu.classList.remove("openNavMenu");
-  // closeNavMenu();
-  portfolioBox.classList.add("openBox");
-  landing.classList.add("displayHidden");
-  aboutBox.classList.remove("openBox");
-  contactBox.classList.remove("openBox");
+  navigateToPage(portfolioBox);
 };
 
 contactLink.onclick = function () {
-  // navWindow.classList.remove("openNavWindow");
-  // navLogoBar.classList.remove("openNavLogoBar");
-  navToggleIcon.classList.remove("is-active");
-  navMenu.classList.remove("openNavMenu");
-  // closeNavMenu();
-  contactBox.classList.add("openBox");
-  landing.classList.add("displayHidden");
-  aboutBox.classList.remove("openBox");
-  portfolioBox.classList.remove("openBox");
+  navigateToPage(contactBox);
 };
 
 // body.onscroll = function () {
