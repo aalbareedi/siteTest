@@ -67,7 +67,7 @@ html {
   font-family: "Tomorrow", sans-serif;
 }
 .myNameKey {
-  // color: orange;
+  color: orange;
   // font-family: "Barlow Condensed", sans-serif;
   // font-family: "Jura", sans-serif;
   // font-family: "Chathura", sans-serif;
@@ -128,7 +128,7 @@ html {
   background-color: lightgray;
   width: 100%;
   height: 88px;
-  position: absolute;
+  position: fixed;
   top: -88px;
   transition: top 0.3s;
   border-bottom: 2px solid gray;
