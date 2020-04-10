@@ -16,3 +16,4 @@ let contactLink = document.querySelector("#contactLink");
 let aboutBox = document.querySelector("#aboutBox");
 let portfolioBox = document.querySelector("#portfolioBox");
 let contactBox = document.querySelector("#contactBox");
+let hireMeBtn = document.querySelector(".hireMeBtn");

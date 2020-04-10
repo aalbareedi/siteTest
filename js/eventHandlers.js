@@ -21,6 +21,12 @@ navToggleBtn.onclick = function () {
   }
 };
 
+hireMeBtn.onclick = function () {
+  navLogoBar.classList.add("openNavLogoBar");
+  contactBox.classList.add("openBox");
+  // landing.classList.remove("openBox");
+};
+
 navLogoBar.onclick = function () {
   navLogoBar.classList.remove("openNavLogoBar");
   navigateToPage(landing);
