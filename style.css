@@ -63,7 +63,7 @@ html {
 }
 
 .introBox {
-  line-height: 34px;
+  line-height: 36px;
   position: relative;
   width: 280px;
   margin: 0 auto 0 auto;
@@ -78,8 +78,8 @@ html {
 
 .myNameValue {
   font-family: "Fjalla One", sans-serif;
-  letter-spacing: 0.6px;
   font-size: 20px;
+  margin-left: 3px;
 }
 
 .jobTitleKey {
