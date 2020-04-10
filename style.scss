@@ -112,7 +112,7 @@ html {
 .landingSocialMedia {
   display: flex;
   justify-content: space-between;
-  width: 204px;
+  // width: 210px;
   position: absolute;
   left: 50%;
   margin-left: -140px;
@@ -239,34 +239,22 @@ html {
   justify-content: center;
   align-items: center;
   background-color: silver;
-  width: 46px;
-  height: 46px;
-  border-radius: 8px;
-  // border: 2px solid silver;
+  width: 52px;
+  height: 52px;
+  // border-radius: 8px;
   border: none;
   font-size: 28px;
   color: whitesmoke;
   text-decoration: none;
 }
-.hireMeBtn {
+#hireMeBtn {
   font-family: "Fjalla One", sans-serif;
-  display: flex;
-  // justify-content: center;
-  align-items: center;
-  background-color: silver;
-  width: 46px;
-  height: 46px;
-  border-radius: 8px;
-  // border: 2px solid silver;
-  border: none;
-  font-size: 28px;
-  color: whitesmoke;
-  text-decoration: none;
   font-size: 16px;
   text-align: center;
   padding: 0 3px;
   letter-spacing: 0.5px;
 }
+
 // .backToTopBtn {
 //   bottom: 14%;
 //   right: 24px;

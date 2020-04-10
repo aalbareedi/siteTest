@@ -110,7 +110,6 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 204px;
   position: absolute;
   left: 50%;
   margin-left: -140px;
@@ -267,31 +266,16 @@ html {
       -ms-flex-align: center;
           align-items: center;
   background-color: silver;
-  width: 46px;
-  height: 46px;
-  border-radius: 8px;
+  width: 52px;
+  height: 52px;
   border: none;
   font-size: 28px;
   color: whitesmoke;
   text-decoration: none;
 }
 
-.hireMeBtn {
+#hireMeBtn {
   font-family: "Fjalla One", sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: silver;
-  width: 46px;
-  height: 46px;
-  border-radius: 8px;
-  border: none;
-  font-size: 28px;
-  color: whitesmoke;
-  text-decoration: none;
   font-size: 16px;
   text-align: center;
   padding: 0 3px;
