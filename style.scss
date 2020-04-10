@@ -52,8 +52,8 @@ html {
 }
 .landingLogoImg {
   display: block;
-  width: 180px;
-  margin: 12px auto 16px auto;
+  width: 170px;
+  margin: 12px auto 12px auto;
 }
 .introBox {
   line-height: 34px;
@@ -112,7 +112,6 @@ html {
 .landingSocialMedia {
   display: flex;
   justify-content: space-between;
-  // width: 210px;
   position: absolute;
   left: 50%;
   margin-left: -140px;
@@ -223,7 +222,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 32px;
+  bottom: 30px;
   right: 18px;
   /* color: rgba(255, 255, 255, 0.8); */
   position: fixed;
