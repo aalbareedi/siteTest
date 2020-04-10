@@ -23,7 +23,7 @@ navToggleBtn.onclick = function () {
 
 hireMeBtn.onclick = function () {
   navLogoBar.classList.add("openNavLogoBar");
-  contactBox.classList.add("openBox");
+  portfolioBox.classList.add("openBox");
   landing.classList.remove("openBox");
 };
 

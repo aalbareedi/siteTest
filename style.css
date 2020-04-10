@@ -276,9 +276,13 @@ html {
 
 #hireMeBtn {
   font-family: "Fjalla One", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
-  padding: 0 3px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#firstSocialMediaBtn {
+  border-radius: 10px 0px 0px 10px;
 }
 /*# sourceMappingURL=style.css.map */
