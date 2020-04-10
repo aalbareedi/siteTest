@@ -53,33 +53,35 @@ html {
 .landingLogoImg {
   display: block;
   width: 180px;
-  margin: 12px auto 20px auto;
+  margin: 12px auto 16px auto;
 }
 .introBox {
+  line-height: 34px;
   position: relative;
-  width: 268px;
-  margin: 0 auto 18px auto;
-}
-#lastIntroBox {
-  margin-bottom: 10px;
-}
-.period {
-  font-family: "Tomorrow", sans-serif;
-}
-.myNameKey {
-  color: orange;
-  // font-family: "Barlow Condensed", sans-serif;
-  // font-family: "Jura", sans-serif;
-  // font-family: "Chathura", sans-serif;
-  // font-family: "Kite One", sans-serif;
+  width: 280px;
+  margin: 0 auto 0 auto;
   font-family: "Tomorrow", sans-serif;
   letter-spacing: 0.5px;
   word-spacing: 4px;
 }
+
+.period {
+  font-family: "Tomorrow", sans-serif;
+}
+// .myNameKey {
+//   // color: orange;
+//   // font-family: "Barlow Condensed", sans-serif;
+//   // font-family: "Jura", sans-serif;
+//   // font-family: "Chathura", sans-serif;
+//   // font-family: "Kite One", sans-serif;
+//   font-family: "Tomorrow", sans-serif;
+//   letter-spacing: 0.5px;
+//   word-spacing: 4px;
+// }
 .myNameValue {
-  position: absolute;
-  top: -4px;
-  right: 0;
+  // position: absolute;
+  // top: -4px;
+  // right: 0;
   font-family: "Fjalla One", sans-serif;
   letter-spacing: 0.6px;
   font-size: 20px;
@@ -90,9 +92,9 @@ html {
   word-spacing: 1.3px;
 }
 .jobTitleValue {
-  position: absolute;
-  right: 0;
-  top: -4px;
+  // position: absolute;
+  // right: 0;
+  // top: -4px;
   // font-family: "Barlow Condensed", sans-serif;
   font-family: "Fjalla One", sans-serif;
   letter-spacing: 0.2px;
@@ -101,7 +103,7 @@ html {
 .landingText {
   // font-family: "Kite One", sans-serif;
   font-family: "Tomorrow", sans-serif;
-  width: 268px;
+  width: 280px;
   margin: 0px auto 14px auto;
   line-height: 36px;
   letter-spacing: 0.5px;
@@ -113,7 +115,7 @@ html {
   width: 204px;
   position: absolute;
   left: 50%;
-  margin-left: -136px;
+  margin-left: -140px;
 }
 .navWindow {
   z-index: 5;

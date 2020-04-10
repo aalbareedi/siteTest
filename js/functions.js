@@ -21,3 +21,7 @@ function navigateToPage(page) {
   landing.classList.remove("openBox");
   page.classList.add("openBox");
 }
+
+// function nextWord() {
+//   siteTextWords[index];
+// }
