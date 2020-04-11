@@ -296,8 +296,8 @@ html {
   /* Keeps the content on a single line */
   margin: 0 auto;
   /* Gives that scrolling effect as the typing happens */
-  -webkit-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end calc(3.5 / 0.5);
-          animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end calc(3.5 / 0.5);
+  -webkit-animation: typing 1.2s steps(30, end), blink-caret 0.5s step-end calc(1.2 / 0.5);
+          animation: typing 1.2s steps(30, end), blink-caret 0.5s step-end calc(1.2 / 0.5);
 }
 
 .typeWriter > *:nth-child(2) {
@@ -311,8 +311,8 @@ html {
   /* Keeps the content on a single line */
   margin: 0 auto;
   /* Gives that scrolling effect as the typing happens */
-  -webkit-animation: typing 3.5s steps(30, end) 3.5s, blink-caret 0.5s step-end 3.5s infinite;
-          animation: typing 3.5s steps(30, end) 3.5s, blink-caret 0.5s step-end 3.5s infinite;
+  -webkit-animation: typing 1.2s steps(30, end) 1.2s, blink-caret 0.5s step-end 1.2s infinite;
+          animation: typing 1.2s steps(30, end) 1.2s, blink-caret 0.5s step-end 1.2s infinite;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
