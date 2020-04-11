@@ -285,4 +285,73 @@ html {
 #firstSocialMediaBtn {
   border-radius: 10px 0px 0px 10px;
 }
+
+.typeWriter > *:nth-child(1) {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange;
+  /* The typwriter cursor */
+  border-color: transparent;
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  -webkit-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end calc(3.5 / 0.5);
+          animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end calc(3.5 / 0.5);
+}
+
+.typeWriter > *:nth-child(2) {
+  width: 0;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange;
+  /* The typwriter cursor */
+  border-color: transparent;
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  -webkit-animation: typing 3.5s steps(30, end) 3.5s, blink-caret 0.5s step-end 3.5s infinite;
+          animation: typing 3.5s steps(30, end) 3.5s, blink-caret 0.5s step-end 3.5s infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
 /*# sourceMappingURL=style.css.map */
