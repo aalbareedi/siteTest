@@ -56,13 +56,13 @@ html {
   margin: 12px auto 12px auto;
 }
 .introBox {
-  line-height: 36px;
   position: relative;
   width: 280px;
   margin: 0 auto 0 auto;
   font-family: "Tomorrow", sans-serif;
   letter-spacing: 0.5px;
   word-spacing: 4px;
+  line-height: 36px;
 }
 
 .period {
@@ -103,6 +103,9 @@ html {
   letter-spacing: 0.5px;
   word-spacing: 4px;
 }
+.wordSpace {
+  word-spacing: 2px;
+}
 .landingSocialMedia {
   display: flex;
   justify-content: space-between;
@@ -126,7 +129,7 @@ html {
   position: fixed;
   top: -88px;
   transition: top 0.3s;
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid silver;
 }
 .navLogoImg {
   display: block;
@@ -205,7 +208,7 @@ html {
   margin-left: -105vw;
   width: 100vw;
   height: 800px;
-  background-color: green;
+  background-color: silver;
   transition: margin-left 0.3s;
   overflow: scroll;
 }
@@ -236,7 +239,7 @@ html {
   height: 52px;
   // border-radius: 8px;
   border: none;
-  font-size: 28px;
+  font-size: 30px;
   color: whitesmoke;
   text-decoration: none;
 }
@@ -250,6 +253,9 @@ html {
 }
 #firstSocialMediaBtn {
   border-radius: 10px 0px 0px 10px;
+}
+.socialMediaBtn:active {
+  background-color: gainsboro;
 }
 
 // .backToTopBtn {
@@ -267,25 +273,41 @@ html {
 
 $typeWriteSpeed: 1.2s;
 
-.typeWriter > *:nth-child(1) {
+.typeWriter > * {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
-  border-color: transparent;
+  border-right: 0.15em solid transparent; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: typing $typeWriteSpeed steps(30, end),
+  width: 0;
+}
+
+.introBox.typeWriter > *:nth-child(1) {
+  animation: typing $typeWriteSpeed steps(30, end) 0s 1 forwards,
     blink-caret 0.5s step-end calc(1.2 / 0.5);
 }
-.typeWriter > *:nth-child(2) {
-  width: 0;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange; /* The typwriter cursor */
-  border-color: transparent;
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  animation: typing $typeWriteSpeed steps(30, end) $typeWriteSpeed,
+.introBox.typeWriter > *:nth-child(2) {
+  animation: typing $typeWriteSpeed steps(30, end) $typeWriteSpeed 1 forwards,
     blink-caret 0.5s step-end $typeWriteSpeed infinite;
-  animation-fill-mode: forwards;
+}
+.introBox.typeWriter > *:nth-child(3) {
+  animation: typing $typeWriteSpeed steps(30, end) calc(#{$typeWriteSpeed} * 2)
+      1 forwards,
+    blink-caret 0.5s step-end $typeWriteSpeed infinite;
+}
+.introBox.typeWriter > *:nth-child(4) {
+  animation: typing $typeWriteSpeed steps(30, end) calc(#{$typeWriteSpeed} * 3)
+      1 forwards,
+    blink-caret 0.5s step-end $typeWriteSpeed infinite;
+}
+.introBox.typeWriter > *:nth-child(5) {
+  animation: typing $typeWriteSpeed steps(30, end) calc(#{$typeWriteSpeed} * 4)
+      1 forwards,
+    blink-caret 0.5s step-end $typeWriteSpeed infinite;
+}
+.introBox.typeWriter > *:nth-child(6) {
+  animation: typing $typeWriteSpeed steps(30, end) calc(#{$typeWriteSpeed} * 5)
+      1 forwards,
+    blink-caret 0.5s step-end $typeWriteSpeed infinite;
 }
 
 /* The typing effect */

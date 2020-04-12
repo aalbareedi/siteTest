@@ -63,13 +63,13 @@ html {
 }
 
 .introBox {
-  line-height: 36px;
   position: relative;
   width: 280px;
   margin: 0 auto 0 auto;
   font-family: "Tomorrow", sans-serif;
   letter-spacing: 0.5px;
   word-spacing: 4px;
+  line-height: 36px;
 }
 
 .period {
@@ -103,6 +103,10 @@ html {
   word-spacing: 4px;
 }
 
+.wordSpace {
+  word-spacing: 2px;
+}
+
 .landingSocialMedia {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -134,7 +138,7 @@ html {
   top: -88px;
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid silver;
 }
 
 .navLogoImg {
@@ -225,7 +229,7 @@ html {
   margin-left: -105vw;
   width: 100vw;
   height: 800px;
-  background-color: green;
+  background-color: silver;
   -webkit-transition: margin-left 0.3s;
   transition: margin-left 0.3s;
   overflow: scroll;
@@ -269,7 +273,7 @@ html {
   width: 52px;
   height: 52px;
   border: none;
-  font-size: 28px;
+  font-size: 30px;
   color: whitesmoke;
   text-decoration: none;
 }
@@ -286,35 +290,50 @@ html {
   border-radius: 10px 0px 0px 10px;
 }
 
-.typeWriter > *:nth-child(1) {
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange;
-  /* The typwriter cursor */
-  border-color: transparent;
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
-  -webkit-animation: typing 1.2s steps(30, end), blink-caret 0.5s step-end calc(1.2 / 0.5);
-          animation: typing 1.2s steps(30, end), blink-caret 0.5s step-end calc(1.2 / 0.5);
+.socialMediaBtn:active {
+  background-color: gainsboro;
 }
 
-.typeWriter > *:nth-child(2) {
-  width: 0;
+.typeWriter > * {
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid orange;
+  border-right: 0.15em solid transparent;
   /* The typwriter cursor */
-  border-color: transparent;
   white-space: nowrap;
   /* Keeps the content on a single line */
   margin: 0 auto;
   /* Gives that scrolling effect as the typing happens */
-  -webkit-animation: typing 1.2s steps(30, end) 1.2s, blink-caret 0.5s step-end 1.2s infinite;
-          animation: typing 1.2s steps(30, end) 1.2s, blink-caret 0.5s step-end 1.2s infinite;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  width: 0;
+}
+
+.introBox.typeWriter > *:nth-child(1) {
+  -webkit-animation: typing 1.2s steps(30, end) 0s 1 forwards, blink-caret 0.5s step-end calc(1.2 / 0.5);
+          animation: typing 1.2s steps(30, end) 0s 1 forwards, blink-caret 0.5s step-end calc(1.2 / 0.5);
+}
+
+.introBox.typeWriter > *:nth-child(2) {
+  -webkit-animation: typing 1.2s steps(30, end) 1.2s 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
+          animation: typing 1.2s steps(30, end) 1.2s 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
+}
+
+.introBox.typeWriter > *:nth-child(3) {
+  -webkit-animation: typing 1.2s steps(30, end) calc(1.2s * 2) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
+          animation: typing 1.2s steps(30, end) calc(1.2s * 2) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
+}
+
+.introBox.typeWriter > *:nth-child(4) {
+  -webkit-animation: typing 1.2s steps(30, end) calc(1.2s * 3) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
+          animation: typing 1.2s steps(30, end) calc(1.2s * 3) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
+}
+
+.introBox.typeWriter > *:nth-child(5) {
+  -webkit-animation: typing 1.2s steps(30, end) calc(1.2s * 4) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
+          animation: typing 1.2s steps(30, end) calc(1.2s * 4) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
+}
+
+.introBox.typeWriter > *:nth-child(6) {
+  -webkit-animation: typing 1.2s steps(30, end) calc(1.2s * 5) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
+          animation: typing 1.2s steps(30, end) calc(1.2s * 5) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
 }
 
 /* The typing effect */
