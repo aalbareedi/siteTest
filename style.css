@@ -65,7 +65,7 @@ html {
 .introBox {
   position: relative;
   width: 280px;
-  margin: 0 auto 0 auto;
+  margin: 0 auto 10px auto;
   font-family: "Tomorrow", sans-serif;
   letter-spacing: 0.5px;
   word-spacing: 4px;
@@ -92,15 +92,6 @@ html {
   font-family: "Fjalla One", sans-serif;
   letter-spacing: 0.2px;
   font-size: 20px;
-}
-
-.landingText {
-  font-family: "Tomorrow", sans-serif;
-  width: 280px;
-  margin: 0px auto 14px auto;
-  line-height: 36px;
-  letter-spacing: 0.5px;
-  word-spacing: 4px;
 }
 
 .wordSpace {
@@ -307,33 +298,33 @@ html {
 }
 
 .introBox.typeWriter > *:nth-child(1) {
-  -webkit-animation: typing 1.2s steps(30, end) 0s 1 forwards, blink-caret 0.5s step-end calc(1.2 / 0.5);
-          animation: typing 1.2s steps(30, end) 0s 1 forwards, blink-caret 0.5s step-end calc(1.2 / 0.5);
+  -webkit-animation: typing 1s steps(30, end) 0s 1 forwards, blink-caret 0.5s step-end calc(1 / 0.5);
+          animation: typing 1s steps(30, end) 0s 1 forwards, blink-caret 0.5s step-end calc(1 / 0.5);
 }
 
 .introBox.typeWriter > *:nth-child(2) {
-  -webkit-animation: typing 1.2s steps(30, end) 1.2s 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
-          animation: typing 1.2s steps(30, end) 1.2s 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
+  -webkit-animation: typing 1s steps(30, end) 1s 1 forwards, blink-caret 0.5s step-end calc(1s * 1) calc((1 + 1) / 0.5);
+          animation: typing 1s steps(30, end) 1s 1 forwards, blink-caret 0.5s step-end calc(1s * 1) calc((1 + 1) / 0.5);
 }
 
 .introBox.typeWriter > *:nth-child(3) {
-  -webkit-animation: typing 1.2s steps(30, end) calc(1.2s * 2) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
-          animation: typing 1.2s steps(30, end) calc(1.2s * 2) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
+  -webkit-animation: typing 1s steps(30, end) calc(1s * 2 + 1s) 1 forwards, blink-caret 0.5s step-end calc(1s * 2 + 1s) calc(1 / 0.5);
+          animation: typing 1s steps(30, end) calc(1s * 2 + 1s) 1 forwards, blink-caret 0.5s step-end calc(1s * 2 + 1s) calc(1 / 0.5);
 }
 
 .introBox.typeWriter > *:nth-child(4) {
-  -webkit-animation: typing 1.2s steps(30, end) calc(1.2s * 3) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
-          animation: typing 1.2s steps(30, end) calc(1.2s * 3) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
+  -webkit-animation: typing 1s steps(30, end) calc(1s * 3 + 1s) 1 forwards, blink-caret 0.5s step-end calc(1s * 3 + 1s) calc(1 / 0.5);
+          animation: typing 1s steps(30, end) calc(1s * 3 + 1s) 1 forwards, blink-caret 0.5s step-end calc(1s * 3 + 1s) calc(1 / 0.5);
 }
 
 .introBox.typeWriter > *:nth-child(5) {
-  -webkit-animation: typing 1.2s steps(30, end) calc(1.2s * 4) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
-          animation: typing 1.2s steps(30, end) calc(1.2s * 4) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
+  -webkit-animation: typing 1s steps(30, end) calc(1s * 4 + 1s) 1 forwards, blink-caret 0.5s step-end calc(1s * 4 + 1s) calc(1 / 0.5);
+          animation: typing 1s steps(30, end) calc(1s * 4 + 1s) 1 forwards, blink-caret 0.5s step-end calc(1s * 4 + 1s) calc(1 / 0.5);
 }
 
 .introBox.typeWriter > *:nth-child(6) {
-  -webkit-animation: typing 1.2s steps(30, end) calc(1.2s * 5) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
-          animation: typing 1.2s steps(30, end) calc(1.2s * 5) 1 forwards, blink-caret 0.5s step-end 1.2s infinite;
+  -webkit-animation: typing 1s steps(30, end) calc(1s * 5 + 1s) 1 forwards, blink-caret 0.5s step-end calc(1s * 5 + 1s) infinite;
+          animation: typing 1s steps(30, end) calc(1s * 5 + 1s) 1 forwards, blink-caret 0.5s step-end calc(1s * 5 + 1s) infinite;
 }
 
 /* The typing effect */

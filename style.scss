@@ -58,29 +58,17 @@ html {
 .introBox {
   position: relative;
   width: 280px;
-  margin: 0 auto 0 auto;
+  margin: 0 auto 10px auto;
   font-family: "Tomorrow", sans-serif;
   letter-spacing: 0.5px;
   word-spacing: 4px;
   line-height: 36px;
 }
-
 .period {
   font-family: "Tomorrow", sans-serif;
 }
-// .myNameKey {
-//   // color: orange;
-//   // font-family: "Barlow Condensed", sans-serif;
-//   // font-family: "Jura", sans-serif;
-//   // font-family: "Chathura", sans-serif;
-//   // font-family: "Kite One", sans-serif;
-//   font-family: "Tomorrow", sans-serif;
-//   letter-spacing: 0.5px;
-//   word-spacing: 4px;
-// }
 .myNameValue {
   font-family: "Fjalla One", sans-serif;
-  // letter-spacing: 0.6px;
   font-size: 20px;
   margin-left: 3px;
 }
@@ -94,15 +82,15 @@ html {
   letter-spacing: 0.2px;
   font-size: 20px;
 }
-.landingText {
-  // font-family: "Kite One", sans-serif;
-  font-family: "Tomorrow", sans-serif;
-  width: 280px;
-  margin: 0px auto 14px auto;
-  line-height: 36px;
-  letter-spacing: 0.5px;
-  word-spacing: 4px;
-}
+// .landingText {
+//   // font-family: "Kite One", sans-serif;
+//   font-family: "Tomorrow", sans-serif;
+//   width: 280px;
+//   margin: 0px auto 14px auto;
+//   line-height: 36px;
+//   letter-spacing: 0.5px;
+//   word-spacing: 4px;
+// }
 .wordSpace {
   word-spacing: 2px;
 }
@@ -183,9 +171,6 @@ html {
   transition: margin-left 0.3s;
   overflow: scroll;
 }
-// .openAboutBox {
-//   margin-left: 0vw !important;
-// }
 .openBox {
   margin-left: 0vw !important;
 }
@@ -199,9 +184,6 @@ html {
   transition: margin-left 0.3s;
   overflow: scroll;
 }
-// .openPortfolioBox {
-//   margin-left: 0vw !important;
-// }
 #contactBox {
   margin-top: $mobileNav;
   position: fixed;
@@ -271,7 +253,8 @@ html {
 //   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 // }
 
-$typeWriteSpeed: 1.2s;
+$typeWriteSpeed: 1s;
+$statementDelay: 1s;
 
 .typeWriter > * {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -280,34 +263,41 @@ $typeWriteSpeed: 1.2s;
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   width: 0;
 }
-
-.introBox.typeWriter > *:nth-child(1) {
-  animation: typing $typeWriteSpeed steps(30, end) 0s 1 forwards,
-    blink-caret 0.5s step-end calc(1.2 / 0.5);
-}
-.introBox.typeWriter > *:nth-child(2) {
-  animation: typing $typeWriteSpeed steps(30, end) $typeWriteSpeed 1 forwards,
-    blink-caret 0.5s step-end $typeWriteSpeed infinite;
-}
-.introBox.typeWriter > *:nth-child(3) {
-  animation: typing $typeWriteSpeed steps(30, end) calc(#{$typeWriteSpeed} * 2)
-      1 forwards,
-    blink-caret 0.5s step-end $typeWriteSpeed infinite;
-}
-.introBox.typeWriter > *:nth-child(4) {
-  animation: typing $typeWriteSpeed steps(30, end) calc(#{$typeWriteSpeed} * 3)
-      1 forwards,
-    blink-caret 0.5s step-end $typeWriteSpeed infinite;
-}
-.introBox.typeWriter > *:nth-child(5) {
-  animation: typing $typeWriteSpeed steps(30, end) calc(#{$typeWriteSpeed} * 4)
-      1 forwards,
-    blink-caret 0.5s step-end $typeWriteSpeed infinite;
-}
-.introBox.typeWriter > *:nth-child(6) {
-  animation: typing $typeWriteSpeed steps(30, end) calc(#{$typeWriteSpeed} * 5)
-      1 forwards,
-    blink-caret 0.5s step-end $typeWriteSpeed infinite;
+.introBox {
+  // & means .introBox that is type of .typeWriter
+  &.typeWriter > *:nth-child(1) {
+    animation: typing $typeWriteSpeed steps(30, end) 0s 1 forwards,
+      blink-caret 0.5s step-end calc(1 / 0.5);
+  }
+  &.typeWriter > *:nth-child(2) {
+    // name - duration - timing function - delay - iteration count - direction - fill mode - play state (not using playstate)
+    animation: typing $typeWriteSpeed steps(30, end) $typeWriteSpeed 1 forwards,
+      blink-caret 0.5s step-end calc(#{$typeWriteSpeed} * 1) calc((1 + 1) / 0.5);
+  }
+  &.typeWriter > *:nth-child(3) {
+    animation: typing $typeWriteSpeed steps(30, end)
+        calc(#{$typeWriteSpeed} * 2 + #{$statementDelay}) 1 forwards,
+      blink-caret 0.5s step-end
+        calc(#{$typeWriteSpeed} * 2 + #{$statementDelay}) calc(1 / 0.5);
+  }
+  &.typeWriter > *:nth-child(4) {
+    animation: typing $typeWriteSpeed steps(30, end)
+        calc(#{$typeWriteSpeed} * 3 + #{$statementDelay}) 1 forwards,
+      blink-caret 0.5s step-end
+        calc(#{$typeWriteSpeed} * 3 + #{$statementDelay}) calc(1 / 0.5);
+  }
+  &.typeWriter > *:nth-child(5) {
+    animation: typing $typeWriteSpeed steps(30, end)
+        calc(#{$typeWriteSpeed} * 4 + #{$statementDelay}) 1 forwards,
+      blink-caret 0.5s step-end
+        calc(#{$typeWriteSpeed} * 4 + #{$statementDelay}) calc(1 / 0.5);
+  }
+  &.typeWriter > *:nth-child(6) {
+    animation: typing $typeWriteSpeed steps(30, end)
+        calc(#{$typeWriteSpeed} * 5 + #{$statementDelay}) 1 forwards,
+      blink-caret 0.5s step-end
+        calc(#{$typeWriteSpeed} * 5 + #{$statementDelay}) infinite;
+  }
 }
 
 /* The typing effect */
