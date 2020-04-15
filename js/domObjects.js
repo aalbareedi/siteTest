@@ -9,7 +9,6 @@ let navToggleBtn = document.querySelector(".navToggleBtn");
 let navLogoBar = document.querySelector(".navLogoBar");
 let navToggleIcon = document.querySelector(".navToggleIcon");
 let navMenu = document.querySelector(".navMenu");
-// let navWindow = document.querySelector(".navWindow");
 let aboutLink = document.querySelector("#aboutLink");
 let portfolioLink = document.querySelector("#portfolioLink");
 let contactLink = document.querySelector("#contactLink");
