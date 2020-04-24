@@ -5,7 +5,7 @@
 // }
 
 $mobileNav: 80px;
-$startDelay: 1s;
+$startDelay: 0.5s;
 $scaleInDuration: 1s;
 $slideUpDuration: 1s;
 $textDelay: $scaleInDuration + $slideUpDuration + $startDelay - 1s;
@@ -355,7 +355,7 @@ html {
   animation: scaleIn $scaleInDuration ease (0s + $startDelay) 1 normal forwards,
     slideUp $slideUpDuration ease ($scaleInDuration + $startDelay) 1 normal
       forwards;
-  margin-top: 50vh;
+  margin-top: calc(50vh - 40px);
   transform: translateY(-50%) scale(0);
 }
 .fadeIn {
@@ -386,7 +386,7 @@ html {
 
 @keyframes slideUp {
   0% {
-    margin-top: 50vh;
+    margin-top: calc(50vh - 40px);
     transform: translateY(-50%);
   }
   100% {

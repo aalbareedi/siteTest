@@ -332,33 +332,33 @@ html {
 }
 
 .introBox.typeWriter > *:nth-child(1) {
-  -webkit-animation: typing 0.8s steps(30, end) 2s 1 forwards, blink-caret 0.5s step-end 2s 1.6;
-          animation: typing 0.8s steps(30, end) 2s 1 forwards, blink-caret 0.5s step-end 2s 1.6;
+  -webkit-animation: typing 0.8s steps(30, end) 1.5s 1 forwards, blink-caret 0.5s step-end 1.5s 1.6;
+          animation: typing 0.8s steps(30, end) 1.5s 1 forwards, blink-caret 0.5s step-end 1.5s 1.6;
 }
 
 .introBox.typeWriter > *:nth-child(2) {
-  -webkit-animation: typing 0.8s steps(30, end) 2.8s 1 forwards, blink-caret 0.5s step-end 2.8s 1.6;
-          animation: typing 0.8s steps(30, end) 2.8s 1 forwards, blink-caret 0.5s step-end 2.8s 1.6;
+  -webkit-animation: typing 0.8s steps(30, end) 2.3s 1 forwards, blink-caret 0.5s step-end 2.3s 1.6;
+          animation: typing 0.8s steps(30, end) 2.3s 1 forwards, blink-caret 0.5s step-end 2.3s 1.6;
 }
 
 .introBox.typeWriter > *:nth-child(3) {
-  -webkit-animation: typing 0.8s steps(30, end) 3.6s 1 forwards, blink-caret 0.5s step-end 3.6s 1.6;
-          animation: typing 0.8s steps(30, end) 3.6s 1 forwards, blink-caret 0.5s step-end 3.6s 1.6;
+  -webkit-animation: typing 0.8s steps(30, end) 3.1s 1 forwards, blink-caret 0.5s step-end 3.1s 1.6;
+          animation: typing 0.8s steps(30, end) 3.1s 1 forwards, blink-caret 0.5s step-end 3.1s 1.6;
 }
 
 .introBox.typeWriter > *:nth-child(4) {
-  -webkit-animation: typing 0.8s steps(30, end) 4.4s 1 forwards, blink-caret 0.5s step-end 4.4s 1.6;
-          animation: typing 0.8s steps(30, end) 4.4s 1 forwards, blink-caret 0.5s step-end 4.4s 1.6;
+  -webkit-animation: typing 0.8s steps(30, end) 3.9s 1 forwards, blink-caret 0.5s step-end 3.9s 1.6;
+          animation: typing 0.8s steps(30, end) 3.9s 1 forwards, blink-caret 0.5s step-end 3.9s 1.6;
 }
 
 .introBox.typeWriter > *:nth-child(5) {
-  -webkit-animation: typing 0.8s steps(30, end) 5.2s 1 forwards, blink-caret 0.5s step-end 5.2s 1.6;
-          animation: typing 0.8s steps(30, end) 5.2s 1 forwards, blink-caret 0.5s step-end 5.2s 1.6;
+  -webkit-animation: typing 0.8s steps(30, end) 4.7s 1 forwards, blink-caret 0.5s step-end 4.7s 1.6;
+          animation: typing 0.8s steps(30, end) 4.7s 1 forwards, blink-caret 0.5s step-end 4.7s 1.6;
 }
 
 .introBox.typeWriter > *:nth-child(6) {
-  -webkit-animation: typing 0.8s steps(30, end) 6s 1 forwards, blink-caret 0.5s step-end 6s infinite;
-          animation: typing 0.8s steps(30, end) 6s 1 forwards, blink-caret 0.5s step-end 6s infinite;
+  -webkit-animation: typing 0.8s steps(30, end) 5.5s 1 forwards, blink-caret 0.5s step-end 5.5s infinite;
+          animation: typing 0.8s steps(30, end) 5.5s 1 forwards, blink-caret 0.5s step-end 5.5s infinite;
 }
 
 /* The typing effect */
@@ -400,17 +400,17 @@ html {
 }
 
 .logoAnimation {
-  -webkit-animation: scaleIn 1s ease 1s 1 normal forwards, slideUp 1s ease 2s 1 normal forwards;
-          animation: scaleIn 1s ease 1s 1 normal forwards, slideUp 1s ease 2s 1 normal forwards;
-  margin-top: 50vh;
+  -webkit-animation: scaleIn 1s ease 0.5s 1 normal forwards, slideUp 1s ease 1.5s 1 normal forwards;
+          animation: scaleIn 1s ease 0.5s 1 normal forwards, slideUp 1s ease 1.5s 1 normal forwards;
+  margin-top: calc(50vh - 40px);
   -webkit-transform: translateY(-50%) scale(0);
           transform: translateY(-50%) scale(0);
 }
 
 .fadeIn {
   opacity: 0;
-  -webkit-animation: fadeIn 1s ease 2s 1 normal forwards;
-          animation: fadeIn 1s ease 2s 1 normal forwards;
+  -webkit-animation: fadeIn 1s ease 1.5s 1 normal forwards;
+          animation: fadeIn 1s ease 1.5s 1 normal forwards;
 }
 
 @-webkit-keyframes fadeIn {
@@ -465,7 +465,7 @@ html {
 
 @-webkit-keyframes slideUp {
   0% {
-    margin-top: 50vh;
+    margin-top: calc(50vh - 40px);
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
   }
@@ -478,7 +478,7 @@ html {
 
 @keyframes slideUp {
   0% {
-    margin-top: 50vh;
+    margin-top: calc(50vh - 40px);
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
   }
