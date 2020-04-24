@@ -69,7 +69,7 @@ html {
   font-family: "Tomorrow", sans-serif;
 }
 .myNameValue {
-  // color: orange;
+  color: orange;
   font-family: "Fjalla One", sans-serif;
   font-size: 20px;
   margin-left: 3px;
@@ -95,6 +95,7 @@ html {
   left: 50%;
   margin-left: -140px;
   // bottom: 30px;
+  top: 368px;
 }
 .navLogoBar {
   background-color: lightgray;
@@ -360,7 +361,7 @@ html {
 }
 .fadeIn {
   opacity: 0;
-  animation: fadeIn 1s ease $textDelay 1 normal forwards;
+  animation: fadeIn 1.2s ease $textDelay 1 normal forwards;
 }
 
 @keyframes fadeIn {

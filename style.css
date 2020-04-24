@@ -71,6 +71,7 @@ html {
 }
 
 .myNameValue {
+  color: orange;
   font-family: "Fjalla One", sans-serif;
   font-size: 20px;
   margin-left: 3px;
@@ -102,6 +103,7 @@ html {
   position: absolute;
   left: 50%;
   margin-left: -140px;
+  top: 368px;
 }
 
 .navLogoBar {
@@ -408,8 +410,8 @@ html {
 
 .fadeIn {
   opacity: 0;
-  -webkit-animation: fadeIn 1s ease 1.4s 1 normal forwards;
-          animation: fadeIn 1s ease 1.4s 1 normal forwards;
+  -webkit-animation: fadeIn 1.2s ease 1.4s 1 normal forwards;
+          animation: fadeIn 1.2s ease 1.4s 1 normal forwards;
 }
 
 @-webkit-keyframes fadeIn {
