@@ -69,6 +69,7 @@ html {
   font-family: "Tomorrow", sans-serif;
 }
 .myNameValue {
+  color: orange;
   font-family: "Fjalla One", sans-serif;
   font-size: 20px;
   margin-left: 3px;
@@ -296,8 +297,7 @@ html {
     @return $number / ($number * 0 + 1);
   }
   // $speed: 0.6s;
-  // $delay: 1s;
-  $speed: 0.8s;
+  $speed: 0.5s;
   // & means .introBox that is type of .typeWriter
   &.typeWriter > *:nth-child(1) {
     animation: typing $speed steps(30, end) $textDelay 1 forwards,
@@ -394,9 +394,3 @@ html {
     transform: translateY(0);
   }
 }
-
-// $mobileNav: 80px;
-// $startDelay: 0.5s;
-// $textDelay: 2s;
-// $scaleInDuration: 1s;
-// $slideUpDuration: 1s;
