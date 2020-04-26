@@ -118,7 +118,7 @@ html {
   right: 17px;
   top: 16px;
   font-family: "Fjalla One", sans-serif;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.3px;
   font-size: 30px;
 }
 .navJobTitle {
@@ -127,8 +127,8 @@ html {
   top: 48px;
   font-family: "Fjalla One", sans-serif;
   font-family: "Tomorrow", sans-serif;
-  letter-spacing: 0.4px;
-  font-size: 18px;
+  letter-spacing: 0.7px;
+  font-size: 17px;
 }
 .navMenu {
   height: calc(100% - #{$mobileNav});
@@ -141,7 +141,7 @@ html {
   background-color: gray;
   font-family: "Fjalla One", sans-serif;
   font-size: 30px;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.3px;
   text-align: center;
   height: 33.33%;
   display: flex;
@@ -225,6 +225,13 @@ html {
   top: 17px;
   font-size: 22px;
   color: #585858;
+}
+.formMessage {
+  padding: 0px 20px 40px 20px;
+}
+#messageInput {
+  padding: 8px 8px 0 8px;
+  height: 170px;
 }
 
 // BUTTONS
