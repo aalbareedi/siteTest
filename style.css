@@ -43,7 +43,8 @@ html {
 }
 
 .landing {
-  background-color: darkgray;
+  background: -webkit-gradient(linear, right bottom, left top, from(#845bff), to(#26c0d9));
+  background: linear-gradient(to top left, #845bff 0%, #26c0d9 100%);
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -71,7 +72,6 @@ html {
 }
 
 .myNameValue {
-  color: orange;
   font-family: "Fjalla One", sans-serif;
   font-size: 20px;
   margin-left: 3px;
@@ -93,19 +93,6 @@ html {
   word-spacing: 2px;
 }
 
-.landingSocialMedia {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: absolute;
-  left: 50%;
-  margin-left: -140px;
-  top: 368px;
-}
-
 .navLogoBar {
   background-color: lightgray;
   width: 100%;
@@ -120,9 +107,9 @@ html {
 .navLogoImg {
   display: block;
   position: absolute;
-  width: 84px;
-  left: 12px;
-  top: 10px;
+  width: 80px;
+  left: 14px;
+  top: 12px;
 }
 
 .navMyName {
@@ -176,6 +163,7 @@ html {
 }
 
 #aboutBox {
+  font-family: "Manrope", sans-serif;
   margin-top: 80px;
   position: fixed;
   margin-left: -105vw;
@@ -212,17 +200,21 @@ html {
 }
 
 .formOption {
-  margin-bottom: 26px;
+  margin-bottom: 28px;
   padding: 0px 20px;
 }
 
 .formTitle {
   text-align: center;
-  margin: 40px 0;
+  margin: 50px 0 40px 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.4px;
 }
 
 .contactFormText {
-  margin-bottom: 6px;
+  font-family: "Manrope", sans-serif;
+  margin-bottom: 8px;
   display: block;
   letter-spacing: 0.6px;
 }
@@ -234,6 +226,7 @@ html {
 }
 
 .contactFormInput {
+  font-family: "Manrope", sans-serif;
   background-color: gainsboro;
   height: 54px;
   border: none;
@@ -244,12 +237,11 @@ html {
   letter-spacing: 0.7px;
   padding-right: 40px;
   padding-top: 2px;
-  color: lightgray;
 }
 
 .formAsterik {
   color: #d12323;
-  margin-left: 4px;
+  margin-left: 2px;
 }
 
 .formIcon {
@@ -257,7 +249,7 @@ html {
   right: 15px;
   top: 17px;
   font-size: 22px;
-  color: #585858;
+  color: darkgray;
 }
 
 .formMessage {
@@ -267,6 +259,27 @@ html {
 #messageInput {
   padding: 8px 8px 0 8px;
   height: 170px;
+}
+
+#messageInput:focus {
+  border: 2px solid #067ffc;
+  outline: none;
+}
+
+.contactFormInput:focus {
+  border: 2px solid #067ffc;
+  outline: none;
+}
+
+input.contactFormInput:valid {
+  background-image: url("validCheckIcon.svg");
+  background-size: 26px;
+  background-repeat: no-repeat;
+  background-position: right 11px center;
+}
+
+input.contactFormInput:valid + .formIcon {
+  opacity: 0;
 }
 
 .navToggleBtn {
@@ -293,6 +306,19 @@ html {
           box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+.landingSocialMedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  left: 50%;
+  margin-left: -140px;
+  top: 368px;
+}
+
 .socialMediaBtn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -303,7 +329,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: silver;
+  background-color: rgba(192, 192, 192, 0.5);
   width: 52px;
   height: 54px;
   border: none;
