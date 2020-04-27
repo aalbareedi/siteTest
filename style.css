@@ -43,8 +43,8 @@ html {
 }
 
 .landing {
-  background: -webkit-gradient(linear, right bottom, left top, from(#845bff), to(#26c0d9));
-  background: linear-gradient(to top left, #845bff 0%, #26c0d9 100%);
+  background: -webkit-gradient(linear, right bottom, left top, from(#845bff), to(#ff9447));
+  background: linear-gradient(to top left, #845bff 0%, #ff9447 100%);
   height: 100vh;
   width: 100%;
   position: fixed;
