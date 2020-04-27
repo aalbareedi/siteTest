@@ -45,7 +45,7 @@ html {
 
 .landing {
   // background-color: darkgray;
-  background: linear-gradient(to top left, #845bff 0%, #ff9447 100%);
+  background: linear-gradient(to top left, #845bff 0%, #e18340 100%);
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -54,7 +54,7 @@ html {
 .landingLogoImg {
   display: block;
   width: 160px;
-  margin: 12px auto 12px auto;
+  margin: 16px auto 16px auto;
 }
 .introBox {
   position: relative;
@@ -255,7 +255,7 @@ input.contactFormInput:valid + .formIcon {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 30px;
+  bottom: 26px;
   right: 18px;
   /* color: rgba(255, 255, 255, 0.8); */
   position: fixed;
@@ -264,6 +264,7 @@ input.contactFormInput:valid + .formIcon {
   width: 58px;
   border: none;
   background-color: rgba(51, 51, 51, 0.4);
+  // background-color: rgba(192, 192, 192, 0.5);
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 .landingSocialMedia {
@@ -273,14 +274,14 @@ input.contactFormInput:valid + .formIcon {
   left: 50%;
   margin-left: -140px;
   // bottom: 30px;
-  top: 368px;
+  top: 372px;
 }
 .socialMediaBtn {
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-color: silver;
-  background-color: rgba(192, 192, 192, 0.5);
+  // background-color: rgba(192, 192, 192, 0.5);
+  background-color: rgba(51, 51, 51, 0.4);
   width: 52px;
   height: 54px;
   border: none;
@@ -322,7 +323,7 @@ input.contactFormInput:valid + .formIcon {
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   width: 0;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .introBox {
   @function strip-units($number) {
@@ -387,12 +388,12 @@ input.contactFormInput:valid + .formIcon {
   animation: scaleIn $scaleInDuration ease (0s + $startDelay) 1 normal forwards,
     slideUp $slideUpDuration ease ($scaleInDuration + $startDelay) 1 normal
       forwards;
-  margin-top: calc(50vh - 40px);
+  margin-top: calc(50vh - 46px);
   transform: translateY(-50%) scale(0);
 }
 .fadeIn {
   opacity: 0;
-  animation: fadeIn 1.2s ease $textDelay 1 normal forwards;
+  animation: fadeIn 2s ease $textDelay 1 normal forwards;
 }
 
 @keyframes fadeIn {
@@ -418,11 +419,11 @@ input.contactFormInput:valid + .formIcon {
 
 @keyframes slideUp {
   0% {
-    margin-top: calc(50vh - 40px);
+    margin-top: calc(50vh - 46px);
     transform: translateY(-50%);
   }
   100% {
-    margin-top: 12px;
+    margin-top: 16px;
     transform: translateY(0);
   }
 }
