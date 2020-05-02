@@ -1,48 +1,50 @@
 // Remove Gray Highlight When Tapping Links in Mobile Safari
 document.addEventListener("touchstart", function () {}, true);
 
-navToggleBtn.onclick = function () {
-  if (navToggleIcon.classList.contains("is-active") == false) {
-    navLogoBar.classList.add("openNavLogoBar");
-    navToggleIcon.classList.add("is-active");
-    navMenu.classList.add("openNavMenu");
-  } else {
-    navToggleIcon.classList.remove("is-active");
-    navMenu.classList.remove("openNavMenu");
+console.log(document);
 
-    // if nav is open, and toggle Btn is clicked, then close logo bar only if we are on home page & NOT about, portfolio, contact pages.
-    if (
-      portfolioBox.classList.contains("openBox") == false &&
-      contactBox.classList.contains("openBox") == false &&
-      aboutBox.classList.contains("openBox") == false
-    ) {
-      navLogoBar.classList.remove("openNavLogoBar");
-    }
-  }
-};
+// navToggleBtn.onclick = function () {
+//   if (navToggleIcon.classList.contains("is-active") == false) {
+//     navLogoBar.classList.add("openNavLogoBar");
+//     navToggleIcon.classList.add("is-active");
+//     navMenu.classList.add("openNavMenu");
+//   } else {
+//     navToggleIcon.classList.remove("is-active");
+//     navMenu.classList.remove("openNavMenu");
 
-hireMeBtn.onclick = function () {
-  navLogoBar.classList.add("openNavLogoBar");
-  portfolioBox.classList.add("openBox");
-  landing.classList.remove("openBox");
-};
+//     // if nav is open, and toggle Btn is clicked, then close logo bar only if we are on home page & NOT about, portfolio, contact pages.
+//     if (
+//       portfolioBox.classList.contains("openBox") == false &&
+//       contactBox.classList.contains("openBox") == false &&
+//       aboutBox.classList.contains("openBox") == false
+//     ) {
+//       navLogoBar.classList.remove("openNavLogoBar");
+//     }
+//   }
+// };
 
-navLogoBar.onclick = function () {
-  navLogoBar.classList.remove("openNavLogoBar");
-  navigateToPage(landing);
-};
+// hireMeBtn.onclick = function () {
+//   navLogoBar.classList.add("openNavLogoBar");
+//   portfolioBox.classList.add("openBox");
+//   landing.classList.remove("openBox");
+// };
 
-aboutLink.onclick = function () {
-  navigateToPage(aboutBox);
-};
+// navLogoBar.onclick = function () {
+//   navLogoBar.classList.remove("openNavLogoBar");
+//   navigateToPage(landing);
+// };
 
-portfolioLink.onclick = function () {
-  navigateToPage(portfolioBox);
-};
+// aboutLink.onclick = function () {
+//   navigateToPage(aboutBox);
+// };
 
-contactLink.onclick = function () {
-  navigateToPage(contactBox);
-};
+// portfolioLink.onclick = function () {
+//   navigateToPage(portfolioBox);
+// };
+
+// contactLink.onclick = function () {
+//   navigateToPage(contactBox);
+// };
 
 // body.onscroll = function () {
 //   if (scrollingElement.scrollTop > 0) {

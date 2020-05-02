@@ -70,7 +70,7 @@ html {
   font-family: "Tomorrow", sans-serif;
 }
 .myNameValue {
-  // color: orange;
+  color: orange;
   font-family: "Fjalla One", sans-serif;
   font-size: 20px;
   margin-left: 3px;
@@ -130,7 +130,8 @@ html {
   width: 100%;
 }
 .navMenuOption {
-  background-color: gray;
+  // background-color: gray;
+  background-color: rgba(0, 0, 0, 0.3);
   font-family: "Fjalla One", sans-serif;
   font-size: 30px;
   letter-spacing: 0.3px;
