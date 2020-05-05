@@ -34,17 +34,17 @@ a {
   top: 0px !important;
 }
 
-.openNavMenu {
-  bottom: 0vh !important;
-}
-
 html {
   background-color: darkgray;
 }
 
-.landing {
+#wrapper {
+  height: 100vh;
   background: -webkit-gradient(linear, right bottom, left top, from(#845bff), to(#e18340));
   background: linear-gradient(to top left, #845bff 0%, #e18340 100%);
+}
+
+.landing {
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -72,7 +72,6 @@ html {
 }
 
 .myNameValue {
-  color: orange;
   font-family: "Fjalla One", sans-serif;
   font-size: 20px;
   margin-left: 3px;
@@ -141,13 +140,21 @@ html {
   width: 100%;
 }
 
+.openNavMenu {
+  bottom: 0vh !important;
+}
+
+.openNavMenu .navMenuOption {
+  margin-top: 0px;
+}
+
 .navMenuOption {
   background-color: rgba(0, 0, 0, 0.3);
   font-family: "Fjalla One", sans-serif;
   font-size: 30px;
   letter-spacing: 0.3px;
   text-align: center;
-  height: 33.33%;
+  height: 33.3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,6 +164,22 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 30px;
+}
+
+.navMenuOption:nth-child(1) {
+  -webkit-transition: margin-top 0.6s;
+  transition: margin-top 0.6s;
+}
+
+.navMenuOption:nth-child(2) {
+  -webkit-transition: margin-top 0.6s 0.2s;
+  transition: margin-top 0.6s 0.2s;
+}
+
+.navMenuOption:nth-child(3) {
+  -webkit-transition: margin-top 0.6s 0.4s;
+  transition: margin-top 0.6s 0.4s;
 }
 
 .openBox {
