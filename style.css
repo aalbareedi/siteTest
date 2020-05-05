@@ -72,6 +72,7 @@ html {
 }
 
 .myNameValue {
+  color: pink;
   font-family: "Fjalla One", sans-serif;
   font-size: 20px;
   margin-left: 3px;
@@ -178,8 +179,8 @@ html {
 }
 
 .navMenuOption:nth-child(3) {
-  -webkit-transition: margin-top 0.6s 0.4s;
-  transition: margin-top 0.6s 0.4s;
+  -webkit-transition: margin-top 0.6s 0.35s;
+  transition: margin-top 0.6s 0.35s;
 }
 
 .openBox {
