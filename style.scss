@@ -153,13 +153,13 @@ html {
   margin-top: 30px;
 }
 .navMenuOption:nth-child(1) {
-  transition: margin-top 0.6s;
+  transition: margin-top 0.4s ease-in;
 }
 .navMenuOption:nth-child(2) {
-  transition: margin-top 0.6s 0.2s;
+  transition: margin-top 0.4s ease-in 0.2s;
 }
 .navMenuOption:nth-child(3) {
-  transition: margin-top 0.6s 0.35s;
+  transition: margin-top 0.4s ease-in 0.3s;
 }
 .openBox {
   margin-left: 0vw !important;
@@ -318,7 +318,7 @@ input.contactFormInput:valid + .formIcon {
   letter-spacing: 0.6px;
   border-radius: 0px 10px 10px 0px;
 }
-#firstSocialMediaBtn {
+.socialMediaBtn:first-child {
   border-radius: 10px 0px 0px 10px;
 }
 .socialMediaBtn:active {
