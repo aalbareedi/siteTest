@@ -39,6 +39,8 @@ html {
 }
 
 #wrapper {
+  position: fixed;
+  width: 100vw;
   height: 100vh;
   background: -webkit-gradient(linear, right bottom, left top, from(#845bff), to(#e18340));
   background: linear-gradient(to top left, #845bff 0%, #e18340 100%);
@@ -72,7 +74,6 @@ html {
 }
 
 .myNameValue {
-  color: pink;
   font-family: "Fjalla One", sans-serif;
   font-size: 20px;
   margin-left: 3px;

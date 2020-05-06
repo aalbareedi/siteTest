@@ -42,6 +42,8 @@ html {
 }
 
 #wrapper {
+  position: fixed;
+  width: 100vw;
   height: 100vh;
   background: linear-gradient(to top left, #845bff 0%, #e18340 100%);
 }
@@ -72,7 +74,7 @@ html {
   font-family: "Tomorrow", sans-serif;
 }
 .myNameValue {
-  color: pink;
+  // color: pink;
   font-family: "Fjalla One", sans-serif;
   font-size: 20px;
   margin-left: 3px;
