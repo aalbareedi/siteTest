@@ -74,7 +74,7 @@ html {
   font-family: "Tomorrow", sans-serif;
 }
 .myNameValue {
-  // color: pink;
+  color: pink;
   font-family: "Fjalla One", sans-serif;
   font-size: 20px;
   margin-left: 3px;
@@ -94,13 +94,13 @@ html {
 }
 
 .navLogoBar {
-  background-color: lightgray;
+  // background-color: lightgray;
+  // border-bottom: 2px solid silver;
   width: 100%;
   height: $mobileNav;
   position: fixed;
   top: -$mobileNav;
   transition: top 0.3s;
-  border-bottom: 2px solid silver;
 }
 .navLogoImg {
   display: block;
@@ -132,6 +132,9 @@ html {
   bottom: -100vh;
   transition: bottom 0.3s;
   width: 100%;
+  // padding: 0 10px;
+  padding: 0px 10px 10px 10px;
+  // padding-bottom: 10px;
 }
 .openNavMenu {
   bottom: 0vh !important;
@@ -140,6 +143,7 @@ html {
   margin-top: 0px;
 }
 .navMenuOption {
+  border-radius: 8px;
   // background-color: gray;
   background-color: rgba(0, 0, 0, 0.3);
   font-family: "Fjalla One", sans-serif;

@@ -74,6 +74,7 @@ html {
 }
 
 .myNameValue {
+  color: pink;
   font-family: "Fjalla One", sans-serif;
   font-size: 20px;
   margin-left: 3px;
@@ -96,14 +97,12 @@ html {
 }
 
 .navLogoBar {
-  background-color: lightgray;
   width: 100%;
   height: 80px;
   position: fixed;
   top: -80px;
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
-  border-bottom: 2px solid silver;
 }
 
 .navLogoImg {
@@ -140,6 +139,7 @@ html {
   -webkit-transition: bottom 0.3s;
   transition: bottom 0.3s;
   width: 100%;
+  padding: 0px 10px 10px 10px;
 }
 
 .openNavMenu {
@@ -151,6 +151,7 @@ html {
 }
 
 .navMenuOption {
+  border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.3);
   font-family: "Fjalla One", sans-serif;
   font-size: 30px;
