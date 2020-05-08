@@ -54,6 +54,8 @@ html {
   width: 100%;
   position: fixed;
   margin-left: -105vw;
+  opacity: 0;
+  transition: opacity 1s;
 }
 .landingLogoImg {
   display: block;
@@ -133,7 +135,7 @@ html {
   transition: bottom 0.3s;
   width: 100%;
   // padding: 0 10px;
-  padding: 0px 10px 10px 10px;
+  padding: 0px 10px 0px 10px;
   // padding-bottom: 10px;
 }
 .openNavMenu {
@@ -150,7 +152,8 @@ html {
   font-size: 30px;
   letter-spacing: 0.3px;
   text-align: center;
-  height: 33.3%;
+  // height: 33.3%;
+  height: calc(33.3% - 10px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,15 +161,18 @@ html {
 }
 .navMenuOption:nth-child(1) {
   transition: margin-top 0.4s ease-in;
+  margin-bottom: 10px;
 }
 .navMenuOption:nth-child(2) {
   transition: margin-top 0.4s ease-in 0.2s;
+  margin-bottom: 10px;
 }
 .navMenuOption:nth-child(3) {
   transition: margin-top 0.4s ease-in 0.3s;
 }
 .openBox {
   margin-left: 0vw !important;
+  opacity: 1;
 }
 #aboutBox {
   font-family: "Manrope", sans-serif;
