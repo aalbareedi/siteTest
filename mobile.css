@@ -1,3 +1,21 @@
+@media screen and (min-width: 375px), print {
+  .saveBtns {
+    top: 20px;
+    right: 20px;
+    bottom: initial;
+    left: initial;
+    margin-left: initial;
+    display: initial;
+  }
+  .saveBtn:first-child {
+    margin-bottom: 10px;
+    margin-right: initial;
+  }
+  .wrapper {
+    padding: 20px 22px 20px 22px;
+  }
+}
+
 @media screen and (min-width: 540px), print {
   .contact {
     display: -webkit-box;
@@ -29,6 +47,24 @@
   .projectBox:first-child {
     margin-right: 30px;
   }
+  .saveBtns {
+    top: 30px;
+    right: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px), print {
+  .saveBtns {
+    position: fixed;
+    right: 50%;
+    margin-right: -496px;
+  }
+}
+
+@media only print {
+  .saveBtns {
+    display: none;
+  }
 }
 
 @media only screen and (hover: hover) {
@@ -39,6 +75,9 @@
   }
   .projectImgLink:hover .projectHover {
     opacity: 1;
+  }
+  .saveBtn:hover {
+    background-color: gainsboro;
   }
 }
 /*# sourceMappingURL=mobile.css.map */

@@ -137,6 +137,7 @@
           <span class="webSkill">GitHub</span>
           <span class="webSkill">Responsive Design</span>
           <span class="webSkill">Debugging</span>
+          <span class="webSkill">UI/UX</span>
           <div class="skillYears">
             I have <span class="yearText">10 Years</span> of experience
             with<span id="yearDot">...</span>
@@ -144,27 +145,13 @@
           <span class="webSkill">Photoshop</span>
           <span class="webSkill">Illustrator</span>
         </div>
-        <div class="skillInfo">
+        <!-- <div class="skillInfo">
           <div class="skillPoint">•</div>
           <div class="skillText">
             Responsive, mobile-first approach in developing functional web
             interfaces.
           </div>
-        </div>
-        <div class="skillInfo">
-          <div class="skillPoint">•</div>
-          <div class="skillText">
-            Responsive, mobile-first approach in developing functional web
-            interfaces.
-          </div>
-        </div>
-        <div class="skillInfo">
-          <div class="skillPoint">•</div>
-          <div class="skillText">
-            Responsive, mobile-first approach in developing functional web
-            interfaces.
-          </div>
-        </div>
+        </div> -->
       </div>
 
       <div class="headings">Projects</div>
@@ -282,14 +269,20 @@
         </div>
       </div>
 
-      <div>
+      <div class="saveBtns">
         <a
-          class="downloadBtn"
+          class="saveBtn downloadBtn"
           download="Amer_Albareedi_Resume"
           href="Amer_Albareedi_Resume.pdf"
-          >Download</a
+          title="Save As PDF"
         >
-        <button class="printBtn" onclick="print()">Print</button>
+          <img src="images/download.svg" class="downloadIcon" />
+        </a>
+
+        <button class="saveBtn printBtn" onclick="print()" title="Print">
+          <!-- <i class="fas fa-print"></i> -->
+          <img src="images/printer.svg" class="downloadIcon" />
+        </button>
       </div>
     </main>
 

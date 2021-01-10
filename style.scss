@@ -10,10 +10,11 @@ body {
 }
 .wrapper {
   background-color: white;
-  padding: 20px 22px 20px 22px;
+  padding: 20px 22px 78px 22px;
   max-width: 850px;
   margin: 0 auto;
   -webkit-print-color-adjust: exact;
+  position: relative;
 }
 .logo {
   width: 58px;
@@ -82,11 +83,13 @@ body {
 }
 .webSkills {
   // padding-bottom: 8px;
-  background: gainsboro;
+  background: #e8e8e8;
   padding: 10px 10px 5px 10px;
   margin-bottom: 10px;
   border-radius: 10px;
-  display: inline-block;
+  // display: inline-block;
+  // display: flex;
+  // flex-wrap: wrap;
 }
 .webSkill {
   display: inline-block;
@@ -104,6 +107,7 @@ body {
   padding-left: 1px;
   line-height: 19px;
   word-spacing: 1.8px;
+  // width: 100%;
 }
 .skillYears:nth-of-type(2) {
   margin-top: 10px;
@@ -144,7 +148,7 @@ body {
 }
 .projectImgLink {
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 6px;
   position: relative;
 }
 .projectImgLink:active .projectHover {
@@ -204,10 +208,41 @@ body {
   margin-top: 1px;
   margin-bottom: 2px;
 }
+.saveBtns {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  margin-left: -61px;
+  display: flex;
+}
+.saveBtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: initial;
+  text-decoration: none;
+  border: 2px solid gainsboro;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+}
+.saveBtn:first-child {
+  margin-right: 18px;
+}
+.downloadIcon {
+  width: 24px;
+  opacity: 0.8;
+}
 
 // active states
 a.contactText:active,
 a.projectLink:active {
   text-decoration: underline;
   color: black;
+}
+.saveBtns .saveBtn:active {
+  background-color: silver;
 }

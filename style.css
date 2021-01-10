@@ -13,10 +13,11 @@ body {
 
 .wrapper {
   background-color: white;
-  padding: 20px 22px 20px 22px;
+  padding: 20px 22px 78px 22px;
   max-width: 850px;
   margin: 0 auto;
   -webkit-print-color-adjust: exact;
+  position: relative;
 }
 
 .logo {
@@ -99,11 +100,10 @@ body {
 }
 
 .webSkills {
-  background: gainsboro;
+  background: #e8e8e8;
   padding: 10px 10px 5px 10px;
   margin-bottom: 10px;
   border-radius: 10px;
-  display: inline-block;
 }
 
 .webSkill {
@@ -171,7 +171,7 @@ body {
 
 .projectImgLink {
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 6px;
   position: relative;
 }
 
@@ -252,9 +252,53 @@ body {
   margin-bottom: 2px;
 }
 
+.saveBtns {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  margin-left: -61px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.saveBtn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: initial;
+  text-decoration: none;
+  border: 2px solid gainsboro;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.saveBtn:first-child {
+  margin-right: 18px;
+}
+
+.downloadIcon {
+  width: 24px;
+  opacity: 0.8;
+}
+
 a.contactText:active,
 a.projectLink:active {
   text-decoration: underline;
   color: black;
+}
+
+.saveBtns .saveBtn:active {
+  background-color: silver;
 }
 /*# sourceMappingURL=style.css.map */
