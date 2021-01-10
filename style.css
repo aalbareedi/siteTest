@@ -28,6 +28,7 @@ body {
 }
 
 .name {
+  color: pink;
   font-family: "PT Sans", sans-serif;
   font-size: 28px;
   line-height: 1;
@@ -281,6 +282,7 @@ body {
           align-items: center;
   outline: none;
   cursor: pointer;
+  position: relative;
 }
 
 .saveBtn:first-child {
@@ -290,6 +292,25 @@ body {
 .downloadIcon {
   width: 24px;
   opacity: 0.8;
+}
+
+.iconToolTip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  height: 36px;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+#printTooltip {
+  top: 15px;
+  left: 58px;
+}
+
+#saveTooltip {
+  top: 79px;
+  left: 60px;
 }
 
 a.contactText:active,

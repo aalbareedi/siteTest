@@ -53,7 +53,7 @@
   }
 }
 
-@media screen and (min-width: 1024px), print {
+@media screen and (min-width: 1100px), print {
   .saveBtns {
     position: fixed;
     right: 50%;
@@ -78,6 +78,10 @@
   }
   .saveBtn:hover {
     background-color: gainsboro;
+  }
+  .saveBtn:hover .iconToolTip {
+    opacity: 1;
+    visibility: initial;
   }
 }
 /*# sourceMappingURL=mobile.css.map */

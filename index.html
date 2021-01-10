@@ -270,19 +270,20 @@
       </div>
 
       <div class="saveBtns">
+        <button class="saveBtn printBtn" onclick="print()">
+          <!-- <i class="fas fa-print"></i> -->
+          <img src="images/printer.svg" class="downloadIcon" />
+          <div class="iconToolTip" id="printTooltip">Print</div>
+        </button>
+
         <a
           class="saveBtn downloadBtn"
           download="Amer_Albareedi_Resume"
           href="Amer_Albareedi_Resume.pdf"
-          title="Save As PDF"
         >
           <img src="images/download.svg" class="downloadIcon" />
         </a>
-
-        <button class="saveBtn printBtn" onclick="print()" title="Print">
-          <!-- <i class="fas fa-print"></i> -->
-          <img src="images/printer.svg" class="downloadIcon" />
-        </button>
+        <div class="iconToolTip" id="saveTooltip">Download</div>
       </div>
     </main>
 
