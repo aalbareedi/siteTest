@@ -1,0 +1,44 @@
+@media screen and (min-width: 540px), print {
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contactSection:last-child {
+    margin-left: 26px;
+  }
+  .wrapper {
+    padding: 40px 42px 30px 42px;
+  }
+  .projectBox {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 650px), print {
+  .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .projectBox {
+    margin-right: initial;
+    width: 50%;
+  }
+  .projectBox:first-child {
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (hover: hover) {
+  .contactText:hover,
+  .projectLink:hover {
+    text-decoration: underline;
+    color: #af4cce;
+  }
+  .projectImgLink:hover .projectHover {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */
