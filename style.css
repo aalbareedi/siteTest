@@ -17,7 +17,6 @@ body {
   max-width: 850px;
   margin: 0 auto;
   -webkit-print-color-adjust: exact;
-  position: relative;
 }
 
 .logo {
