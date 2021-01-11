@@ -23,7 +23,7 @@ body {
   margin-left: -1px;
 }
 .name {
-  color: pink;
+  // color: pink;
   font-family: "PT Sans", sans-serif;
   font-size: 28px;
   line-height: 1;
@@ -239,21 +239,15 @@ body {
   opacity: 0.8;
 }
 .iconToolTip {
-  // background-color: #616161;
-  // color: white;
+  display: none;
   visibility: hidden;
   opacity: 0;
   position: absolute;
   height: 36px;
   transition: opacity 0.5s;
-}
-#printTooltip {
   top: 15px;
-  left: 58px;
-}
-#saveTooltip {
-  top: 79px;
   left: 60px;
+  font-size: 18px;
 }
 
 // active states
@@ -263,5 +257,6 @@ a.projectLink:active {
   color: black;
 }
 .saveBtns .saveBtn:active {
-  background-color: silver;
+  background-color: #a9a9a9;
+  border-color: #a9a9a9;
 }

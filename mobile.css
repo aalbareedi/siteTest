@@ -53,11 +53,14 @@
   }
 }
 
-@media screen and (min-width: 1100px), print {
+@media screen and (min-width: 1190px), print {
   .saveBtns {
     position: fixed;
     right: 50%;
     margin-right: -496px;
+  }
+  .iconToolTip {
+    display: initial;
   }
 }
 
