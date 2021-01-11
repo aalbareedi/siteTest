@@ -22,13 +22,14 @@ body {
 
 .logo {
   width: 58px;
-  height: 48px;
+  height: 46px;
   margin-right: 16px;
   margin-bottom: 1px;
   margin-left: -1px;
 }
 
 .name {
+  color: pink;
   font-family: "PT Sans", sans-serif;
   font-size: 28px;
   line-height: 1;
@@ -280,7 +281,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  outline: none;
   cursor: pointer;
   position: relative;
 }

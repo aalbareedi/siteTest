@@ -19,13 +19,13 @@ body {
 .logo {
   width: 58px;
   // fix img size bug (https://github.com/philipwalton/flexbugs/issues/184)
-  height: 48px;
+  height: 46px;
   margin-right: 16px;
   margin-bottom: 1px;
   margin-left: -1px;
 }
 .name {
-  // color: pink;
+  color: pink;
   font-family: "PT Sans", sans-serif;
   font-size: 28px;
   line-height: 1;
@@ -229,7 +229,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  outline: none;
+  // outline: none;
   cursor: pointer;
   position: relative;
 }
@@ -262,3 +262,7 @@ a.projectLink:active {
   background-color: #a9a9a9;
   border-color: #a9a9a9;
 }
+
+// button:hover {
+//   outline: none;
+// }
