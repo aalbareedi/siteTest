@@ -14,10 +14,12 @@ body {
   max-width: 850px;
   margin: 0 auto;
   -webkit-print-color-adjust: exact;
-  // position: relative;
+  position: relative;
 }
 .logo {
   width: 58px;
+  // fix img size bug (https://github.com/philipwalton/flexbugs/issues/184)
+  height: 48px;
   margin-right: 16px;
   margin-bottom: 1px;
   margin-left: -1px;
