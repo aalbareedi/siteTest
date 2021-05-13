@@ -80,10 +80,11 @@ nav {
 
 main {
   padding-top: 60px;
+  height: 100%;
 }
 
 .box1 {
-  height: calc(100vh - 60px);
+  height: 100%;
   position: relative;
   background-image: url("lion.jpg");
   background-repeat: no-repeat;
@@ -101,7 +102,7 @@ main {
 }
 
 .ctaBtn {
-  background-color: gray;
+  background-color: pink;
   border: none;
   width: 210px;
   height: 54px;

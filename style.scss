@@ -71,10 +71,12 @@ nav {
 
 main {
   padding-top: 60px;
+  height: 100%;
 }
 
 .box1 {
-  height: calc(100vh - 60px);
+  // height: calc(100vh - 60px);
+  height: 100%;
   // background-color: pink;
   position: relative;
   background-image: url("lion.jpg");
@@ -90,7 +92,7 @@ main {
   background-color: yellow;
 }
 .ctaBtn {
-  background-color: gray;
+  background-color: pink;
   border: none;
   width: 210px;
   height: 54px;
