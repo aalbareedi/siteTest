@@ -7,6 +7,14 @@
   scroll-behavior: smooth;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
 .displayHidden {
   display: none;
 }
@@ -76,8 +84,10 @@ main {
 
 .box1 {
   height: calc(100vh - 60px);
-  background-color: pink;
   position: relative;
+  background-image: url("lion.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .box2 {
