@@ -38,12 +38,12 @@ backToTop.onclick = () => {
 
 // we get the buttons initial position outside the scroll event
 // so it doesnt change when we add the class to it
-let ctaBtnPosition = ctaBtn.offsetTop;
+let ctaBtnPosition = distanceToBody(ctaBtn);
 
 body.onscroll = () => {
   let bodyScroll = document.documentElement.scrollTop || body.scrollTop;
 
-  if (bodyScroll > ctaBtnPosition) {
+  if (bodyScroll > ctaBtnPosition - 60) {
     ctaBtn.classList.add("btnScrolled");
   } else {
     ctaBtn.classList.remove("btnScrolled");
@@ -51,3 +51,15 @@ body.onscroll = () => {
 
   console.log(ctaBtnPosition);
 };
+
+function distanceToBody(element) {
+  let parent = element;
+  let total = 0;
+
+  do {
+    total += parent.offsetTop;
+    parent = parent.offsetParent;
+  } while (parent != body);
+
+  return total;
+}

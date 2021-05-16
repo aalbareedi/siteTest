@@ -5,6 +5,7 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-appearance: none;
   scroll-behavior: smooth;
+  padding: 0;
 }
 
 html {
@@ -85,7 +86,6 @@ main {
 
 .box1 {
   height: 100%;
-  position: relative;
   background-image: url("lion.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -101,6 +101,13 @@ main {
   background-color: yellow;
 }
 
+.ctaBtnWrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: calc(100% - 110px);
+}
+
 .ctaBtn {
   background-color: pink;
   border: none;
@@ -108,11 +115,10 @@ main {
   height: 54px;
   border-radius: 50px;
   position: absolute;
-  top: 70px;
-  margin-top: calc(100vh - 145px - 70px);
+  bottom: calc(100% - 80px);
   right: calc(50% - 105px);
-  -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, background-color 0.5s;
-  transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s, background-color 0.5s;
+  -webkit-transition: bottom 0.5s, left 0.5s, width 0.5s, height 0.5s, background-color 0.5s;
+  transition: bottom 0.5s, left 0.5s, width 0.5s, height 0.5s, background-color 0.5s;
 }
 
 form {
@@ -135,8 +141,7 @@ form {
 .btnScrolled {
   position: fixed;
   background-color: #5987a7;
-  margin-top: 0;
-  top: calc(100vh - 80px);
+  bottom: 20px;
   right: 20px;
   width: 60px;
   height: 60px;
