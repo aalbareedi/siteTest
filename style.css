@@ -68,6 +68,24 @@ header {
   border: none;
 }
 
+.navOverlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.hiddenOverlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -105,20 +123,20 @@ main {
   position: absolute;
   height: 100%;
   width: 100%;
-  top: calc(100% - 110px);
+  top: calc(100% - 60px - 54px - 40px);
 }
 
 .ctaBtn {
-  background-color: #5fd3ff;
+  background-color: pink;
   border: none;
   width: 210px;
   height: 54px;
   border-radius: 50px;
   position: absolute;
-  bottom: calc(100% - 80px);
+  bottom: calc(100% - 54px - 60px);
   right: calc(50% - 105px);
-  -webkit-transition: bottom 0.5s, left 0.5s, width 0.5s, height 0.5s, background-color 0.5s;
-  transition: bottom 0.5s, left 0.5s, width 0.5s, height 0.5s, background-color 0.5s;
+  -webkit-transition: bottom 0.5s, left 0.5s, right 0.5s, width 0.5s, height 0.5s, background-color 0.5s;
+  transition: bottom 0.5s, left 0.5s, right 0.5s, width 0.5s, height 0.5s, background-color 0.5s;
 }
 
 form {

@@ -7,6 +7,8 @@ let form = document.querySelector("form");
 let closeFormBtn = document.querySelector(".closeFormBtn");
 let backToTop = document.querySelector(".backToTop");
 let body = document.querySelector("body");
+let headerHeight = document.querySelector("header").offsetHeight;
+let navOverlay = document.querySelector(".navOverlay");
 
 // openNavBtn.onclick = () => {
 //   navWindow.classList.remove("displayHidden");
@@ -18,10 +20,17 @@ let body = document.querySelector("body");
 
 openNavBtn.onclick = () => {
   navWindow.classList.add("showNav");
+  navOverlay.classList.remove("hiddenOverlay");
 };
 
 closeNavBtn.onclick = () => {
   navWindow.classList.remove("showNav");
+  navOverlay.classList.add("hiddenOverlay");
+};
+
+navOverlay.onclick = () => {
+  navWindow.classList.remove("showNav");
+  navOverlay.classList.add("hiddenOverlay");
 };
 
 ctaBtn.onclick = () => {
@@ -43,13 +52,13 @@ let ctaBtnPosition = distanceToBody(ctaBtn);
 body.onscroll = () => {
   let bodyScroll = document.documentElement.scrollTop || body.scrollTop;
 
-  if (bodyScroll > ctaBtnPosition - 60) {
+  if (bodyScroll > ctaBtnPosition - headerHeight) {
     ctaBtn.classList.add("btnScrolled");
   } else {
     ctaBtn.classList.remove("btnScrolled");
   }
 
-  console.log(ctaBtnPosition);
+  // console.log(ctaBtnPosition);
 };
 
 function distanceToBody(element) {

@@ -1,3 +1,6 @@
+$header-height: 60px;
+$ctaBtn-height: 54px;
+
 * {
   box-sizing: border-box;
   /* Remove Gray Highlight When Tapping Links in Mobile Safari */
@@ -27,7 +30,7 @@ body {
 header {
   position: fixed;
   top: 0;
-  height: 60px;
+  height: $header-height;
   width: 100%;
   background-color: gainsboro;
   z-index: 10;
@@ -38,7 +41,7 @@ header {
 }
 .openNavBtn {
   background-color: gray;
-  width: 60px;
+  width: $header-height;
   height: 100%;
   position: absolute;
   top: 0;
@@ -52,14 +55,31 @@ header {
 .closeNavBtn,
 .closeFormBtn {
   background-color: gray;
-  width: 60px;
-  height: 60px;
+  width: $header-height;
+  height: $header-height;
   position: absolute;
   top: 0;
   right: 0;
   border: none;
 }
-
+.navOverlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.5s;
+}
+.hiddenOverlay {
+  opacity: 0;
+  // pointer-events: controls how the element responds to clicks
+  pointer-events: none;
+  // right: -100%;
+  // left: initial;
+}
 nav {
   position: fixed;
   top: 0;
@@ -71,7 +91,7 @@ nav {
 }
 
 main {
-  padding-top: 60px;
+  padding-top: $header-height;
   height: 100%;
 }
 
@@ -92,24 +112,23 @@ main {
   height: 500px;
   background-color: yellow;
 }
-
 .ctaBtnWrapper {
   position: absolute;
   height: 100%;
   width: 100%;
-  top: calc(100% - 110px);
+  top: calc(100% - #{$header-height} - #{$ctaBtn-height} - 40px);
 }
-
 .ctaBtn {
-  background-color: #5fd3ff;
+  // background-color: #5fd3ff;
+  background-color: pink;
   border: none;
   width: 210px;
-  height: 54px;
+  height: $ctaBtn-height;
   border-radius: 50px;
   position: absolute;
-  bottom: calc(100% - 80px);
+  bottom: calc(100% - #{$ctaBtn-height} - #{$header-height});
   right: calc(50% - 105px);
-  transition: bottom 0.5s, left 0.5s, width 0.5s, height 0.5s,
+  transition: bottom 0.5s, left 0.5s, right 0.5s, width 0.5s, height 0.5s,
     background-color 0.5s;
   // box-shadow: 0 11px 36px 0 rgb(70 89 138 / 25%);
 }
