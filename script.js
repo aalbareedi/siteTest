@@ -41,9 +41,8 @@ closeFormBtn.onclick = () => {
   form.classList.remove("showForm");
 };
 
-backToTop.onclick = (e) => {
-  e.preventDefault();
-  body.scrollIntoView({ behavior: "smooth" });
+backToTop.onclick = () => {
+  body.scrollIntoView(true);
 };
 
 // we get the buttons initial position outside the scroll event
