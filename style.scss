@@ -10,9 +10,11 @@ $ctaBtn-height: 54px;
   padding: 0;
 }
 html {
+  min-height: fill-available;
   height: 100%;
 }
 body {
+  min-height: fill-available;
   height: 100%;
 }
 
@@ -119,8 +121,8 @@ main {
   top: calc(100% - #{$header-height} - #{$ctaBtn-height} - 40px);
 }
 .ctaBtn {
-  background-color: #5fd3ff;
-  // background-color: pink;
+  // background-color: #5fd3ff;
+  background-color: red;
   border: none;
   width: 210px;
   height: $ctaBtn-height;

@@ -8,10 +8,16 @@
 }
 
 html {
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
+  min-height: fill-available;
   height: 100%;
 }
 
 body {
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
+  min-height: fill-available;
   height: 100%;
 }
 
@@ -126,7 +132,7 @@ main {
 }
 
 .ctaBtn {
-  background-color: #5fd3ff;
+  background-color: red;
   border: none;
   width: 210px;
   height: 54px;
