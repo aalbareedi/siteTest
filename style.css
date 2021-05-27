@@ -8,17 +8,11 @@
 }
 
 html {
-  min-height: -webkit-fill-available;
-  min-height: -moz-available;
-  min-height: fill-available;
-  height: 100%;
+  height: 100vh;
 }
 
 body {
-  min-height: -webkit-fill-available;
-  min-height: -moz-available;
-  min-height: fill-available;
-  height: 100%;
+  height: 100vh;
 }
 
 .displayHidden {
@@ -132,7 +126,7 @@ main {
 }
 
 .ctaBtn {
-  background-color: red;
+  background-color: #5fd3ff;
   border: none;
   width: 210px;
   height: 54px;
