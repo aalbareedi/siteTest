@@ -5,7 +5,7 @@ let ctaBtn = document.querySelector(".ctaBtn");
 let ctaBtnText = document.querySelector(".ctaBtnText");
 let form = document.querySelector("form");
 let closeFormBtn = document.querySelector(".closeFormBtn");
-let backToTop = document.querySelector(".backToTop");
+let header = document.querySelector("header");
 let body = document.querySelector("body");
 let headerHeight = document.querySelector("header").offsetHeight;
 let navOverlay = document.querySelector(".navOverlay");
@@ -18,12 +18,14 @@ let navOverlay = document.querySelector(".navOverlay");
 //   navWindow.classList.add("displayHidden");
 // };
 
-openNavBtn.onclick = () => {
+openNavBtn.onclick = (e) => {
+  e.stopPropagation();
   navWindow.classList.add("showNav");
   navOverlay.classList.remove("hiddenOverlay");
 };
 
-closeNavBtn.onclick = () => {
+closeNavBtn.onclick = (e) => {
+  e.stopPropagation();
   navWindow.classList.remove("showNav");
   navOverlay.classList.add("hiddenOverlay");
 };
@@ -41,8 +43,7 @@ closeFormBtn.onclick = () => {
   form.classList.remove("showForm");
 };
 
-backToTop.onclick = (e) => {
-  e.preventDefault();
+header.onclick = () => {
   body.scrollIntoView({ behavior: "smooth" });
 };
 
