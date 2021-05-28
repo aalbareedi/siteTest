@@ -106,6 +106,7 @@ main {
   background-image: url("lion.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .box2 {
@@ -126,7 +127,7 @@ main {
 }
 
 .ctaBtn {
-  background-color: red;
+  background-color: #5fd3ff;
   border: none;
   width: 210px;
   height: 54px;
