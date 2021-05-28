@@ -73,3 +73,7 @@ function distanceToBody(element) {
 
   return total;
 }
+
+setTimeout(function () {
+  alert(window.innerWidth + "," + window.innerHeight);
+}, 3000);

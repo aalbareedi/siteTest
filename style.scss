@@ -123,8 +123,8 @@ main {
   top: calc(100% - #{$header-height} - #{$ctaBtn-height} - 40px);
 }
 .ctaBtn {
-  background-color: #5fd3ff;
-  // background-color: red;
+  // background-color: #5fd3ff;
+  background-color: red;
   border: none;
   width: 210px;
   height: $ctaBtn-height;
