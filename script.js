@@ -9,6 +9,12 @@ let header = document.querySelector("header");
 let body = document.querySelector("body");
 let headerHeight = document.querySelector("header").offsetHeight;
 let navOverlay = document.querySelector(".navOverlay");
+let mobileNavLink1 = document.querySelector("#mobileNavLink1");
+let mobileNavLink2 = document.querySelector("#mobileNavLink2");
+let mobileNavLink3 = document.querySelector("#mobileNavLink3");
+let box2 = document.querySelector(".box2");
+let box3 = document.querySelector(".box3");
+let box4 = document.querySelector(".box4");
 
 // openNavBtn.onclick = () => {
 //   navWindow.classList.remove("displayHidden");
@@ -17,6 +23,9 @@ let navOverlay = document.querySelector(".navOverlay");
 // closeNavBtn.onclick = () => {
 //   navWindow.classList.add("displayHidden");
 // };
+navWindow.onclick = (e) => {
+  e.stopPropagation();
+};
 
 openNavBtn.onclick = (e) => {
   e.stopPropagation();
@@ -30,7 +39,8 @@ closeNavBtn.onclick = (e) => {
   navOverlay.classList.add("hiddenOverlay");
 };
 
-navOverlay.onclick = () => {
+navOverlay.onclick = (e) => {
+  e.stopPropagation();
   navWindow.classList.remove("showNav");
   navOverlay.classList.add("hiddenOverlay");
 };
@@ -75,6 +85,30 @@ function distanceToBody(element) {
   return total;
 }
 
-setTimeout(function () {
-  alert(window.innerWidth + "," + window.innerHeight);
-}, 3000);
+mobileNavLink1.onclick = (e) => {
+  e.stopPropagation();
+  box2.scrollIntoView({ behavior: "smooth" });
+
+  navWindow.classList.remove("showNav");
+  navOverlay.classList.add("hiddenOverlay");
+};
+
+mobileNavLink2.onclick = (e) => {
+  e.stopPropagation();
+  box3.scrollIntoView({ behavior: "smooth" });
+
+  navWindow.classList.remove("showNav");
+  navOverlay.classList.add("hiddenOverlay");
+};
+
+mobileNavLink3.onclick = (e) => {
+  e.stopPropagation();
+  box4.scrollIntoView({ behavior: "smooth" });
+
+  navWindow.classList.remove("showNav");
+  navOverlay.classList.add("hiddenOverlay");
+};
+
+// setTimeout(function () {
+//   alert(window.innerWidth + "," + window.innerHeight);
+// }, 3000);
