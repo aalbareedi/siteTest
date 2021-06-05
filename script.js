@@ -1,6 +1,6 @@
 let openNavBtn = document.querySelector(".openNavBtn");
 let closeNavBtn = document.querySelector(".closeNavBtn");
-let navWindow = document.querySelector("nav");
+let navWindow = document.querySelector(".mobileNav");
 let ctaBtn = document.querySelector(".ctaBtn");
 let ctaBtnText = document.querySelector(".ctaBtnText");
 let form = document.querySelector("form");
@@ -15,6 +15,7 @@ let mobileNavLink3 = document.querySelector("#mobileNavLink3");
 let box2 = document.querySelector(".box2");
 let box3 = document.querySelector(".box3");
 let box4 = document.querySelector(".box4");
+let landingBgImg = document.querySelector(".landingBgImg");
 
 // openNavBtn.onclick = () => {
 //   navWindow.classList.remove("displayHidden");
@@ -68,6 +69,12 @@ body.onscroll = () => {
     ctaBtn.classList.add("btnScrolled");
   } else {
     ctaBtn.classList.remove("btnScrolled");
+  }
+
+  if (box2.getBoundingClientRect().top < 0) {
+    landingBgImg.classList.add("displayHidden");
+  } else {
+    landingBgImg.classList.remove("displayHidden");
   }
 
   // console.log(ctaBtnPosition);

@@ -12,7 +12,7 @@
 }
 
 .showNav {
-  right: 0;
+  right: 0 !important;
 }
 
 .showForm {
@@ -77,7 +77,7 @@ header {
   pointer-events: none;
 }
 
-nav {
+.mobileNav {
   position: fixed;
   top: 0;
   right: -100%;
@@ -87,6 +87,10 @@ nav {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   padding-top: 80px;
+}
+
+.desktopNav {
+  display: none;
 }
 
 .mobileNavLink {
@@ -125,6 +129,28 @@ main {
 .box4 {
   height: 500px;
   background-color: green;
+}
+
+.box5 {
+  height: 500px;
+}
+
+.parallaxImg {
+  position: fixed;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("nature.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("nature.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 60px);
+  width: 100vw;
+  z-index: -2;
+  top: 60px;
+}
+
+.box6 {
+  height: 500px;
+  background-color: #2d0080;
 }
 
 .ctaBtnWrapper {

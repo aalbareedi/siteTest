@@ -25,7 +25,7 @@ $ctaBtn-height: 54px;
 }
 
 .showNav {
-  right: 0;
+  right: 0 !important;
 }
 .showForm {
   top: 0;
@@ -84,7 +84,7 @@ header {
   // right: -100%;
   // left: initial;
 }
-nav {
+.mobileNav {
   position: fixed;
   top: 0;
   right: -100%;
@@ -93,6 +93,9 @@ nav {
   width: 260px;
   transition: all 0.4s;
   padding-top: 80px;
+}
+.desktopNav {
+  display: none;
 }
 .mobileNavLink {
   padding: 20px 0;
@@ -130,6 +133,27 @@ main {
 .box4 {
   height: 500px;
   background-color: green;
+}
+.box5 {
+  height: 500px;
+  // background: rgba(0, 0, 0, 0.7);
+}
+
+.parallaxImg {
+  position: fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("nature.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - #{$header-height});
+  width: 100vw;
+  z-index: -2;
+  top: $header-height;
+}
+.box6 {
+  height: 500px;
+  background-color: rgb(45, 0, 128);
 }
 .ctaBtnWrapper {
   position: absolute;

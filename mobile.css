@@ -1,0 +1,9 @@
+@media only screen and (min-width: 1024px) {
+  .openNavBtn {
+    display: none;
+  }
+  .desktopNav {
+    display: block;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */
