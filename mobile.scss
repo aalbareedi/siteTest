@@ -3,6 +3,12 @@
     display: none;
   }
   .desktopNav {
-    display: block;
+    display: flex;
+    position: absolute;
+    right: 0;
+    height: 100%;
+  }
+  .desktopNavLink {
+    width: 100px;
   }
 }

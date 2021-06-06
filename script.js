@@ -55,7 +55,8 @@ closeFormBtn.onclick = () => {
 };
 
 header.onclick = () => {
-  body.scrollIntoView({ behavior: "smooth" });
+  // body.scrollIntoView({ behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 // we get the buttons initial position outside the scroll event
@@ -94,7 +95,11 @@ function distanceToBody(element) {
 
 mobileNavLink1.onclick = (e) => {
   e.stopPropagation();
-  box2.scrollIntoView({ behavior: "smooth" });
+  // box2.scrollIntoView({ behavior: "smooth" });
+  window.scrollTo({
+    top: distanceToBody(box2) - headerHeight,
+    behavior: "smooth",
+  });
 
   navWindow.classList.remove("showNav");
   navOverlay.classList.add("hiddenOverlay");
@@ -102,7 +107,11 @@ mobileNavLink1.onclick = (e) => {
 
 mobileNavLink2.onclick = (e) => {
   e.stopPropagation();
-  box3.scrollIntoView({ behavior: "smooth" });
+  // box3.scrollIntoView({ behavior: "smooth" });
+  window.scrollTo({
+    top: distanceToBody(box3) - headerHeight,
+    behavior: "smooth",
+  });
 
   navWindow.classList.remove("showNav");
   navOverlay.classList.add("hiddenOverlay");
@@ -110,7 +119,11 @@ mobileNavLink2.onclick = (e) => {
 
 mobileNavLink3.onclick = (e) => {
   e.stopPropagation();
-  box4.scrollIntoView({ behavior: "smooth" });
+  // box4.scrollIntoView({ behavior: "smooth" });
+  window.scrollTo({
+    top: distanceToBody(box4) - headerHeight,
+    behavior: "smooth",
+  });
 
   navWindow.classList.remove("showNav");
   navOverlay.classList.add("hiddenOverlay");

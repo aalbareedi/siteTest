@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 .displayHidden {
   display: none;
 }
@@ -153,6 +157,11 @@ main {
   background-color: #2d0080;
 }
 
+.box7 {
+  height: 500px;
+  background-color: #80003c;
+}
+
 .ctaBtnWrapper {
   position: absolute;
   height: 100%;
@@ -161,7 +170,7 @@ main {
 }
 
 .ctaBtn {
-  background-color: #5fd3ff;
+  background-color: red;
   border: none;
   width: 210px;
   height: 54px;
