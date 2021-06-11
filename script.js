@@ -16,6 +16,7 @@ let box2 = document.querySelector(".box2");
 let box3 = document.querySelector(".box3");
 let box4 = document.querySelector(".box4");
 let landingBgImg = document.querySelector(".landingBgImg");
+let desktopNav = document.querySelector(".desktopNav");
 
 // openNavBtn.onclick = () => {
 //   navWindow.classList.remove("displayHidden");
@@ -82,6 +83,7 @@ body.onscroll = () => {
 };
 
 function distanceToBody(element) {
+  let body = document.querySelector("body");
   let parent = element;
   let total = 0;
 
@@ -127,6 +129,10 @@ mobileNavLink3.onclick = (e) => {
 
   navWindow.classList.remove("showNav");
   navOverlay.classList.add("hiddenOverlay");
+};
+
+desktopNav.onclick = (e) => {
+  e.stopPropagation();
 };
 
 // setTimeout(function () {

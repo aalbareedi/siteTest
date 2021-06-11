@@ -221,4 +221,28 @@ form {
   font-size: 24px;
   color: whitesmoke;
 }
+
+.navDropdown {
+  position: absolute;
+  background-color: gainsboro;
+  top: 60px;
+  padding: 8px 0 8px 0;
+}
+
+.desktopNavLink {
+  width: 100px;
+  border: none;
+}
+
+.navSublink {
+  padding: 8px 20px 8px 20px;
+  cursor: pointer;
+}
+
+.subNavDropdown {
+  position: absolute;
+  background-color: gray;
+  top: 0px;
+  left: 100%;
+}
 /*# sourceMappingURL=style.css.map */
