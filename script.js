@@ -1,3 +1,6 @@
+// Remove Gray Highlight When Tapping Links in Mobile Safari + mobile active states
+document.addEventListener("touchstart", function () {}, true);
+
 let openNavBtn = document.querySelector(".openNavBtn");
 let closeNavBtn = document.querySelector(".closeNavBtn");
 let navWindow = document.querySelector(".mobileNav");
