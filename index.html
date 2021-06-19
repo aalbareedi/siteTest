@@ -15,6 +15,10 @@
       crossorigin="anonymous"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mobile.css" />
@@ -34,26 +38,29 @@
         <div id="mobileNavLink2" class="mobileNavLink">Link 2</div>
         <div id="mobileNavLink3" class="mobileNavLink">Link 3</div>
       </nav>
+
       <nav class="desktopNav">
-        <button class="desktopNavLink">
-          Link 1 <i class="fas fa-chevron-down"></i>
-        </button>
-        <button class="desktopNavLink">Link 2</button>
-        <button class="desktopNavLink">Link 3</button>
-        <button class="desktopNavLink">Link 4</button>
+        <a class="desktopNavLink" id="desktopNavLink1" href="#">
+          Link 1 <i class="fas fa-chevron-down navLinkArrow"></i>
+        </a>
 
         <div class="navDropdown">
-          <div class="navSublink">
-            Sublink 1 <i class="fas fa-chevron-right"></i>
-          </div>
-          <div class="navSublink">Sublink 2</div>
-          <div class="navSublink">Sublink 3</div>
+          <a class="navSublink" href="#">
+            Sublink 1 <i class="fas fa-chevron-right subNavLinkArrow"></i>
+          </a>
           <div class="subNavDropdown">
-            <div class="navSublink">Sublink 1</div>
-            <div class="navSublink">Sublink 2</div>
-            <div class="navSublink">Sublink 3</div>
+            <a class="navSublink" href="http://www.google.com">Sublink 1</a>
+            <a class="navSublink" href="#">Sublink 2</a>
+            <a class="navSublink" href="#">Sublink 3</a>
+            <a class="navSublink" href="#">Sublink 4</a>
           </div>
+          <a class="navSublink" href="#">Sublink 2</a>
+          <a class="navSublink" href="#">Sublink 3</a>
         </div>
+
+        <a class="desktopNavLink" id="desktopNavLink2" href="#">Link 2</a>
+        <a class="desktopNavLink" id="desktopNavLink3" href="#">Link 3</a>
+        <a class="desktopNavLink" id="desktopNavLink4" href="#">Link 4</a>
       </nav>
     </header>
 
@@ -67,10 +74,35 @@
           </button>
         </div>
       </section>
-      <section class="box2"></section>
-      <section class="box3"></section>
-      <section class="box4"></section>
-      <section class="box5">
+      <section class="box box2">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+              repellendus voluptatibus aliquam laboriosam delectus? Nesciunt
+              consequuntur sequi doloremque natus iste aliquid veritatis
+              consectetur!
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+      </section>
+      <section class="box box3"></section>
+      <section class="box box4"></section>
+      <section class="box box5">
         <div class="parallaxImg"></div>
         <div>Title</div>
       </section>
@@ -83,6 +115,7 @@
       </form>
     </main>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="smoothscroll.min.js"></script>
     <script src="script.js"></script>
   </body>

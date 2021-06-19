@@ -230,22 +230,72 @@ form {
   // opacity: 1;
 }
 .navDropdown {
+  display: none;
   position: absolute;
   background-color: gainsboro;
   top: $header-height;
+  left: -8px;
   padding: 8px 0 8px 0;
 }
+// + selector selects the second tag if it comes right after the first one.
+.desktopNavLink:hover + .navDropdown,
+.navDropdown:hover,
+.navSublink:hover + .subNavDropdown,
+.subNavDropdown:hover {
+  display: initial;
+}
 .desktopNavLink {
+  color: initial;
+  text-decoration: none;
   width: 100px;
-  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .navSublink {
+  color: initial;
+  text-decoration: none;
+  display: block;
   padding: 8px 20px 8px 20px;
-  cursor: pointer;
+  white-space: nowrap;
 }
 .subNavDropdown {
+  display: none;
   position: absolute;
   background-color: gray;
   top: 0px;
   left: 100%;
+  padding: 8px 0 8px 0;
+}
+.navLinkArrow {
+  font-size: 20px;
+  margin-left: 6px;
+}
+.subNavLinkArrow {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+// https://swiperjs.com/swiper-api
+.swiper-slide {
+  padding: 40px 50px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 30px;
+  color: red;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 6px;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0px;
 }

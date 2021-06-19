@@ -15,8 +15,19 @@ let mobileNavLink3 = document.querySelector("#mobileNavLink3");
 let box2 = document.querySelector(".box2");
 let box3 = document.querySelector(".box3");
 let box4 = document.querySelector(".box4");
+let box5 = document.querySelector(".box5");
+let boxes = document.querySelectorAll(".box");
 let landingBgImg = document.querySelector(".landingBgImg");
 let desktopNav = document.querySelector(".desktopNav");
+let desktopNavLink1 = document.querySelector("#desktopNavLink1");
+let desktopNavLink2 = document.querySelector("#desktopNavLink2");
+let desktopNavLink3 = document.querySelector("#desktopNavLink3");
+let desktopNavLink4 = document.querySelector("#desktopNavLink4");
+let desktopNavLinks = document.querySelectorAll(".desktopNavLink");
+let navSublinks = document.querySelectorAll(
+  // selects all elements that have href = #
+  ".navSublink[href='#'], .desktopNavLink[href='#']"
+);
 
 // openNavBtn.onclick = () => {
 //   navWindow.classList.remove("displayHidden");
@@ -56,6 +67,7 @@ closeFormBtn.onclick = () => {
 };
 
 header.onclick = () => {
+  // alert("header clicked");
   // body.scrollIntoView({ behavior: "smooth" });
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
@@ -135,6 +147,53 @@ desktopNav.onclick = (e) => {
   e.stopPropagation();
 };
 
+for (let i = 0; i < desktopNavLinks.length; i++) {
+  //console.log(desktopNavLinks[i].href);
+
+  desktopNavLinks[i].onclick = () => {
+    window.scrollTo({
+      top: distanceToBody(boxes[i]) - headerHeight,
+      behavior: "smooth",
+    });
+  };
+}
+
+for (let i = 0; i < navSublinks.length; i++) {
+  // Replaces first .onclick
+  // navSublinks[i].onclick = (e) => {
+  //   e.preventDefault();
+  // };
+
+  // Doesn't replace .onclick
+  navSublinks[i].addEventListener("click", (e) => {
+    e.preventDefault();
+  });
+}
+
 // setTimeout(function () {
 //   alert(window.innerWidth + "," + window.innerHeight);
 // }, 3000);
+
+const swiper = new Swiper(".swiper-container", {
+  // Optional parameters
+  // direction: "vertical",
+  loop: true,
+  autoplay: { delay: 4000 },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: ".swiper-scrollbar",
+  // },
+});
