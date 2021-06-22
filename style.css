@@ -170,7 +170,7 @@ main {
 }
 
 .ctaBtn {
-  background-color: #5fd3ff;
+  background-color: red;
   border: none;
   width: 210px;
   height: 54px;
@@ -282,6 +282,11 @@ form {
 
 .swiper-slide {
   padding: 40px 50px;
+  outline: none !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
   outline: none !important;
 }
 
