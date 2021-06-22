@@ -170,7 +170,7 @@ main {
 }
 
 .ctaBtn {
-  background-color: red;
+  background-color: #5fd3ff;
   border: none;
   width: 210px;
   height: 54px;
@@ -280,40 +280,34 @@ form {
   vertical-align: middle;
 }
 
-.swiper-slide {
-  padding: 40px 50px;
+.swiper-container * {
   outline: none !important;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  outline: none !important;
+.swiper-slide {
+  padding: 40px 50px;
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: 30px;
   color: red;
-  outline: none !important;
 }
 
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  outline: none !important;
 }
 
 .swiper-container-horizontal
 > .swiper-pagination-bullets
 .swiper-pagination-bullet {
   margin: 0 6px;
-  outline: none !important;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
   bottom: 0px;
-  outline: none !important;
 }
 /*# sourceMappingURL=style.css.map */

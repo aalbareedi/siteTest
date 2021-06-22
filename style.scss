@@ -171,8 +171,8 @@ main {
   top: 310px;
 }
 .ctaBtn {
-  // background-color: #5fd3ff;
-  background-color: red;
+  background-color: #5fd3ff;
+  // background-color: red;
   border: none;
   width: 210px;
   height: $ctaBtn-height;
@@ -277,34 +277,36 @@ form {
 }
 
 // https://swiperjs.com/swiper-api
+.swiper-container * {
+  outline: none !important;
+}
 .swiper-slide {
   padding: 40px 50px;
-  outline: none !important;
+  // outline: none !important;
 }
-.swiper-button-next,
-.swiper-button-prev {
-  outline: none !important;
-}
+// .swiper-button-next,
+// .swiper-button-prev {
+//   outline: none !important;
+// }
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: 30px;
   color: red;
-  outline: none !important;
 }
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  outline: none !important;
+  // outline: none !important;
 }
 .swiper-container-horizontal
   > .swiper-pagination-bullets
   .swiper-pagination-bullet {
   margin: 0 6px;
-  outline: none !important;
+  // outline: none !important;
 }
 .swiper-container-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
   bottom: 0px;
-  outline: none !important;
+  // outline: none !important;
 }
