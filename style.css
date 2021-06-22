@@ -7,6 +7,16 @@
   padding: 0;
 }
 
+html {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
 button {
   cursor: pointer;
 }
@@ -170,7 +180,7 @@ main {
 }
 
 .ctaBtn {
-  background-color: #5fd3ff;
+  background-color: red;
   border: none;
   width: 210px;
   height: 54px;
