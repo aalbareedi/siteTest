@@ -13,15 +13,15 @@ html {
   // min-height: fill-available;
   // height: 100%;
   // height: 100vh;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  height: 100vh;
+  // min-height: -webkit-fill-available;
 }
 body {
   // min-height: fill-available;
   // height: 100%;
   // height: 100vh;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  height: 100vh;
+  // min-height: -webkit-fill-available;
 }
 
 button {
@@ -175,8 +175,8 @@ main {
   top: 310px;
 }
 .ctaBtn {
-  background-color: #5fd3ff;
-  // background-color: red;
+  // background-color: #5fd3ff;
+  background-color: red;
   border: none;
   width: 210px;
   height: $ctaBtn-height;
