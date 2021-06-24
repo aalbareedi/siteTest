@@ -29,7 +29,7 @@ button {
 }
 
 .displayHidden {
-  display: none;
+  display: none !important;
 }
 
 .showNav {
@@ -134,7 +134,8 @@ main {
   transform: translate3d(0, 0, 0);
 }
 .box2 {
-  height: 500px;
+  // height: 500px;
+  padding-bottom: 40px;
   background-color: orange;
 }
 .box3 {
@@ -150,7 +151,7 @@ main {
   // background: rgba(0, 0, 0, 0.7);
 }
 
-.parallaxImg {
+.box5parallaxImg {
   position: fixed;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("nature.jpg");
@@ -176,10 +177,11 @@ main {
   width: 100%;
   // top: calc(100% - #{$header-height} - #{$ctaBtn-height} - 40px);
   top: 310px;
+  pointer-events: none;
 }
 .ctaBtn {
-  // background-color: #5fd3ff;
-  background-color: red;
+  background-color: #5fd3ff;
+  // background-color: red;
   border: none;
   width: 210px;
   height: $ctaBtn-height;
@@ -189,6 +191,7 @@ main {
   right: calc(50% - 105px);
   transition: bottom 0.5s, left 0.5s, right 0.5s, width 0.5s, height 0.5s,
     background-color 0.5s;
+  pointer-events: initial;
   // box-shadow: 0 11px 36px 0 rgb(70 89 138 / 25%);
 }
 form {
@@ -298,22 +301,35 @@ form {
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: 30px;
-  color: red;
+  // color: red;
 }
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  // outline: none !important;
 }
 .swiper-container-horizontal
   > .swiper-pagination-bullets
   .swiper-pagination-bullet {
   margin: 0 6px;
-  // outline: none !important;
 }
 .swiper-container-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
   bottom: 0px;
-  // outline: none !important;
+}
+
+.toggleText {
+  margin-top: 40px;
+  padding: 0 30px;
+}
+
+.lessToggleText {
+  // height: 2.2em;
+  height: 39px;
+  overflow: hidden;
+}
+
+.toggleTextBtn {
+  margin: 10px auto 0 auto;
+  display: block;
 }

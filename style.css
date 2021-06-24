@@ -12,7 +12,7 @@ button {
 }
 
 .displayHidden {
-  display: none;
+  display: none !important;
 }
 
 .showNav {
@@ -123,7 +123,7 @@ main {
 }
 
 .box2 {
-  height: 500px;
+  padding-bottom: 40px;
   background-color: orange;
 }
 
@@ -141,7 +141,7 @@ main {
   height: 500px;
 }
 
-.parallaxImg {
+.box5parallaxImg {
   position: fixed;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("nature.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("nature.jpg");
@@ -169,10 +169,11 @@ main {
   height: 100%;
   width: 100%;
   top: 310px;
+  pointer-events: none;
 }
 
 .ctaBtn {
-  background-color: red;
+  background-color: #5fd3ff;
   border: none;
   width: 210px;
   height: 54px;
@@ -182,6 +183,7 @@ main {
   right: calc(50% - 105px);
   -webkit-transition: bottom 0.5s, left 0.5s, right 0.5s, width 0.5s, height 0.5s, background-color 0.5s;
   transition: bottom 0.5s, left 0.5s, right 0.5s, width 0.5s, height 0.5s, background-color 0.5s;
+  pointer-events: initial;
 }
 
 form {
@@ -293,7 +295,6 @@ form {
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: 30px;
-  color: red;
 }
 
 .swiper-pagination-bullet {
@@ -311,5 +312,20 @@ form {
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
   bottom: 0px;
+}
+
+.toggleText {
+  margin-top: 40px;
+  padding: 0 30px;
+}
+
+.lessToggleText {
+  height: 39px;
+  overflow: hidden;
+}
+
+.toggleTextBtn {
+  margin: 10px auto 0 auto;
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
