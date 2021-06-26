@@ -123,6 +123,7 @@ main {
 }
 
 .box2 {
+  padding-top: 10px;
   padding-bottom: 40px;
   background-color: orange;
 }
@@ -173,7 +174,7 @@ main {
 }
 
 .ctaBtn {
-  background-color: #5fd3ff;
+  background-color: red;
   border: none;
   width: 210px;
   height: 54px;
@@ -292,8 +293,18 @@ form {
   padding: 40px 50px;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  font-size: 26px;
+}
+
 .swiper-button-next:after,
 .swiper-button-prev:after {
+  display: none;
+}
+
+.rightSwipeIcon .leftSwipeIcon {
+  display: block;
   font-size: 30px;
 }
 
@@ -305,7 +316,7 @@ form {
 .swiper-container-horizontal
 > .swiper-pagination-bullets
 .swiper-pagination-bullet {
-  margin: 0 6px;
+  margin: 0 8px;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets,
@@ -320,7 +331,9 @@ form {
 }
 
 .lessToggleText {
-  height: 39px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 

@@ -135,6 +135,7 @@ main {
 }
 .box2 {
   // height: 500px;
+  padding-top: 10px;
   padding-bottom: 40px;
   background-color: orange;
 }
@@ -180,8 +181,8 @@ main {
   pointer-events: none;
 }
 .ctaBtn {
-  background-color: #5fd3ff;
-  // background-color: red;
+  // background-color: #5fd3ff;
+  background-color: red;
   border: none;
   width: 210px;
   height: $ctaBtn-height;
@@ -292,16 +293,18 @@ form {
 }
 .swiper-slide {
   padding: 40px 50px;
-  // outline: none !important;
 }
-// .swiper-button-next,
-// .swiper-button-prev {
-//   outline: none !important;
-// }
+.swiper-button-next,
+.swiper-button-prev {
+  font-size: 26px;
+}
 .swiper-button-next:after,
 .swiper-button-prev:after {
+  display: none;
+}
+.rightSwipeIcon .leftSwipeIcon {
+  display: block;
   font-size: 30px;
-  // color: red;
 }
 .swiper-pagination-bullet {
   width: 10px;
@@ -310,7 +313,7 @@ form {
 .swiper-container-horizontal
   > .swiper-pagination-bullets
   .swiper-pagination-bullet {
-  margin: 0 6px;
+  margin: 0 8px;
 }
 .swiper-container-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-custom,
@@ -325,7 +328,10 @@ form {
 
 .lessToggleText {
   // height: 2.2em;
-  height: 39px;
+  // height: 39px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
