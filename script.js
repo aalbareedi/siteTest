@@ -1,6 +1,7 @@
 // Remove Gray Highlight When Tapping Links in Mobile Safari + mobile active states
 document.addEventListener("touchstart", function () {}, true);
 
+let pageSize = document.querySelector(".pageSize");
 let openNavBtn = document.querySelector(".openNavBtn");
 let closeNavBtn = document.querySelector(".closeNavBtn");
 let navWindow = document.querySelector(".mobileNav");
@@ -186,10 +187,6 @@ for (let i = 0; i < navSublinks.length; i++) {
   });
 }
 
-// setTimeout(function () {
-//   alert(window.innerWidth + "," + window.innerHeight);
-// }, 3000);
-
 const swiper = new Swiper(".swiper-container", {
   // Optional parameters
   // direction: "vertical",
@@ -225,3 +222,24 @@ lessTextBtn.onclick = () => {
   moreTextBtn.classList.remove("displayHidden");
   lessTextBtn.classList.add("displayHidden");
 };
+setTimeout(function () {
+  // Setting the innerHTML of an element removes all of the event listeners on its children
+  pageSize.innerHTML = window.innerWidth + "," + window.innerHeight;
+  pageSize.classList.remove("displayHidden");
+}, 3000);
+
+// from bottom up
+ScrollReveal().reveal(".scrollReveal", {
+  viewOffset: {
+    bottom: 60,
+  },
+  distance: "30px",
+});
+// from left
+ScrollReveal().reveal(".scrollRevealX", {
+  origin: "left",
+  distance: "30px",
+  viewOffset: {
+    bottom: 60,
+  },
+});
