@@ -148,13 +148,16 @@ main {
 }
 .landing {
   background-color: #64737e;
-  height: calc(100vh - #{$nav-height} - #{$options-height});
+  // height: calc(100vh - #{$nav-height} - #{$options-height});
+  // height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc((var(--vh, 1vh) * 100) - #{$nav-height} - #{$options-height});
   position: fixed;
   top: $nav-height;
   z-index: -1;
 }
 .landing-img {
-  height: calc(100vh - #{$nav-height} - #{$options-height});
+  // height: calc(100vh - #{$nav-height} - #{$options-height});
+  height: calc((var(--vh, 1vh) * 100) - #{$nav-height} - #{$options-height});
   min-width: 100vw;
   background-image: url("../images/smilebg1.png");
   background-repeat: no-repeat;
@@ -193,7 +196,8 @@ main {
   display: flex;
   column-gap: 10px;
   padding: 10px;
-  margin-top: calc(100vh - #{$options-height});
+  margin-top: calc((var(--vh, 1vh) * 100) - #{$options-height});
+  // margin-top: calc(100vh - #{$options-height});
 }
 .sale-option {
   background-color: #bfbfbf;
@@ -215,6 +219,7 @@ main {
   width: 162px;
   margin-left: -81px;
   background: gainsboro;
+  background: pink;
   border: none;
   border-radius: 40px;
   position: absolute;

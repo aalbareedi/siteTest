@@ -181,14 +181,14 @@ main {
 
 .landing {
   background-color: #64737e;
-  height: calc(100vh - 60px - 90px);
+  height: calc((var(--vh, 1vh) * 100) - 60px - 90px);
   position: fixed;
   top: 60px;
   z-index: -1;
 }
 
 .landing-img {
-  height: calc(100vh - 60px - 90px);
+  height: calc((var(--vh, 1vh) * 100) - 60px - 90px);
   min-width: 100vw;
   background-image: url("../images/smilebg1.png");
   background-repeat: no-repeat;
@@ -230,7 +230,7 @@ main {
   -webkit-column-gap: 10px;
           column-gap: 10px;
   padding: 10px;
-  margin-top: calc(100vh - 90px);
+  margin-top: calc((var(--vh, 1vh) * 100) - 90px);
 }
 
 .sale-option {
@@ -256,6 +256,7 @@ main {
   width: 162px;
   margin-left: -81px;
   background: gainsboro;
+  background: pink;
   border: none;
   border-radius: 40px;
   position: absolute;
