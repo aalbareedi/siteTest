@@ -1,6 +1,7 @@
 var navMenuBtn = document.querySelector(".nav-menu-btn");
 var screenOverlay = document.querySelector(".screen-overlay");
 var wrapper = document.querySelector(".wrapper");
+let pageSize = document.querySelector(".pageSize");
 
 let navMenuOpt = document.getElementsByClassName("nav-menu-option");
 let navOptBox = document.getElementsByClassName("nav-option-box");
@@ -24,3 +25,9 @@ for (let i = 0; i < navMenuOpt.length; i++) {
     navOptBox[i].classList.toggle("open-nav-option");
   };
 }
+
+setTimeout(function () {
+  // Setting the innerHTML of an element removes all of the event listeners on its children
+  pageSize.innerHTML = window.innerWidth + ", " + window.innerHeight;
+  pageSize.classList.remove("displayHidden");
+}, 3000);
