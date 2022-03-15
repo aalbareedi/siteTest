@@ -3,146 +3,123 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, height=device-height"
-    />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/hamburgers.css" />
+    <title>base site</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-
+    <meta name="robots" content="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prata&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c82a5882c2.js"
       crossorigin="anonymous"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mobile.css" />
+    ></script>
   </head>
-
   <body>
-    <header>
-      <button class="openNavBtn">
-        <i class="fas fa-bars openNavIcon"></i>
-      </button>
-      <div class="navOverlay hiddenOverlay"></div>
-      <nav class="mobileNav">
-        <button class="closeNavBtn">
-          <i class="fas fa-times closeNavIcon"></i>
-        </button>
-        <div id="mobileNavLink1" class="mobileNavLink">Link 1</div>
-        <div id="mobileNavLink2" class="mobileNavLink">Link 2</div>
-        <div id="mobileNavLink3" class="mobileNavLink">Link 3</div>
-      </nav>
-
-      <nav class="desktopNav">
-        <a class="desktopNavLink" id="desktopNavLink1" href="#">
-          Link 1 <i class="fas fa-chevron-down navLinkArrow"></i>
-        </a>
-
-        <div class="navDropdown">
-          <a class="navSublink" href="#">
-            Sublink 1 <i class="fas fa-chevron-right subNavLinkArrow"></i>
-          </a>
-          <div class="subNavDropdown">
-            <a class="navSublink" href="http://www.google.com">Sublink 1</a>
-            <a class="navSublink" href="#">Sublink 2</a>
-            <a class="navSublink" href="#">Sublink 3</a>
-            <a class="navSublink" href="#">Sublink 4</a>
-          </div>
-          <a class="navSublink" href="#">Sublink 2</a>
-          <a class="navSublink" href="#">Sublink 3</a>
+    <div class="wrapper">
+      <nav>
+        <div class="nav-logo">
+          <div class="nav-company-image"></div>
+          <div class="nav-company-name">Company Name</div>
         </div>
-
-        <a class="desktopNavLink" id="desktopNavLink2" href="#">Link 2</a>
-        <a class="desktopNavLink" id="desktopNavLink3" href="#">Link 3</a>
-        <a class="desktopNavLink" id="desktopNavLink4" href="#">Link 4</a>
-      </nav>
-    </header>
-
-    <div class="pageSize displayHidden"></div>
-
-    <main>
-      <section class="box1">
-        <div class="landingBgImg"></div>
-        <div class="ctaBtnWrapper">
-          <button class="ctaBtn">
-            <span class="ctaBtnText">Let's Talk</span
-            ><i class="far fa-envelope ctaBtnIcon"></i>
+        <div class="nav-btns">
+          <button class="nav-cart-btn" type="button">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+          <button class="hamburger hamburger--spin nav-menu-btn" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
           </button>
         </div>
-      </section>
-      <section class="box box2">
-        <!-- Slider main container -->
-        <div class="swiper-container">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-              repellendus voluptatibus aliquam laboriosam delectus? Nesciunt
-              consequuntur sequi doloremque natus iste aliquid veritatis
-              consectetur!
-            </div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
+      </nav>
+      <main>
+        <div class="landing">
+          <div class="landing-img"></div>
+          <div class="opacity-filter"></div>
+          <div class="landing-content">
+            <div class="landing-title">Simply Amazing.</div>
+            <div class="landing-text">High Quality Solutions</div>
+            <button class="cta-btn">Shop Now</button>
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-
-          <!-- If we need navigation buttons -->
-          <!-- <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div> -->
-          <i class="fas fa-chevron-left swiper-button-prev"></i>
-          <i class="fas fa-chevron-right swiper-button-next"></i>
-
-          <!-- If we need scrollbar -->
-          <!-- <div class="swiper-scrollbar"></div> -->
         </div>
 
-        <div class="toggleText lessToggleText">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, inventore
-          a? Excepturi expedita dolore itaque ut ipsam iusto delectus iste
-          numquam debitis veniam eaque hic, sunt ea, tenetur fuga laboriosam.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, inventore
-          a? Excepturi expedita dolore itaque ut ipsam iusto delectus iste
-          numquam debitis veniam eaque hic, sunt ea, tenetur fuga laboriosam.
+        <div class="landing-options">
+          <div class="sale-option">
+            <div class="sale-option-icon">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div class="sale-option-title">Build Your Own</div>
+          </div>
+          <div class="sale-option">
+            <div class="sale-option-icon">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="sale-option-title">Shop Collection</div>
+          </div>
         </div>
-        <button class="toggleTextBtn moreTextBtn">Show More</button>
-        <button class="toggleTextBtn lessTextBtn displayHidden">
-          Show Less
-        </button>
-      </section>
-      <section class="box box3">
-        <div class="slideInBoxes scrollRevealX"></div>
-        <div class="slideInBoxes scrollRevealX"></div>
-        <div class="slideInBoxes scrollRevealX"></div>
-      </section>
-      <section class="box box4"></section>
-      <section class="box box5">
-        <div class="box5parallaxImg"></div>
-        <div>Title</div>
-      </section>
-      <section class="box6"></section>
-      <section class="box7"></section>
-      <!-- <footer></footer> -->
-      <form>
-        <button class="closeFormBtn" type="button">
-          <i class="fas fa-times closeNavIcon"></i>
-        </button>
-      </form>
-    </main>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </main>
+      <footer></footer>
+      <div class="screen-overlay displayHidden"></div>
+      <div class="nav-menu-window">
+        <div class="nav-menu">
+          <div class="nav-menu-option">
+            <div class="nav-menu-text">About</div>
+            <div class="nav-menu-arrow">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="nav-option-box"></div>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="smoothscroll.min.js"></script>
+          <div class="nav-menu-option">
+            <div class="nav-menu-text">Products</div>
+            <div class="nav-menu-arrow">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="nav-option-box"></div>
+
+          <div class="nav-menu-option">
+            <div class="nav-menu-text">News</div>
+            <div class="nav-menu-arrow">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="nav-option-box"></div>
+
+          <div class="nav-menu-option">
+            <div class="nav-menu-text">Account</div>
+            <div class="nav-menu-arrow">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="nav-option-box"></div>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
