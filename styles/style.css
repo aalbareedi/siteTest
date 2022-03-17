@@ -114,13 +114,6 @@ nav {
   right: 20%;
 }
 
-.intro {
-  height: 600px;
-  background-color: rgba(164, 164, 164, 0.6);
-  -webkit-backdrop-filter: blur(24px);
-          backdrop-filter: blur(24px);
-}
-
 .landing-options {
   height: 90px;
   display: -webkit-box;
@@ -210,6 +203,7 @@ nav {
 .landing-fill {
   background-color: transparent;
   height: calc(100% - 90px);
+  position: relative;
 }
 
 .landing {
@@ -237,6 +231,7 @@ nav {
   padding-top: 62px;
   top: 0px;
   left: 0px;
+  right: 0px;
   width: 100%;
   color: white;
 }
@@ -276,18 +271,28 @@ nav {
   height: 42px;
   width: 162px;
   margin-left: -81px;
-  background: pink;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  background: gainsboro;
   border: none;
   border-radius: 40px;
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
+}
+
+.intro {
+  background-color: rgba(164, 164, 164, 0.6);
+  -webkit-backdrop-filter: blur(24px);
+          backdrop-filter: blur(24px);
 }
 
 .intro-content {
-  background-color: white;
-  height: 160px;
-  margin: 0 10px;
-  border-radius: 6px;
+  background-color: #b2a9a9;
+  height: 400px;
+  padding: 10px;
+}
+
+.intro-title {
+  font-size: 20px;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */

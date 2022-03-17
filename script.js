@@ -20,9 +20,26 @@ screenOverlay.onclick = function () {
 
 for (let i = 0; i < navMenuOpt.length; i++) {
   navMenuOpt[i].onclick = function () {
-    navArrow[i].classList.toggle("nav-arrow-open");
-    // navOptBox[i].classList.toggle("displayHidden");
-    navOptBox[i].classList.toggle("open-nav-option");
+    // Save the original state
+    let isOpen = navArrow[i].classList.contains("nav-arrow-open");
+    if (isOpen) {
+      // Close it
+      navArrow[i].classList.remove("nav-arrow-open");
+      // navOptBox[i].classList.remove("displayHidden");
+      navOptBox[i].classList.remove("open-nav-option");
+    } else {
+      // Close them all
+      for (let i = 0; i < navMenuOpt.length; i++) {
+        navArrow[i].classList.remove("nav-arrow-open");
+        // navOptBox[i].classList.remove("displayHidden");
+        navOptBox[i].classList.remove("open-nav-option");
+      }
+
+      // Open one
+      navArrow[i].classList.add("nav-arrow-open");
+      // navOptBox[i].classList.add("displayHidden");
+      navOptBox[i].classList.add("open-nav-option");
+    }
   };
 }
 

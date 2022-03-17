@@ -106,11 +106,6 @@ nav {
 // .wrapper {
 //   padding-top: calc(100vh - #{$options-height});
 // }
-.intro {
-  height: 600px;
-  background-color: rgba(164, 164, 164, 0.6);
-  backdrop-filter: blur(24px);
-}
 .landing-options {
   height: $options-height;
   // background-color: rgba(129, 129, 129, 0.8);
@@ -181,6 +176,7 @@ nav {
   background-color: transparent;
   // height: 100%;
   height: calc(100% - #{$options-height});
+  position: relative;
 }
 .landing {
   background-color: #64737e;
@@ -198,8 +194,6 @@ nav {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  // position: fixed;
-  // z-index: -1;
 }
 .landing-content {
   height: 100%;
@@ -207,6 +201,7 @@ nav {
   padding-top: 62px;
   top: 0px;
   left: 0px;
+  right: 0px;
   width: 100%;
   color: white;
 }
@@ -240,16 +235,28 @@ nav {
   height: 42px;
   width: 162px;
   margin-left: -81px;
-  background: pink;
+  position: absolute;
+  // bottom: 30px;
+  bottom: 10%;
+  left: 50%;
+  // margin: 0 auto;
+  background: gainsboro;
   border: none;
   border-radius: 40px;
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
+}
+.intro {
+  // height: 600px;
+  background-color: rgba(164, 164, 164, 0.6);
+  backdrop-filter: blur(24px);
 }
 .intro-content {
-  background-color: white;
-  height: 160px;
-  margin: 0 10px;
-  border-radius: 6px;
+  background-color: #b2a9a9;
+  height: 400px;
+  padding: 10px;
+  // margin: 0 10px;
+  // border-radius: 6px;
+}
+.intro-title {
+  font-size: 20px;
+  margin-top: 10px;
 }
