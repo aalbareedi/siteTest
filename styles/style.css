@@ -18,6 +18,15 @@ button {
   display: none !important;
 }
 
+html {
+  background-color: #64737e;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
 .pageSize {
   z-index: 100;
   position: fixed;
@@ -30,7 +39,7 @@ button {
 
 nav {
   height: 60px;
-  background-color: rgba(164, 164, 164, 0.6);
+  background-color: rgba(234, 234, 234, 0.6);
   -webkit-backdrop-filter: blur(24px);
           backdrop-filter: blur(24px);
   position: fixed;
@@ -105,17 +114,15 @@ nav {
   right: 20%;
 }
 
-main {
-  background-color: tan;
-}
-
-.wrapper {
-  padding-top: calc(100vh - 90px);
+.intro {
+  height: 600px;
+  background-color: rgba(164, 164, 164, 0.6);
+  -webkit-backdrop-filter: blur(24px);
+          backdrop-filter: blur(24px);
 }
 
 .landing-options {
   height: 90px;
-  background-color: rgba(129, 129, 129, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,7 +177,13 @@ main {
   margin-top: -2px;
 }
 
-.box {
+.box2 {
+  background-color: orange;
+  height: 500px;
+}
+
+.box3 {
+  background-color: indianred;
   height: 500px;
 }
 
@@ -192,6 +205,11 @@ main {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.landing-fill {
+  background-color: transparent;
+  height: calc(100% - 90px);
 }
 
 .landing {
@@ -237,7 +255,7 @@ main {
 }
 
 .sale-option {
-  background-color: #bfbfbf;
+  background-color: #f0f0f0;
   width: 100%;
   border-radius: 6px;
   padding-top: 12px;
@@ -258,11 +276,18 @@ main {
   height: 42px;
   width: 162px;
   margin-left: -81px;
-  background: gainsboro;
+  background: pink;
   border: none;
   border-radius: 40px;
   position: absolute;
   bottom: 30px;
   left: 50%;
+}
+
+.intro-content {
+  background-color: white;
+  height: 160px;
+  margin: 0 10px;
+  border-radius: 6px;
 }
 /*# sourceMappingURL=style.css.map */
