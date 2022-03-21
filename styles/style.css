@@ -293,10 +293,10 @@ nav {
   height: 50px;
   width: 190px;
   margin-left: -95px;
-  position: absolute;
+  position: fixed;
   bottom: 10%;
   left: 50%;
-  background: gainsboro;
+  background: pink;
   border: none;
   border-radius: 40px;
 }
