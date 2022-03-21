@@ -30,7 +30,7 @@ body {
 .pageSize {
   z-index: 100;
   position: fixed;
-  top: 90px;
+  top: 60px;
   left: 0;
   padding: 5px;
   background: rgba(0, 0, 0, 0.4);
@@ -114,16 +114,6 @@ nav {
   right: 20%;
 }
 
-.landing-options {
-  height: 90px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
-  padding: 10px;
-}
-
 .screen-overlay {
   background: black;
   opacity: 0.7;
@@ -202,20 +192,20 @@ nav {
 
 .landing-fill {
   background-color: transparent;
-  height: calc(100% - 90px);
+  height: calc(100% - 0px);
   position: relative;
 }
 
 .landing {
   background-color: #64737e;
-  height: calc(100vh - 60px - 90px);
+  height: calc(100vh - 60px - 0px);
   position: fixed;
   top: 60px;
   z-index: -1;
 }
 
 .landing-img {
-  height: calc(100vh - 60px - 90px);
+  height: calc(100vh - 60px - 0px);
   min-width: 100vw;
   background-image: url("../images/smilebg1.png");
   background-repeat: no-repeat;
@@ -249,10 +239,16 @@ nav {
   font-size: 22px;
 }
 
+.landing-options {
+  height: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .sale-option {
-  background-color: #f0f0f0;
+  background-color: #d6d6d6;
   width: 100%;
-  border-radius: 6px;
   padding-top: 12px;
   font-size: 14px;
 }
@@ -267,10 +263,36 @@ nav {
   text-align: center;
 }
 
+.intro {
+  background-color: rgba(164, 164, 164, 0.6);
+  -webkit-backdrop-filter: blur(24px);
+          backdrop-filter: blur(24px);
+}
+
+.intro-description {
+  margin-top: 10px;
+}
+
+.intro-cover {
+  height: 300px;
+  background: #9d9d9d;
+}
+
+.intro-title {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.intro-stat {
+  border-radius: 6px;
+  height: 80px;
+  border: 2px solid #c3c2c2;
+}
+
 .cta-btn {
-  height: 42px;
-  width: 162px;
-  margin-left: -81px;
+  height: 50px;
+  width: 190px;
+  margin-left: -95px;
   position: absolute;
   bottom: 10%;
   left: 50%;
@@ -279,20 +301,8 @@ nav {
   border-radius: 40px;
 }
 
-.intro {
-  background-color: rgba(164, 164, 164, 0.6);
-  -webkit-backdrop-filter: blur(24px);
-          backdrop-filter: blur(24px);
-}
-
-.intro-content {
-  background-color: #b2a9a9;
-  height: 400px;
-  padding: 10px;
-}
-
-.intro-title {
-  font-size: 20px;
-  margin-top: 10px;
+.cta-btn-icon {
+  margin-right: 10px;
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */

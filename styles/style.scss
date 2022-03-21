@@ -1,5 +1,6 @@
 $nav-height: 60px;
-$options-height: 90px;
+// $options-height: 68px;
+$options-height: 0px;
 
 * {
   /* Remove Gray Highlight When Tapping Links in Mobile Safari */
@@ -32,7 +33,7 @@ body {
 .pageSize {
   z-index: 100;
   position: fixed;
-  top: 90px;
+  top: $nav-height;
   left: 0;
   padding: 5px;
   background: rgba(0, 0, 0, 0.4);
@@ -106,15 +107,7 @@ nav {
 // .wrapper {
 //   padding-top: calc(100vh - #{$options-height});
 // }
-.landing-options {
-  height: $options-height;
-  // background-color: rgba(129, 129, 129, 0.8);
-  // backdrop-filter: blur(24px);
-  display: flex;
-  column-gap: 10px;
-  padding: 10px;
-  // margin-top: calc(100vh - #{$options-height});
-}
+
 .screen-overlay {
   background: black;
   opacity: 0.7;
@@ -216,10 +209,19 @@ nav {
   font-family: "Rajdhani", sans-serif;
   font-size: 22px;
 }
+.landing-options {
+  height: $options-height;
+  // background-color: rgba(129, 129, 129, 0.8);
+  // backdrop-filter: blur(24px);
+  display: flex;
+  // column-gap: 10px;
+  // padding: 10px;
+  // margin-top: calc(100vh - #{$options-height});
+}
 .sale-option {
-  background-color: #f0f0f0;
+  background-color: #d6d6d6;
   width: 100%;
-  border-radius: 6px;
+  // border-radius: 6px;
   padding-top: 12px;
   font-size: 14px;
 }
@@ -231,10 +233,35 @@ nav {
 .sale-option-title {
   text-align: center;
 }
+.intro {
+  // height: 600px;
+  background-color: rgba(164, 164, 164, 0.6);
+  backdrop-filter: blur(24px);
+}
+.intro-description {
+  margin-top: 10px;
+}
+.intro-cover {
+  height: 300px;
+  background: #9d9d9d;
+  // display: flex;
+  // flex-direction: column;
+  // row-gap: 10px;
+}
+.intro-title {
+  font-size: 20px;
+  margin-top: 10px;
+}
+.intro-stat {
+  border-radius: 6px;
+  height: 80px;
+  border: 2px solid #c3c2c2;
+  // background-color: #aaaaaa;
+}
 .cta-btn {
-  height: 42px;
-  width: 162px;
-  margin-left: -81px;
+  height: 50px;
+  width: 190px;
+  margin-left: -95px;
   position: absolute;
   // bottom: 30px;
   bottom: 10%;
@@ -244,19 +271,7 @@ nav {
   border: none;
   border-radius: 40px;
 }
-.intro {
-  // height: 600px;
-  background-color: rgba(164, 164, 164, 0.6);
-  backdrop-filter: blur(24px);
-}
-.intro-content {
-  background-color: #b2a9a9;
-  height: 400px;
-  padding: 10px;
-  // margin: 0 10px;
-  // border-radius: 6px;
-}
-.intro-title {
-  font-size: 20px;
-  margin-top: 10px;
+.cta-btn-icon {
+  margin-right: 10px;
+  font-size: 16px;
 }
