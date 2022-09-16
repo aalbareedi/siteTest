@@ -183,9 +183,10 @@ body {
   /* background-color: rgba(190, 190, 190, 0.7); */
   background-color: white;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
+  column-gap: 8px;
   border-radius: 10px;
   flex-grow: 1;
   flex-basis: 100%;
@@ -194,9 +195,9 @@ body {
 .landing-contact-btn i {
   font-size: 20px;
 }
-.contactBtnText {
+/* .contactBtnText {
   display: none;
-}
+} */
 /* .landing-contact-btn:first-child {
   padding-left: 20px;
 }
