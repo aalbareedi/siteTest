@@ -155,14 +155,12 @@ body {
 } */
 #Top_bar .menu_wrapper {
   float: initial !important;
+  position: initial !important;
+  right: 0px;
 }
 #menu-main-menu {
   display: flex;
   flex-direction: column;
-}
-#Top_bar .menu_wrapper {
-  position: absolute;
-  right: 0px;
 }
 #Content {
   position: relative;
@@ -187,7 +185,7 @@ body {
   justify-content: center;
   align-items: center;
   column-gap: 8px;
-  border-radius: 10px;
+  border-radius: 8px;
   flex-grow: 1;
   flex-basis: 100%;
   padding: 8px 0px;
@@ -223,5 +221,8 @@ body {
 @media screen and (min-width: 1239px) {
   #menu-main-menu {
     flex-direction: row;
+  }
+  #Top_bar .menu_wrapper {
+    position: absolute !important;
   }
 }

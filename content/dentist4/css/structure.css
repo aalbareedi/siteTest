@@ -1767,7 +1767,7 @@ body.minimalist-header.header-below:not(.template-slider) #Header {
     left: 0;
     top: 0 !important;
     height: 60px;
-    z-index: 701;
+    /* z-index: 701; */
     background: #fff;
     opacity: 0.97;
     filter: alpha(opacity=97);
