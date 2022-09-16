@@ -4510,7 +4510,7 @@ body.mobile-side-slide {
   overflow: auto;
   border-bottom-width: 60px;
   border-bottom-style: solid;
-  z-index: 9003;
+  z-index: 90;
 }
 /* border-bottom:60px - mobile fallback */
 

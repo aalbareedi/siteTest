@@ -57,7 +57,7 @@ body {
   position: fixed;
   bottom: 14%;
   right: 24px;
-  z-index: 99;
+  z-index: 50;
   margin: 0px;
   height: 40px;
   width: 40px;
@@ -164,6 +164,45 @@ body {
   position: absolute;
   right: 0px;
 }
+#Content {
+  position: relative;
+}
+.landing-contact {
+  z-index: 100;
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  padding: 8px;
+  row-gap: 8px;
+  column-gap: 8px;
+  background-color: gainsboro;
+}
+.landing-contact-btn {
+  /* background-color: rgba(190, 190, 190, 0.7); */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  flex-grow: 1;
+  flex-basis: 100%;
+  padding: 8px 0px;
+}
+.landing-contact-btn i {
+  font-size: 20px;
+}
+.contactBtnText {
+  display: none;
+}
+/* .landing-contact-btn:first-child {
+  padding-left: 20px;
+}
+.landing-contact-btn:last-child {
+  padding-right: 20px;
+} */
 @media screen and (min-width: 768px) {
   .intro-content-cards {
     flex-direction: row;
