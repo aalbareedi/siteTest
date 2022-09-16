@@ -1,0 +1,187 @@
+/* #Header_wrapper {
+  height: 100vh;
+}
+#Header,
+.mfn-main-slider,
+#rev_slider_1_1_forcefullwidth {
+  height: 100%;
+}
+#rev_slider_1_1_wrapper {
+  height: 100% !important;
+} */
+body {
+  line-height: initial;
+}
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.header-box-1 {
+  width: 100% !important;
+  margin: 0px;
+}
+.site-logo {
+  margin-left: 60px !important;
+  /* margin-left: 70px !important; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: initial !important;
+  padding-bottom: 4px;
+  /* color: #3b3b3b; */
+  color: #0e3375;
+}
+/* .logo-mobile {
+  height: 100% !important;
+} */
+#Top_bar {
+  /* background-color: whitesmoke; */
+  height: 60px;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.logo-text-name {
+  font-weight: 700;
+  font-size: 18px;
+}
+.logo-text-title {
+  font-size: 14px;
+  letter-spacing: 0.65px;
+  line-height: 16px;
+}
+#back_to_top {
+  background-color: rgba(51, 51, 51, 0.4);
+  position: fixed;
+  bottom: 14%;
+  right: 24px;
+  z-index: 99;
+  margin: 0px;
+  height: 40px;
+  width: 40px;
+  border: none;
+  padding: 0px;
+}
+#back_to_top i {
+  font-size: 18px;
+}
+#Top_bar .menu_wrapper {
+  height: 60px;
+}
+#menu-main-menu li {
+  height: 60px;
+}
+#menu-main-menu li a {
+  padding: 0px !important;
+  color: #3b3b3b !important;
+}
+.logo-img {
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  width: 42px;
+}
+.hover_color_bg {
+  background-color: #a2d9f5;
+}
+.landing-content-btn {
+  display: inline-block;
+}
+.landing-content {
+  padding: 90px 0px 90px 0px;
+}
+.rs-parallax-wrap:nth-child(3) {
+  background-color: red;
+}
+.intro-content-cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  column-gap: 30px;
+  margin-bottom: 40px;
+}
+.landing-content-services {
+  justify-content: center;
+}
+.landing-page {
+  height: 452px;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+}
+.landing-page-img {
+  min-height: 60%;
+  background: url("../content/dentist4/images/smile-img.jpg") center top / cover
+    no-repeat;
+}
+.landing-page-content {
+  background: url("../content/dentist4/images/dentist4-slider-bg.webp") center
+    center / cover no-repeat;
+  background-color: #3043b8;
+  padding: 24px 0px;
+}
+.landing-welcome {
+  /* width: 100%; */
+  /* text-align: center !important; */
+  color: rgb(51, 133, 215);
+  letter-spacing: 0px;
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-left: 12px;
+}
+.landing-tagline {
+  text-align: center;
+  line-height: 36px;
+  letter-spacing: 0px;
+  font-weight: 500;
+  font-size: 33px;
+  color: rgb(255, 255, 255);
+  width: 200px;
+  margin-bottom: 20px;
+  margin-left: 8px;
+}
+.cta-btn {
+  border-radius: 50px;
+  padding: 16px 28px !important;
+  display: block;
+  margin: 0px auto;
+}
+/* #Content {
+  padding-top: 60px;
+} */
+#Top_bar .menu_wrapper {
+  float: initial !important;
+}
+#menu-main-menu {
+  display: flex;
+  flex-direction: column;
+}
+#Top_bar .menu_wrapper {
+  position: absolute;
+  right: 0px;
+}
+@media screen and (min-width: 768px) {
+  .intro-content-cards {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 777px) {
+  .landing-page {
+    flex-direction: row;
+  }
+  .landing-page-img {
+    width: 40%;
+  }
+  .landing-page-content {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1239px) {
+  #menu-main-menu {
+    flex-direction: row;
+  }
+}
