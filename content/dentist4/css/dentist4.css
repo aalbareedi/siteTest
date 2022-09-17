@@ -3136,7 +3136,9 @@ textarea,
     margin: 0;
   }
   #Top_bar a.responsive-menu-toggle {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #Top_bar #menu > ul {
     width: 100%;
