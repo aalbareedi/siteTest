@@ -3909,10 +3909,10 @@ hr.hr_color,
   color: #3385d7;
   background: transparent;
 }
-#Side_slide {
+/* #Side_slide {
   background-color: #1f2e88;
   border-color: #1f2e88;
-}
+} */
 #Side_slide,
 #Side_slide #menu ul li.submenu .menu-toggle,
 #Side_slide .search-wrapper input.field,
@@ -4506,12 +4506,10 @@ body.mobile-side-slide {
   display: block;
   position: fixed;
   top: 0px;
-  right: -250px;
+  right: -280px;
   width: 250px;
   height: 100%;
   overflow: auto;
-  border-bottom-width: 60px;
-  border-bottom-style: solid;
   z-index: 90;
 }
 /* border-bottom:60px - mobile fallback */
@@ -4526,13 +4524,16 @@ body.mobile-side-slide {
 }
 #Side_slide .close-wrapper {
   height: 60px;
+  position: relative;
 }
 #Side_slide .close-wrapper a.close {
-  height: 34px;
-  width: 34px;
-  display: block;
-  float: right;
-  margin: 13px 13px 0 0;
+  height: 100%;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0px;
 }
 #Side_slide .close-wrapper a.close i {
   font-size: 22px;
@@ -4600,7 +4601,6 @@ body.mobile-side-slide {
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 #Side_slide #menu ul li a {
-  display: block;
   padding: 11px 5px 10px 20px;
   margin-right: 50px;
   text-decoration: none;
@@ -4713,7 +4713,6 @@ body.mobile-side-slide {
 
 #Side_slide {
   background-color: #191919;
-  border-color: #191919;
 }
 /* border-bottom:60px - mobile fallback */
 

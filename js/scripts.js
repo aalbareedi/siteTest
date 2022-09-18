@@ -7782,6 +7782,7 @@
      * --------------------------------------------------------------------------- */
 
     jQuery(".responsive-menu-toggle").on("click", function (e) {
+      console.log("clicked 1");
       e.preventDefault();
       var el = jQuery(this);
       var menu = jQuery("#Top_bar #menu");
@@ -7889,11 +7890,12 @@
       // close ----------
 
       var close = function () {
+        $("#navOverlay").addClass("displayHidden");
         if (pos == "left") {
-          slide.animate({ left: -250 }, 300);
+          slide.animate({ left: -280 }, 300);
           $("body").animate({ right: 0 }, 300);
         } else {
-          slide.animate({ right: -250 }, 300);
+          slide.animate({ right: -280 }, 300);
           $("body").animate({ left: 0 }, 300);
         }
 
@@ -7967,6 +7969,8 @@
       $(".responsive-menu-toggle").on("click", function (e) {
         e.preventDefault();
         button();
+        console.log("clicked 2");
+        $("#navOverlay").removeClass("displayHidden");
       });
 
       // click | close
@@ -7978,6 +7982,7 @@
       $(".close", slide).on("click", function (e) {
         e.preventDefault();
         close();
+        console.log("close");
       });
 
       // click | below search or languages menu
