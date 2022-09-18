@@ -7987,6 +7987,11 @@
         console.log("close");
       });
 
+      $("#navOverlay").on("click", function () {
+        close();
+        console.log("closing");
+      });
+
       // click | below search or languages menu
 
       $(slide).on("click", function (e) {
