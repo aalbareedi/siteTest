@@ -7891,6 +7891,7 @@
 
       var close = function () {
         $("#navOverlay").addClass("displayHidden");
+        $(".responsive-menu-toggle").removeClass("displayHidden");
         if (pos == "left") {
           slide.animate({ left: -280 }, 300);
           $("body").animate({ right: 0 }, 300);
@@ -7971,6 +7972,7 @@
         button();
         console.log("clicked 2");
         $("#navOverlay").removeClass("displayHidden");
+        $(".responsive-menu-toggle").addClass("displayHidden");
       });
 
       // click | close

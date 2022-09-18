@@ -4534,6 +4534,8 @@ body.mobile-side-slide {
   align-items: center;
   position: absolute;
   right: 0px;
+  color: #3385d7;
+  opacity: 1;
 }
 #Side_slide .close-wrapper a.close i {
   font-size: 22px;
@@ -4595,10 +4597,10 @@ body.mobile-side-slide {
 #Side_slide #menu ul li {
   width: 100%;
   position: relative;
-  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid gainsboro;
 }
-#Side_slide #menu > ul:last-child > li:last-child {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+#Side_slide #menu > ul:last-child > li:first-child {
+  border-top: 1px solid gainsboro;
 }
 #Side_slide #menu ul li a {
   padding: 11px 5px 10px 20px;
@@ -4712,7 +4714,8 @@ body.mobile-side-slide {
 /* Side Slide | Color */
 
 #Side_slide {
-  background-color: #191919;
+  /* background-color: #191919; */
+  background: none;
 }
 /* border-bottom:60px - mobile fallback */
 

@@ -172,7 +172,7 @@ body {
 }
 #menu-main-menu a span {
   margin-left: 20px;
-  color: #e0e0e0;
+  color: #808080;
 }
 #Content {
   position: relative;
@@ -247,11 +247,16 @@ body {
   background: black;
   opacity: 0.7;
   position: fixed;
-  top: 0px;
+  top: 60px;
   right: 0;
   left: 0;
   bottom: 0;
   z-index: 80;
+}
+#Side_slide .menu_wrapper {
+  background: whitesmoke;
+  /* height: 100%; */
+  height: calc(100% - 52px - 60px);
 }
 @media screen and (min-width: 768px) {
   .intro-content-cards {
