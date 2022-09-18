@@ -25,24 +25,19 @@ body {
 }
 .site-logo {
   margin-left: 60px !important;
-  /* margin-left: 70px !important; */
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: initial !important;
   padding-bottom: 4px;
-  /* color: #3b3b3b; */
   color: #0e3375;
 }
 /* .logo-mobile {
   height: 100% !important;
 } */
 #Top_bar {
-  /* background-color: whitesmoke; */
   height: 60px;
-  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
   position: relative;
 }

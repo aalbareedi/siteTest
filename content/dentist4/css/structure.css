@@ -7053,8 +7053,7 @@ body {
     background: none !important;
   }
   .mobile-tr-header #Top_bar {
-    position: absolute;
-    top: 50px;
+    position: fixed;
   }
   .mobile-tr-header.ab-hide #Top_bar {
     top: 0;
