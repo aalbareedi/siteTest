@@ -39,7 +39,13 @@ body {
 #Top_bar {
   height: 60px;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-  position: relative;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  z-index: 30;
+  background: #fff;
 }
 .logo-text-name {
   font-weight: 700;
@@ -64,9 +70,6 @@ body {
 }
 #back_to_top i {
   font-size: 18px;
-}
-#Top_bar .menu_wrapper {
-  height: 60px;
 }
 #menu-main-menu li {
   height: 60px;
@@ -155,6 +158,8 @@ body {
   float: initial !important;
   position: initial !important;
   right: 0px;
+  height: 60px;
+  z-index: 201;
 }
 #menu-main-menu {
   display: flex;
@@ -183,6 +188,7 @@ body {
   row-gap: 8px;
   column-gap: 8px;
   background-color: gainsboro;
+  height: 52px;
 }
 .landing-contact-btn {
   /* background-color: rgba(190, 190, 190, 0.7); */
@@ -252,6 +258,9 @@ body {
   background: whitesmoke;
   /* height: 100%; */
   height: calc(100% - 52px - 60px);
+}
+.contactBtnText {
+  font-size: 13px;
 }
 @media screen and (min-width: 768px) {
   .intro-content-cards {

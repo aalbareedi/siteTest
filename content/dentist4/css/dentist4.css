@@ -1348,9 +1348,6 @@ a.action_button {
 .is-sticky .action_button {
   top: 15px;
 }
-#Top_bar {
-  top: 0px !important;
-}
 /* @media only screen and (min-width: 768px) {
   .tr-menu.header-fixed #Top_bar:not(.is-sticky) {
     background: none !important;
@@ -1397,11 +1394,11 @@ textarea,
 .mfn-main-slider {
   position: relative;
 }
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
   #Top_bar {
     position: relative;
   }
-}
+} */
 rs-layer[data-type~="shape"] {
   width: 100% !important;
   height: 100% !important;
@@ -1481,12 +1478,12 @@ blockquote {
 .woocommerce .product div.entry-summary .price {
   font-family: "Jost", Helvetica, Arial, sans-serif;
 }
-body {
+/* body {
   font-size: 18px;
   line-height: 28px;
   font-weight: 400;
   letter-spacing: 0px;
-}
+} */
 .big {
   font-size: 20px;
   line-height: 30px;
@@ -1554,11 +1551,11 @@ h6 {
   letter-spacing: 0px;
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  body {
+  /* body {
     font-size: 15px;
     line-height: 24px;
     letter-spacing: 0px;
-  }
+  } */
   .big {
     font-size: 17px;
     line-height: 26px;
@@ -1676,11 +1673,11 @@ h6 {
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  body {
+  /* body {
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0px;
-  }
+  } */
   .big {
     font-size: 15px;
     line-height: 23px;
@@ -1798,11 +1795,11 @@ h6 {
   }
 }
 @media only screen and (max-width: 479px) {
-  body {
+  /* body {
     font-size: 13px;
     line-height: 19px;
     letter-spacing: 0px;
-  }
+  } */
   .big {
     font-size: 13px;
     line-height: 19px;
@@ -4538,7 +4535,7 @@ body.mobile-side-slide {
   opacity: 1;
 }
 #Side_slide .close-wrapper a.close i {
-  font-size: 22px;
+  font-size: 24px;
   line-height: 34px;
 }
 #Side_slide .extras {
@@ -4825,9 +4822,9 @@ body.mobile-side-slide {
     width: 100% !important;
     clear: both;
   }
-  .mobile-sticky #Top_bar.is-sticky {
+  /* .mobile-sticky #Top_bar.is-sticky {
     position: fixed !important;
-  }
+  } */
   #Top_bar #menu {
     float: left;
     position: static !important;

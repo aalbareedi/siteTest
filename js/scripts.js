@@ -7408,12 +7408,12 @@
             "height",
             jQuery("#Top_bar").innerHeight()
           );
-          jQuery("#Top_bar").addClass("is-sticky").css("top", -60).animate(
-            {
-              top: 0,
-            },
-            300
-          );
+          // jQuery("#Top_bar").addClass("is-sticky").css("top", -60).animate(
+          //   {
+          //     top: 0,
+          //   },
+          //   300
+          // );
         }
       } else {
         if (jQuery("#Top_bar").hasClass("is-sticky")) {
