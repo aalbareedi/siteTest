@@ -265,11 +265,35 @@ body {
 }
 #Side_slide .menu_wrapper {
   background: whitesmoke;
-  /* height: 100%; */
-  height: calc(100% - 52px - 60px);
+  height: 100%;
+  /* height: calc(100% - 52px - 60px); */
 }
 .contactBtnText {
   font-size: 13px;
+}
+#Side_slide {
+  display: block;
+  position: fixed;
+  top: 60px;
+  right: -280px;
+  width: 250px;
+  /* height: 100%; */
+  height: calc(100% - 52px - 60px);
+  overflow: auto;
+  z-index: 90;
+}
+.closeBtn {
+  width: 60px;
+  height: 100%;
+  position: relative;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  color: #3385d7;
+  opacity: 1;
 }
 @media screen and (min-width: 768px) {
   .intro-content-cards {

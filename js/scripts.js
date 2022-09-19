@@ -7892,6 +7892,7 @@
       var close = function () {
         $("#navOverlay").addClass("displayHidden");
         $(".responsive-menu-toggle").removeClass("displayHidden");
+        $(".closeBtn ").addClass("displayHidden");
         if (pos == "left") {
           slide.animate({ left: -280 }, 300);
           $("body").animate({ right: 0 }, 300);
@@ -7966,13 +7967,13 @@
       // click | menu button
 
       $(".responsive-menu-toggle").off("click");
-
       $(".responsive-menu-toggle").on("click", function (e) {
         e.preventDefault();
         button();
         console.log("clicked 2");
         $("#navOverlay").removeClass("displayHidden");
         $(".responsive-menu-toggle").addClass("displayHidden");
+        $(".closeBtn ").removeClass("displayHidden");
       });
 
       // click | close
@@ -7981,7 +7982,7 @@
         close();
       });
 
-      $(".close", slide).on("click", function (e) {
+      $(".close").on("click", function (e) {
         e.preventDefault();
         close();
         console.log("close");
