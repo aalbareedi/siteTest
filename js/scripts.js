@@ -10057,9 +10057,27 @@ jQuery(window).on("load", function () {
 
 $(document).ready(() => {
   console.log("doc ready");
-  $("#slider-1-slide-1-layer-2").parent().addClass("test");
 
-  $("#slider-1-slide-1-layer-1").append(
-    `<div class="landing-welcome">Welcome To Our Clinic</div>`
-  );
+  // for when page loads & scrolled down the page
+  if ($(window).scrollTop() > 0) {
+    $("#back_to_top").removeClass("opacityZero");
+  } else {
+    $("#back_to_top").addClass("opacityZero");
+  }
+
+  $(document).on("scroll", function () {
+    console.log($(window).scrollTop());
+
+    if ($(window).scrollTop() > 0) {
+      $("#back_to_top").removeClass("opacityZero");
+    } else {
+      $("#back_to_top").addClass("opacityZero");
+    }
+  });
+
+  // $("#slider-1-slide-1-layer-2").parent().addClass("test");
+
+  // $("#slider-1-slide-1-layer-1").append(
+  //   `<div class="landing-welcome">Welcome To Our Clinic</div>`
+  // );
 });

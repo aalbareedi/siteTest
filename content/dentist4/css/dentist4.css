@@ -2024,7 +2024,7 @@ h6 {
 .footer_button {
   color: #65666c !important;
   background-color: transparent;
-  box-shadow: none !important;
+  /* box-shadow: none !important; */
 }
 .footer_button:after {
   display: none !important;
@@ -4722,11 +4722,11 @@ body.mobile-side-slide {
 #Side_slide #menu ul li.submenu .menu-toggle {
   color: #a6a6a6;
 }
-#Side_slide a:not(.button):hover,
+/* #Side_slide a:not(.button):hover,
 #Side_slide a.active,
 #Side_slide #menu ul li.hover > .menu-toggle {
   color: #fff;
-}
+} */
 #Side_slide #menu ul li.current-menu-item > a,
 #Side_slide #menu ul li.current_page_item > a,
 #Side_slide #menu ul li.current-menu-parent > a,
