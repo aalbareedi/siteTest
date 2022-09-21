@@ -18,10 +18,12 @@
 body {
   line-height: initial;
 }
-/* html,
+html,
 body {
-  scroll-behavior: smooth;
-} */
+  /* scroll-behavior: smooth; */
+  height: auto;
+  min-height: 100%;
+}
 .row {
   margin-right: 0px;
   margin-left: 0px;

@@ -8782,7 +8782,7 @@
      * Go to top
      * --------------------------------------------------------------------------- */
     jQuery("#back_to_top").on("click", function (e) {
-      jQuery("body,html").animate(
+      jQuery("html,body").animate(
         {
           scrollTop: 0,
         },
