@@ -8784,7 +8784,7 @@
     jQuery("#back_to_top").on("click", function (e) {
       jQuery("html,body").animate(
         {
-          scrollTop: 0,
+          scrollTop: 1,
         },
         500
       );
@@ -10060,7 +10060,7 @@ $(document).ready(() => {
   console.log("doc ready");
 
   // for when page loads & scrolled down the page
-  if ($(window).scrollTop() > 0) {
+  if ($(window).scrollTop() > 1) {
     $("#back_to_top").removeClass("opacityZero");
   } else {
     $("#back_to_top").addClass("opacityZero");
@@ -10069,7 +10069,7 @@ $(document).ready(() => {
   $(document).on("scroll", function () {
     console.log($(window).scrollTop());
 
-    if ($(window).scrollTop() > 0) {
+    if ($(window).scrollTop() > 1) {
       $("#back_to_top").removeClass("opacityZero");
     } else {
       $("#back_to_top").addClass("opacityZero");

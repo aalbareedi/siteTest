@@ -1506,50 +1506,6 @@ a.action_button,
   font-weight: 500;
   letter-spacing: 0px;
 }
-h1,
-.text-logo #logo {
-  font-size: 75px;
-  line-height: 75px;
-  font-weight: 500;
-  letter-spacing: 0px;
-}
-h2 {
-  font-size: 55px;
-  line-height: 62px;
-  font-weight: 500;
-  letter-spacing: 0px;
-}
-h3,
-.woocommerce ul.products li.product h3 {
-  font-size: 40px;
-  line-height: 50px;
-  font-weight: 400;
-  letter-spacing: 0px;
-}
-h4 {
-  font-size: 30px;
-  line-height: 40px;
-  font-weight: 600;
-  letter-spacing: 0px;
-}
-h5 {
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 600;
-  letter-spacing: 0px;
-}
-h6 {
-  font-size: 15px;
-  line-height: 24px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-#Intro .intro-title {
-  font-size: 75px;
-  line-height: 75px;
-  font-weight: 500;
-  letter-spacing: 0px;
-}
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   /* body {
     font-size: 15px;
@@ -1820,12 +1776,12 @@ h6 {
     line-height: 45px;
     letter-spacing: 0px;
   }
-  h1,
+  /* h1,
   .text-logo #logo {
     font-size: 45px;
     line-height: 45px;
     letter-spacing: 0px;
-  }
+  } */
   h2 {
     font-size: 33px;
     line-height: 37px;
