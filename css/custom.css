@@ -130,6 +130,7 @@ body {
   height: calc(100vh - 60px - 56px);
   display: flex;
   flex-direction: column;
+  max-height: calc(100% - 60px - 56px);
 }
 .landing-page-img {
   /* min-height: 200px; */
@@ -230,7 +231,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
   display: none;
   right: 0px !important;
   top: 0px !important;
