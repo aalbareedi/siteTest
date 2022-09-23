@@ -122,12 +122,14 @@ body {
   justify-content: center;
 }
 .landing-page {
-  /* background-color: pink; */
+  background-color: pink;
+  height: calc(100vh - 60px - 56px);
   display: flex;
   flex-direction: column;
 }
 .landing-page-img {
-  min-height: 200px;
+  /* min-height: 200px; */
+  height: 100%;
   background: url("../content/dentist4/images/smile-img.jpg") center top / cover
     no-repeat;
 }
@@ -184,7 +186,7 @@ body {
   position: relative;
   padding-top: 60px;
 }
-.landing-contact {
+.landing-dock {
   z-index: 100;
   display: flex;
   position: fixed;
@@ -197,7 +199,7 @@ body {
   background-color: gainsboro;
   height: 56px;
 }
-.landing-contact-btn {
+.landing-dock-btn {
   /* background-color: rgba(190, 190, 190, 0.7); */
   background-color: white;
   display: flex;
@@ -209,17 +211,18 @@ body {
   flex-grow: 1;
   flex-basis: 100%;
   padding: 8px 0px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
 }
-.landing-contact-btn i {
+.landing-dock-btn i {
   font-size: 20px;
 }
 /* .contactBtnText {
   display: none;
 } */
-/* .landing-contact-btn:first-child {
+/* .landing-dock-btn:first-child {
   padding-left: 20px;
 }
-.landing-contact-btn:last-child {
+.landing-dock-btn:last-child {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
