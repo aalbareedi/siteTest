@@ -8786,7 +8786,11 @@
         {
           scrollTop: 1,
         },
-        500
+        500,
+        "swing",
+        () => {
+          window.scrollTo({ top: 0 });
+        }
       );
       return false;
     });
@@ -10060,16 +10064,16 @@ $(document).ready(() => {
   console.log("doc ready");
 
   // for when page loads & scrolled down the page
-  if ($(window).scrollTop() > 1) {
+  if ($(window).scrollTop() > 0) {
     $("#back_to_top").removeClass("opacityZero");
   } else {
     $("#back_to_top").addClass("opacityZero");
   }
 
   $(document).on("scroll", function () {
-    console.log($(window).scrollTop());
+    // console.log($(window).scrollTop());
 
-    if ($(window).scrollTop() > 1) {
+    if ($(window).scrollTop() > 0) {
       $("#back_to_top").removeClass("opacityZero");
     } else {
       $("#back_to_top").addClass("opacityZero");
