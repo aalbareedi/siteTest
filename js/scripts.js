@@ -8788,7 +8788,7 @@
     jQuery("#back_to_top").on("click", function (e) {
       jQuery("html,body").animate(
         {
-          scrollTop: 1,
+          scrollTop: 0,
         },
         500
       );

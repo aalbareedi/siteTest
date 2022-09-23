@@ -123,12 +123,12 @@ body {
 }
 .landing-page {
   /* background-color: pink; */
-  height: 452px;
+  /* height: 452px; */
   display: flex;
   flex-direction: column;
 }
 .landing-page-img {
-  min-height: 60%;
+  min-height: 200px;
   background: url("../content/dentist4/images/smile-img.jpg") center top / cover
     no-repeat;
 }
@@ -224,7 +224,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
   display: none;
   right: 0px !important;
   top: 0px !important;
