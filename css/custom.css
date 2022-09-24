@@ -164,7 +164,7 @@ body {
   color: rgb(255, 255, 255);
   width: 200px;
   margin-bottom: 20px;
-  margin-left: 16px;
+  margin-left: 15px;
 }
 .cta-btn {
   border-radius: 50px;
@@ -251,7 +251,7 @@ body {
 }
 #content-box-2 {
   padding-top: 60px;
-  padding-bottom: 90px;
+  padding-bottom: 40px;
   background-color: #efefef;
   background-image: url(content/dentist4/images/dentist4-section-bg9.webp);
   background-repeat: no-repeat;
@@ -335,6 +335,7 @@ body {
 }
 .stat-number {
   margin-bottom: 0px;
+  font-weight: bolder;
 }
 .stat-numb-wrapper {
   display: flex;
@@ -352,6 +353,19 @@ body {
 }
 .services-intro {
   margin-bottom: 20px;
+}
+.review-container {
+  padding: 0px;
+}
+.intro-container {
+  padding: 0px;
+}
+.stat-year-num {
+  margin-right: 2px;
+}
+.contact-us-desc {
+  color: #fff;
+  text-align: left;
 }
 @media screen and (min-width: 768px) {
   .intro-content-cards {
