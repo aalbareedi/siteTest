@@ -110,7 +110,7 @@ body {
   display: inline-block;
 }
 .landing-content {
-  padding: 90px 0px 90px 0px;
+  padding: 50px 0px 50px 0px;
 }
 /* .rs-parallax-wrap:nth-child(3) {
   background-color: red;
@@ -242,15 +242,15 @@ body {
   height: 56px;
 }
 #content-box-1 {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 30px;
+  padding-bottom: 50px;
   background-color: #3043b8;
   background-image: url(content/dentist4/images/dentist4-section-bg1.webp);
   background-repeat: no-repeat;
   background-position: left top;
 }
 #content-box-2 {
-  padding-top: 90px;
+  padding-top: 60px;
   padding-bottom: 90px;
   background-color: #efefef;
   background-image: url(content/dentist4/images/dentist4-section-bg9.webp);
@@ -258,8 +258,8 @@ body {
   background-position: right center;
 }
 #content-box-3 {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 #navOverlay {
   background: black;
@@ -312,6 +312,46 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
   text-align: center;
+}
+.intro-stats-wrapper {
+  margin-bottom: 24px;
+  padding: 0px;
+}
+/* .stat-wrapper {
+  display: flex;
+  justify-content: center;
+} */
+/* .stat-year {
+  display: block;
+} */
+.stat-intro-text {
+  color: #fff;
+  margin-bottom: 0px;
+}
+.stat-info-text {
+  color: #fff;
+  margin-bottom: 0px;
+  font-size: 15px;
+}
+.stat-number {
+  margin-bottom: 0px;
+}
+.stat-numb-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding: 0px;
+}
+.custom-h3 {
+  font-weight: bolder;
+}
+.services-title {
+  color: #3043b8;
+  max-width: 220px;
+  margin: 0 auto;
+}
+.services-intro {
+  margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .intro-content-cards {
