@@ -367,6 +367,102 @@ body {
   color: #fff;
   text-align: left;
 }
+#form-box {
+  height: 600px;
+  background-color: whitesmoke;
+}
+/* .contact-hours-box {
+  color: #8d8d8d;
+  display: flex;
+  flex-direction: column;
+} */
+.officeInfoSchedule {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.officeInfoText {
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  color: white;
+  width: 250px;
+  margin: 0 auto;
+}
+.officeInfoIcon {
+  position: absolute;
+  font-size: 18px;
+  color: #37d0e1;
+  top: 0px;
+}
+.officeInfoPhone {
+  /* margin: 50px 0; */
+  line-height: 21px;
+  padding-left: 23px;
+}
+#officePhoneIcon {
+  left: -25px;
+}
+.officePhoneText {
+  color: #b3b3b3;
+}
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 38px;
+}
+.contact-title {
+  margin-bottom: 40px;
+}
+.officeInfoAddress {
+  line-height: 20px;
+  padding-left: 18px;
+}
+#officeAddressIcon {
+  left: -20px;
+  font-size: 20px;
+}
+.officeInfoGrid {
+  display: grid;
+  position: relative;
+  row-gap: 2px;
+  column-gap: 5px;
+  /* font-size: 18px; */
+  grid-template-columns: repeat(2, auto);
+  /* grid-template-rows: repeat(7, 29px); */
+}
+#officeScheduleIcon {
+  left: -22px;
+  top: 2px;
+}
+.officeDay {
+  color: white;
+  text-align: right;
+  letter-spacing: 0.9px;
+}
+.officeTime {
+  text-align: center;
+  color: #b3b3b3;
+  letter-spacing: 0.3px;
+}
+.officeMap {
+  padding: 0 22px;
+  /* margin-top: 40px; */
+}
+.mapWrapper {
+  margin: 0 auto;
+  max-width: 360px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+#googleMap {
+  margin: 0 auto;
+  display: block;
+  height: 230px;
+  width: 100%;
+}
 @media screen and (min-width: 768px) {
   .intro-content-cards {
     flex-direction: row;
