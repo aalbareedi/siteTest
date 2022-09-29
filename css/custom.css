@@ -199,10 +199,10 @@ body {
   display: flex;
   align-items: center;
 }
-#Content {
+/* #Content {
   position: relative;
   padding-top: 60px;
-}
+} */
 .landing-dock {
   z-index: 100;
   display: flex;
@@ -243,7 +243,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  background-color: oldlace;
+  /* background-color: oldlace; */
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -326,7 +326,7 @@ body {
   text-align: center;
 }
 .intro-stats-wrapper {
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   padding: 0px;
 }
 /* .stat-wrapper {
@@ -352,11 +352,12 @@ body {
 .stat-numb-wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 36px;
   padding: 0px;
 }
 .custom-h3 {
   font-weight: bolder;
+  text-align: left;
 }
 .services-title {
   color: #3043b8;
@@ -407,21 +408,22 @@ body {
   color: #37d0e1;
   top: 0px;
 }
-.officeInfoPhone {
-  /* margin: 50px 0; */
+/* .officeInfoPhone {
+  margin: 50px 0;
   line-height: 21px;
   padding-left: 23px;
-}
+} */
 #officePhoneIcon {
-  left: -25px;
+  left: -13px;
 }
 .officePhoneText {
   color: #b3b3b3;
+  padding-left: 8px;
 }
 .contact-content {
   display: flex;
   flex-direction: column;
-  row-gap: 38px;
+  row-gap: 40px;
 }
 .contact-title {
   margin-bottom: 40px;
@@ -438,18 +440,18 @@ body {
   display: grid;
   position: relative;
   row-gap: 2px;
-  column-gap: 5px;
+  column-gap: 12px;
   /* font-size: 18px; */
   grid-template-columns: repeat(2, auto);
   /* grid-template-rows: repeat(7, 29px); */
 }
 #officeScheduleIcon {
-  left: -22px;
+  left: -42px;
   top: 2px;
 }
 .officeDay {
   color: white;
-  text-align: right;
+  text-align: left;
   letter-spacing: 0.9px;
 }
 .officeTime {
@@ -458,7 +460,7 @@ body {
   letter-spacing: 0.3px;
 }
 .officeMap {
-  padding: 0 22px;
+  padding: 0px 40px;
   /* margin-top: 40px; */
 }
 .mapWrapper {
@@ -474,6 +476,9 @@ body {
   display: block;
   height: 230px;
   width: 100%;
+}
+h6 {
+  margin-bottom: 18px;
 }
 @media screen and (min-width: 768px) {
   .intro-content-cards {
