@@ -16,7 +16,7 @@
   height: 100% !important;
 } */
 html {
-  height: auto;
+  height: 100%;
 }
 body {
   line-height: initial;
@@ -97,6 +97,9 @@ body {
   padding: 0px !important;
   color: #3b3b3b !important;
 }
+#Wrapper {
+  padding-top: 60px;
+}
 .logo-img {
   position: absolute;
   left: 9px;
@@ -127,10 +130,16 @@ body {
 }
 .landing-page {
   background-color: pink;
-  height: calc(100vh - 60px - 56px);
+  /* height: calc(100% - 60px - 56px); */
+
+  min-height: calc(100vh - 60px - 56px);
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
+  min-height: fill-available;
+
   display: flex;
   flex-direction: column;
-  max-height: calc(100% - 60px - 56px);
+  /* max-height: calc(100% - 60px - 56px); */
 }
 .landing-page-img {
   /* min-height: 200px; */
