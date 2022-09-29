@@ -8824,13 +8824,14 @@
       }
     });
 
+    // nav
     jQuery("#menu-main-menu a").on("click", function (e) {
       e.preventDefault();
 
       if (this.getAttribute("href").startsWith("#")) {
         jQuery("html,body").animate(
           {
-            scrollTop: $(this.getAttribute("href")).offset().top,
+            scrollTop: $(this.getAttribute("href")).offset().top - 60,
           },
           500
         );
