@@ -130,7 +130,10 @@ body {
 }
 .landing-page {
   background-color: pink;
-  /* height: calc(100% - 60px - 56px); */
+  height: calc(100vh - 60px - 56px);
+  /* height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available; */
 
   min-height: calc(100vh - 60px - 56px);
   min-height: -webkit-fill-available;
@@ -240,7 +243,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  /* background-color: whitesmoke; */
+  background-color: oldlace;
   display: none;
   right: 0px !important;
   top: 0px !important;
