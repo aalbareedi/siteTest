@@ -16,13 +16,15 @@
   height: 100% !important;
 } */
 html {
-  height: 100%;
+  height: -webkit-fill-available;
 }
 body {
   line-height: initial;
-  height: 100%;
+  min-height: 100vh;
+  /* min-height: -webkit-fill-available; */
+  height: -webkit-fill-available;
 }
-html,
+/* html,
 body {
   height: 100vh;
   height: -webkit-fill-available;
@@ -33,7 +35,7 @@ body {
   min-height: -webkit-fill-available;
   min-height: -moz-available;
   min-height: fill-available;
-}
+} */
 .row {
   margin-right: 0px;
   margin-left: 0px;
@@ -252,7 +254,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  background-color: oldlace;
+  background-color: pink;
   display: none;
   right: 0px !important;
   top: 0px !important;
