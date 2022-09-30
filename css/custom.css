@@ -125,9 +125,6 @@ body {
 .landing-content {
   padding: 50px 0px 50px 0px;
 }
-/* .rs-parallax-wrap:nth-child(3) {
-  background-color: red;
-} */
 .intro-content-cards {
   display: flex;
   flex-direction: column;
@@ -139,26 +136,22 @@ body {
   justify-content: center;
 }
 .landing-page {
-  background-color: pink;
+  /* background-color: pink; */
   /* height: calc(100vh - 60px - 56px);
   height: -webkit-fill-available;
   height: -moz-available;
   height: fill-available;
-
   min-height: calc(100vh - 60px - 56px);
   min-height: -webkit-fill-available;
   min-height: -moz-available;
   min-height: fill-available; */
-
+  /* max-height: calc(100% - 60px - 56px); */
   height: calc(100% - 60px - 56px);
-
   display: flex;
   flex-direction: column;
   margin-top: 60px;
-  /* max-height: calc(100% - 60px - 56px); */
 }
 .landing-page-img {
-  /* min-height: 200px; */
   height: 100%;
   background: url("../content/dentist4/images/smile-img.jpg") center top / cover
     no-repeat;
@@ -256,7 +249,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  background-color: orange;
+  /* background-color: orange; */
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -409,11 +402,12 @@ body {
 }
 .officeInfoText {
   position: relative;
-  text-align: center;
-  letter-spacing: 1px;
+  text-align: left;
+  letter-spacing: 0.6px;
   color: white;
   width: 250px;
   margin: 0 auto;
+  padding-left: 29px;
 }
 .officeInfoIcon {
   position: absolute;
@@ -442,12 +436,12 @@ body {
   margin-bottom: 40px;
 }
 .officeInfoAddress {
-  line-height: 20px;
-  padding-left: 18px;
+  /* line-height: 20px; */
+  /* padding-left: 18px; */
   margin-bottom: 20px;
 }
 #officeAddressIcon {
-  left: -20px;
+  left: -9px;
   font-size: 20px;
 }
 .officeInfoGrid {
@@ -496,6 +490,19 @@ h6 {
 }
 .stat-patients-num {
   margin-right: 1px;
+}
+.address-suite {
+  font-size: 14px;
+}
+.smile-emoji {
+  font-size: 34px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.stat-wrapper {
+  position: relative;
+  padding-left: 70px;
 }
 @media screen and (min-width: 768px) {
   .intro-content-cards {
