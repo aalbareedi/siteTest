@@ -217,7 +217,7 @@ body {
 .landing-dock {
   z-index: 100;
   display: flex;
-  position: fixed;
+  position: sticky;
   bottom: 0px;
   right: 0px;
   left: 0px;
@@ -254,7 +254,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  background-color: pink;
+  /* background-color: pink; */
   display: none;
   right: 0px !important;
   top: 0px !important;
