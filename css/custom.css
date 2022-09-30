@@ -16,13 +16,15 @@
   height: 100% !important;
 } */
 html {
-  height: -webkit-fill-available;
+  /* height: -webkit-fill-available; */
+  height: 100%;
 }
 body {
   line-height: initial;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* min-height: -webkit-fill-available; */
-  height: -webkit-fill-available;
+  /* height: -webkit-fill-available; */
+  height: 100%;
 }
 /* html,
 body {
@@ -254,7 +256,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  /* background-color: pink; */
+  background-color: orange;
   display: none;
   right: 0px !important;
   top: 0px !important;
