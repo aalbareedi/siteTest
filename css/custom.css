@@ -22,12 +22,18 @@ body {
   line-height: initial;
   height: 100%;
 }
-/* html,
+html,
 body {
-  scroll-behavior: smooth;
-  height: auto;
-  min-height: 100%;
-} */
+  height: 100vh;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
+
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
+  min-height: fill-available;
+}
 .row {
   margin-right: 0px;
   margin-left: 0px;
@@ -97,9 +103,9 @@ body {
   padding: 0px !important;
   color: #3b3b3b !important;
 }
-#Wrapper {
+/* #Wrapper {
   padding-top: 60px;
-}
+} */
 .logo-img {
   position: absolute;
   left: 9px;
@@ -130,18 +136,21 @@ body {
 }
 .landing-page {
   background-color: pink;
-  height: calc(100vh - 60px - 56px);
-  /* height: -webkit-fill-available;
+  /* height: calc(100vh - 60px - 56px);
+  height: -webkit-fill-available;
   height: -moz-available;
-  height: fill-available; */
+  height: fill-available;
 
   min-height: calc(100vh - 60px - 56px);
   min-height: -webkit-fill-available;
   min-height: -moz-available;
-  min-height: fill-available;
+  min-height: fill-available; */
+
+  height: calc(100% - 60px - 56px);
 
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
   /* max-height: calc(100% - 60px - 56px); */
 }
 .landing-page-img {
@@ -243,7 +252,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  /* background-color: oldlace; */
+  background-color: oldlace;
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -431,6 +440,7 @@ body {
 .officeInfoAddress {
   line-height: 20px;
   padding-left: 18px;
+  margin-bottom: 20px;
 }
 #officeAddressIcon {
   left: -20px;
@@ -479,6 +489,9 @@ body {
 }
 h6 {
   margin-bottom: 18px;
+}
+.stat-patients-num {
+  margin-right: 1px;
 }
 @media screen and (min-width: 768px) {
   .intro-content-cards {
