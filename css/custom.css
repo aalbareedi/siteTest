@@ -245,7 +245,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  background-color: orange;
+  /* background-color: orange; */
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -493,10 +493,10 @@ h6 {
   font-size: 14px;
 }
 .smile-emoji {
-  font-size: 36px;
+  font-size: 44px;
   position: absolute;
   left: 12px;
-  top: 0px;
+  top: -2px;
 }
 .stat-wrapper {
   position: relative;
