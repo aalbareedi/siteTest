@@ -122,8 +122,8 @@ body {
 .landing-content-btn {
   display: inline-block;
 }
-.landing-content {
-  padding: 50px 0px 50px 0px;
+#services-box {
+  padding: 50px 0px;
 }
 .intro-content-cards {
   display: flex;
@@ -135,7 +135,7 @@ body {
 .landing-content-services {
   justify-content: center;
 }
-.landing-page {
+#landing-page {
   /* background-color: pink; */
   /* height: calc(100vh - 60px - 56px);
   height: -webkit-fill-available;
@@ -345,7 +345,7 @@ body {
 .stat-info-text {
   color: #fff;
   margin-bottom: 0px;
-  font-size: 15px;
+  font-size: 16px;
   padding-left: 1px;
 }
 .stat-number {
@@ -388,7 +388,9 @@ body {
 }
 #form-box {
   height: 600px;
-  background-color: whitesmoke;
+  background-color: #1e2867;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 /* .contact-hours-box {
   color: #8d8d8d;
@@ -506,6 +508,12 @@ h6 {
   position: relative;
   padding-left: 78px;
 }
+.hover_color_bg {
+  padding: 30px;
+}
+.hover_color_bg p {
+  margin-bottom: 0px;
+}
 @media screen and (min-width: 768px) {
   .intro-content-cards {
     flex-direction: row;
@@ -515,7 +523,7 @@ h6 {
   }
 }
 @media screen and (min-width: 777px) {
-  .landing-page {
+  #landing-page {
     flex-direction: row;
   }
   .landing-page-img {

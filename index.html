@@ -56,7 +56,7 @@
   <body
     class="home page template-slider style-simple button-custom layout-full-width if-zoom if-border-hide no-shadows header-fixed header-fw sticky-header sticky-tb-color ab-hide subheader-both-center menu-link-color menuo-right mobile-tb-center mobile-side-slide mobile-mini-mr-ll tablet-sticky mobile-header-mini mobile-sticky mobile-tr-header tr-menu be-page-8"
   >
-    <div class="landing-page">
+    <div id="landing-page">
       <!-- <img
         src="content/dentist4/images/smile-img.jpg"
         class="landing-page-img"
@@ -84,13 +84,13 @@
           <nav id="menu">
             <ul id="menu-main-menu" class="menu menu-main">
               <li class="current-menu-item">
-                <a href="#Wrapper"><span>HOME</span></a>
+                <a href="#landing-page"><span>HOME</span></a>
               </li>
               <li>
                 <a href="#content-box-1"><span>ABOUT US</span></a>
               </li>
               <li>
-                <a href="#content-box-2"><span>SERVICES</span></a>
+                <a href="#services-box"><span>SERVICES</span></a>
               </li>
               <li>
                 <a href="#content-box-3"><span>FOR PATIENTS</span></a>
@@ -160,62 +160,47 @@
           </div>
         </div>
       </div>
-      <div class="section mcb-section container text-center landing-content">
+      <div id="services-box" class="container">
         <div class="landing-content-services">
           <div class="text-center services-intro">
             <h6>SERVICES</h6>
             <h3 class="services-title">Services provided by Dr. John Los</h3>
           </div>
           <div class="intro-content-cards">
-            <div>
-              <div class="hover_color">
-                <div class="hover_color_bg">
-                  <div class="hover_color_wrapper" style="padding: 40px 30px">
-                    <img
-                      class="scale-with-grid"
-                      src="content/dentist4/images/dentist4-home-icon1.webp"
-                    />
-                    <hr class="no_line" style="margin: 0 auto 10px auto" />
-                    <h5>General Dentistry</h5>
-                    <p style="color: #000">
-                      Proini rutrumus nibh elementum purus consequat, dolor
-                    </p>
-                  </div>
-                </div>
+            <div class="hover_color">
+              <div class="hover_color_bg">
+                <img
+                  class="scale-with-grid"
+                  src="content/dentist4/images/dentist4-home-icon1.webp"
+                />
+                <h5>General Dentistry</h5>
+                <p style="color: #000">
+                  Proini rutrumus nibh elementum purus consequat, dolor
+                </p>
               </div>
             </div>
-            <div>
-              <div class="hover_color">
-                <div class="hover_color_bg">
-                  <div class="hover_color_wrapper" style="padding: 40px 30px">
-                    <img
-                      class="scale-with-grid"
-                      src="content/dentist4/images/dentist4-home-icon2.webp"
-                    />
-                    <hr class="no_line" style="margin: 0 auto 10px auto" />
-                    <h5>Cosmetic Dentistry</h5>
-                    <p style="color: #000">
-                      Praesent est sem, posuere consectetuer. Etiam malesuada
-                    </p>
-                  </div>
-                </div>
+            <div class="hover_color">
+              <div class="hover_color_bg">
+                <img
+                  class="scale-with-grid"
+                  src="content/dentist4/images/dentist4-home-icon2.webp"
+                />
+                <h5>Cosmetic Dentistry</h5>
+                <p style="color: #000">
+                  Praesent est sem, posuere consectetuer. Etiam malesuada
+                </p>
               </div>
             </div>
-            <div>
-              <div class="hover_color">
-                <div class="hover_color_bg">
-                  <div class="hover_color_wrapper" style="padding: 40px 30px">
-                    <img
-                      class="scale-with-grid"
-                      src="content/dentist4/images/dentist4-home-icon3.webp"
-                    />
-                    <hr class="no_line" style="margin: 0 auto 10px auto" />
-                    <h5>Emergency Dental Care</h5>
-                    <p style="color: #000">
-                      Pellentesque malesuada augue eu mauris non erat
-                    </p>
-                  </div>
-                </div>
+            <div class="hover_color">
+              <div class="hover_color_bg">
+                <img
+                  class="scale-with-grid"
+                  src="content/dentist4/images/dentist4-home-icon3.webp"
+                />
+                <h5>Emergency Dental Care</h5>
+                <p style="color: #000">
+                  Pellentesque malesuada augue eu mauris non erat
+                </p>
               </div>
             </div>
           </div>
@@ -397,13 +382,14 @@
         <!-- </div> -->
       </div>
       <div id="form-box">
-        <form>
-          <h3 class="contact-us-title">Leave us a message</h3>
-          <p class="contact-us-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </form>
+        <div class="container">
+          <form>
+            <!-- <h6 class="contact-us-title">Leave us a message</h6> -->
+            <h3 class="contact-us-desc">
+              Send us a message & we'll get back to you ASAP
+            </h3>
+          </form>
+        </div>
       </div>
       <!-- <div id="emptyDockSpace"></div> -->
       <div id="navOverlay" class="displayHidden"></div>

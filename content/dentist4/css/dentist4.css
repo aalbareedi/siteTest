@@ -41,7 +41,7 @@ rs-progress {
 .hover_color {
   background-color: #fff;
   box-shadow: 2px 44px 32px 2px rgba(0, 0, 0, 0.02);
-  border-radius: 60px;
+  border-radius: 30px;
   overflow: hidden;
 }
 /* .hover_color:hover .hover_color_bg {
@@ -63,10 +63,10 @@ rs-progress {
   box-sizing: border-box;
   border: 2px solid transparent;
 }
-.hover_color .hover_color_wrapper {
+/* .hover_color .hover_color_wrapper {
   text-decoration: none;
   padding: 40px 30px;
-}
+} */
 .hover_color,
 .hover_color a,
 .hover_color a:hover,
