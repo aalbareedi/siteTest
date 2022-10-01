@@ -171,14 +171,14 @@ body {
   font-size: 13px;
   text-transform: uppercase;
   margin-bottom: 10px;
-  padding-left: 24px;
+  padding-left: 33px;
 }
 .landing-tagline {
   font-weight: bolder;
   color: rgb(255, 255, 255);
   width: 180px;
   margin-bottom: 20px;
-  margin-left: 25px;
+  margin-left: 34px;
 }
 .cta-btn {
   border-radius: 50px;
@@ -252,9 +252,9 @@ body {
   bottom: 0px;
   color: #3385d7;
 }
-#emptyDockSpace {
+/* #emptyDockSpace {
   height: 56px;
-}
+} */
 #content-box-1 {
   padding-top: 30px;
   padding-bottom: 50px;
@@ -378,6 +378,9 @@ body {
 }
 .stat-year-num {
   margin-right: 1px;
+}
+.stat-year {
+  color: #3385d7;
 }
 .contact-us-desc {
   color: #fff;
