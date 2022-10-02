@@ -168,7 +168,7 @@ body {
 .bullet-point {
   position: absolute;
   left: 6px;
-  top: -23px;
+  top: -22px;
   font-size: 50px;
 }
 #landing-page {
@@ -281,7 +281,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  background-color: orange;
+  /* background-color: orange; */
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -394,6 +394,7 @@ body {
 .stat-numb-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 36px;
   padding: 0px;
   margin-bottom: 36px;
@@ -594,13 +595,17 @@ h6 {
 }
 .smile-emoji {
   font-size: 44px;
-  position: absolute;
+  /* position: absolute;
   left: 12px;
-  top: -2px;
+  top: -2px; */
+}
+.stat-container {
+  display: flex;
+  column-gap: 8px;
 }
 .stat-wrapper {
   position: relative;
-  padding-left: 78px;
+  /* padding-left: 78px; */
 }
 .hover_color_bg {
   padding: 30px;
