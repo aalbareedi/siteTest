@@ -283,7 +283,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  background-color: orange;
+  /* background-color: orange; */
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -451,17 +451,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* row-gap: 10px; */
-  /* margin-bottom: 36px; */
-  margin: 0px auto 36px auto;
+  margin-bottom: 36px;
+  /* margin: 0px auto 36px auto; */
   max-width: 216px;
 }
 .stat-badge {
+  position: relative;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
+  /* flex-direction: row-reverse; */
+  /* justify-content: center; */
   align-items: center;
   flex-basis: 100%;
+  width: 100%;
 }
 .badge-text {
   color: #fff;
@@ -475,7 +476,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* font-size: 30px; */
   color: #feb300;
 }
 .badge-icon-1 {
@@ -486,6 +486,22 @@ body {
 }
 .badge-icon-3 {
   width: 22px;
+}
+.badge-check {
+  width: 24px;
+  height: 24px;
+  border: 2px solid gainsboro;
+  border-radius: 50%;
+  position: absolute;
+  right: -38px;
+  top: 12px;
+}
+.badge-check i {
+  color: #199940;
+  position: absolute;
+  left: -4px;
+  top: -13px;
+  font-size: 34px;
 }
 #form-box {
   background-color: #1e2867;
