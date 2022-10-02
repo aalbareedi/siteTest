@@ -127,6 +127,7 @@ body {
 }
 #services-box {
   padding: 50px 0px;
+  background: whitesmoke;
 }
 .intro-content-cards {
   display: flex;
@@ -278,7 +279,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  background-color: lightblue;
+  /* background-color: lightblue; */
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -599,7 +600,7 @@ h6 {
 }
 .stat-container {
   display: flex;
-  column-gap: 10px;
+  column-gap: 12px;
 }
 .stat-wrapper {
   position: relative;
@@ -630,16 +631,30 @@ h6 {
 .contactFormInput {
   height: 54px;
   border: none;
-  padding-left: 12px;
   width: 100%;
   outline: none;
   font-size: 16px;
   letter-spacing: 0.7px;
+  padding-top: 4px;
+  padding-left: 12px;
   padding-right: 44px;
-  padding-top: 2px;
   border-radius: 10px !important;
   border: 2px solid #e8e8e8;
   background: none !important;
+}
+.contactFormInput:focus {
+  border: 2px solid #067ffc;
+  outline: none;
+  background-color: none;
+}
+input.contactFormInput:valid {
+  background-image: url("../content/dentist4/images/validCheckIcon.svg") !important;
+  background-size: 26px !important;
+  background-repeat: no-repeat !important;
+  background-position: right 11px center !important;
+}
+input.contactFormInput:valid + .formIcon {
+  opacity: 0;
 }
 .contactFormInput::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -653,9 +668,6 @@ h6 {
 .contactFormInput::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #a9b5ff;
-}
-.contactFormInput:focus {
-  background-color: none;
 }
 .formIcon {
   position: absolute;
