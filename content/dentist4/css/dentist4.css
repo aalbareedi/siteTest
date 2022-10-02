@@ -4229,7 +4229,7 @@ textarea,
 :-ms-input-placeholder {
   color: #5e5e5e;
 }
-input[type="date"]:focus,
+/* input[type="date"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="password"]:focus,
@@ -4248,7 +4248,7 @@ textarea:focus {
 }
 :focus::-moz-placeholder {
   color: #246db7;
-}
+} */
 .woocommerce span.onsale,
 .shop_slider .shop_slider_ul li .item_wrapper span.onsale {
   border-top-color: #3385d7 !important;
