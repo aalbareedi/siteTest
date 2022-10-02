@@ -130,10 +130,43 @@ body {
   flex-direction: column;
   row-gap: 20px;
   column-gap: 30px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
+}
+.intro-content-cards h5 {
+  font-size: 16px;
+  font-weight: bold;
 }
 .landing-content-services {
   justify-content: center;
+}
+.services-text {
+  color: #000;
+}
+.service-box {
+  border-radius: 20px;
+  background-color: #a2d9f5;
+  box-shadow: 2px 44px 32px 2px rgba(0, 0, 0, 0.02);
+  padding: 26px;
+}
+.routine-intro {
+  margin-bottom: 4px;
+}
+.dentures-intro {
+  margin-bottom: 8px;
+}
+.service-text-bp {
+  padding-left: 24px;
+  margin-bottom: 6px;
+  position: relative;
+}
+.service-text-bp:last-child {
+  margin-bottom: 0px;
+}
+.bullet-point {
+  position: absolute;
+  left: 6px;
+  top: -23px;
+  font-size: 50px;
 }
 #landing-page {
   /* background-color: pink; */
