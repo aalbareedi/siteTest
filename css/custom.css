@@ -281,7 +281,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  /* background-color: orange; */
+  background-color: pink;
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -364,7 +364,7 @@ body {
   text-align: center;
 }
 .intro-stats-wrapper {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   padding: 0px;
 }
 .intro-stats-wrapper h6 {
@@ -386,6 +386,7 @@ body {
   margin-bottom: 0px;
   font-size: 16px;
   padding-left: 1px;
+  min-width: 128px;
 }
 .stat-number {
   margin-bottom: 0px;
@@ -465,7 +466,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
+  /* font-size: 30px; */
   color: #feb300;
 }
 .badge-icon-1 {
@@ -601,7 +602,7 @@ h6 {
 }
 .stat-container {
   display: flex;
-  column-gap: 8px;
+  column-gap: 10px;
 }
 .stat-wrapper {
   position: relative;
