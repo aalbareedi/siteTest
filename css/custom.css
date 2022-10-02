@@ -245,7 +245,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  background-color: orange;
+  /* background-color: orange; */
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -433,6 +433,11 @@ body {
 }
 .badge-icon-1 {
   width: 30px;
+  /* margin-bottom: 6px; */
+}
+.badge-icon-2 {
+  width: 36px;
+  margin-top: 6px;
   /* margin-bottom: 6px; */
 }
 .badge-icon-3 {
