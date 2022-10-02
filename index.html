@@ -271,16 +271,12 @@
             <div class="service-box">
               <h5>Dentures & Veneers</h5>
               <div class="services-text">
-                <div class="dentures-intro">
-                  In dentistry, a <span class="bold">veneer</span> is a layer of
-                  material placed over a tooth, veneers improve the aesthetics
-                  of a smile and/or protect the tooth surface from damage.
-                </div>
-                <div>
-                  A <span class="bold">denture</span> is an artificial
-                  replacement of one, several, or all the teeth. These are both
-                  amazing ways to improve your healthy smile!
-                </div>
+                In dentistry, a <span class="bold">veneer</span> is a layer of
+                material placed over a tooth, veneers improve the aesthetics of
+                a smile and/or protect the tooth surface from damage. A
+                <span class="bold">denture</span> is an artificial replacement
+                of one, several, or all the teeth. These are both amazing ways
+                to improve your healthy smile!
               </div>
             </div>
             <div class="service-box">
@@ -479,6 +475,57 @@
             <h3 class="contact-us-desc">
               Send us a message & we'll get back to you ASAP
             </h3>
+            <div class="formOption">
+              <label for="nameInput" class="contactFormText unselectable">
+                Full Name<span class="formAsterik">*</span>
+              </label>
+              <div class="fullNameField">
+                <input
+                  required
+                  id="nameInput"
+                  type="text"
+                  class="contactFormInput"
+                  placeholder="Firstname Lastname"
+                />
+                <div class="formIcon" id="fullNameIcon">
+                  <i class="fas fa-user"></i>
+                </div>
+              </div>
+            </div>
+            <div class="formOption">
+              <label for="emailInput" class="contactFormText unselectable">
+                Email Address<span class="formAsterik">*</span>
+              </label>
+              <div class="emailField">
+                <input
+                  required
+                  id="emailInput"
+                  type="email"
+                  class="contactFormInput"
+                  placeholder="email@address.com"
+                  pattern=".+@.+\..{2,}$"
+                />
+                <div class="formIcon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+              </div>
+            </div>
+            <div class="formOption">
+              <label for="phoneInput" class="contactFormText unselectable">
+                Phone Number<span class="formAsterik">*</span>
+              </label>
+              <div class="phoneField">
+                <input
+                  required
+                  id="phoneInput"
+                  type="tel"
+                  class="contactFormInput"
+                  placeholder="(555) 123-4567"
+                  pattern="^([^A-Za-z]*\d){7,}$"
+                />
+                <div class="formIcon"><i class="fas fa-phone"></i></div>
+              </div>
+            </div>
           </form>
         </div>
       </div>

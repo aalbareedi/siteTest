@@ -1384,7 +1384,7 @@ input[type="url"],
 select,
 textarea,
 .woocommerce .quantity input.qty {
-  border-width: 0 0 2px 0 !important;
+  /* border-width: 0 0 2px 0 !important; */
   box-shadow: unset;
   resize: none;
 }
@@ -4216,7 +4216,7 @@ textarea,
 .dark input[type="text"],
 .dark select,
 .dark textarea {
-  color: #7a7a7a;
+  color: #ffffff;
   background-color: rgba(247, 247, 247, 1);
   border-color: #ebebeb;
 }
