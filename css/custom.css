@@ -207,6 +207,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
   padding-left: 33px;
+  word-spacing: 1px;
 }
 .landing-tagline {
   font-weight: bolder;
@@ -282,7 +283,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  /* background-color: lightblue; */
+  background-color: orange;
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -479,16 +480,12 @@ body {
 }
 .badge-icon-1 {
   width: 20px;
-  /* margin-bottom: 6px; */
 }
 .badge-icon-2 {
-  width: 28px;
-  /* margin-top: 6px; */
-  /* margin-bottom: 6px; */
+  width: 26px;
 }
 .badge-icon-3 {
   width: 22px;
-  /* margin-bottom: 6px; */
 }
 #form-box {
   background-color: #1e2867;
