@@ -245,7 +245,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  /* background-color: orange; */
+  background-color: orange;
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -421,7 +421,7 @@ body {
   color: #fff;
 }
 .badge-icon {
-  /* background-color: orange; */
+  /* background-color: white; */
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -429,10 +429,15 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 30px;
-  color: gold;
+  color: #feb300;
+}
+.badge-icon-1 {
+  width: 30px;
+  /* margin-bottom: 6px; */
 }
 .badge-icon-3 {
   width: 36px;
+  margin-bottom: 6px;
 }
 #form-box {
   height: 600px;
