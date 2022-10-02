@@ -331,6 +331,9 @@ body {
   margin-bottom: 30px;
   padding: 0px;
 }
+.intro-stats-wrapper h6 {
+  text-align: center;
+}
 /* .stat-wrapper {
   display: flex;
   justify-content: center;
@@ -357,10 +360,26 @@ body {
   flex-direction: column;
   row-gap: 36px;
   padding: 0px;
+  margin-bottom: 36px;
 }
 .custom-h3 {
   font-weight: bolder;
   text-align: left;
+}
+.main-doc {
+  margin-bottom: 20px;
+}
+.doc-profile {
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  border-radius: 50%;
+  border: 2px solid gainsboro;
+  margin: 0 auto;
+}
+.main-about-text {
+  color: #fff;
+  line-height: 24px;
 }
 .services-title {
   color: #3043b8;
@@ -385,6 +404,35 @@ body {
 .contact-us-desc {
   color: #fff;
   text-align: left;
+}
+.main-stat-badges {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 18px;
+}
+.stat-badge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.badge-text {
+  color: #fff;
+}
+.badge-icon {
+  /* background-color: orange; */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: gold;
+}
+.badge-icon-3 {
+  width: 36px;
 }
 #form-box {
   height: 600px;
