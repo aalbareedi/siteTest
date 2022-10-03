@@ -8825,9 +8825,7 @@
     });
 
     // nav
-    jQuery("#menu-main-menu a").on("click", function (e) {
-      e.preventDefault();
-
+    jQuery("a").on("click", function (e) {
       if (this.getAttribute("href").startsWith("#")) {
         jQuery("html,body").animate(
           {
