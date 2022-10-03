@@ -9707,51 +9707,6 @@
   }
   // --- Portfolio -------------------------------------------------------------
   function mfnSliderPortfolio() {
-    /*	$('.portfolio_slider_ul').each(function(){
-			
-			var slider = $(this);
-
-			slider.slick({
-				cssEase			: 'ease-out',
-				dots			: false,
-				infinite		: true,			
-				touchThreshold	: 10,
-				speed			: 300,
-				
-				prevArrow		: '<a class="slider_nav slider_prev themebg" href="#"><i class="icon-left-open-big"></i></a>',
-				nextArrow		: '<a class="slider_nav slider_next themebg" href="#"><i class="icon-right-open-big"></i></a>',
-
-				autoplay		: window.mfn_sliders.portfolio ? true : false,
-				autoplaySpeed	: window.mfn_sliders.portfolio ? window.mfn_sliders.portfolio : 5000,
-
-				slidesToShow	: slickAutoResponsive( slider ),
-				slidesToScroll	: slickAutoResponsive( slider )
-			});
-
-			// Bind | debouncedresize
-			$(window).bind( 'debouncedresize', function(){
-				slider.slick( 'slickSetOption', 'slidesToShow', slickAutoResponsive( slider ), false );
-				slider.slick( 'slickSetOption', 'slidesToScroll', slickAutoResponsive( slider ), true );
-			});
-			
-			// prettyPhoto | disable on dragstart
-			slider.on( 'dragstart', '.slick-slide a[rel="prettyphoto"]', function( event ){
-				if( pretty ){	
-					$(this).addClass( 'unbind-pretty' ).unbind( 'click.prettyphoto' );
-				}
-			});
-
-			// prettyPhoto | enable after change
-			slider.on( 'afterChange', function( event, slick, currentSlide, nextSlide ){
-				if( pretty ){						
-					$( 'a.unbind-pretty[rel="prettyphoto"]', slider ).prettyPhoto( pretty ).removeClass( 'unbind-pretty' );			
-				}
-			});
-	
-		});
-		
-		*/
-
     $(".portfolio_slider_ul").each(function () {
       var slider = $(this);
       var size = 380;
@@ -10099,4 +10054,7 @@ $(document).ready(() => {
   // $("#slider-1-slide-1-layer-1").append(
   //   `<div class="landing-welcome">Welcome To Our Clinic</div>`
   // );
+  $(".slick-slider").on("swipe", function (event, slick, direction) {
+    slick.slickPause();
+  });
 });

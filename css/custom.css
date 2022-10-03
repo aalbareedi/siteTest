@@ -134,16 +134,13 @@ body {
   flex-direction: column;
   row-gap: 20px;
   column-gap: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 .intro-content-cards h5 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* .landing-content-services {
-  justify-content: center;
-} */
 .services-text {
   color: #000;
 }
@@ -219,12 +216,16 @@ body {
 .cta-btn {
   border-radius: 50px !important;
   padding: 0px !important;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0px auto;
   width: 200px;
   height: 50px;
   color: #fff;
   background-color: #3385d7;
+  letter-spacing: 1px;
+  font-size: 14px;
 }
 /* #Content {
   padding-top: 60px;
@@ -261,6 +262,7 @@ body {
 .landing-dock-btn {
   /* background-color: rgba(190, 190, 190, 0.7); */
   background-color: white;
+  color: #007bff;
   display: flex;
   /* flex-direction: column; */
   justify-content: center;
@@ -274,8 +276,7 @@ body {
 }
 .landing-dock-btn i {
   font-size: 20px;
-}
-/* .contactBtnText {
+} /* .contactBtnText {
   display: none;
 } */
 /* .landing-dock-btn:first-child {
@@ -285,7 +286,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  /* background-color: orange; */
+  background-color: gainsboro;
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -297,7 +298,7 @@ body {
 } */
 #content-box-1 {
   padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
   background-color: #3043b8;
   /* background-image: url(../content/dentist4/images/dentist4-section-bg1.webp);
   background-repeat: no-repeat;
@@ -312,8 +313,8 @@ body {
   background-position: right center; */
 }
 #content-box-3 {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 #navOverlay {
   background: black;
@@ -419,8 +420,36 @@ body {
   max-width: 220px;
   margin: 0 auto;
 }
-.services-intro {
+.services-intro,
+.reviews-intro {
   margin-bottom: 24px;
+}
+.review-container {
+  min-height: 246px;
+  /* background-color: orange; */
+  position: relative;
+}
+.slider_pagination {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  margin-left: -45px;
+}
+.review-slide {
+  /* min-height: 166px; */
+  display: inline-flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+.bq_wrapper {
+  margin-bottom: 0px !important;
+}
+.bq_wrapper blockquote {
+  text-align: left;
+  /* min-height: 166px; */
+}
+.slider_pager {
+  margin-top: 30px;
 }
 .review-container {
   padding: 0px;
@@ -463,6 +492,7 @@ body {
   font-size: 20px;
   letter-spacing: 0.4px;
   font-family: "Pacifico", cursive;
+  color: #a0afff;
 }
 .doctorName {
   font-family: "Playfair Display", serif;
@@ -470,16 +500,15 @@ body {
   letter-spacing: 0.4px;
   font-weight: initial;
   margin-left: 16px;
+  color: whitesmoke;
 }
 .main-stat-badges {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* margin-bottom: 36px; */
   margin: 0px auto 36px auto;
   max-width: 270px;
-  /* max-width: 216px; */
-  row-gap: 14px;
+  row-gap: 16px;
 }
 .stat-badge {
   position: relative;
@@ -658,8 +687,7 @@ h6 {
   column-gap: 12px;
 }
 .stat-wrapper {
-  position: relative;
-  /* padding-left: 78px; */
+  padding-top: 1px;
 }
 .hover_color_bg {
   padding: 30px;
@@ -758,7 +786,7 @@ input.contactFormInput:valid + .formIcon {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  padding-right: 4px;
+  /* padding-right: 4px; */
   background: linear-gradient(to bottom, #00c2d7 0%, #368cbc 100%);
   border: none;
   outline: none;
@@ -770,20 +798,22 @@ input.contactFormInput:valid + .formIcon {
 }
 .treatmentBtnMessage {
   text-align: left;
-  width: 182px;
-  margin-left: 10px;
+  min-width: 158px;
   letter-spacing: 0.3px;
-  font-size: 16px;
-  font-style: italic;
+  font-size: 18px;
 }
 .freeWord {
   color: #00cd00;
   font-weight: bold;
+  font-style: italic;
 }
 .treatmentBtnWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+  column-gap: 12px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 .treatmentCallIcon {
   color: white;
@@ -793,8 +823,20 @@ input.contactFormInput:valid + .formIcon {
 }
 .treatmentBtnText {
   padding-top: 2px;
-  letter-spacing: 1px;
   color: white;
+}
+.treatment-space {
+  display: flex;
+  align-items: center;
+  height: 38px;
+  column-gap: 10px;
+  max-width: 200px;
+  margin: 0px auto;
+}
+.treatment-solid {
+  height: 2px;
+  background-color: gainsboro;
+  width: 100%;
 }
 @media screen and (min-width: 375px) {
   .badge-text {
