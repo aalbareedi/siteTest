@@ -407,7 +407,7 @@ body {
   text-align: left;
 }
 .main-doc {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .doc-profile {
   width: 100px;
@@ -451,9 +451,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 36px;
-  /* margin: 0px auto 36px auto; */
-  max-width: 216px;
+  /* margin-bottom: 36px; */
+  margin: 0px auto 36px auto;
+  max-width: 270px;
+  /* max-width: 216px; */
+  row-gap: 12px;
 }
 .stat-badge {
   position: relative;
@@ -463,10 +465,15 @@ body {
   align-items: center;
   flex-basis: 100%;
   width: 100%;
+  border: 2px solid gainsboro;
+  border-radius: 10px;
 }
 .badge-text {
   color: #fff;
-  text-align: center;
+  text-align: left;
+  font-size: 14px;
+  min-width: 140px;
+  margin-right: 18px;
 }
 .badge-icon {
   /* background-color: white; */
@@ -488,20 +495,21 @@ body {
   width: 22px;
 }
 .badge-check {
-  width: 24px;
-  height: 24px;
-  border: 2px solid gainsboro;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #a9a9a9;
   border-radius: 50%;
-  position: absolute;
-  right: -38px;
-  top: 12px;
+  /* position: absolute; */
+  position: relative;
+  /* right: -38px;
+  top: 12px; */
 }
 .badge-check i {
   color: #199940;
   position: absolute;
   left: -4px;
   top: -13px;
-  font-size: 34px;
+  font-size: 32px;
 }
 #form-box {
   background-color: #1e2867;
@@ -718,6 +726,12 @@ input.contactFormInput:valid + .formIcon {
   padding: 0px !important;
   width: 200px;
   height: 50px;
+}
+@media screen and (min-width: 375px) {
+  .badge-text {
+    font-size: 16px;
+    min-width: 160px;
+  }
 }
 @media screen and (min-width: 768px) {
   .intro-content-cards {
