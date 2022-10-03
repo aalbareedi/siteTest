@@ -134,7 +134,7 @@ body {
   flex-direction: column;
   row-gap: 20px;
   column-gap: 30px;
-  margin-bottom: 36px;
+  margin-bottom: 38px;
 }
 .intro-content-cards h5 {
   font-size: 18px;
@@ -226,6 +226,7 @@ body {
   background-color: #3385d7;
   letter-spacing: 1px;
   font-size: 14px;
+  font-weight: 600;
 }
 /* #Content {
   padding-top: 60px;
@@ -286,7 +287,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -393,19 +394,6 @@ body {
   padding-left: 1px;
   min-width: 128px;
 }
-.stat-number {
-  margin-bottom: 0px;
-  font-weight: bolder;
-  color: #32b0e8;
-}
-.stat-numb-wrapper {
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  row-gap: 36px;
-  padding: 0px;
-  margin-bottom: 36px;
-}
 .custom-h3 {
   font-weight: bolder;
   text-align: left;
@@ -461,7 +449,8 @@ body {
   margin-right: 1px;
 }
 .stat-year {
-  color: #32b0e8;
+  /* color: #32b0e8; */
+  color: #a0afff;
 }
 .contact-us-desc {
   color: whitesmoke;
@@ -487,6 +476,20 @@ body {
   border-radius: 50%;
   border: 2px solid gainsboro;
   /* margin: 0 auto; */
+}
+.stat-number {
+  margin-bottom: 0px;
+  font-weight: bolder;
+  /* color: #32b0e8; */
+  color: #a0afff;
+}
+.stat-numb-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  row-gap: 36px;
+  padding: 0px;
+  margin-bottom: 36px;
 }
 .doctorTitle {
   font-size: 20px;
@@ -548,8 +551,8 @@ body {
   width: 22px;
 }
 .badge-check {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border: 2px solid #a9a9a9;
   border-radius: 50%;
   /* position: absolute; */
@@ -560,9 +563,12 @@ body {
 .badge-check i {
   color: #199940;
   position: absolute;
+  /* left: -4px;
+  top: -12px;
+  font-size: 32px; */
   left: -4px;
   top: -12px;
-  font-size: 32px;
+  font-size: 30px;
 }
 #form-box {
   background-color: #1e2867;
@@ -786,7 +792,6 @@ input.contactFormInput:valid + .formIcon {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  /* padding-right: 4px; */
   background: linear-gradient(to bottom, #00c2d7 0%, #368cbc 100%);
   border: none;
   outline: none;
@@ -794,7 +799,7 @@ input.contactFormInput:valid + .formIcon {
   width: 98px;
   height: 46px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  column-gap: 2px;
+  column-gap: 6px;
 }
 .treatmentBtnMessage {
   text-align: left;
@@ -815,15 +820,22 @@ input.contactFormInput:valid + .formIcon {
   margin-left: -10px;
   margin-right: -10px;
 }
+.treatment-or {
+  padding-bottom: 3px;
+}
+.dm-text {
+  margin-bottom: 2px;
+}
 .treatmentCallIcon {
-  color: white;
-  font-size: 22px;
-  margin-right: 6px;
-  margin-left: 2px;
+  color: whitesmoke;
+  font-size: 20px;
+  /* margin-right: 6px;
+  margin-left: 2px; */
 }
 .treatmentBtnText {
-  padding-top: 2px;
-  color: white;
+  /* padding-top: 2px; */
+  color: whitesmoke;
+  min-width: 35px;
 }
 .treatment-space {
   display: flex;
