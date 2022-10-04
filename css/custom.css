@@ -454,29 +454,30 @@ body {
   margin: 0px auto 30px auto;
 }
 .doc-profile {
+  background-image: linear-gradient(335deg, #ffffff 4%, #48c6eb 100%);
   position: relative;
   width: 100px;
   height: 100px;
-  background-color: #e0e2d4;
+  /* background-color: #e0e2d4; */
   border-radius: 50%;
   border: 2px solid gainsboro;
   overflow: hidden;
 }
 .doctorImg {
   position: absolute;
-  width: 156px;
+  width: 152px;
   top: -35px;
   left: -66px;
   z-index: 1;
 }
 .img-edit {
   position: absolute;
-  right: -6px;
-  top: 62px;
+  right: -5px;
+  top: 61px;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  background-color: #303641;
+  background-color: #3a404e;
 }
 .stat-year {
   color: #32b0e8;
@@ -494,8 +495,8 @@ body {
   margin-bottom: 38px;
 }
 .doctorTitle {
-  font-size: 20px;
-  letter-spacing: 0.4px;
+  font-size: 22px;
+  letter-spacing: 0.8px;
   font-family: "Pacifico", cursive;
   color: #dddddd;
 }
