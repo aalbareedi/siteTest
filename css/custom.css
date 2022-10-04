@@ -145,7 +145,7 @@ body {
   color: #000;
 }
 .service-box {
-  border-radius: 20px;
+  border-radius: 30px;
   background-color: #a2d9f5;
   box-shadow: 2px 44px 32px 2px rgba(0, 0, 0, 0.02);
   padding: 26px;
@@ -277,26 +277,15 @@ body {
 }
 .landing-dock-btn i {
   font-size: 20px;
-} /* .contactBtnText {
-  display: none;
-} */
-/* .landing-dock-btn:first-child {
-  padding-left: 20px;
 }
-.landing-dock-btn:last-child {
-  padding-right: 20px;
-} */
 .responsive-menu-toggle {
-  background-color: orange;
+  /* background-color: orange; */
   display: none;
   right: 0px !important;
   top: 0px !important;
   bottom: 0px;
   color: #3385d7;
 }
-/* #emptyDockSpace {
-  height: 56px;
-} */
 #content-box-1 {
   padding-top: 30px;
   padding-bottom: 40px;
@@ -478,6 +467,16 @@ body {
   width: 156px;
   top: -35px;
   left: -66px;
+  z-index: 1;
+}
+.img-edit {
+  position: absolute;
+  right: -6px;
+  top: 62px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #303641;
 }
 .stat-year {
   color: #32b0e8;
@@ -492,7 +491,7 @@ body {
   flex-direction: column;
   row-gap: 36px;
   padding: 0px;
-  margin-bottom: 36px;
+  margin-bottom: 38px;
 }
 .doctorTitle {
   font-size: 20px;
