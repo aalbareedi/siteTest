@@ -445,13 +445,13 @@ body {
 }
 .doctor-content {
   padding-top: 2px;
-  margin-right: -15px;
+  margin-left: -15px;
 }
 .main-doc {
   display: flex;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
   justify-content: space-between;
-  max-width: 240px;
+  max-width: 252px;
   margin: 0px auto 30px auto;
 }
 .doc-profile {
@@ -463,7 +463,7 @@ body {
   border-radius: 50%;
   border: 2px solid gainsboro;
   overflow: hidden;
-  margin-left: -8px;
+  margin-right: -8px;
 }
 .doctorImg {
   position: absolute;
@@ -507,7 +507,7 @@ body {
   font-size: 24px;
   letter-spacing: 0.4px;
   font-weight: initial;
-  margin-left: 10px;
+  margin-left: 16px;
   color: whitesmoke;
 }
 .main-stat-badges {
