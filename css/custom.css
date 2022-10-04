@@ -287,7 +287,7 @@ body {
   padding-right: 20px;
 } */
 .responsive-menu-toggle {
-  /* background-color: gainsboro; */
+  background-color: orange;
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -391,8 +391,9 @@ body {
   color: #fff;
   margin-bottom: 0px;
   font-size: 16px;
-  padding-left: 1px;
+  padding-left: 2px;
   min-width: 128px;
+  letter-spacing: 0.4px;
 }
 .custom-h3 {
   font-weight: bolder;
@@ -448,10 +449,6 @@ body {
 .stat-year-num {
   margin-right: 1px;
 }
-.stat-year {
-  /* color: #32b0e8; */
-  color: #a0afff;
-}
 .contact-us-desc {
   color: whitesmoke;
   text-align: left;
@@ -462,31 +459,37 @@ body {
   margin-left: -15px;
 }
 .main-doc {
-  /* margin-bottom: 30px; */
-  /* position: relative; */
   display: flex;
   justify-content: space-between;
   max-width: 252px;
   margin: 0px auto 30px auto;
 }
 .doc-profile {
+  position: relative;
   width: 100px;
   height: 100px;
-  background-color: gray;
+  background-color: #e0e2d4;
   border-radius: 50%;
   border: 2px solid gainsboro;
-  /* margin: 0 auto; */
+  overflow: hidden;
+}
+.doctorImg {
+  position: absolute;
+  width: 156px;
+  top: -35px;
+  left: -66px;
+}
+.stat-year {
+  color: #32b0e8;
 }
 .stat-number {
   margin-bottom: 0px;
   font-weight: bolder;
-  /* color: #32b0e8; */
-  color: #a0afff;
+  color: #32b0e8;
 }
 .stat-numb-wrapper {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   row-gap: 36px;
   padding: 0px;
   margin-bottom: 36px;
@@ -495,7 +498,7 @@ body {
   font-size: 20px;
   letter-spacing: 0.4px;
   font-family: "Pacifico", cursive;
-  color: #a0afff;
+  color: #dddddd;
 }
 .doctorName {
   font-family: "Playfair Display", serif;
@@ -690,7 +693,7 @@ h6 {
 }
 .stat-container {
   display: flex;
-  column-gap: 12px;
+  column-gap: 14px;
 }
 .stat-wrapper {
   padding-top: 1px;
@@ -799,11 +802,11 @@ input.contactFormInput:valid + .formIcon {
   width: 98px;
   height: 46px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  column-gap: 6px;
+  column-gap: 8px;
 }
 .treatmentBtnMessage {
   text-align: left;
-  min-width: 158px;
+  min-width: 160px;
   letter-spacing: 0.3px;
   font-size: 18px;
 }
