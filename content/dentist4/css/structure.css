@@ -5899,9 +5899,9 @@ body {
 /* #Tablet (Landscape) 768 - 959 --------------------------------------------------------------- #Tablet (Landscape) 768 - 959 */
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  body {
+  /* body {
     min-width: 0;
-  }
+  } */
   .section_wrapper,
   .container,
   .with_aside .content_wrapper {

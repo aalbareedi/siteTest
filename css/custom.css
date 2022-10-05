@@ -134,7 +134,7 @@ body {
   flex-direction: column;
   row-gap: 20px;
   column-gap: 30px;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }
 .intro-content-cards h5 {
   font-size: 18px;
@@ -392,6 +392,7 @@ body {
   color: #fff;
   line-height: 24px;
   word-spacing: 1px;
+  letter-spacing: 0.4px;
 }
 .services-title {
   color: #3043b8;
@@ -463,7 +464,7 @@ body {
   border-radius: 50%;
   border: 2px solid gainsboro;
   overflow: hidden;
-  margin-right: -8px;
+  margin-right: -10px;
 }
 .doctorImg {
   position: absolute;
@@ -863,13 +864,15 @@ input.contactFormInput:valid + .formIcon {
 }
 @media screen and (min-width: 768px) {
   .intro-content-cards {
-    flex-direction: row;
+    /* flex-direction: row; */
+    display: grid;
+    grid-template-columns: repeat(2, auto);
   }
   #Footer {
     padding-top: 50px;
   }
 }
-@media screen and (min-width: 777px) {
+/* @media screen and (min-width: 777px) {
   #landing-page {
     flex-direction: row;
   }
@@ -879,7 +882,7 @@ input.contactFormInput:valid + .formIcon {
   .landing-page-content {
     width: 60%;
   }
-}
+} */
 @media screen and (min-width: 1239px) {
   #menu-main-menu {
     flex-direction: row;
