@@ -10039,6 +10039,88 @@ $(document).ready(() => {
     $("#back_to_top").addClass("opacityZero");
   }
 
+  $("#phoneInput").on("input", function () {
+    let contactFormPhoneInput = $("#phoneInput")[0];
+
+    // selectionStart is the index # value of where the cursor is after a keystroke (even delete)
+    let selectionStart = contactFormPhoneInput.selectionStart;
+
+    let phoneValue = contactFormPhoneInput.value;
+    // numbers is an array of the 'phoneValue' numbers, without any spaces/parenthesis
+    let numbers = phoneValue.match(/\d+/g);
+    let numbersString = "";
+    if (numbers != null) {
+      // joining the numbers array values to 1 string
+      numbersString = numbers.join("");
+    }
+
+    let difference = phoneValue.length - numbersString.length;
+
+    if (numbersString.length == 10) {
+      let formattedNumber =
+        "(" +
+        numbersString[0] +
+        numbersString[1] +
+        numbersString[2] +
+        ") " +
+        numbersString[3] +
+        numbersString[4] +
+        numbersString[5] +
+        " " +
+        numbersString[6] +
+        numbersString[7] +
+        numbersString[8] +
+        numbersString[9];
+
+      contactFormPhoneInput.value = formattedNumber;
+
+      // If special characters were actually added this keypress
+      if (
+        (contactFormPhoneInput.value.length > phoneValue.length &&
+          difference == 0) ||
+        difference >= 4
+      ) {
+        // correcting selectionStart (cursor position) after we ADD spaces/parenthesis
+        if (selectionStart > 5) {
+          selectionStart += 4;
+        } else if (selectionStart > 3) {
+          selectionStart += 3;
+        } else {
+          selectionStart += 1;
+        }
+      }
+    } else {
+      contactFormPhoneInput.value = numbersString;
+      // checking to see if we removed SPECIAL CHARACTERS on this keypress (from 10 to 9 or 10 to 11 numbers)
+      if (numbersString != phoneValue) {
+        let offset = 0;
+        // If removing a DIGIT on this keypress (from 10 to 9 numbers)
+        if (previousPhoneValue.length > phoneValue.length) {
+          offset = 1;
+        }
+
+        // correcting selectionStart (cursor position) after we REMOVE spaces/parenthesis
+        if (selectionStart > 10 - offset) {
+          selectionStart -= 4;
+        } else if (selectionStart > 6 - offset) {
+          selectionStart -= 3;
+        } else if (
+          selectionStart == 6 &&
+          previousPhoneValue.length < phoneValue.length
+        ) {
+          selectionStart -= 2;
+        } else if (selectionStart > 1 - offset) {
+          selectionStart -= 1;
+        }
+      }
+    }
+
+    contactFormPhoneInput.selectionStart = selectionStart;
+    contactFormPhoneInput.selectionEnd = selectionStart;
+
+    previousPhoneValue = contactFormPhoneInput.value;
+  });
+
   $(document).on("scroll", function () {
     // console.log($(window).scrollTop());
 
