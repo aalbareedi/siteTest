@@ -2026,7 +2026,6 @@ a.action_button,
   border-color: transparent;
 }
 .button-custom .button_theme:hover,
-.button-custom button:hover,
 .button-custom input[type="button"]:hover,
 .button-custom input[type="reset"]:hover,
 .button-custom input[type="submit"]:hover,

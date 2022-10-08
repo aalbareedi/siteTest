@@ -9943,6 +9943,7 @@ $(document).ready(() => {
     pauseOnDotsHover: true,
     pauseOnHover: false,
   });
+  this.$(".slick-dots").addClass("touch-device");
 
   $(".slick-slider").on("swipe", function (event, slick, direction) {
     slick.slickPause();
