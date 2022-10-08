@@ -9148,23 +9148,6 @@
     });
   }
 
-  // --- Portfolio -------------------------------------------------------------
-
-  // Slick Slider | Auto responsive -----------------------------------------
-
-  function slickAutoResponsive(slider, max, size) {
-    if (!max) max = 5;
-    if (!size) size = 380;
-
-    var width = slider.width();
-    var count = Math.ceil(width / size);
-
-    if (count < 1) count = 1;
-    if (count > max) count = max;
-
-    return count;
-  }
-
   // --- Slider ----------------------------------------------------------------
 
   function mfnSliderContent() {
@@ -9237,85 +9220,8 @@
         var count = 1;
         var centerMode = false;
 
-        if (slider.closest(".content_slider").hasClass("carousel")) {
-          count = slickAutoResponsive(slider);
-
-          $(window).bind("debouncedresize", function () {
-            slider.slick(
-              "slickSetOption",
-              "slidesToShow",
-              slickAutoResponsive(slider),
-              false
-            );
-            slider.slick(
-              "slickSetOption",
-              "slidesToScroll",
-              slickAutoResponsive(slider),
-              true
-            );
-          });
-        }
-
         if (slider.closest(".content_slider").hasClass("center")) {
           centerMode = true;
-        }
-
-        if (slider.siblings(".slider_prev").length) {
-          slider.slick({
-            cssEase: "cubic-bezier(.4,0,.2,1)",
-            dots: true,
-            infinite: true,
-            touchThreshold: 10,
-            speed: 300,
-
-            centerMode: centerMode,
-            centerPadding: "20%",
-
-            prevArrow: slider.siblings(".slider_prev"),
-            nextArrow: slider.siblings(".slider_next"),
-
-            adaptiveHeight: true,
-            appendDots: slider.siblings(".slider_pager"),
-            customPaging: pager,
-
-            rtl: rtl ? true : false,
-            autoplay: window.mfn_sliders.slider ? true : false,
-            autoplaySpeed: window.mfn_sliders.slider
-              ? window.mfn_sliders.slider
-              : 5000,
-
-            slidesToShow: count,
-            slidesToScroll: count,
-          });
-        } else {
-          slider.slick({
-            cssEase: "cubic-bezier(.4,0,.2,1)",
-            dots: true,
-            infinite: true,
-            touchThreshold: 10,
-            speed: 300,
-
-            centerMode: centerMode,
-            centerPadding: "20%",
-
-            prevArrow:
-              '<a class="button button_js slider_prev" href="#"><span class="button_icon"><i class="icon-left-open-big"></i></span></a>',
-            nextArrow:
-              '<a class="button button_js slider_next" href="#"><span class="button_icon"><i class="icon-right-open-big"></i></span></a>',
-
-            adaptiveHeight: true,
-            appendDots: slider.siblings(".slider_pager"),
-            customPaging: pager,
-
-            rtl: rtl ? true : false,
-            autoplay: window.mfn_sliders.slider ? true : false,
-            autoplaySpeed: window.mfn_sliders.slider
-              ? window.mfn_sliders.slider
-              : 5000,
-
-            slidesToShow: count,
-            slidesToScroll: count,
-          });
         }
       }
     });
@@ -9390,79 +9296,11 @@
 
     $(".testimonials_slider_ul").each(function () {
       var slider = $(this);
-
-      slider.slick({
-        cssEase: "ease-out",
-        dots: true,
-        infinite: true,
-        touchThreshold: 10,
-        speed: 300,
-
-        prevArrow:
-          '<a class="button button_js slider_prev" href="#"><span class="button_icon"><i class="icon-left-open-big"></i></span></a>',
-        nextArrow:
-          '<a class="button button_js slider_next" href="#"><span class="button_icon"><i class="icon-right-open-big"></i></span></a>',
-
-        adaptiveHeight: true,
-        appendDots: slider.siblings(".slider_pager"),
-        customPaging: pager,
-
-        autoplay: window.mfn_sliders.testimonials ? true : false,
-        autoplaySpeed: window.mfn_sliders.testimonials
-          ? window.mfn_sliders.testimonials
-          : 5000,
-
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      });
     });
   }
 
   // --- Offer -----------------------------------------------------------------
-  function mfnSliderOffer() {
-    $(".offer_ul").each(function () {
-      var slider = $(this);
-
-      slider.slick({
-        cssEase: "ease-out",
-        dots: false,
-        infinite: true,
-        touchThreshold: 10,
-        speed: 300,
-
-        prevArrow:
-          '<a class="button button_large button_js slider_prev" href="#"><span class="button_icon"><i class="icon-up-open-big"></i></span></a>',
-        nextArrow:
-          '<a class="button button_large button_js slider_next" href="#"><span class="button_icon"><i class="icon-down-open-big"></i></span></a>',
-
-        adaptiveHeight: true,
-        //customPaging 	: pager,
-
-        rtl: rtl ? true : false,
-        autoplay: window.mfn_sliders.offer ? true : false,
-        autoplaySpeed: window.mfn_sliders.offer
-          ? window.mfn_sliders.offer
-          : 5000,
-
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      });
-
-      // Pagination | Show (css)
-      slider.siblings(".slider_pagination").addClass("show");
-
-      // Pager | Set slide number after change
-      slider.on(
-        "afterChange",
-        function (event, slick, currentSlide, nextSlide) {
-          slider
-            .siblings(".slider_pagination")
-            .find(".current")
-            .text(currentSlide + 1);
-        }
-      );
-    });
-  }
+  function mfnSliderOffer() {}
 
   function mfnSliderOfferThumb_Pager(nr) {
     var thumb = jQuery(this)
@@ -9719,44 +9557,6 @@
       if (slider.closest(".portfolio_slider").data("size")) {
         scroll = slider.closest(".portfolio_slider").data("scroll");
       }
-
-      slider.slick({
-        cssEase: "ease-out",
-        dots: false,
-        infinite: true,
-        touchThreshold: 10,
-        speed: 300,
-
-        prevArrow:
-          '<a class="slider_nav slider_prev themebg" href="#"><i class="icon-left-open-big"></i></a>',
-        nextArrow:
-          '<a class="slider_nav slider_next themebg" href="#"><i class="icon-right-open-big"></i></a>',
-
-        rtl: rtl ? true : false,
-        autoplay: window.mfn_sliders.portfolio ? true : false,
-        autoplaySpeed: window.mfn_sliders.portfolio
-          ? window.mfn_sliders.portfolio
-          : 5000,
-
-        slidesToShow: slickAutoResponsive(slider, 5, size),
-        slidesToScroll: slickAutoResponsive(slider, scroll, size),
-      });
-
-      // Bind | debouncedresize
-      $(window).bind("debouncedresize", function () {
-        slider.slick(
-          "slickSetOption",
-          "slidesToShow",
-          slickAutoResponsive(slider, 5, size),
-          false
-        );
-        slider.slick(
-          "slickSetOption",
-          "slidesToScroll",
-          slickAutoResponsive(slider, scroll, size),
-          true
-        );
-      });
     });
   }
   window.mfn_nicescroll = 25;
@@ -10136,6 +9936,14 @@ $(document).ready(() => {
   // $("#slider-1-slide-1-layer-1").append(
   //   `<div class="landing-welcome">Welcome To Our Clinic</div>`
   // );
+  $(".slick-slider").slick({
+    dots: true,
+    arrows: false,
+    autoplay: true,
+    pauseOnDotsHover: true,
+    pauseOnHover: false,
+  });
+
   $(".slick-slider").on("swipe", function (event, slick, direction) {
     slick.slickPause();
   });

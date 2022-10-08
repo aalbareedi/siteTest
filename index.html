@@ -47,10 +47,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <!--CSS -->
-    <link rel="stylesheet" href="content/dentist4/css/structure.css" />
-    <link rel="stylesheet" href="content/dentist4/css/dentist4.css" />
-    <link rel="stylesheet" href="css/custom.css" />
+
     <!-- Revolution Slider -->
     <link rel="stylesheet" href="plugins/rs-plugin-6.custom/css/rs6.css" />
     <link
@@ -59,6 +56,22 @@
       integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
       crossorigin="anonymous"
     />
+    <!--SLICK -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <!--CSS -->
+    <link rel="stylesheet" href="content/dentist4/css/structure.css" />
+    <link rel="stylesheet" href="content/dentist4/css/dentist4.css" />
+    <link rel="stylesheet" href="css/custom.css" />
   </head>
 
   <body
@@ -342,14 +355,14 @@
           </div>
         </div>
       </div>
-      <div id="content-box-3" class="section mcb-section container">
+      <!-- <div id="content-box-3" class="section mcb-section container">
         <div class="text-center reviews-intro">
           <h6>REVIEWS</h6>
           <h3>What our patients think</h3>
         </div>
         <div class="review-container col-12" data-col="one">
           <div class="testimonials_slider single-photo">
-            <ul class="testimonials_slider_ul">
+            <ul class="slick-slider">
               <li class="review-slide">
                 <div class="bq_wrapper">
                   <blockquote>
@@ -394,7 +407,65 @@
             <div class="slider_pager slider_pagination"></div>
           </div>
         </div>
+      </div> -->
+      <div id="content-box-3" class="reviews">
+        <h1 class="reviewTitle">What Our Patients Think</h1>
+        <i class="fas fa-quote-left quoteIcon leftQuoteIcon"></i>
+        <i class="fas fa-quote-right quoteIcon rightQuoteIcon"></i>
+        <div id="reviewSlider" class="slick-slider">
+          <div class="reviewSlide">
+            <div class="reviewQuote">
+              <div class="reviewSlideText" id="slideText1">
+                Dr. Albareedi is one of the best orthodontists in Chicago. He
+                really cares about his patients and brings amazing results!
+              </div>
+              <div class="reviewName">- Jack L.</div>
+            </div>
+          </div>
+          <div class="reviewSlide">
+            <div class="reviewQuote">
+              <div class="reviewSlideText" id="slideText2">
+                I love my smile! I cannot stop smiling! Thank you Doctor for
+                what you made my smile become. You have a gift for being an
+                orthodontist!
+              </div>
+              <div class="reviewName">- Agustin P.</div>
+            </div>
+          </div>
+          <div class="reviewSlide">
+            <div class="reviewQuote">
+              <div class="reviewSlideText" id="slideText3">
+                Dr. Albareedi is the best. Amazing bedside manner. Can’t be any
+                happier with my orthodontic progress. The girls in the front are
+                very friendly.
+              </div>
+              <div class="reviewName">- Karen C.</div>
+            </div>
+          </div>
+          <div class="reviewSlide">
+            <div class="reviewQuote">
+              <div class="reviewSlideText" id="slideText4">
+                We have been pleased with the kindness and professionalism that
+                we received from Dr. Albareedi. The staff has always treated us
+                with respect and priority. We're grateful for their attention to
+                detail in helping us achieve a great smile!
+              </div>
+              <div class="reviewName">- Iryna I.</div>
+            </div>
+          </div>
+          <div class="reviewSlide">
+            <div class="reviewQuote">
+              <div class="reviewSlideText" id="slideText5">
+                Was there for a braces consultation. Dr. Albareedi answered all
+                my questions and was able to start the process right then. He
+                worked miracles for my son's mouth!
+              </div>
+              <div class="reviewName">- Jae P.</div>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div id="content-box-2" class="section mcb-section equal-height-wrap">
         <div class="container">
           <div class="valign-middle clearfix" data-col="one-second">
@@ -615,6 +686,7 @@
     <script src="js/jquery.jplayer.min.js"></script>
     <script src="js/animations/animations.js"></script>
     <script src="js/translate3d.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="plugins/rs-plugin-6.custom/js/revolution.tools.min.js"></script>
     <script src="plugins/rs-plugin-6.custom/js/rs6.min.js"></script>
