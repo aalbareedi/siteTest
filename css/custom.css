@@ -279,7 +279,7 @@ body {
   font-size: 20px;
 }
 .responsive-menu-toggle {
-  background-color: lightgreen;
+  background-color: gainsboro;
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -569,10 +569,7 @@ body {
 .badge-check i {
   color: #36c20f;
   position: absolute;
-  /* left: -4px;
-  top: -12px;
-  font-size: 32px; */
-  left: -4px;
+  left: -3px;
   top: -12px;
   font-size: 28px;
 }
