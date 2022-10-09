@@ -1,15 +1,3 @@
-/* animations */
-
-.image_frame .image_wrapper img,
-.image_frame .image_wrapper .mask:after,
-.image_frame .image_wrapper .image_links {
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.image_frame .image_wrapper .image_links a {
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
 @media only screen and (max-width: 767px) {
   body:not(.template-slider):not(.header-simple) #Header {
     min-height: 0px;
@@ -1555,11 +1543,6 @@ a.action_button,
     font-size: 13px;
     line-height: 19px;
     letter-spacing: 0px;
-  }
-  h6 {
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 1px;
   }
   #Intro .intro-title {
     font-size: 45px;
@@ -3295,11 +3278,11 @@ h2 a,
 h2 a:hover {
   color: #1f2e88;
 }
-h3,
+/* h3,
 h3 a,
 h3 a:hover {
   color: #3385d7;
-}
+} */
 h4,
 h4 a,
 h4 a:hover,
@@ -4282,7 +4265,7 @@ body.mobile-side-slide {
 }
 #Side_slide #menu ul li a {
   padding: 11px 5px 10px 20px;
-  margin-right: 50px;
+  /* margin-right: 50px; */
   text-decoration: none;
   line-height: 19px;
 }

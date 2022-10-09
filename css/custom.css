@@ -45,6 +45,10 @@ body {
 .bold {
   font-weight: bold;
 }
+h6 {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
 .header-box-1 {
   width: 100% !important;
   margin: 0px;
@@ -453,7 +457,7 @@ body {
   /* flex-direction: row-reverse; */
   justify-content: space-between;
   max-width: 252px;
-  margin: 0px auto 30px auto;
+  margin: 0px auto 28px auto;
 }
 .doc-profile {
   background-image: linear-gradient(335deg, #ffffff 4%, #48c6eb 100%);
@@ -495,7 +499,7 @@ body {
   flex-direction: column;
   row-gap: 36px;
   padding: 0px;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }
 .doctorTitle {
   font-size: 22px;
@@ -853,6 +857,7 @@ input.contactFormInput:valid + .formIcon {
 .reviews-overlay {
   position: absolute;
   background: rgba(26, 26, 26, 0.65);
+  /* background: rgba(80, 80, 80, 0.65); */
   top: 0px;
   bottom: 0px;
   left: 0px;
@@ -863,7 +868,7 @@ input.contactFormInput:valid + .formIcon {
   background-image: url("../content/dentist4/images/test.jpg");
   background-repeat: no-repeat;
   /* background-position: bottom 0px right -75px; */
-  background-position: bottom 0px right -325px;
+  background-position: center;
   background-size: cover;
 }
 .reviewTitle {
@@ -891,7 +896,7 @@ input.contactFormInput:valid + .formIcon {
 }
 .reviewSlideText {
   font-size: 18px;
-  margin: 30px 18px 26px 34px;
+  margin: 30px 20px 26px 34px;
   line-height: 28px;
   letter-spacing: 0.3px;
   word-spacing: 1px;
