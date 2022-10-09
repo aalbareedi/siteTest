@@ -279,7 +279,7 @@ body {
   font-size: 20px;
 }
 .responsive-menu-toggle {
-  /* background-color: gainsboro; */
+  background-color: lightblue;
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -848,7 +848,6 @@ input.contactFormInput:valid + .formIcon {
   background-color: gainsboro;
   width: 100%;
 }
-
 /* ****************************************** REVIEWS ******************************************* */
 .reviews {
   position: relative;
@@ -859,13 +858,12 @@ input.contactFormInput:valid + .formIcon {
 }
 .reviewTitle {
   position: absolute;
-  top: 56px;
+  top: 46px;
   color: whitesmoke;
   width: 100%;
   margin: 0;
   text-align: center;
-  /* font-size: 20px; */
-  /* letter-spacing: 0.7px; */
+  /* font-size: 24px; */
   font-weight: initial;
 }
 #reviewSlider {
@@ -880,10 +878,11 @@ input.contactFormInput:valid + .formIcon {
   color: white;
 }
 .reviewSlideText {
-  font-size: 16px;
+  font-size: 18px;
   margin: 30px 18px 26px 34px;
   line-height: 28px;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.3px;
+  word-spacing: 1px;
   font-style: italic;
 }
 .reviewName {
