@@ -134,7 +134,7 @@ body {
   flex-direction: column;
   row-gap: 20px;
   column-gap: 30px;
-  margin-bottom: 40px;
+  margin-bottom: 46px;
 }
 .intro-content-cards h5 {
   font-size: 18px;
@@ -279,7 +279,7 @@ body {
   font-size: 20px;
 }
 .responsive-menu-toggle {
-  background-color: lightblue;
+  /* background-color: lightblue; */
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -354,8 +354,7 @@ body {
 }
 #contact-box {
   background-color: #3043b8;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0px;
   text-align: center;
 }
 .intro-stats-wrapper {
@@ -393,6 +392,7 @@ body {
   line-height: 24px;
   word-spacing: 1px;
   letter-spacing: 0.4px;
+  font-size: 16px;
 }
 .services-title {
   color: #3043b8;
@@ -570,7 +570,7 @@ body {
   color: #36c20f;
   position: absolute;
   left: -3px;
-  top: -12px;
+  top: -11px;
   font-size: 28px;
 }
 #form-box {
@@ -655,7 +655,7 @@ body {
 }
 .officeMap {
   padding: 0px 50px;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 .mapWrapper {
   margin: 0 auto;
@@ -804,6 +804,7 @@ input.contactFormInput:valid + .formIcon {
   min-width: 160px;
   letter-spacing: 0.3px;
   font-size: 18px;
+  color: #1c1c1c;
 }
 .freeWord {
   color: #00cd00;
@@ -849,11 +850,20 @@ input.contactFormInput:valid + .formIcon {
   width: 100%;
 }
 /* ****************************************** REVIEWS ******************************************* */
+.reviews-overlay {
+  position: absolute;
+  background: rgba(26, 26, 26, 0.65);
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
 .reviews {
   position: relative;
-  background-image: url("../content/dentist4/images/test.png");
+  background-image: url("../content/dentist4/images/test.jpg");
   background-repeat: no-repeat;
-  background-position: bottom 0px right -75px;
+  /* background-position: bottom 0px right -75px; */
+  background-position: bottom 0px right -325px;
   background-size: cover;
 }
 .reviewTitle {
@@ -865,10 +875,12 @@ input.contactFormInput:valid + .formIcon {
   text-align: center;
   /* font-size: 24px; */
   font-weight: initial;
+  z-index: 1;
 }
 #reviewSlider {
   height: 480px;
   margin-bottom: 0;
+  z-index: 1;
 }
 .reviewQuote {
   height: 100%;
@@ -896,6 +908,7 @@ input.contactFormInput:valid + .formIcon {
   font-size: 60px;
   color: white;
   opacity: 0.1;
+  z-index: 1;
 }
 .leftQuoteIcon {
   left: 14px;
@@ -934,6 +947,19 @@ input.contactFormInput:valid + .formIcon {
   .badge-text {
     font-size: 16px;
     min-width: 160px;
+  }
+}
+@media only screen and (min-width: 667px) {
+  .office-container {
+    display: flex;
+    justify-content: center;
+    padding-left: 100px;
+  }
+  .officeMap {
+    margin-top: 0px;
+  }
+  #googleMap {
+    height: 260px;
   }
 }
 @media screen and (min-width: 768px) {
