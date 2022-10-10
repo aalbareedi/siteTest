@@ -111,6 +111,84 @@ h6 {
   font-weight: bold;
   margin-bottom: 10px;
 }
+#Top_bar .menu_wrapper {
+  float: initial !important;
+  position: initial !important;
+  right: 0px;
+  height: 60px;
+  z-index: 201;
+}
+#menu-main-menu a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.responsive-menu-toggle {
+  /* background-color: pink; */
+  display: none;
+  right: 0px !important;
+  top: 0px !important;
+  bottom: 0px;
+  color: #3385d7;
+}
+#navOverlay {
+  background: black;
+  opacity: 0.7;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 80;
+}
+#Side_slide .menu_wrapper {
+  background: whitesmoke;
+  height: 100%;
+}
+#Side_slide {
+  display: block;
+  position: fixed;
+  top: 60px;
+  right: -280px;
+  width: 250px;
+  height: calc(100% - 56px - 60px);
+  overflow: auto;
+  z-index: 90;
+}
+.closeBtn {
+  width: 60px;
+  height: 100%;
+  position: relative;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  color: #3385d7;
+  opacity: 1;
+}
+#menu-main-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.intro-stats-wrapper h6,
+#faq-box h6 {
+  text-align: center;
+}
+.custom-h3 {
+  font-weight: bolder;
+  text-align: left;
+}
+.hover_color_bg {
+  padding: 30px;
+}
+.hover_color_bg p {
+  margin-bottom: 0px;
+}
+
+/* ************************* LANDING  ************************ */
 #landing-page {
   height: calc(100% - 60px - 56px);
   display: flex;
@@ -160,18 +238,6 @@ h6 {
   font-size: 14px;
   font-weight: 600;
 }
-#Top_bar .menu_wrapper {
-  float: initial !important;
-  position: initial !important;
-  right: 0px;
-  height: 60px;
-  z-index: 201;
-}
-#menu-main-menu a {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
 .landing-dock {
   z-index: 100;
   display: flex;
@@ -202,71 +268,22 @@ h6 {
 .landing-dock-btn i {
   font-size: 20px;
 }
-.responsive-menu-toggle {
-  /* background-color: pink; */
-  display: none;
-  right: 0px !important;
-  top: 0px !important;
-  bottom: 0px;
-  color: #3385d7;
+.contactBtnText {
+  font-size: 15px;
 }
+
+/* *************************** ABOUT ************************** */
 #content-box-1 {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #3043b8;
 }
-#navOverlay {
-  background: black;
-  opacity: 0.7;
-  position: fixed;
-  top: 60px;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 80;
-}
-#Side_slide .menu_wrapper {
-  background: whitesmoke;
-  height: 100%;
-}
-.contactBtnText {
-  font-size: 15px;
-}
-#Side_slide {
-  display: block;
-  position: fixed;
-  top: 60px;
-  right: -280px;
-  width: 250px;
-  height: calc(100% - 56px - 60px);
-  overflow: auto;
-  z-index: 90;
-}
-.closeBtn {
-  width: 60px;
-  height: 100%;
-  position: relative;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 0px;
-  color: #3385d7;
-  opacity: 1;
-}
-#menu-main-menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.intro-container {
+  padding: 0px;
 }
 .intro-stats-wrapper {
   margin-bottom: 32px;
   padding: 0px;
-}
-.intro-stats-wrapper h6,
-#faq-box h6 {
-  text-align: center;
 }
 .stat-intro-text {
   color: #fff;
@@ -280,10 +297,6 @@ h6 {
   min-width: 128px;
   letter-spacing: 0.4px;
 }
-.custom-h3 {
-  font-weight: bolder;
-  text-align: left;
-}
 .main-about-text {
   color: #fff;
   line-height: 24px;
@@ -291,73 +304,8 @@ h6 {
   letter-spacing: 0.4px;
   font-size: 16px;
 }
-.intro-container {
-  padding: 0px;
-}
 .stat-year-num {
   margin-right: 1px;
-}
-.contact-us-desc {
-  color: whitesmoke;
-  text-align: left;
-  margin-bottom: 40px;
-}
-.doctor-content {
-  padding-top: 2px;
-  margin-left: -15px;
-}
-.main-doc {
-  display: flex;
-  justify-content: space-between;
-  max-width: 252px;
-  margin: 0px auto 26px auto;
-}
-.doc-profile {
-  background-image: linear-gradient(335deg, #ffffff 4%, #48c6eb 100%);
-  position: relative;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  border: 2px solid gainsboro;
-  overflow: hidden;
-  margin-right: -10px;
-}
-.doctorImg {
-  position: absolute;
-  width: 152px;
-  top: -35px;
-  left: -62px;
-  z-index: 1;
-}
-.img-edit {
-  position: absolute;
-  right: -3px;
-  top: 59px;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  background-color: #31425e;
-}
-.stat-year {
-  color: #32b0e8;
-}
-.stat-number {
-  margin-bottom: 0px;
-  font-weight: bolder;
-  color: #32b0e8;
-}
-.stat-numb-wrapper {
-  display: flex;
-  flex-direction: column;
-  row-gap: 36px;
-  padding: 0px;
-  margin-bottom: 40px;
-}
-.doctorTitle {
-  font-size: 22px;
-  letter-spacing: 0.8px;
-  font-family: "Pacifico", cursive;
-  color: #dddddd;
 }
 .doctorName {
   font-family: "Playfair Display", serif;
@@ -436,11 +384,62 @@ h6 {
 .stat-wrapper {
   padding-top: 1px;
 }
-.hover_color_bg {
-  padding: 30px;
+.doctor-content {
+  padding-top: 2px;
+  margin-left: -15px;
 }
-.hover_color_bg p {
+.main-doc {
+  display: flex;
+  justify-content: space-between;
+  max-width: 252px;
+  margin: 0px auto 26px auto;
+}
+.doc-profile {
+  background-image: linear-gradient(335deg, #ffffff 4%, #48c6eb 100%);
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 2px solid gainsboro;
+  overflow: hidden;
+  margin-right: -10px;
+}
+.doctorImg {
+  position: absolute;
+  width: 152px;
+  top: -35px;
+  left: -62px;
+  z-index: 1;
+}
+.img-edit {
+  position: absolute;
+  right: -3px;
+  top: 59px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: #31425e;
+}
+.stat-year {
+  color: #32b0e8;
+}
+.stat-number {
   margin-bottom: 0px;
+  font-weight: bolder;
+  color: #32b0e8;
+}
+.stat-numb-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 36px;
+  padding: 0px;
+  margin-bottom: 40px;
+}
+.doctorTitle {
+  font-size: 22px;
+  letter-spacing: 0.8px;
+  font-family: "Pacifico", cursive;
+  color: #dddddd;
 }
 
 /* ************************** SERVICES ************************* */
@@ -770,6 +769,11 @@ h6 {
   padding-top: 40px;
   padding-bottom: 80px;
 }
+.contact-us-desc {
+  color: whitesmoke;
+  text-align: left;
+  margin-bottom: 40px;
+}
 .formOption {
   margin-bottom: 20px;
 }
@@ -883,7 +887,7 @@ input.contactFormInput:valid + .formIcon {
     padding-top: 50px;
   }
 }
-/* @media screen and (min-width: 777px) {
+@media screen and (min-width: 777px) {
   #landing-page {
     flex-direction: row;
   }
@@ -893,7 +897,7 @@ input.contactFormInput:valid + .formIcon {
   .landing-page-content {
     width: 60%;
   }
-} */
+}
 @media screen and (min-width: 1239px) {
   #menu-main-menu {
     flex-direction: row;
