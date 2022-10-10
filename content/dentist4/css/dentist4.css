@@ -1333,21 +1333,10 @@ a.action_button {
 .is-sticky .action_button {
   top: 15px;
 }
-/* @media only screen and (min-width: 768px) {
-  .tr-menu.header-fixed #Top_bar:not(.is-sticky) {
-    background: none !important;
-    box-shadow: 0 0 0 0 transparent;
-  }
-} */
-@media only screen and (min-width: 1240px) {
-  /* #Top_bar.is-sticky {
-    height: auto !important;
-  } */
-}
 #Top_bar .menu > li > a span:not(.description) {
   display: block;
   line-height: 60px;
-  padding: 0 20px;
+  padding: 0px 24px;
   white-space: nowrap;
   border-right-width: 1px;
   border-top-width: 0px;
