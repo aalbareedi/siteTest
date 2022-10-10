@@ -48,6 +48,7 @@ body {
 h6 {
   font-size: 16px;
   letter-spacing: 1px;
+  line-height: 24px;
 }
 .header-box-1 {
   width: 100% !important;
@@ -283,7 +284,7 @@ h6 {
   font-size: 20px;
 }
 .responsive-menu-toggle {
-  /* background-color: lightblue; */
+  background-color: pink;
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -297,14 +298,6 @@ h6 {
   /* background-image: url(../content/dentist4/images/dentist4-section-bg1.webp);
   background-repeat: no-repeat;
   background-position: left top; */
-}
-#content-box-2 {
-  padding-top: 60px;
-  padding-bottom: 40px;
-  background-color: #efefef;
-  /* background-image: url(../content/dentist4/images/dentist4-section-bg9.webp);
-  background-repeat: no-repeat;
-  background-position: right center; */
 }
 /* #content-box-3 {
   padding-top: 50px;
@@ -356,16 +349,12 @@ h6 {
   justify-content: flex-end;
   align-items: center;
 }
-#contact-box {
-  background-color: #3043b8;
-  padding: 40px 0px;
-  text-align: center;
-}
 .intro-stats-wrapper {
   margin-bottom: 32px;
   padding: 0px;
 }
-.intro-stats-wrapper h6 {
+.intro-stats-wrapper h6,
+#faq-box h6 {
   text-align: center;
 }
 /* .stat-wrapper {
@@ -703,92 +692,6 @@ h6 {
 .hover_color_bg p {
   margin-bottom: 0px;
 }
-.formOption {
-  margin-bottom: 20px;
-}
-.formAsterik {
-  color: #d12323;
-  margin-left: 4px;
-}
-.contactFormText {
-  color: whitesmoke;
-  margin-bottom: 6px;
-}
-.fullNameField,
-.emailField,
-.phoneField {
-  width: 100%;
-  position: relative;
-}
-.contactFormInput {
-  height: 54px;
-  border: none;
-  width: 100%;
-  outline: none;
-  font-size: 16px;
-  letter-spacing: 0.7px;
-  padding-top: 4px;
-  padding-left: 12px;
-  padding-right: 44px;
-  border-radius: 10px !important;
-  border: 2px solid #e8e8e8;
-  background: none !important;
-}
-.contactFormInput:focus {
-  border: 2px solid #067ffc;
-  outline: none;
-  background-color: none;
-}
-input.contactFormInput:valid {
-  background-image: url("../content/dentist4/images/validCheckIcon.svg") !important;
-  background-size: 26px !important;
-  background-repeat: no-repeat !important;
-  background-position: right 11px center !important;
-  border: 2px solid #199940;
-}
-input.contactFormInput:valid + .formIcon {
-  opacity: 0;
-}
-.contactFormInput::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #a9b5ff;
-  opacity: 1; /* Firefox */
-}
-.contactFormInput:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #a9b5ff;
-}
-.contactFormInput::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #a9b5ff;
-}
-.formIcon {
-  position: absolute;
-  right: 15px;
-  top: 12px;
-  font-size: 22px;
-  color: #a9b5ff;
-}
-#fullNameIcon {
-  right: 16px;
-}
-/* .formMessage {
-  padding: 0px 20px 153px 20px;
-} */
-.formMessage {
-  margin-bottom: 22px;
-}
-#messageInput {
-  padding: 8px 8px 0px 12px;
-  height: 170px;
-}
-.submit-btn {
-  margin: 0px auto;
-  display: block;
-  padding: 0px !important;
-  width: 200px;
-  height: 50px;
-}
 .treatmentBtn {
   display: flex;
   justify-content: center;
@@ -853,7 +756,7 @@ input.contactFormInput:valid + .formIcon {
   background-color: gainsboro;
   width: 100%;
 }
-/* ****************************************** REVIEWS ******************************************* */
+/* ************************** REVIEWS ************************* */
 .reviews-overlay {
   position: absolute;
   background: rgba(26, 26, 26, 0.65);
@@ -948,6 +851,131 @@ input.contactFormInput:valid + .formIcon {
 .slick-dots.touch-device li.slick-active button::before {
   opacity: 1;
 }
+/* *************************** FAQ *************************** */
+#faq-box {
+  padding: 50px 0px;
+  background-color: #efefef;
+}
+#faq-box h6 {
+  margin-bottom: 36px;
+}
+.faq-question {
+  position: relative;
+}
+.faq-number {
+  position: absolute;
+  left: -16px;
+  top: 0px;
+}
+.faq-question {
+  color: #1f2e88;
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 10px;
+  margin-bottom: 8px;
+}
+.faq-answer {
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+.faq-answer:last-child {
+  margin-bottom: 0px;
+}
+/* ************************* CONTACT ************************* */
+#contact-box {
+  background-color: #3043b8;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+/* *************************** FORM *************************** */
+.formOption {
+  margin-bottom: 20px;
+}
+.formAsterik {
+  color: #d12323;
+  margin-left: 4px;
+}
+.contactFormText {
+  color: whitesmoke;
+  margin-bottom: 6px;
+}
+.fullNameField,
+.emailField,
+.phoneField {
+  width: 100%;
+  position: relative;
+}
+.contactFormInput {
+  height: 54px;
+  border: none;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  letter-spacing: 0.7px;
+  padding-top: 4px;
+  padding-left: 12px;
+  padding-right: 44px;
+  border-radius: 10px !important;
+  border: 2px solid #e8e8e8;
+  background: none !important;
+}
+.contactFormInput:focus {
+  border: 2px solid #067ffc;
+  outline: none;
+  background-color: none;
+}
+input.contactFormInput:valid {
+  background-image: url("../content/dentist4/images/validCheckIcon.svg") !important;
+  background-size: 26px !important;
+  background-repeat: no-repeat !important;
+  background-position: right 11px center !important;
+  border: 2px solid #199940;
+}
+input.contactFormInput:valid + .formIcon {
+  opacity: 0;
+}
+.contactFormInput::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #a9b5ff;
+  opacity: 1; /* Firefox */
+}
+.contactFormInput:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #a9b5ff;
+}
+.contactFormInput::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #a9b5ff;
+}
+.formIcon {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  font-size: 22px;
+  color: #a9b5ff;
+}
+#fullNameIcon {
+  right: 16px;
+}
+/* .formMessage {
+  padding: 0px 20px 153px 20px;
+} */
+.formMessage {
+  margin-bottom: 22px;
+}
+#messageInput {
+  padding: 8px 8px 0px 12px;
+  height: 170px;
+}
+.submit-btn {
+  margin: 0px auto;
+  display: block;
+  padding: 0px !important;
+  width: 200px;
+  height: 50px;
+}
+
 @media screen and (min-width: 375px) {
   .badge-text {
     font-size: 16px;
@@ -1010,5 +1038,6 @@ input.contactFormInput:valid + .formIcon {
   #menu-main-menu a span {
     margin-left: 20px;
     color: #808080;
+    letter-spacing: 0.4px;
   }
 }
