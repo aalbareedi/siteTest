@@ -4,40 +4,13 @@
 .opacityZero {
   opacity: 0 !important;
 }
-/* #Header_wrapper {
-  height: 100vh;
-}
-#Header,
-.mfn-main-slider,
-#rev_slider_1_1_forcefullwidth {
-  height: 100%;
-}
-#rev_slider_1_1_wrapper {
-  height: 100% !important;
-} */
 html {
-  /* height: -webkit-fill-available; */
   height: 100%;
 }
 body {
   line-height: initial;
-  /* min-height: 100vh; */
-  /* min-height: -webkit-fill-available; */
-  /* height: -webkit-fill-available; */
   height: 100%;
 }
-/* html,
-body {
-  height: 100vh;
-  height: -webkit-fill-available;
-  height: -moz-available;
-  height: fill-available;
-
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  min-height: -moz-available;
-  min-height: fill-available;
-} */
 .row {
   margin-right: 0px;
   margin-left: 0px;
@@ -47,8 +20,10 @@ body {
 }
 h6 {
   font-size: 16px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
   line-height: 24px;
+  margin-bottom: 18px;
 }
 .header-box-1 {
   width: 100% !important;
@@ -64,9 +39,6 @@ h6 {
   padding-bottom: 4px;
   color: #0e3375;
 }
-/* .logo-mobile {
-  height: 100% !important;
-} */
 #Top_bar {
   height: 60px;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
@@ -115,9 +87,6 @@ h6 {
   padding: 0px !important;
   color: #3b3b3b !important;
 }
-/* #Wrapper {
-  padding-top: 60px;
-} */
 .logo-img {
   position: absolute;
   left: 9px;
@@ -129,10 +98,6 @@ h6 {
 }
 .landing-content-btn {
   display: inline-block;
-}
-#services-box {
-  padding: 50px 0px;
-  background: whitesmoke;
 }
 .intro-content-cards {
   display: flex;
@@ -146,43 +111,7 @@ h6 {
   font-weight: bold;
   margin-bottom: 10px;
 }
-.services-text {
-  color: #000;
-}
-.service-box {
-  border-radius: 30px;
-  background-color: #a2d9f5;
-  box-shadow: 2px 44px 32px 2px rgba(0, 0, 0, 0.02);
-  padding: 26px;
-}
-.routine-intro {
-  margin-bottom: 4px;
-}
-.service-text-bp {
-  padding-left: 24px;
-  margin-bottom: 6px;
-  position: relative;
-}
-.service-text-bp:last-child {
-  margin-bottom: 0px;
-}
-.bullet-point {
-  position: absolute;
-  left: 6px;
-  top: -22px;
-  font-size: 50px;
-}
 #landing-page {
-  /* background-color: pink; */
-  /* height: calc(100vh - 60px - 56px);
-  height: -webkit-fill-available;
-  height: -moz-available;
-  height: fill-available;
-  min-height: calc(100vh - 60px - 56px);
-  min-height: -webkit-fill-available;
-  min-height: -moz-available;
-  min-height: fill-available; */
-  /* max-height: calc(100% - 60px - 56px); */
   height: calc(100% - 60px - 56px);
   display: flex;
   flex-direction: column;
@@ -200,8 +129,6 @@ h6 {
   padding: 24px 0px;
 }
 .landing-welcome {
-  /* width: 100%; */
-  /* text-align: center !important; */
   color: rgb(51, 133, 215);
   letter-spacing: 0px;
   font-weight: 800;
@@ -233,9 +160,6 @@ h6 {
   font-size: 14px;
   font-weight: 600;
 }
-/* #Content {
-  padding-top: 60px;
-} */
 #Top_bar .menu_wrapper {
   float: initial !important;
   position: initial !important;
@@ -248,10 +172,6 @@ h6 {
   display: flex;
   align-items: center;
 }
-/* #Content {
-  position: relative;
-  padding-top: 60px;
-} */
 .landing-dock {
   z-index: 100;
   display: flex;
@@ -270,7 +190,6 @@ h6 {
   background-color: white;
   color: #007bff;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   column-gap: 8px;
@@ -292,17 +211,10 @@ h6 {
   color: #3385d7;
 }
 #content-box-1 {
-  padding-top: 30px;
+  padding-top: 40px;
   padding-bottom: 40px;
   background-color: #3043b8;
-  /* background-image: url(../content/dentist4/images/dentist4-section-bg1.webp);
-  background-repeat: no-repeat;
-  background-position: left top; */
 }
-/* #content-box-3 {
-  padding-top: 50px;
-  padding-bottom: 50px;
-} */
 #navOverlay {
   background: black;
   opacity: 0.7;
@@ -326,7 +238,6 @@ h6 {
   top: 60px;
   right: -280px;
   width: 250px;
-  /* height: 100%; */
   height: calc(100% - 56px - 60px);
   overflow: auto;
   z-index: 90;
@@ -357,13 +268,6 @@ h6 {
 #faq-box h6 {
   text-align: center;
 }
-/* .stat-wrapper {
-  display: flex;
-  justify-content: center;
-} */
-/* .stat-year {
-  display: block;
-} */
 .stat-intro-text {
   color: #fff;
   margin-bottom: 0px;
@@ -386,45 +290,6 @@ h6 {
   word-spacing: 1px;
   letter-spacing: 0.4px;
   font-size: 16px;
-}
-.services-title {
-  color: #3043b8;
-  max-width: 220px;
-  margin: 0 auto;
-}
-.services-intro,
-.reviews-intro {
-  margin-bottom: 24px;
-}
-.review-container {
-  min-height: 246px;
-  /* background-color: orange; */
-  position: relative;
-}
-.slider_pagination {
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  margin-left: -45px;
-}
-.review-slide {
-  /* min-height: 166px; */
-  display: inline-flex !important;
-  flex-direction: column;
-  align-items: center;
-}
-.bq_wrapper {
-  margin-bottom: 0px !important;
-}
-.bq_wrapper blockquote {
-  text-align: left;
-  /* min-height: 166px; */
-}
-.slider_pager {
-  margin-top: 30px;
-}
-.review-container {
-  padding: 0px;
 }
 .intro-container {
   padding: 0px;
@@ -513,8 +378,6 @@ h6 {
 .stat-badge {
   position: relative;
   display: flex;
-  /* flex-direction: row-reverse; */
-  /* justify-content: center; */
   align-items: center;
   flex-basis: 100%;
   width: 100%;
@@ -529,7 +392,6 @@ h6 {
   margin-right: 18px;
 }
 .badge-icon {
-  /* background-color: white; */
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -552,10 +414,7 @@ h6 {
   height: 20px;
   border: 2px solid #a9a9a9;
   border-radius: 50%;
-  /* position: absolute; */
   position: relative;
-  /* right: -38px;
-  top: 12px; */
 }
 .badge-check i {
   color: #36c20f;
@@ -564,118 +423,11 @@ h6 {
   top: -11px;
   font-size: 28px;
 }
-#form-box {
-  background-color: #1e2867;
-  padding-top: 40px;
-  padding-bottom: 80px;
-}
-/* .contact-hours-box {
-  color: #8d8d8d;
-  display: flex;
-  flex-direction: column;
-} */
-.officeInfoSchedule {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-.officeInfoText {
-  position: relative;
-  text-align: left;
-  letter-spacing: 0.6px;
-  color: white;
-  width: 250px;
-  margin: 0 auto;
-  padding-left: 19px;
-}
-.officeInfoIcon {
-  position: absolute;
-  font-size: 20px;
-  color: #37d0e1;
-  top: 2px;
-}
-/* .officeInfoPhone {
-  margin: 50px 0;
-  line-height: 21px;
-  padding-left: 23px;
-} */
-#officePhoneIcon {
-  left: -18px;
-  /* top: 2px; */
-}
-.officePhoneText {
-  color: #b3b3b3;
-  padding-left: 8px;
-}
-.contact-content {
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
-  font-size: 18px;
-}
-.contact-title {
-  margin-bottom: 40px;
-  color: whitesmoke;
-}
-#officeAddressIcon {
-  left: -15px;
-  /* top: 2px; */
-}
-.officeInfoGrid {
-  display: grid;
-  position: relative;
-  row-gap: 2px;
-  column-gap: 12px;
-  /* font-size: 18px; */
-  grid-template-columns: repeat(2, auto);
-  /* grid-template-rows: repeat(7, 29px); */
-}
-#officeScheduleIcon {
-  left: -37px;
-  /* top: 2px; */
-}
-.officeDay {
-  color: white;
-  text-align: left;
-  letter-spacing: 0.9px;
-}
-.officeTime {
-  text-align: center;
-  color: #b3b3b3;
-  letter-spacing: 0.3px;
-}
-.officeMap {
-  padding: 0px 50px;
-  margin-top: 24px;
-}
-.mapWrapper {
-  margin: 0 auto;
-  max-width: 360px;
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-}
-#googleMap {
-  margin: 0 auto;
-  display: block;
-  height: 200px;
-  width: 100%;
-}
-h6 {
-  margin-bottom: 18px;
-}
 .stat-patients-num {
   margin-right: 1px;
 }
-.address-suite {
-  font-size: 14px;
-}
 .smile-emoji {
   font-size: 44px;
-  /* position: absolute;
-  left: 12px;
-  top: -2px; */
 }
 .stat-container {
   display: flex;
@@ -689,6 +441,46 @@ h6 {
 }
 .hover_color_bg p {
   margin-bottom: 0px;
+}
+
+/* ************************** SERVICES ************************* */
+#services-box {
+  padding: 50px 0px;
+  background: whitesmoke;
+}
+.services-title {
+  color: #3043b8;
+  max-width: 220px;
+  margin: 0 auto;
+}
+.services-intro {
+  margin-bottom: 24px;
+}
+.services-text {
+  color: #000;
+}
+.service-box {
+  border-radius: 30px;
+  background-color: #a2d9f5;
+  box-shadow: 2px 44px 32px 2px rgba(0, 0, 0, 0.02);
+  padding: 26px;
+}
+.routine-intro {
+  margin-bottom: 4px;
+}
+.service-text-bp {
+  padding-left: 24px;
+  margin-bottom: 6px;
+  position: relative;
+}
+.service-text-bp:last-child {
+  margin-bottom: 0px;
+}
+.bullet-point {
+  position: absolute;
+  left: 6px;
+  top: -22px;
+  font-size: 50px;
 }
 .treatmentBtn {
   display: flex;
@@ -733,11 +525,8 @@ h6 {
 .treatmentCallIcon {
   color: whitesmoke;
   font-size: 20px;
-  /* margin-right: 6px;
-  margin-left: 2px; */
 }
 .treatmentBtnText {
-  /* padding-top: 2px; */
   color: whitesmoke;
   min-width: 35px;
 }
@@ -754,6 +543,7 @@ h6 {
   background-color: gainsboro;
   width: 100%;
 }
+
 /* ************************** REVIEWS ************************* */
 .reviews-overlay {
   position: absolute;
@@ -779,7 +569,6 @@ h6 {
   width: 100%;
   margin: 0;
   text-align: center;
-  /* font-size: 24px; */
   font-weight: initial;
   z-index: 1;
 }
@@ -813,7 +602,7 @@ h6 {
   position: absolute;
   font-size: 60px;
   color: white;
-  opacity: 0.1;
+  opacity: 0.15;
   z-index: 1;
 }
 .leftQuoteIcon {
@@ -849,6 +638,7 @@ h6 {
 .slick-dots.touch-device li.slick-active button::before {
   opacity: 1;
 }
+
 /* *************************** FAQ *************************** */
 #faq-box {
   padding: 50px 0px;
@@ -874,11 +664,12 @@ h6 {
 }
 .faq-answer {
   padding-left: 10px;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 .faq-answer:last-child {
   margin-bottom: 0px;
 }
+
 /* ************************* CONTACT ************************* */
 #contact-box {
   background-color: #3043b8;
@@ -886,7 +677,99 @@ h6 {
   padding-bottom: 40px;
   text-align: center;
 }
+.officeInfoGrid {
+  display: grid;
+  position: relative;
+  row-gap: 2px;
+  column-gap: 12px;
+  grid-template-columns: repeat(2, auto);
+}
+#officeScheduleIcon {
+  left: -37px;
+}
+#officeAddressIcon {
+  left: -15px;
+}
+#officePhoneIcon {
+  left: -18px;
+}
+.officeDay {
+  color: white;
+  text-align: left;
+  letter-spacing: 0.9px;
+}
+.officeTime {
+  text-align: center;
+  color: #b3b3b3;
+  letter-spacing: 0.3px;
+}
+.officeMap {
+  padding: 0px 50px;
+  margin-top: 24px;
+}
+.mapWrapper {
+  margin: 0 auto;
+  max-width: 360px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+#googleMap {
+  margin: 0 auto;
+  display: block;
+  height: 200px;
+  width: 100%;
+}
+.officeInfoSchedule {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.officeInfoText {
+  position: relative;
+  text-align: left;
+  letter-spacing: 0.6px;
+  color: white;
+  width: 250px;
+  margin: 0 auto;
+  padding-left: 19px;
+}
+.officeInfoIcon {
+  position: absolute;
+  font-size: 20px;
+  color: #37d0e1;
+  top: 2px;
+}
+/* .officeInfoPhone {
+  margin: 50px 0;
+  line-height: 21px;
+  padding-left: 23px;
+} */
+.officePhoneText {
+  color: #b3b3b3;
+  padding-left: 8px;
+}
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  font-size: 18px;
+}
+.contact-title {
+  margin-bottom: 40px;
+  color: whitesmoke;
+}
+.address-suite {
+  font-size: 14px;
+}
+
 /* *************************** FORM *************************** */
+#form-box {
+  background-color: #1e2867;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
 .formOption {
   margin-bottom: 20px;
 }
@@ -897,6 +780,7 @@ h6 {
 .contactFormText {
   color: whitesmoke;
   margin-bottom: 6px;
+  letter-spacing: 0.2px;
 }
 .fullNameField,
 .emailField,
@@ -956,9 +840,6 @@ input.contactFormInput:valid + .formIcon {
 #fullNameIcon {
   right: 16px;
 }
-/* .formMessage {
-  padding: 0px 20px 153px 20px;
-} */
 .formMessage {
   margin-bottom: 22px;
 }
