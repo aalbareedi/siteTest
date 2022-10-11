@@ -198,19 +198,28 @@ h6 {
   display: flex;
   flex-direction: column;
   margin-top: 60px;
+  position: relative;
 }
 .landing-page-img {
   height: 100%;
-  background: url("../content/dentist4/images/smile-img.jpg") center top / cover
-    no-repeat;
+  background-image: url("../content/dentist4/images/smile-img.jpg");
+  background-repeat: no-repeat;
+  /* background-position: bottom 0px right -75px; */
+  background-position: calc(50% + 30px) 50%;
+  background-size: cover;
 }
 .landing-page-content {
   /* background: url("../content/dentist4/images/dentist4-slider-bg.webp") center
     center / cover no-repeat; */
-  background-color: #3043b8;
+  /* background-color: #3043b8; */
+  background-color: rgba(29, 39, 53, 0.8);
   padding: 24px 0px;
-  position: relative;
-  z-index: 1;
+  /* position: relative;
+  z-index: 1; */
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
 .landing-graphic-1 {
   position: absolute;
@@ -239,6 +248,7 @@ h6 {
   /* padding-left: 33px; */
   padding-left: 20px;
   word-spacing: 1px;
+  /* display: none; */
 }
 .landing-tagline {
   font-weight: bolder;
@@ -247,6 +257,7 @@ h6 {
   margin-bottom: 24px;
   /* margin-left: 34px; */
   margin-left: 20px;
+  /* text-align: center; */
 }
 .cta-btn {
   border-radius: 50px !important;
