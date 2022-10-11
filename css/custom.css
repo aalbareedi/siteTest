@@ -205,8 +205,8 @@ h6 {
     no-repeat;
 }
 .landing-page-content {
-  background: url("../content/dentist4/images/dentist4-slider-bg.webp") center
-    center / cover no-repeat;
+  /* background: url("../content/dentist4/images/dentist4-slider-bg.webp") center
+    center / cover no-repeat; */
   background-color: #3043b8;
   padding: 24px 0px;
   position: relative;
@@ -235,16 +235,18 @@ h6 {
   font-weight: 800;
   font-size: 13px;
   text-transform: uppercase;
-  margin-bottom: 10px;
-  padding-left: 33px;
+  margin-bottom: 4px;
+  /* padding-left: 33px; */
+  padding-left: 20px;
   word-spacing: 1px;
 }
 .landing-tagline {
   font-weight: bolder;
   color: rgb(255, 255, 255);
-  width: 180px;
-  margin-bottom: 20px;
-  margin-left: 34px;
+  /* width: 180px; */
+  margin-bottom: 24px;
+  /* margin-left: 34px; */
+  margin-left: 20px;
 }
 .cta-btn {
   border-radius: 50px !important;
