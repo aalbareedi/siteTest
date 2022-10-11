@@ -11,6 +11,10 @@ body {
   line-height: initial;
   height: 100%;
 }
+body.mobile-side-slide {
+  position: relative;
+  overflow-x: visible;
+}
 .row {
   margin-right: 0px;
   margin-left: 0px;
@@ -205,6 +209,25 @@ h6 {
     center / cover no-repeat;
   background-color: #3043b8;
   padding: 24px 0px;
+  position: relative;
+  z-index: 1;
+}
+.landing-graphic-1 {
+  position: absolute;
+  right: -10px;
+  bottom: 71px;
+  width: 120px;
+  transform: rotate(90deg);
+  display: none;
+}
+.landing-graphic-2 {
+  position: absolute;
+  left: -3px;
+  bottom: 7px;
+  width: 118px;
+  transform: rotate(134deg);
+  z-index: -1;
+  display: none;
 }
 .landing-welcome {
   color: rgb(51, 133, 215);

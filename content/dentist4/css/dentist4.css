@@ -4068,16 +4068,6 @@ form input.display-none {
   color: #3385d7;
   text-align: right;
 }
-/*
-|--------------------------------------------------------------------------
-|   Demo Styles
-|
-|--------------------------------------------------------------------------
-|
-|
-|
-*/
-
 .mcb-section.bg-contain,
 .mcb-wrap.bg-contain,
 .column_attr.bg-contain {
@@ -4176,14 +4166,6 @@ img.scale-with-grid,
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-/* height +20% - mobile fallback */
-
-body.mobile-side-slide {
-  position: relative;
-  overflow-x: visible;
-}
-/* border-bottom:60px - mobile fallback */
-
 #Side_slide.left {
   left: -250px;
   right: 0;
