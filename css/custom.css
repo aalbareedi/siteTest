@@ -106,7 +106,7 @@ h6 {
 .intro-content-cards {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 30px;
   column-gap: 30px;
   margin-bottom: 46px;
 }
@@ -245,17 +245,14 @@ h6 {
   font-size: 13px;
   text-transform: uppercase;
   margin-bottom: 4px;
-  /* padding-left: 33px; */
   padding-left: 20px;
-  word-spacing: 1px;
+  word-spacing: 1.2px;
   /* display: none; */
 }
 .landing-tagline {
   font-weight: bolder;
   color: rgb(255, 255, 255);
-  /* width: 180px; */
   margin-bottom: 24px;
-  /* margin-left: 34px; */
   margin-left: 20px;
   /* text-align: center; */
 }
@@ -928,10 +925,16 @@ input.contactFormInput:valid + .formIcon {
     flex-direction: row;
   }
   .landing-page-img {
-    width: 40%;
+    width: 50%;
+    background-position: calc(50% + 110px) 50%;
   }
   .landing-page-content {
-    width: 60%;
+    width: 50%;
+    position: initial;
+    padding-top: 140px;
+  }
+  .landing-tagline {
+    margin-bottom: 44px;
   }
 }
 @media screen and (min-width: 1239px) {
