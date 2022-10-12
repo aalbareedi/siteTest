@@ -185,13 +185,10 @@ h6 {
   justify-content: flex-end;
   align-items: center;
 }
+.about-title,
 .intro-stats-wrapper h6,
 #faq-box h6 {
   text-align: center;
-}
-.custom-h3 {
-  font-weight: bolder;
-  text-align: left;
 }
 .hover_color_bg {
   padding: 30px;
@@ -220,7 +217,9 @@ h6 {
   /* background: url("../content/dentist4/images/dentist4-slider-bg.webp") center
     center / cover no-repeat; */
   /* background-color: #3043b8; */
-  background-color: rgba(29, 39, 53, 0.8);
+  /* background-color: rgba(29, 39, 53, 0.8); */
+  background-color: rgba(21, 37, 58, 0.8);
+  /* background-color: rgba(36, 62, 98, 0.8); */
   padding: 24px 0px;
   /* position: relative;
   z-index: 1; */
@@ -252,7 +251,7 @@ h6 {
   font-weight: 800;
   font-size: 13px;
   text-transform: uppercase;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   padding-left: 20px;
   word-spacing: 1.2px;
   /* display: none; */
@@ -349,13 +348,12 @@ h6 {
 .intro-container {
   padding: 0px;
 }
-.intro-stats-wrapper {
-  margin-bottom: 32px;
-  padding: 0px;
-}
 .stat-intro-text {
   color: #fff;
-  margin-bottom: 0px;
+  margin-bottom: 32px;
+  font-weight: bolder;
+  text-align: left;
+  font-size: 24px;
 }
 .stat-info-text {
   color: #fff;
@@ -386,19 +384,21 @@ h6 {
 .main-stat-badges {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   margin: 0px auto 36px auto;
-  max-width: 270px;
+  /* max-width: 270px; */
   row-gap: 16px;
 }
 .stat-badge {
   position: relative;
   display: flex;
   align-items: center;
-  flex-basis: 100%;
+  /* flex-basis: 100%; */
   width: 100%;
   border: 2px solid gainsboro;
   border-radius: 10px;
+  height: 54px;
+  width: 253px;
 }
 .badge-text {
   color: #fff;
@@ -499,6 +499,7 @@ h6 {
 .stat-numb-wrapper {
   display: flex;
   flex-direction: column;
+  column-gap: 30px;
   row-gap: 36px;
   padding: 0px;
   margin-bottom: 40px;
@@ -927,10 +928,42 @@ input.contactFormInput:valid + .formIcon {
   height: 50px;
 }
 
-@media screen and (min-width: 375px) {
+@media only screen and (min-width: 375px) {
   .badge-text {
     font-size: 16px;
     min-width: 160px;
+  }
+  .stat-badge {
+    width: 270px;
+  }
+}
+@media only screen and (min-width: 540px) {
+  .about-wrapper {
+    display: flex;
+    column-gap: 30px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+  .about-wrapper-child {
+    flex-basis: 100%;
+  }
+  .about-doc-wrapper {
+    display: flex;
+    column-gap: 40px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .main-doc {
+    flex-direction: column;
+    margin: 0px;
+    row-gap: 18px;
+  }
+  .main-stat-badges {
+    margin: 0px;
+  }
+  .doc-profile {
+    margin-left: 14px;
+    margin-right: 0px;
   }
 }
 @media only screen and (min-width: 667px) {
@@ -946,7 +979,7 @@ input.contactFormInput:valid + .formIcon {
     height: 260px;
   }
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .intro-content-cards {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -955,7 +988,7 @@ input.contactFormInput:valid + .formIcon {
     padding-top: 50px;
   }
 }
-@media screen and (min-width: 777px) {
+@media only screen and (min-width: 777px) {
   #landing-page {
     flex-direction: row;
   }
@@ -978,7 +1011,7 @@ input.contactFormInput:valid + .formIcon {
     display: flex;
   }
 }
-@media screen and (min-width: 1239px) {
+@media only screen and (min-width: 1239px) {
   #menu-main-menu {
     flex-direction: row;
   }
