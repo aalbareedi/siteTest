@@ -1,6 +1,9 @@
 .displayHidden {
   display: none !important;
 }
+.unselectable {
+  user-select: none;
+}
 .opacityZero {
   opacity: 0 !important;
 }
@@ -21,6 +24,10 @@ body.mobile-side-slide {
 }
 .bold {
   font-weight: bold;
+}
+h3 {
+  font-size: 24px;
+  line-height: 36px;
 }
 h6 {
   font-size: 16px;
@@ -110,10 +117,11 @@ h6 {
   column-gap: 30px;
   margin-bottom: 46px;
 }
-.intro-content-cards h5 {
+.service-card-title {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
+  line-height: 19px;
 }
 #Top_bar .menu_wrapper {
   float: initial !important;
@@ -254,6 +262,7 @@ h6 {
   color: rgb(255, 255, 255);
   margin-bottom: 24px;
   margin-left: 20px;
+  font-size: 24px;
   /* text-align: center; */
 }
 .cta-btn {
@@ -303,6 +312,32 @@ h6 {
 }
 .contactBtnText {
   font-size: 15px;
+}
+.landing-info {
+  margin-top: 20px;
+  justify-content: center;
+  column-gap: 20px;
+  display: none;
+}
+.landing-btn {
+  border-radius: 50px;
+  width: 90px;
+  height: 50px;
+  /* background-color: gainsboro; */
+  border: 2px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.landing-contactBtnText {
+  text-align: center;
+  margin-top: 2px;
+  font-size: 16px;
+  color: #a9a9a9;
+}
+.landing-contactIcon {
+  font-size: 20px;
 }
 
 /* *************************** ABOUT ************************** */
@@ -935,6 +970,12 @@ input.contactFormInput:valid + .formIcon {
   }
   .landing-tagline {
     margin-bottom: 44px;
+  }
+  .landing-dock {
+    display: none;
+  }
+  .landing-info {
+    display: flex;
   }
 }
 @media screen and (min-width: 1239px) {
