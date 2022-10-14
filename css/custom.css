@@ -36,6 +36,15 @@ h6 {
   line-height: 24px;
   margin-bottom: 18px;
 }
+.page-size {
+  z-index: 1000;
+  position: fixed;
+  top: 60px;
+  left: 0px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.4);
+  color: whitesmoke;
+}
 .header-box-1 {
   width: 100% !important;
   margin: 0px;
@@ -204,6 +213,7 @@ h6 {
   flex-direction: column;
   margin-top: 60px;
   position: relative;
+  overflow-x: hidden;
 }
 .landing-page-img {
   height: 100%;
@@ -381,12 +391,13 @@ h6 {
   margin-left: 16px;
   color: whitesmoke;
 }
+.about-doc-wrapper {
+  margin-bottom: 36px;
+}
 .main-stat-badges {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px auto 36px auto;
-  /* max-width: 270px; */
   row-gap: 16px;
 }
 .stat-badge {
@@ -496,13 +507,15 @@ h6 {
   font-weight: bolder;
   color: #32b0e8;
 }
+.about-wrapper {
+  margin-bottom: 40px;
+}
 .stat-numb-wrapper {
   display: flex;
   flex-direction: column;
   column-gap: 30px;
   row-gap: 36px;
   padding: 0px;
-  margin-bottom: 40px;
 }
 .doctorTitle {
   font-size: 22px;
@@ -937,7 +950,7 @@ input.contactFormInput:valid + .formIcon {
     width: 270px;
   }
 }
-@media only screen and (min-width: 540px) {
+/* @media only screen and (min-width: 540px) {
   .about-wrapper {
     display: flex;
     column-gap: 30px;
@@ -958,14 +971,11 @@ input.contactFormInput:valid + .formIcon {
     margin: 0px;
     row-gap: 18px;
   }
-  .main-stat-badges {
-    margin: 0px;
-  }
   .doc-profile {
     margin-left: 14px;
     margin-right: 0px;
   }
-}
+} */
 @media only screen and (min-width: 667px) {
   .office-container {
     display: flex;

@@ -9949,4 +9949,11 @@ $(document).ready(() => {
   $(".slick-slider").on("swipe", function (event, slick, direction) {
     slick.slickPause();
   });
+
+  setTimeout(function () {
+    $(".page-size").html(
+      $(window).innerWidth() + "," + $(window).innerHeight()
+    );
+    $(".page-size").removeClass("displayHidden");
+  }, 3000);
 });
