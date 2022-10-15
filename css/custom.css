@@ -87,7 +87,7 @@ h6 {
   position: fixed;
   bottom: 14%;
   right: 24px;
-  z-index: 50;
+  z-index: 150;
   margin: 0px;
   height: 40px;
   width: 40px;
@@ -132,7 +132,7 @@ h6 {
   align-items: center;
 }
 .responsive-menu-toggle {
-  /* background-color: pink; */
+  background-color: gainsboro;
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -161,7 +161,7 @@ h6 {
   width: 250px;
   height: calc(100% - 56px - 60px);
   overflow: auto;
-  z-index: 90;
+  z-index: 290;
 }
 .closeBtn {
   width: 60px;
@@ -563,7 +563,7 @@ h6 {
   color: #1f2e88;
 }
 .services-intro {
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 .services-text {
   color: #000;
@@ -598,7 +598,7 @@ h6 {
 .intro-content-cards {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 16px;
   column-gap: 30px;
   margin-bottom: 46px;
 }
