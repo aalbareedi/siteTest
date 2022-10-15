@@ -119,19 +119,6 @@ h6 {
 .landing-content-btn {
   display: inline-block;
 }
-.intro-content-cards {
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
-  column-gap: 30px;
-  margin-bottom: 46px;
-}
-.service-card-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  line-height: 19px;
-}
 #Top_bar .menu_wrapper {
   float: initial !important;
   position: initial !important;
@@ -529,22 +516,100 @@ h6 {
   padding: 50px 0px;
   background: whitesmoke;
 }
+#service-box-1.open-content {
+  height: 380px;
+}
+#service-box-2.open-content {
+  height: 330px;
+}
+#service-box-3.open-content {
+  height: 240px;
+}
+#service-box-4.open-content {
+  height: 310px;
+}
+#service-box-5.open-content {
+  height: 310px;
+}
+#service-box-6.open-content {
+  height: 220px;
+}
+.open-content .services-text {
+  opacity: 1;
+}
+.open-content .service-arrow {
+  transform: rotate(45deg);
+}
 .services-title {
   color: #3043b8;
   max-width: 220px;
   margin: 0 auto;
+}
+.service-arrow {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 16px;
+  /* background: gainsboro; */
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+.service-icon {
+  color: #1f2e88;
 }
 .services-intro {
   margin-bottom: 24px;
 }
 .services-text {
   color: #000;
+  opacity: 0;
+  position: absolute;
+  top: 54px;
+  background: #aae2ff;
+  padding-top: 12px;
+  padding-right: 18px;
+  padding-left: 18px;
+  transition: all 1s;
 }
 .service-box {
-  border-radius: 30px;
-  background-color: #a2d9f5;
+  border-radius: 6px;
+  background-color: #aae2ff;
   box-shadow: 2px 44px 32px 2px rgba(0, 0, 0, 0.02);
-  padding: 26px;
+  /* padding: 26px 26px 26px 26px; */
+  /* padding-top: 18px;
+  padding-left: 26px; */
+  overflow: hidden;
+  height: 54px;
+  position: relative;
+  transition: all 0.5s;
+}
+.service-content {
+  background-color: #a2d9f5;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.intro-content-cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  column-gap: 30px;
+  margin-bottom: 46px;
+}
+.service-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  /* margin-bottom: 10px; */
+  margin-bottom: 0px;
+  line-height: 19px;
+  padding-left: 18px;
+  color: #1f2e88;
 }
 .routine-intro {
   margin-bottom: 4px;

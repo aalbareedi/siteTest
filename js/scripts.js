@@ -9922,6 +9922,11 @@ $(document).ready(() => {
     previousPhoneValue = contactFormPhoneInput.value;
   });
 
+  $(".service-content").on("click", function (e) {
+    console.log("cuurentTarget: ", $(e.currentTarget));
+    $(e.currentTarget).parent().toggleClass("open-content");
+  });
+
   $(document).on("scroll", function () {
     // console.log($(window).scrollTop());
 
