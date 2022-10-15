@@ -132,7 +132,7 @@ h6 {
   align-items: center;
 }
 .responsive-menu-toggle {
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -366,6 +366,7 @@ h6 {
   word-spacing: 1px;
   letter-spacing: 0.4px;
   font-size: 16px;
+  padding-right: 3px;
 }
 .stat-year-num {
   margin-right: 1px;
@@ -563,7 +564,7 @@ h6 {
   color: #1f2e88;
 }
 .services-intro {
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 }
 .services-text {
   color: #000;
@@ -571,7 +572,7 @@ h6 {
   position: absolute;
   top: 54px;
   background: #aae2ff;
-  padding-top: 12px;
+  padding-top: 14px;
   padding-right: 18px;
   padding-left: 18px;
   transition: all 1s;
