@@ -132,7 +132,7 @@ h6 {
   align-items: center;
 }
 .responsive-menu-toggle {
-  /* background-color: gainsboro; */
+  background-color: gainsboro;
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -576,6 +576,8 @@ h6 {
   padding-right: 18px;
   padding-left: 18px;
   transition: all 1s;
+  font-size: 16px;
+  word-spacing: 0.4px;
 }
 .service-box {
   border-radius: 6px;
@@ -599,8 +601,7 @@ h6 {
 .intro-content-cards {
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
-  column-gap: 30px;
+  row-gap: 12px;
   margin-bottom: 46px;
 }
 .service-card-title {
@@ -628,6 +629,7 @@ h6 {
   left: 6px;
   top: -22px;
   font-size: 50px;
+  color: #2f2f2f;
 }
 .treatmentBtn {
   display: flex;
@@ -682,7 +684,7 @@ h6 {
   align-items: center;
   height: 40px;
   column-gap: 10px;
-  max-width: 190px;
+  max-width: 180px;
   margin: 0px auto;
 }
 .treatment-solid {
@@ -733,7 +735,7 @@ h6 {
 }
 .reviewSlideText {
   font-size: 18px;
-  margin: 30px 20px 26px 34px;
+  margin: 30px 28px 26px 34px;
   line-height: 28px;
   letter-spacing: 0.3px;
   word-spacing: 1px;
@@ -747,7 +749,7 @@ h6 {
 }
 .quoteIcon {
   position: absolute;
-  font-size: 60px;
+  font-size: 54px;
   color: white;
   opacity: 0.15;
   z-index: 1;
