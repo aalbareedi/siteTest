@@ -2,7 +2,13 @@
   display: none !important;
 }
 .unselectable {
-  user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 .opacityZero {
   opacity: 0 !important;
@@ -78,7 +84,7 @@ h6 {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
-  background-color: orange;
+  /* background-color: orange; */
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -622,7 +628,6 @@ h6 {
   line-height: 19px;
   padding-left: 18px;
   color: #1f2e88;
-  user-select: none;
 }
 .routine-intro {
   margin-bottom: 4px;
@@ -662,7 +667,6 @@ h6 {
   letter-spacing: 0.3px;
   font-size: 18px;
   color: #1c1c1c;
-  user-select: none;
 }
 .freeWord {
   color: #00cd00;
