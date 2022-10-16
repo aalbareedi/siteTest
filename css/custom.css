@@ -139,7 +139,7 @@ h6 {
   align-items: center;
 }
 .responsive-menu-toggle {
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -268,6 +268,7 @@ h6 {
   margin-left: 20px;
   font-size: 24px;
   /* text-align: center; */
+  word-spacing: 0.4px;
 }
 .cta-btn {
   border-radius: 50px !important;
@@ -281,7 +282,7 @@ h6 {
   color: #fff;
   background-color: #3385d7;
   letter-spacing: 1px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
 }
 .landing-dock {
@@ -1032,6 +1033,21 @@ input.contactFormInput:valid + .formIcon {
   }
   .stat-badge {
     width: 270px;
+  }
+}
+@media only screen and (min-width: 389px) {
+  .landing-tagline {
+    font-size: 26px;
+  }
+  .landing-welcome {
+    font-size: 14px;
+  }
+  .cta-btn {
+    font-size: 16px;
+  }
+  .stat-intro-text {
+    font-size: 26px;
+    max-width: 324px;
   }
 }
 /* @media only screen and (min-width: 540px) {
