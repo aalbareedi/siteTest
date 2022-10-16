@@ -78,6 +78,7 @@ h6 {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
+  background-color: orange;
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -138,6 +139,7 @@ h6 {
   top: 0px !important;
   bottom: 0px;
   color: #3385d7;
+  font-size: 24px;
 }
 #navOverlay {
   background: black;
@@ -577,7 +579,7 @@ h6 {
   padding-left: 18px;
   transition: all 1s;
   font-size: 16px;
-  word-spacing: 0.4px;
+  word-spacing: 0.6px;
 }
 .service-box {
   /* border-radius: 6px; */
@@ -620,6 +622,7 @@ h6 {
   line-height: 19px;
   padding-left: 18px;
   color: #1f2e88;
+  user-select: none;
 }
 .routine-intro {
   margin-bottom: 4px;
@@ -659,6 +662,7 @@ h6 {
   letter-spacing: 0.3px;
   font-size: 18px;
   color: #1c1c1c;
+  user-select: none;
 }
 .freeWord {
   color: #00cd00;
@@ -694,6 +698,7 @@ h6 {
   column-gap: 10px;
   max-width: 180px;
   margin: 0px auto;
+  user-select: none;
 }
 .treatment-solid {
   height: 2px;

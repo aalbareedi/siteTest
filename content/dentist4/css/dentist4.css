@@ -2796,7 +2796,7 @@ textarea,
     position: absolute;
     margin: 0;
   }
-  #Top_bar a.responsive-menu-toggle {
+  #Top_bar .responsive-menu-toggle {
     display: flex;
     justify-content: center;
     align-items: center;
