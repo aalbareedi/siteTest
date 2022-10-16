@@ -84,7 +84,7 @@ h6 {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
-  background-color: pink;
+  /* background-color: pink; */
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -111,6 +111,7 @@ h6 {
   height: 60px;
 }
 #menu-main-menu li a {
+  font-size: 14px !important;
   padding: 0px !important;
   color: #3b3b3b !important;
 }
@@ -1036,6 +1037,13 @@ input.contactFormInput:valid + .formIcon {
   }
 }
 @media only screen and (min-width: 389px) {
+  h3 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+  h6 {
+    font-size: 18px;
+  }
   .landing-tagline {
     font-size: 26px;
     margin-bottom: 26px;
@@ -1055,6 +1063,38 @@ input.contactFormInput:valid + .formIcon {
   }
   .landing-page-content {
     padding: 28px 0px;
+  }
+  #menu-main-menu li a {
+    font-size: 15px !important;
+  }
+  .stat-info-text {
+    font-size: 18px;
+  }
+  .about-wrapper {
+    margin-bottom: 44px;
+  }
+  .smile-emoji {
+    font-size: 46px;
+  }
+  .doctorTitle {
+    font-size: 24px;
+  }
+  .doctorName {
+    font-size: 26px;
+  }
+  .doc-profile {
+    margin-right: -22px;
+  }
+  .about-title {
+    margin-bottom: 22px;
+  }
+  .logo-text-name {
+    font-size: 20px;
+  }
+  .logo-text-title {
+    font-size: 16px;
+    letter-spacing: 0.49px;
+    padding-left: 0.4px;
   }
 }
 /* @media only screen and (min-width: 540px) {
