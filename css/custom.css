@@ -139,7 +139,7 @@ h6 {
   align-items: center;
 }
 .responsive-menu-toggle {
-  /* background-color: gainsboro; */
+  background-color: gainsboro;
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -702,7 +702,6 @@ h6 {
   column-gap: 10px;
   max-width: 180px;
   margin: 0px auto;
-  user-select: none;
 }
 .treatment-solid {
   height: 2px;
