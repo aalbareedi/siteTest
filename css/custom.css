@@ -84,7 +84,7 @@ h6 {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
-  /* background-color: orange; */
+  background-color: pink;
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -1038,16 +1038,23 @@ input.contactFormInput:valid + .formIcon {
 @media only screen and (min-width: 389px) {
   .landing-tagline {
     font-size: 26px;
+    margin-bottom: 26px;
   }
   .landing-welcome {
     font-size: 14px;
   }
   .cta-btn {
     font-size: 16px;
+    width: 206px;
+    height: 52px;
+    margin-bottom: 8px;
   }
   .stat-intro-text {
     font-size: 26px;
     max-width: 324px;
+  }
+  .landing-page-content {
+    padding: 28px 0px;
   }
 }
 /* @media only screen and (min-width: 540px) {
