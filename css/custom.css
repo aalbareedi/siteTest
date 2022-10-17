@@ -140,7 +140,7 @@ h6 {
   align-items: center;
 }
 .responsive-menu-toggle {
-  /* background-color: gainsboro; */
+  background-color: gainsboro;
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -190,7 +190,6 @@ h6 {
   justify-content: flex-end;
   align-items: center;
 }
-.about-title,
 .intro-stats-wrapper h6,
 #faq-box h6 {
   text-align: center;
@@ -351,6 +350,10 @@ h6 {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #3043b8;
+}
+.about-title {
+  text-align: center;
+  margin-bottom: 22px;
 }
 .intro-container {
   padding: 0px;
@@ -528,19 +531,19 @@ h6 {
   background: whitesmoke;
 }
 #service-box-1.open-content {
-  height: 380px;
+  height: 390px;
 }
 #service-box-2.open-content {
-  height: 330px;
+  height: 340px;
 }
 #service-box-3.open-content {
-  height: 240px;
+  height: 250px;
 }
 #service-box-4.open-content {
-  height: 310px;
+  height: 320px;
 }
 #service-box-5.open-content {
-  height: 310px;
+  height: 320px;
 }
 #service-box-6.open-content {
   height: 220px;
@@ -588,6 +591,7 @@ h6 {
   transition: all 1s;
   font-size: 16px;
   word-spacing: 0.6px;
+  line-height: 24px;
 }
 .service-box {
   /* border-radius: 6px; */
@@ -645,7 +649,7 @@ h6 {
 .bullet-point {
   position: absolute;
   left: 6px;
-  top: -22px;
+  top: 2px;
   font-size: 50px;
   color: #2f2f2f;
 }
@@ -685,6 +689,7 @@ h6 {
 }
 .treatment-or {
   padding-bottom: 3px;
+  font-size: 16px;
 }
 .dm-text {
   margin-bottom: 2px;
@@ -696,6 +701,7 @@ h6 {
 .treatmentBtnText {
   color: whitesmoke;
   min-width: 35px;
+  font-size: 16px;
 }
 .treatment-space {
   display: flex;
@@ -754,7 +760,7 @@ h6 {
 .reviewSlideText {
   font-size: 18px;
   margin: 30px 28px 26px 34px;
-  line-height: 28px;
+  line-height: 27px;
   letter-spacing: 0.3px;
   word-spacing: 1px;
   font-style: italic;
@@ -832,6 +838,8 @@ h6 {
 .faq-answer {
   padding-left: 10px;
   margin-bottom: 34px;
+  font-size: 16px;
+  line-height: 24px;
 }
 .faq-answer:last-child {
   margin-bottom: 0px;
@@ -953,6 +961,7 @@ h6 {
   color: whitesmoke;
   margin-bottom: 6px;
   letter-spacing: 0.2px;
+  font-size: 16px;
 }
 .fullNameField,
 .emailField,
@@ -1074,7 +1083,7 @@ input.contactFormInput:valid + .formIcon {
     margin-bottom: 44px;
   }
   .smile-emoji {
-    font-size: 46px;
+    font-size: 48px;
   }
   .doctorTitle {
     font-size: 24px;
@@ -1095,6 +1104,80 @@ input.contactFormInput:valid + .formIcon {
     font-size: 16px;
     letter-spacing: 0.49px;
     padding-left: 0.4px;
+  }
+  .contactBtnText {
+    font-size: 16px;
+  }
+  .main-about-text {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .services-text {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .service-card-title {
+    font-size: 20px;
+  }
+  .service-text-bp {
+    margin-bottom: 8px;
+  }
+  #service-box-1.open-content {
+    height: 414px;
+  }
+  #service-box-2.open-content {
+    height: 384px;
+  }
+  #service-box-3.open-content {
+    height: 230px;
+  }
+  #service-box-4.open-content {
+    height: 310px;
+  }
+  #service-box-5.open-content {
+    height: 310px;
+  }
+  #service-box-6.open-content {
+    height: 254px;
+  }
+  .reviewSlideText {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .treatmentBtnMessage {
+    font-size: 20px;
+    min-width: 176px;
+  }
+  .treatment-or {
+    font-size: 18px;
+  }
+  .treatmentBtnText {
+    font-size: 18px;
+    min-width: 39px;
+  }
+  .treatmentBtn {
+    width: 106px;
+    padding-left: 4px;
+  }
+  .reviewName {
+    font-size: 20px;
+  }
+  .faq-question {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .faq-answer {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .contact-content {
+    font-size: 20px;
+  }
+  .officeInfoText {
+    width: 272px;
+  }
+  .address-suite {
+    font-size: 15px;
   }
 }
 /* @media only screen and (min-width: 540px) {
