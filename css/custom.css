@@ -140,7 +140,7 @@ h6 {
   align-items: center;
 }
 .responsive-menu-toggle {
-  background-color: gainsboro;
+  /* background-color: gainsboro; */
   display: none;
   right: 0px !important;
   top: 0px !important;
@@ -364,6 +364,7 @@ h6 {
   font-weight: bolder;
   text-align: left;
   font-size: 24px;
+  word-spacing: 0.4px;
 }
 .stat-info-text {
   color: #fff;
@@ -923,7 +924,7 @@ h6 {
 } */
 .officePhoneText {
   color: #b3b3b3;
-  padding-left: 8px;
+  padding-left: 16px;
 }
 .contact-content {
   display: flex;
@@ -1068,7 +1069,8 @@ input.contactFormInput:valid + .formIcon {
   }
   .stat-intro-text {
     font-size: 26px;
-    max-width: 324px;
+    max-width: 328px;
+    word-spacing: 0.6px;
   }
   .landing-page-content {
     padding: 28px 0px;
@@ -1153,7 +1155,8 @@ input.contactFormInput:valid + .formIcon {
   }
   .treatmentBtnText {
     font-size: 18px;
-    min-width: 39px;
+    min-width: 40px;
+    letter-spacing: 0.2px;
   }
   .treatmentBtn {
     width: 106px;
@@ -1174,10 +1177,25 @@ input.contactFormInput:valid + .formIcon {
     font-size: 20px;
   }
   .officeInfoText {
-    width: 272px;
+    width: 274px;
   }
   .address-suite {
-    font-size: 15px;
+    font-size: 16px;
+  }
+  .treatmentBtnWrapper {
+    column-gap: 16px;
+  }
+  .officeInfoSchedule {
+    padding-right: 2px;
+  }
+  .contactFormText {
+    font-size: 18px;
+  }
+  .contactFormInput {
+    font-size: 18px;
+  }
+  .officePhoneText {
+    padding-left: 18px;
   }
 }
 /* @media only screen and (min-width: 540px) {
