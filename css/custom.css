@@ -394,7 +394,7 @@ h6 {
   color: whitesmoke;
 }
 .about-doc-wrapper {
-  margin-bottom: 36px;
+  margin-bottom: 34px;
 }
 .main-stat-badges {
   display: flex;
@@ -1037,6 +1037,18 @@ input.contactFormInput:valid + .formIcon {
   height: 50px;
 }
 
+/* ************************** FOOTER ************************** */
+footer {
+  background-color: whitesmoke;
+  /* background-image: url(./images/toothClear.svg);
+  background-repeat: no-repeat;
+  background-position: top 68px left -60px;
+  background-size: 480px; */
+  padding-top: 20px;
+  padding-bottom: 15px;
+  height: 210px;
+}
+
 @media only screen and (min-width: 375px) {
   .badge-text {
     font-size: 16px;
@@ -1097,7 +1109,7 @@ input.contactFormInput:valid + .formIcon {
     margin-right: -22px;
   }
   .about-title {
-    margin-bottom: 22px;
+    margin-bottom: 24px;
   }
   .logo-text-name {
     font-size: 20px;
@@ -1196,6 +1208,9 @@ input.contactFormInput:valid + .formIcon {
   }
   .officePhoneText {
     padding-left: 18px;
+  }
+  .formOption {
+    margin-bottom: 22px;
   }
 }
 /* @media only screen and (min-width: 540px) {
