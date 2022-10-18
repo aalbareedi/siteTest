@@ -42,6 +42,9 @@ h6 {
   line-height: 24px;
   margin-bottom: 18px;
 }
+img {
+  pointer-events: none;
+}
 .page-size {
   z-index: 1000;
   position: fixed;
@@ -1039,7 +1042,7 @@ input.contactFormInput:valid + .formIcon {
 
 /* ************************** FOOTER ************************** */
 footer {
-  background-color: whitesmoke;
+  background-color: #11173e;
   /* background-image: url(./images/toothClear.svg);
   background-repeat: no-repeat;
   background-position: top 68px left -60px;
@@ -1210,7 +1213,10 @@ footer {
     padding-left: 18px;
   }
   .formOption {
-    margin-bottom: 22px;
+    margin-bottom: 24px;
+  }
+  .services-intro {
+    margin-bottom: 30px;
   }
 }
 /* @media only screen and (min-width: 540px) {
