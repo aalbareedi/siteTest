@@ -860,7 +860,7 @@ img {
   display: grid;
   position: relative;
   row-gap: 2px;
-  column-gap: 12px;
+  column-gap: 28px;
   grid-template-columns: repeat(2, auto);
 }
 #officeScheduleIcon {
@@ -904,6 +904,7 @@ img {
   display: flex;
   justify-content: center;
   position: relative;
+  margin-left: 16px;
 }
 .officeInfoText {
   position: relative;
@@ -927,7 +928,7 @@ img {
 } */
 .officePhoneText {
   color: #b3b3b3;
-  padding-left: 16px;
+  padding-left: 34px;
 }
 .contact-content {
   display: flex;
@@ -1200,9 +1201,9 @@ footer {
   .treatmentBtnWrapper {
     column-gap: 16px;
   }
-  .officeInfoSchedule {
+  /* .officeInfoSchedule {
     padding-right: 2px;
-  }
+  } */
   .contactFormText {
     font-size: 18px;
   }
@@ -1210,13 +1211,16 @@ footer {
     font-size: 18px;
   }
   .officePhoneText {
-    padding-left: 18px;
+    padding-left: 38px;
   }
   .formOption {
     margin-bottom: 24px;
   }
   .services-intro {
     margin-bottom: 30px;
+  }
+  .officeInfoGrid {
+    column-gap: 32px;
   }
 }
 /* @media only screen and (min-width: 540px) {
