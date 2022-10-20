@@ -236,14 +236,6 @@ img {
   left: 0px;
   right: 0px;
 }
-.landing-graphic-1 {
-  position: absolute;
-  right: -10px;
-  bottom: 71px;
-  width: 120px;
-  transform: rotate(90deg);
-  display: none;
-}
 .landing-graphic-2 {
   position: absolute;
   left: -3px;
@@ -357,6 +349,8 @@ img {
 .about-title {
   text-align: center;
   margin-bottom: 22px;
+  /* color: #3385d7; */
+  color: #32b0e8;
 }
 .intro-container {
   padding: 0px;
@@ -919,7 +913,7 @@ img {
   position: absolute;
   font-size: 20px;
   color: #37d0e1;
-  top: 2px;
+  top: 3px;
 }
 /* .officeInfoPhone {
   margin: 50px 0;
@@ -1044,13 +1038,49 @@ input.contactFormInput:valid + .formIcon {
 /* ************************** FOOTER ************************** */
 footer {
   background-color: #11173e;
-  /* background-image: url(./images/toothClear.svg);
+  background-image: url("../content/dentist4/images/graphic-2.svg");
   background-repeat: no-repeat;
-  background-position: top 68px left -60px;
-  background-size: 480px; */
+  background-position: top 88px left -160px;
+  background-size: 480px;
   padding-top: 20px;
-  padding-bottom: 15px;
-  height: 210px;
+  padding-bottom: 22px;
+  position: relative;
+}
+.footer-company {
+  padding-left: 20px;
+  color: #f2f2f2;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  margin-top: 40px;
+  padding-left: 20px;
+  color: #d6d6d6;
+}
+.footer-logo-name {
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 4px;
+}
+.footer-logo-title {
+  font-size: 20px;
+  letter-spacing: 0.62px;
+  line-height: 16px;
+  word-spacing: 0.8px;
+}
+.footer-nav-opt a {
+  letter-spacing: 0.4px;
+  /* color: #007bff; */
+  color: #f2f2f2;
+}
+.landing-graphic-1 {
+  position: absolute;
+  right: -10px;
+  bottom: 71px;
+  width: 170px;
+  transform: rotate(14deg);
+  display: none;
 }
 
 @media only screen and (min-width: 375px) {
