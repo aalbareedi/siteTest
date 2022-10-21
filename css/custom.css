@@ -532,7 +532,7 @@ img {
   height: 390px;
 }
 #service-box-2.open-content {
-  height: 340px;
+  height: 342px;
 }
 #service-box-3.open-content {
   height: 250px;
@@ -544,7 +544,7 @@ img {
   height: 320px;
 }
 #service-box-6.open-content {
-  height: 220px;
+  height: 222px;
 }
 .open-content .services-text {
   opacity: 1;
@@ -942,7 +942,7 @@ img {
 #form-box {
   background-color: #1e2867;
   padding-top: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 70px;
 }
 .contact-us-desc {
   color: whitesmoke;
@@ -1042,7 +1042,7 @@ footer {
   background-repeat: no-repeat;
   background-position: top 88px left -160px;
   background-size: 480px;
-  padding-top: 20px;
+  padding-top: 16px;
   padding-bottom: 22px;
   position: relative;
 }
@@ -1073,6 +1073,7 @@ footer {
   letter-spacing: 0.4px;
   /* color: #007bff; */
   color: #f2f2f2;
+  font-size: 18px;
 }
 .landing-graphic-1 {
   position: absolute;
@@ -1090,6 +1091,24 @@ footer {
   }
   .stat-badge {
     width: 270px;
+  }
+  #service-box-1.open-content {
+    height: 348px;
+  }
+  #service-box-2.open-content {
+    height: 300px;
+  }
+  #service-box-3.open-content {
+    height: 206px;
+  }
+  #service-box-4.open-content {
+    height: 278px;
+  }
+  #service-box-5.open-content {
+    height: 278px;
+  }
+  #service-box-6.open-content {
+    height: 204px;
   }
 }
 @media only screen and (min-width: 389px) {
