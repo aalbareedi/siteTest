@@ -87,7 +87,7 @@ img {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
-  /* background-color: pink; */
+  background-color: pink;
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -1040,8 +1040,8 @@ footer {
   background-color: #11173e;
   background-image: url("../content/dentist4/images/graphic-2.svg");
   background-repeat: no-repeat;
-  background-position: top 88px left -160px;
-  background-size: 480px;
+  background-position: top 88px left -140px;
+  background-size: 440px;
   padding-top: 16px;
   padding-bottom: 22px;
   position: relative;
@@ -1053,7 +1053,7 @@ footer {
 .footer-nav {
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 6px;
   margin-top: 40px;
   padding-left: 20px;
   color: #d6d6d6;
