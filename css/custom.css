@@ -87,7 +87,7 @@ img {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
-  background-color: pink;
+  /* background-color: pink; */
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -1366,7 +1366,7 @@ footer {
   .cta-btn {
     font-size: 26px;
     width: 310px;
-    height: 62px;
+    height: 64px;
   }
 }
 @media only screen and (min-width: 777px) {
