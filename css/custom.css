@@ -87,7 +87,7 @@ img {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
-  background-color: pink;
+  /* background-color: pink; */
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -1040,10 +1040,10 @@ footer {
   background-color: #11173e;
   background-image: url("../content/dentist4/images/graphic-2.svg");
   background-repeat: no-repeat;
-  background-position: top 88px left -140px;
+  background-position: top 88px left -130px;
   background-size: 440px;
   padding-top: 16px;
-  padding-bottom: 22px;
+  padding-bottom: 24px;
   position: relative;
 }
 .footer-company {
@@ -1130,7 +1130,7 @@ footer {
     font-size: 16px;
     width: 206px;
     height: 52px;
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
   }
   .stat-intro-text {
     font-size: 26px;
@@ -1138,7 +1138,7 @@ footer {
     word-spacing: 0.6px;
   }
   .landing-page-content {
-    padding: 28px 0px;
+    padding: 28px 0px 36px 0px;
   }
   #menu-main-menu li a {
     font-size: 15px !important;
@@ -1272,6 +1272,38 @@ footer {
     column-gap: 32px;
   }
 }
+@media only screen and (min-width: 440px) {
+  .landing-welcome {
+    font-size: 16px;
+    letter-spacing: 0.8px;
+  }
+  .landing-tagline {
+    font-size: 30px;
+  }
+  .cta-btn {
+    font-size: 18px;
+    width: 220px;
+    height: 54px;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .landing-tagline {
+    font-size: 36px;
+    margin-bottom: 34px;
+  }
+  .landing-welcome {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .landing-page-content {
+    padding: 30px 0px 42px 0px;
+  }
+  .cta-btn {
+    font-size: 20px;
+    width: 250px;
+    height: 56px;
+  }
+}
 /* @media only screen and (min-width: 540px) {
   .about-wrapper {
     display: flex;
@@ -1298,11 +1330,45 @@ footer {
     margin-right: 0px;
   }
 } */
+@media only screen and (min-width: 600px) {
+  .landing-page-content {
+    padding: 32px 0px 44px 0px;
+  }
+  .landing-welcome {
+    font-size: 20px;
+  }
+  .landing-tagline {
+    font-size: 40px;
+    margin-bottom: 36px;
+  }
+  .cta-btn {
+    font-size: 22px;
+    width: 260px;
+    height: 58px;
+  }
+}
 @media only screen and (min-width: 667px) {
+  .landing-page-content {
+    padding: 34px 0px 46px 0px;
+  }
+  .landing-welcome {
+    font-size: 22px;
+    word-spacing: 1.4px;
+    margin-bottom: 12px;
+  }
+  .landing-tagline {
+    font-size: 44px;
+    margin-bottom: 40px;
+  }
+  .cta-btn {
+    font-size: 24px;
+    width: 290px;
+    height: 60px;
+  }
   .office-container {
     display: flex;
     justify-content: center;
-    padding-left: 100px;
+    padding-left: 60px;
   }
   .officeMap {
     margin-top: 0px;
@@ -1311,13 +1377,22 @@ footer {
     height: 260px;
   }
 }
-@media only screen and (min-width: 768px) {
-  .intro-content-cards {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
+@media only screen and (min-width: 744px) {
+  .landing-page-content {
+    padding: 38px 0px 54px 0px;
   }
-  #Footer {
-    padding-top: 50px;
+  .landing-welcome {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+  .landing-tagline {
+    font-size: 46px;
+    margin-bottom: 50px;
+  }
+  .cta-btn {
+    font-size: 26px;
+    width: 320px;
+    height: 62px;
   }
 }
 @media only screen and (min-width: 777px) {
