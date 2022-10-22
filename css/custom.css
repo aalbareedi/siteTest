@@ -87,7 +87,7 @@ img {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
-  /* background-color: pink; */
+  background-color: pink;
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -1362,7 +1362,6 @@ footer {
   .landing-tagline {
     font-size: 46px;
     margin-bottom: 50px;
-    background-color: orange;
   }
   .cta-btn {
     font-size: 26px;
