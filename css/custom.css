@@ -1370,13 +1370,14 @@ footer {
   .landing-page-content {
     width: 50%;
     position: initial;
-    padding-top: 140px;
+    padding-top: 80px;
     overflow-y: auto;
   }
   .landing-tagline {
-    line-height: 62px;
+    line-height: 72px;
     max-width: 364px;
     margin-bottom: 44px;
+    font-size: 56px;
   }
   .cta-btn {
     font-size: 24px;
@@ -1417,26 +1418,22 @@ footer {
   }
   .landing-scrolled .landing-contactBtnText {
     display: block;
+    margin-top: 0px;
   }
   .landing-scrolled .landing-btn {
     width: 124px;
   }
-}
-@media only screen and (min-width: 1239px) {
-  #menu-main-menu {
-    flex-direction: row;
+  .landing-tagline {
+    max-width: 410px;
+    font-size: 66px;
+    line-height: 80px;
   }
-  #Top_bar .menu_wrapper {
-    position: absolute !important;
-  }
-  /* #menu-main-menu a span {
-    color: #3b3b3b;
-    margin-left: 0px;
-  } */
-  .intro-content-cards {
-    grid-template-columns: repeat(3, auto);
+  .landing-welcome {
+    font-size: 28px;
   }
 }
+/* @media only screen and (min-width: 1239px) {
+} */
 @media only screen and (max-width: 700px) {
   #menu-main-menu {
     display: flex;
