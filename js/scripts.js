@@ -7151,7 +7151,8 @@
   var header_H = 0;
 
   var pretty = false;
-  var mobile_init_W = 1001;
+  // var mobile_init_W = 1001;
+  var mobile_init_W = 741;
 
   window.elementorFrontendConfig = {
     environmentMode: {

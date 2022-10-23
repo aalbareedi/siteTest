@@ -2785,7 +2785,7 @@ textarea,
     border-color: rgba(0, 0, 0, 0.1);
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 740px) {
   #Top_bar #menu {
     display: none;
     height: auto;
@@ -4445,12 +4445,12 @@ img.scale-with-grid,
   /* .mobile-sticky #Top_bar.is-sticky {
     position: fixed !important;
   } */
-  #Top_bar #menu {
+  /* #Top_bar #menu {
     float: left;
     position: static !important;
     width: 100% !important;
     padding-bottom: 20px;
-  }
+  } */
   #Top_bar .top_bar_left {
     margin-top: 0px;
   }

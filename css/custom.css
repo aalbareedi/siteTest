@@ -110,11 +110,8 @@ img {
   font-size: 18px;
   color: rgba(255, 255, 255, 0.8);
 }
-#menu-main-menu li {
-  height: 60px;
-}
 #menu-main-menu li a {
-  font-size: 14px !important;
+  font-size: 16px !important;
   padding: 0px !important;
   color: #3b3b3b !important;
 }
@@ -170,7 +167,7 @@ img {
   position: fixed;
   top: 60px;
   right: -280px;
-  width: 250px;
+  width: 240px;
   height: calc(100% - 56px - 60px);
   overflow: auto;
   z-index: 290;
@@ -1143,9 +1140,6 @@ footer {
   .landing-page-content {
     padding: 28px 0px 36px 0px;
   }
-  #menu-main-menu li a {
-    font-size: 15px !important;
-  }
   .stat-info-text {
     font-size: 18px;
   }
@@ -1406,18 +1400,19 @@ footer {
   }
   .landing-scrolled .landing-info {
     position: fixed;
-    top: 10px;
-    right: 60px;
+    top: 8px;
+    right: 456px;
     column-gap: 10px;
   }
   .landing-scrolled .landing-btn {
-    height: 40px;
+    height: 44px;
+    width: 44px;
     background-color: #e1e1e1;
     border: none;
   }
   .landing-scrolled .landing-contactBtnText {
-    /* display: none; */
     color: #3385d7;
+    display: none;
   }
   .landing-scrolled .landing-contactIcon {
     font-size: 18px;
@@ -1439,7 +1434,7 @@ footer {
     grid-template-columns: repeat(3, auto);
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 740px) {
   #menu-main-menu {
     display: flex;
     flex-direction: column;
@@ -1449,6 +1444,9 @@ footer {
     color: #808080;
     letter-spacing: 0.2px;
     word-spacing: 0.5px;
+  }
+  #menu-main-menu li {
+    height: 70px;
   }
 }
 
