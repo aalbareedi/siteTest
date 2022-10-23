@@ -314,7 +314,7 @@ img {
   font-size: 15px;
 }
 .landing-info {
-  margin-top: 22px;
+  z-index: 300;
   justify-content: center;
   column-gap: 20px;
   display: none;
@@ -336,9 +336,11 @@ img {
   margin-top: 2px;
   font-size: 16px;
   color: #a9a9a9;
+  letter-spacing: 0.2px;
 }
 .landing-contactIcon {
-  font-size: 20px;
+  font-size: 22px;
+  color: #007bff;
 }
 
 /* *************************** ABOUT ************************** */
@@ -1175,6 +1177,7 @@ footer {
   }
   .contactBtnText {
     font-size: 16px;
+    letter-spacing: 0.2px;
   }
   .main-about-text {
     font-size: 18px;
@@ -1382,22 +1385,43 @@ footer {
     width: 50%;
     position: initial;
     padding-top: 140px;
+    overflow-y: auto;
   }
   .landing-tagline {
     line-height: 62px;
     max-width: 364px;
-    margin-bottom: 42px;
+    margin-bottom: 44px;
   }
   .cta-btn {
     font-size: 24px;
     width: 290px;
     height: 60px;
+    margin-bottom: 24px;
   }
   .landing-dock {
     display: none;
   }
   .landing-info {
     display: flex;
+  }
+  .landing-scrolled .landing-info {
+    position: fixed;
+    top: 10px;
+    right: 60px;
+    column-gap: 10px;
+  }
+  .landing-scrolled .landing-btn {
+    height: 40px;
+    background-color: #e1e1e1;
+    border: none;
+  }
+  .landing-scrolled .landing-contactBtnText {
+    /* display: none; */
+    color: #3385d7;
+  }
+  .landing-scrolled .landing-contactIcon {
+    font-size: 18px;
+    color: #3385d7;
   }
 }
 @media only screen and (min-width: 1239px) {

@@ -9930,10 +9930,20 @@ $(document).ready(() => {
   $(document).on("scroll", function () {
     // console.log($(window).scrollTop());
 
-    if ($(window).scrollTop() > 0) {
+    var scroll = $(window).scrollTop();
+
+    if (scroll > 0) {
       $("#back_to_top").removeClass("opacityZero");
     } else {
       $("#back_to_top").addClass("opacityZero");
+    }
+
+    var landingBtnsTop = $(".landing-btns-wrapper").offset().top;
+
+    if (scroll > landingBtnsTop - 60) {
+      $("body").addClass("landing-scrolled");
+    } else if (scroll < landingBtnsTop - 60) {
+      $("body").removeClass("landing-scrolled");
     }
   });
 
