@@ -314,21 +314,22 @@ img {
   font-size: 15px;
 }
 .landing-info {
-  margin-top: 20px;
+  margin-top: 22px;
   justify-content: center;
   column-gap: 20px;
   display: none;
 }
 .landing-btn {
   border-radius: 50px;
-  width: 90px;
-  height: 50px;
+  width: 135px;
+  height: 54px;
   /* background-color: gainsboro; */
   border: 2px solid gray;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
+  column-gap: 10px;
 }
 .landing-contactBtnText {
   text-align: center;
@@ -1365,7 +1366,7 @@ footer {
   }
   .cta-btn {
     font-size: 26px;
-    width: 310px;
+    width: 308px;
     height: 64px;
   }
 }
@@ -1385,6 +1386,12 @@ footer {
   .landing-tagline {
     line-height: 62px;
     max-width: 364px;
+    margin-bottom: 42px;
+  }
+  .cta-btn {
+    font-size: 24px;
+    width: 290px;
+    height: 60px;
   }
   .landing-dock {
     display: none;
