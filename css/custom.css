@@ -161,6 +161,7 @@ img {
 #Side_slide .menu_wrapper {
   background: whitesmoke;
   height: 100%;
+  overflow-y: auto;
 }
 #Side_slide {
   display: block;
@@ -219,15 +220,8 @@ img {
   background-size: cover;
 }
 .landing-page-content {
-  /* background: url("../content/dentist4/images/dentist4-slider-bg.webp") center
-    center / cover no-repeat; */
-  /* background-color: #3043b8; */
-  /* background-color: rgba(29, 39, 53, 0.8); */
   background-color: rgba(21, 37, 58, 0.8);
-  /* background-color: rgba(36, 62, 98, 0.8); */
   padding: 24px 0px;
-  /* position: relative;
-  z-index: 1; */
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -251,7 +245,6 @@ img {
   margin-bottom: 6px;
   padding-left: 20px;
   word-spacing: 1.2px;
-  /* display: none; */
 }
 .landing-tagline {
   font-weight: bolder;
@@ -259,7 +252,6 @@ img {
   margin-bottom: 24px;
   margin-left: 20px;
   font-size: 24px;
-  /* text-align: center; */
   word-spacing: 0.4px;
 }
 .cta-btn {
@@ -278,7 +270,7 @@ img {
   font-weight: 600;
 }
 .landing-dock {
-  z-index: 100;
+  z-index: 160;
   display: flex;
   position: sticky;
   bottom: 0px;
@@ -1419,6 +1411,17 @@ footer {
     color: #3385d7;
   }
 }
+@media only screen and (min-width: 940px) {
+  .landing-scrolled .landing-info {
+    right: 466px;
+  }
+  .landing-scrolled .landing-contactBtnText {
+    display: block;
+  }
+  .landing-scrolled .landing-btn {
+    width: 124px;
+  }
+}
 @media only screen and (min-width: 1239px) {
   #menu-main-menu {
     flex-direction: row;
@@ -1434,7 +1437,7 @@ footer {
     grid-template-columns: repeat(3, auto);
   }
 }
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 700px) {
   #menu-main-menu {
     display: flex;
     flex-direction: column;
