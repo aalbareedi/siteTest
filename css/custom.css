@@ -1378,8 +1378,12 @@ footer {
     width: 50%;
     /* position: initial; */
     position: relative;
-    padding-top: 60px;
+    /* padding-top: 60px; */
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
   }
   .landing-tagline {
     line-height: 72px;
