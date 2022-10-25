@@ -87,7 +87,7 @@ img {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
-  background-color: pink;
+  /* background-color: pink; */
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -308,7 +308,7 @@ img {
 .landing-info {
   z-index: 300;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   column-gap: 20px;
 }
 .landing-btn {
@@ -557,7 +557,6 @@ img {
   right: 10px;
   top: 10px;
   font-size: 16px;
-  /* background: gainsboro; */
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -565,6 +564,9 @@ img {
   justify-content: center;
   align-items: center;
   transition: all 0.5s;
+}
+.service-content:hover .service-arrow {
+  background: #89c2de;
 }
 .service-icon {
   color: #1f2e88;
@@ -612,6 +614,7 @@ img {
   display: flex;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 .intro-content-cards {
   display: flex;
@@ -1384,11 +1387,15 @@ footer {
     margin-bottom: 44px;
     font-size: 56px;
   }
+  .desktop-btns-wrapper {
+    padding-left: 22px;
+  }
   .cta-btn {
     /* font-size: 24px; */
     width: 290px;
     height: 60px;
     margin-bottom: 24px;
+    margin-left: 0px;
   }
   .landing-dock {
     display: none;
@@ -1439,6 +1446,9 @@ footer {
     font-size: 28px;
     padding-left: 30px;
   }
+  .desktop-btns-wrapper {
+    padding-left: 32px;
+  }
 }
 @media only screen and (min-width: 1100px) {
   .landing-tagline {
@@ -1450,6 +1460,36 @@ footer {
   .landing-welcome {
     font-size: 32px;
     padding-left: 34px;
+  }
+  .desktop-btns-wrapper {
+    padding-left: 36px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .landing-tagline {
+    max-width: 520px;
+    font-size: 82px;
+    line-height: 100px;
+    margin-left: 40px;
+  }
+  .landing-welcome {
+    font-size: 35px;
+    padding-left: 40px;
+  }
+  .desktop-btns-wrapper {
+    padding-left: 44px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .landing-tagline {
+    max-width: 590px;
+    font-size: 92px;
+    line-height: 112px;
+    margin-bottom: 46px;
+  }
+  .landing-welcome {
+    font-size: 39px;
+    word-spacing: 3.6px;
   }
 }
 @media only screen and (max-width: 700px) {

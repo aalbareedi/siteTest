@@ -110,6 +110,7 @@ rs-progress {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  cursor: ew-resize;
 }
 .slick-list:focus {
   outline: none;
