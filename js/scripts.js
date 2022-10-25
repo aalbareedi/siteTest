@@ -9834,6 +9834,8 @@ jQuery(window).on("load", function () {
 $(document).ready(() => {
   console.log("doc ready");
 
+  landingBtnsScrolled();
+
   // for when page loads & scrolled down the page
   if ($(window).scrollTop() > 0) {
     $("#back_to_top").removeClass("opacityZero");
@@ -9938,14 +9940,7 @@ $(document).ready(() => {
     } else {
       $("#back_to_top").addClass("opacityZero");
     }
-
-    var landingBtnsTop = $(".landing-btns-wrapper").offset().top;
-
-    if (scroll > landingBtnsTop - 60) {
-      $("body").addClass("landing-scrolled");
-    } else if (scroll < landingBtnsTop - 60) {
-      $("body").removeClass("landing-scrolled");
-    }
+    landingBtnsScrolled();
   });
 
   // $("#slider-1-slide-1-layer-2").parent().addClass("test");
@@ -9972,4 +9967,16 @@ $(document).ready(() => {
     );
     $(".page-size").removeClass("displayHidden");
   }, 3000);
+
+  function landingBtnsScrolled() {
+    var scroll = $(window).scrollTop();
+    var landingBtnsTop = $(".landing-btns-wrapper").offset().top;
+    var landingBtnsHeight = $(".landing-info").outerHeight();
+
+    if (scroll > landingBtnsTop - 60 + landingBtnsHeight) {
+      $("body").addClass("landing-scrolled");
+    } else if (scroll < landingBtnsTop - 60 + landingBtnsHeight) {
+      $("body").removeClass("landing-scrolled");
+    }
+  }
 });
