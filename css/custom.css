@@ -19,6 +19,7 @@ html {
 body {
   line-height: initial;
   height: 100%;
+  scroll-behavior: smooth;
 }
 body.mobile-side-slide {
   position: relative;
@@ -87,7 +88,7 @@ img {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
-  /* background-color: pink; */
+  background-color: pink;
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -413,9 +414,9 @@ img {
   margin-right: 18px;
 }
 .badge-icon {
-  border-radius: 50%;
+  /* border-radius: 50%; */
   width: 50px;
-  height: 50px;
+  /* height: 50px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1085,10 +1086,12 @@ footer {
 @media only screen and (min-width: 375px) {
   .badge-text {
     font-size: 16px;
-    min-width: 160px;
+    min-width: 166px;
+    letter-spacing: 0.2px;
+    margin-right: 16px;
   }
   .stat-badge {
-    width: 270px;
+    width: 274px;
   }
   #service-box-1.open-content {
     height: 348px;
@@ -1324,6 +1327,31 @@ footer {
   }
   .img-edit {
     top: 65px;
+  }
+  .badge-text {
+    font-size: 18px;
+    min-width: 190px;
+    letter-spacing: 0.4px;
+  }
+  .stat-badge {
+    width: 306px;
+  }
+  .badge-icon {
+    width: 56px;
+  }
+  .badge-icon-1 {
+    width: 22px;
+  }
+  .badge-icon-2 {
+    width: 28px;
+  }
+  .badge-icon-3 {
+    width: 24px;
+  }
+  .badge-check i {
+    font-size: 30px;
+    left: -4px;
+    top: -12px;
   }
 }
 @media only screen and (min-width: 500px) {
