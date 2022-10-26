@@ -7152,7 +7152,7 @@
 
   var pretty = false;
   // var mobile_init_W = 1001;
-  var mobile_init_W = 701;
+  var mobile_init_W = 700 + 1;
 
   window.elementorFrontendConfig = {
     environmentMode: {
@@ -7856,9 +7856,9 @@
 
       var reload = function () {
         if ($(document).width() < ss_mobile_init_W) {
-          constructor();
+          //constructor();
         } else {
-          destructor();
+          //destructor();
         }
       };
 
@@ -8786,15 +8786,15 @@
     /* ---------------------------------------------------------------------------
      * Go to top
      * --------------------------------------------------------------------------- */
-    jQuery("#back_to_top").on("click", function (e) {
-      jQuery("html,body").animate(
-        {
-          scrollTop: 0,
-        },
-        500
-      );
-      return false;
-    });
+    // jQuery("#back_to_top").on("click", function (e) {
+    //   jQuery("html,body").animate(
+    //     {
+    //       scrollTop: 0,
+    //     },
+    //     500
+    //   );
+    //   return false;
+    // });
 
     /* ---------------------------------------------------------------------------
      * Section navigation
@@ -9971,7 +9971,11 @@ $(document).ready(() => {
   function landingBtnsScrolled() {
     var scroll = $(window).scrollTop();
     var landingBtnsTop = $(".landing-btns-wrapper").offset().top;
-    var landingBtnsHeight = $(".landing-info").outerHeight();
+    var landingBtnsHeight = $(".landing-btns-wrapper").outerHeight();
+
+    console.log("scroll: ", scroll);
+    console.log("landingBtnsTop: ", landingBtnsTop);
+    console.log("landingBtnsHeight: ", landingBtnsHeight);
 
     if (scroll > landingBtnsTop - 60 + landingBtnsHeight) {
       $("body").addClass("landing-scrolled");

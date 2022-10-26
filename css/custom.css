@@ -1134,6 +1134,7 @@ footer {
     font-size: 26px;
     max-width: 328px;
     word-spacing: 0.6px;
+    margin-left: -2px;
   }
   .landing-page-content {
     padding: 28px 0px 36px 0px;
@@ -1281,6 +1282,49 @@ footer {
     width: 220px;
     height: 54px;
   }
+  .stat-intro-text {
+    margin-left: 0px;
+    font-size: 28px;
+    max-width: 360px;
+    line-height: 42px;
+    margin-bottom: 34px;
+    word-spacing: 1px;
+  }
+  .stat-number {
+    font-size: 28px;
+  }
+  .stat-info-text {
+    font-size: 20px;
+  }
+  .smile-emoji {
+    font-size: 52px;
+  }
+  .stat-wrapper {
+    padding-top: 3px;
+  }
+  .about-wrapper {
+    margin-bottom: 46px;
+  }
+  .doctorTitle {
+    font-size: 26px;
+  }
+  .doctorName {
+    font-size: 28px;
+  }
+  .doctor-content {
+    margin-left: -35px;
+  }
+  .doc-profile {
+    width: 120px;
+    height: 120px;
+    margin-right: -24px;
+  }
+  .doctorImg {
+    width: 160px;
+  }
+  .img-edit {
+    top: 65px;
+  }
 }
 @media only screen and (min-width: 500px) {
   .landing-tagline {
@@ -1298,6 +1342,30 @@ footer {
     font-size: 20px;
     width: 250px;
     height: 56px;
+  }
+  .stat-intro-text {
+    font-size: 34px;
+    max-width: 430px;
+    line-height: 51px;
+  }
+  .stat-number {
+    font-size: 34px;
+    margin-bottom: 2px;
+  }
+  .stat-info-text {
+    font-size: 24px;
+  }
+  .smile-emoji {
+    font-size: 60px;
+  }
+  .stat-wrapper {
+    padding-top: 6px;
+  }
+  .stat-container {
+    column-gap: 16px;
+  }
+  .stat-numb-wrapper {
+    row-gap: 40px;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -1406,6 +1474,7 @@ footer {
   }
   .landing-btns-wrapper {
     display: block;
+    min-height: 54px;
   }
   .landing-scrolled .landing-info {
     position: fixed;
