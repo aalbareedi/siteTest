@@ -1175,9 +1175,9 @@ body:not(.template-slider) #Header_wrapper {
   background-position: top center;
 }
 
-body:not(.template-slider) #Header_wrapper.bg-fixed {
+/* body:not(.template-slider) #Header_wrapper.bg-fixed {
   background-attachment: fixed;
-}
+} */
 
 #Header_wrapper {
   position: relative;
@@ -6896,10 +6896,10 @@ body {
   }
 
   /* .section */
-  .section {
+  /* .section {
     background-attachment: scroll !important;
     height: auto !important;
-  }
+  } */
 
   /* Header */
   #Top_bar,
