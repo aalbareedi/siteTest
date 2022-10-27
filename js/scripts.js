@@ -8787,14 +8787,40 @@
      * Go to top
      * --------------------------------------------------------------------------- */
     jQuery("#back_to_top").on("click", function (e) {
-      jQuery("html,body").animate(
-        {
-          scrollTop: 0,
-        },
-        500
-      );
+      smoothScrollTo(0);
+      // jQuery("html,body").animate(
+      //   {
+      //     scrollTop: 0,
+      //   },
+      //   500
+      // );
       return false;
     });
+
+    const smoothScrollTo = (y, { duration = 400, offset = 0 } = {}) => {
+      const easeOutCubic = (t) => --t * t * t + 1;
+      const startY = window.scrollY;
+      const difference = y - startY;
+      const startTime = performance.now();
+
+      if (y === startY + offset) {
+        return Promise.resolve(undefined);
+      }
+
+      return new Promise((resolve) => {
+        const step = () => {
+          const progress = (performance.now() - startTime) / duration;
+          const amount = easeOutCubic(progress);
+          window.scrollTo({ top: startY + amount * difference - offset });
+          if (progress < 0.99) {
+            window.requestAnimationFrame(step);
+          } else {
+            resolve(undefined);
+          }
+        };
+        step();
+      });
+    };
 
     /* ---------------------------------------------------------------------------
      * Section navigation
