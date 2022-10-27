@@ -8786,15 +8786,15 @@
     /* ---------------------------------------------------------------------------
      * Go to top
      * --------------------------------------------------------------------------- */
-    // jQuery("#back_to_top").on("click", function (e) {
-    //   jQuery("html,body").animate(
-    //     {
-    //       scrollTop: 0,
-    //     },
-    //     500
-    //   );
-    //   return false;
-    // });
+    jQuery("#back_to_top").on("click", function (e) {
+      jQuery("html,body").animate(
+        {
+          scrollTop: 0,
+        },
+        500
+      );
+      return false;
+    });
 
     /* ---------------------------------------------------------------------------
      * Section navigation
