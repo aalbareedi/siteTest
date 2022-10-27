@@ -8855,12 +8855,14 @@
     jQuery("a").on("click", function (e) {
       if (this.getAttribute("href").startsWith("#")) {
         e.preventDefault();
-        jQuery("html,body").animate(
-          {
-            scrollTop: $(this.getAttribute("href")).offset().top - 60,
-          },
-          500
-        );
+        // jQuery("html,body").animate(
+        //   {
+        //     scrollTop: $(this.getAttribute("href")).offset().top - 60,
+        //   },
+        //   500
+        // );
+
+        smoothScrollTo($(this.getAttribute("href")).offset().top - 60);
 
         closeNavMenu();
       }
