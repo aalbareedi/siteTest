@@ -1376,6 +1376,7 @@ footer {
     max-width: 430px;
     line-height: 51px;
     margin-bottom: 40px;
+    word-spacing: 1.2px;
   }
   .stat-number {
     font-size: 34px;
@@ -1408,6 +1409,9 @@ footer {
   #content-box-1 {
     padding-top: 42px;
   }
+  .about-wrapper {
+    margin-bottom: 48px;
+  }
   .about-title {
     margin-bottom: 28px;
   }
@@ -1432,8 +1436,15 @@ footer {
   .doctorImg {
     width: 164px;
   }
+  .main-about-text {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 @media only screen and (min-width: 600px) {
+  .about-title {
+    margin-bottom: 30px;
+  }
   .landing-page-content {
     padding: 32px 0px 44px 0px;
   }
@@ -1453,6 +1464,7 @@ footer {
     font-size: 36px;
     max-width: 462px;
     line-height: 54px;
+    word-spacing: 1.4px;
   }
   .stat-number {
     font-size: 36px;
@@ -1460,6 +1472,27 @@ footer {
   }
   .stat-info-text {
     font-size: 26px;
+  }
+  .smile-emoji {
+    font-size: 66px;
+  }
+  .stat-wrapper {
+    padding-top: 10px;
+  }
+  .about-wrapper {
+    margin-bottom: 50px;
+  }
+  .doctorTitle {
+    font-size: 32px;
+  }
+  .doctorName {
+    font-size: 36px;
+  }
+  .main-doc {
+    max-width: 314px;
+  }
+  .main-about-text {
+    padding-right: 5px;
   }
 }
 @media only screen and (min-width: 667px) {
@@ -1491,6 +1524,14 @@ footer {
   #googleMap {
     height: 260px;
   }
+  .stat-intro-text {
+    font-size: 38px;
+    max-width: 480px;
+    line-height: 56px;
+  }
+  .stat-number {
+    font-size: 38px;
+  }
 }
 @media only screen and (min-width: 744px) {
   .landing-page-content {
@@ -1508,6 +1549,34 @@ footer {
     /* font-size: 26px; */
     width: 308px;
     height: 64px;
+  }
+  .stat-intro-text {
+    font-size: 44px;
+    word-spacing: 3px;
+    line-height: 62px;
+    margin-bottom: 44px;
+  }
+  .stat-number {
+    font-size: 44px;
+    margin-bottom: 8px;
+  }
+  .stat-numb-wrapper {
+    row-gap: 44px;
+  }
+  .stat-container {
+    justify-content: center;
+  }
+  .stat-info-text {
+    padding-left: 4px;
+  }
+  .smile-emoji {
+    font-size: 72px;
+  }
+  .stat-wrapper {
+    padding-top: 12px;
+  }
+  .about-title {
+    margin-bottom: 32px;
   }
 }
 @media only screen and (min-width: 777px) {
