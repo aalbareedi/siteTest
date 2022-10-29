@@ -25,9 +25,12 @@ body:not(.template-slider) #Content {
 .section {
   position: relative;
 }
-.section_wrapper,
-.container {
+.section_wrapper {
   width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.container {
   margin: 0 auto;
   position: relative;
 }
@@ -4606,7 +4609,6 @@ body {
     line-height: 30px !important;
   }
 }
-
 @media only screen and (max-width: 700px) {
   #Top_bar #menu {
     display: none;
@@ -4825,7 +4827,6 @@ body {
     background-image: none !important;
   }
 }
-
 @media only screen and (min-width: 960px) and (max-width: 1239px) {
   body {
     min-width: 0;
@@ -4833,8 +4834,11 @@ body {
   #Wrapper {
     width: 960px;
   }
+  .container {
+    width: 940px;
+    max-width: 940px;
+  }
   .section_wrapper,
-  .container,
   .with_aside .content_wrapper {
     width: 940px;
   }
@@ -5051,7 +5055,6 @@ body {
     min-width: 0;
   }
   .section_wrapper,
-  .container,
   .with_aside .content_wrapper {
     max-width: 940px;
   }
@@ -5686,7 +5689,6 @@ body {
     margin: 0 auto !important;
   }
   .section_wrapper,
-  .container,
   .four.columns .widget-area {
     max-width: 90%;
     max-width: calc(100% - 67px) !important;

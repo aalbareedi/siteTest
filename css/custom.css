@@ -46,6 +46,11 @@ h6 {
 img {
   pointer-events: none;
 }
+.container {
+  width: calc(100% - 67px) !important;
+  padding: 0px;
+  max-width: 480px;
+}
 .page-size {
   z-index: 1000;
   position: fixed;
@@ -88,7 +93,7 @@ img {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
-  /* background-color: red; */
+  background-color: pink;
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -358,6 +363,8 @@ img {
   text-align: left;
   font-size: 24px;
   word-spacing: 0.4px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .stat-info-text {
   color: #fff;
@@ -454,6 +461,7 @@ img {
 .stat-container {
   display: flex;
   column-gap: 14px;
+  justify-content: center;
 }
 .stat-wrapper {
   padding-top: 1px;
@@ -1137,7 +1145,6 @@ footer {
     font-size: 26px;
     max-width: 328px;
     word-spacing: 0.6px;
-    margin-left: -2px;
   }
   .landing-page-content {
     padding: 28px 0px 36px 0px;
@@ -1285,8 +1292,10 @@ footer {
     width: 220px;
     height: 54px;
   }
+  .main-stat-badges {
+    row-gap: 18px;
+  }
   .stat-intro-text {
-    margin-left: 0px;
     font-size: 28px;
     max-width: 360px;
     line-height: 42px;
@@ -1442,6 +1451,9 @@ footer {
   }
 }
 @media only screen and (min-width: 600px) {
+  .container {
+    max-width: 540px;
+  }
   .about-title {
     margin-bottom: 30px;
   }
@@ -1513,6 +1525,34 @@ footer {
     width: 290px;
     height: 60px;
   }
+  .about-doc-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 540px;
+    margin: 0px auto 34px auto;
+  }
+  .main-doc {
+    flex-direction: column;
+    row-gap: 24px;
+    margin: 0px;
+  }
+  .doctor-content {
+    margin-left: 0px;
+  }
+  .doctorName {
+    margin-left: 4px;
+  }
+  .main-stat-badges {
+    justify-content: flex-end;
+    margin-right: -16px;
+  }
+  .about-wrapper {
+    margin-bottom: 30px;
+  }
+  .doc-profile {
+    align-self: center;
+    margin: 0px;
+  }
   .office-container {
     display: flex;
     justify-content: center;
@@ -1534,6 +1574,9 @@ footer {
   }
 }
 @media only screen and (min-width: 744px) {
+  .container {
+    max-width: 650px;
+  }
   .landing-page-content {
     padding: 40px 0px 56px 0px;
   }
@@ -1546,25 +1589,22 @@ footer {
     margin-bottom: 50px;
   }
   .cta-btn {
-    /* font-size: 26px; */
     width: 308px;
     height: 64px;
   }
   .stat-intro-text {
-    font-size: 44px;
+    font-size: 42px;
     word-spacing: 3px;
     line-height: 62px;
-    margin-bottom: 44px;
+    margin-bottom: 46px;
+    max-width: 540px;
   }
   .stat-number {
-    font-size: 44px;
+    font-size: 42px;
     margin-bottom: 8px;
   }
   .stat-numb-wrapper {
     row-gap: 44px;
-  }
-  .stat-container {
-    justify-content: center;
   }
   .stat-info-text {
     padding-left: 4px;

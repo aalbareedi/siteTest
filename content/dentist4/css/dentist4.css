@@ -1481,107 +1481,6 @@ a.action_button,
   font-weight: 500;
   letter-spacing: 0px;
 }
-/* @media only screen and (max-width: 479px) {
-  .big {
-    font-size: 13px;
-    line-height: 19px;
-    letter-spacing: 0px;
-  }
-  #menu > ul > li > a,
-  a.action_button,
-  #overlay-menu ul li a {
-    font-size: 13px;
-    letter-spacing: 0px;
-  }
-  #overlay-menu ul li a {
-    line-height: 19.5px;
-    letter-spacing: 0px;
-  }
-  #Subheader .title {
-    font-size: 45px;
-    line-height: 45px;
-    letter-spacing: 0px;
-  }
-  h3,
-  .woocommerce ul.products li.product h3 {
-    font-size: 24px;
-    line-height: 36px;
-    letter-spacing: 0px;
-  }
-  h4 {
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0px;
-  }
-  h5 {
-    font-size: 13px;
-    line-height: 19px;
-    letter-spacing: 0px;
-  }
-  #Intro .intro-title {
-    font-size: 45px;
-    line-height: 45px;
-    letter-spacing: 0px;
-  }
-  blockquote {
-    font-size: 13px;
-  }
-  .chart_box .chart .num {
-    font-size: 35px;
-    line-height: 35px;
-  }
-  .counter .desc_wrapper .number-wrapper {
-    font-size: 35px;
-    line-height: 35px;
-  }
-  .counter .desc_wrapper .title {
-    font-size: 13px;
-    line-height: 26px;
-  }
-  .faq .question .title {
-    font-size: 13px;
-  }
-  .fancy_heading .title {
-    font-size: 30px;
-    line-height: 30px;
-  }
-  .offer .offer_li .desc_wrapper .title h3 {
-    font-size: 26px;
-    line-height: 26px;
-  }
-  .offer_thumb_ul li.offer_thumb_li .desc_wrapper .title h3 {
-    font-size: 26px;
-    line-height: 26px;
-  }
-  .pricing-box .plan-header h2 {
-    font-size: 21px;
-    line-height: 21px;
-  }
-  .pricing-box .plan-header .price > span {
-    font-size: 32px;
-    line-height: 32px;
-  }
-  .pricing-box .plan-header .price sup.currency {
-    font-size: 14px;
-    line-height: 14px;
-  }
-  .pricing-box .plan-header .price sup.period {
-    font-size: 13px;
-    line-height: 13px;
-  }
-  .quick_fact .number {
-    font-size: 60px;
-    line-height: 60px;
-  }
-  .trailer_box .desc h2 {
-    font-size: 21px;
-    line-height: 21px;
-  }
-  .widget > h3 {
-    font-size: 15px;
-    line-height: 18px;
-  }
-} */
 .with_aside .sidebar.columns {
   width: 23%;
 }
@@ -1601,13 +1500,6 @@ a.action_button,
 @media only screen and (min-width: 1240px) {
   .layout-boxed.header-boxed #Top_bar.is-sticky {
     max-width: 1240px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .section_wrapper,
-  .container,
-  .four.columns .widget-area {
-    max-width: 480px !important;
   }
 }
 .button-default .button,
@@ -4066,9 +3958,6 @@ form input.display-none {
 .full-width .scale-with-grid {
   width: 100%;
 }
-.container {
-  z-index: 2;
-}
 .image_frame.stretch .image_wrapper img {
   width: 100%;
 }
@@ -4429,7 +4318,6 @@ img.scale-with-grid,
     width: 100% !important;
   }
   .section_wrapper,
-  .container,
   .four.columns .widget-area {
     width: calc(100% - 67px) !important;
     padding: 0px;
