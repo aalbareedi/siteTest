@@ -93,7 +93,7 @@ img {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
-  background-color: pink;
+  /* background-color: pink; */
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -371,7 +371,7 @@ img {
   margin-bottom: 0px;
   font-size: 16px;
   padding-left: 2px;
-  min-width: 128px;
+  min-width: 135px;
   letter-spacing: 0.4px;
 }
 .main-about-text {
@@ -456,7 +456,7 @@ img {
   margin-right: 1px;
 }
 .smile-emoji {
-  font-size: 44px;
+  font-size: 46px;
 }
 .stat-container {
   display: flex;
@@ -1151,6 +1151,7 @@ footer {
   }
   .stat-info-text {
     font-size: 18px;
+    min-width: 151px;
   }
   .about-wrapper {
     margin-bottom: 44px;
@@ -1307,6 +1308,7 @@ footer {
   }
   .stat-info-text {
     font-size: 20px;
+    min-width: 166px;
   }
   .smile-emoji {
     font-size: 52px;
@@ -1393,6 +1395,7 @@ footer {
   }
   .stat-info-text {
     font-size: 24px;
+    min-width: 197px;
   }
   .smile-emoji {
     font-size: 60px;
@@ -1484,6 +1487,8 @@ footer {
   }
   .stat-info-text {
     font-size: 26px;
+    min-width: 215px;
+    padding-left: 4px;
   }
   .smile-emoji {
     font-size: 66px;
@@ -1605,9 +1610,6 @@ footer {
   }
   .stat-numb-wrapper {
     row-gap: 44px;
-  }
-  .stat-info-text {
-    padding-left: 4px;
   }
   .smile-emoji {
     font-size: 72px;
