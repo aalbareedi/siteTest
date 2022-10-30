@@ -1452,6 +1452,26 @@ footer {
     font-size: 20px;
     line-height: 30px;
   }
+  .stat-badge {
+    width: 328px;
+  }
+  .badge-icon {
+    width: 58px;
+  }
+  .badge-text {
+    font-size: 20px;
+    min-width: 210px;
+    word-spacing: 0.8px;
+  }
+  .badge-check {
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+  }
+  .badge-check i {
+    font-size: 32px;
+    top: -13px;
+  }
 }
 @media only screen and (min-width: 600px) {
   .container {
@@ -1509,7 +1529,10 @@ footer {
     max-width: 314px;
   }
   .main-about-text {
-    padding-right: 5px;
+    padding-right: 0px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media only screen and (min-width: 667px) {
@@ -1549,7 +1572,7 @@ footer {
   }
   .main-stat-badges {
     justify-content: flex-end;
-    margin-right: -16px;
+    margin-right: -20px;
   }
   .about-wrapper {
     margin-bottom: 30px;
@@ -1683,6 +1706,39 @@ footer {
   .landing-scrolled .landing-contactIcon {
     font-size: 18px;
     color: #3385d7;
+  }
+  .stat-intro-text {
+    font-size: 48px;
+    max-width: 650px;
+  }
+  .stat-number {
+    font-size: 48px;
+  }
+  .stat-container {
+    column-gap: 18px;
+  }
+  .smile-emoji {
+    font-size: 76px;
+  }
+  .main-about-text {
+    max-width: 650px;
+  }
+  .about-doc-wrapper {
+    margin-left: initial;
+    margin-right: initial;
+    max-width: 616px;
+  }
+  .doctorName {
+    margin-left: 34px;
+  }
+  .main-doc {
+    row-gap: 26px;
+  }
+  .doc-profile {
+    margin-left: 28px;
+  }
+  .main-stat-badges {
+    margin-left: 0px;
   }
 }
 @media only screen and (min-width: 940px) {
