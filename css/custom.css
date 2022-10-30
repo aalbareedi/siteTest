@@ -1513,8 +1513,9 @@ footer {
   }
   .stat-info-text {
     font-size: 26px;
-    min-width: 215px;
+    min-width: 216px;
     padding-left: 4px;
+    word-spacing: 0.6px;
   }
   .smile-emoji {
     font-size: 66px;
@@ -1651,13 +1652,16 @@ footer {
     font-size: 72px;
   }
   .stat-wrapper {
-    padding-top: 12px;
+    padding-top: 14px;
   }
   .about-title {
     margin-bottom: 34px;
   }
 }
 @media only screen and (min-width: 777px) {
+  .stat-wrapper {
+    padding-top: 18px;
+  }
   #landing-page {
     flex-direction: row;
     height: calc(100% - 60px);
@@ -1724,6 +1728,8 @@ footer {
     font-size: 48px;
     max-width: 650px;
     margin-bottom: 50px;
+    line-height: 68px;
+    word-spacing: 4.8px;
   }
   .stat-number {
     font-size: 48px;
@@ -1757,16 +1763,43 @@ footer {
   .container {
     max-width: 740px;
   }
+  .stat-numb-wrapper {
+    margin-top: 14px;
+    flex-direction: row;
+    column-gap: 60px;
+  }
+  .about-wrapper {
+    /* display: flex; */
+    margin-bottom: 60px;
+  }
+  .about-doc-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none;
+  }
+  .main-doc {
+    flex-direction: row;
+    max-width: none;
+  }
+  .doctorName {
+    margin-left: 2px;
+  }
+  .main-stat-badges {
+    margin-right: -2px;
+  }
+  .doctor-content {
+    padding-top: 14px;
+  }
   .stat-intro-text {
     margin-left: 0px;
   }
   .about-title {
-    margin-bottom: 36px;
+    margin-bottom: 38px;
   }
-  .stat-numb-wrapper {
+  /* .stat-numb-wrapper {
     flex-direction: row;
     column-gap: 48px;
-  }
+  } */
   .main-about-text {
     margin-left: 0px;
     max-width: 750px;
