@@ -1477,6 +1477,12 @@ footer {
   .container {
     max-width: 540px;
   }
+  .about-doc-wrapper {
+    margin-bottom: 38px;
+  }
+  #content-box-1 {
+    padding-top: 44px;
+  }
   .about-title {
     margin-bottom: 30px;
   }
@@ -1536,6 +1542,9 @@ footer {
   }
 }
 @media only screen and (min-width: 667px) {
+  .about-title {
+    margin-bottom: 32px;
+  }
   .landing-page-content {
     padding: 34px 0px 46px 0px;
   }
@@ -1572,7 +1581,7 @@ footer {
   }
   .main-stat-badges {
     justify-content: flex-end;
-    margin-right: -20px;
+    margin-right: -26px;
   }
   .about-wrapper {
     margin-bottom: 30px;
@@ -1605,6 +1614,10 @@ footer {
   .container {
     max-width: 650px;
   }
+  #content-box-1 {
+    padding-top: 48px;
+    padding-bottom: 44px;
+  }
   .landing-page-content {
     padding: 40px 0px 56px 0px;
   }
@@ -1624,7 +1637,7 @@ footer {
     font-size: 42px;
     word-spacing: 3px;
     line-height: 62px;
-    margin-bottom: 46px;
+    margin-bottom: 42px;
     max-width: 540px;
   }
   .stat-number {
@@ -1641,7 +1654,7 @@ footer {
     padding-top: 12px;
   }
   .about-title {
-    margin-bottom: 32px;
+    margin-bottom: 34px;
   }
 }
 @media only screen and (min-width: 777px) {
@@ -1710,6 +1723,7 @@ footer {
   .stat-intro-text {
     font-size: 48px;
     max-width: 650px;
+    margin-bottom: 50px;
   }
   .stat-number {
     font-size: 48px;
@@ -1727,6 +1741,7 @@ footer {
     margin-left: initial;
     margin-right: initial;
     max-width: 616px;
+    margin-bottom: 38px;
   }
   .doctorName {
     margin-left: 34px;
@@ -1737,11 +1752,25 @@ footer {
   .doc-profile {
     margin-left: 28px;
   }
-  .main-stat-badges {
-    margin-left: 0px;
-  }
 }
 @media only screen and (min-width: 940px) {
+  .container {
+    max-width: 740px;
+  }
+  .stat-intro-text {
+    margin-left: 0px;
+  }
+  .about-title {
+    margin-bottom: 36px;
+  }
+  .stat-numb-wrapper {
+    flex-direction: row;
+    column-gap: 48px;
+  }
+  .main-about-text {
+    margin-left: 0px;
+    max-width: 750px;
+  }
   .landing-scrolled .landing-info {
     right: 466px;
   }
