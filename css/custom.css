@@ -1770,19 +1770,24 @@ footer {
   }
   .about-wrapper {
     /* display: flex; */
-    margin-bottom: 60px;
+    margin-bottom: 46px;
   }
   .about-doc-wrapper {
     margin-left: auto;
     margin-right: auto;
-    max-width: none;
+    max-width: 650px;
+    justify-content: initial;
+    column-gap: 70px;
+  }
+  .stat-intro-text {
+    margin-bottom: 58px;
   }
   .main-doc {
-    flex-direction: row;
+    /* flex-direction: row; */
     max-width: none;
   }
-  .doctorName {
-    margin-left: 2px;
+  .doc-profile {
+    margin-left: 32px;
   }
   .main-stat-badges {
     margin-right: -2px;
@@ -1790,9 +1795,9 @@ footer {
   .doctor-content {
     padding-top: 14px;
   }
-  .stat-intro-text {
+  /* .stat-intro-text {
     margin-left: 0px;
-  }
+  } */
   .about-title {
     margin-bottom: 38px;
   }
@@ -1800,10 +1805,10 @@ footer {
     flex-direction: row;
     column-gap: 48px;
   } */
-  .main-about-text {
+  /* .main-about-text {
     margin-left: 0px;
     max-width: 750px;
-  }
+  } */
   .landing-scrolled .landing-info {
     right: 466px;
   }
@@ -1843,8 +1848,38 @@ footer {
   .desktop-btns-wrapper {
     padding-left: 36px;
   }
+  .stat-intro-text {
+    font-size: 52px;
+    max-width: 670px;
+    line-height: 74px;
+  }
+  .stat-number {
+    font-size: 52px;
+    margin-bottom: 10px;
+  }
+  .about-doc-wrapper {
+    max-width: 670px;
+  }
+  .doctorTitle {
+    font-size: 34px;
+  }
+  .doctorName {
+    font-size: 40px;
+  }
+  .main-about-text {
+    max-width: 670px;
+  }
+  .smile-emoji {
+    font-size: 78px;
+  }
 }
 @media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 840px;
+  }
+  /* .stat-intro-text {
+    margin-left: auto;
+  } */
   .landing-tagline {
     max-width: 520px;
     font-size: 82px;
@@ -1857,6 +1892,47 @@ footer {
   }
   .desktop-btns-wrapper {
     padding-left: 44px;
+  }
+  .stat-intro-text {
+    font-size: 54px;
+    max-width: 710px;
+    word-spacing: 5.4px;
+  }
+  .stat-numb-wrapper {
+    justify-content: center;
+    column-gap: 64px;
+  }
+  .stat-number {
+    font-size: 54px;
+  }
+  .main-about-text {
+    max-width: 710px;
+  }
+  .about-doc-wrapper {
+    max-width: none;
+    column-gap: 40px;
+    margin-left: 35px;
+  }
+  .main-doc {
+    flex-direction: row;
+  }
+  .main-stat-badges {
+    margin-right: 0px;
+  }
+  .main-about-text {
+    font-size: 22px;
+    line-height: 33px;
+    max-width: 730px;
+    margin-left: 64px;
+  }
+  .about-wrapper {
+    margin-bottom: 68px;
+  }
+  .doctorName {
+    margin-left: 26px;
+  }
+  #content-box-1 {
+    padding-bottom: 48px;
   }
 }
 @media only screen and (min-width: 1440px) {
