@@ -533,22 +533,22 @@ img {
   background: #efefef;
 }
 #service-box-1.open-content {
-  height: 390px;
+  height: 400px;
 }
 #service-box-2.open-content {
-  height: 342px;
+  height: 352px;
 }
 #service-box-3.open-content {
-  height: 250px;
+  height: 256px;
 }
 #service-box-4.open-content {
-  height: 320px;
+  height: 328px;
 }
 #service-box-5.open-content {
-  height: 320px;
+  height: 328px;
 }
 #service-box-6.open-content {
-  height: 222px;
+  height: 230px;
 }
 .open-content .services-text {
   opacity: 1;
@@ -641,7 +641,7 @@ img {
   color: #1f2e88;
 }
 .routine-intro {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 .service-text-bp {
   padding-left: 24px;
@@ -1102,22 +1102,22 @@ footer {
     width: 274px;
   }
   #service-box-1.open-content {
-    height: 348px;
+    height: 352px;
   }
   #service-box-2.open-content {
-    height: 300px;
+    height: 304px;
   }
   #service-box-3.open-content {
-    height: 206px;
+    height: 208px;
   }
   #service-box-4.open-content {
-    height: 278px;
+    height: 280px;
   }
   #service-box-5.open-content {
-    height: 278px;
+    height: 280px;
   }
   #service-box-6.open-content {
-    height: 204px;
+    height: 206px;
   }
 }
 @media only screen and (min-width: 389px) {
@@ -1139,7 +1139,6 @@ footer {
     font-size: 16px;
     width: 206px;
     height: 52px;
-    /* margin-bottom: 8px; */
   }
   .stat-intro-text {
     font-size: 26px;
@@ -1198,22 +1197,22 @@ footer {
     margin-bottom: 8px;
   }
   #service-box-1.open-content {
-    height: 414px;
+    height: 416px;
   }
   #service-box-2.open-content {
-    height: 384px;
+    height: 388px;
   }
   #service-box-3.open-content {
-    height: 230px;
+    height: 250px;
   }
   #service-box-4.open-content {
-    height: 310px;
+    height: 306px;
   }
   #service-box-5.open-content {
-    height: 310px;
+    height: 304px;
   }
   #service-box-6.open-content {
-    height: 254px;
+    height: 250px;
   }
   .reviewSlideText {
     font-size: 20px;
@@ -1363,6 +1362,27 @@ footer {
     font-size: 30px;
     left: -4px;
     top: -12px;
+  }
+  .routine-intro {
+    margin-bottom: 8px;
+  }
+  #service-box-1.open-content {
+    height: 338px;
+  }
+  #service-box-2.open-content {
+    height: 310px;
+  }
+  #service-box-3.open-content {
+    height: 224px;
+  }
+  #service-box-4.open-content {
+    height: 278px;
+  }
+  #service-box-5.open-content {
+    height: 278px;
+  }
+  #service-box-6.open-content {
+    height: 222px;
   }
 }
 @media only screen and (min-width: 500px) {
@@ -1962,12 +1982,13 @@ footer {
   .about-wrapper {
     display: flex;
     margin-bottom: 48px;
+    max-width: 938px;
   }
   .stat-numb-wrapper {
     flex-direction: column;
     margin-top: 0px;
     justify-content: flex-end;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
   }
   .main-about-text {
     margin-left: 0px;
@@ -1994,6 +2015,9 @@ footer {
   .doctorName {
     min-width: 228px;
     margin-left: 24px;
+  }
+  .smile-emoji {
+    font-size: 80px;
   }
 }
 @media only screen and (max-width: 700px) {
