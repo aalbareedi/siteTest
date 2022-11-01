@@ -1384,6 +1384,11 @@ footer {
   #service-box-6.open-content {
     height: 222px;
   }
+  .intro-content-cards {
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media only screen and (min-width: 500px) {
   .landing-tagline {
@@ -1491,6 +1496,50 @@ footer {
   .badge-check i {
     font-size: 32px;
     top: -13px;
+  }
+  .services-text {
+    font-size: 20px;
+    line-height: 29px;
+    top: 60px;
+    word-spacing: 1px;
+  }
+  .bullet-point {
+    top: 3px;
+  }
+  #service-box-1.open-content {
+    height: 356px;
+  }
+  .service-content,
+  .service-box {
+    height: 60px;
+  }
+  .service-arrow {
+    top: 11px;
+  }
+  .service-arrow {
+    top: 12px;
+    right: 12px;
+  }
+  #service-box-1.open-content {
+    height: 362px;
+  }
+  #service-box-2.open-content {
+    height: 332px;
+  }
+  #service-box-3.open-content {
+    height: 242px;
+  }
+  #service-box-4.open-content {
+    height: 328px;
+  }
+  #service-box-5.open-content {
+    height: 328px;
+  }
+  #service-box-6.open-content {
+    height: 240px;
+  }
+  .intro-content-cards {
+    max-width: 400px;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -1630,6 +1679,24 @@ footer {
   .stat-number {
     font-size: 38px;
   }
+  .intro-content-cards {
+    max-width: 440px;
+  }
+  #service-box-2.open-content {
+    height: 304px;
+  }
+  #service-box-3.open-content {
+    height: 214px;
+  }
+  #service-box-4.open-content {
+    height: 300px;
+  }
+  #service-box-5.open-content {
+    height: 300px;
+  }
+  #service-box-6.open-content {
+    height: 210px;
+  }
 }
 @media only screen and (min-width: 744px) {
   .container {
@@ -1676,6 +1743,26 @@ footer {
   }
   .about-title {
     margin-bottom: 34px;
+  }
+  .service-card-title {
+    font-size: 22px;
+  }
+  .service-content,
+  .service-box {
+    height: 64px;
+  }
+  .services-text {
+    top: 64px;
+  }
+  .service-arrow {
+    width: 38px;
+    height: 38px;
+  }
+  #service-box-1.open-content {
+    height: 364px;
+  }
+  #service-box-2.open-content {
+    height: 308px;
   }
 }
 @media only screen and (min-width: 777px) {
