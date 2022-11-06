@@ -524,7 +524,7 @@ img {
 
 /* ************************** SERVICES ************************* */
 #services-box {
-  padding: 40px 0px;
+  padding: 40px 0px 42px 0px;
   background: #efefef;
 }
 #service-box-1.open-content {
@@ -1124,6 +1124,9 @@ footer {
     font-size: 18px;
     margin-bottom: 20px;
   }
+  #services-box {
+    padding-bottom: 44px;
+  }
   .landing-tagline {
     font-size: 26px;
     margin-bottom: 26px;
@@ -1253,6 +1256,8 @@ footer {
   }
   .treatmentBtnWrapper {
     column-gap: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
   /* .officeInfoSchedule {
     padding-right: 2px;
@@ -1542,6 +1547,7 @@ footer {
   }
   #services-box {
     padding-top: 42px;
+    padding-bottom: 46px;
   }
   .services-intro {
     margin-bottom: 34px;
@@ -1619,6 +1625,12 @@ footer {
 @media only screen and (min-width: 667px) {
   .about-title {
     margin-bottom: 32px;
+  }
+  .services-title {
+    max-width: none;
+  }
+  #services-box {
+    padding-bottom: 48px;
   }
   .landing-page-content {
     padding: 34px 0px 46px 0px;
@@ -1782,9 +1794,9 @@ footer {
   #service-box-6.open-content {
     height: 214px;
   }
-  .services-title {
+  /* .services-title {
     max-width: 242px;
-  }
+  } */
   h3 {
     font-size: 30px;
     line-height: 44px;
@@ -1793,6 +1805,9 @@ footer {
 @media only screen and (min-width: 777px) {
   .stat-wrapper {
     padding-top: 18px;
+  }
+  #services-box {
+    padding-bottom: 50px;
   }
   #landing-page {
     flex-direction: row;
@@ -1927,6 +1942,9 @@ footer {
   .container {
     max-width: 740px;
   }
+  #services-box {
+    padding-bottom: 52px;
+  }
   .stat-numb-wrapper {
     margin-top: 14px;
     flex-direction: row;
@@ -2053,6 +2071,9 @@ footer {
   .about-doc-wrapper {
     max-width: 670px;
   }
+  .services-title {
+    margin-left: -11px;
+  }
   .doctorTitle {
     font-size: 34px;
   }
@@ -2136,6 +2157,7 @@ footer {
   }
   .main-stat-badges {
     margin-right: 0px;
+    margin-top: 20px;
   }
   .main-about-text {
     font-size: 22px;
@@ -2207,15 +2229,19 @@ footer {
   .container {
     max-width: 940px;
   }
+  #services-box {
+    padding-bottom: 54px;
+  }
   .doc-profile {
     margin-top: 24px;
   }
   .main-stat-badges {
     align-items: flex-end;
+    margin-top: 10px;
   }
   #content-box-1 {
     padding-top: 52px;
-    padding-bottom: 66px;
+    padding-bottom: 68px;
   }
   .about-title {
     margin-bottom: 50px;
@@ -2250,6 +2276,7 @@ footer {
     margin-left: 0px;
     max-width: none;
     margin-right: -166px;
+    margin-top: 10px;
   }
   .about-doc-wrapper {
     margin-left: 0px;
@@ -2279,13 +2306,13 @@ footer {
   #service-box-2 {
     height: 346px;
   }
-  #service-box-3,
+  /* #service-box-3,
   #service-box-4 {
     height: 312px;
-  }
+  } */
   #service-box-5,
   #service-box-6 {
-    height: 282px;
+    height: 284px;
   }
 }
 @media only screen and (max-width: 700px) {
