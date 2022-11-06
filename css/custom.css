@@ -19,7 +19,6 @@ html {
 body {
   line-height: initial;
   height: 100%;
-  /* scroll-behavior: smooth; */
 }
 body.mobile-side-slide {
   position: relative;
@@ -350,7 +349,6 @@ img {
 .about-title {
   text-align: center;
   margin-bottom: 22px;
-  /* color: #3385d7; */
   color: #32b0e8;
 }
 .intro-container {
@@ -406,7 +404,6 @@ img {
   position: relative;
   display: flex;
   align-items: center;
-  /* flex-basis: 100%; */
   width: 100%;
   border: 2px solid gainsboro;
   border-radius: 10px;
@@ -421,9 +418,7 @@ img {
   margin-right: 18px;
 }
 .badge-icon {
-  /* border-radius: 50%; */
   width: 50px;
-  /* height: 50px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -529,7 +524,7 @@ img {
 
 /* ************************** SERVICES ************************* */
 #services-box {
-  padding: 50px 0px;
+  padding: 40px 0px;
   background: #efefef;
 }
 #service-box-1.open-content {
@@ -858,11 +853,11 @@ img {
   text-align: center;
 }
 .officeInfoGrid {
-  display: grid;
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
   row-gap: 2px;
   column-gap: 28px;
-  grid-template-columns: repeat(2, auto);
 }
 #officeScheduleIcon {
   left: -37px;
@@ -1127,6 +1122,7 @@ footer {
   }
   h6 {
     font-size: 18px;
+    margin-bottom: 20px;
   }
   .landing-tagline {
     font-size: 26px;
@@ -1192,6 +1188,7 @@ footer {
   }
   .service-card-title {
     font-size: 20px;
+    word-spacing: 0.6px;
   }
   .service-text-bp {
     margin-bottom: 8px;
@@ -1273,7 +1270,7 @@ footer {
     margin-bottom: 24px;
   }
   .services-intro {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
   .officeInfoGrid {
     column-gap: 32px;
@@ -1436,9 +1433,11 @@ footer {
   }
   h6 {
     font-size: 20px;
+    margin-bottom: 22px;
   }
   h3 {
     font-size: 28px;
+    line-height: 42px;
   }
   .services-title {
     max-width: 230px;
@@ -1540,6 +1539,12 @@ footer {
   }
   .intro-content-cards {
     max-width: 400px;
+  }
+  #services-box {
+    padding-top: 42px;
+  }
+  .services-intro {
+    margin-bottom: 34px;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -1757,12 +1762,32 @@ footer {
   .service-arrow {
     width: 38px;
     height: 38px;
+    font-size: 18px;
   }
   #service-box-1.open-content {
     height: 364px;
   }
   #service-box-2.open-content {
     height: 308px;
+  }
+  #service-box-3.open-content {
+    height: 216px;
+  }
+  #service-box-4.open-content {
+    height: 302px;
+  }
+  #service-box-5.open-content {
+    height: 302px;
+  }
+  #service-box-6.open-content {
+    height: 214px;
+  }
+  .services-title {
+    max-width: 242px;
+  }
+  h3 {
+    font-size: 30px;
+    line-height: 44px;
   }
 }
 @media only screen and (min-width: 777px) {
@@ -1862,6 +1887,41 @@ footer {
   .doc-profile {
     margin-left: 28px;
   }
+  .intro-content-cards {
+    max-width: 460px;
+  }
+  .service-box {
+    border-width: 3px;
+  }
+  .service-content,
+  .service-box {
+    height: 68px;
+  }
+  .service-arrow {
+    top: 14px;
+    right: 14px;
+  }
+  #service-box-1.open-content {
+    height: 338px;
+  }
+  #service-box-2.open-content {
+    height: 310px;
+  }
+  #service-box-3.open-content {
+    height: 220px;
+  }
+  #service-box-4.open-content {
+    height: 308px;
+  }
+  #service-box-5.open-content {
+    height: 278px;
+  }
+  #service-box-6.open-content {
+    height: 218px;
+  }
+  .services-text {
+    top: 68px;
+  }
 }
 @media only screen and (min-width: 940px) {
   .container {
@@ -1923,6 +1983,45 @@ footer {
   .desktop-btns-wrapper {
     padding-left: 32px;
   }
+  .intro-content-cards {
+    max-width: 480px;
+  }
+  .service-content,
+  .service-box {
+    height: 70px;
+  }
+  .services-text {
+    top: 70px;
+  }
+  .service-arrow {
+    top: 15px;
+    right: 15px;
+  }
+  .service-card-title {
+    font-size: 24px;
+  }
+  .service-arrow {
+    width: 40px;
+    height: 40px;
+  }
+  #service-box-1.open-content {
+    height: 342px;
+  }
+  #service-box-2.open-content {
+    height: 312px;
+  }
+  #service-box-3.open-content {
+    height: 222px;
+  }
+  #service-box-4.open-content {
+    height: 280px;
+  }
+  #service-box-5.open-content {
+    height: 280px;
+  }
+  #service-box-6.open-content {
+    height: 220px;
+  }
 }
 @media only screen and (min-width: 1100px) {
   .landing-tagline {
@@ -1968,6 +2067,27 @@ footer {
   }
   #content-box-1 {
     padding-top: 50px;
+  }
+  .intro-content-cards {
+    max-width: 500px;
+  }
+  .service-card-title {
+    font-size: 26px;
+    padding-left: 22px;
+  }
+  .service-content,
+  .service-box {
+    height: 72px;
+  }
+  .services-text {
+    top: 72px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .service-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -2032,6 +2152,20 @@ footer {
   }
   #content-box-1 {
     padding-bottom: 50px;
+  }
+  .service-card-title {
+    padding-left: 24px;
+  }
+  .intro-content-cards {
+    max-width: 520px;
+  }
+  .service-content,
+  .service-box {
+    height: 74px;
+  }
+  .services-text {
+    top: 74px;
+    padding-left: 24px;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -2105,6 +2239,46 @@ footer {
   }
   .smile-emoji {
     font-size: 80px;
+  }
+  /* .service-box {
+    min-height: 360px !important;
+  } */
+  .intro-content-cards {
+    max-width: none;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  .service-arrow {
+    display: none;
+  }
+  .services-text {
+    opacity: 1;
+  }
+  #service-box-1 {
+    border-radius: 10px 0px 0px 0px;
+    height: 360px;
+  }
+  #service-box-2 {
+    border-radius: 0px 10px 0px 0px;
+    height: 360px;
+  }
+  #service-box-3 {
+    height: 310px;
+  }
+  #service-box-4 {
+    height: 310px;
+  }
+  #service-box-5 {
+    border-bottom: none;
+    border-radius: 0px 0px 0px 10px;
+    height: 280px;
+  }
+  #service-box-6 {
+    border-radius: 0px 0px 10px 0px;
+    height: 280px;
+  }
+  .service-box:nth-child(odd) {
+    border-right: 3px solid whitesmoke;
   }
 }
 @media only screen and (max-width: 700px) {
