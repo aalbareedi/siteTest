@@ -712,7 +712,7 @@ img {
   margin: 0px auto;
 }
 .treatment-solid {
-  height: 2px;
+  height: 2.4px;
   background-color: gainsboro;
   width: 100%;
 }
@@ -1289,6 +1289,10 @@ footer {
   .landing-tagline {
     font-size: 30px;
   }
+  .reviewSlideText {
+    font-size: 22px;
+    line-height: 33px;
+  }
   .cta-btn {
     font-size: 18px;
     width: 220px;
@@ -1393,6 +1397,27 @@ footer {
   }
 }
 @media only screen and (min-width: 500px) {
+  .reviewSlideText {
+    margin: 30px 48px 26px 50px;
+  }
+  .leftQuoteIcon {
+    top: 110px;
+    left: 30px;
+  }
+  .rightQuoteIcon {
+    top: 300px;
+    right: 30px;
+  }
+  #slick-slide01 .reviewSlideText {
+    margin-left: 76px;
+  }
+  .treatmentBtnMessage {
+    font-size: 22px;
+    min-width: 194px;
+  }
+  .treatment-or {
+    font-size: 20px;
+  }
   .landing-tagline {
     font-size: 36px;
     margin-bottom: 34px;
@@ -1556,6 +1581,21 @@ footer {
 @media only screen and (min-width: 600px) {
   .container {
     max-width: 540px;
+  }
+  .reviewSlideText {
+    margin: 30px 58px 26px 88px;
+  }
+  .quoteIcon {
+    font-size: 64px;
+  }
+  .leftQuoteIcon {
+    left: 50px;
+  }
+  .rightQuoteIcon {
+    right: 50px;
+  }
+  #slick-slide01 .reviewSlideText {
+    margin-left: 86px;
   }
   .about-doc-wrapper {
     margin-bottom: 38px;
@@ -1808,6 +1848,13 @@ footer {
   }
   #services-box {
     padding-bottom: 50px;
+  }
+  .treatmentBtnMessage {
+    font-size: 24px;
+    min-width: 212px;
+  }
+  .treatmentBtnWrapper {
+    column-gap: 18px;
   }
   #landing-page {
     flex-direction: row;
@@ -2184,6 +2231,7 @@ footer {
   .service-content,
   .service-box {
     height: 74px;
+    cursor: initial;
   }
   .services-text {
     top: 74px;
@@ -2193,6 +2241,8 @@ footer {
     max-width: none;
     display: grid;
     grid-template-columns: repeat(2, auto);
+    margin-left: -20px;
+    margin-right: -20px;
   }
   .service-arrow {
     display: none;
@@ -2200,24 +2250,30 @@ footer {
   .services-text {
     opacity: 1;
   }
-  #service-box-1 {
+  #service-box-1,
+  #service-box-1.open-content {
     border-radius: 10px 0px 0px 0px;
     height: 376px;
   }
-  #service-box-2 {
+  #service-box-2,
+  #service-box-2.open-content {
     border-radius: 0px 10px 0px 0px;
     height: 376px;
   }
   #service-box-3,
-  #service-box-4 {
+  #service-box-3.open-content,
+  #service-box-4,
+  #service-box-4.open-content {
     height: 314px;
   }
-  #service-box-5 {
+  #service-box-5,
+  #service-box-5.open-content {
     border-bottom: none;
     border-radius: 0px 0px 0px 10px;
     height: 310px;
   }
-  #service-box-6 {
+  #service-box-6,
+  #service-box-6.open-content {
     border-radius: 0px 0px 10px 0px;
     height: 310px;
   }
@@ -2231,6 +2287,10 @@ footer {
   }
   #services-box {
     padding-bottom: 54px;
+  }
+  .intro-content-cards {
+    margin-left: 0px;
+    margin-right: 0px;
   }
   .doc-profile {
     margin-top: 24px;
@@ -2303,7 +2363,9 @@ footer {
     font-size: 80px;
   }
   #service-box-1,
-  #service-box-2 {
+  #service-box-1.open-content,
+  #service-box-2,
+  #service-box-2.open-content {
     height: 346px;
   }
   /* #service-box-3,
@@ -2311,7 +2373,9 @@ footer {
     height: 312px;
   } */
   #service-box-5,
-  #service-box-6 {
+  #service-box-5.open-content,
+  #service-box-6,
+  #service-box-6.open-content {
     height: 284px;
   }
 }
