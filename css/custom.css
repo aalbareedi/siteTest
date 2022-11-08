@@ -92,7 +92,7 @@ img {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
-  /* background-color: pink; */
+  background-color: pink;
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -587,18 +587,14 @@ img {
   padding-top: 14px;
   padding-right: 18px;
   padding-left: 18px;
-  transition: all 1s;
+  transition: all 0.4s;
   font-size: 16px;
   word-spacing: 0.6px;
   line-height: 24px;
 }
 .service-box {
-  /* border-radius: 6px; */
   background-color: #aae2ff;
   box-shadow: 2px 44px 32px 2px rgba(0, 0, 0, 0.02);
-  /* padding: 26px 26px 26px 26px; */
-  /* padding-top: 18px;
-  padding-left: 26px; */
   overflow: hidden;
   height: 54px;
   position: relative;
@@ -1298,6 +1294,9 @@ footer {
     width: 220px;
     height: 54px;
   }
+  .reviewName {
+    font-size: 22px;
+  }
   .main-stat-badges {
     row-gap: 18px;
   }
@@ -1397,8 +1396,12 @@ footer {
   }
 }
 @media only screen and (min-width: 500px) {
+  .routine-intro {
+    margin-bottom: 10px;
+  }
   .reviewSlideText {
     margin: 30px 48px 26px 50px;
+    word-spacing: 1.2px;
   }
   .leftQuoteIcon {
     top: 110px;
@@ -1666,6 +1669,17 @@ footer {
   .about-title {
     margin-bottom: 32px;
   }
+  .reviewSlideText {
+    font-size: 24px;
+    line-height: 35px;
+    word-spacing: 1.4px;
+  }
+  #slick-slide01 .reviewSlideText {
+    margin-left: 106px;
+  }
+  .quoteIcon {
+    font-size: 68px;
+  }
   .services-title {
     max-width: none;
   }
@@ -1756,6 +1770,21 @@ footer {
   }
 }
 @media only screen and (min-width: 744px) {
+  .reviewSlideText {
+    margin: 30px 84px 26px 130px;
+  }
+  .quoteIcon {
+    font-size: 72px;
+  }
+  .leftQuoteIcon {
+    left: 70px;
+  }
+  .rightQuoteIcon {
+    right: 70px;
+  }
+  #slick-slide01 .reviewSlideText {
+    margin-left: 146px;
+  }
   .container {
     max-width: 650px;
   }
@@ -1843,6 +1872,18 @@ footer {
   }
 }
 @media only screen and (min-width: 777px) {
+  .reviewSlideText {
+    margin: 30px 108px 26px 146px;
+  }
+  .leftQuoteIcon {
+    left: 80px;
+  }
+  .rightQuoteIcon {
+    right: 80px;
+  }
+  #slick-slide01 .reviewSlideText {
+    margin-left: 166px;
+  }
   .stat-wrapper {
     padding-top: 18px;
   }
@@ -1986,6 +2027,21 @@ footer {
   }
 }
 @media only screen and (min-width: 940px) {
+  .reviewSlideText {
+    margin: 30px 140px 26px 192px;
+  }
+  .quoteIcon {
+    font-size: 76px;
+  }
+  .leftQuoteIcon {
+    left: 120px;
+  }
+  .rightQuoteIcon {
+    right: 120px;
+  }
+  #slick-slide01 .reviewSlideText {
+    margin-left: 216px;
+  }
   .container {
     max-width: 740px;
   }
@@ -2089,6 +2145,21 @@ footer {
   }
 }
 @media only screen and (min-width: 1100px) {
+  .reviewSlideText {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #slick-slide01 .reviewSlideText {
+    margin-left: auto;
+    max-width: 538px;
+  }
+  .leftQuoteIcon {
+    left: 160px;
+  }
+  .rightQuoteIcon {
+    right: 160px;
+  }
   .landing-tagline {
     max-width: 440px;
     font-size: 72px;
@@ -2136,31 +2207,90 @@ footer {
   #content-box-1 {
     padding-top: 50px;
   }
-  .intro-content-cards {
-    max-width: 500px;
-  }
   .service-card-title {
     font-size: 26px;
-    padding-left: 22px;
+    padding-left: 24px;
   }
-  .service-content,
-  .service-box {
-    height: 72px;
+  .service-content {
+    height: 74px;
+    cursor: initial;
   }
   .services-text {
-    top: 72px;
-    padding-left: 22px;
-    padding-right: 22px;
+    top: 74px;
+    padding-left: 24px;
+    padding-right: 24px;
+    opacity: 1;
+  }
+  .intro-content-cards {
+    max-width: none;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-left: -60px;
+    margin-right: -60px;
   }
   .service-arrow {
-    width: 42px;
-    height: 42px;
-    font-size: 20px;
+    display: none;
+  }
+  #service-box-1,
+  #service-box-1.open-content {
+    border-radius: 10px 0px 0px 0px;
+    height: 376px;
+  }
+  #service-box-2,
+  #service-box-2.open-content {
+    border-radius: 0px 10px 0px 0px;
+    height: 376px;
+  }
+  #service-box-3,
+  #service-box-3.open-content,
+  #service-box-4,
+  #service-box-4.open-content {
+    height: 314px;
+  }
+  #service-box-5,
+  #service-box-5.open-content {
+    border-bottom: none;
+    border-radius: 0px 0px 0px 10px;
+    height: 310px;
+  }
+  #service-box-6,
+  #service-box-6.open-content {
+    border-radius: 0px 0px 10px 0px;
+    height: 310px;
+  }
+  .service-box:nth-child(odd) {
+    border-right: 3px solid whitesmoke;
   }
 }
 @media only screen and (min-width: 1280px) {
+  .rightQuoteIcon {
+    right: 50%;
+    margin-right: -420px;
+  }
+  .leftQuoteIcon {
+    left: 50%;
+    margin-left: -420px;
+  }
   .container {
     max-width: 840px;
+  }
+  #service-box-1,
+  #service-box-1.open-content,
+  #service-box-2,
+  #service-box-2.open-content {
+    height: 350px;
+  }
+  #service-box-3,
+  #service-box-3.open-content,
+  #service-box-4,
+  #service-box-4.open-content {
+    height: 316px;
+  }
+  #service-box-5,
+  #service-box-5.open-content,
+  #service-box-6,
+  #service-box-6.open-content {
+    height: 286px;
   }
   .about-title {
     margin-bottom: 42px;
@@ -2221,64 +2351,6 @@ footer {
   }
   #content-box-1 {
     padding-bottom: 50px;
-  }
-  .service-card-title {
-    padding-left: 24px;
-  }
-  .intro-content-cards {
-    max-width: 520px;
-  }
-  .service-content,
-  .service-box {
-    height: 74px;
-    cursor: initial;
-  }
-  .services-text {
-    top: 74px;
-    padding-left: 24px;
-  }
-  .intro-content-cards {
-    max-width: none;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-  .service-arrow {
-    display: none;
-  }
-  .services-text {
-    opacity: 1;
-  }
-  #service-box-1,
-  #service-box-1.open-content {
-    border-radius: 10px 0px 0px 0px;
-    height: 376px;
-  }
-  #service-box-2,
-  #service-box-2.open-content {
-    border-radius: 0px 10px 0px 0px;
-    height: 376px;
-  }
-  #service-box-3,
-  #service-box-3.open-content,
-  #service-box-4,
-  #service-box-4.open-content {
-    height: 314px;
-  }
-  #service-box-5,
-  #service-box-5.open-content {
-    border-bottom: none;
-    border-radius: 0px 0px 0px 10px;
-    height: 310px;
-  }
-  #service-box-6,
-  #service-box-6.open-content {
-    border-radius: 0px 0px 10px 0px;
-    height: 310px;
-  }
-  .service-box:nth-child(odd) {
-    border-right: 3px solid whitesmoke;
   }
 }
 @media only screen and (min-width: 1440px) {
