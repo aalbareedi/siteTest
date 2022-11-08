@@ -92,7 +92,7 @@ img {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
-  background-color: pink;
+  /* background-color: pink; */
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -927,6 +927,7 @@ img {
   flex-direction: column;
   row-gap: 40px;
   font-size: 18px;
+  line-height: 26px;
 }
 .contact-title {
   margin-bottom: 40px;
@@ -1083,6 +1084,15 @@ footer {
 }
 
 @media only screen and (min-width: 375px) {
+  #officePhoneIcon {
+    left: -27px;
+  }
+  #officeScheduleIcon {
+    left: -46px;
+  }
+  #officeAddressIcon {
+    left: -23px;
+  }
   .badge-text {
     font-size: 16px;
     min-width: 166px;
@@ -1243,6 +1253,7 @@ footer {
   }
   .contact-content {
     font-size: 20px;
+    line-height: 29px;
   }
   .officeInfoText {
     width: 274px;
@@ -1293,6 +1304,9 @@ footer {
     font-size: 18px;
     width: 220px;
     height: 54px;
+  }
+  #content-box-1 {
+    padding-bottom: 42px;
   }
   .reviewName {
     font-size: 22px;
@@ -1396,6 +1410,9 @@ footer {
   }
 }
 @media only screen and (min-width: 500px) {
+  .contact-title {
+    margin-bottom: 44px;
+  }
   .routine-intro {
     margin-bottom: 10px;
   }
@@ -1657,6 +1674,7 @@ footer {
   }
   .main-doc {
     max-width: 314px;
+    margin-bottom: 26px;
   }
   .main-about-text {
     padding-right: 0px;
@@ -1666,6 +1684,12 @@ footer {
   }
 }
 @media only screen and (min-width: 667px) {
+  #contact-box {
+    padding-bottom: 60px;
+  }
+  .contact-title {
+    margin-bottom: 48px;
+  }
   .about-title {
     margin-bottom: 32px;
   }
@@ -1872,6 +1896,12 @@ footer {
   }
 }
 @media only screen and (min-width: 777px) {
+  #content-box-1 {
+    padding-bottom: 46px;
+  }
+  .office-container {
+    column-gap: 10px;
+  }
   .reviewSlideText {
     margin: 30px 108px 26px 146px;
   }
@@ -1888,6 +1918,7 @@ footer {
     padding-top: 18px;
   }
   #services-box {
+    padding-top: 46px;
     padding-bottom: 50px;
   }
   .treatmentBtnMessage {
@@ -1959,9 +1990,12 @@ footer {
   .stat-intro-text {
     font-size: 48px;
     max-width: 650px;
-    margin-bottom: 50px;
+    margin-bottom: 46px;
     line-height: 68px;
     word-spacing: 4.8px;
+  }
+  .stat-numb-wrapper {
+    row-gap: 46px;
   }
   .stat-number {
     font-size: 48px;
@@ -2042,10 +2076,14 @@ footer {
   #slick-slide01 .reviewSlideText {
     margin-left: 216px;
   }
+  .office-container {
+    column-gap: 20px;
+  }
   .container {
     max-width: 740px;
   }
   #services-box {
+    padding-top: 50px;
     padding-bottom: 52px;
   }
   .stat-numb-wrapper {
@@ -2054,7 +2092,7 @@ footer {
     column-gap: 60px;
   }
   .about-wrapper {
-    margin-bottom: 46px;
+    margin-bottom: 44px;
   }
   .about-doc-wrapper {
     margin-left: auto;
@@ -2180,7 +2218,7 @@ footer {
     font-size: 52px;
     max-width: 670px;
     line-height: 74px;
-    margin-bottom: 62px;
+    margin-bottom: 66px;
   }
   .stat-number {
     font-size: 52px;
@@ -2188,6 +2226,7 @@ footer {
   }
   .about-doc-wrapper {
     max-width: 670px;
+    margin-bottom: 42px;
   }
   .services-title {
     margin-left: -11px;
@@ -2206,6 +2245,7 @@ footer {
   }
   #content-box-1 {
     padding-top: 50px;
+    padding-bottom: 50px;
   }
   .service-card-title {
     font-size: 26px;
@@ -2313,6 +2353,7 @@ footer {
     max-width: 710px;
     word-spacing: 5.4px;
     line-height: 78px;
+    margin-bottom: 66px;
   }
   .stat-numb-wrapper {
     justify-content: center;
@@ -2326,7 +2367,7 @@ footer {
   }
   .about-doc-wrapper {
     max-width: none;
-    column-gap: 42px;
+    column-gap: 46px;
     margin-left: 35px;
   }
   .main-doc {
@@ -2334,7 +2375,7 @@ footer {
   }
   .main-stat-badges {
     margin-right: 0px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .main-about-text {
     font-size: 22px;
@@ -2350,7 +2391,7 @@ footer {
     margin-left: 26px;
   }
   #content-box-1 {
-    padding-bottom: 50px;
+    padding-bottom: 52px;
   }
 }
 @media only screen and (min-width: 1440px) {
