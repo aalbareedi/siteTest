@@ -876,7 +876,7 @@ img {
 }
 .officeMap {
   padding: 0px 50px;
-  margin-top: 24px;
+  margin-top: 26px;
 }
 .mapWrapper {
   margin: 0px auto;
@@ -1685,7 +1685,7 @@ footer {
 }
 @media only screen and (min-width: 667px) {
   #contact-box {
-    padding-bottom: 60px;
+    padding-bottom: 64px;
   }
   .contact-title {
     margin-bottom: 48px;
@@ -1761,10 +1761,11 @@ footer {
     padding-left: 60px;
   }
   .officeMap {
-    margin-top: 0px;
+    margin-top: auto;
+    margin-bottom: 6px;
   }
   #googleMap {
-    height: 260px;
+    height: 278px;
   }
   .stat-intro-text {
     font-size: 38px;
@@ -1794,6 +1795,9 @@ footer {
   }
 }
 @media only screen and (min-width: 744px) {
+  #contact-box {
+    padding-bottom: 66px;
+  }
   .reviewSlideText {
     margin: 30px 84px 26px 130px;
   }
@@ -1898,6 +1902,13 @@ footer {
 @media only screen and (min-width: 777px) {
   #content-box-1 {
     padding-bottom: 46px;
+  }
+  .contact-title {
+    margin-bottom: 50px;
+  }
+  #contact-box {
+    padding-top: 52px;
+    padding-bottom: 68px;
   }
   .office-container {
     column-gap: 10px;
@@ -2061,6 +2072,41 @@ footer {
   }
 }
 @media only screen and (min-width: 940px) {
+  #googleMap {
+    height: 292px;
+  }
+  .officeInfoIcon {
+    font-size: 24px;
+    top: 2px;
+  }
+  #officePhoneIcon {
+    left: -31px;
+  }
+  #officeScheduleIcon {
+    left: -50px;
+  }
+  #officeAddressIcon {
+    left: -27px;
+  }
+  .contact-title {
+    margin-bottom: 54px;
+  }
+  #contact-box {
+    padding-bottom: 76px;
+  }
+  .contact-content {
+    font-size: 22px;
+    line-height: 31px;
+  }
+  .officeInfoText {
+    width: 300px;
+  }
+  .address-suite {
+    font-size: 18px;
+  }
+  .officeInfoSchedule {
+    margin-left: 12px;
+  }
   .reviewSlideText {
     margin: 30px 140px 26px 192px;
   }
