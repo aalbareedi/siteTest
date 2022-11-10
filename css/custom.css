@@ -58,6 +58,7 @@ img {
   padding: 5px;
   background: rgba(0, 0, 0, 0.4);
   color: whitesmoke;
+  display: none;
 }
 .header-box-1 {
   width: 100% !important;
@@ -92,7 +93,7 @@ img {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16px;
-  background-color: pink;
+  /* background-color: red; */
 }
 /* #back_to_top.opacityZero {
   cursor: initial;
@@ -218,14 +219,16 @@ img {
 }
 .landing-page-img {
   height: 100%;
-  background-image: url("../content/dentist4/images/smile-img.jpg");
+  background-image: url("../content/dentist4/images/smile-img1.jpeg");
   background-repeat: no-repeat;
   /* background-position: bottom 0px right -75px; */
   background-position: calc(50% + 30px) 50%;
   background-size: cover;
 }
 .landing-page-content {
-  background-color: rgba(21, 37, 58, 0.8);
+  /* background-color: rgba(21, 37, 58, 0.8); */
+  background-color: rgba(1, 47, 97, 0.8);
+  /* background-color: rgb(39, 86, 131); */
   padding: 24px 0px;
   position: absolute;
   bottom: 0px;
@@ -320,10 +323,9 @@ img {
   border-radius: 50px;
   width: 135px;
   height: 54px;
-  /* background-color: gainsboro; */
-  border: 2px solid gray;
+  /* border: 2px solid gray; */
+  border: 2px solid #a7a7a7;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   column-gap: 10px;
@@ -332,7 +334,8 @@ img {
   text-align: center;
   margin-top: 2px;
   font-size: 16px;
-  color: #a9a9a9;
+  /* color: #a9a9a9; */
+  color: #e4e4e4;
   letter-spacing: 0.2px;
 }
 .landing-contactIcon {
@@ -568,9 +571,6 @@ img {
   justify-content: center;
   align-items: center;
   transition: all 0.5s;
-}
-.service-content:hover .service-arrow {
-  background: #89c2de;
 }
 .service-icon {
   color: #1f2e88;
@@ -883,7 +883,7 @@ img {
   max-width: 310px;
   border-radius: 8px;
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 #googleMap {
@@ -941,7 +941,7 @@ img {
 #form-box {
   background-color: #1e2867;
   padding-top: 40px;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
 }
 .contact-us-desc {
   color: whitesmoke;
@@ -1641,12 +1641,16 @@ footer {
   }
 }
 @media only screen and (min-width: 600px) {
+  #form-box {
+    padding-top: 42px;
+  }
   .container {
     max-width: 540px;
   }
   .contact-us-desc {
     max-width: 470px;
     padding-left: 20px;
+    margin-bottom: 42px;
   }
   .reviewSlideText {
     margin: 30px 58px 26px 88px;
@@ -1731,13 +1735,14 @@ footer {
 }
 @media only screen and (min-width: 667px) {
   #contact-box {
-    padding-bottom: 64px;
+    padding-top: 52px;
+    padding-bottom: 66px;
   }
   #form-box {
     padding-top: 44px;
   }
   .contact-title {
-    margin-bottom: 48px;
+    margin-bottom: 52px;
   }
   .about-title {
     margin-bottom: 32px;
@@ -1844,8 +1849,63 @@ footer {
   }
 }
 @media only screen and (min-width: 744px) {
+  #form-box {
+    padding-top: 48px;
+  }
+  .submit-btn {
+    margin-right: 48px;
+  }
+  .main-stat-badges {
+    margin-right: -36px;
+  }
+  .office-container {
+    justify-content: initial;
+    width: 50%;
+    flex-direction: column;
+    padding-left: 0px;
+  }
+  .form-elements {
+    max-width: none;
+  }
+  .formOption-wrapper {
+    flex-basis: 100%;
+  }
+  .formMessage {
+    flex-basis: 100%;
+  }
+  .form-elements-content {
+    display: flex;
+    column-gap: 50px;
+    margin-bottom: 24px;
+  }
+  #messageInput {
+    height: 287px;
+  }
+  .contact-us-desc {
+    margin-left: -1px;
+    padding-left: 0px;
+    max-width: 560px;
+    font-size: 38px;
+    line-height: 57px;
+  }
+  .contact-content {
+    row-gap: 42px;
+  }
   #contact-box {
-    padding-bottom: 66px;
+    position: relative;
+    padding-top: 54px;
+    padding-bottom: 68px;
+  }
+  #googleMap {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 50%;
+  }
+  .contact-title {
+    width: 50%;
   }
   .reviewSlideText {
     margin: 30px 84px 26px 130px;
@@ -1949,15 +2009,27 @@ footer {
   }
 }
 @media only screen and (min-width: 777px) {
+  .treatmentBtnText {
+    font-size: 20px;
+    min-width: 46px;
+  }
+  .treatmentBtn {
+    height: 48px;
+    width: 114px;
+    column-gap: 10px;
+  }
+  .treatmentCallIcon {
+    font-size: 22px;
+  }
   #content-box-1 {
     padding-bottom: 46px;
   }
-  .contact-title {
-    margin-bottom: 50px;
-  }
   #contact-box {
-    padding-top: 52px;
-    padding-bottom: 68px;
+    padding-top: 56px;
+    padding-bottom: 72px;
+  }
+  .contact-title {
+    margin-bottom: 54px;
   }
   .office-container {
     column-gap: 10px;
@@ -1986,7 +2058,7 @@ footer {
     min-width: 212px;
   }
   .treatmentBtnWrapper {
-    column-gap: 18px;
+    column-gap: 20px;
   }
   #landing-page {
     flex-direction: row;
@@ -1994,9 +2066,10 @@ footer {
   }
   .landing-page-img {
     width: 50%;
-    background-position: calc(50% + 200px) 50%;
+    background-position: calc(50% + 90px) 50%;
   }
   .landing-page-content {
+    background-image: linear-gradient(180deg, #5387ca 0%, #3043b8 100%);
     width: 50%;
     position: relative;
     overflow-y: auto;
@@ -2121,8 +2194,11 @@ footer {
   }
 }
 @media only screen and (min-width: 940px) {
-  #googleMap {
+  /* #googleMap {
     height: 292px;
+  } */
+  .submit-btn {
+    margin-right: 70px;
   }
   .officeInfoIcon {
     font-size: 24px;
@@ -2138,14 +2214,16 @@ footer {
     left: -27px;
   }
   .contact-title {
-    margin-bottom: 54px;
+    margin-bottom: 56px;
   }
   #contact-box {
-    padding-bottom: 76px;
+    padding-top: 58px;
+    padding-bottom: 78px;
   }
   .contact-content {
     font-size: 22px;
-    line-height: 31px;
+    line-height: 32px;
+    row-gap: 44px;
   }
   .officeInfoText {
     width: 300px;
@@ -2172,7 +2250,7 @@ footer {
     margin-left: 216px;
   }
   .office-container {
-    column-gap: 20px;
+    column-gap: 22px;
   }
   .container {
     max-width: 740px;
@@ -2278,6 +2356,47 @@ footer {
   }
 }
 @media only screen and (min-width: 1100px) {
+  .contact-content {
+    font-size: 24px;
+    line-height: 35px;
+    row-gap: 46px;
+  }
+  .officeInfoIcon {
+    top: 3px;
+  }
+  .address-suite {
+    font-size: 20px;
+  }
+  .officeInfoText {
+    width: 330px;
+  }
+  .officeInfoSchedule {
+    margin-left: 4px;
+  }
+  /* #googleMap {
+    height: 306px;
+  } */
+  #contact-box {
+    padding-top: 62px;
+    padding-bottom: 88px;
+  }
+  .contact-title {
+    margin-bottom: 62px;
+  }
+  .officeInfoIcon {
+    font-size: 26px;
+  }
+  #officePhoneIcon {
+    left: -35px;
+  }
+  #officeScheduleIcon {
+    left: -55px;
+    font-size: 28px;
+  }
+  #officeAddressIcon {
+    font-size: 29px;
+    left: -30px;
+  }
   .reviewSlideText {
     max-width: 600px;
     margin-left: auto;
@@ -2398,6 +2517,16 @@ footer {
   }
 }
 @media only screen and (min-width: 1280px) {
+  .submit-btn {
+    margin-right: 92px;
+  }
+  #contact-box {
+    padding-top: 64px;
+    padding-bottom: 90px;
+  }
+  .contact-title {
+    margin-bottom: 66px;
+  }
   .rightQuoteIcon {
     right: 50%;
     margin-right: -420px;
@@ -2488,10 +2617,30 @@ footer {
   #content-box-1 {
     padding-bottom: 52px;
   }
+  .office-container {
+    column-gap: 28px;
+  }
 }
 @media only screen and (min-width: 1440px) {
+  .submit-btn {
+    margin-right: 116px;
+  }
+  .landing-page-img {
+    background-position: calc(50% + 110px) 50%;
+  }
+  .doctorTitle {
+    padding-left: 4px;
+  }
   .container {
     max-width: 940px;
+  }
+  .office-container {
+    align-items: flex-end;
+    padding-right: 110px;
+  }
+  .contact-title {
+    text-align: right;
+    padding-right: 214px;
   }
   #services-box {
     padding-bottom: 54px;
@@ -2509,7 +2658,7 @@ footer {
   }
   #content-box-1 {
     padding-top: 52px;
-    padding-bottom: 70px;
+    padding-bottom: 90px;
   }
   .about-title {
     margin-bottom: 50px;
@@ -2531,7 +2680,7 @@ footer {
   }
   .about-wrapper {
     display: flex;
-    margin-bottom: 48px;
+    margin-bottom: 50px;
     max-width: 938px;
   }
   .stat-numb-wrapper {
@@ -2551,11 +2700,11 @@ footer {
     column-gap: 52px;
     flex-direction: column;
     margin-bottom: 0px;
-    margin-top: -52px;
+    margin-top: -22px;
   }
   .about-content-wrap {
     display: flex;
-    column-gap: 72px;
+    column-gap: 92px;
   }
   .main-doc {
     margin-bottom: 30px;
@@ -2565,7 +2714,6 @@ footer {
   }
   .doctorName {
     min-width: 228px;
-    margin-left: 24px;
   }
   .smile-emoji {
     font-size: 80px;
@@ -2608,5 +2756,30 @@ footer {
   }
   #menu-main-menu li {
     height: 70px;
+  }
+}
+a:hover {
+  color: initial;
+}
+.cta-btn:hover {
+  color: #fff;
+  background-color: #2073c6;
+}
+.landing-btn:hover {
+  background: #334ba1;
+}
+.landing-dock-btn:hover {
+  color: #007bff;
+}
+.landing-scrolled .landing-btn:hover {
+  background: white;
+}
+
+.open-content .service-arrow {
+  background: #89c2de;
+}
+@media only screen and (hover: hover) {
+  .service-content:hover .service-arrow {
+    background: #89c2de;
   }
 }
