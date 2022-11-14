@@ -8796,6 +8796,10 @@
       // );
       return false;
     });
+    // jQuery("#message-us-btn").on("click", function (e) {
+    //   smoothScrollTo($("#message-us-btn"));
+    //   return false;
+    // });
 
     const smoothScrollTo = (y, { duration = 400, offset = 0 } = {}) => {
       const easeOutCubic = (t) => --t * t * t + 1;
@@ -9867,8 +9871,10 @@ $(document).ready(() => {
   // for when page loads & scrolled down the page
   if ($(window).scrollTop() > 0) {
     $("#back_to_top").removeClass("opacityZero");
+    // $("#message-us-btn").removeClass("opacityZero");
   } else {
     $("#back_to_top").addClass("opacityZero");
+    // $("#message-us-btn").addClass("opacityZero");
   }
 
   $("#phoneInput").on("input", function () {
@@ -9965,8 +9971,10 @@ $(document).ready(() => {
 
     if (scroll > 0) {
       $("#back_to_top").removeClass("opacityZero");
+      // $("#message-us-btn").removeClass("opacityZero");
     } else {
       $("#back_to_top").addClass("opacityZero");
+      // $("#message-us-btn").addClass("opacityZero");
     }
     landingBtnsScrolled();
   });
@@ -10000,10 +10008,6 @@ $(document).ready(() => {
     var scroll = $(window).scrollTop();
     var landingBtnsTop = $(".landing-btns-wrapper").offset().top;
     var landingBtnsHeight = $(".landing-btns-wrapper").outerHeight();
-
-    console.log("scroll: ", scroll);
-    console.log("landingBtnsTop: ", landingBtnsTop);
-    console.log("landingBtnsHeight: ", landingBtnsHeight);
 
     if (scroll > landingBtnsTop - 60 + landingBtnsHeight) {
       $("body").addClass("landing-scrolled");

@@ -33,7 +33,14 @@ $body = "<b>Name: </b>" . htmlspecialchars($_POST["Name"]) .
 
 $headers = "MIME-Version:1.0\r\n" . 
 "Content-type:text/html:charset=UTF-8\r\n" . 
-"Reply-To:" . $_POST["Email"] . "\r\n" . 
-"From: Braces Specialist<vpnfg0lsvg6z@a2plcpnl0239.prod.iad2.secureserver.net>";
+"Reply-To:" . filter_var($_POST["Email"], FILTER_SANITIZE_EMAIL) . "\r\n" . 
+"From: Dr. John Los Site<customer@drjohnlos.com>";
 
-mail("aalbareedi@yahoo.com", "Message from " . $_POST["Name"], $body, $headers);
+$result = mail("aalbareedipaypal@yahoo.com", "Message from " . $_POST["Name"], $body, $headers);
+
+// To test errors:
+// $result = false;
+
+echo json_encode([
+    "result" => $result ? "success" : "error"
+]);

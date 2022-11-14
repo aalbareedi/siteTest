@@ -1002,10 +1002,10 @@ body.minimalist-header.header-below:not(.template-slider) #Header {
 #Top_bar .top_bar_left {
   width: 990px;
 }
-#Top_bar .logo {
+/* #Top_bar .logo {
   float: left;
   margin: 0 30px 0 20px;
-}
+} */
 #Top_bar .logo h1 {
   margin: 0;
 }
@@ -1442,10 +1442,10 @@ body.minimalist-header.header-below:not(.template-slider) #Header {
   .header-fixed #Top_bar .top_bar_right {
     top: -4px;
   }
-  .header-fixed #Top_bar .logo {
+  /* .header-fixed #Top_bar .logo {
     width: auto;
     margin: 0 30px 0 20px;
-  }
+  } */
   .header-fixed #Top_bar #logo {
     padding: 5px 0;
     height: 50px;
@@ -5781,19 +5781,6 @@ body {
   .admin-bar #Top_bar a.responsive-menu-toggle.is-sticky {
     top: 56px;
   }
-  /* #Top_bar #menu {
-    float: left;
-    position: static !important;
-    width: 100% !important;
-    padding-bottom: 20px;
-  } */
-  #Top_bar .logo {
-    position: static;
-    float: left;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-  }
   #Top_bar .logo #logo {
     padding: 0 !important;
     margin: 10px 50px;
@@ -6019,12 +6006,6 @@ body {
   .mobile-header-mini #Top_bar .top_bar_left {
     float: left;
     position: static;
-  }
-  .mobile-header-mini #Top_bar .logo {
-    width: auto;
-    float: left;
-    margin-left: 15px;
-    border: none;
   }
   .mobile-header-mini #Top_bar #logo {
     height: 60px !important;

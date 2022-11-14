@@ -1579,17 +1579,8 @@ a.action_button,
 .button-stroke a.action_button:hover {
   background-color: #0089f7 !important;
 }
-.footer_button {
-  color: #65666c !important;
-  background-color: transparent;
-  /* box-shadow: none !important; */
-}
-.footer_button:after {
-  display: none !important;
-}
 .button-custom .button,
 .button-custom .action_button,
-.button-custom .footer_button,
 .button-custom button,
 .button-custom input[type="button"],
 .button-custom input[type="reset"],
