@@ -9872,9 +9872,11 @@ $(document).ready(() => {
   if ($(window).scrollTop() > 0) {
     $("#back_to_top").removeClass("opacityZero");
     // $("#message-us-btn").removeClass("opacityZero");
+    $("#Top_bar").removeClass("navbar-hidden");
   } else {
     $("#back_to_top").addClass("opacityZero");
     // $("#message-us-btn").addClass("opacityZero");
+    $("#Top_bar").addClass("navbar-hidden");
   }
 
   $("#phoneInput").on("input", function () {
@@ -9972,9 +9974,11 @@ $(document).ready(() => {
     if (scroll > 0) {
       $("#back_to_top").removeClass("opacityZero");
       // $("#message-us-btn").removeClass("opacityZero");
+      $("#Top_bar").removeClass("navbar-hidden");
     } else {
       $("#back_to_top").addClass("opacityZero");
       // $("#message-us-btn").addClass("opacityZero");
+      $("#Top_bar").addClass("navbar-hidden");
     }
     landingBtnsScrolled();
   });

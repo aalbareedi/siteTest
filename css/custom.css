@@ -89,6 +89,7 @@ img {
   width: 100%;
   z-index: 30;
   background: whitesmoke;
+  transition: top 0.3s;
 }
 .topbar-container {
   display: flex;
@@ -285,7 +286,7 @@ img {
 }
 .landing-tagline {
   font-weight: bolder;
-  color: rgb(255, 255, 255);
+  color: whitesmoke;
   margin-bottom: 24px;
   margin-left: 20px;
   font-size: 24px;
@@ -305,6 +306,7 @@ img {
   letter-spacing: 1px;
   font-size: 15px;
   font-weight: 600;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 .landing-dock {
   z-index: 160;
@@ -358,6 +360,8 @@ img {
   justify-content: center;
   align-items: center;
   column-gap: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
 }
 .landingBtnToolTip {
   text-align: center;
@@ -1248,6 +1252,38 @@ footer {
   border-style: solid;
   border-color: #7681b7 transparent transparent transparent;
   transform: rotate(270deg);
+}
+.desktop-landing-logo {
+  display: none;
+  column-gap: 14px;
+  margin-left: 18px;
+  margin-bottom: 60px;
+}
+.desktop-logo-img {
+  margin-top: 6px;
+  width: 72px;
+  height: 72px;
+  border-radius: 100%;
+  background: whitesmoke;
+}
+.desktop-site-logo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  color: whitesmoke;
+}
+.desktop-logo-text-name {
+  font-weight: 700;
+  font-size: 34px;
+  word-spacing: 0.4px;
+}
+.desktop-logo-text-title {
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  padding-left: 0.4px;
+  line-height: 26px;
+  word-spacing: 1.4px;
 }
 
 @media only screen and (min-width: 375px) {
@@ -2174,10 +2210,15 @@ footer {
   }
 }
 @media only screen and (min-width: 777px) {
+  .desktop-landing-logo {
+    display: flex;
+  }
+  .navbar-hidden {
+    top: -60px !important;
+  }
   .toolTip {
     top: 8px;
   }
-
   #back_to_top {
     width: 50px;
     height: 50px;
@@ -2236,7 +2277,9 @@ footer {
   }
   #landing-page {
     flex-direction: row;
-    height: calc(100% - 60px);
+    /* height: calc(100% - 60px); */
+    height: 100%;
+    margin-top: 0px;
   }
   .landing-page-img {
     width: 50%;
@@ -2250,7 +2293,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0px;
+    padding: 0px 0px 20px 0px;
   }
   .landing-tagline {
     line-height: 72px;
@@ -2285,6 +2328,7 @@ footer {
     width: 44px;
     background-color: #e7e7e7;
     border: none;
+    box-shadow: none;
   }
   .landing-scrolled .landing-contactBtnText {
     color: #3385d7;
@@ -2368,6 +2412,23 @@ footer {
   }
 }
 @media only screen and (min-width: 940px) {
+  .desktop-landing-logo {
+    margin-left: 28px;
+    column-gap: 15px;
+  }
+  .desktop-logo-text-name {
+    font-size: 36px;
+    letter-spacing: 0.2px;
+  }
+  .desktop-logo-img {
+    width: 76px;
+    height: 76px;
+    margin-top: 7px;
+  }
+  .desktop-logo-text-title {
+    font-size: 30px;
+    line-height: 30px;
+  }
   #form-box {
     padding-top: 54px;
   }
@@ -2543,6 +2604,21 @@ footer {
   }
 }
 @media only screen and (min-width: 1100px) {
+  .desktop-landing-logo {
+    margin-left: 30px;
+  }
+  .desktop-logo-img {
+    width: 80px;
+    height: 80px;
+    margin-top: 8px;
+  }
+  .desktop-logo-text-name {
+    font-size: 38px;
+    word-spacing: 1px;
+  }
+  .desktop-logo-text-title {
+    font-size: 32px;
+  }
   #form-box {
     padding-top: 60px;
   }
@@ -2714,6 +2790,22 @@ footer {
   }
 }
 @media only screen and (min-width: 1280px) {
+  .desktop-landing-logo {
+    margin-left: 36px;
+    column-gap: 16px;
+  }
+  .desktop-logo-img {
+    width: 86px;
+    height: 86px;
+  }
+  .desktop-logo-text-name {
+    font-size: 40px;
+    margin-bottom: 1px;
+  }
+  .desktop-logo-text-title {
+    font-size: 34px;
+    letter-spacing: 0.34px;
+  }
   .contact-us-desc {
     max-width: 650px;
     font-size: 44px;
