@@ -108,7 +108,7 @@ img {
 /* #back_to_top.opacityZero {
   cursor: initial;
 } */
-#message-us-btn {
+/* #message-us-btn {
   background-color: rgba(51, 51, 51, 0.4);
   position: fixed;
   bottom: 40px;
@@ -127,7 +127,7 @@ img {
   transition: opacity 1s;
   color: rgba(255, 255, 255, 0.8);
   padding-left: 1px;
-}
+} */
 #back_to_top {
   background-color: rgba(51, 51, 51, 0.4);
   position: fixed;
@@ -347,7 +347,6 @@ img {
 .landing-info {
   z-index: 300;
   display: flex;
-  /* justify-content: center; */
   column-gap: 20px;
 }
 .landing-btn {
@@ -355,7 +354,7 @@ img {
   border-radius: 50px;
   width: 135px;
   height: 54px;
-  border: 2px solid #a7a7a7;
+  border: 2px solid #e4e4e4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -771,7 +770,7 @@ img {
   margin-bottom: 4px;
 } */
 .treatment-or {
-  /* padding-bottom: 3px; */
+  padding-bottom: 1px;
   font-size: 16px;
 }
 .dm-text {
@@ -1284,6 +1283,78 @@ footer {
   padding-left: 0.4px;
   line-height: 26px;
   word-spacing: 1.4px;
+}
+.scrolled-contact-btns {
+  display: none;
+}
+.scrolled-contact-btn {
+  position: relative;
+  height: 44px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  column-gap: 10px;
+  background-color: #e7e7e7;
+  border: none;
+  box-shadow: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s;
+}
+.scrolled-contact-btn i {
+  font-size: 18px;
+  color: #3385d7;
+}
+.scrolled-contact-btn-text {
+  display: none;
+  font-size: 16px;
+  color: #3385d7;
+  letter-spacing: 0.2px;
+}
+.scrolled-contact-btn-tooltip {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7681b7;
+  color: whitesmoke;
+  position: absolute;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  letter-spacing: 0.5px;
+  visibility: hidden;
+  font-size: 18px;
+}
+#scrolled-phone-tooltip {
+  width: 152px;
+  height: 42px;
+  bottom: -56px;
+  left: -54px;
+}
+#scrolled-map-tooltip {
+  width: 190px;
+  height: 68px;
+  bottom: -82px;
+  left: -73px;
+}
+.scrolled-contact-btn-tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #7681b7 transparent transparent transparent;
+  transform: rotateX(180deg);
+  margin-left: -10px;
+}
+#scrolled-phone-tooltip::after {
+  bottom: 40px;
+}
+#scrolled-map-tooltip::after {
+  bottom: 66px;
 }
 
 @media only screen and (min-width: 375px) {
@@ -2210,6 +2281,15 @@ footer {
   }
 }
 @media only screen and (min-width: 777px) {
+  .scrolled-contact-btns {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  .landing-scrolled .scrolled-contact-btn {
+    opacity: 1;
+    visibility: visible;
+  }
   .desktop-landing-logo {
     display: flex;
   }
@@ -2317,27 +2397,6 @@ footer {
     display: block;
     min-height: 54px;
   }
-  .landing-scrolled .landing-info {
-    position: fixed;
-    top: 8px;
-    right: 456px;
-    column-gap: 10px;
-  }
-  .landing-scrolled .landing-btn {
-    height: 44px;
-    width: 44px;
-    background-color: #e7e7e7;
-    border: none;
-    box-shadow: none;
-  }
-  .landing-scrolled .landing-contactBtnText {
-    color: #3385d7;
-    display: none;
-  }
-  .landing-scrolled .landing-contactIcon {
-    font-size: 18px;
-    color: #3385d7;
-  }
   .stat-intro-text {
     font-size: 48px;
     max-width: 650px;
@@ -2412,6 +2471,18 @@ footer {
   }
 }
 @media only screen and (min-width: 940px) {
+  #scrolled-phone-tooltip {
+    left: -12px;
+  }
+  #scrolled-map-tooltip {
+    left: -29px;
+  }
+  .landing-scrolled .scrolled-contact-btn-text {
+    display: block;
+  }
+  .landing-scrolled .scrolled-contact-btn {
+    width: 124px;
+  }
   .desktop-landing-logo {
     margin-left: 28px;
     column-gap: 15px;
@@ -2539,16 +2610,6 @@ footer {
   }
   .about-title {
     margin-bottom: 38px;
-  }
-  .landing-scrolled .landing-info {
-    right: 466px;
-  }
-  .landing-scrolled .landing-contactBtnText {
-    display: block;
-    margin-top: 0px;
-  }
-  .landing-scrolled .landing-btn {
-    width: 124px;
   }
   .landing-tagline {
     max-width: 410px;
@@ -2969,7 +3030,7 @@ footer {
   }
   #content-box-1 {
     padding-top: 52px;
-    padding-bottom: 90px;
+    padding-bottom: 94px;
   }
   .about-title {
     margin-bottom: 50px;
@@ -2991,7 +3052,7 @@ footer {
   }
   .about-wrapper {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 58px;
     max-width: 938px;
   }
   .stat-numb-wrapper {
@@ -3003,7 +3064,7 @@ footer {
   .main-about-text {
     margin-left: 0px;
     max-width: none;
-    margin-right: -166px;
+    margin-right: -174px;
     margin-top: 10px;
   }
   .about-doc-wrapper {
@@ -3015,7 +3076,7 @@ footer {
   }
   .about-content-wrap {
     display: flex;
-    column-gap: 92px;
+    column-gap: 106px;
   }
   .main-doc {
     margin-bottom: 30px;
@@ -3071,6 +3132,9 @@ footer {
 }
 
 @media only screen and (hover: hover) {
+  /* .desktop-nav-link:hover {
+    background-color: #eeeeee;
+  } */
   #back_to_top:hover .toolTip {
     opacity: 1;
     visibility: initial;
@@ -3087,7 +3151,7 @@ footer {
   .landing-dock-btn:hover {
     color: #007bff;
   }
-  .landing-scrolled .landing-btn:hover {
+  .landing-scrolled .scrolled-contact-btn:hover {
     background: #dadada;
   }
   .landing-btn:hover .landingBtnToolTip {
@@ -3096,6 +3160,10 @@ footer {
   }
   #back_to_top:hover {
     color: #7681b7;
+  }
+  .scrolled-contact-btn:hover .scrolled-contact-btn-tooltip {
+    opacity: 1;
+    visibility: initial;
   }
 }
 

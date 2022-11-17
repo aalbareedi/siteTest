@@ -1225,6 +1225,8 @@ body.minimalist-header.header-below:not(.template-slider) #Header {
 }
 #Top_bar #menu {
   z-index: 201;
+  display: flex;
+  column-gap: 10px;
 }
 #Top_bar .menu > li {
   margin: 0;
