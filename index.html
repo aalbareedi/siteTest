@@ -10,7 +10,7 @@
   <head>
     <!-- Basic Page Needs -->
     <meta charset="utf-8" />
-    <title>Dr. John Los | General Dentist</title>
+    <title>Dr. Yourname | General Dentist</title>
 
     <!-- Mobile Specific Metas -->
     <meta
@@ -105,6 +105,12 @@
     <link rel="stylesheet" href="content/dentist4/css/structure.css" />
     <link rel="stylesheet" href="content/dentist4/css/dentist4.css" />
     <link rel="stylesheet" href="css/custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script src="js/animations.js" defer></script>
   </head>
 
   <body
@@ -121,39 +127,41 @@
             class="desktop-logo-img"
           />
           <div class="desktop-site-logo">
-            <div class="desktop-logo-text-name">Dr. John Los</div>
+            <div class="desktop-logo-text-name">Dr. Your Name</div>
             <div class="desktop-logo-text-title">General Dentist</div>
           </div>
         </div>
         <div class="landing-welcome">Welcome To Our Clinic</div>
         <h3 class="landing-tagline">Your Smile is Our Passion</h3>
-        <div class="desktop-btns-wrapper">
-          <a class="cta-btn" href="#content-box-1">Meet Dr. John Los</a>
-          <div class="landing-btns-wrapper">
-            <div class="landing-info">
-              <div class="landing-btn-wrapper">
-                <a href="tel:630-323-9540" class="landing-btn unselectable">
-                  <i class="fas fa-phone landing-contactIcon"></i>
-                  <div class="landing-contactBtnText unselectable">Call</div>
-                  <div class="landingBtnToolTip" id="phoneToolTip">
-                    (630) 323-9540
-                  </div>
-                </a>
-              </div>
-              <div class="landing-btn-wrapper">
-                <a
-                  target="_blank"
-                  href="https://goo.gl/maps/X9EUo9tNjCfbsxUSA"
-                  class="landing-btn unselectable"
-                >
-                  <i class="fas fa-map-marker-alt landing-contactIcon"></i>
-                  <div class="landing-contactBtnText unselectable">
-                    Directions
-                  </div>
-                  <div class="landingBtnToolTip" id="addressToolTip">
-                    201 E. Ogden Ave Hinsdale, IL 60521
-                  </div>
-                </a>
+        <div class="effect-wrapper">
+          <div class="desktop-btns-wrapper">
+            <a class="cta-btn" href="#content-box-1">Meet The Doctor</a>
+            <div class="landing-btns-wrapper">
+              <div class="landing-info">
+                <div class="landing-btn-wrapper">
+                  <a href="tel:630-323-9540" class="landing-btn unselectable">
+                    <i class="fas fa-phone landing-contactIcon"></i>
+                    <div class="landing-contactBtnText unselectable">Call</div>
+                    <div class="landingBtnToolTip" id="phoneToolTip">
+                      (630) 323-9540
+                    </div>
+                  </a>
+                </div>
+                <div class="landing-btn-wrapper">
+                  <a
+                    target="_blank"
+                    href="https://goo.gl/maps/X9EUo9tNjCfbsxUSA"
+                    class="landing-btn unselectable"
+                  >
+                    <i class="fas fa-map-marker-alt landing-contactIcon"></i>
+                    <div class="landing-contactBtnText unselectable">
+                      Directions
+                    </div>
+                    <div class="landingBtnToolTip" id="addressToolTip">
+                      201 E. Ogden Ave Hinsdale, IL 60521
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -175,7 +183,7 @@
               class="logo-img"
             />
             <div class="logo site-logo">
-              <div class="logo-text-name">Dr. John Los</div>
+              <div class="logo-text-name">Dr. Your Name</div>
               <div class="logo-text-title">General Dentist</div>
             </div>
           </div>
@@ -287,19 +295,23 @@
               <div class="main-doc">
                 <div class="doctor-content">
                   <div class="doctorTitle">Meet</div>
-                  <div class="doctorName">Dr. John Los</div>
+                  <div class="doctorName">Dr. Your Name</div>
                 </div>
-                <div class="doc-profile">
-                  <img
-                    src="content/dentist4/images/los2.png"
-                    alt="Dr. John Los"
-                    class="doctorImg"
-                  />
-                  <div class="img-edit"></div>
-                </div>
+                <!-- <div class="doc-profile"> -->
+                <img
+                  src="content/dentist4/images/user.svg"
+                  alt="Dr. John Los"
+                  class="doctorImg"
+                />
+                <!-- <div class="img-edit"></div> -->
+                <!-- </div> -->
               </div>
               <div class="main-stat-badges">
-                <div class="stat-badge">
+                <div
+                  class="stat-badge"
+                  data-animation-in-view="animate__fadeIn"
+                  style="opacity: 0"
+                >
                   <div class="badge-icon">
                     <img
                       src="content/dentist4/images/badge1.svg"
@@ -628,9 +640,9 @@
                 <div class="officeTime">9 am - 5 pm</div>
                 <div class="officeDay">Thursday:</div>
                 <div class="officeTime">9 am - 5 pm</div>
-                <!-- <div class="officeDay">Friday:</div>
-                  <div class="officeTime">10:00 am - 6:00 pm</div>
-                  <div class="officeDay">Saturday:</div>
+                <div class="officeDay">Friday:</div>
+                <div class="officeTime">9 am - 5 pm</div>
+                <!-- <div class="officeDay">Saturday:</div>
                   <div class="officeTime officeClosed">Closed</div>
                   <div class="officeDay">Sunday:</div>
                   <div class="officeTime officeClosed">Closed</div> -->
@@ -791,7 +803,7 @@
       </div>
       <footer>
         <div class="footer-company">
-          <div class="footer-logo-name">Dr. John Los</div>
+          <div class="footer-logo-name">Dr. Your Name</div>
           <div class="footer-logo-title">General Dentist</div>
         </div>
         <div class="footer-nav">
