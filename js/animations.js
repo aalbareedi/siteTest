@@ -13,8 +13,9 @@
         }
       }
     },
-    // { root: null, rootMargin: "-160px" }
-    { rootMargin: "-160px" }
+    { root: null, rootMargin: "-160px" }
+    // { rootMargin: "-160px" }
+    // { root: document.body, rootMargin: "-200px" }
   );
 
   for (const element of elements) {
