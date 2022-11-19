@@ -13,7 +13,8 @@
         }
       }
     },
-    { root: null, rootMargin: "-140px" }
+    // { root: null, rootMargin: "-160px" }
+    { rootMargin: "-160px" }
   );
 
   for (const element of elements) {
