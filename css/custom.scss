@@ -345,8 +345,14 @@ img {
   padding: 8px;
   row-gap: 8px;
   column-gap: 8px;
-  background-color: #b6b6b6;
+  background-color: #c8c8c8;
   height: 64px;
+}
+.slick-dots li button:before {
+  font-size: 14px !important;
+}
+.slick-dots li {
+  margin: 0 8px !important;
 }
 .landing-dock-btn {
   /* background-color: rgba(190, 190, 190, 0.7); */
