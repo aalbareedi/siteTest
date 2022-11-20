@@ -36,8 +36,8 @@
     if (element.getAttribute("data-waterfall-in-view")) {
       for (let i = 0; i < element.children.length; i++) {
         const child = element.children[i];
-        child.style.animationDelay = i / 7.6 + "s";
-        console.log("delay: ", i / 7.6 + "s");
+        child.style.animationDelay = i / 10 + "s";
+        console.log("delay: ", i / 10 + "s");
         child.classList.add(
           "animate__animated",
           element.getAttribute("data-waterfall-in-view")

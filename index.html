@@ -17,7 +17,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
-
+    <!-- Corrects phone number as text on iOS -->
+    <meta name="format-detection" content="telephone=no" />
     <meta
       name="description"
       content="Orthodontic Treatment at the Orthodontic Specialty Center by Dr AlBareedi in Chicago. Telephone # 773-282-0013"
@@ -131,7 +132,10 @@
             <div class="desktop-logo-text-title">General Dentist</div>
           </div>
         </div>
-        <div class="landing-welcome" data-animation-in-view="animate__fadeIn">
+        <div
+          class="landing-welcome"
+          data-animation-in-view="animate__fadeInDown"
+        >
           Welcome To Our Clinic
         </div>
         <h3 class="landing-tagline" data-animation-in-view="animate__fadeIn">
@@ -278,7 +282,12 @@
                       <span class="number" data-to="10">10</span></span
                     >k+
                   </h3>
-                  <h5 class="stat-info-text">Satisfied patients</h5>
+                  <h5
+                    class="stat-info-text"
+                    data-animation-in-view="animate__fadeIn"
+                  >
+                    Satisfied patients
+                  </h5>
                 </div>
               </div>
               <div class="stat-container">
@@ -289,14 +298,19 @@
                       <span class="number" data-to="100">100</span></span
                     >%
                   </h3>
-                  <h5 class="stat-info-text">Attention to detail</h5>
+                  <h5
+                    class="stat-info-text"
+                    data-animation-in-view="animate__fadeIn"
+                  >
+                    Attention to detail
+                  </h5>
                 </div>
               </div>
             </div>
           </div>
           <div class="about-content-wrap">
             <div class="about-doc-wrapper">
-              <div class="main-doc">
+              <div class="main-doc" data-animation-in-view="animate__fadeIn">
                 <div class="doctor-content">
                   <div class="doctorTitle">Meet</div>
                   <div class="doctorName">Dr. Your Name</div>
@@ -497,7 +511,7 @@
           </div>
           <div
             class="contact-treatment"
-            data-animation-in-view="animate__bounceInLeft"
+            data-animation-in-view="animate__fadeInLeft"
           >
             <div class="treatmentBtnWrapper">
               <a href="tel:630-323-9540" class="treatmentBtn">
@@ -702,7 +716,10 @@
         <div class="container">
           <form id="message-form">
             <input type="hidden" name="Subject" value="test email" />
-            <h3 class="contact-us-desc">
+            <h3
+              class="contact-us-desc"
+              data-animation-in-view="animate__fadeIn"
+            >
               Send us a message & we'll reply back to you
               <span class="contact-asap">ASAP 😁</span>
             </h3>

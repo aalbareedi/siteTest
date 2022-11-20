@@ -143,6 +143,7 @@ img {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16.8px;
+  background-color: pink;
 }
 
 .faq-wapper {
@@ -2022,7 +2023,7 @@ footer {
     width: 274px;
   }
   .address-suite {
-    font-size: 16px;
+    font-size: 18px;
   }
   .treatmentBtnWrapper {
     -webkit-column-gap: 16px;
