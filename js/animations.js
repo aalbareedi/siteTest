@@ -11,7 +11,7 @@
         }
       }
     },
-    { root: null, rootMargin: "-110px" }
+    { root: null, rootMargin: "-88px" }
     // { rootMargin: "-160px" }
     // { root: document.body, rootMargin: "-200px" }
   );
