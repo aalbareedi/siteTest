@@ -287,7 +287,7 @@ img {
   top: 60px;
   right: -280px;
   width: 240px;
-  height: calc(100% - 56px - 60px);
+  height: calc(100% - 60px - 64px);
   overflow: auto;
   z-index: 290;
 }
@@ -339,7 +339,7 @@ img {
 
 /* ************************* LANDING  ************************ */
 #landing-page {
-  height: calc(100% - 60px - 60px);
+  height: calc(100% - 60px - 64px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,8 +441,8 @@ img {
   row-gap: 8px;
   -webkit-column-gap: 8px;
           column-gap: 8px;
-  background-color: #cccccc;
-  height: 60px;
+  background-color: #b6b6b6;
+  height: 64px;
 }
 
 .landing-dock-btn {
@@ -1947,7 +1947,7 @@ footer {
     word-spacing: 0.8px;
   }
   .contactBtnText {
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 0.2px;
   }
   .main-about-text {
