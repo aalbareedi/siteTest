@@ -143,7 +143,7 @@ img {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16.8px;
-  background-color: orange;
+  background-color: red;
 }
 
 /* #back_to_top.opacityZero {
@@ -3900,5 +3900,15 @@ footer {
 .sk-chase-dot:nth-child(6):before {
   -webkit-animation-delay: -0.6s;
   animation-delay: -0.6s;
+}
+
+[data-animation-in-view],
+[data-waterfall-in-view] > * {
+  visibility: hidden;
+}
+
+[data-animation-in-view].animate__animated,
+[data-waterfall-in-view] > *.animate__animated {
+  visibility: visible;
 }
 /*# sourceMappingURL=custom.css.map */

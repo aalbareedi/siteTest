@@ -1,15 +1,13 @@
 {
-  const elements = document.querySelectorAll("[data-animation-in-view]");
-  console.log("elements:", elements);
+  const elements = document.querySelectorAll(
+    "[data-animation-in-view], [data-waterfall-in-view]"
+  );
+
   const observer = new IntersectionObserver(
     (entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
-          console.log("ADDING CLASS");
-          entry.target.classList.add(
-            "animate__animated",
-            entry.target.getAttribute("data-animation-in-view")
-          );
+          startAnimation(entry.target);
         }
       }
     },
@@ -20,5 +18,32 @@
 
   for (const element of elements) {
     observer.observe(element);
+
+    if (element.getBoundingClientRect().y < 0) {
+      startAnimation(element);
+    }
+  }
+
+  function startAnimation(element) {
+    if (element.getAttribute("data-animation-in-view")) {
+      element.classList.add(
+        "animate__animated",
+        element.getAttribute("data-animation-in-view")
+      );
+      return;
+    }
+
+    if (element.getAttribute("data-waterfall-in-view")) {
+      for (let i = 0; i < element.children.length; i++) {
+        const child = element.children[i];
+        child.style.animationDelay = i / 7 + "s";
+        console.log("delay: ", i / 7 + "s");
+        child.classList.add(
+          "animate__animated",
+          element.getAttribute("data-waterfall-in-view")
+        );
+      }
+      return;
+    }
   }
 }
