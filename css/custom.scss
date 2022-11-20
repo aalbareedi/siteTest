@@ -103,7 +103,10 @@ img {
   font-size: 14px;
   letter-spacing: 0.65px;
   line-height: 16.8px;
-  background-color: red;
+  // background-color: red;
+}
+.faq-wapper {
+  margin-bottom: 34px;
 }
 // .animate__animated {
 //   opacity: 1 !important;
@@ -1164,7 +1167,7 @@ footer {
   background-color: #11173e;
   background-image: url("../content/dentist4/images/graphic-2.svg");
   background-repeat: no-repeat;
-  background-position: top 96px left -130px;
+  background-position: top 98px left -130px;
   background-size: 440px;
   padding-top: 18px;
   padding-bottom: 34px;
@@ -1185,7 +1188,7 @@ footer {
 .footer-logo-name {
   font-weight: 700;
   font-size: 25px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 .footer-logo-title {
   font-size: 23px;

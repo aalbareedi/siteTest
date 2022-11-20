@@ -11,7 +11,7 @@
         }
       }
     },
-    { root: null, rootMargin: "-160px" }
+    { root: null, rootMargin: "-110px" }
     // { rootMargin: "-160px" }
     // { root: document.body, rootMargin: "-200px" }
   );
@@ -36,8 +36,8 @@
     if (element.getAttribute("data-waterfall-in-view")) {
       for (let i = 0; i < element.children.length; i++) {
         const child = element.children[i];
-        child.style.animationDelay = i / 7 + "s";
-        console.log("delay: ", i / 7 + "s");
+        child.style.animationDelay = i / 7.6 + "s";
+        console.log("delay: ", i / 7.6 + "s");
         child.classList.add(
           "animate__animated",
           element.getAttribute("data-waterfall-in-view")
