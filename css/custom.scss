@@ -72,7 +72,7 @@ img {
   flex-direction: column;
   justify-content: center;
   text-align: initial !important;
-  padding-bottom: 7px;
+  padding-bottom: 4px;
   color: #0e3375;
 }
 .logo-wrapper {
@@ -102,15 +102,9 @@ img {
 .logo-text-title {
   font-size: 14px;
   letter-spacing: 0.65px;
-  line-height: 16.8px;
-  // background-color: pink;
+  line-height: 16px;
+  /* background-color: red; */
 }
-.faq-wapper {
-  margin-bottom: 34px;
-}
-// .animate__animated {
-//   opacity: 1 !important;
-// }
 /* #back_to_top.opacityZero {
   cursor: initial;
 } */
@@ -134,27 +128,6 @@ img {
   color: rgba(255, 255, 255, 0.8);
   padding-left: 1px;
 } */
-.effect-wrapper {
-  width: fit-content;
-  padding: 10px;
-  border-radius: 100px;
-  background: linear-gradient(
-    183.08deg,
-    rgba(50, 100, 255, 0.3) 43.82%,
-    rgba(191, 255, 228, 0) 111.17%
-  );
-  margin: 0 auto;
-}
-.desktop-btns-wrapper {
-  width: fit-content;
-  padding: 10px;
-  border-radius: 100px;
-  background: linear-gradient(
-    183.08deg,
-    rgba(72, 131, 249, 0.3) 43.82%,
-    rgba(191, 255, 228, 0) 111.17%
-  );
-}
 #back_to_top {
   background-color: rgba(51, 51, 51, 0.4);
   position: fixed;
@@ -176,7 +149,7 @@ img {
   padding-left: 1px;
 }
 #menu-main-menu li a {
-  font-size: 18px !important;
+  font-size: 16px !important;
   padding: 0px !important;
   color: #3b3b3b !important;
 }
@@ -232,7 +205,7 @@ img {
   top: 60px;
   right: -280px;
   width: 240px;
-  height: calc(100% - 60px - 64px);
+  height: calc(100% - 56px - 60px);
   overflow: auto;
   z-index: 290;
 }
@@ -267,7 +240,7 @@ img {
 
 /* ************************* LANDING  ************************ */
 #landing-page {
-  height: calc(100% - 60px - 64px);
+  height: calc(100% - 60px - 56px);
   display: flex;
   flex-direction: column;
   margin-top: 60px;
@@ -345,18 +318,12 @@ img {
   padding: 8px;
   row-gap: 8px;
   column-gap: 8px;
-  background-color: #c8c8c8;
-  height: 64px;
-}
-.slick-dots li button:before {
-  font-size: 14px !important;
-}
-.slick-dots li {
-  margin: 0 8px !important;
+  background-color: gainsboro;
+  height: 56px;
 }
 .landing-dock-btn {
   /* background-color: rgba(190, 190, 190, 0.7); */
-  background-color: whitesmoke;
+  background-color: white;
   color: #007bff;
   display: flex;
   justify-content: center;
@@ -498,7 +465,7 @@ img {
   font-size: 24px;
   letter-spacing: 0.4px;
   font-weight: initial;
-  margin-left: 10px;
+  margin-left: 16px;
   color: whitesmoke;
 }
 .about-doc-wrapper {
@@ -508,7 +475,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 18px;
+  row-gap: 16px;
 }
 .stat-badge {
   position: relative;
@@ -519,7 +486,6 @@ img {
   border-radius: 10px;
   height: 54px;
   width: 253px;
-  // transition: opacity 2s;
 }
 .badge-text {
   color: #fff;
@@ -529,20 +495,20 @@ img {
   margin-right: 18px;
 }
 .badge-icon {
-  width: 54px;
+  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #feb300;
 }
 .badge-icon-1 {
-  width: 22px;
+  width: 20px;
 }
 .badge-icon-2 {
   width: 26px;
 }
 .badge-icon-3 {
-  width: 24px;
+  width: 22px;
 }
 .badge-check {
   width: 20px;
@@ -554,9 +520,9 @@ img {
 .badge-check i {
   color: #36c20f;
   position: absolute;
-  left: -4px;
-  top: -12px;
-  font-size: 30px;
+  left: -3px;
+  top: -11px;
+  font-size: 28px;
 }
 .stat-patients-num {
   margin-right: 1px;
@@ -574,13 +540,13 @@ img {
 }
 .doctor-content {
   padding-top: 2px;
-  margin-left: -28px;
+  margin-left: -15px;
 }
 .main-doc {
   display: flex;
   justify-content: space-between;
-  max-width: 266px;
-  margin: 0px auto 26px auto;
+  max-width: 252px;
+  margin: 0px auto 22px auto;
 }
 .doc-profile {
   background-image: linear-gradient(335deg, #ffffff 4%, #48c6eb 100%);
@@ -593,14 +559,11 @@ img {
   margin-right: -10px;
 }
 .doctorImg {
-  /* position: absolute; */
-  width: 102px;
-  /* top: -35px;
-  left: -62px; */
+  position: absolute;
+  width: 152px;
+  top: -35px;
+  left: -62px;
   z-index: 1;
-  margin-right: -22px;
-  border: 4px solid whitesmoke;
-  border-radius: 50%;
 }
 .img-edit {
   position: absolute;
@@ -879,7 +842,7 @@ img {
 }
 .reviewSlideText {
   font-size: 18px;
-  margin: 30px 28px 26px 44px;
+  margin: 30px 28px 26px 34px;
   line-height: 27px;
   letter-spacing: 0.3px;
   word-spacing: 1px;
@@ -934,7 +897,7 @@ img {
 
 /* *************************** FAQ *************************** */
 #faq-box {
-  padding: 50px 0px 20px 0px;
+  padding: 50px 0px;
   background-color: #efefef;
 }
 #faq-box h6 {
@@ -969,7 +932,7 @@ img {
 #contact-box {
   background-color: #3043b8;
   padding-top: 50px;
-  // padding-bottom: 40px;
+  padding-bottom: 40px;
   text-align: center;
 }
 .officeInfoGrid {
@@ -999,21 +962,21 @@ img {
   letter-spacing: 0.3px;
 }
 .officeMap {
-  // padding: 0px 48px;
-  margin-top: 42px;
+  padding: 0px 50px;
+  margin-top: 26px;
 }
 .mapWrapper {
   margin: 0px auto;
-  // max-width: 310px;
+  max-width: 310px;
   border-radius: 8px;
-  // overflow: hidden;
+  overflow: hidden;
   position: relative;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 #googleMap {
   margin: 0px auto;
   display: block;
-  height: 220px;
+  height: 200px;
   width: 100%;
 }
 .officeInfoSchedule {
@@ -1049,12 +1012,12 @@ img {
 .contact-content {
   display: flex;
   flex-direction: column;
-  row-gap: 42px;
+  row-gap: 40px;
   font-size: 18px;
   line-height: 26px;
 }
 .contact-title {
-  margin-bottom: 42px;
+  margin-bottom: 40px;
   color: whitesmoke;
 }
 .address-suite {
@@ -1065,7 +1028,7 @@ img {
 #form-box {
   background-color: #1e2867;
   padding-top: 40px;
-  padding-bottom: 44px;
+  padding-bottom: 60px;
 }
 .contact-us-desc {
   color: whitesmoke;
@@ -1075,8 +1038,6 @@ img {
   max-width: 350px;
   margin-right: auto;
   margin-left: auto;
-  font-size: 28px;
-  line-height: 42px;
 }
 .formOption {
   margin-bottom: 20px;
@@ -1151,7 +1112,7 @@ input.contactFormInput:valid + .formIcon {
   right: 16px;
 }
 .formMessage {
-  margin-bottom: 26px;
+  margin-bottom: 22px;
 }
 #messageInput {
   padding: 8px 8px 0px 12px;
@@ -1173,10 +1134,10 @@ footer {
   background-color: #11173e;
   background-image: url("../content/dentist4/images/graphic-2.svg");
   background-repeat: no-repeat;
-  background-position: top 98px left -130px;
+  background-position: top 88px left -130px;
   background-size: 440px;
-  padding-top: 18px;
-  padding-bottom: 34px;
+  padding-top: 16px;
+  padding-bottom: 24px;
   position: relative;
 }
 .footer-company {
@@ -1186,21 +1147,21 @@ footer {
 .footer-nav {
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
-  margin-top: 50px;
+  row-gap: 6px;
+  margin-top: 40px;
   padding-left: 20px;
   color: #d6d6d6;
 }
 .footer-logo-name {
   font-weight: 700;
   font-size: 25px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 .footer-logo-title {
-  font-size: 23px;
-  letter-spacing: 1.22px;
+  font-size: 20px;
+  letter-spacing: 0.62px;
   line-height: 16px;
-  word-spacing: 2px;
+  word-spacing: 0.8px;
 }
 .footer-nav-opt a {
   letter-spacing: 0.4px;
@@ -1407,13 +1368,13 @@ footer {
     left: -23px;
   }
   .badge-text {
-    font-size: 18px;
-    min-width: 184px;
+    font-size: 16px;
+    min-width: 166px;
     letter-spacing: 0.2px;
-    margin-right: 18px;
+    margin-right: 16px;
   }
   .stat-badge {
-    width: 300px;
+    width: 274px;
   }
   #service-box-1.open-content {
     height: 352px;
@@ -1447,18 +1408,16 @@ footer {
     padding-bottom: 44px;
   }
   .landing-tagline {
-    font-size: 30px;
+    font-size: 26px;
     margin-bottom: 26px;
   }
   .landing-welcome {
-    font-size: 18px;
-    margin-bottom: 8px;
+    font-size: 14px;
   }
   .cta-btn {
-    font-size: 18px;
-    width: 220px;
-    height: 56px;
-    word-spacing: 0.4px;
+    font-size: 16px;
+    width: 206px;
+    height: 52px;
   }
   .stat-intro-text {
     font-size: 26px;
@@ -1466,23 +1425,23 @@ footer {
     word-spacing: 0.6px;
   }
   .landing-page-content {
-    padding: 30px 0px 38px 0px;
+    padding: 28px 0px 36px 0px;
   }
   .stat-info-text {
     font-size: 18px;
     min-width: 151px;
   }
   .about-wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 44px;
   }
   .smile-emoji {
-    font-size: 52px;
+    font-size: 48px;
   }
   .doctorTitle {
     font-size: 24px;
   }
   .doctorName {
-    font-size: 28px;
+    font-size: 26px;
   }
   .doc-profile {
     margin-right: -22px;
@@ -1494,13 +1453,12 @@ footer {
     font-size: 20px;
   }
   .logo-text-title {
-    font-size: 19px;
-    letter-spacing: 0.75px;
+    font-size: 16px;
+    letter-spacing: 0.49px;
     padding-left: 0.4px;
-    word-spacing: 0.8px;
   }
   .contactBtnText {
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 0.2px;
   }
   .main-about-text {
@@ -1519,13 +1477,13 @@ footer {
     margin-bottom: 8px;
   }
   #service-box-1.open-content {
-    height: 328px;
+    height: 416px;
   }
   #service-box-2.open-content {
-    height: 270px;
+    height: 388px;
   }
   #service-box-3.open-content {
-    height: 224px;
+    height: 250px;
   }
   #service-box-4.open-content {
     height: 306px;
@@ -1534,7 +1492,7 @@ footer {
     height: 304px;
   }
   #service-box-6.open-content {
-    height: 224px;
+    height: 250px;
   }
   .reviewSlideText {
     font-size: 20px;
@@ -1575,7 +1533,7 @@ footer {
     width: 274px;
   }
   .address-suite {
-    font-size: 18px;
+    font-size: 16px;
   }
   .treatmentBtnWrapper {
     column-gap: 16px;
@@ -1592,7 +1550,7 @@ footer {
     font-size: 18px;
   }
   .officePhoneText {
-    padding-left: 40px;
+    padding-left: 38px;
   }
   .formOption {
     margin-bottom: 24px;
@@ -3304,7 +3262,6 @@ footer {
   -webkit-animation-delay: -0.6s;
   animation-delay: -0.6s;
 }
-
 [data-animation-in-view],
 [data-waterfall-in-view] > * {
   visibility: hidden;

@@ -9878,3 +9878,6 @@ $(document).ready(() => {
     }
   }
 });
+
+// Select an element with href="#content-box-1"
+// const a = document.querySelector("[href='#content-box-1']");
