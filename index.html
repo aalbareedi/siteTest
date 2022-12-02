@@ -21,11 +21,6 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header class="header">
-      <button class="menu-icon-btn" data-menu-icon-btn>
-        <i class="fa-solid fa-bars menu-icon"></i>
-      </button>
-    </header>
     <div class="container">
       <aside class="sidebar open" data-sidebar>
         <div class="top-sidebar">
@@ -35,7 +30,6 @@
           <div class="hidden-sidebar channel-name">Amer Albareedi</div>
           <div class="hidden-sidebar channel-bio">Front-End Developer</div>
         </div>
-
         <div class="middle-sidebar">
           <ul class="sidebar-list">
             <li class="sidebar-list-item active" title="Overview">
@@ -68,7 +62,7 @@
                 <div class="hidden-sidebar">Education</div>
               </a>
             </li>
-            <li class="sidebar-list-item" title="Copyright">
+            <li class="sidebar-list-item" title="Resume">
               <a href="#" class="sidebar-link">
                 <i class="fa-solid fa-address-card sidebar-icon"></i>
                 <div class="hidden-sidebar">Resume</div>
@@ -105,7 +99,7 @@
           <ul class="sidebar-list">
             <li class="sidebar-list-item" title="Settings">
               <a href="#" class="sidebar-link">
-                <i class="fas fa-cog sidebar-icon"></i>
+                <i class="fa-solid fa-moon sidebar-icon"></i>
                 <div class="hidden-sidebar">Dark Mode</div>
               </a>
             </li>
@@ -118,8 +112,32 @@
           </ul>
         </div>
       </aside>
-
-      <main class="content"></main>
+      <main class="content">
+        <header class="header">
+          <button class="menu-icon-btn" data-menu-icon-btn>
+            <i class="fa-solid fa-arrow-right-from-bracket menu-icon"></i>
+          </button>
+        </header>
+        <div class="main-landing-content">
+          <div class="landing-intro-title">
+            Hi! I'm Amer & developing digital solutions is what I love doing
+          </div>
+          <div class="landing-intro-grid">
+            <div class="grid-item landing-projects">
+              <div class="landing-grid-title">Projects</div>
+            </div>
+            <div class="grid-item landing-skills">
+              <div class="landing-grid-title">Skills</div>
+            </div>
+            <div class="grid-item landing-exp">
+              <div class="landing-grid-title">Work Experience</div>
+            </div>
+            <div class="grid-item landing-edu">
+              <div class="landing-grid-title">Education</div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>

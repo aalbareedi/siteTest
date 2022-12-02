@@ -1,8 +1,5 @@
 $header-height: 64px;
 
-// dark mode
-// background-color: #282828;
-
 * {
   /* Remove Gray Highlight When Tapping Links in Mobile Safari */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -11,6 +8,10 @@ $header-height: 64px;
   padding: 0;
   border-radius: 0px;
   box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
 }
 // :root {
 //   --animmation-duration: 200ms;
@@ -25,15 +26,17 @@ button {
 header {
   position: sticky;
   top: 0;
-  background-color: #282828;
-  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.4);
+  background-color: #878787;
+  // box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.4);
   height: $header-height;
 }
 .container {
   display: flex;
+  height: 100%;
 }
 .menu-icon {
   font-size: 24px;
+  transform: scale(-1, 1);
 }
 .menu-icon-btn {
   border: none;
@@ -45,7 +48,6 @@ header {
 }
 .sidebar {
   font-family: "Roboto", sans-serif;
-  // wont get any smaller at all, just static size
   flex-shrink: 0;
   overflow: hidden;
   padding-top: 14px;
@@ -53,14 +55,15 @@ header {
   border-right: 1px solid silver;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - #{$header-height});
+  // height: calc(100vh - #{$header-height});
   align-items: center;
   justify-content: stretch;
   transition: width 200ms ease-in-out;
-  position: sticky;
-  left: 0;
-  top: $header-height;
+  // position: sticky;
+  // left: 0;
+  // top: $header-height;
   background-color: whitesmoke;
+  height: 100%;
 }
 .hidden-sidebar {
   opacity: 0;
@@ -92,18 +95,11 @@ header {
 }
 .bottom-sidebar {
   // padding: 0px 0px 8px 0px;
-  border-top: 1px solid silver;
+  border-top: 2px solid #e0e0e0;
 }
 .middle-sidebar,
 .bottom-sidebar {
   width: 100%;
-}
-.content {
-  padding-left: 30px;
-  padding-top: 30px;
-  // width: 100%;
-  flex-grow: 1;
-  background-color: #9b9b9b;
 }
 .sidebar.open .channel-logo {
   width: 118px;
@@ -183,11 +179,69 @@ header {
   color: #212121;
   margin-bottom: 4px;
   font-size: 20px;
+  padding-left: 1px;
+  word-spacing: 1px;
 }
 .channel-bio {
   color: gray;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.2px;
+}
+.content {
+  // padding-left: 30px;
+  // padding-top: 30px;
+  // width: 100%;
+  flex-grow: 1;
+  background-color: #d1d1d1;
+  overflow-y: scroll;
+}
+.main-landing-content {
+  // display: flex;
+  // flex-direction: column;
+  // row-gap: 20px;
+  padding: 30px 20px 20px 20px;
+  // height: calc(100vh - #{$header-height});
+}
+.landing-intro-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.landing-intro-grid {
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(2, auto);
+  border-radius: 20px;
+  // background-color: whitesmoke;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.grid-item {
+  border-radius: 10px;
+  background-color: whitesmoke;
+  // padding: 20px;
+}
+.landing-grid-title {
+  background-color: #e9e9e9;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  border-radius: 10px 10px 0px 0px;
+  font-size: 18px;
+}
+.landing-projects {
+  grid-area: 1 / 1 / 2 / 4;
+}
+.landing-skills {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.landing-exp {
+  grid-area: 2 / 1 / 3 / 3;
+}
+.landing-edu {
+  grid-area: 2 / 3 / 3 / 5;
 }
 
 .sidebar-list-item:hover {
