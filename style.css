@@ -317,11 +317,6 @@ header {
   grid-row-gap: 12px;
 }
 
-#landing-projects-content .grid-item-box {
-  padding: 0px;
-  overflow: hidden;
-}
-
 .landing-grid-title {
   height: 52px;
   display: -webkit-box;
@@ -330,7 +325,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 20px;
+  padding-left: 18px;
   color: #252525;
   font-size: 18px;
   font-weight: bold;
@@ -453,6 +448,21 @@ header {
   line-height: 20px;
 }
 
+#landing-projects-content .grid-item-box {
+  padding: 0px;
+  overflow: hidden;
+  position: relative;
+}
+
+.landing-project-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .landing-content-title {
   margin-bottom: 2px;
   font-weight: bold;
@@ -460,6 +470,19 @@ header {
 
 .landing-project-img {
   height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+#landing-braces-img {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 188, 188, 0.2)), to(rgba(12, 40, 71, 0.99))), url("./orthoImg.jpg");
+  background-image: linear-gradient(to bottom, rgba(188, 188, 188, 0.2), rgba(12, 40, 71, 0.99)), url("./orthoImg.jpg");
+}
+
+#landing-portfolio-img {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 188, 188, 0.2)), to(rgba(12, 40, 71, 0.99))), url("./portfolioImg.png");
+  background-image: linear-gradient(to bottom, rgba(188, 188, 188, 0.2), rgba(12, 40, 71, 0.99)), url("./portfolioImg.png");
 }
 
 .sidebar-list-item:hover {
