@@ -31,6 +31,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
 .menu-icon {
@@ -307,8 +308,16 @@ header {
   border: 2px solid #bebbbb;
 }
 
+#landing-projects-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+}
+
 .landing-grid-title {
-  background-color: #e9e9e9;
   height: 52px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -318,6 +327,7 @@ header {
           align-items: center;
   padding-left: 20px;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .landing-projects {
@@ -405,28 +415,28 @@ header {
   row-gap: 12px;
   padding: 12px;
   overflow-y: auto;
+  padding-top: 0px;
 }
 
 .grid-item-box {
   background-color: #e9e9e9;
   border-radius: 10px;
-  height: 200px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 12px;
-}
-
-.landing-exp .grid-item-box {
   height: auto;
   padding: 12px 12px 8px 12px;
 }
 
-.landing-exp-years {
+.landing-projects .grid-item-box {
+  height: 200px;
+}
+
+.landing-content-years {
   margin-bottom: 8px;
   font-style: italic;
 }
 
-.landing-exp-info {
+.landing-content-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,8 +446,9 @@ header {
   margin-bottom: 6px;
 }
 
-.landing-exp-title {
+.landing-content-title {
   margin-bottom: 2px;
+  font-weight: bold;
 }
 
 .sidebar-list-item:hover {
