@@ -258,7 +258,7 @@ header {
   align-items: center;
   padding-left: 18px;
   // border-radius: 10px 10px 0px 0px;
-  color: #252525;
+  color: #393838;
   font-size: 18px;
   font-weight: bold;
 }
@@ -282,7 +282,7 @@ header {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 14px;
 }
 // .landing-contact-btns {
 //   display: flex;
@@ -356,6 +356,7 @@ header {
 .landing-content-title {
   margin-bottom: 2px;
   font-weight: bold;
+  color: #393838;
 }
 .landing-project-img {
   height: 100%;

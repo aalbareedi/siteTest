@@ -328,7 +328,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 18px;
-  color: #252525;
+  color: #393838;
   font-size: 18px;
   font-weight: bold;
 }
@@ -380,7 +380,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 10px;
+  row-gap: 14px;
 }
 
 .landing-contact-btn {
@@ -472,6 +472,7 @@ header {
 .landing-content-title {
   margin-bottom: 2px;
   font-weight: bold;
+  color: #393838;
 }
 
 .landing-project-img {
