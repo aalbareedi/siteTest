@@ -140,6 +140,7 @@ header {
   position: relative;
   width: 100%;
   color: gray;
+  transition: all 0.2s;
 }
 .sidebar-list-item.active {
   color: $current-nav;
@@ -274,7 +275,7 @@ header {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  row-gap: 14px;
+  row-gap: 15px;
 }
 .landing-contact-btn {
   display: flex;
@@ -314,8 +315,12 @@ header {
 }
 .landing-projects .grid-item-box {
   height: 200px;
-  border: 2px solid #d7d7d7;
-  // padding: 12px 12px 8px 12px;
+  // border: 2px solid #d7d7d7;
+  background-color: #d7d7d7;
+  padding: 0px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s;
 }
 .landing-content-years {
   margin-bottom: 8px;
@@ -327,11 +332,6 @@ header {
   padding-left: 4px;
   margin-bottom: 6px;
   line-height: 20px;
-}
-#landing-projects-content .grid-item-box {
-  padding: 0px;
-  overflow: hidden;
-  position: relative;
 }
 .landing-project-overlay {
   position: absolute;
@@ -351,35 +351,38 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // bottom: 0;
+  // right: 0;
+  // border-radius: 8px;
+  border-radius: 10px;
+  border: 2px solid #d7d7d7;
 }
 #landing-braces-img {
-  // background-image: url("./orthoImg.jpg");
+  // background-image: url("./orthoImg.png");
   background-image: linear-gradient(
-      to bottom,
+      to top,
       rgba(188, 188, 188, 0.2),
-      rgba(55, 55, 132, 0.99) 82%
+      rgba(55, 55, 132, 0.99) 80%
     ),
-    url("./orthoImg.jpg");
+    url("./orthoImg.png");
 }
 #landing-portfolio-img {
   // background-image: url("./portfolioImg.png");
   background-image: linear-gradient(
-      to bottom,
+      to top,
       rgba(188, 188, 188, 0.2),
-      rgba(55, 55, 132, 0.99) 82%
+      rgba(55, 55, 132, 0.99) 80%
     ),
     url("./portfolioImg.png");
 }
 .landing-project-title {
   // padding: 14px;
   position: absolute;
-  bottom: 12px;
-  left: 14px;
+  top: 14px;
+  left: 16px;
   color: #f0f0f0;
 }
 
@@ -400,10 +403,99 @@ header {
   height: calc(100% - #{$header-height});
 }
 #projects {
-  // height: 500px;
-  // background-color: red;
   padding: 40px;
 }
+#projects .title-text {
+  margin-bottom: 40px;
+}
+.projects-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.project-item {
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+}
+.project-preview {
+  width: 33%;
+  background: #9393a6;
+  // height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  border: 3px solid whitesmoke;
+  border-radius: 10px 0px 0px 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.project-title {
+  font-size: 22px;
+  color: #2b2b2b;
+  margin-bottom: 20px;
+}
+.project-point-text {
+  font-size: 16px;
+  line-height: 20px;
+}
+.project-details {
+  background-color: whitesmoke;
+  flex-grow: 1;
+  padding: 20px;
+}
+.project-btns {
+  width: 80px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  background: #e7e7ed;
+  border-left: 3px solid #e7e7ed;
+  flex-shrink: 0;
+}
+.project-btn {
+  background-color: white;
+  border: none;
+  flex-grow: 1;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 6px;
+  color: #7676e3;
+  transition: all 0.2s;
+}
+.project-btn i {
+  font-size: 22px;
+}
+.github-icon {
+  font-size: 24px !important;
+}
+#osc-preview-img {
+  background-image: url("./orthoImg.png");
+}
+#portfolio-preview-img {
+  background-image: url("./portfolioImg.png");
+}
+.project-points-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+.project-point {
+  display: flex;
+  column-gap: 12px;
+}
+.project-point-title {
+  min-width: 70px;
+  font-weight: bold;
+}
+// .project-btn-text {
+//   max-width: 70px;
+// }
 #skills {
   height: 500px;
   background-color: orange;
@@ -437,5 +529,11 @@ header {
   border-color: $main-grid-hover;
 }
 .landing-projects .grid-item-box:hover {
+  box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+}
+.landing-projects .grid-item-box:hover .landing-project-img {
   border-color: $main-grid-hover;
+}
+.project-btn:hover {
+  background-color: whitesmoke;
 }
