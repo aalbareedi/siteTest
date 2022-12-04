@@ -33,6 +33,7 @@ header {
   background-color: #7676e3;
   // box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.4);
   height: $header-height;
+  z-index: 1;
 }
 .container {
   display: flex;
@@ -195,21 +196,9 @@ header {
   letter-spacing: 0.2px;
 }
 .content {
-  // padding-left: 30px;
-  // padding-top: 30px;
   // width: 100%;
   flex-grow: 1;
-  // background-color: #d1d1d1;
   background-color: #e7e7ed;
-  // overflow-y: scroll;
-}
-.main-landing-content {
-  // display: flex;
-  // flex-direction: column;
-  // row-gap: 20px;
-  // padding: 30px 20px 20px 20px;
-  padding: 40px 40px 40px 40px;
-  height: calc(100% - #{$header-height});
 }
 .landing-intro-title {
   margin-bottom: 30px;
@@ -224,7 +213,7 @@ header {
   border-radius: 50%;
   user-select: none;
 }
-.intro-title-text {
+.title-text {
   color: #252525;
   font-size: 24px;
   font-weight: bold;
@@ -287,18 +276,12 @@ header {
   flex-direction: column;
   row-gap: 14px;
 }
-// .landing-contact-btns {
-//   display: flex;
-//   flex-direction: column;
-//   row-gap: 10px;
-// }
 .landing-contact-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 54px;
-  // border-radius: 10px;
-  border-radius: 50px;
+  border-radius: 10px;
   border: none;
   border: 2px solid #bebbbb;
   background: #f3f3f3;
@@ -327,10 +310,11 @@ header {
   // height: 200px;
   // padding: 12px;
   height: auto;
-  padding: 12px 12px 8px 12px;
+  padding: 14px 14px 8px 14px;
 }
 .landing-projects .grid-item-box {
   height: 200px;
+  border: 2px solid #d7d7d7;
   // padding: 12px 12px 8px 12px;
 }
 .landing-content-years {
@@ -399,6 +383,48 @@ header {
   color: #f0f0f0;
 }
 
+.tab-content {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  visibility: hidden;
+}
+.tab-content.open {
+  position: initial;
+  opacity: 1;
+  width: auto;
+  visibility: visible;
+}
+#overview {
+  padding: 40px;
+  height: calc(100% - #{$header-height});
+}
+#projects {
+  // height: 500px;
+  // background-color: red;
+  padding: 40px;
+}
+#skills {
+  height: 500px;
+  background-color: orange;
+}
+#work {
+  height: 500px;
+  background-color: pink;
+}
+#edu {
+  height: 500px;
+  background-color: yellow;
+}
+#resume {
+  height: 500px;
+  background-color: green;
+}
+#contact {
+  height: 500px;
+  background-color: purple;
+}
+
 .sidebar-list-item:hover {
   background-color: #e7e7ed;
 }
@@ -408,5 +434,8 @@ header {
   cursor: pointer;
 }
 .landing-contact-btn:hover {
+  border-color: $main-grid-hover;
+}
+.landing-projects .grid-item-box:hover {
   border-color: $main-grid-hover;
 }

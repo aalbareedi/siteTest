@@ -24,6 +24,7 @@ header {
   top: 0;
   background-color: #7676e3;
   height: 64px;
+  z-index: 1;
 }
 
 .container {
@@ -255,11 +256,6 @@ header {
   background-color: #e7e7ed;
 }
 
-.main-landing-content {
-  padding: 40px 40px 40px 40px;
-  height: calc(100% - 64px);
-}
-
 .landing-intro-title {
   margin-bottom: 30px;
   display: -webkit-box;
@@ -283,7 +279,7 @@ header {
           user-select: none;
 }
 
-.intro-title-text {
+.title-text {
   color: #252525;
   font-size: 24px;
   font-weight: bold;
@@ -395,7 +391,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 54px;
-  border-radius: 50px;
+  border-radius: 10px;
   border: none;
   border: 2px solid #bebbbb;
   background: #f3f3f3;
@@ -432,11 +428,12 @@ header {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   height: auto;
-  padding: 12px 12px 8px 12px;
+  padding: 14px 14px 8px 14px;
 }
 
 .landing-projects .grid-item-box {
   height: 200px;
+  border: 2px solid #d7d7d7;
 }
 
 .landing-content-years {
@@ -505,6 +502,54 @@ header {
   color: #f0f0f0;
 }
 
+.tab-content {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.tab-content.open {
+  position: initial;
+  opacity: 1;
+  width: auto;
+  visibility: visible;
+}
+
+#overview {
+  padding: 40px;
+  height: calc(100% - 64px);
+}
+
+#projects {
+  padding: 40px;
+}
+
+#skills {
+  height: 500px;
+  background-color: orange;
+}
+
+#work {
+  height: 500px;
+  background-color: pink;
+}
+
+#edu {
+  height: 500px;
+  background-color: yellow;
+}
+
+#resume {
+  height: 500px;
+  background-color: green;
+}
+
+#contact {
+  height: 500px;
+  background-color: purple;
+}
+
 .sidebar-list-item:hover {
   background-color: #e7e7ed;
 }
@@ -517,6 +562,10 @@ header {
 }
 
 .landing-contact-btn:hover {
+  border-color: #9292f8;
+}
+
+.landing-projects .grid-item-box:hover {
   border-color: #9292f8;
 }
 /*# sourceMappingURL=style.css.map */

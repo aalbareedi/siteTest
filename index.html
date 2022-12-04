@@ -39,37 +39,37 @@
               </a>
             </li>
             <li class="sidebar-list-item" title="Projects">
-              <a href="#" class="sidebar-link">
+              <a href="#projects" class="sidebar-link">
                 <i class="fa-regular fa-folder-open sidebar-icon"></i>
                 <div class="hidden-sidebar">Projects</div>
               </a>
             </li>
             <li class="sidebar-list-item" title="Skills">
-              <a href="#" class="sidebar-link">
+              <a href="#skills" class="sidebar-link">
                 <i class="fas fa-list sidebar-icon"></i>
                 <div class="hidden-sidebar">Skills</div>
               </a>
             </li>
             <li class="sidebar-list-item" title="Work Experience">
-              <a href="#" class="sidebar-link">
+              <a href="#work" class="sidebar-link">
                 <i class="fas fa-chart-line sidebar-icon"></i>
                 <div class="hidden-sidebar">Work Experience</div>
               </a>
             </li>
             <li class="sidebar-list-item" title="Education">
-              <a href="#" class="sidebar-link">
+              <a href="#edu" class="sidebar-link">
                 <i class="fa-solid fa-graduation-cap sidebar-icon"></i>
                 <div class="hidden-sidebar">Education</div>
               </a>
             </li>
             <li class="sidebar-list-item" title="Resume">
-              <a href="#" class="sidebar-link">
+              <a href="#resume" class="sidebar-link">
                 <i class="fa-solid fa-address-card sidebar-icon"></i>
                 <div class="hidden-sidebar">Resume</div>
               </a>
             </li>
             <li class="sidebar-list-item" title="Contact Me">
-              <a href="#" class="sidebar-link">
+              <a href="#contact" class="sidebar-link">
                 <i class="fa-solid fa-comment sidebar-icon"></i>
                 <div class="hidden-sidebar">Contact Me</div>
               </a>
@@ -117,10 +117,10 @@
             <i class="fa-solid fa-arrow-right-from-bracket menu-icon"></i>
           </button>
         </header>
-        <div class="main-landing-content">
+        <div id="overview" class="tab-content">
           <div class="landing-intro-title">
             <img src="./newProfile.svg" class="intro-title-img" />
-            <div class="intro-title-text">
+            <div class="title-text">
               Hi I'm Amer Albareedi, welcome to my portfolio!
             </div>
           </div>
@@ -247,17 +247,62 @@
               </div>
             </div>
             <div class="landing-contact">
-              <!-- <div class="landing-contact-btns"> -->
               <button class="landing-contact-btn">View My Resume</button>
               <button class="landing-contact-btn">
                 <span class="contact-btn-text">Contact Me</span>
                 <i class="fa-regular fa-face-smile"></i>
               </button>
-              <!-- </div> -->
             </div>
           </div>
         </div>
+        <div id="projects" class="tab-content">
+          <div class="title-text">Projects</div>
+        </div>
+        <div id="skills" class="tab-content">
+          <div class="title-text">SKILLS</div>
+        </div>
+        <div id="work" class="tab-content">
+          <div class="title-text">WORK</div>
+        </div>
+        <div id="edu" class="tab-content">
+          <div class="title-text">EDUCATION</div>
+        </div>
+        <div id="resume" class="tab-content">
+          <div class="title-text">RESUME</div>
+        </div>
+        <div id="contact" class="tab-content">
+          <div class="title-text">CONTACT</div>
+        </div>
       </main>
     </div>
+
+    <script>
+      showPageFromAddress();
+
+      document.querySelectorAll(".middle-sidebar a").forEach((a) => {
+        a.onclick = (e) => {
+          e.preventDefault();
+          history.pushState({}, null, `/${a.hash.substr(1)}`);
+          showPageFromAddress();
+        };
+      });
+
+      function showPageFromAddress() {
+        const pageName = location.pathname.substr(1);
+        console.log(pageName);
+
+        const page = document.querySelector(
+          pageName ? `#${pageName}` : `#overview`
+        );
+
+        if (page) {
+          document.querySelectorAll(".tab-content.open").forEach((a) => {
+            a.classList.remove("open");
+          });
+
+          page.classList.add("open");
+        }
+      }
+    </script>
   </body>
 </html>
