@@ -446,6 +446,9 @@ header {
 #portfolio-project .project-preview {
   background-image: url("./portfolioImg.png");
 }
+.project-item:hover .project-preview {
+  filter: blur(4px);
+}
 #osc-project .preview-logo {
   display: flex;
   column-gap: 6px;
@@ -453,6 +456,17 @@ header {
   align-items: center;
   // height: 100%;
   transform: scale(1.1);
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -123px;
+  transition: all 0.2s;
+}
+#osc-project:hover .preview-logo {
+  top: 10px;
+  left: 0px;
+  margin-left: -20px;
+  transform: scale(0.7);
 }
 #osc-project .preview-logo img {
   width: 48px;
@@ -481,9 +495,9 @@ header {
 }
 #osc-project .preview-overlay {
   background-color: rgba(27, 42, 97, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 }
 .project-title {
   font-size: 22px;
