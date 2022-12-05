@@ -529,15 +529,13 @@ header {
   margin-bottom: 40px;
 }
 
-.projects-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 30px;
+.projects-content-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 }
 
 .project-item {
@@ -547,19 +545,85 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #d7d7d7;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .project-preview {
-  width: 33%;
-  background: #9393a6;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  border: 3px solid whitesmoke;
-  border-radius: 10px 0px 0px 10px;
-  cursor: pointer;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  border-radius: 10px;
+}
+
+#osc-project .project-preview {
+  background-image: url("./orthoImg.png");
+}
+
+#portfolio-project .project-preview {
+  background-image: url("./portfolioImg.png");
+}
+
+#osc-project .preview-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 6px;
+          column-gap: 6px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#osc-project .preview-logo img {
+  width: 48px;
+}
+
+.preview-logo-name {
+  color: white;
+}
+
+.osc-name-1 {
+  font-family: "Russo One", sans-serif;
+  font-size: 28px;
+}
+
+.osc-name-2 {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.24px;
+  word-spacing: 2px;
+}
+
+.preview-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#osc-project .preview-overlay {
+  background-color: rgba(27, 42, 97, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .project-title {
@@ -631,14 +695,6 @@ header {
 
 .github-icon {
   font-size: 25px !important;
-}
-
-#osc-preview-img {
-  background-image: url("./orthoImg.png");
-}
-
-#portfolio-preview-img {
-  background-image: url("./portfolioImg.png");
 }
 
 .project-points-wrapper {
@@ -716,5 +772,10 @@ header {
 
 .project-btn:hover {
   background-color: whitesmoke;
+}
+
+.project-item:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+          box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
 }
 /*# sourceMappingURL=style.css.map */

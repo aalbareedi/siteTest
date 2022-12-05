@@ -409,28 +409,81 @@ header {
 #projects .title-text {
   margin-bottom: 40px;
 }
-.projects-content {
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
+.projects-content-grid {
+  // display: flex;
+  // flex-direction: column;
+  // row-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // grid-template-rows: repeat(2, auto);
+  // border-radius: 20px;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 }
 .project-item {
   height: 300px;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
+  background-color: #d7d7d7;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 .project-preview {
-  width: 33%;
-  background: #9393a6;
-  // height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  border: 3px solid whitesmoke;
-  border-radius: 10px 0px 0px 10px;
-  cursor: pointer;
-  flex-shrink: 0;
+  border-radius: 10px;
+  // border: 2px solid #d7d7d7;
+  // border-radius: 10px 0px 0px 10px;
+  // flex-shrink: 0;
+}
+#osc-project .project-preview {
+  background-image: url("./orthoImg.png");
+}
+#portfolio-project .project-preview {
+  background-image: url("./portfolioImg.png");
+}
+#osc-project .preview-logo {
+  display: flex;
+  column-gap: 6px;
+  justify-content: center;
+  align-items: center;
+  // height: 100%;
+  transform: scale(1.1);
+}
+#osc-project .preview-logo img {
+  width: 48px;
+}
+.preview-logo-name {
+  // color: #3a3a3a;
+  color: white;
+}
+.osc-name-1 {
+  font-family: "Russo One", sans-serif;
+  font-size: 28px;
+}
+.osc-name-2 {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.24px;
+  word-spacing: 2px;
+}
+.preview-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#osc-project .preview-overlay {
+  background-color: rgba(27, 42, 97, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .project-title {
   font-size: 22px;
@@ -474,12 +527,6 @@ header {
 }
 .github-icon {
   font-size: 25px !important;
-}
-#osc-preview-img {
-  background-image: url("./orthoImg.png");
-}
-#portfolio-preview-img {
-  background-image: url("./portfolioImg.png");
 }
 .project-points-wrapper {
   display: flex;
@@ -537,4 +584,7 @@ header {
 }
 .project-btn:hover {
   background-color: whitesmoke;
+}
+.project-item:hover {
+  box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
 }
