@@ -499,15 +499,44 @@ header {
   flex-grow: 1;
   padding: 20px;
 }
+.more-info-btn {
+  position: absolute;
+  bottom: 68px;
+  left: 50%;
+  margin-left: -60px;
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+  // border: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+  background: #303968;
+  border: 2px solid gainsboro;
+  color: whitesmoke;
+}
+.project-item:hover .more-info-btn {
+  visibility: visible;
+  opacity: 1;
+}
 .project-btns {
-  width: 80px;
-  height: 100%;
+  height: 50px;
+  // height: 100%;
   display: flex;
-  flex-direction: column;
-  row-gap: 3px;
+  column-gap: 3px;
   background: #e7e7ed;
-  border-left: 3px solid #e7e7ed;
-  flex-shrink: 0;
+  // border-left: 3px solid #e7e7ed;
+  // flex-shrink: 0;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: -52px;
+  visibility: hidden;
+  transition: all 0.2s;
+}
+.project-item:hover .project-btns {
+  visibility: visible;
+  bottom: 0px;
 }
 .project-btn {
   background-color: white;
@@ -515,10 +544,10 @@ header {
   flex-grow: 1;
   flex-basis: 100%;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 8px;
+  column-gap: 8px;
   color: #7676e3;
   transition: all 0.2s;
 }
@@ -583,7 +612,7 @@ header {
   border-color: $main-grid-hover;
 }
 .project-btn:hover {
-  background-color: whitesmoke;
+  background-color: #ededed;
 }
 .project-item:hover {
   box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
