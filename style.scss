@@ -359,6 +359,7 @@ header {
   // border-radius: 8px;
   border-radius: 10px;
   border: 2px solid #d7d7d7;
+  transition: all 0.2s;
 }
 #landing-braces-img {
   // background-image: url("./orthoImg.png");
@@ -464,7 +465,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 6px;
+  row-gap: 8px;
   color: #7676e3;
   transition: all 0.2s;
 }
@@ -472,7 +473,7 @@ header {
   font-size: 22px;
 }
 .github-icon {
-  font-size: 24px !important;
+  font-size: 25px !important;
 }
 #osc-preview-img {
   background-image: url("./orthoImg.png");

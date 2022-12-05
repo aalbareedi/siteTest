@@ -481,6 +481,8 @@ header {
   background-position: top center;
   border-radius: 10px;
   border: 2px solid #d7d7d7;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 #landing-braces-img {
@@ -617,7 +619,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  row-gap: 6px;
+  row-gap: 8px;
   color: #7676e3;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -628,7 +630,7 @@ header {
 }
 
 .github-icon {
-  font-size: 24px !important;
+  font-size: 25px !important;
 }
 
 #osc-preview-img {
