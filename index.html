@@ -21,6 +21,31 @@
       rel="stylesheet"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.gstatic.com/s/ptsans/v11/jizfRExUiTo99u79B_mh0O6tLR8a8zI.woff2"
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=block"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.gstatic.com/s/balooda2/v1/2-ci9J9j0IaUMQZwAJyJQundoLNAb2U.woff2"
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=block"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
 
@@ -42,10 +67,11 @@
         </div>
         <div class="middle-sidebar">
           <ul class="sidebar-list">
-            <li class="sidebar-list-item active" title="Overview">
+            <li class="sidebar-list-item active">
               <a href="#" class="sidebar-link">
                 <i class="fa-solid fa-house-chimney sidebar-icon"></i>
                 <div class="hidden-sidebar">Overview</div>
+                <!-- <div class="nav-tooltip">Overview</div> -->
               </a>
             </li>
             <li class="sidebar-list-item" title="Projects">
@@ -305,28 +331,52 @@
                     alt="Orthodontic Specialty Center"
                   />
                   <div class="preview-logo-name">
-                    <div class="osc-name-1">Orthodontic</div>
-                    <div class="osc-name-2">SPECIALTY CENTER</div>
+                    <div class="logo-name-first">Orthodontic</div>
+                    <div class="logo-name-second">SPECIALTY CENTER</div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="project-item" id="portfolio-project">
-              <div class="project-preview" id="portfolio-preview-img"></div>
+              <div class="project-preview"></div>
               <div class="preview-overlay">
+                <div class="project-preview-info">
+                  Modernize a website which is from the early 1990's for one of
+                  Chicago's top dental clinics.
+                </div>
                 <button class="more-info-btn">More Info</button>
                 <div class="project-btns">
-                  <button class="project-btn">
+                  <a
+                    class="project-btn"
+                    target="_blank"
+                    href="https://www.albareedi.com/"
+                    title="www.albareedi.com"
+                  >
                     <i class="fa-solid fa-globe"></i>
                     <div class="project-btn-text">Visit</div>
-                  </button>
-                  <button class="project-btn">
+                  </a>
+                  <a
+                    class="project-btn"
+                    target="_blank"
+                    href="https://github.com/aalbareedi/my-site"
+                    title="GitHub"
+                  >
                     <i class="fa-brands fa-github github-icon"></i>
                     <div class="project-btn-text">Code</div>
-                  </button>
+                  </a>
+                </div>
+              </div>
+              <div class="preview-logo-layer">
+                <div class="preview-logo">
+                  <img src="./nameLogo.svg" alt="s" />
+                  <div class="preview-logo-name">
+                    <div class="logo-name-first">Amer Albareedi</div>
+                    <div class="logo-name-second">Front-End Web Developer</div>
+                  </div>
                 </div>
               </div>
             </div>
+
             <div class="project-item"></div>
             <div class="project-item"></div>
             <div class="project-item"></div>

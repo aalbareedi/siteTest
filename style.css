@@ -68,7 +68,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* background-color: rgba(176, 176, 176, 0.5); */
   background-color: #9da1e7;
   color: whitesmoke;
   border-radius: 4px;
@@ -282,6 +281,7 @@ header {
   width: 100%;
   height: 54px;
   padding-left: 24px;
+  position: relative;
 }
 
 .sidebar.open {
@@ -454,7 +454,7 @@ header {
   border: none;
   border: 2px solid #bebbbb;
   background: #f3f3f3;
-  max-width: 210px;
+  max-width: 200px;
   padding: 0px 12px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -486,10 +486,8 @@ header {
 
 .grid-item-box {
   border-radius: 10px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  height: auto;
-  padding: 14px 14px 8px 14px;
+  padding: 14px 14px 8px 8px;
+  font-size: 16px;
 }
 
 .landing-projects .grid-item-box {
@@ -503,8 +501,9 @@ header {
 }
 
 .landing-content-years {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-style: italic;
+  line-height: 20px;
 }
 
 .landing-content-info {
@@ -514,8 +513,8 @@ header {
   -webkit-column-gap: 6px;
           column-gap: 6px;
   padding-left: 4px;
-  margin-bottom: 6px;
-  line-height: 20px;
+  margin-bottom: 4px;
+  line-height: 22px;
 }
 
 .landing-project-overlay {
@@ -528,7 +527,7 @@ header {
 }
 
 .landing-content-title {
-  margin-bottom: 2px;
+  margin-bottom: 3px;
   font-weight: bold;
   color: #393838;
 }
@@ -630,8 +629,8 @@ header {
 }
 
 .project-item:hover .project-preview {
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -640,8 +639,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 6px;
-          column-gap: 6px;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -656,29 +655,75 @@ header {
   visibility: visible;
 }
 
-#osc-project:hover .preview-logo {
-  opacity: 0;
-  visibility: hidden;
+#portfolio-project .preview-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.project-item:hover .preview-logo {
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 #osc-project .preview-logo img {
   width: 48px;
 }
 
-.preview-logo-name {
+#portfolio-project .preview-logo img {
+  width: 78px;
+}
+
+#osc-project .preview-logo-name {
   color: white;
 }
 
-.osc-name-1 {
+#portfolio-project .preview-logo-name {
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 2px;
+}
+
+#osc-project .logo-name-first {
   font-family: "Russo One", sans-serif;
   font-size: 28px;
 }
 
-.osc-name-2 {
+#osc-project .logo-name-second {
   font-family: "Titillium Web", sans-serif;
   font-size: 20px;
   letter-spacing: 0.24px;
   word-spacing: 2px;
+}
+
+#portfolio-project .logo-name-first {
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  word-spacing: 2px;
+}
+
+#portfolio-project .logo-name-second {
+  font-family: "Baloo Da 2", cursive;
+  font-size: 18px;
+  margin-left: -1px;
 }
 
 .preview-overlay {
@@ -688,7 +733,15 @@ header {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  padding-top: 50px;
+  padding-top: 52px;
+}
+
+#osc-project .preview-overlay {
+  background-color: rgba(27, 42, 97, 0.9);
+}
+
+#portfolio-project .preview-overlay {
+  background-color: rgba(97, 69, 135, 0.85);
 }
 
 .preview-logo-layer {
@@ -711,10 +764,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
   pointer-events: none;
-}
-
-#osc-project .preview-overlay {
-  background-color: rgba(27, 42, 97, 0.9);
 }
 
 .project-title {
@@ -745,7 +794,7 @@ header {
   visibility: hidden;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  word-spacing: 1.2px;
+  word-spacing: 1.4px;
 }
 
 .project-item:hover .project-preview-info {
@@ -770,8 +819,16 @@ header {
   color: whitesmoke;
 }
 
+#osc-project .more-info-btn {
+  background: #303968;
+}
+
+#portfolio-project .more-info-btn {
+  background: #6c4b8f;
+}
+
 .more-info-btn:hover {
-  background-color: #7676e3;
+  background-color: #7676e3 !important;
 }
 
 .project-item:hover .more-info-btn {
