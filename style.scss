@@ -178,7 +178,7 @@ header {
 }
 .sidebar-list-item.active {
   color: $current-nav;
-  background-color: #e7e7ed;
+  background-color: #e7e7ff;
 }
 .sidebar-list-item.active::before {
   content: "";
@@ -307,7 +307,7 @@ header {
   border-radius: 10px;
   background-color: #eaeafd;
   // padding: 20px;
-  border: 2px solid #bebbbb;
+  border: 2px solid #afafd2;
   transition: all 0.2s;
 }
 #landing-projects-content {
@@ -377,18 +377,18 @@ header {
   padding: 12px;
   display: flex;
   flex-direction: column;
-  // row-gap: 12px;
   overflow-y: auto;
-  // padding-top: 0px;
   max-height: calc(100% - 52px);
   background: #eaeafd;
+  row-gap: 4px;
 }
 .grid-item-box {
   border-radius: 10px;
   // flex-shrink: 0;
   // height: auto;
-  padding: 14px 14px 8px 8px;
+  padding: 8px;
   font-size: 16px;
+  color: #393838;
 }
 .landing-projects .grid-item-box {
   height: 200px;
@@ -401,7 +401,7 @@ header {
 }
 .landing-content-years {
   margin-bottom: 6px;
-  font-style: italic;
+  // font-style: italic;
   line-height: 20px;
 }
 .landing-content-info {
@@ -410,6 +410,7 @@ header {
   padding-left: 4px;
   margin-bottom: 4px;
   line-height: 22px;
+  word-spacing: 0.4px;
 }
 .landing-project-overlay {
   position: absolute;
@@ -422,21 +423,14 @@ header {
 .landing-content-title {
   margin-bottom: 3px;
   font-weight: bold;
-  color: #393838;
 }
 .landing-project-img {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // bottom: 0;
-  // right: 0;
-  // border-radius: 8px;
   border-radius: 10px;
-  border: 2px solid #d7d7d7;
+  border: 2px solid #fcfcff;
   transition: all 0.2s;
 }
 #landing-braces-img {
@@ -521,7 +515,7 @@ header {
   background-image: url("./portfolioImg.png");
 }
 .project-item:hover .project-preview {
-  filter: blur(5px);
+  filter: blur(6px);
   transform: scale(1.2);
 }
 #osc-project .preview-logo {
@@ -741,7 +735,7 @@ header {
 }
 
 .sidebar-list-item:hover {
-  background-color: #e7e7ed;
+  background-color: #e7e7ff;
 }
 .grid-item:hover {
   border-color: $main-grid-hover;

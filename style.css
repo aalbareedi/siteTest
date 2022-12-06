@@ -236,7 +236,7 @@ header {
 
 .sidebar-list-item.active {
   color: #7676e3;
-  background-color: #e7e7ed;
+  background-color: #e7e7ff;
 }
 
 .sidebar-list-item.active::before {
@@ -358,7 +358,7 @@ header {
   overflow: hidden;
   border-radius: 10px;
   background-color: #eaeafd;
-  border: 2px solid #bebbbb;
+  border: 2px solid #afafd2;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -482,12 +482,14 @@ header {
   overflow-y: auto;
   max-height: calc(100% - 52px);
   background: #eaeafd;
+  row-gap: 4px;
 }
 
 .grid-item-box {
   border-radius: 10px;
-  padding: 14px 14px 8px 8px;
+  padding: 8px;
   font-size: 16px;
+  color: #393838;
 }
 
 .landing-projects .grid-item-box {
@@ -502,7 +504,6 @@ header {
 
 .landing-content-years {
   margin-bottom: 6px;
-  font-style: italic;
   line-height: 20px;
 }
 
@@ -515,6 +516,7 @@ header {
   padding-left: 4px;
   margin-bottom: 4px;
   line-height: 22px;
+  word-spacing: 0.4px;
 }
 
 .landing-project-overlay {
@@ -529,7 +531,6 @@ header {
 .landing-content-title {
   margin-bottom: 3px;
   font-weight: bold;
-  color: #393838;
 }
 
 .landing-project-img {
@@ -538,7 +539,7 @@ header {
   background-size: cover;
   background-position: top center;
   border-radius: 10px;
-  border: 2px solid #d7d7d7;
+  border: 2px solid #fcfcff;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -629,8 +630,8 @@ header {
 }
 
 .project-item:hover .project-preview {
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -945,7 +946,7 @@ header {
 }
 
 .sidebar-list-item:hover {
-  background-color: #e7e7ed;
+  background-color: #e7e7ff;
 }
 
 .grid-item:hover {
