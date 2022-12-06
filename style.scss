@@ -178,7 +178,7 @@ header {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 14px 0 14px 24px;
+  padding: 14px 0px 14px 24px;
 }
 .sidebar.open {
   width: 260px;
@@ -410,13 +410,8 @@ header {
   margin-bottom: 40px;
 }
 .projects-content-grid {
-  // display: flex;
-  // flex-direction: column;
-  // row-gap: 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  // grid-template-rows: repeat(2, auto);
-  // border-radius: 20px;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
 }
@@ -439,6 +434,7 @@ header {
   // border: 2px solid #d7d7d7;
   // border-radius: 10px 0px 0px 10px;
   // flex-shrink: 0;
+  transition: all 0.2s;
 }
 #osc-project .project-preview {
   background-image: url("./orthoImg.png");
@@ -448,31 +444,26 @@ header {
 }
 .project-item:hover .project-preview {
   filter: blur(4px);
+  transform: scale(1.2);
 }
 #osc-project .preview-logo {
   display: flex;
   column-gap: 6px;
   justify-content: center;
   align-items: center;
-  // height: 100%;
-  transform: scale(1.1);
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  margin-left: -123px;
+  transform: scale(1.15);
   transition: all 0.2s;
+  opacity: 1;
+  visibility: visible;
 }
 #osc-project:hover .preview-logo {
-  top: 10px;
-  left: 0px;
-  margin-left: -20px;
-  transform: scale(0.7);
+  opacity: 0;
+  visibility: hidden;
 }
 #osc-project .preview-logo img {
   width: 48px;
 }
 .preview-logo-name {
-  // color: #3a3a3a;
   color: white;
 }
 .osc-name-1 {
@@ -492,12 +483,26 @@ header {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  padding-top: 50px;
+}
+.preview-logo-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
 }
 #osc-project .preview-overlay {
   background-color: rgba(27, 42, 97, 0.9);
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 }
 .project-title {
   font-size: 22px;
@@ -513,38 +518,56 @@ header {
   flex-grow: 1;
   padding: 20px;
 }
-.more-info-btn {
-  position: absolute;
-  bottom: 68px;
-  left: 50%;
-  margin-left: -60px;
-  width: 120px;
-  height: 40px;
-  border-radius: 50px;
-  // border: none;
+.project-preview-info {
+  color: white;
+  // position: absolute;
+  // bottom: 156px;
+  // left: 50%;
+  // margin-left: -180px;
+  // width: 360px;
+  padding: 0px 40px;
+  font-size: 18px;
+  line-height: 26px;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.2s;
+  transition: all 0.4s;
+  word-spacing: 1.2px;
+}
+.project-item:hover .project-preview-info {
+  visibility: visible;
+  opacity: 1;
+}
+.more-info-btn {
+  position: absolute;
+  bottom: 88px;
+  left: 50%;
+  margin-left: -68px;
+  width: 136px;
+  height: 46px;
+  border-radius: 50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
   background: #303968;
   border: 2px solid gainsboro;
   color: whitesmoke;
+}
+.more-info-btn:hover {
+  background-color: #7676e3;
 }
 .project-item:hover .more-info-btn {
   visibility: visible;
   opacity: 1;
 }
 .project-btns {
-  height: 50px;
-  // height: 100%;
+  height: 54px;
   display: flex;
   column-gap: 3px;
-  background: #e7e7ed;
-  // border-left: 3px solid #e7e7ed;
-  // flex-shrink: 0;
+  background: #ededed;
   position: absolute;
   left: 0px;
   right: 0px;
-  bottom: -52px;
+  bottom: -56px;
   visibility: hidden;
   transition: all 0.2s;
 }
@@ -561,15 +584,19 @@ header {
   // flex-direction: column;
   justify-content: center;
   align-items: center;
-  column-gap: 8px;
+  column-gap: 9px;
   color: #7676e3;
   transition: all 0.2s;
+  text-decoration: none;
 }
 .project-btn i {
-  font-size: 22px;
+  font-size: 24px;
 }
 .github-icon {
-  font-size: 25px !important;
+  font-size: 26px !important;
+}
+.project-btn-text {
+  font-size: 18px;
 }
 .project-points-wrapper {
   display: flex;

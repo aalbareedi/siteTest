@@ -229,7 +229,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding: 14px 0 14px 24px;
+  padding: 14px 0px 14px 24px;
 }
 
 .sidebar.open {
@@ -558,6 +558,8 @@ header {
   background-size: cover;
   background-position: top center;
   border-radius: 10px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 #osc-project .project-preview {
@@ -571,6 +573,8 @@ header {
 .project-item:hover .project-preview {
   -webkit-filter: blur(4px);
           filter: blur(4px);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #osc-project .preview-logo {
@@ -585,22 +589,17 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  margin-left: -123px;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  opacity: 1;
+  visibility: visible;
 }
 
 #osc-project:hover .preview-logo {
-  top: 10px;
-  left: 0px;
-  margin-left: -20px;
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
+  opacity: 0;
+  visibility: hidden;
 }
 
 #osc-project .preview-logo img {
@@ -630,6 +629,29 @@ header {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 50px;
+}
+
+.preview-logo-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: none;
 }
 
 #osc-project .preview-overlay {
@@ -655,21 +677,42 @@ header {
   padding: 20px;
 }
 
+.project-preview-info {
+  color: white;
+  padding: 0px 40px;
+  font-size: 18px;
+  line-height: 26px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  word-spacing: 1.2px;
+}
+
+.project-item:hover .project-preview-info {
+  visibility: visible;
+  opacity: 1;
+}
+
 .more-info-btn {
   position: absolute;
-  bottom: 68px;
+  bottom: 88px;
   left: 50%;
-  margin-left: -60px;
-  width: 120px;
-  height: 40px;
+  margin-left: -68px;
+  width: 136px;
+  height: 46px;
   border-radius: 50px;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   background: #303968;
   border: 2px solid gainsboro;
   color: whitesmoke;
+}
+
+.more-info-btn:hover {
+  background-color: #7676e3;
 }
 
 .project-item:hover .more-info-btn {
@@ -678,17 +721,17 @@ header {
 }
 
 .project-btns {
-  height: 50px;
+  height: 54px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-column-gap: 3px;
           column-gap: 3px;
-  background: #e7e7ed;
+  background: #ededed;
   position: absolute;
   left: 0px;
   right: 0px;
-  bottom: -52px;
+  bottom: -56px;
   visibility: hidden;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -716,19 +759,24 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 8px;
-          column-gap: 8px;
+  -webkit-column-gap: 9px;
+          column-gap: 9px;
   color: #7676e3;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  text-decoration: none;
 }
 
 .project-btn i {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .github-icon {
-  font-size: 25px !important;
+  font-size: 26px !important;
+}
+
+.project-btn-text {
+  font-size: 18px;
 }
 
 .project-points-wrapper {
