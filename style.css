@@ -922,7 +922,7 @@ header {
   position: absolute;
   width: 4px;
   background: #bdbdf0;
-  left: 6px;
+  left: 7px;
   top: 28px;
   bottom: 150px;
 }
@@ -937,16 +937,16 @@ header {
   left: -13px;
 }
 
-#work .time-point:nth-child(1) {
+.time-point:nth-child(1) {
   top: 0px;
 }
 
-#work .time-point:nth-child(2) {
+.time-point:nth-child(2) {
   top: 50%;
   margin-top: -15px;
 }
 
-#work .time-point:nth-child(3) {
+.time-point:nth-child(3) {
   bottom: 0px;
 }
 
@@ -971,12 +971,13 @@ header {
   font-size: 16px;
   color: #393838;
   border: 3px solid #bdbdf0;
+  max-width: 1040px;
 }
 
 .content-item-name {
   font-weight: bold;
   font-size: 20px;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
 }
 
 .content-item-years {
