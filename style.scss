@@ -94,7 +94,7 @@ header {
   overflow: hidden;
   padding-top: 18px;
   width: 72px;
-  border-right: 1px solid silver;
+  border-right: 2px solid #d0d0ef;
   display: flex;
   flex-direction: column;
   // height: calc(100vh - #{$header-height});
@@ -103,6 +103,7 @@ header {
   transition: width 200ms ease-in-out;
   background-color: whitesmoke;
   height: 100%;
+  z-index: 2;
 }
 .hidden-sidebar {
   opacity: 0;
@@ -134,7 +135,7 @@ header {
   overflow-x: hidden;
   flex-grow: 1;
   margin-top: 18px;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid #d0d0ef;
   width: 100%;
 }
 .bottom-sidebar {
@@ -312,7 +313,7 @@ header {
   border-radius: 10px;
   background-color: #eaeafd;
   // padding: 20px;
-  border: 2px solid #afafd2;
+  border: 3px solid #c1c1ec;
   transition: all 0.2s;
 }
 #landing-projects-content {
@@ -364,14 +365,16 @@ header {
   height: 54px;
   border-radius: 10px;
   border: none;
-  border: 2px solid #bebbbb;
-  background: #f3f3f3;
-  max-width: 190px;
+  // border: 3px solid #a5a5f8;
+  border: 3px solid #c1c1ec;
+  background: #d6d6ff;
+  max-width: 188px;
   padding: 0px 12px;
   transition: all 0.2s;
   box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
   font-size: 16px;
   column-gap: 6px;
+  color: #313131;
 }
 .contact-btn-text {
   min-width: 90px;
@@ -417,6 +420,9 @@ header {
   line-height: 22px;
   word-spacing: 0.4px;
 }
+.bp {
+  font-size: 18px;
+}
 .landing-project-overlay {
   position: absolute;
   top: 0;
@@ -426,7 +432,7 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .landing-content-title {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   font-weight: bold;
 }
 .landing-project-img {
@@ -477,17 +483,26 @@ header {
   padding: 40px;
 }
 #overview {
-  // padding: 40px;
   height: calc(100% - #{$header-height});
 }
-// #projects {
-//   padding: 40px;
-// }
+#projects {
+  height: calc(100% - #{$header-height});
+  // position: relative;
+}
 .projects-content-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+}
+.project-window {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .project-item {
   height: 300px;

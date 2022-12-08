@@ -108,7 +108,7 @@ header {
   overflow: hidden;
   padding-top: 18px;
   width: 72px;
-  border-right: 1px solid silver;
+  border-right: 2px solid #d0d0ef;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,6 +126,7 @@ header {
   transition: width 200ms ease-in-out;
   background-color: whitesmoke;
   height: 100%;
+  z-index: 2;
 }
 
 .hidden-sidebar {
@@ -172,7 +173,7 @@ header {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-top: 18px;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid #d0d0ef;
   width: 100%;
 }
 
@@ -364,7 +365,7 @@ header {
   overflow: hidden;
   border-radius: 10px;
   background-color: #eaeafd;
-  border: 2px solid #afafd2;
+  border: 3px solid #c1c1ec;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -458,9 +459,9 @@ header {
   height: 54px;
   border-radius: 10px;
   border: none;
-  border: 2px solid #bebbbb;
-  background: #f3f3f3;
-  max-width: 190px;
+  border: 3px solid #c1c1ec;
+  background: #d6d6ff;
+  max-width: 188px;
   padding: 0px 12px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -469,6 +470,7 @@ header {
   font-size: 16px;
   -webkit-column-gap: 6px;
           column-gap: 6px;
+  color: #313131;
 }
 
 .contact-btn-text {
@@ -525,6 +527,10 @@ header {
   word-spacing: 0.4px;
 }
 
+.bp {
+  font-size: 18px;
+}
+
 .landing-project-overlay {
   position: absolute;
   top: 0;
@@ -535,7 +541,7 @@ header {
 }
 
 .landing-content-title {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   font-weight: bold;
 }
 
@@ -586,6 +592,10 @@ header {
   height: calc(100% - 64px);
 }
 
+#projects {
+  height: calc(100% - 64px);
+}
+
 .projects-content-grid {
   display: -ms-grid;
   display: grid;
@@ -593,6 +603,16 @@ header {
       grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+}
+
+.project-window {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .project-item {
