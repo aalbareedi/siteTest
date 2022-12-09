@@ -14,6 +14,10 @@ body {
   height: 100%;
 }
 
+.hidden {
+  display: none !important;
+}
+
 button {
   cursor: pointer;
 }
@@ -460,7 +464,7 @@ header {
   border-radius: 10px;
   border: none;
   border: 3px solid #c1c1ec;
-  background: #d6d6ff;
+  background: #e7e7ff;
   max-width: 188px;
   padding: 0px 12px;
   -webkit-transition: all 0.2s;
@@ -596,6 +600,10 @@ header {
   height: calc(100% - 64px);
 }
 
+#projects.open {
+  position: relative;
+}
+
 .projects-content-grid {
   display: -ms-grid;
   display: grid;
@@ -606,13 +614,157 @@ header {
 }
 
 .project-window {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
+  padding: 80px;
+}
+
+.project-window-blur {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-filter: blur(26px);
+          filter: blur(26px);
+}
+
+.project-window-content {
+  background-color: pink;
+  max-height: 600px;
+  width: 100%;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-window-images {
+  background-color: whitesmoke;
+}
+
+.project-window-info {
+  background: whitesmoke;
+}
+
+.project-flex {
+  text-decoration: none;
+  width: 50%;
+}
+
+.project-window-title {
+  font-size: 20px;
+  height: 62px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 24px;
+  background: #dbdbff;
+  border-bottom: 2px solid #bebede;
+  border-left: 2px solid #bebede;
+}
+
+.project-window-points {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 32px;
+  font-size: 16px;
+  line-height: 24px;
+  word-spacing: 1px;
+  overflow-y: auto;
+  max-height: calc(100% - 62px);
+  border-left: 2px solid #bebede;
+  padding: 32px 52px 34px 26px;
+}
+
+.project-point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 26px;
+          column-gap: 26px;
+}
+
+.project-point-title {
+  min-width: 84px;
+}
+
+.project-window-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+}
+
+.project-window-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 160px;
+  height: 50px;
+  border: 3px solid #dbdbff;
+  background: transparent;
+  border-radius: 10px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  color: #7676e3;
+  font-size: 16px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.project-window-btn:hover {
+  background: #dbdbff;
+}
+
+.close-project-btn {
+  background-color: #e7e7ff;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 60px;
+  height: 60px;
+  border-radius: 0px 0px 20px 0px;
+  font-size: 22px;
+  border: 3px solid #bebede;
+  border-top: none;
+  border-left: none;
+  color: #7676e3;
+}
+
+.close-project-btn:hover {
+  background-color: #bebede;
 }
 
 .project-item {
@@ -785,25 +937,6 @@ header {
   pointer-events: none;
 }
 
-.project-title {
-  font-size: 22px;
-  color: #2b2b2b;
-  margin-bottom: 20px;
-}
-
-.project-point-text {
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.project-details {
-  background-color: whitesmoke;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  padding: 20px;
-}
-
 .project-preview-info {
   color: white;
   padding: 0px 40px;
@@ -912,30 +1045,6 @@ header {
 
 .project-btn-text {
   font-size: 18px;
-}
-
-.project-points-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 14px;
-}
-
-.project-point {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-column-gap: 12px;
-          column-gap: 12px;
-}
-
-.project-point-title {
-  min-width: 70px;
-  font-weight: bold;
 }
 
 .time-line {
