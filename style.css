@@ -238,21 +238,25 @@ header {
   position: relative;
   width: 100%;
   color: gray;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .sidebar-list-item.active {
-  color: #7676e3;
-  background-color: #e7e7ff;
+  color: #eaeafd;
+  background-color: #7676e3;
+}
+
+.sidebar-list-item.active:hover {
+  background-color: #7676e3;
 }
 
 .sidebar-list-item.active::before {
   content: "";
-  background-color: #7676e3;
+  background-color: #a2a2ff;
   height: 100%;
   position: absolute;
-  width: 4px;
+  width: 5px;
   left: 0;
   cursor: pointer;
 }
@@ -287,13 +291,17 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 54px;
+  height: 56px;
   padding-left: 24px;
   position: relative;
 }
 
 .sidebar.open {
   width: 260px;
+}
+
+.together {
+  white-space: nowrap;
 }
 
 #channel-name {
@@ -520,7 +528,7 @@ header {
 
 .landing-content-years {
   margin-bottom: 6px;
-  line-height: 20px;
+  line-height: 22px;
 }
 
 .landing-content-info {
@@ -560,7 +568,7 @@ header {
   background-size: cover;
   background-position: top center;
   border-radius: 10px;
-  border: 2px solid #fcfcff;
+  border: 3px solid #fcfcff;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -628,7 +636,7 @@ header {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 80px;
+  padding: 100px;
 }
 
 .project-window-blur {
@@ -644,7 +652,7 @@ header {
 
 .project-window-content {
   background-color: pink;
-  max-height: 600px;
+  max-height: 660px;
   width: 100%;
   border-radius: 20px;
   display: -webkit-box;
@@ -660,6 +668,7 @@ header {
 
 .project-window-info {
   background: whitesmoke;
+  color: #292828;
 }
 
 .project-flex {
@@ -670,7 +679,7 @@ header {
 .project-window-title {
   font-size: 20px;
   word-spacing: 0.4px;
-  height: 62px;
+  height: 66px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -679,8 +688,8 @@ header {
           align-items: center;
   padding-left: 24px;
   background: #dbdbff;
-  border-bottom: 2px solid #bebede;
-  border-left: 2px solid #bebede;
+  border-bottom: 2px solid #ccccee;
+  border-left: 2px solid #ccccee;
 }
 
 .project-window-points {
@@ -696,9 +705,9 @@ header {
   line-height: 24px;
   word-spacing: 1px;
   overflow-y: auto;
-  max-height: calc(100% - 62px);
-  border-left: 2px solid #bebede;
-  padding: 30px 62px 34px 26px;
+  max-height: calc(100% - 66px);
+  border-left: 2px solid #ccccee;
+  padding: 30px 62px 36px 26px;
 }
 
 .project-point {
@@ -711,6 +720,7 @@ header {
 
 .project-point-title {
   min-width: 84px;
+  margin-left: 1px;
 }
 
 .project-skill-tags {
@@ -728,7 +738,7 @@ header {
 .skill-tag {
   border: 2px solid #dbdbff;
   border-radius: 8px;
-  padding: 2px 8px;
+  padding: 2px 10px;
   background: #ececff;
 }
 
@@ -755,7 +765,7 @@ header {
   height: 50px;
   border: 3px solid #dbdbff;
   background: transparent;
-  border-radius: 10px;
+  border-radius: 30px;
   -webkit-column-gap: 10px;
           column-gap: 10px;
   color: #7676e3;
@@ -766,7 +776,10 @@ header {
 }
 
 .project-window-btn:hover {
-  background: #dbdbff;
+  background: #ececff;
+  -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+          box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+  border-color: #a8a8e3;
 }
 
 .github-project-icon {
@@ -774,23 +787,23 @@ header {
 }
 
 .close-project-btn {
-  background-color: #e7e7ff;
+  background-color: transparent;
   position: absolute;
   right: 0px;
   top: 0px;
-  width: 60px;
-  height: 60px;
+  width: 66px;
+  height: 66px;
   border-radius: 0px 20px 0px 0px;
   font-size: 22px;
   border: none;
-  border-left: 2px solid #bebede;
+  border-left: 2px solid #ccccee;
   color: #7676e3;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .close-project-btn:hover {
-  background-color: #bebede;
+  background-color: #ccccee;
 }
 
 .project-item {
@@ -802,7 +815,6 @@ header {
   display: flex;
   background-color: #d7d7d7;
   position: relative;
-  cursor: pointer;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -982,11 +994,11 @@ header {
 
 .more-info-btn {
   position: absolute;
-  bottom: 88px;
+  bottom: 90px;
   left: 50%;
   margin-left: -68px;
   width: 136px;
-  height: 46px;
+  height: 48px;
   border-radius: 50px;
   opacity: 0;
   visibility: hidden;
@@ -995,6 +1007,7 @@ header {
   background: #303968;
   border: 2px solid gainsboro;
   color: whitesmoke;
+  font-size: 18px;
 }
 
 #osc-project .more-info-btn {

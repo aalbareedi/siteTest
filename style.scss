@@ -1,5 +1,6 @@
 $header-height: 64px;
-$current-nav: #7676e3;
+// $current-nav: #7676e3;
+$current-nav: #a2a2ff;
 $main-grid-hover: #9292f8;
 $intro-title-height: 100px;
 
@@ -181,18 +182,21 @@ header {
   position: relative;
   width: 100%;
   color: gray;
-  transition: all 0.2s;
+  transition: all 0.4s;
 }
 .sidebar-list-item.active {
-  color: $current-nav;
-  background-color: #e7e7ff;
+  color: #eaeafd;
+  background-color: #7676e3;
+}
+.sidebar-list-item.active:hover {
+  background-color: #7676e3;
 }
 .sidebar-list-item.active::before {
   content: "";
   background-color: $current-nav;
   height: 100%;
   position: absolute;
-  width: 4px;
+  width: 5px;
   left: 0;
   cursor: pointer;
 }
@@ -218,8 +222,7 @@ header {
   display: flex;
   align-items: center;
   width: 100%;
-  // padding: 14px 0px 14px 24px;
-  height: 54px;
+  height: 56px;
   padding-left: 24px;
   position: relative;
 }
@@ -261,6 +264,9 @@ header {
 //   visibility: initial;
 // }
 
+.together {
+  white-space: nowrap;
+}
 #channel-name {
   font-weight: bold;
   color: #212121;
@@ -416,7 +422,7 @@ header {
 .landing-content-years {
   margin-bottom: 6px;
   // font-style: italic;
-  line-height: 20px;
+  line-height: 22px;
 }
 .landing-content-info {
   display: flex;
@@ -448,7 +454,7 @@ header {
   background-size: cover;
   background-position: top center;
   border-radius: 10px;
-  border: 2px solid #fcfcff;
+  border: 3px solid #fcfcff;
   transition: all 0.2s;
 }
 #landing-braces-img {
@@ -516,7 +522,7 @@ header {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 80px;
+  padding: 100px;
 }
 .project-window-blur {
   display: none;
@@ -529,8 +535,7 @@ header {
 }
 .project-window-content {
   background-color: pink;
-  max-height: 600px;
-  // max-width: 1200px;
+  max-height: 660px;
   width: 100%;
   border-radius: 20px;
   display: flex;
@@ -543,8 +548,9 @@ header {
 }
 .project-window-info {
   // height: 100%;
-  background: whitesmoke;
   // flex-basis: 100%;
+  background: whitesmoke;
+  color: #292828;
 }
 .project-flex {
   text-decoration: none;
@@ -553,13 +559,13 @@ header {
 .project-window-title {
   font-size: 20px;
   word-spacing: 0.4px;
-  height: 62px;
+  height: 66px;
   display: flex;
   align-items: center;
   padding-left: 24px;
   background: #dbdbff;
-  border-bottom: 2px solid #bebede;
-  border-left: 2px solid #bebede;
+  border-bottom: 2px solid #ccccee;
+  border-left: 2px solid #ccccee;
 }
 .project-window-points {
   display: flex;
@@ -569,17 +575,17 @@ header {
   line-height: 24px;
   word-spacing: 1px;
   overflow-y: auto;
-  max-height: calc(100% - 62px);
-  border-left: 2px solid #bebede;
-  padding: 30px 62px 34px 26px;
+  max-height: calc(100% - 66px);
+  border-left: 2px solid #ccccee;
+  padding: 30px 62px 36px 26px;
 }
 .project-point {
   display: flex;
   column-gap: 26px;
 }
 .project-point-title {
-  // min-width: 72px;
   min-width: 84px;
+  margin-left: 1px;
 }
 .project-skill-tags {
   display: flex;
@@ -591,7 +597,7 @@ header {
 .skill-tag {
   border: 2px solid #dbdbff;
   border-radius: 8px;
-  padding: 2px 8px;
+  padding: 2px 10px;
   background: #ececff;
 }
 .project-window-btns {
@@ -607,7 +613,7 @@ header {
   height: 50px;
   border: 3px solid #dbdbff;
   background: transparent;
-  border-radius: 10px;
+  border-radius: 30px;
   column-gap: 10px;
   color: #7676e3;
   font-size: 16px;
@@ -615,32 +621,29 @@ header {
   text-decoration: none;
 }
 .project-window-btn:hover {
-  background: #dbdbff;
+  background: #ececff;
+  box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+  border-color: #a8a8e3;
 }
 .github-project-icon {
   font-size: 18px;
 }
 .close-project-btn {
-  background-color: #e7e7ff;
+  background-color: transparent;
   position: absolute;
-  // left: 0px;
   right: 0px;
   top: 0px;
-  width: 60px;
-  height: 60px;
-  // border-radius: 0px 0px 20px 0px;
+  width: 66px;
+  height: 66px;
   border-radius: 0px 20px 0px 0px;
   font-size: 22px;
-  // border: 3px solid #bebede;
-  // border-top: none;
-  // border-left: none;
   border: none;
-  border-left: 2px solid #bebede;
+  border-left: 2px solid #ccccee;
   color: #7676e3;
   transition: all 0.2s;
 }
 .close-project-btn:hover {
-  background-color: #bebede;
+  background-color: #ccccee;
 }
 .project-item {
   height: 300px;
@@ -649,7 +652,7 @@ header {
   display: flex;
   background-color: #d7d7d7;
   position: relative;
-  cursor: pointer;
+  // cursor: pointer;
   transition: all 0.2s;
 }
 .project-preview {
@@ -774,11 +777,11 @@ header {
 }
 .more-info-btn {
   position: absolute;
-  bottom: 88px;
+  bottom: 90px;
   left: 50%;
   margin-left: -68px;
   width: 136px;
-  height: 46px;
+  height: 48px;
   border-radius: 50px;
   opacity: 0;
   visibility: hidden;
@@ -786,6 +789,7 @@ header {
   background: #303968;
   border: 2px solid gainsboro;
   color: whitesmoke;
+  font-size: 18px;
 }
 #osc-project .more-info-btn {
   background: #303968;
