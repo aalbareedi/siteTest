@@ -35,7 +35,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
   font-family: "Roboto", sans-serif;
 }
 
@@ -131,6 +130,10 @@ header {
   background-color: whitesmoke;
   height: 100%;
   z-index: 2;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
 
 .hidden-sidebar {
@@ -315,6 +318,7 @@ header {
       -ms-flex-positive: 1;
           flex-grow: 1;
   background-color: #e7e7ff;
+  position: relative;
 }
 
 .landing-intro-title {
@@ -533,6 +537,7 @@ header {
 
 .bp {
   font-size: 18px;
+  color: #585858;
 }
 
 .landing-project-overlay {
@@ -582,6 +587,7 @@ header {
   opacity: 0;
   width: 0;
   visibility: hidden;
+  top: -9999px;
 }
 
 .tab-content.open {
@@ -590,18 +596,11 @@ header {
   width: auto;
   visibility: visible;
   padding: 40px;
+  top: 0;
 }
 
 #overview {
-  height: calc(100% - 64px);
-}
-
-#projects {
-  height: calc(100% - 64px);
-}
-
-#projects.open {
-  position: relative;
+  height: calc(100vh - 64px);
 }
 
 .projects-content-grid {
@@ -656,7 +655,7 @@ header {
 }
 
 .project-window-images {
-  background-color: whitesmoke;
+  background-color: orange;
 }
 
 .project-window-info {
@@ -670,6 +669,7 @@ header {
 
 .project-window-title {
   font-size: 20px;
+  word-spacing: 0.4px;
   height: 62px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -698,7 +698,7 @@ header {
   overflow-y: auto;
   max-height: calc(100% - 62px);
   border-left: 2px solid #bebede;
-  padding: 32px 52px 34px 26px;
+  padding: 30px 62px 34px 26px;
 }
 
 .project-point {
@@ -713,12 +713,32 @@ header {
   min-width: 84px;
 }
 
+.project-skill-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+  row-gap: 8px;
+  margin-top: -3px;
+}
+
+.skill-tag {
+  border: 2px solid #dbdbff;
+  border-radius: 8px;
+  padding: 2px 8px;
+  background: #ececff;
+}
+
 .project-window-btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-column-gap: 16px;
           column-gap: 16px;
+  padding-bottom: 2px;
 }
 
 .project-window-btn {
@@ -731,7 +751,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 160px;
+  width: 154px;
   height: 50px;
   border: 3px solid #dbdbff;
   background: transparent;
@@ -742,25 +762,31 @@ header {
   font-size: 16px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  text-decoration: none;
 }
 
 .project-window-btn:hover {
   background: #dbdbff;
 }
 
+.github-project-icon {
+  font-size: 18px;
+}
+
 .close-project-btn {
   background-color: #e7e7ff;
   position: absolute;
-  left: 0px;
+  right: 0px;
   top: 0px;
   width: 60px;
   height: 60px;
-  border-radius: 0px 0px 20px 0px;
+  border-radius: 0px 20px 0px 0px;
   font-size: 22px;
-  border: 3px solid #bebede;
-  border-top: none;
-  border-left: none;
+  border: none;
+  border-left: 2px solid #bebede;
   color: #7676e3;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .close-project-btn:hover {

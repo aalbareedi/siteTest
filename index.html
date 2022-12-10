@@ -68,7 +68,7 @@
         <div class="middle-sidebar">
           <ul class="sidebar-list">
             <li class="sidebar-list-item active">
-              <a href="#" class="sidebar-link">
+              <a href="#overview" class="sidebar-link">
                 <i class="fa-solid fa-house-chimney sidebar-icon"></i>
                 <div class="hidden-sidebar">Overview</div>
                 <!-- <div class="nav-tooltip">Overview</div> -->
@@ -391,18 +391,36 @@
                 </div>
                 <div class="project-window-points">
                   <div class="project-window-btns">
-                    <button class="project-window-btn">
+                    <a
+                      class="project-window-btn"
+                      target="_blank"
+                      href="https://www.bracesspecialist.com/"
+                      title="www.bracesspecialist.com"
+                    >
                       <i class="fa-solid fa-globe"></i>
                       <div>Visit</div>
-                    </button>
-                    <button class="project-window-btn">
-                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a
+                      class="project-window-btn"
+                      target="_blank"
+                      href="https://github.com/aalbareedi/braces-specialist"
+                      title="GitHub"
+                    >
+                      <i class="fa-brands fa-github github-project-icon"></i>
                       <div>Code</div>
-                    </button>
+                    </a>
                   </div>
                   <div class="project-point">
                     <div class="project-point-title">Skills Used:</div>
-                    <div class="project-skills-used"></div>
+                    <div class="project-skill-tags">
+                      <div class="skill-tag">HTML</div>
+                      <div class="skill-tag">CSS</div>
+                      <div class="skill-tag">JS</div>
+                      <div class="skill-tag">SASS</div>
+                      <div class="skill-tag">Illustrator</div>
+                      <div class="skill-tag">Photoshop</div>
+                      <div class="skill-tag">GitHub</div>
+                    </div>
                   </div>
                   <div class="project-point">
                     <div class="project-point-title">Objective:</div>
@@ -570,33 +588,6 @@
       </main>
     </div>
 
-    <script>
-      showPageFromAddress();
-
-      document.querySelectorAll(".middle-sidebar a").forEach((a) => {
-        a.onclick = (e) => {
-          e.preventDefault();
-          history.pushState({}, null, `/${a.hash.substr(1)}`);
-          showPageFromAddress();
-        };
-      });
-
-      function showPageFromAddress() {
-        const pageName = location.pathname.substr(1);
-        console.log(pageName);
-
-        const page = document.querySelector(
-          pageName ? `#${pageName}` : `#overview`
-        );
-
-        if (page) {
-          document.querySelectorAll(".tab-content.open").forEach((a) => {
-            a.classList.remove("open");
-          });
-
-          page.classList.add("open");
-        }
-      }
-    </script>
+    <script src="routing.js" type="module"></script>
   </body>
 </html>
