@@ -3,17 +3,20 @@
 
 showPageFromAddress();
 
-document.querySelectorAll(".middle-sidebar a").forEach((a) => {
-  a.onclick = (e) => {
-    e.preventDefault();
-    history.pushState({}, null, `/${a.hash.substr(1)}`);
-    showPageFromAddress();
-  };
+// Make the links work
+document.querySelectorAll(".tab-content").forEach((page) => {
+  document.querySelectorAll(`[href='#${page.id}']`).forEach((a) => {
+    a.onclick = (e) => {
+      e.preventDefault();
+      history.pushState({}, null, `/${a.hash.substr(1)}`);
+      showPageFromAddress();
+    };
+  });
 });
 
 function showPageFromAddress() {
   // Get the page name or "route" from the address bar
-  const pageName = location.pathname.substr(1);
+  const pageName = location.pathname.substring(1);
 
   // Highlight the link
   if (pageName) {
