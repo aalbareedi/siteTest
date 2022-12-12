@@ -362,7 +362,7 @@ header {
 }
 .landing-skills-content {
   // background: pink;
-  padding: 30px 0px;
+  padding: 30px 0px 30px 0px;
 }
 .swiper-skill-img-wrapper {
   display: flex;
@@ -378,6 +378,9 @@ header {
 #landing-node-logo {
   width: 100px;
 }
+// #landing-wordpress-logo {
+//   width: 120px;
+// }
 .swiper-wrapper {
   align-items: center;
 }
