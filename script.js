@@ -23,23 +23,33 @@ closeProjectBtn.addEventListener("click", () => {
 });
 
 const swiper = new Swiper(".swiper", {
+  speed: 4000,
   loop: true,
-  // slidesPerView: "auto",
-  slidesPerView: 8,
-  loopedSlides: 1,
   freeMode: true,
-  // autoplay: true,
+  allowTouchMove: false,
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
+    stopOnLastSlide: false,
+    pauseOnMouseEnter: true,
   },
-  speed: 4000,
-  // allowTouchMove: false,
+  slidesPerView: "auto",
+  loopFillGroupWithBlank: true,
+  normalizeSlideIndex: true,
+  spaceBetween: 44,
   // preventInteractionOnTransition: true,
-  // initialSlide: 0,
-  // longSwipesMs: 0,
-  // observer: true,
-  // observeParents: true,
-  // watchSlidesVisibility: true,
-  // watchSlidesProgress: true,
 });
+
+// document.querySelector(".landing-skills").onmouseenter = () => {
+//   console.log("test");
+//   swiper.autoplay.stop();
+// };
+
+// $(".swiper-container").hover(
+//   function () {
+//     this.swiper.autoplay.stop();
+//   },
+//   function () {
+//     this.swiper.autoplay.start();
+//   }
+// );
