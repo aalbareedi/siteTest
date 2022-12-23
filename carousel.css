@@ -25,11 +25,16 @@
 }
 
 .landing-skills-content.animated .swiper-skill-img-wrapper {
-  -webkit-animation: carousel-item 40s linear infinite;
-          animation: carousel-item 40s linear infinite;
+  -webkit-animation: carousel-item 80s linear infinite;
+          animation: carousel-item 80s linear infinite;
 }
 
-.landing-skills:hover .swiper-skill-img-wrapper {
+.landing-skills-content.paused .swiper-skill-img-wrapper {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.landing-skills-content:hover .swiper-skill-img-wrapper {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }

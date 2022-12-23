@@ -27,6 +27,15 @@ document.querySelectorAll(".swiper-skill-img-wrapper").forEach((element) => {
 
 carousel.classList.add("animated");
 
+const pauseButton = document.querySelector(".landing-skills .pause-button");
+
+pauseButton.onclick = (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  carousel.classList.toggle("paused");
+  pauseButton.classList.toggle("is-paused");
+};
+
 // carousel.onclick = (e) => {
 //   e.preventDefault();
 //   e.stopPropagation();

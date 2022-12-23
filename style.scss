@@ -344,6 +344,7 @@ header {
   height: 100%;
 }
 .landing-grid-title {
+  position: relative;
   background-color: #e1e1fb;
   height: $landing-item-title-height;
   display: flex;
@@ -361,6 +362,32 @@ header {
 .landing-skills {
   grid-area: 2 / 1 / 3 / 4;
   height: fit-content;
+}
+.pause-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 3px solid #c1c1ec;
+  color: #7a7abc;
+  font-size: 16px;
+  line-height: 16px;
+  transition: all 0.3s;
+}
+.pause-button:hover {
+  border-color: #9292f8;
+  background: whitesmoke;
+}
+.pause-button .play-icon,
+.is-paused .pause-icon {
+  display: none;
+}
+.is-paused .play-icon {
+  display: inline-block;
+  padding-left: 2px;
 }
 .landing-skills-content {
   padding: 34px 0px;

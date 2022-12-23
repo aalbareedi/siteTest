@@ -17,11 +17,17 @@
 
   &.animated {
     .swiper-skill-img-wrapper {
-      animation: carousel-item 40s linear infinite;
+      animation: carousel-item 80s linear infinite;
+    }
+  }
+
+  &.paused {
+    .swiper-skill-img-wrapper {
+      animation-play-state: paused;
     }
   }
 }
 
-.landing-skills:hover .swiper-skill-img-wrapper {
+.landing-skills-content:hover .swiper-skill-img-wrapper {
   animation-play-state: paused;
 }
