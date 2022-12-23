@@ -1,0 +1,36 @@
+@-webkit-keyframes carousel-item {
+  from {
+    left: 0;
+  }
+  to {
+    left: -200%;
+  }
+}
+
+@keyframes carousel-item {
+  from {
+    left: 0;
+  }
+  to {
+    left: -200%;
+  }
+}
+
+.landing-skills-content {
+  position: relative;
+}
+
+.landing-skills-content .swiper-skill-img-wrapper {
+  position: relative;
+}
+
+.landing-skills-content.animated .swiper-skill-img-wrapper {
+  -webkit-animation: carousel-item 40s linear infinite;
+          animation: carousel-item 40s linear infinite;
+}
+
+.landing-skills:hover .swiper-skill-img-wrapper {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+/*# sourceMappingURL=carousel.css.map */

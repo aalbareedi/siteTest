@@ -21,23 +21,10 @@ closeProjectBtn.addEventListener("click", () => {
   // html.classList.remove("overflow-hidden");
   body.classList.remove("overflow-hidden");
 });
-
-const swiper = new Swiper(".swiper", {
-  speed: 4000,
-  loop: true,
-  freeMode: true,
-  allowTouchMove: false,
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-    stopOnLastSlide: false,
-    pauseOnMouseEnter: true,
-  },
-  slidesPerView: "auto",
-  loopFillGroupWithBlank: true,
-  normalizeSlideIndex: true,
-  spaceBetween: 44,
-  // preventInteractionOnTransition: true,
+projectWindow.addEventListener("click", () => {
+  // e.stopPropagation();
+  projectWindow.classList.add("hidden");
+  body.classList.remove("overflow-hidden");
 });
 
 // document.querySelector(".landing-skills").onmouseenter = () => {

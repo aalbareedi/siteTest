@@ -1,0 +1,27 @@
+@keyframes carousel-item {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: -200%;
+  }
+}
+
+.landing-skills-content {
+  position: relative;
+
+  .swiper-skill-img-wrapper {
+    position: relative;
+  }
+
+  &.animated {
+    .swiper-skill-img-wrapper {
+      animation: carousel-item 40s linear infinite;
+    }
+  }
+}
+
+.landing-skills:hover .swiper-skill-img-wrapper {
+  animation-play-state: paused;
+}
