@@ -1,18 +1,28 @@
 @-webkit-keyframes carousel-item {
-  from {
-    left: 0;
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
-  to {
-    left: -200%;
+  5% {
+    left: 0px;
+  }
+  100% {
+    -webkit-transform: translateX(-9999px);
+            transform: translateX(-9999px);
   }
 }
 
 @keyframes carousel-item {
-  from {
-    left: 0;
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
-  to {
-    left: -200%;
+  5% {
+    left: 0px;
+  }
+  100% {
+    -webkit-transform: translateX(-9999px);
+            transform: translateX(-9999px);
   }
 }
 
@@ -25,8 +35,8 @@
 }
 
 .landing-skills-content.animated .swiper-skill-img-wrapper {
-  -webkit-animation: carousel-item 80s linear infinite;
-          animation: carousel-item 80s linear infinite;
+  -webkit-animation: carousel-item 200s linear infinite;
+          animation: carousel-item 200s linear infinite;
 }
 
 .landing-skills-content.paused .swiper-skill-img-wrapper {

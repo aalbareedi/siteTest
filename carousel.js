@@ -3,6 +3,7 @@ const carousel = document.querySelector(".landing-skills-content");
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
+      // TODO: Find some way to tell if entry.target has left the carousel
       if (entry.target.offsetLeft < 0) {
         carousel.classList.remove("animated");
 

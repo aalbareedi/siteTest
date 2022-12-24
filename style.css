@@ -246,23 +246,17 @@ header {
   transition: all 0.2s;
 }
 
-.sidebar-list-item.active {
+.sidebar-list-item.active .sidebar-nav-box {
   color: #eaeafd;
   background-color: #7676e3;
 }
 
-.sidebar-list-item.active:hover {
-  background-color: #7676e3;
+.sidebar-list-item:hover .sidebar-nav-box {
+  background-color: #e7e7ff;
 }
 
-.sidebar-list-item.active::before {
-  content: "";
-  background-color: #a2a2ff;
-  height: 100%;
-  position: absolute;
-  width: 5px;
-  left: 0;
-  cursor: pointer;
+.sidebar-list-item.active:hover .sidebar-nav-box {
+  background-color: #7676e3;
 }
 
 .sidebar-icon {
@@ -296,12 +290,32 @@ header {
           align-items: center;
   width: 100%;
   height: 58px;
-  padding-left: 24px;
   position: relative;
+  padding: 2px 6px;
 }
 
 .sidebar.open {
   width: 260px;
+}
+
+.sidebar-nav-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  padding-left: 17px;
+}
+
+.sidebar.open .sidebar-nav-box {
+  padding-left: 18px;
 }
 
 .together {
@@ -449,8 +463,8 @@ header {
   color: #7a7abc;
   font-size: 16px;
   line-height: 16px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .pause-button:hover {
@@ -1269,10 +1283,6 @@ header {
   height: 88px;
   font-size: 26px;
   padding-top: 24px;
-}
-
-.sidebar-list-item:hover {
-  background-color: #e7e7ff;
 }
 
 .grid-item:hover {
