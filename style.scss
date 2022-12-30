@@ -1009,8 +1009,28 @@ header {
   font-size: 20px;
   margin-bottom: 28px;
 }
-#message-form {
-  max-width: 520px;
+.contact-container {
+  display: flex;
+  column-gap: 68px;
+}
+.contact-info {
+  max-width: 460px;
+  padding-left: 1px;
+  padding-top: 30px;
+}
+.contact-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+.form-wrapper {
+  padding: 30px;
+  background: #dbdbff;
+  border-radius: 10px;
+  width: 480px;
+  flex-shrink: 0;
+  // max-width: 480px;
+  // flex-grow: 1;
+  // width: 100%;
 }
 .formOption {
   // padding: 0 200px;
@@ -1025,7 +1045,7 @@ header {
 .inputPlaceholder {
   position: absolute;
   left: 22px;
-  font-size: 26px;
+  font-size: 22px;
   top: 32px;
   letter-spacing: 0.5px;
   word-spacing: 0.5px;
@@ -1045,7 +1065,7 @@ header {
   pointer-events: none;
   position: absolute;
   right: 25px;
-  top: 28px;
+  top: 26px;
   font-size: 36px;
   color: #9a9ae7;
 }
@@ -1064,7 +1084,7 @@ header {
   outline: none;
 }
 #fullNameIcon {
-  right: 27px;
+  right: 28px;
 }
 .contactFormInput {
   background-color: initial;
@@ -1076,10 +1096,10 @@ header {
   display: block;
   color: #7373d1;
   padding-top: 25px;
-  padding-right: 58px;
+  padding-right: 72px;
   padding-left: 19px;
   height: 88px;
-  font-size: 26px;
+  font-size: 22px;
 }
 form:invalid .sendBtn {
   border: none;
@@ -1094,7 +1114,7 @@ form:invalid .sendBtn {
   border-radius: 30px;
   background-color: #346135;
   border: none;
-  margin: 30px 0px;
+  margin: 30px 0px 0px 0px;
   border: 2px solid;
   border-color: rgba(220, 220, 220, 0.5);
   color: #dcdcdc;
@@ -1106,9 +1126,9 @@ form:not(:invalid) button.sendBtn:active {
 }
 input.contactFormInput:valid {
   background-image: url("newcheck.svg");
-  background-size: 36px;
+  background-size: 34px;
   background-repeat: no-repeat;
-  background-position: right 18px center;
+  background-position: right 24px center;
 }
 
 input.contactFormInput:valid ~ .formIcon {

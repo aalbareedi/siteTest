@@ -1,50 +1,52 @@
-@-webkit-keyframes carousel-item {
+@-webkit-keyframes carousel {
   0% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
   }
-  5% {
-    left: 0px;
-  }
   100% {
-    -webkit-transform: translateX(-9999px);
-            transform: translateX(-9999px);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
-@keyframes carousel-item {
+@keyframes carousel {
   0% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
   }
-  5% {
-    left: 0px;
-  }
   100% {
-    -webkit-transform: translateX(-9999px);
-            transform: translateX(-9999px);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
-.landing-skills-content {
+.carousel-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.landing-skills-content .swiper-skill-img-wrapper {
-  position: relative;
+.carousel.animated {
+  -webkit-animation: carousel 60s linear infinite;
+          animation: carousel 60s linear infinite;
 }
 
-.landing-skills-content.animated .swiper-skill-img-wrapper {
-  -webkit-animation: carousel-item 200s linear infinite;
-          animation: carousel-item 200s linear infinite;
-}
-
-.landing-skills-content.paused .swiper-skill-img-wrapper {
+.carousel.paused {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
 
-.landing-skills-content:hover .swiper-skill-img-wrapper {
+.carousel-wrapper:hover .carousel {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }

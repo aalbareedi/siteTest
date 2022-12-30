@@ -1,38 +1,31 @@
-@keyframes carousel-item {
+@keyframes carousel {
   0% {
     transform: translateX(0px);
   }
 
-  5% {
-    left: 0px;
-  }
-
   100% {
-    transform: translateX(-9999px);
-    // left: -200%;
+    transform: translateX(-100%);
   }
 }
 
-.landing-skills-content {
-  position: relative;
+.carousel-wrapper {
+  display: flex;
+}
 
-  .swiper-skill-img-wrapper {
-    position: relative;
-  }
+.carousel {
+  display: inline-flex;
+  position: relative;
+  width: fit-content;
 
   &.animated {
-    .swiper-skill-img-wrapper {
-      animation: carousel-item 200s linear infinite;
-    }
+    animation: carousel 60s linear infinite;
   }
 
   &.paused {
-    .swiper-skill-img-wrapper {
-      animation-play-state: paused;
-    }
+    animation-play-state: paused;
   }
 }
 
-.landing-skills-content:hover .swiper-skill-img-wrapper {
+.carousel-wrapper:hover .carousel {
   animation-play-state: paused;
 }
