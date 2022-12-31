@@ -2,7 +2,8 @@ const menuIconButton = document.querySelector("[data-menu-icon-btn]");
 const sidebar = document.querySelector("[data-sidebar]");
 
 menuIconButton.addEventListener("click", () => {
-  sidebar.classList.toggle("open");
+  document.body.classList.toggle("menu-open");
+  // sidebar.classList.toggle("open");
 });
 
 const projectWindow = document.querySelector(".project-window");

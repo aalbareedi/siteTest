@@ -150,7 +150,7 @@ header {
   line-height: 18px;
 }
 
-.sidebar.open .hidden-sidebar {
+body.menu-open .hidden-sidebar {
   opacity: 1;
   width: 100%;
   height: auto;
@@ -172,7 +172,7 @@ header {
   transition: height 200ms ease-in-out;
 }
 
-.sidebar.open .top-sidebar {
+body.menu-open .top-sidebar {
   height: 176px;
   margin-bottom: 2px;
 }
@@ -192,7 +192,7 @@ header {
   width: 100%;
 }
 
-.sidebar.open .channel-logo {
+body.menu-open .channel-logo {
   width: 118px;
   height: 118px;
   margin-top: 0px;
@@ -232,7 +232,7 @@ header {
   list-style: none;
 }
 
-.sidebar.open .sidebar-link {
+body.menu-open .sidebar-link {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -294,7 +294,7 @@ header {
   padding: 2px 6px;
 }
 
-.sidebar.open {
+body.menu-open .sidebar {
   width: 260px;
 }
 
@@ -314,8 +314,24 @@ header {
   padding-left: 17px;
 }
 
-.sidebar.open .sidebar-nav-box {
+body.menu-open .sidebar-nav-box {
   padding-left: 18px;
+}
+
+body.menu-open .show-menu {
+  display: none;
+}
+
+.show-menu {
+  display: block;
+}
+
+body.menu-open .hide-menu {
+  display: block;
+}
+
+.hide-menu {
+  display: none;
 }
 
 .together {
@@ -392,7 +408,7 @@ header {
   border-radius: 20px;
   grid-column-gap: 34px;
   grid-row-gap: 34px;
-  height: calc(100% - 110px - 60px);
+  height: calc(100% - 110px - 70px);
 }
 
 .grid-item {
@@ -483,7 +499,7 @@ header {
 }
 
 .landing-skills-content {
-  padding: 34px 0px;
+  padding: 30px 0px 26px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

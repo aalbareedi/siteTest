@@ -37,8 +37,8 @@
 }
 
 .carousel.animated {
-  -webkit-animation: carousel 60s linear infinite;
-          animation: carousel 60s linear infinite;
+  -webkit-animation: carousel 50s linear infinite;
+          animation: carousel 50s linear infinite;
 }
 
 .carousel.paused {
