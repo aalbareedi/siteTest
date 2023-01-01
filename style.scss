@@ -339,13 +339,12 @@ body.menu-open .hide-menu {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 40px;
-  word-spacing: 1.2px;
+  word-spacing: 1.4px;
 }
 #overview .title-text {
   margin-bottom: 0px;
 }
 .landing-intro-grid {
-  // height: 700px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
@@ -423,14 +422,18 @@ body.menu-open .hide-menu {
   display: flex;
   background: #eaeafd;
 }
-.swiper-skill-img-wrapper {
+.skill-img-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 16px 30px;
 }
-.swiper-skill-img {
+.skill-img {
   width: 40px;
+  transition: all 0.3s;
+}
+.skill-img-wrapper:hover .skill-img {
+  transform: scale(1.25);
 }
 #landing-jquery-logo {
   width: 80px;
@@ -1024,6 +1027,31 @@ body.menu-open .hide-menu {
 .contact-text {
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: 24px;
+}
+.contact-socials {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.contact-entry {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  text-decoration: none;
+  width: fit-content;
+  padding: 12px 22px;
+  border-radius: 50px;
+  transition: all 0.3s;
+  color: #7676e3;
+  font-size: 16px;
+}
+.contact-entry:hover {
+  background-color: #dbdbff;
+}
+.contact-icon {
+  font-size: 20px;
+  color: #7676e3;
 }
 .form-wrapper {
   padding: 30px;
@@ -1098,9 +1126,10 @@ body.menu-open .hide-menu {
   border-radius: 10px;
   display: block;
   color: #7373d1;
-  padding-top: 25px;
-  padding-right: 72px;
-  padding-left: 19px;
+  // padding-top: 25px;
+  // padding-right: 72px;
+  // padding-left: 19px;
+  padding: 25px 72px 0px 19px;
   height: 88px;
   font-size: 22px;
 }
