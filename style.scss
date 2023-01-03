@@ -308,7 +308,7 @@ body.menu-open .hide-menu {
   padding-left: 1px;
   word-spacing: 1px;
   line-height: 23px;
-  background-color: purple;
+  // background-color: pink;
 }
 #channel-bio {
   color: gray;
@@ -616,6 +616,7 @@ body.menu-open .hide-menu {
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 100px;
+  height: 100vh;
 }
 .project-window-blur {
   display: none;
@@ -634,6 +635,7 @@ body.menu-open .hide-menu {
   display: flex;
   overflow: hidden;
   position: relative;
+  // pointer-events: none;
 }
 .project-window-images {
   background-color: orange;

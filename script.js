@@ -6,38 +6,41 @@ menuIconButton.addEventListener("click", () => {
   // sidebar.classList.toggle("open");
 });
 
-const projectWindow = document.querySelector(".project-window");
-const moreInfoBtn = document.querySelector(".more-info-btn");
-const closeProjectBtn = document.querySelector(".close-project-btn");
-const html = document.querySelector("html");
+const moreInfoBtns = document.querySelectorAll(".more-info-btn");
+const projectWindows = document.querySelectorAll(".project-window");
+const closeProjectBtns = document.querySelectorAll(".close-project-btn");
+
 const body = document.querySelector("body");
 
-moreInfoBtn.addEventListener("click", () => {
-  projectWindow.classList.remove("hidden");
-  // html.classList.add("overflow-hidden");
-  body.classList.add("overflow-hidden");
-});
-closeProjectBtn.addEventListener("click", () => {
-  projectWindow.classList.add("hidden");
-  // html.classList.remove("overflow-hidden");
-  body.classList.remove("overflow-hidden");
-});
-projectWindow.addEventListener("click", () => {
-  // e.stopPropagation();
-  projectWindow.classList.add("hidden");
-  body.classList.remove("overflow-hidden");
+moreInfoBtns.forEach((moreInfoBtn) => {
+  moreInfoBtn.addEventListener("click", () => {
+    const id = moreInfoBtn.getAttribute("data-modal-id");
+
+    document.querySelector(`#${id}`).classList.remove("hidden");
+    body.classList.add("overflow-hidden");
+  });
 });
 
-// document.querySelector(".landing-skills").onmouseenter = () => {
-//   console.log("test");
-//   swiper.autoplay.stop();
-// };
+projectWindows.forEach((projectWindow) => {
+  const closeProjectBtn = projectWindow.querySelector(".close-project-btn");
 
-// $(".swiper-container").hover(
-//   function () {
-//     this.swiper.autoplay.stop();
-//   },
-//   function () {
-//     this.swiper.autoplay.start();
-//   }
-// );
+  closeProjectBtn.addEventListener("click", () => {
+    projectWindow.classList.add("hidden");
+    body.classList.remove("overflow-hidden");
+  });
+
+  projectWindow.addEventListener("click", () => {
+    projectWindow.classList.add("hidden");
+    body.classList.remove("overflow-hidden");
+  });
+});
+
+const projectWindowContents = document.querySelectorAll(
+  ".project-window-content"
+);
+
+projectWindowContents.forEach((projectContent) => {
+  projectContent.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+});
