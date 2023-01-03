@@ -24,11 +24,14 @@ function showPageFromAddress() {
   const notFoundPageId = "not-found";
 
   // Get the page name or "route" from the address bar
-  const pageName = location.pathname.substring(1);
+  const pageName = location.pathname.replace("/", "");
 
   if (pageName == homepageId) {
     history.pushState({}, null, `/`);
   }
+
+  console.log("location.pathname: ", location.pathname);
+  console.log("pageName: ", pageName);
 
   // Find the page, default to 404
   const page =

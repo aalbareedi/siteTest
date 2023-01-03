@@ -308,6 +308,7 @@ body.menu-open .hide-menu {
   padding-left: 1px;
   word-spacing: 1px;
   line-height: 23px;
+  background-color: pink;
 }
 #channel-bio {
   color: gray;
@@ -1076,28 +1077,33 @@ body.menu-open .hide-menu {
 .inputPlaceholder {
   position: absolute;
   left: 22px;
-  font-size: 22px;
-  top: 32px;
+  font-size: 20px;
+  top: 30px;
   letter-spacing: 0.5px;
   word-spacing: 0.5px;
   color: #9a9ae7;
   pointer-events: none;
-  transition: top 0.5s, font-size 0.5s, color 0.5s;
+  // transition: top 0.5s, font-size 0.5s, color 0.5s;
+  transition: all 0.4s;
   font-family: "Roboto", sans-serif;
 }
 .contactFormInput:not(:placeholder-shown) ~ .inputPlaceholder,
 .contactFormInput:focus ~ .inputPlaceholder,
 .contactFormInput:focus-within ~ .inputPlaceholder {
   font-size: 18px;
-  top: 16px;
+  top: -10px;
+  background: #dbdbff;
+  padding: 2px 6px;
   color: #9f9fde;
+  left: 16px;
+  border-radius: 6px;
 }
 .formIcon {
   pointer-events: none;
   position: absolute;
   right: 25px;
-  top: 26px;
-  font-size: 36px;
+  top: 24px;
+  font-size: 30px;
   color: #9a9ae7;
 }
 // .messageWrapper {
@@ -1105,7 +1111,7 @@ body.menu-open .hide-menu {
 //   // max-width: 520px;
 // }
 #messageInput {
-  padding: 40px 19px 0px 19px;
+  padding: 22px 19px 0px 19px;
   height: 170px;
   resize: none;
 }
@@ -1126,12 +1132,9 @@ body.menu-open .hide-menu {
   border-radius: 10px;
   display: block;
   color: #7373d1;
-  // padding-top: 25px;
-  // padding-right: 72px;
-  // padding-left: 19px;
-  padding: 25px 72px 0px 19px;
-  height: 88px;
-  font-size: 22px;
+  padding: 0px 72px 0px 19px;
+  height: 80px;
+  font-size: 20px;
 }
 form:invalid .sendBtn {
   border: none;
