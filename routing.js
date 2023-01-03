@@ -1,5 +1,7 @@
 // Dependencies:
-// Web server must redirect all requests to the SPA (usually inde.html)
+// Web server must redirect all requests to the SPA (usually index.html)
+
+const root = location.href.split("/").slice(0, -1).join("/");
 
 showPageFromAddress();
 
@@ -8,7 +10,7 @@ document.querySelectorAll(".tab-content").forEach((page) => {
   document.querySelectorAll(`[href='#${page.id}']`).forEach((a) => {
     a.onclick = (e) => {
       e.preventDefault();
-      history.pushState({}, null, `/${a.hash.substr(1)}`);
+      history.pushState({}, null, `${root}/${a.hash.substr(1)}`);
       showPageFromAddress();
     };
   });
@@ -17,7 +19,7 @@ document.querySelectorAll(".tab-content").forEach((page) => {
 function showPageFromAddress() {
   // Cut off the file name
   if (location.pathname == "/index.html") {
-    history.pushState({}, null, `/`);
+    history.pushState({}, null, `${root}/`);
   }
 
   const homepageId = "overview";
@@ -27,7 +29,7 @@ function showPageFromAddress() {
   const pageName = location.pathname.replaceAll("/", "");
 
   if (pageName == homepageId) {
-    history.pushState({}, null, `/`);
+    history.pushState({}, null, `${root}/`);
   }
 
   console.log("location.pathname: ", location.pathname);
