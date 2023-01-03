@@ -26,7 +26,7 @@ function showPageFromAddress() {
   const notFoundPageId = "not-found";
 
   // Get the page name or "route" from the address bar
-  const pageName = location.pathname.replaceAll("/", "");
+  const pageName = location.pathname.split("/").pop().replaceAll("/", "");
 
   if (pageName == homepageId) {
     history.pushState({}, null, `${root}/`);
