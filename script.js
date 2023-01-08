@@ -29,18 +29,21 @@ projectWindows.forEach((projectWindow) => {
     body.classList.remove("overflow-hidden");
   });
 
-  projectWindow.addEventListener("click", () => {
-    projectWindow.classList.add("hidden");
-    body.classList.remove("overflow-hidden");
+  projectWindow.addEventListener("click", (e) => {
+    // If `projectWindow` itself was just clicked, rather than a descendent
+    if (e.target == e.currentTarget) {
+      projectWindow.classList.add("hidden");
+      body.classList.remove("overflow-hidden");
+    }
   });
 });
 
-const projectWindowContents = document.querySelectorAll(
-  ".project-window-content"
-);
+// const projectWindowContents = document.querySelectorAll(
+//   ".project-window-content"
+// );
 
-projectWindowContents.forEach((projectContent) => {
-  projectContent.addEventListener("click", (e) => {
-    e.stopPropagation();
-  });
-});
+// projectWindowContents.forEach((projectContent) => {
+//   projectContent.addEventListener("click", (e) => {
+//     e.stopPropagation();
+//   });
+// });

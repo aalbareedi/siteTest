@@ -17,6 +17,10 @@ document.querySelectorAll(".tab-content").forEach((page) => {
 });
 
 function showPageFromAddress() {
+  document.querySelectorAll(".project-window").forEach((projectWindow) => {
+    projectWindow.classList.add("hidden");
+  });
+
   // Cut off the file name
   if (location.pathname == "/index.html") {
     history.pushState({}, null, `${root}/`);

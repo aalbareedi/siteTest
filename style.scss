@@ -59,9 +59,13 @@ header {
   color: whitesmoke;
   position: relative;
   transition: all 0.2s;
+  color: whitesmoke;
 }
 .menu-icon-btn:hover {
   color: #addcff;
+}
+.hide-icon {
+  height: 22px;
 }
 .toggle-nav-tooltip {
   text-align: center;
@@ -96,6 +100,91 @@ header {
   opacity: 1;
   visibility: initial;
 }
+.nav-tooltip {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9da1e7;
+  color: whitesmoke;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  width: 92px;
+  height: 36px;
+  position: fixed;
+  left: 67px;
+  pointer-events: none;
+}
+.menu-open .nav-tooltip {
+  left: 255px;
+}
+.nav-tooltip::after {
+  content: "";
+  position: absolute;
+  left: -18px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #9da1e7 transparent transparent transparent;
+  transform: rotate(90deg);
+}
+.sidebar-link:hover .nav-tooltip {
+  opacity: 1;
+  visibility: initial;
+}
+.active .sidebar-link:hover .nav-tooltip {
+  opacity: 0;
+  visibility: hidden;
+}
+.landing-skills-tooltip {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9da1e7;
+  color: whitesmoke;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all 0.4s;
+  letter-spacing: 0.5px;
+  visibility: hidden;
+  font-size: 14px;
+  width: 66px;
+  height: 36px;
+  position: absolute;
+  right: 46px;
+  top: -2px;
+  pointer-events: none;
+}
+.landing-skills-tooltip::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #9da1e7 transparent transparent transparent;
+  transform: rotate(270deg);
+}
+.pause-button:hover .landing-skills-tooltip {
+  opacity: 1;
+  visibility: initial;
+}
+.is-paused .pause-tooltip {
+  display: none;
+}
+.play-tooltip {
+  display: none;
+}
+.pause-tooltip {
+  display: block;
+}
+.is-paused .play-tooltip {
+  display: block;
+}
+
 .sidebar {
   font-family: "Roboto", sans-serif;
   flex-shrink: 0;
@@ -262,40 +351,6 @@ body.menu-open .hide-menu {
 .hide-menu {
   display: none;
 }
-// .nav-tooltip {
-//   text-align: center;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   /* background-color: rgba(176, 176, 176, 0.5); */
-//   background-color: #9da1e7;
-//   color: whitesmoke;
-//   border-radius: 4px;
-//   opacity: 0;
-//   transition: all 0.4s;
-//   letter-spacing: 0.5px;
-//   visibility: hidden;
-//   font-size: 14px;
-//   width: 92px;
-//   height: 36px;
-//   position: absolute;
-//   right: -20px;
-//   top: 9px;
-//   pointer-events: none;
-// }
-// .nav-tooltip::after {
-//   content: "";
-//   position: absolute;
-//   left: -18px;
-//   border-width: 10px;
-//   border-style: solid;
-//   border-color: #9da1e7 transparent transparent transparent;
-//   transform: rotate(90deg);
-// }
-// .sidebar-link:hover .nav-tooltip {
-//   opacity: 1;
-//   visibility: initial;
-// }
 
 .together {
   white-space: nowrap;
@@ -434,7 +489,7 @@ body.menu-open .hide-menu {
   transition: all 0.3s;
 }
 .skill-img-wrapper:hover .skill-img {
-  transform: scale(1.25);
+  transform: scale(1.2);
 }
 #landing-jquery-logo {
   width: 80px;
@@ -733,7 +788,7 @@ body.menu-open .hide-menu {
   border-radius: 0px 20px 0px 0px;
   font-size: 24px;
   border: none;
-  border-left: 2px solid #ccccee;
+  // border-left: 2px solid #ccccee;
   color: #7676e3;
   transition: all 0.2s;
 }

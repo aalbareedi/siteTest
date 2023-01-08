@@ -58,10 +58,15 @@ header {
   position: relative;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  color: whitesmoke;
 }
 
 .menu-icon-btn:hover {
   color: #addcff;
+}
+
+.hide-icon {
+  height: 22px;
 }
 
 .toggle-nav-tooltip {
@@ -106,6 +111,118 @@ header {
 .menu-icon-btn:hover .toggle-nav-tooltip {
   opacity: 1;
   visibility: initial;
+}
+
+.nav-tooltip {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9da1e7;
+  color: whitesmoke;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  width: 92px;
+  height: 36px;
+  position: fixed;
+  left: 67px;
+  pointer-events: none;
+}
+
+.menu-open .nav-tooltip {
+  left: 255px;
+}
+
+.nav-tooltip::after {
+  content: "";
+  position: absolute;
+  left: -18px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #9da1e7 transparent transparent transparent;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.sidebar-link:hover .nav-tooltip {
+  opacity: 1;
+  visibility: initial;
+}
+
+.active .sidebar-link:hover .nav-tooltip {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.landing-skills-tooltip {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #9da1e7;
+  color: whitesmoke;
+  border-radius: 4px;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  letter-spacing: 0.5px;
+  visibility: hidden;
+  font-size: 14px;
+  width: 66px;
+  height: 36px;
+  position: absolute;
+  right: 46px;
+  top: -2px;
+  pointer-events: none;
+}
+
+.landing-skills-tooltip::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #9da1e7 transparent transparent transparent;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.pause-button:hover .landing-skills-tooltip {
+  opacity: 1;
+  visibility: initial;
+}
+
+.is-paused .pause-tooltip {
+  display: none;
+}
+
+.play-tooltip {
+  display: none;
+}
+
+.pause-tooltip {
+  display: block;
+}
+
+.is-paused .play-tooltip {
+  display: block;
 }
 
 .sidebar {
@@ -526,8 +643,8 @@ body.menu-open .hide-menu {
 }
 
 .skill-img-wrapper:hover .skill-img {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #landing-jquery-logo {
@@ -918,7 +1035,6 @@ body.menu-open .hide-menu {
   border-radius: 0px 20px 0px 0px;
   font-size: 24px;
   border: none;
-  border-left: 2px solid #ccccee;
   color: #7676e3;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
