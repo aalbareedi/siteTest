@@ -59,6 +59,7 @@ header {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   color: whitesmoke;
+  padding-top: 2px;
 }
 
 .menu-icon-btn:hover {
@@ -66,7 +67,14 @@ header {
 }
 
 .hide-icon {
-  height: 22px;
+  height: 18px;
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.menu-open .hide-icon {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 .toggle-nav-tooltip {

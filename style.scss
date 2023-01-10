@@ -60,12 +60,17 @@ header {
   position: relative;
   transition: all 0.2s;
   color: whitesmoke;
+  padding-top: 2px;
 }
 .menu-icon-btn:hover {
   color: #addcff;
 }
 .hide-icon {
-  height: 22px;
+  height: 18px;
+  transform: scale(-1, 1);
+}
+.menu-open .hide-icon {
+  transform: scale(1, 1);
 }
 .toggle-nav-tooltip {
   text-align: center;
