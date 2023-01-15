@@ -400,7 +400,7 @@ body.menu-open .hide-menu {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 40px;
-  word-spacing: 1.4px;
+  word-spacing: 1.6px;
 }
 #overview .title-text {
   margin-bottom: 0px;
@@ -410,8 +410,8 @@ body.menu-open .hide-menu {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
   border-radius: 20px;
-  grid-column-gap: 34px;
-  grid-row-gap: 34px;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
   height: calc(100% - #{$intro-title-height} - 70px);
 }
 .grid-item {
@@ -519,7 +519,7 @@ body.menu-open .hide-menu {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  row-gap: 17px;
+  row-gap: 20px;
 }
 .landing-contact-btn {
   display: flex;
@@ -640,14 +640,13 @@ body.menu-open .hide-menu {
   width: 0;
   visibility: hidden;
   top: -9999px;
-  padding: 40px;
+  padding: 40px 50px;
 }
 .tab-content.open {
   position: initial;
   opacity: 1;
   width: auto;
   visibility: visible;
-  // padding: 40px;
   top: 0;
 }
 #overview {
