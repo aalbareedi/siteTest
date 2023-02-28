@@ -1,0 +1,54 @@
+@-webkit-keyframes carousel {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes carousel {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+.carousel-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  will-change: transform;
+}
+
+.carousel.animated {
+  -webkit-animation: carousel 80s linear infinite;
+          animation: carousel 80s linear infinite;
+}
+
+.carousel.paused {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.carousel-wrapper:hover .carousel {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+/*# sourceMappingURL=carousel.css.map */

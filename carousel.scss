@@ -1,0 +1,32 @@
+@keyframes carousel {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel-wrapper {
+  display: flex;
+}
+
+.carousel {
+  display: inline-flex;
+  position: relative;
+  width: fit-content;
+  will-change: transform;
+
+  &.animated {
+    animation: carousel 80s linear infinite;
+  }
+
+  &.paused {
+    animation-play-state: paused;
+  }
+}
+
+.carousel-wrapper:hover .carousel {
+  animation-play-state: paused;
+}
