@@ -668,45 +668,51 @@
                 </div>
                 <form>
                   <div class="formOption">
+                    <label class="contact-form-label" for="nameInput"
+                      >Full Name</label
+                    >
                     <div class="fullNameField">
                       <input
                         required
                         id="nameInput"
                         type="text"
                         class="contactFormInput"
-                        placeholder=" "
+                        placeholder="Bob Smith"
                       />
-                      <div class="inputPlaceholder">Full Name</div>
                       <div class="formIcon" id="fullNameIcon">
                         <i class="fas fa-user"></i>
                       </div>
                     </div>
                   </div>
                   <div class="formOption">
+                    <label class="contact-form-label" for="emailInput"
+                      >Email Address</label
+                    >
                     <div class="emailField">
                       <input
                         required
                         id="emailInput"
                         type="email"
                         class="contactFormInput"
-                        placeholder=" "
+                        placeholder="email@address.com"
                         pattern=".+@.+\..{2,}$"
                       />
-                      <div class="inputPlaceholder">Email Address</div>
                       <div class="formIcon" id="emailIcon">
                         <i class="fas fa-envelope"></i>
                       </div>
                     </div>
                   </div>
                   <div class="messageWrapper">
+                    <label class="contact-form-label" for="messageInput"
+                      >Message</label
+                    >
                     <div class="formMessage">
                       <textarea
                         required
                         class="contactFormInput"
                         id="messageInput"
-                        placeholder=" "
+                        placeholder="What's on your mind?"
                       ></textarea>
-                      <div class="inputPlaceholder">What's on your mind?</div>
                     </div>
                   </div>
                   <div class="formBtns">
