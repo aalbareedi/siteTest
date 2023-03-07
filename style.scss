@@ -1163,8 +1163,9 @@ body.menu-open .hide-menu {
   letter-spacing: 0.5px;
   word-spacing: 0.5px;
   color: #9a9ae7;
-  margin-bottom: 6px;
+  padding-bottom: 6px;
   display: block;
+  width: fit-content;
 }
 // .messageWrapper {
 //   // padding: 0px 200px;
@@ -1195,6 +1196,10 @@ body.menu-open .hide-menu {
   padding: 0px 72px 0px 19px;
   height: 80px;
   font-size: 20px;
+}
+.contactFormInput::placeholder {
+  // color: #757575;
+  color: #b2b2df;
 }
 form:invalid .sendBtn {
   border: none;
