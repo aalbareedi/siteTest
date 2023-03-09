@@ -1646,4 +1646,63 @@ input.contactFormInput:valid ~ .formIcon {
   -webkit-transition-timing-function: linear !important;
           transition-timing-function: linear !important;
 }
+
+@media only screen and (max-width: 1440px) {
+  .landing-intro-grid {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+  }
+  .landing-skills {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: 3 / 1 / 4 / 4;
+  }
+  .landing-contact {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-area: 3 / 4 / 4 / 5;
+  }
+  .landing-projects {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: 1 / 1 / 3 / 3;
+  }
+  .landing-edu {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: 2 / 3 / 3 / 5;
+  }
+  .landing-exp {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: 1 / 3 / 2 / 5;
+  }
+  #landing-projects-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .landing-intro-grid {
+    background-color: red;
+  }
+}
 /*# sourceMappingURL=style.css.map */
