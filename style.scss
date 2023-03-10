@@ -368,7 +368,7 @@ body.menu-open .hide-menu {
   padding-left: 1px;
   word-spacing: 1px;
   line-height: 23px;
-  // background-color: pink;
+  background-color: pink;
 }
 #channel-bio {
   color: gray;
@@ -412,7 +412,7 @@ body.menu-open .hide-menu {
   border-radius: 20px;
   grid-column-gap: 40px;
   grid-row-gap: 40px;
-  height: calc(100% - #{$intro-title-height} - 70px);
+  height: calc(100% - #{$intro-title-height} - 50px);
 }
 .grid-item {
   overflow: hidden;
@@ -479,7 +479,7 @@ body.menu-open .hide-menu {
   padding-left: 2px;
 }
 .landing-skills-content {
-  padding: 30px 0px 26px 0px;
+  padding: 20px 0px;
   display: flex;
   background: #eaeafd;
 }
@@ -1261,6 +1261,7 @@ input.contactFormInput:valid ~ .formIcon {
   .landing-intro-grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    height: calc(100% - #{$intro-title-height});
   }
   .landing-skills {
     grid-area: 3 / 1 / 4 / 4;
