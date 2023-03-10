@@ -210,6 +210,7 @@ header {
   top: 0;
   height: 100vh;
 }
+
 .hidden-sidebar {
   opacity: 0;
   width: 0;
@@ -368,7 +369,7 @@ body.menu-open .hide-menu {
   padding-left: 1px;
   word-spacing: 1px;
   line-height: 23px;
-  background-color: pink;
+  // background-color: pink;
 }
 #channel-bio {
   color: gray;
@@ -479,7 +480,7 @@ body.menu-open .hide-menu {
   padding-left: 2px;
 }
 .landing-skills-content {
-  padding: 20px 0px;
+  padding: 14px 0px 12px 0px;
   display: flex;
   background: #eaeafd;
 }
@@ -1260,8 +1261,8 @@ input.contactFormInput:valid ~ .formIcon {
 @media only screen and (max-width: 1440px) {
   .landing-intro-grid {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    height: calc(100% - #{$intro-title-height});
+    grid-template-rows: repeat(3, auto);
+    // height: calc(100% - #{$intro-title-height});
   }
   .landing-skills {
     grid-area: 3 / 1 / 4 / 4;
@@ -1290,3 +1291,13 @@ input.contactFormInput:valid ~ .formIcon {
     background-color: red;
   }
 }
+
+// @media only screen and (max-width: 740px) {
+//   body.menu-open:not(.menu-open-even-on-mobile) .sidebar {
+//     width: 72px;
+//   }
+
+//   .menu-open:not(.menu-open-even-on-mobile) .hide-icon {
+//     transform: initial;
+//   }
+// }

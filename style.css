@@ -471,7 +471,6 @@ body.menu-open .hide-menu {
   padding-left: 1px;
   word-spacing: 1px;
   line-height: 23px;
-  background-color: pink;
 }
 
 #channel-bio {
@@ -625,7 +624,7 @@ body.menu-open .hide-menu {
 }
 
 .landing-skills-content {
-  padding: 20px 0px;
+  padding: 14px 0px 12px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1652,9 +1651,8 @@ input.contactFormInput:valid ~ .formIcon {
   .landing-intro-grid {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
-    -ms-grid-rows: (1fr)[3];
-        grid-template-rows: repeat(3, 1fr);
-    height: calc(100% - 110px);
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
   }
   .landing-skills {
     -ms-grid-row: 3;
