@@ -49,34 +49,18 @@ projectWindows.forEach((projectWindow) => {
   });
 });
 
-// const projectWindowContents = document.querySelectorAll(
-//   ".project-window-content"
-// );
+if (window.innerWidth < 980) {
+  body.classList.remove("menu-open");
+} else {
+  body.classList.add("menu-open");
+}
 
-// projectWindowContents.forEach((projectContent) => {
-//   projectContent.addEventListener("click", (e) => {
-//     e.stopPropagation();
-//   });
-// });
+body.classList.remove("hidden");
 
-// window.addEventListener("resize", () => {
-//   console.log(window.innerWidth);
-
-//   body.classList.add("no-animation");
-//   console.log(document.querySelector(".sidebar").offsetHeight);
-//   if (window.innerWidth < 740) {
-//     body.classList.remove("menu-open");
-//   } else {
-//     body.classList.add("menu-open");
-//   }
-//   body.classList.remove("no-animation");
-// });
-
-// body.classList.add("hidden");
-// console.log(body.offsetHeight);
-// if (window.innerWidth < 740) {
-//   body.classList.remove("menu-open");
-// } else {
-//   body.classList.add("menu-open");
-// }
-// body.classList.remove("hidden");
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 980) {
+    body.classList.remove("menu-open");
+  } else {
+    body.classList.add("menu-open");
+  }
+});
