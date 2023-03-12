@@ -18,6 +18,9 @@ html,
 body {
   height: 100%;
 }
+body {
+  background-color: #e7e7ff;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -426,6 +429,7 @@ body.menu-open .hide-menu {
   border: 3px solid #c1c1ec;
   transition: all 0.2s;
   text-decoration: none;
+  min-height: 54px;
 }
 #landing-projects-content {
   display: grid;
@@ -1296,6 +1300,9 @@ input.contactFormInput:valid ~ .formIcon {
     display: flex;
     flex-direction: column;
   }
+  .landing-skills-content {
+    padding: 10px 0px;
+  }
 }
 @media only screen and (max-width: 1000px) {
   .sidebar {
@@ -1311,23 +1318,43 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 780px) {
-  // grid-template-columns: repeat(4, minmax(0, 1fr));
+  // .landing-intro-grid {
+  //   height: initial;
+  //   display: flex;
+  //   flex-direction: column;
+  // }
   .landing-intro-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
   .landing-projects {
-    grid-area: 1 / 1 / 2 / 5;
+    grid-area: 1 / 1 / 2 / 3;
   }
   .landing-exp {
-    grid-area: 2 / 1 / 3 / 3;
+    grid-area: 2 / 1 / 3 / 2;
   }
   .landing-edu {
-    grid-area: 2 / 3 / 3 / 5;
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .landing-skills {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .landing-contact {
+    grid-area: 3 / 2 / 4 / 3;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 640px) {
+  #landing-projects-content {
+    display: none;
+  }
   .landing-intro-grid {
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-item-content {
+    display: none;
+  }
+  .pause-button {
+    display: none;
   }
   .sidebar {
     display: none;
@@ -1337,6 +1364,21 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .menu-icon-btn {
     display: none;
+  }
+  .landing-contact {
+    background-color: #7676e3;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    flex-direction: row;
+    padding: 10px;
+    border-radius: 0;
+    column-gap: 10px;
+  }
+  .landing-contact-btn {
+    max-width: initial;
+    flex-basis: 100%;
   }
 }
 
