@@ -1341,14 +1341,33 @@ input.contactFormInput:valid ~ .formIcon {
   .landing-contact {
     grid-area: 3 / 2 / 4 / 3;
   }
+  .landing-projects .grid-item-box {
+    height: 150px;
+    width: 200px;
+  }
+  #landing-projects-content {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    flex-direction: row;
+  }
+  .landing-contact-btn {
+    max-width: initial;
+  }
 }
 @media only screen and (max-width: 640px) {
+  header {
+    display: none;
+  }
+  .carousel-wrapper {
+    display: none !important;
+  }
   #landing-projects-content {
     display: none;
   }
   .landing-intro-grid {
     display: flex;
     flex-direction: column;
+    height: initial;
   }
   .grid-item-content {
     display: none;
@@ -1377,11 +1396,14 @@ input.contactFormInput:valid ~ .formIcon {
     column-gap: 10px;
   }
   .landing-contact-btn {
-    max-width: initial;
     flex-basis: 100%;
   }
 }
-
+@media only screen and (max-width: 500px) {
+  .title-text {
+    font-size: 22px;
+  }
+}
 // @media only screen and (max-width: 740px) {
 //   body.menu-open:not(.menu-open-even-on-mobile) .sidebar {
 //     width: 72px;

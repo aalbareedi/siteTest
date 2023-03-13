@@ -1775,9 +1775,30 @@ input.contactFormInput:valid ~ .formIcon {
     -ms-grid-column-span: 1;
     grid-area: 3 / 2 / 4 / 3;
   }
+  .landing-projects .grid-item-box {
+    height: 150px;
+    width: 200px;
+  }
+  #landing-projects-content {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .landing-contact-btn {
+    max-width: initial;
+  }
 }
 
 @media only screen and (max-width: 640px) {
+  header {
+    display: none;
+  }
+  .carousel-wrapper {
+    display: none !important;
+  }
   #landing-projects-content {
     display: none;
   }
@@ -1789,6 +1810,7 @@ input.contactFormInput:valid ~ .formIcon {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: initial;
   }
   .grid-item-content {
     display: none;
@@ -1821,9 +1843,14 @@ input.contactFormInput:valid ~ .formIcon {
             column-gap: 10px;
   }
   .landing-contact-btn {
-    max-width: initial;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .title-text {
+    font-size: 22px;
   }
 }
 /*# sourceMappingURL=style.css.map */
