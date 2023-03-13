@@ -405,7 +405,7 @@ body.menu-open .hide-menu {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 40px;
-  word-spacing: 1.6px;
+  word-spacing: 2px;
   line-height: 34px;
 }
 #overview .title-text {
@@ -1273,7 +1273,10 @@ input.contactFormInput:valid ~ .formIcon {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
 }
-
+.landing-mobile-icon,
+.landing-link-icon {
+  display: none !important;
+}
 @media only screen and (max-width: 1500px) {
   .landing-intro-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -1364,10 +1367,47 @@ input.contactFormInput:valid ~ .formIcon {
   #landing-projects-content {
     display: none;
   }
+  #overview {
+    height: calc(100vh - 74px);
+  }
+  #overview .title-text {
+    padding-left: 2px;
+  }
+  .landing-intro-title {
+    flex-direction: column;
+    height: initial;
+    row-gap: 12px;
+  }
+  .landing-mobile-icon {
+    display: block !important;
+    color: #7171da;
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+  }
+  .landing-link-icon {
+    color: #7171da;
+    font-size: 18px;
+    display: block !important;
+    position: absolute;
+    right: 20px;
+  }
+  .grid-item {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding-left: 20px;
+    background-color: #e1e1fb;
+    position: relative;
+  }
+  .landing-grid-title {
+    padding-left: 0px;
+  }
   .landing-intro-grid {
     display: flex;
     flex-direction: column;
     height: initial;
+    grid-row-gap: 20px;
   }
   .grid-item-content {
     display: none;
@@ -1399,11 +1439,11 @@ input.contactFormInput:valid ~ .formIcon {
     flex-basis: 100%;
   }
 }
-@media only screen and (max-width: 500px) {
-  .title-text {
-    font-size: 22px;
-  }
-}
+// @media only screen and (max-width: 500px) {
+//   .title-text {
+//     font-size: 22px;
+//   }
+// }
 // @media only screen and (max-width: 740px) {
 //   body.menu-open:not(.menu-open-even-on-mobile) .sidebar {
 //     width: 72px;
