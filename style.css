@@ -160,6 +160,7 @@ header {
 
 .menu-open .nav-tooltip {
   left: 255px;
+  display: none;
 }
 
 .nav-tooltip::after {
@@ -1667,7 +1668,7 @@ input.contactFormInput:valid ~ .formIcon {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1;
   display: none;
   -webkit-transition: all 0.2s;
@@ -1753,6 +1754,9 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 780px) {
+  .skill-img-wrapper {
+    padding: 16px 24px;
+  }
   .grid-item-box {
     font-size: 14px;
   }

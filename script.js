@@ -1,6 +1,7 @@
 const menuIconButton = document.querySelector("[data-menu-icon-btn]");
 const sidebar = document.querySelector("[data-sidebar]");
 const navOverlay = document.querySelector(".nav-overlay");
+const navItems = document.querySelectorAll(".sidebar-list-item");
 
 menuIconButton.addEventListener("click", () => {
   document.body.classList.toggle("menu-open");
@@ -12,6 +13,14 @@ navOverlay.addEventListener("click", () => {
   document.body.classList.remove("menu-open");
   navOverlay.classList.add("invisible");
 });
+
+// navItems.forEach((navItem) => {
+//   navItem.addEventListener("click", () => {
+//     console.log("clicked");
+//     document.body.classList.remove("menu-open");
+//     navOverlay.classList.add("invisible");
+//   });
+// });
 
 const moreInfoBtns = document.querySelectorAll(".more-info-btn");
 const projectWindows = document.querySelectorAll(".project-window");
