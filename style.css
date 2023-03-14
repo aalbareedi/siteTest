@@ -22,6 +22,11 @@ body {
   overflow: hidden;
 }
 
+.invisible {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
 .hidden {
   display: none !important;
 }
@@ -491,6 +496,7 @@ body.menu-open .hide-menu {
           flex-grow: 1;
   background-color: #e7e7ff;
   position: relative;
+  max-width: 100%;
 }
 
 .landing-intro-title {
@@ -760,13 +766,14 @@ body.menu-open .hide-menu {
   overflow-y: auto;
   max-height: calc(100% - 54px);
   background: #eaeafd;
-  row-gap: 4px;
+  row-gap: 2px;
 }
 
 .grid-item-box {
   border-radius: 10px;
   padding: 8px;
   font-size: 16px;
+  line-height: 22px;
   color: #393838;
 }
 
@@ -784,7 +791,6 @@ body.menu-open .hide-menu {
 
 .landing-content-years {
   margin-bottom: 6px;
-  line-height: 22px;
 }
 
 .landing-content-info {
@@ -795,7 +801,6 @@ body.menu-open .hide-menu {
           column-gap: 6px;
   padding-left: 4px;
   margin-bottom: 4px;
-  line-height: 22px;
   word-spacing: 0.4px;
 }
 
@@ -814,7 +819,7 @@ body.menu-open .hide-menu {
 }
 
 .landing-content-title {
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   font-weight: bold;
 }
 
@@ -1663,6 +1668,10 @@ input.contactFormInput:valid ~ .formIcon {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .landing-mobile-icon,
@@ -1738,9 +1747,15 @@ input.contactFormInput:valid ~ .formIcon {
     top: 0px;
     height: 64px;
   }
+  .nav-overlay {
+    display: initial;
+  }
 }
 
 @media only screen and (max-width: 780px) {
+  .grid-item-box {
+    font-size: 14px;
+  }
   .landing-intro-grid {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);

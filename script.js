@@ -1,9 +1,16 @@
 const menuIconButton = document.querySelector("[data-menu-icon-btn]");
 const sidebar = document.querySelector("[data-sidebar]");
+const navOverlay = document.querySelector(".nav-overlay");
 
 menuIconButton.addEventListener("click", () => {
   document.body.classList.toggle("menu-open");
   // sidebar.classList.toggle("open");
+  navOverlay.classList.toggle("invisible");
+});
+
+navOverlay.addEventListener("click", () => {
+  document.body.classList.remove("menu-open");
+  navOverlay.classList.add("invisible");
 });
 
 const moreInfoBtns = document.querySelectorAll(".more-info-btn");
