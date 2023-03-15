@@ -672,7 +672,7 @@ body.menu-open .hide-menu {
 }
 #overview {
   height: calc(100vh - #{$header-height});
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 // #projects {
 //   height: calc(100% - #{$header-height});
@@ -1402,11 +1402,12 @@ input.contactFormInput:valid ~ .formIcon {
     display: none;
   }
   #overview {
-    height: calc(100vh - 74px);
+    height: auto;
+    min-height: calc(100vh - 74px);
   }
   #overview .title-text {
     padding-left: 2px;
-    background-color: orange;
+    // background-color: orange;
   }
   .landing-intro-title {
     flex-direction: column;
@@ -1455,6 +1456,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .content {
     margin-left: 0px;
+    padding-bottom: 74px;
   }
   .menu-icon-btn {
     display: none;

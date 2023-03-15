@@ -884,7 +884,6 @@ body.menu-open .hide-menu {
 
 #overview {
   height: calc(100vh - 64px);
-  overflow-y: scroll;
 }
 
 .projects-content-grid {
@@ -1835,11 +1834,11 @@ input.contactFormInput:valid ~ .formIcon {
     display: none;
   }
   #overview {
-    height: calc(100vh - 74px);
+    height: auto;
+    min-height: calc(100vh - 74px);
   }
   #overview .title-text {
     padding-left: 2px;
-    background-color: orange;
   }
   .landing-intro-title {
     -webkit-box-orient: vertical;
@@ -1901,6 +1900,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .content {
     margin-left: 0px;
+    padding-bottom: 74px;
   }
   .menu-icon-btn {
     display: none;
