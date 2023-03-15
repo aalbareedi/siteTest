@@ -884,6 +884,7 @@ body.menu-open .hide-menu {
 
 #overview {
   height: calc(100vh - 64px);
+  overflow-y: scroll;
 }
 
 .projects-content-grid {
@@ -1838,6 +1839,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   #overview .title-text {
     padding-left: 2px;
+    background-color: orange;
   }
   .landing-intro-title {
     -webkit-box-orient: vertical;

@@ -6,7 +6,9 @@ const navItems = document.querySelectorAll(".sidebar-list-item");
 menuIconButton.addEventListener("click", () => {
   document.body.classList.toggle("menu-open");
   // sidebar.classList.toggle("open");
-  navOverlay.classList.toggle("invisible");
+  if (window.innerWidth <= 1100) {
+    navOverlay.classList.toggle("invisible");
+  }
 });
 
 navOverlay.addEventListener("click", () => {
@@ -14,13 +16,16 @@ navOverlay.addEventListener("click", () => {
   navOverlay.classList.add("invisible");
 });
 
-// navItems.forEach((navItem) => {
-//   navItem.addEventListener("click", () => {
-//     console.log("clicked");
-//     document.body.classList.remove("menu-open");
-//     navOverlay.classList.add("invisible");
-//   });
-// });
+navItems.forEach((navItem) => {
+  navItem.addEventListener("click", () => {
+    console.log("clicked");
+
+    if (window.innerWidth <= 1100) {
+      document.body.classList.remove("menu-open");
+      navOverlay.classList.add("invisible");
+    }
+  });
+});
 
 const moreInfoBtns = document.querySelectorAll(".more-info-btn");
 const projectWindows = document.querySelectorAll(".project-window");
