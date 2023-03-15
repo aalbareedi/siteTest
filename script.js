@@ -54,7 +54,7 @@ projectWindows.forEach((projectWindow) => {
   });
 });
 
-if (window.innerWidth <= 1000) {
+if (window.innerWidth <= 1100) {
   body.classList.remove("menu-open");
 } else {
   body.classList.add("menu-open");
@@ -63,7 +63,7 @@ if (window.innerWidth <= 1000) {
 body.classList.remove("hidden");
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth <= 1000) {
+  if (window.innerWidth <= 1100) {
     body.classList.remove("menu-open");
   } else {
     body.classList.add("menu-open");
