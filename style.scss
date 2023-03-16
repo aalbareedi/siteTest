@@ -672,6 +672,8 @@ body.menu-open .hide-menu {
 }
 #overview {
   height: calc(100vh - #{$header-height});
+  // height: auto;
+  // min-height: calc(100vh - #{$header-height});
   // overflow-y: scroll;
 }
 // #projects {
