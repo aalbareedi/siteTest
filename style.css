@@ -1411,7 +1411,7 @@ body.menu-open .hide-menu {
 
 .content-item {
   background-color: #e0e0fb;
-  height: 210px;
+  min-height: 210px;
   border-radius: 10px;
   padding: 30px;
   font-size: 16px;
@@ -1423,11 +1423,13 @@ body.menu-open .hide-menu {
 .content-item-name {
   font-weight: bold;
   font-size: 20px;
+  line-height: 25px;
   margin-bottom: 7px;
 }
 
 .content-item-years {
   font-size: 18px;
+  line-height: 24px;
   margin-bottom: 12px;
 }
 
@@ -1440,6 +1442,8 @@ body.menu-open .hide-menu {
   margin-bottom: 8px;
   padding-left: 4px;
   word-spacing: 1px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 #resume iframe {
@@ -1691,6 +1695,10 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
+.my-name {
+  background-color: orange;
+}
+
 @media only screen and (max-width: 1500px) {
   .landing-intro-grid {
     -ms-grid-columns: (1fr)[4];
@@ -1821,6 +1829,9 @@ input.contactFormInput:valid ~ .formIcon {
   .landing-contact-btn {
     max-width: initial;
   }
+  .grid-item-box {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -1923,6 +1934,12 @@ input.contactFormInput:valid ~ .formIcon {
   .landing-contact-btn {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .landing-grid-title {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=style.css.map */
