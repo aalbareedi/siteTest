@@ -1,5 +1,4 @@
 $header-height: 64px;
-// $current-nav: #7676e3;
 $current-nav: #a2a2ff;
 $main-grid-hover: #9292f8;
 $intro-title-height: 110px;
@@ -300,7 +299,6 @@ body.menu-open .sidebar-link {
   color: gray;
   transition: all 0.2s;
 }
-// qwe
 .sidebar-list-item.active .sidebar-nav-box {
   color: #eaeafd;
   background-color: #7676e3;
@@ -374,7 +372,6 @@ body.menu-open .hide-menu {
 .hide-menu {
   display: none;
 }
-
 .together {
   white-space: nowrap;
 }
@@ -386,14 +383,12 @@ body.menu-open .hide-menu {
   padding-left: 1px;
   word-spacing: 1px;
   line-height: 23px;
-  // background-color: pink;
 }
 #channel-bio {
   color: gray;
   font-size: 15px;
   letter-spacing: 0.2px;
   line-height: 17px;
-  font-style: italic;
 }
 .content {
   // width: 100%;
