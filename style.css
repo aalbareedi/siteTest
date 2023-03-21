@@ -59,6 +59,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   font-family: "Roboto", sans-serif;
+  height: 100%;
 }
 
 .menu-icon {
@@ -1450,23 +1451,26 @@ body.menu-open .hide-menu {
   overflow: hidden;
 }
 
-.contact-intro {
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-
-.contact-container {
+#contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 68px;
-          column-gap: 68px;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+  height: calc(100% - 64px);
+  padding: 0px;
 }
 
-.contact-info {
-  max-width: 460px;
-  padding-left: 1px;
-  padding-top: 30px;
+.contact-content {
+  padding: 40px 50px;
+  padding-right: 0px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.contact-intro {
+  font-size: 20px;
+  margin-bottom: 18px;
 }
 
 .contact-text {
@@ -1540,14 +1544,14 @@ body.menu-open .hide-menu {
 .formIcon {
   pointer-events: none;
   position: absolute;
-  right: 25px;
-  top: 24px;
-  font-size: 30px;
+  right: 24px;
+  top: 20px;
+  font-size: 28px;
   color: #9a9ae7;
 }
 
 .contact-form-label {
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 0.5px;
   word-spacing: 0.5px;
   color: #9a9ae7;
@@ -1559,8 +1563,8 @@ body.menu-open .hide-menu {
 }
 
 #messageInput {
-  padding: 22px 19px 0px 19px;
-  height: 170px;
+  padding: 14px 19px 0px 19px;
+  height: 140px;
   resize: none;
 }
 
@@ -1571,7 +1575,7 @@ body.menu-open .hide-menu {
 }
 
 #fullNameIcon {
-  right: 28px;
+  right: 27px;
 }
 
 .contactFormInput {
@@ -1583,9 +1587,10 @@ body.menu-open .hide-menu {
   border-radius: 10px;
   display: block;
   color: #7373d1;
-  padding: 0px 72px 0px 19px;
-  height: 80px;
-  font-size: 20px;
+  padding: 0px 66px 0px 19px;
+  height: 70px;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .contactFormInput::-webkit-input-placeholder {
@@ -1634,7 +1639,7 @@ input.contactFormInput:valid {
   background-image: url("newcheck.svg");
   background-size: 34px;
   background-repeat: no-repeat;
-  background-position: right 24px center;
+  background-position: right 18px center;
 }
 
 input.contactFormInput:valid ~ .formIcon {
@@ -1691,6 +1696,17 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-mobile-icon,
 .landing-link-icon {
   display: none !important;
+}
+
+.mapWrapper {
+  width: 100%;
+}
+
+#googleMap {
+  margin: 0px auto;
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 @media only screen and (max-width: 1500px) {

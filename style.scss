@@ -58,8 +58,9 @@ header {
 }
 .container {
   display: flex;
-  // height: 100%;
   font-family: "Roboto", sans-serif;
+  // height: 100% added for contact form
+  height: 100%;
 }
 .menu-icon {
   font-size: 24px;
@@ -1091,22 +1092,26 @@ body.menu-open .hide-menu {
   width: 100%;
   overflow: hidden;
 }
-// #contact {
-//   background-color: purple;
-// }
+#contact {
+  display: flex;
+  column-gap: 40px;
+  height: calc(100% - #{$header-height});
+  padding: 0px;
+}
+.contact-content {
+  padding: 40px 50px;
+  padding-right: 0px;
+  flex-basis: 100%;
+}
 .contact-intro {
   font-size: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 18px;
 }
-.contact-container {
-  display: flex;
-  column-gap: 68px;
-}
-.contact-info {
-  max-width: 460px;
-  padding-left: 1px;
-  padding-top: 30px;
-}
+// .contact-info {
+//   max-width: 460px;
+//   padding-left: 1px;
+//   padding-top: 30px;
+// }
 .contact-text {
   font-size: 16px;
   line-height: 24px;
@@ -1169,13 +1174,13 @@ body.menu-open .hide-menu {
 .formIcon {
   pointer-events: none;
   position: absolute;
-  right: 25px;
-  top: 24px;
-  font-size: 30px;
+  right: 24px;
+  top: 20px;
+  font-size: 28px;
   color: #9a9ae7;
 }
 .contact-form-label {
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 0.5px;
   word-spacing: 0.5px;
   color: #9a9ae7;
@@ -1188,8 +1193,8 @@ body.menu-open .hide-menu {
 //   // max-width: 520px;
 // }
 #messageInput {
-  padding: 22px 19px 0px 19px;
-  height: 170px;
+  padding: 14px 19px 0px 19px;
+  height: 140px;
   resize: none;
 }
 .contactFormInput:focus,
@@ -1198,7 +1203,7 @@ body.menu-open .hide-menu {
   outline: none;
 }
 #fullNameIcon {
-  right: 28px;
+  right: 27px;
 }
 .contactFormInput {
   background-color: initial;
@@ -1209,9 +1214,10 @@ body.menu-open .hide-menu {
   border-radius: 10px;
   display: block;
   color: #7373d1;
-  padding: 0px 72px 0px 19px;
-  height: 80px;
-  font-size: 20px;
+  padding: 0px 66px 0px 19px;
+  height: 70px;
+  font-size: 18px;
+  line-height: 24px;
 }
 .contactFormInput::placeholder {
   // color: #757575;
@@ -1245,7 +1251,7 @@ input.contactFormInput:valid {
   background-image: url("newcheck.svg");
   background-size: 34px;
   background-repeat: no-repeat;
-  background-position: right 24px center;
+  background-position: right 18px center;
 }
 input.contactFormInput:valid ~ .formIcon {
   opacity: 0;
@@ -1291,6 +1297,27 @@ input.contactFormInput:valid ~ .formIcon {
 // .my-name {
 //   background-color: orange;
 // }
+.mapWrapper {
+  // margin: 0px auto;
+  // max-width: 310px;
+  // border-radius: 8px;
+  // overflow: hidden;
+  // position: relative;
+  // box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+#googleMap {
+  margin: 0px auto;
+  display: block;
+  // position: absolute;
+  // top: $header-height;
+  // right: 0px;
+  // bottom: 0px;
+  // height: calc(100% - #{$header-height});
+  height: 100%;
+  width: 100%;
+}
+
 @media only screen and (max-width: 1500px) {
   .landing-intro-grid {
     grid-template-columns: repeat(4, 1fr);
