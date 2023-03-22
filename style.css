@@ -280,10 +280,9 @@ header {
   background-color: whitesmoke;
   height: 100%;
   z-index: 2;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
-  height: 100vh;
+  height: 100%;
 }
 
 .hidden-sidebar {
@@ -508,6 +507,13 @@ body.menu-open .hide-menu {
   background-color: #e7e7ff;
   position: relative;
   max-width: 100%;
+  margin-left: 72px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.menu-open .content {
+  margin-left: 260px;
 }
 
 .landing-intro-title {
@@ -1695,10 +1701,6 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-mobile-icon,
 .landing-link-icon {
   display: none !important;
-}
-
-.my-name {
-  background-color: orange;
 }
 
 .mapWrapper {

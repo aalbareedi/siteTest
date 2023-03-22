@@ -3,6 +3,8 @@ $current-nav: #a2a2ff;
 $main-grid-hover: #9292f8;
 $intro-title-height: 110px;
 $landing-item-title-height: 54px;
+$sidenav-open-width: 260px;
+$sidenav-close-width: 72px;
 
 * {
   /* Remove Gray Highlight When Tapping Links in Mobile Safari */
@@ -212,7 +214,7 @@ header {
   flex-shrink: 0;
   overflow: hidden;
   padding-top: 18px;
-  width: 72px;
+  width: $sidenav-close-width;
   border-right: 2px solid #d0d0ef;
   display: flex;
   flex-direction: column;
@@ -223,10 +225,10 @@ header {
   background-color: whitesmoke;
   height: 100%;
   z-index: 2;
-  position: sticky;
+  position: fixed;
   top: 0;
-  height: 100vh;
-  // height: 100%;
+  // height: 100vh;
+  height: 100%;
 }
 .hidden-sidebar {
   opacity: 0;
@@ -346,7 +348,7 @@ body.menu-open .sidebar-link {
   padding: 2px 6px;
 }
 body.menu-open .sidebar {
-  width: 260px;
+  width: $sidenav-open-width;
 }
 .sidebar-nav-box {
   display: flex;
@@ -397,6 +399,11 @@ body.menu-open .hide-menu {
   background-color: #e7e7ff;
   position: relative;
   max-width: 100%;
+  margin-left: $sidenav-close-width;
+  transition: all 0.2s;
+}
+.menu-open .content {
+  margin-left: $sidenav-open-width;
 }
 .landing-intro-title {
   margin-bottom: 30px;
@@ -1294,9 +1301,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-link-icon {
   display: none !important;
 }
-.my-name {
-  background-color: orange;
-}
+// .my-name {
+//   background-color: orange;
+// }
 .mapWrapper {
   // margin: 0px auto;
   // max-width: 310px;
