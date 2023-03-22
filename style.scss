@@ -1301,9 +1301,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-link-icon {
   display: none !important;
 }
-// .my-name {
-//   background-color: orange;
-// }
+.my-name {
+  background-color: orange;
+}
 .mapWrapper {
   // margin: 0px auto;
   // max-width: 310px;
@@ -1361,8 +1361,9 @@ input.contactFormInput:valid ~ .formIcon {
   .sidebar {
     position: fixed;
   }
-  .content {
-    margin-left: 72px;
+  .content,
+  .menu-open .content {
+    margin-left: $sidenav-close-width;
   }
   .menu-open .menu-icon-btn {
     left: calc(260px - 72px);
