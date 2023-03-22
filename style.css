@@ -59,7 +59,6 @@ header {
   display: -ms-flexbox;
   display: flex;
   font-family: "Roboto", sans-serif;
-  height: 100%;
 }
 
 .menu-icon {
@@ -1696,6 +1695,10 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-mobile-icon,
 .landing-link-icon {
   display: none !important;
+}
+
+.my-name {
+  background-color: orange;
 }
 
 .mapWrapper {
