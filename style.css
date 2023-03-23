@@ -157,8 +157,8 @@ header {
   border-radius: 4px;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.8s 0.2s;
+  transition: all 0.8s 0.2s;
   letter-spacing: 0.5px;
   font-size: 14px;
   width: 92px;
@@ -937,25 +937,34 @@ body.menu-open .hide-menu {
   max-height: 660px;
   width: 100%;
   border-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   overflow: hidden;
   position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[2];
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
 }
 
 .project-window-images {
   background-color: orange;
+  width: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 3 / 2;
 }
 
 .project-window-info {
   background: whitesmoke;
   color: #292828;
-}
-
-.project-flex {
-  text-decoration: none;
-  width: 50%;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / 3 / 3;
 }
 
 .project-window-title {
@@ -972,6 +981,13 @@ body.menu-open .hide-menu {
   background: #dbdbff;
   border-bottom: 2px solid #ccccee;
   border-left: 2px solid #ccccee;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .project-window-points {
@@ -1704,7 +1720,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: orange;
+  background-color: pink;
 }
 
 .mapWrapper {
@@ -1775,6 +1791,21 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .landing-skills-content {
     padding: 10px 0px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .project-window-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .project-window-images {
+    min-height: 320px;
   }
 }
 
