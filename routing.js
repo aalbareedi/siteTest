@@ -3,15 +3,15 @@
 
 const root = location.href.split("/").slice(0, -1).join("/");
 
-showPageFromAddress();
-
 // Make the links work
 document.querySelectorAll(".tab-content").forEach((page) => {
   document.querySelectorAll(`[href='#${page.id}']`).forEach((a) => {
     a.onclick = (e) => {
       e.preventDefault();
-      history.pushState({}, null, `${root}/${a.hash.substr(1)}`);
+      const page = a.hash.substr(1);
+      history.pushState({}, null, `${root}/${page}`);
       showPageFromAddress();
+      window.onpopstate();
     };
   });
 });
@@ -36,8 +36,8 @@ function showPageFromAddress() {
     history.pushState({}, null, `${root}/`);
   }
 
-  console.log("location.pathname: ", location.pathname);
-  console.log("pageName: ", pageName);
+  // console.log("location.pathname: ", location.pathname);
+  // console.log("pageName: ", pageName);
 
   // Find the page, default to 404
   const page =
@@ -86,6 +86,16 @@ function resizeResume() {
   }
 }
 
-window.addEventListener("popstate", (event) => {
+window.onpopstate = () => {
   showPageFromAddress();
-});
+
+  const page = location.pathname.substring(1);
+
+  if (page) {
+    document.body.dataset.page = page;
+  } else {
+    delete document.body.dataset.page;
+  }
+};
+
+window.onpopstate();

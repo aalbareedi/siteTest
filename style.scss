@@ -719,6 +719,7 @@ body.menu-open .hide-menu {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(2, auto);
+  height: 100%;
 }
 .project-window-images {
   background-color: orange;
@@ -732,6 +733,8 @@ body.menu-open .hide-menu {
   background: whitesmoke;
   color: #292828;
   grid-area: 2 / 2 / 3 / 3;
+  overflow-y: scroll;
+  max-height: 100%;
 }
 // .project-flex {
 //   text-decoration: none;
@@ -757,8 +760,8 @@ body.menu-open .hide-menu {
   font-size: 16px;
   line-height: 24px;
   word-spacing: 1px;
-  overflow-y: auto;
-  max-height: calc(100% - 66px);
+  // overflow-y: auto;
+  // max-height: calc(100% - 66px);
   border-left: 2px solid #ccccee;
   padding: 30px 62px 38px 26px;
 }
@@ -1107,17 +1110,11 @@ body.menu-open .hide-menu {
   width: 100%;
   overflow: hidden;
 }
-#contact {
-  display: flex;
-  column-gap: 40px;
-  height: calc(100% - #{$header-height});
-  padding: 0px;
-}
-.contact-content {
-  padding: 40px 50px;
-  padding-right: 0px;
-  flex-basis: 100%;
-}
+// #contact {
+//   display: flex;
+//   column-gap: 40px;
+//   height: calc(100% - #{$header-height});
+// }
 .contact-intro {
   font-size: 20px;
   margin-bottom: 18px;
@@ -1309,29 +1306,24 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-link-icon {
   display: none !important;
 }
-.my-name {
-  background-color: pink;
-}
-.mapWrapper {
-  // margin: 0px auto;
-  // max-width: 310px;
-  // border-radius: 8px;
-  // overflow: hidden;
-  // position: relative;
-  // box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  width: 100%;
-}
-#googleMap {
-  margin: 0px auto;
-  display: block;
-  // position: absolute;
-  // top: $header-height;
-  // right: 0px;
-  // bottom: 0px;
-  // height: calc(100% - #{$header-height});
-  height: 100%;
-  width: 100%;
-}
+// .my-name {
+//   background-color: pink;
+// }
+// .mapWrapper {
+//   // margin: 0px auto;
+//   // max-width: 310px;
+//   // border-radius: 8px;
+//   // overflow: hidden;
+//   // position: relative;
+//   // box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+//   width: 100%;
+// }
+// #googleMap {
+//   margin: 0px auto;
+//   display: block;
+//   height: 100%;
+//   width: 100%;
+// }
 
 @media only screen and (max-width: 1500px) {
   .landing-intro-grid {
@@ -1431,6 +1423,9 @@ input.contactFormInput:valid ~ .formIcon {
   }
   header {
     display: none;
+  }
+  [data-page] header {
+    display: block;
   }
   .tab-content {
     padding: 30px;
