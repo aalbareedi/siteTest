@@ -189,11 +189,6 @@ header {
   visibility: initial;
 }
 
-.active .sidebar-link:hover .nav-tooltip {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .landing-skills-tooltip {
   text-align: center;
   display: -webkit-box;
