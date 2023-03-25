@@ -164,6 +164,13 @@ header {
 //   opacity: 0;
 //   visibility: hidden;
 // }
+.landing-title-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  // padding-left: 20px;
+}
 .landing-skills-tooltip {
   text-align: center;
   display: flex;
@@ -469,6 +476,7 @@ body.menu-open .hide-menu {
   font-size: 18px;
   font-weight: bold;
   word-spacing: 0.8px;
+  width: 100%;
 }
 .landing-projects {
   grid-area: 1 / 1 / 2 / 3;
@@ -1306,9 +1314,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-link-icon {
   display: none !important;
 }
-// .my-name {
-//   background-color: pink;
-// }
+.my-name {
+  background-color: green;
+}
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1454,6 +1462,7 @@ input.contactFormInput:valid ~ .formIcon {
     font-size: 18px;
     width: 24px;
     text-align: center;
+    margin-left: 20px;
   }
   .landing-link-icon {
     color: #7171da;
@@ -1463,10 +1472,10 @@ input.contactFormInput:valid ~ .formIcon {
     right: 20px;
   }
   .grid-item {
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
-    padding-left: 20px;
+    // display: flex;
+    // align-items: center;
+    // column-gap: 20px;
+    // padding-left: 20px;
     background-color: #e1e1fb;
     position: relative;
   }
