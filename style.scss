@@ -5,6 +5,7 @@ $intro-title-height: 110px;
 $landing-item-title-height: 54px;
 $sidenav-open-width: 260px;
 $sidenav-close-width: 72px;
+$contact-btn-height: 64px;
 
 * {
   /* Remove Gray Highlight When Tapping Links in Mobile Safari */
@@ -41,9 +42,6 @@ body {
 // :root {
 //   --animmation-duration: 200ms;
 //   --animation-timing-curve: ease-in-out;
-// }
-// #contact-me-btn {
-//   background-color: pink;
 // }
 .hidden {
   display: none !important;
@@ -554,22 +552,24 @@ body.menu-open .hide-menu {
   flex-direction: column;
   row-gap: 20px;
 }
-.landing-contact-btn {
+.contact-btn-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  column-gap: 6px;
+  padding: 0px 12px;
+}
+.landing-contact-btn {
   height: 54px;
   border-radius: 10px;
   border: none;
   border: 3px solid #c1c1ec;
-  // background: #d6d6ff;
   background: #e7e7ff;
   max-width: 188px;
-  padding: 0px 12px;
   transition: all 0.2s;
   box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
   font-size: 16px;
-  column-gap: 6px;
   color: #313131;
   text-decoration: none;
 }
@@ -1314,9 +1314,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-link-icon {
   display: none !important;
 }
-.my-name {
-  background-color: purple;
-}
+// .my-name {
+//   background-color: purple;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1447,7 +1447,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   #overview {
     height: auto;
-    min-height: calc(100vh - 74px);
+    min-height: calc(100vh - #{$contact-btn-height});
   }
   #overview .title-text {
     padding-left: 2px;
@@ -1500,24 +1500,44 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .content {
     margin-left: 0px;
-    padding-bottom: 74px;
+    padding-bottom: $contact-btn-height;
   }
   .menu-icon-btn {
     display: none;
   }
-  .landing-contact {
+  #contact-me-btn {
     background-color: #7676e3;
     position: fixed;
     bottom: 0px;
     left: 0px;
     right: 0px;
-    flex-direction: row;
-    padding: 10px;
     border-radius: 0;
-    column-gap: 10px;
+    border: none;
+    padding: 8px;
+    height: $contact-btn-height;
+  }
+  #contact-me-btn .contact-btn-wrapper {
+    background: #e7e7ff;
+    border-radius: 8px;
+    border: 3px solid #c1c1ec;
+  }
+  #contact-resume-btn {
+    background: #e1e1fb;
+    position: relative;
   }
   .landing-contact-btn {
-    flex-basis: 100%;
+    box-shadow: none;
+  }
+  #contact-resume-btn .contact-btn-wrapper {
+    justify-content: initial;
+    padding: 0px;
+    column-gap: 20px;
+  }
+  #contact-resume-btn .contact-btn-text {
+    color: #393838;
+    font-size: 18px;
+    font-weight: bold;
+    word-spacing: 0.8px;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -1534,12 +1554,3 @@ input.contactFormInput:valid ~ .formIcon {
     font-size: 16px;
   }
 }
-// @media only screen and (max-width: 740px) {
-//   body.menu-open:not(.menu-open-even-on-mobile) .sidebar {
-//     width: 72px;
-//   }
-
-//   .menu-open:not(.menu-open-even-on-mobile) .hide-icon {
-//     transform: initial;
-//   }
-// }

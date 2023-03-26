@@ -746,7 +746,7 @@ body.menu-open .hide-menu {
   row-gap: 20px;
 }
 
-.landing-contact-btn {
+.contact-btn-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -756,20 +756,24 @@ body.menu-open .hide-menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
+  -webkit-column-gap: 6px;
+          column-gap: 6px;
+  padding: 0px 12px;
+}
+
+.landing-contact-btn {
   height: 54px;
   border-radius: 10px;
   border: none;
   border: 3px solid #c1c1ec;
   background: #e7e7ff;
   max-width: 188px;
-  padding: 0px 12px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
           box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
   font-size: 16px;
-  -webkit-column-gap: 6px;
-          column-gap: 6px;
   color: #313131;
   text-decoration: none;
 }
@@ -1711,10 +1715,6 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
-.my-name {
-  background-color: purple;
-}
-
 @media only screen and (max-width: 1500px) {
   .landing-intro-grid {
     -ms-grid-columns: (1fr)[4];
@@ -1888,7 +1888,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   #overview {
     height: auto;
-    min-height: calc(100vh - 74px);
+    min-height: calc(100vh - 64px);
   }
   #overview .title-text {
     padding-left: 2px;
@@ -1945,29 +1945,48 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .content {
     margin-left: 0px;
-    padding-bottom: 74px;
+    padding-bottom: 64px;
   }
   .menu-icon-btn {
     display: none;
   }
-  .landing-contact {
+  #contact-me-btn {
     background-color: #7676e3;
     position: fixed;
     bottom: 0px;
     left: 0px;
     right: 0px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding: 10px;
     border-radius: 0;
-    -webkit-column-gap: 10px;
-            column-gap: 10px;
+    border: none;
+    padding: 8px;
+    height: 64px;
+  }
+  #contact-me-btn .contact-btn-wrapper {
+    background: #e7e7ff;
+    border-radius: 8px;
+    border: 3px solid #c1c1ec;
+  }
+  #contact-resume-btn {
+    background: #e1e1fb;
+    position: relative;
   }
   .landing-contact-btn {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  #contact-resume-btn .contact-btn-wrapper {
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    padding: 0px;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+  #contact-resume-btn .contact-btn-text {
+    color: #393838;
+    font-size: 18px;
+    font-weight: bold;
+    word-spacing: 0.8px;
   }
 }
 
