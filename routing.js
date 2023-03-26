@@ -89,7 +89,9 @@ function resizeResume() {
 window.onpopstate = () => {
   showPageFromAddress();
 
-  const page = location.pathname.substring(1);
+  // const page = location.pathname.substring(1);
+  // Get the page name or "route" from the address bar
+  const page = location.pathname.split("/").pop().replaceAll("/", "");
 
   if (page) {
     document.body.dataset.page = page;
@@ -97,8 +99,8 @@ window.onpopstate = () => {
     delete document.body.dataset.page;
   }
 
-  alert("page: " + page);
-  alert("document.body.dataset.page: " + document.body.dataset.page);
+  // alert("page: " + page);
+  // alert("document.body.dataset.page: " + document.body.dataset.page);
 };
 
 window.onpopstate();

@@ -1712,7 +1712,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: yellow;
+  background-color: pink;
 }
 
 @media only screen and (max-width: 1500px) {
