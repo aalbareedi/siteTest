@@ -65,7 +65,8 @@ function showPageFromAddress() {
     link.closest("li").classList.add("active");
   }
 
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
+  page.scrollIntoView();
 
   resizeResume();
 }
