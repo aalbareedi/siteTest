@@ -21,8 +21,6 @@ function showPageFromAddress() {
     projectWindow.classList.add("hidden");
   });
 
-  window.scrollTo(0, 0);
-
   // Cut off the file name
   if (location.pathname == "/index.html") {
     history.pushState({}, null, `${root}/`);
@@ -67,7 +65,9 @@ function showPageFromAddress() {
     link.closest("li").classList.add("active");
   }
 
-  // page.scrollIntoView();
+  page.scrollIntoView();
+
+  // window.scrollTo(0, 1);
 
   resizeResume();
 }
