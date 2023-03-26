@@ -96,6 +96,9 @@ window.onpopstate = () => {
   } else {
     delete document.body.dataset.page;
   }
+
+  alert("page: ", page);
+  alert("document.body.dataset.page: ", document.body.dataset.page);
 };
 
 window.onpopstate();
