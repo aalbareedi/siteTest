@@ -21,6 +21,8 @@ function showPageFromAddress() {
     projectWindow.classList.add("hidden");
   });
 
+  window.scrollTo(0, 0);
+
   // Cut off the file name
   if (location.pathname == "/index.html") {
     history.pushState({}, null, `${root}/`);
@@ -65,8 +67,7 @@ function showPageFromAddress() {
     link.closest("li").classList.add("active");
   }
 
-  // window.scrollTo(0, 0);
-  page.scrollIntoView();
+  // page.scrollIntoView();
 
   resizeResume();
 }
@@ -92,7 +93,6 @@ function resizeResume() {
 window.onpopstate = () => {
   showPageFromAddress();
 
-  // const page = location.pathname.substring(1);
   // Get the page name or "route" from the address bar
   const page = location.pathname.split("/").pop().replaceAll("/", "");
 
@@ -101,9 +101,6 @@ window.onpopstate = () => {
   } else {
     delete document.body.dataset.page;
   }
-
-  // alert("page: " + page);
-  // alert("document.body.dataset.page: " + document.body.dataset.page);
 };
 
 window.onpopstate();
