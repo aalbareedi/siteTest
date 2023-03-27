@@ -68,7 +68,8 @@ function showPageFromAddress() {
   // window.scrollTo(0, -200);
 
   setTimeout(() => {
-    page.scrollIntoView();
+    // page.scrollIntoView();
+    document.querySelector(".container").scrollIntoView();
     // window.scrollTo(0, -200);
   }, 20);
 
