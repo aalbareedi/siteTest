@@ -65,12 +65,12 @@ function showPageFromAddress() {
     link.closest("li").classList.add("active");
   }
 
-  // window.scrollTo(0, -200);
+  window.scroll(0, 0);
 
   setTimeout(() => {
     // page.scrollIntoView();
-    document.querySelector(".container").scrollIntoView();
-    // window.scrollTo(0, -200);
+    // document.querySelector(".container").scrollIntoView();
+    window.scroll(0, -200);
   }, 20);
 
   resizeResume();
