@@ -1716,7 +1716,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: orange;
+  background-color: green;
 }
 
 @media only screen and (max-width: 1500px) {
