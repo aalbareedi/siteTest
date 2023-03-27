@@ -6,6 +6,7 @@ $landing-item-title-height: 54px;
 $sidenav-open-width: 260px;
 $sidenav-close-width: 72px;
 $contact-btn-height: 64px;
+$nav-dock-height: 64px;
 
 * {
   /* Remove Gray Highlight When Tapping Links in Mobile Safari */
@@ -1314,9 +1315,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-link-icon {
   display: none !important;
 }
-// .my-name {
-//   background-color: pink;
-// }
+.my-name {
+  background-color: orange;
+}
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1332,7 +1333,27 @@ input.contactFormInput:valid ~ .formIcon {
 //   height: 100%;
 //   width: 100%;
 // }
-
+.nav-dock {
+  height: $nav-dock-height;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+  background: #7676e3;
+  border-top: 1px solid #e7e7ff;
+  display: none;
+}
+.dock-btn {
+  font-size: 20px;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e7e7ff;
+}
+// background: #6060b3;
 @media only screen and (max-width: 1500px) {
   .landing-intro-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -1435,9 +1456,13 @@ input.contactFormInput:valid ~ .formIcon {
   [data-page] header {
     display: block;
   }
+  [data-page] .nav-dock {
+    display: flex;
+  }
   .tab-content {
     padding: 30px;
     scroll-margin: 400px;
+    // height: calc(100vh - #{$nav-dock-height} - #{$nav-dock-height});
   }
   .carousel-wrapper {
     display: none !important;
