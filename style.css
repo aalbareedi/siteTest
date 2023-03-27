@@ -1715,10 +1715,6 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
-.my-name {
-  background-color: pink;
-}
-
 @media only screen and (max-width: 1500px) {
   .landing-intro-grid {
     -ms-grid-columns: (1fr)[4];
@@ -1892,7 +1888,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   #overview {
     height: auto;
-    min-height: calc(100vh - 64px);
+    min-height: 100vh;
   }
   #overview .title-text {
     padding-left: 2px;
@@ -1912,6 +1908,7 @@ input.contactFormInput:valid ~ .formIcon {
     width: 24px;
     text-align: center;
     margin-left: 20px;
+    min-width: 24px;
   }
   .landing-link-icon {
     color: #7171da;
@@ -1923,9 +1920,15 @@ input.contactFormInput:valid ~ .formIcon {
   .grid-item {
     background-color: #e1e1fb;
     position: relative;
+    min-height: initial;
+    height: 60px;
   }
   .landing-grid-title {
     padding-left: 0px;
+    height: initial;
+  }
+  .landing-title-wrapper {
+    height: 100%;
   }
   .landing-intro-grid {
     display: -webkit-box;
@@ -1937,6 +1940,7 @@ input.contactFormInput:valid ~ .formIcon {
             flex-direction: column;
     height: initial;
     grid-row-gap: 20px;
+    padding-bottom: 20px;
   }
   .grid-item-content {
     display: none;
@@ -1949,36 +1953,18 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .content {
     margin-left: 0px;
-    padding-bottom: 64px;
   }
   .menu-icon-btn {
     display: none;
   }
-  #contact-me-btn {
-    background-color: #7676e3;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    border-radius: 0;
-    border: none;
-    padding: 8px;
-    height: 64px;
-  }
-  #contact-me-btn .contact-btn-wrapper {
-    background: #e7e7ff;
-    border-radius: 8px;
-    border: 3px solid #c1c1ec;
-  }
-  #contact-resume-btn {
-    background: #e1e1fb;
-    position: relative;
-  }
   .landing-contact-btn {
     -webkit-box-shadow: none;
             box-shadow: none;
+    background: #e1e1fb;
+    position: relative;
+    height: 60px;
   }
-  #contact-resume-btn .contact-btn-wrapper {
+  .contact-btn-wrapper {
     -webkit-box-pack: initial;
         -ms-flex-pack: initial;
             justify-content: initial;
@@ -1986,9 +1972,8 @@ input.contactFormInput:valid ~ .formIcon {
     -webkit-column-gap: 20px;
             column-gap: 20px;
   }
-  #contact-resume-btn .contact-btn-text {
+  .contact-btn-text {
     color: #393838;
-    font-size: 18px;
     font-weight: bold;
     word-spacing: 0.8px;
   }
