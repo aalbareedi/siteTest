@@ -1315,9 +1315,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-link-icon {
   display: none !important;
 }
-.my-name {
-  background-color: orange;
-}
+// .my-name {
+//   background-color: orange;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1345,13 +1345,17 @@ input.contactFormInput:valid ~ .formIcon {
   border-top: 1px solid #e7e7ff;
   display: none;
 }
+.dock-btn-link {
+  flex-basis: 100%;
+  text-decoration: none;
+}
 .dock-btn {
   font-size: 20px;
-  flex-basis: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #e7e7ff;
+  height: 100%;
 }
 // background: #6060b3;
 @media only screen and (max-width: 1500px) {

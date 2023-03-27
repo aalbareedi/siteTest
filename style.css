@@ -1715,10 +1715,6 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
-.my-name {
-  background-color: orange;
-}
-
 .nav-dock {
   height: 64px;
   width: 100%;
@@ -1732,10 +1728,14 @@ input.contactFormInput:valid ~ .formIcon {
   display: none;
 }
 
-.dock-btn {
-  font-size: 20px;
+.dock-btn-link {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  text-decoration: none;
+}
+
+.dock-btn {
+  font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1746,6 +1746,7 @@ input.contactFormInput:valid ~ .formIcon {
       -ms-flex-align: center;
           align-items: center;
   color: #e7e7ff;
+  height: 100%;
 }
 
 @media only screen and (max-width: 1500px) {
