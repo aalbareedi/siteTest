@@ -67,10 +67,10 @@ function showPageFromAddress() {
 
   // window.scrollTo(0, -200);
 
-  setTimeout(() => {
-    // page.scrollIntoView();
-    window.scrollTo(0, -200);
-  }, 10);
+  // setTimeout(() => {
+  //   // page.scrollIntoView();
+  //   window.scrollTo(0, -200);
+  // }, 10);
 
   resizeResume();
 }
