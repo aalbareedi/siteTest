@@ -65,7 +65,9 @@ function showPageFromAddress() {
     link.closest("li").classList.add("active");
   }
 
-  page.scrollIntoView();
+  setTimeout(() => {
+    page.scrollIntoView();
+  }, 1);
 
   // window.scrollTo(0, 1);
 
