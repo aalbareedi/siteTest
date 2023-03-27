@@ -70,7 +70,7 @@ function showPageFromAddress() {
   setTimeout(() => {
     page.scrollIntoView();
     // window.scrollTo(0, -200);
-  }, 10);
+  }, 20);
 
   resizeResume();
 }
