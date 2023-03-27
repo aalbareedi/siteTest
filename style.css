@@ -1716,7 +1716,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: pink;
+  background-color: lightblue;
 }
 
 @media only screen and (max-width: 1500px) {
@@ -1882,7 +1882,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .tab-content {
     padding: 30px;
-    scroll-margin: 200px;
+    scroll-margin: 400px;
   }
   .carousel-wrapper {
     display: none !important;
