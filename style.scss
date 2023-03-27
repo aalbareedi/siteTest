@@ -1358,6 +1358,35 @@ input.contactFormInput:valid ~ .formIcon {
   height: 100%;
 }
 // background: #6060b3;
+
+.nav-logo {
+  position: absolute;
+  width: 60px;
+  left: 12px;
+  top: 11px;
+  display: none;
+}
+.nav-name {
+  color: #ffffff;
+  position: absolute;
+  right: 11px;
+  top: 10px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 28px;
+  display: none;
+}
+.nav-title {
+  color: #e7e7ff;
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  font-family: "Baloo Da 2", cursive;
+  letter-spacing: 0.2px;
+  word-spacing: 1.6px;
+  font-size: 16px;
+  display: none;
+}
+
 @media only screen and (max-width: 1500px) {
   .landing-intro-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -1451,6 +1480,13 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 640px) {
+  .nav-logo {
+    display: block;
+  }
+  .nav-name,
+  .nav-title {
+    display: block;
+  }
   .content-item {
     padding: 30px 20px;
   }
