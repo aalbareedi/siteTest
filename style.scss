@@ -1491,6 +1491,9 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 640px) {
+  .form-wrapper {
+    margin: 0px auto;
+  }
   .nav-logo-link {
     display: flex;
   }
@@ -1622,9 +1625,14 @@ input.contactFormInput:valid ~ .formIcon {
     color: #393838;
     font-weight: bold;
     word-spacing: 0.8px;
+    font-size: 18px;
   }
 }
 @media only screen and (max-width: 500px) {
+  .form-wrapper {
+    background: initial;
+    padding: 0px;
+  }
   .content-container {
     margin-left: 0px;
     padding: 0px 0px 0px 30px;
