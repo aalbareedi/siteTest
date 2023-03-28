@@ -1319,9 +1319,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-link-icon {
   display: none !important;
 }
-.my-name {
-  background-color: orange;
-}
+// .my-name {
+//   background-color: orange;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1531,7 +1531,6 @@ input.contactFormInput:valid ~ .formIcon {
   }
   #overview {
     height: auto;
-    // min-height: calc(100vh - #{$contact-btn-height});
     // min-height: 100vh;
   }
   #overview .title-text {
@@ -1569,6 +1568,7 @@ input.contactFormInput:valid ~ .formIcon {
     min-height: initial;
     height: 80px;
     grid-area: initial;
+    box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
   }
   .landing-grid-title {
     padding-left: 0px;
@@ -1634,6 +1634,7 @@ input.contactFormInput:valid ~ .formIcon {
     position: relative;
     height: 80px;
     width: 50%;
+    box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
   }
   .contact-btn-wrapper {
     flex-direction: column;

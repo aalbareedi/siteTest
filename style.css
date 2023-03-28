@@ -1720,10 +1720,6 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
-.my-name {
-  background-color: orange;
-}
-
 .nav-dock {
   height: 64px;
   width: 100%;
@@ -2027,6 +2023,8 @@ input.contactFormInput:valid ~ .formIcon {
     min-height: initial;
     height: 80px;
     grid-area: initial;
+    -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+            box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
   }
   .landing-grid-title {
     padding-left: 0px;
@@ -2085,6 +2083,8 @@ input.contactFormInput:valid ~ .formIcon {
     position: relative;
     height: 80px;
     width: 50%;
+    -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+            box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
   }
   .contact-btn-wrapper {
     -webkit-box-orient: vertical;
