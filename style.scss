@@ -1170,7 +1170,8 @@ body.menu-open .hide-menu {
   padding: 30px;
   background: #dbdbff;
   border-radius: 10px;
-  width: 480px;
+  max-width: 480px;
+  width: 100%;
   flex-shrink: 0;
 }
 .formOption {
