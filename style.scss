@@ -1492,7 +1492,8 @@ input.contactFormInput:valid ~ .formIcon {
 }
 @media only screen and (max-width: 640px) {
   .work-word,
-  .view-word {
+  .view-word,
+  .me-word {
     display: none;
   }
   .form-wrapper {
@@ -1574,6 +1575,7 @@ input.contactFormInput:valid ~ .formIcon {
     padding-left: 0px;
     height: initial;
     justify-content: center;
+    font-weight: initial;
   }
   .landing-title-wrapper {
     height: 100%;
@@ -1645,7 +1647,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .contact-btn-text {
     color: #393838;
-    font-weight: bold;
+    // font-weight: bold;
     word-spacing: 0.8px;
     font-size: 18px;
     width: 100%;
