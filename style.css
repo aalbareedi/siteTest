@@ -2100,7 +2100,6 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .contact-btn-text {
     color: #393838;
-    word-spacing: 0.8px;
     font-size: 18px;
     width: 100%;
     text-align: center;
