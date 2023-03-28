@@ -1319,9 +1319,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-link-icon {
   display: none !important;
 }
-.my-name {
-  background-color: pink;
-}
+// .my-name {
+//   background-color: pink;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1655,6 +1655,7 @@ input.contactFormInput:valid ~ .formIcon {
     font-size: 18px;
     width: 100%;
     text-align: center;
+    min-width: initial;
   }
 }
 @media only screen and (max-width: 500px) {

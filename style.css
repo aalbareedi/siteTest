@@ -1720,10 +1720,6 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
-.my-name {
-  background-color: pink;
-}
-
 .nav-dock {
   height: 64px;
   width: 100%;
@@ -2108,6 +2104,7 @@ input.contactFormInput:valid ~ .formIcon {
     font-size: 18px;
     width: 100%;
     text-align: center;
+    min-width: initial;
   }
 }
 
