@@ -1753,18 +1753,29 @@ input.contactFormInput:valid ~ .formIcon {
   height: 100%;
 }
 
-.nav-logo {
-  position: absolute;
-  width: 60px;
-  left: 12px;
-  top: 11px;
+.nav-logo-link {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0px 12px;
   display: none;
+}
+
+.nav-logo {
+  width: 60px;
 }
 
 .nav-name {
   color: #ffffff;
   position: absolute;
-  right: 11px;
+  right: 12px;
   top: 7px;
   font-family: "PT Sans", sans-serif;
   font-size: 28px;
@@ -1774,7 +1785,7 @@ input.contactFormInput:valid ~ .formIcon {
 .nav-title {
   color: #e7e7ff;
   position: absolute;
-  right: 12px;
+  right: 13px;
   top: 37px;
   font-family: "Baloo Da 2", cursive;
   letter-spacing: 0.2px;
@@ -1935,8 +1946,10 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 640px) {
-  .nav-logo {
-    display: block;
+  .nav-logo-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .nav-name,
   .nav-title {
