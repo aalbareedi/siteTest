@@ -2035,6 +2035,9 @@ input.contactFormInput:valid ~ .formIcon {
     width: 100%;
     text-align: center;
     position: initial;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
   }
   .landing-title-wrapper {
     height: 100%;
