@@ -265,9 +265,12 @@ body.menu-open .top-sidebar {
   overflow-y: auto;
   overflow-x: hidden;
   flex-grow: 1;
-  margin-top: 18px;
+  margin-top: 20px;
   border-bottom: 2px solid #d0d0ef;
   width: 100%;
+}
+.menu-open .middle-sidebar {
+  margin-top: 18px;
 }
 .bottom-sidebar {
   width: 100%;
@@ -282,8 +285,8 @@ body.menu-open .channel-logo {
 }
 .channel-logo {
   display: block;
-  width: 36px;
-  height: 36px;
+  width: 46px;
+  height: 46px;
   transition: all 200ms ease-in-out;
 }
 .channel-logo img {
@@ -1370,7 +1373,7 @@ input.contactFormInput:valid ~ .formIcon {
   color: #ffffff;
   position: absolute;
   right: 11px;
-  top: 10px;
+  top: 7px;
   font-family: "PT Sans", sans-serif;
   font-size: 28px;
   display: none;
@@ -1379,7 +1382,7 @@ input.contactFormInput:valid ~ .formIcon {
   color: #e7e7ff;
   position: absolute;
   right: 12px;
-  top: 38px;
+  top: 37px;
   font-family: "Baloo Da 2", cursive;
   letter-spacing: 0.2px;
   word-spacing: 1.6px;
@@ -1495,6 +1498,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   [data-page] header {
     display: block;
+    border-bottom: 1px solid #e7e7ff;
   }
   [data-page] .nav-dock {
     display: flex;
