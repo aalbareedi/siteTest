@@ -1720,10 +1720,6 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
-.my-name {
-  background-color: orange;
-}
-
 .nav-dock {
   height: 64px;
   width: 100%;
@@ -2034,10 +2030,11 @@ input.contactFormInput:valid ~ .formIcon {
   .landing-grid-title {
     padding-left: 0px;
     height: initial;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     font-weight: initial;
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: initial;
   }
   .landing-title-wrapper {
     height: 100%;

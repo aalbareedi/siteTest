@@ -1319,9 +1319,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-link-icon {
   display: none !important;
 }
-.my-name {
-  background-color: orange;
-}
+// .my-name {
+//   background-color: orange;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1574,8 +1574,12 @@ input.contactFormInput:valid ~ .formIcon {
   .landing-grid-title {
     padding-left: 0px;
     height: initial;
-    justify-content: center;
+    // justify-content: center;
     font-weight: initial;
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: initial;
   }
   .landing-title-wrapper {
     height: 100%;
