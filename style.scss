@@ -6,7 +6,7 @@ $landing-item-title-height: 54px;
 $sidenav-open-width: 260px;
 $sidenav-close-width: 72px;
 $contact-btn-height: 64px;
-$nav-dock-height: 64px;
+$nav-dock-height: 62px;
 
 * {
   /* Remove Gray Highlight When Tapping Links in Mobile Safari */
@@ -26,10 +26,10 @@ body {
   // -webkit-text-size-adjust: 100%;
   // -webkit-text-size-adjust: none;
 }
-html,
-body {
-  text-rendering: geometricPrecision;
-}
+// html,
+// body {
+//   text-rendering: geometricPrecision;
+// }
 .overflow-hidden {
   overflow: hidden;
 }
@@ -485,6 +485,7 @@ body.menu-open .hide-menu {
   font-weight: bold;
   word-spacing: 0.8px;
   width: 100%;
+  letter-spacing: 0px;
 }
 .landing-projects {
   grid-area: 1 / 1 / 2 / 3;
@@ -586,6 +587,7 @@ body.menu-open .hide-menu {
 .contact-btn-text {
   min-width: 90px;
   word-spacing: 0.8px;
+  letter-spacing: 0px;
 }
 .grid-item-content {
   padding: 12px;
@@ -1324,9 +1326,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-mobile-icon {
   display: none !important;
 }
-.my-name {
-  background-color: orange;
-}
+// .my-name {
+//   background-color: orange;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1364,7 +1366,9 @@ input.contactFormInput:valid ~ .formIcon {
   justify-content: center;
   align-items: center;
   color: #e7e7ff;
+  // color: #ffffff;
   height: 100%;
+  transition: all 0.5s;
 }
 // background: #6060b3;
 
@@ -1524,8 +1528,13 @@ input.contactFormInput:valid ~ .formIcon {
   [data-page] .nav-dock {
     display: flex;
   }
-  [data-page="projects"] #projects-dock-btn {
-    background: #6060b3;
+  [data-page="projects"] #projects-dock-btn,
+  [data-page="skills"] #skills-dock-btn,
+  [data-page="work"] #work-dock-btn,
+  [data-page="edu"] #edu-dock-btn,
+  [data-page="resume"] #resume-dock-btn {
+    background: #a0a0ff;
+    color: #ffffff;
   }
   .tab-content {
     padding: 30px;
@@ -1610,6 +1619,9 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .content {
     margin-left: 0px;
+    // padding-bottom: $contact-btn-height;
+  }
+  [data-page] .content {
     padding-bottom: $contact-btn-height;
   }
   .menu-icon-btn {
