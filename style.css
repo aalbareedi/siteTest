@@ -1720,10 +1720,6 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
-.my-name {
-  background-color: yellow;
-}
-
 .nav-dock {
   height: 64px;
   width: 100%;
@@ -1983,6 +1979,9 @@ input.contactFormInput:valid ~ .formIcon {
     display: -ms-flexbox;
     display: flex;
   }
+  [data-page="projects"] #projects-dock-btn {
+    background: #6060b3;
+  }
   .tab-content {
     padding: 30px;
     scroll-margin: 400px;
@@ -2072,6 +2071,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .content {
     margin-left: 0px;
+    padding-bottom: 64px;
   }
   .menu-icon-btn {
     display: none;

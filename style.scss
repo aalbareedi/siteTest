@@ -1319,9 +1319,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-link-icon {
   display: none !important;
 }
-.my-name {
-  background-color: yellow;
-}
+// .my-name {
+//   background-color: yellow;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1519,10 +1519,13 @@ input.contactFormInput:valid ~ .formIcon {
   [data-page] .nav-dock {
     display: flex;
   }
+  [data-page="projects"] #projects-dock-btn {
+    background: #6060b3;
+  }
   .tab-content {
     padding: 30px;
     scroll-margin: 400px;
-    // height: calc(100vh - #{$nav-dock-height} - #{$nav-dock-height});
+    // height: calc(100vh - 64px - 64px);
   }
   .carousel-wrapper {
     display: none !important;
@@ -1608,7 +1611,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .content {
     margin-left: 0px;
-    // padding-bottom: $contact-btn-height;
+    padding-bottom: $contact-btn-height;
   }
   .menu-icon-btn {
     display: none;
