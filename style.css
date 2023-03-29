@@ -16,6 +16,7 @@ html {
 body {
   background-color: #e7e7ff;
   height: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 .overflow-hidden {
@@ -1715,9 +1716,12 @@ input.contactFormInput:valid ~ .formIcon {
   transition: all 0.2s;
 }
 
-.landing-mobile-icon,
-.landing-link-icon {
+.landing-mobile-icon {
   display: none !important;
+}
+
+.my-name {
+  background-color: yellow;
 }
 
 .nav-dock {
@@ -2014,12 +2018,6 @@ input.contactFormInput:valid ~ .formIcon {
     width: 24px;
     text-align: center;
     min-width: 24px;
-  }
-  .landing-link-icon {
-    color: #7171da;
-    font-size: 18px;
-    position: absolute;
-    right: 20px;
   }
   .grid-item {
     background-color: #e1e1fb;
