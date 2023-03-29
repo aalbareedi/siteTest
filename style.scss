@@ -28,7 +28,7 @@ body {
 }
 html,
 body {
-  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1325,7 +1325,7 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 .my-name {
-  background-color: green;
+  background-color: orange;
 }
 // .mapWrapper {
 //   // margin: 0px auto;
@@ -1576,7 +1576,8 @@ input.contactFormInput:valid ~ .formIcon {
     padding-left: 0px;
     height: initial;
     // justify-content: center;
-    font-weight: initial;
+    // font-weight: initial;
+    font-weight: 400;
     display: block;
     width: 100%;
     text-align: center;
@@ -1654,6 +1655,7 @@ input.contactFormInput:valid ~ .formIcon {
   .contact-btn-text {
     color: #393838;
     // font-weight: bold;
+    font-weight: 400;
     font-size: 18px;
     width: 100%;
     text-align: center;

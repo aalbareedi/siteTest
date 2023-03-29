@@ -20,7 +20,7 @@ body {
 
 html,
 body {
-  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
 }
 
 .overflow-hidden {
@@ -1725,7 +1725,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: green;
+  background-color: orange;
 }
 
 .nav-dock {
@@ -2035,7 +2035,7 @@ input.contactFormInput:valid ~ .formIcon {
   .landing-grid-title {
     padding-left: 0px;
     height: initial;
-    font-weight: initial;
+    font-weight: 400;
     display: block;
     width: 100%;
     text-align: center;
@@ -2110,6 +2110,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .contact-btn-text {
     color: #393838;
+    font-weight: 400;
     font-size: 18px;
     width: 100%;
     text-align: center;
