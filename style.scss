@@ -24,7 +24,11 @@ body {
   background-color: #e7e7ff;
   height: 100%;
   // -webkit-text-size-adjust: 100%;
-  -webkit-text-size-adjust: none;
+  // -webkit-text-size-adjust: none;
+}
+html,
+body {
+  text-rendering: optimizeLegibility;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1321,7 +1325,7 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 .my-name {
-  background-color: pink;
+  background-color: green;
 }
 // .mapWrapper {
 //   // margin: 0px auto;

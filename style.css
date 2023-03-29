@@ -16,7 +16,11 @@ html {
 body {
   background-color: #e7e7ff;
   height: 100%;
-  -webkit-text-size-adjust: none;
+}
+
+html,
+body {
+  text-rendering: optimizeLegibility;
 }
 
 .overflow-hidden {
@@ -1721,7 +1725,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: pink;
+  background-color: green;
 }
 
 .nav-dock {
