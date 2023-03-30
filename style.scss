@@ -1052,6 +1052,39 @@ body.menu-open .hide-menu {
 // #skills {
 //   // background-color: orange;
 // }
+.web-skills-wrapper {
+  padding: 0px 60px;
+}
+.web-skills {
+  background-color: #e7e7ff;
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  column-gap: 2px;
+}
+.web-skill-item {
+  background-color: #dbdbff;
+  height: 100%;
+  // width: 200px;
+  flex-basis: 100%;
+  padding-top: 40px;
+}
+.web-skill-icon {
+  display: block;
+  width: 60px;
+  margin: 0px auto;
+}
+.web-skill-title {
+  font-family: "Teko", sans-serif;
+  text-align: center;
+  letter-spacing: 0.3px;
+  font-size: 38px;
+  color: #393838;
+  margin-top: 20px;
+}
 // #work {
 //   background-color: pink;
 // }
