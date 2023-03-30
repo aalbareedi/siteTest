@@ -1053,25 +1053,32 @@ body.menu-open .hide-menu {
   padding: 0px 60px;
 }
 .web-skills {
-  background-color: #e7e7ff;
+  background-color: #c1c1ec;
   display: flex;
   justify-content: center;
   // height: 500px;
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
-  column-gap: 3px;
+  column-gap: 4px;
+  padding: 4px;
 }
 .web-skill-item {
-  background-color: #dbdbff;
+  background-color: #e7e7ff;
   // height: 100%;
   flex-basis: 100%;
   padding-top: 50px;
   padding-bottom: 80px;
 }
+.web-skill-item:first-of-type {
+  border-radius: 16px 0px 0px 16px;
+}
+.web-skill-item:last-of-type {
+  border-radius: 0px 16px 16px 0px;
+}
 .web-skill-emblem {
   display: block;
-  width: 60px;
+  width: 70px;
   margin: 0px auto;
 }
 .web-skill-title {
