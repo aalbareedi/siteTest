@@ -1415,23 +1415,22 @@ body.menu-open .hide-menu {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 600px;
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
-  -webkit-column-gap: 2px;
-          column-gap: 2px;
+  -webkit-column-gap: 3px;
+          column-gap: 3px;
 }
 
 .web-skill-item {
   background-color: #dbdbff;
-  height: 100%;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  padding-top: 40px;
+  padding-top: 50px;
+  padding-bottom: 80px;
 }
 
-.web-skill-icon {
+.web-skill-emblem {
   display: block;
   width: 60px;
   margin: 0px auto;
@@ -1444,6 +1443,71 @@ body.menu-open .hide-menu {
   font-size: 38px;
   color: #393838;
   margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.web-skill-content {
+  padding: 0px 40px;
+}
+
+.web-skill-info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 8px;
+  margin-bottom: 44px;
+}
+
+.web-skill-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 6px;
+          column-gap: 6px;
+  font-size: 16px;
+  line-height: 22px;
+  word-spacing: 0.4px;
+}
+
+.web-skill-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+}
+
+.web-skill-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 6px;
+}
+
+.web-skill-img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.web-skill-icon-text {
+  font-size: 16px;
 }
 
 .time-line {
@@ -1489,7 +1553,7 @@ body.menu-open .hide-menu {
   row-gap: 30px;
   position: relative;
   padding: 0px 60px;
-  margin-left: 18px;
+  margin-left: 20px;
 }
 
 .content-item {
