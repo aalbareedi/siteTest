@@ -1429,15 +1429,22 @@ body.menu-open .hide-menu {
 }
 
 .web-skill-item {
-  background-color: #e7e7ff;
+  background-color: #e0e0ff;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   padding-top: 50px;
-  padding-bottom: 70px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0px;
   width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
 }
 
 .web-skill-item:first-of-type {
@@ -1467,6 +1474,11 @@ body.menu-open .hide-menu {
 .web-skill-content {
   padding: 40px;
   font-size: 16px;
+  background: aliceblue;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-top: 2px solid #c1c1ec;
 }
 
 .web-skill-info-wrapper {
@@ -1857,6 +1869,10 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
+.my-name {
+  background-color: yellow;
+}
+
 .nav-dock {
   height: 62px;
   width: 100%;
@@ -2033,7 +2049,7 @@ input.contactFormInput:valid ~ .formIcon {
     padding-top: 26px;
     border: 2px solid #c1c1ec;
     border-radius: 18px;
-    overflow: hidden;
+    display: initial;
   }
   .web-skill-info-wrapper {
     margin-bottom: 0px;
@@ -2047,7 +2063,6 @@ input.contactFormInput:valid ~ .formIcon {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    background: aliceblue;
     row-gap: 30px;
   }
   .web-skill-emblem {
@@ -2336,6 +2351,12 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .web-skill-item {
     padding-top: 24px;
+  }
+  #resume {
+    padding: 0px;
+  }
+  #resume .title-text {
+    padding: 30px 30px 0px 30px;
   }
 }
 
