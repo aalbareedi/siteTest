@@ -1429,7 +1429,7 @@ body.menu-open .hide-menu {
 }
 
 .web-skill-item {
-  background-color: #e0e0ff;
+  background-color: #d3d3ff;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   padding-top: 50px;
@@ -1479,6 +1479,7 @@ body.menu-open .hide-menu {
       -ms-flex-positive: 1;
           flex-grow: 1;
   border-top: 2px solid #c1c1ec;
+  color: #393838;
 }
 
 .web-skill-info-wrapper {
@@ -1502,6 +1503,15 @@ body.menu-open .hide-menu {
           column-gap: 6px;
   line-height: 22px;
   word-spacing: 0.6px;
+}
+
+.web-skill-icon-link {
+  text-decoration: none;
+  color: #393838;
+}
+
+.web-skill-icon-link:hover .web-skill-icon {
+  background: #c1c1ec;
 }
 
 .web-skill-icons {
@@ -1528,6 +1538,8 @@ body.menu-open .hide-menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .web-skill-tools {
@@ -1867,10 +1879,6 @@ input.contactFormInput:valid ~ .formIcon {
 
 .landing-mobile-icon {
   display: none !important;
-}
-
-.my-name {
-  background-color: yellow;
 }
 
 .nav-dock {
@@ -2261,6 +2269,7 @@ input.contactFormInput:valid ~ .formIcon {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding-top: 2px;
   }
   .landing-intro-grid {
     height: initial;
@@ -2282,7 +2291,7 @@ input.contactFormInput:valid ~ .formIcon {
     margin-left: 0px;
   }
   [data-page] .content {
-    padding-bottom: 64px;
+    padding-bottom: 62px;
   }
   .menu-icon-btn {
     display: none;
@@ -2316,6 +2325,7 @@ input.contactFormInput:valid ~ .formIcon {
     -webkit-column-gap: 20px;
             column-gap: 20px;
     row-gap: 8px;
+    padding-top: 2px;
   }
   .contact-btn-text {
     color: #393838;
@@ -2360,9 +2370,16 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 
-@media only screen and (max-width: 375px) {
-  .landing-grid-title {
-    font-size: 16px;
+@media only screen and (max-width: 376px) {
+  .web-skill-tools {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 8px;
+  }
+  .web-skill-icons {
+    margin-top: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1068,7 +1068,7 @@ body.menu-open .hide-menu {
   margin: 0 auto;
 }
 .web-skill-item {
-  background-color: #e0e0ff;
+  background-color: #d3d3ff;
   flex-basis: 100%;
   padding-top: 50px;
   // padding-bottom: 70px;
@@ -1104,6 +1104,7 @@ body.menu-open .hide-menu {
   background: aliceblue;
   flex-grow: 1;
   border-top: 2px solid #c1c1ec;
+  color: #393838;
 }
 .web-skill-info-wrapper {
   display: flex;
@@ -1117,6 +1118,13 @@ body.menu-open .hide-menu {
   column-gap: 6px;
   line-height: 22px;
   word-spacing: 0.6px;
+}
+.web-skill-icon-link {
+  text-decoration: none;
+  color: #393838;
+}
+.web-skill-icon-link:hover .web-skill-icon {
+  background: #c1c1ec;
 }
 .web-skill-icons {
   display: flex;
@@ -1135,6 +1143,7 @@ body.menu-open .hide-menu {
   padding: 6px 10px;
   display: flex;
   align-items: center;
+  transition: all 0.3s;
 }
 .web-skill-tools {
   display: flex;
@@ -1220,6 +1229,9 @@ body.menu-open .hide-menu {
 // }
 // #resume {
 //   background-color: green;
+// }
+// .resume-container {
+//   padding-bottom: 50px;
 // }
 #resume iframe {
   width: 100%;
@@ -1421,9 +1433,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-mobile-icon {
   display: none !important;
 }
-.my-name {
-  background-color: yellow;
-}
+// .my-name {
+//   background-color: yellow;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1736,6 +1748,7 @@ input.contactFormInput:valid ~ .formIcon {
     flex-direction: column;
     row-gap: 8px;
     justify-content: center;
+    padding-top: 2px;
   }
   .landing-intro-grid {
     // display: flex;
@@ -1757,10 +1770,9 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .content {
     margin-left: 0px;
-    // padding-bottom: $contact-btn-height;
   }
   [data-page] .content {
-    padding-bottom: $contact-btn-height;
+    padding-bottom: $nav-dock-height;
   }
   .menu-icon-btn {
     display: none;
@@ -1801,6 +1813,7 @@ input.contactFormInput:valid ~ .formIcon {
     padding: 0px;
     column-gap: 20px;
     row-gap: 8px;
+    padding-top: 2px;
   }
   .contact-btn-text {
     color: #393838;
@@ -1844,8 +1857,12 @@ input.contactFormInput:valid ~ .formIcon {
     padding: 30px 30px 0px 30px;
   }
 }
-@media only screen and (max-width: 375px) {
-  .landing-grid-title {
-    font-size: 16px;
+@media only screen and (max-width: 376px) {
+  .web-skill-tools {
+    flex-direction: column;
+    row-gap: 8px;
+  }
+  .web-skill-icons {
+    margin-top: 0px;
   }
 }
