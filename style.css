@@ -1434,6 +1434,10 @@ body.menu-open .hide-menu {
       flex-basis: 100%;
   padding-top: 50px;
   padding-bottom: 70px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0px;
+  width: 0;
 }
 
 .web-skill-item:first-of-type {
@@ -1457,11 +1461,11 @@ body.menu-open .hide-menu {
   font-size: 38px;
   color: #393838;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .web-skill-content {
-  padding: 0px 40px;
+  padding: 40px;
   font-size: 16px;
 }
 
@@ -2003,6 +2007,62 @@ input.contactFormInput:valid ~ .formIcon {
   .project-window-images {
     min-height: 320px;
   }
+  .web-skills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: initial;
+    row-gap: 22px;
+  }
+  .web-skill-item:first-of-type,
+  .web-skill-item:last-of-type {
+    border-radius: 18px;
+  }
+  .web-skill-item {
+    width: initial;
+    -webkit-box-flex: initial;
+        -ms-flex-positive: initial;
+            flex-grow: initial;
+    -ms-flex-preferred-size: initial;
+        flex-basis: initial;
+    -ms-flex-negative: initial;
+        flex-shrink: initial;
+    padding: 0px;
+    position: relative;
+    padding-top: 26px;
+    border: 2px solid #c1c1ec;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+  .web-skill-info-wrapper {
+    margin-bottom: 0px;
+    min-height: initial;
+  }
+  .web-skill-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    background: aliceblue;
+    row-gap: 30px;
+  }
+  .web-skill-emblem {
+    margin: 0px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 50px;
+  }
+  .web-skill-title {
+    margin: 0px 0px 20px 0px;
+  }
+  .web-tools-title {
+    padding-left: initial;
+  }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -2263,6 +2323,19 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .time-line {
     left: -2px;
+  }
+  .web-skill-content {
+    padding: 30px 20px;
+  }
+  .web-skill-title {
+    font-size: 34px;
+    margin-bottom: 18px;
+  }
+  .web-skill-emblem {
+    width: 42px;
+  }
+  .web-skill-item {
+    padding-top: 24px;
   }
 }
 
