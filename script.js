@@ -82,3 +82,20 @@ window.addEventListener("resize", () => {
 //   pageSize.innerHTML = window.innerWidth + ", " + window.innerHeight;
 //   pageSize.classList.remove("hidden");
 // }, 3000);
+
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

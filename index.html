@@ -52,19 +52,27 @@
     />
 
     <link rel="stylesheet" href="./normalize.css" />
-    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./carousel.css" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
 
     <script
       src="https://kit.fontawesome.com/c82a5882c2.js"
       crossorigin="anonymous"
     ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="menu-open hidden">
     <div class="pageSize hidden"></div>
@@ -617,114 +625,99 @@
         <div id="skills" class="tab-content">
           <div class="title-text">Skills</div>
           <div class="skills-content">
-            <div class="web-skills-wrapper">
-              <div class="web-skills">
-                <div class="web-skill-item">
-                  <img class="web-skill-emblem" src="./svgs/html.svg" alt="" />
-                  <div class="web-skill-title">HTML</div>
-                  <div class="web-skill-content">
-                    <div class="web-skill-info-wrapper">
-                      <div class="web-skill-info">
-                        <div class="web-skill-bp">•</div>
-                        <div class="web-skill-text">
-                          Properly formatted structuring.
-                        </div>
+            <div class="web-skills">
+              <div class="web-skill-item">
+                <img class="web-skill-emblem" src="./svgs/html.svg" alt="" />
+                <div class="web-skill-title">HTML</div>
+                <button class="toggle-skill-btn">+</button>
+                <div class="web-skill-content">
+                  <div class="web-skill-info-wrapper">
+                    <div class="web-skill-info">
+                      <div>•</div>
+                      <div>Properly formatted structuring.</div>
+                    </div>
+                    <div class="web-skill-info">
+                      <div>•</div>
+                      <div>
+                        Accessibility and SEO friendly syntax always
+                        prioritized.
                       </div>
-                      <div class="web-skill-info">
-                        <div class="web-skill-bp">•</div>
-                        <div class="web-skill-text">
-                          Accessibility and SEO friendly syntax always
-                          prioritized.
-                        </div>
+                    </div>
+                    <div class="web-skill-info">
+                      <div>•</div>
+                      <div>Cross browser compatibility.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="web-skill-item">
+                <img class="web-skill-emblem" src="./svgs/css.svg" alt="" />
+                <div class="web-skill-title">CSS</div>
+                <button class="toggle-skill-btn">+</button>
+                <div class="web-skill-content">
+                  <div class="web-skill-info-wrapper">
+                    <div class="web-skill-info">
+                      <div>•</div>
+                      <div>
+                        Proficient understanding of The Box Model, along with
+                        Flexbox, Grid, & position.
                       </div>
-                      <div class="web-skill-info">
-                        <div class="web-skill-bp">•</div>
-                        <div class="web-skill-text">
-                          Cross browser compatibility.
-                        </div>
+                    </div>
+                    <div class="web-skill-info">
+                      <div>•</div>
+                      <div>DOM-based animation.</div>
+                    </div>
+                  </div>
+                  <div class="web-tools-title">Tools I Use:</div>
+                  <div class="web-skill-icons">
+                    <div class="web-skill-icon">
+                      <div class="web-skill-icon-text">
+                        <div>•</div>
+                        <div>Bootstrap</div>
+                      </div>
+                    </div>
+                    <div class="web-skill-icon">
+                      <div class="web-skill-icon-text">
+                        <div>•</div>
+                        <div>Sass</div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="web-skill-item">
-                  <img class="web-skill-emblem" src="./svgs/css.svg" alt="" />
-                  <div class="web-skill-title">CSS</div>
-                  <div class="web-skill-content">
-                    <div class="web-skill-info-wrapper">
-                      <div class="web-skill-info">
-                        <div class="web-skill-bp">•</div>
-                        <div class="web-skill-text">
-                          Proficient understanding of The Box Model, along with
-                          Flexbox, Grid, & position.
-                        </div>
-                      </div>
-                      <div class="web-skill-info">
-                        <div class="web-skill-bp">•</div>
-                        <div class="web-skill-text">DOM-based animation.</div>
-                      </div>
+              </div>
+              <div class="web-skill-item">
+                <img class="web-skill-emblem" src="./svgs/js.svg" alt="" />
+                <div class="web-skill-title">JavaScript</div>
+                <button class="toggle-skill-btn">+</button>
+                <div class="web-skill-content">
+                  <div class="web-skill-info-wrapper">
+                    <div class="web-skill-info">
+                      <div>•</div>
+                      <div>Making the DOM functional.</div>
                     </div>
-                    <div class="web-skill-icons">
-                      <div class="web-skill-icon">
-                        <img
-                          class="web-skill-img"
-                          src="./svgs/sass.svg"
-                          alt="Sass"
-                        />
-                        <div class="web-skill-icon-text">Sass</div>
-                      </div>
-                      <div class="web-skill-icon">
-                        <img
-                          class="web-skill-img"
-                          src="./svgs/bootstrap.svg"
-                          alt="Bootstrap"
-                        />
-                        <div class="web-skill-icon-text">Bootstrap</div>
-                      </div>
+                    <div class="web-skill-info">
+                      <div>•</div>
+                      <div>CRUD experience with using fetch.</div>
                     </div>
                   </div>
-                </div>
-                <div class="web-skill-item">
-                  <img class="web-skill-emblem" src="./svgs/js.svg" alt="" />
-                  <div class="web-skill-title">JavaScript</div>
-                  <div class="web-skill-content">
-                    <div class="web-skill-info-wrapper">
-                      <div class="web-skill-info">
-                        <div class="web-skill-bp">•</div>
-                        <div class="web-skill-text">
-                          Making the DOM functional.
-                        </div>
-                      </div>
-                      <div class="web-skill-info">
-                        <div class="web-skill-bp">•</div>
-                        <div class="web-skill-text">
-                          CRUD experience with using fetch.
-                        </div>
+                  <div class="web-tools-title">Tools I Use:</div>
+                  <div id="js-icons" class="web-skill-icons">
+                    <div class="web-skill-icon">
+                      <div class="web-skill-icon-text">
+                        <div>•</div>
+                        <div>jQuery</div>
                       </div>
                     </div>
-                    <div class="web-skill-icons">
-                      <div class="web-skill-icon">
-                        <img
-                          class="web-skill-img"
-                          src="./svgs/jQuery.svg"
-                          alt="Sass"
-                        />
-                        <div class="web-skill-icon-text">jQuery</div>
+                    <div class="web-skill-icon">
+                      <div class="web-skill-icon-text">
+                        <div>•</div>
+                        <div>Node.js</div>
                       </div>
-                      <div class="web-skill-icon">
-                        <img
-                          class="web-skill-img"
-                          src="./svgs/react.svg"
-                          alt="Bootstrap"
-                        />
-                        <div class="web-skill-icon-text">React</div>
-                      </div>
-                      <div class="web-skill-icon">
-                        <img
-                          class="web-skill-img"
-                          src="./svgs/node.svg"
-                          alt="Bootstrap"
-                        />
-                        <div class="web-skill-icon-text">Node.js</div>
+                    </div>
+                    <div class="web-skill-icon">
+                      <div class="web-skill-icon-text">
+                        <div>•</div>
+                        <div>React</div>
                       </div>
                     </div>
                   </div>
