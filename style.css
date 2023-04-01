@@ -1433,7 +1433,7 @@ body.menu-open .hide-menu {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   padding-top: 50px;
-  padding-bottom: 80px;
+  padding-bottom: 70px;
 }
 
 .web-skill-item:first-of-type {
@@ -1457,11 +1457,12 @@ body.menu-open .hide-menu {
   font-size: 38px;
   color: #393838;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .web-skill-content {
   padding: 0px 40px;
+  font-size: 16px;
 }
 
 .web-skill-info-wrapper {
@@ -1474,7 +1475,7 @@ body.menu-open .hide-menu {
           flex-direction: column;
   row-gap: 8px;
   margin-bottom: 44px;
-  min-height: 100px;
+  min-height: 120px;
 }
 
 .web-skill-info {
@@ -1483,64 +1484,47 @@ body.menu-open .hide-menu {
   display: flex;
   -webkit-column-gap: 6px;
           column-gap: 6px;
-  font-size: 16px;
   line-height: 22px;
-  word-spacing: 0.4px;
-}
-
-.web-skill-icon-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-column-gap: 6px;
-          column-gap: 6px;
-  font-size: 16px;
-  line-height: 22px;
-  word-spacing: 0.4px;
+  word-spacing: 0.6px;
 }
 
 .web-skill-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-column-gap: 50px;
-          column-gap: 50px;
-  background: #f5f5f5;
-  border: 2px solid #c1c1ec;
-  padding: 16px 22px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+  row-gap: 8px;
+  margin-top: -7px;
   border-radius: 10px;
-  max-width: 240px;
-  margin: 0px auto;
-  row-gap: 4px;
 }
 
 .web-skill-icon {
+  border: 2px solid #c1c1ec;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 6px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.web-skill-tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 14px;
+          column-gap: 14px;
 }
 
 .web-tools-title {
-  font-size: 16px;
   padding-left: 2px;
-  margin-bottom: 14px;
-}
-
-#js-icons {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  min-width: 86px;
 }
 
 #sass-skill-img {
