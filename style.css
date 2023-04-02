@@ -808,15 +808,21 @@ body.menu-open .hide-menu {
   overflow-y: auto;
   max-height: calc(100% - 54px);
   background: #eaeafd;
-  row-gap: 2px;
+  row-gap: 12px;
 }
 
 .grid-item-box {
   border-radius: 10px;
-  padding: 8px;
+  padding: 16px;
   font-size: 16px;
   line-height: 22px;
   color: #393838;
+}
+
+.landing-exp .grid-item-box,
+.landing-edu .grid-item-box {
+  background-color: whitesmoke;
+  border: 2px solid #c1c1ec;
 }
 
 .landing-projects .grid-item-box {
@@ -1807,10 +1813,6 @@ input.contactFormInput:valid ~ .formIcon {
 
 .landing-mobile-icon {
   display: none !important;
-}
-
-.my-name {
-  background-color: purple;
 }
 
 .nav-dock {
