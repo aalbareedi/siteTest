@@ -855,7 +855,7 @@ body.menu-open .hide-menu {
   background-color: #ccccee;
 }
 .project-item {
-  height: 300px;
+  height: 340px;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
@@ -1429,9 +1429,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-mobile-icon {
   display: none !important;
 }
-// .my-name {
-//   background-color: yellow;
-// }
+.my-name {
+  background-color: yellow;
+}
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1543,6 +1543,16 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 1300px) {
+  // .more-info-btn {
+  //   opacity: 1;
+  //   visibility: initial;
+  //   bottom: 0px;
+  //   width: 100%;
+  //   left: 0px;
+  //   right: 0px;
+  //   margin-left: initial;
+  //   border-radius: initial;
+  // }
   .project-window-content {
     display: flex;
     flex-direction: column;

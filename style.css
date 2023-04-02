@@ -1129,7 +1129,7 @@ body.menu-open .hide-menu {
 }
 
 .project-item {
-  height: 300px;
+  height: 340px;
   border-radius: 10px;
   overflow: hidden;
   display: -webkit-box;
@@ -1876,6 +1876,10 @@ input.contactFormInput:valid ~ .formIcon {
 
 .landing-mobile-icon {
   display: none !important;
+}
+
+.my-name {
+  background-color: yellow;
 }
 
 .nav-dock {
