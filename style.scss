@@ -864,6 +864,25 @@ body.menu-open .hide-menu {
   // cursor: pointer;
   transition: all 0.2s;
 }
+.project-item:hover {
+  box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+}
+// .project-item:hover .project-preview {
+//   filter: blur(6px);
+//   transform: scale(1.2);
+// }
+// .project-item:hover .preview-logo {
+//   opacity: 0 !important;
+//   visibility: hidden !important;
+// }
+// .project-item:hover .more-info-btn {
+//   visibility: visible;
+//   opacity: 1;
+// }
+// .project-item:hover .project-btns {
+//   visibility: visible;
+//   bottom: 0px;
+// }
 .project-preview {
   width: 100%;
   background-repeat: no-repeat;
@@ -880,10 +899,6 @@ body.menu-open .hide-menu {
 }
 #portfolio-project .project-preview {
   background-image: url("./portfolioImg.png");
-}
-.project-item:hover .project-preview {
-  filter: blur(6px);
-  transform: scale(1.2);
 }
 #osc-project .preview-logo {
   display: flex;
@@ -903,10 +918,6 @@ body.menu-open .hide-menu {
   transition: all 0.2s;
   opacity: 1;
   visibility: visible;
-}
-.project-item:hover .preview-logo {
-  opacity: 0 !important;
-  visibility: hidden !important;
 }
 #osc-project .preview-logo img {
   width: 48px;
@@ -970,49 +981,6 @@ body.menu-open .hide-menu {
   align-items: center;
   pointer-events: none;
 }
-.project-preview-info {
-  color: white;
-  padding: 0px 40px;
-  font-size: 18px;
-  line-height: 26px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.4s;
-  word-spacing: 1.4px;
-}
-.project-item:hover .project-preview-info {
-  visibility: visible;
-  opacity: 1;
-}
-.more-info-btn {
-  position: absolute;
-  bottom: 90px;
-  left: 50%;
-  margin-left: -68px;
-  width: 136px;
-  height: 48px;
-  border-radius: 50px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.4s;
-  background: #303968;
-  border: 2px solid gainsboro;
-  color: whitesmoke;
-  font-size: 18px;
-}
-#osc-project .more-info-btn {
-  background: #303968;
-}
-#portfolio-project .more-info-btn {
-  background: #6c4b8f;
-}
-.more-info-btn:hover {
-  background-color: #7676e3 !important;
-}
-.project-item:hover .more-info-btn {
-  visibility: visible;
-  opacity: 1;
-}
 .project-btns {
   height: 56px;
   display: flex;
@@ -1021,13 +989,10 @@ body.menu-open .hide-menu {
   position: absolute;
   left: 0px;
   right: 0px;
-  bottom: -58px;
-  visibility: hidden;
-  transition: all 0.4s;
-}
-.project-item:hover .project-btns {
-  visibility: visible;
+  // bottom: -58px;
   bottom: 0px;
+  // visibility: hidden;
+  transition: all 0.4s;
 }
 .project-btn {
   background-color: white;
@@ -1038,6 +1003,7 @@ body.menu-open .hide-menu {
   justify-content: center;
   align-items: center;
   column-gap: 9px;
+  row-gap: 4px;
   color: #7676e3;
   transition: all 0.2s;
   text-decoration: none;
@@ -1409,9 +1375,6 @@ input.contactFormInput:valid ~ .formIcon {
 .project-btn:hover {
   background-color: #ededed;
 }
-.project-item:hover {
-  box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
-}
 .swiper-wrapper {
   transition-timing-function: linear !important;
 }
@@ -1430,7 +1393,7 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 .my-name {
-  background-color: yellow;
+  background-color: purple;
 }
 // .mapWrapper {
 //   // margin: 0px auto;
@@ -1553,6 +1516,12 @@ input.contactFormInput:valid ~ .formIcon {
   //   margin-left: initial;
   //   border-radius: initial;
   // }
+  .project-btns {
+    height: 72px;
+  }
+  .project-btn {
+    flex-direction: column;
+  }
   .project-window-content {
     display: flex;
     flex-direction: column;
@@ -1622,6 +1591,12 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 940px) {
+  .project-btns {
+    height: 56px;
+  }
+  .project-btn {
+    flex-direction: row;
+  }
   .projects-content-grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -1832,6 +1807,12 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 500px) {
+  .project-btns {
+    height: 72px;
+  }
+  .project-btn {
+    flex-direction: column;
+  }
   .form-wrapper {
     background: initial;
     padding: 0px;

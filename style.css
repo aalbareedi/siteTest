@@ -1141,6 +1141,11 @@ body.menu-open .hide-menu {
   transition: all 0.2s;
 }
 
+.project-item:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+          box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+}
+
 .project-preview {
   width: 100%;
   background-repeat: no-repeat;
@@ -1157,13 +1162,6 @@ body.menu-open .hide-menu {
 
 #portfolio-project .project-preview {
   background-image: url("./portfolioImg.png");
-}
-
-.project-item:hover .project-preview {
-  -webkit-filter: blur(6px);
-          filter: blur(6px);
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
 }
 
 #osc-project .preview-logo {
@@ -1202,11 +1200,6 @@ body.menu-open .hide-menu {
   transition: all 0.2s;
   opacity: 1;
   visibility: visible;
-}
-
-.project-item:hover .preview-logo {
-  opacity: 0 !important;
-  visibility: hidden !important;
 }
 
 #osc-project .preview-logo img {
@@ -1297,58 +1290,6 @@ body.menu-open .hide-menu {
   pointer-events: none;
 }
 
-.project-preview-info {
-  color: white;
-  padding: 0px 40px;
-  font-size: 18px;
-  line-height: 26px;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  word-spacing: 1.4px;
-}
-
-.project-item:hover .project-preview-info {
-  visibility: visible;
-  opacity: 1;
-}
-
-.more-info-btn {
-  position: absolute;
-  bottom: 90px;
-  left: 50%;
-  margin-left: -68px;
-  width: 136px;
-  height: 48px;
-  border-radius: 50px;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  background: #303968;
-  border: 2px solid gainsboro;
-  color: whitesmoke;
-  font-size: 18px;
-}
-
-#osc-project .more-info-btn {
-  background: #303968;
-}
-
-#portfolio-project .more-info-btn {
-  background: #6c4b8f;
-}
-
-.more-info-btn:hover {
-  background-color: #7676e3 !important;
-}
-
-.project-item:hover .more-info-btn {
-  visibility: visible;
-  opacity: 1;
-}
-
 .project-btns {
   height: 56px;
   display: -webkit-box;
@@ -1360,15 +1301,9 @@ body.menu-open .hide-menu {
   position: absolute;
   left: 0px;
   right: 0px;
-  bottom: -58px;
-  visibility: hidden;
+  bottom: 0px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-}
-
-.project-item:hover .project-btns {
-  visibility: visible;
-  bottom: 0px;
 }
 
 .project-btn {
@@ -1390,6 +1325,7 @@ body.menu-open .hide-menu {
           align-items: center;
   -webkit-column-gap: 9px;
           column-gap: 9px;
+  row-gap: 4px;
   color: #7676e3;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -1851,11 +1787,6 @@ input.contactFormInput:valid ~ .formIcon {
   background-color: #ededed;
 }
 
-.project-item:hover {
-  -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
-          box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
-}
-
 .swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
           transition-timing-function: linear !important;
@@ -1879,7 +1810,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: yellow;
+  background-color: purple;
 }
 
 .nav-dock {
@@ -2016,6 +1947,15 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 1300px) {
+  .project-btns {
+    height: 72px;
+  }
+  .project-btn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .project-window-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2104,6 +2044,15 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 940px) {
+  .project-btns {
+    height: 56px;
+  }
+  .project-btn {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
   .projects-content-grid {
     -ms-grid-columns: (minmax(0, 1fr))[1];
         grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -2335,6 +2284,15 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 500px) {
+  .project-btns {
+    height: 72px;
+  }
+  .project-btn {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .form-wrapper {
     background: initial;
     padding: 0px;
