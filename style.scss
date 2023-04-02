@@ -793,15 +793,26 @@ body.menu-open .hide-menu {
   // overflow-y: auto;
   // max-height: calc(100% - 66px);
   border-left: 2px solid #ccccee;
-  padding: 30px 62px 38px 26px;
+  // padding: 30px 62px 38px 26px;
+  padding: 30px 38px 38px 26px;
 }
-.project-point {
-  display: flex;
-  column-gap: 26px;
-}
+// .project-point {
+//   display: flex;
+//   column-gap: 26px;
+// }
 .project-point-title {
-  min-width: 84px;
-  margin-left: 1px;
+  display: inline;
+  font-weight: bold;
+  margin-right: 4px;
+  // min-width: 84px;
+  // margin-left: 1px;
+}
+
+.project-skill-tags .project-point-title {
+  padding-top: 4px;
+}
+.project-point-text {
+  display: inline;
 }
 .project-skill-tags {
   display: flex;
@@ -975,13 +986,13 @@ body.menu-open .hide-menu {
   height: 56px;
   display: flex;
   column-gap: 3px;
-  background: #e0e0ff;
-  border-top: 3px solid #ceceff;
+  background: #e8e8ff;
+  // border-top: 3px solid #ceceff;
   position: absolute;
   left: 0px;
   right: 0px;
-  // bottom: -58px;
   bottom: 0px;
+  // bottom: -58px;
   // visibility: hidden;
   // transition: all 0.4s;
 }
@@ -1383,9 +1394,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-mobile-icon {
   display: none !important;
 }
-.my-name {
-  background-color: pink;
-}
+// .my-name {
+//   background-color: pink;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1514,7 +1525,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .project-window-title {
     padding-left: 100px;
-    border: none;
+    border-left: none;
     position: absolute;
     left: 0px;
     right: 0px;
@@ -1643,6 +1654,14 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 640px) {
+  .project-window-btns {
+    justify-content: center;
+  }
+  .project-window-btn {
+    flex-grow: 1;
+    flex-basis: 100%;
+    width: initial;
+  }
   .work-word,
   .view-word,
   .me-word {
@@ -1820,6 +1839,9 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 500px) {
+  .project-window-points {
+    padding: 30px 26px 38px 26px;
+  }
   .project-window-title {
     font-size: 18px;
   }
