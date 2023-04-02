@@ -1780,7 +1780,8 @@ input.contactFormInput:valid ~ .formIcon {
   .content {
     margin-left: 0px;
   }
-  [data-page] .content {
+  [data-page] .content,
+  .project-window {
     padding-bottom: $nav-dock-height;
   }
   .menu-icon-btn {

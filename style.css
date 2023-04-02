@@ -2271,7 +2271,8 @@ input.contactFormInput:valid ~ .formIcon {
   .content {
     margin-left: 0px;
   }
-  [data-page] .content {
+  [data-page] .content,
+  .project-window {
     padding-bottom: 62px;
   }
   .menu-icon-btn {
