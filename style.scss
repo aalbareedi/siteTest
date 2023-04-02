@@ -868,28 +868,11 @@ body.menu-open .hide-menu {
   display: flex;
   background-color: #d7d7d7;
   position: relative;
-  // cursor: pointer;
-  transition: all 0.2s;
+  border: 3px solid #ceceff;
 }
 .project-item:hover {
   box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
 }
-// .project-item:hover .project-preview {
-//   filter: blur(6px);
-//   transform: scale(1.2);
-// }
-// .project-item:hover .preview-logo {
-//   opacity: 0 !important;
-//   visibility: hidden !important;
-// }
-// .project-item:hover .more-info-btn {
-//   visibility: visible;
-//   opacity: 1;
-// }
-// .project-item:hover .project-btns {
-//   visibility: visible;
-//   bottom: 0px;
-// }
 .project-preview {
   width: 100%;
   background-repeat: no-repeat;
@@ -992,14 +975,15 @@ body.menu-open .hide-menu {
   height: 56px;
   display: flex;
   column-gap: 3px;
-  background: #ededed;
+  background: #e0e0ff;
+  border-top: 3px solid #ceceff;
   position: absolute;
   left: 0px;
   right: 0px;
   // bottom: -58px;
   bottom: 0px;
   // visibility: hidden;
-  transition: all 0.4s;
+  // transition: all 0.4s;
 }
 .project-btn {
   background-color: white;
@@ -1399,9 +1383,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-mobile-icon {
   display: none !important;
 }
-// .my-name {
-//   background-color: purple;
-// }
+.my-name {
+  background-color: pink;
+}
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1560,7 +1544,7 @@ input.contactFormInput:valid ~ .formIcon {
   .web-skills {
     flex-direction: column;
     background-color: initial;
-    row-gap: 22px;
+    row-gap: 30px;
   }
   .web-skill-item:first-of-type,
   .web-skill-item:last-of-type {
