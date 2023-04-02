@@ -1002,6 +1002,7 @@ body.menu-open .hide-menu {
 
 .project-window-title {
   font-size: 20px;
+  line-height: 24px;
   word-spacing: 0.4px;
   height: 68px;
   display: -webkit-box;
@@ -1125,6 +1126,7 @@ body.menu-open .hide-menu {
   border-radius: 0px 20px 0px 0px;
   font-size: 24px;
   border: none;
+  border-left: 2px solid #ccccee;
   color: #7676e3;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -1949,6 +1951,33 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 1300px) {
+  .project-window-points {
+    border-left: none;
+  }
+  .project-window-info {
+    max-height: initial;
+    overflow-y: initial;
+  }
+  .close-project-btn {
+    right: initial;
+    left: 0px;
+    top: 64px;
+    border-left: none;
+    border-right: 2px solid #ccccee;
+    border-radius: initial;
+  }
+  .project-window-title {
+    padding-left: 100px;
+    border: none;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 64px;
+  }
+  .project-window {
+    padding: 0px;
+    padding-top: calc(64px + 68px);
+  }
   .project-btns {
     height: 72px;
   }
@@ -1966,6 +1995,10 @@ input.contactFormInput:valid ~ .formIcon {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    max-height: initial;
+    border-radius: initial;
+    overflow-y: auto;
+    position: initial;
   }
   .project-window-images {
     min-height: 320px;
@@ -2286,6 +2319,9 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 500px) {
+  .project-window-title {
+    font-size: 18px;
+  }
   .project-btns {
     height: 72px;
   }
