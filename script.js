@@ -27,15 +27,15 @@ navItems.forEach((navItem) => {
   });
 });
 
-const moreInfoBtns = document.querySelectorAll(".more-info-btn");
+const projectBtns = document.querySelectorAll(".project-btn");
 const projectWindows = document.querySelectorAll(".project-window");
 const closeProjectBtns = document.querySelectorAll(".close-project-btn");
 
 const body = document.querySelector("body");
 
-moreInfoBtns.forEach((moreInfoBtn) => {
-  moreInfoBtn.addEventListener("click", () => {
-    const id = moreInfoBtn.getAttribute("data-modal-id");
+projectBtns.forEach((projectBtn) => {
+  projectBtn.addEventListener("click", () => {
+    const id = projectBtn.getAttribute("data-modal-id");
 
     document.querySelector(`#${id}`).classList.remove("hidden");
     body.classList.add("overflow-hidden");
