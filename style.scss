@@ -1395,7 +1395,7 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 .my-name {
-  background-color: yellow;
+  background-color: orange;
 }
 // .mapWrapper {
 //   // margin: 0px auto;
@@ -1534,6 +1534,12 @@ input.contactFormInput:valid ~ .formIcon {
   .project-window {
     padding: 0px;
     padding-top: calc(#{$header-height} + #{$project-window-title-height});
+
+    z-index: 999999;
+    position: fixed;
+    opacity: 1;
+    visibility: visible;
+    display: flex;
   }
   .project-btns {
     height: 72px;
