@@ -31,6 +31,7 @@ const projectBtns = document.querySelectorAll(".project-btn");
 const projectWindows = document.querySelectorAll(".project-window");
 const closeProjectBtns = document.querySelectorAll(".close-project-btn");
 
+const html = document.querySelector("html");
 const body = document.querySelector("body");
 
 projectBtns.forEach((projectBtn) => {
@@ -41,6 +42,7 @@ projectBtns.forEach((projectBtn) => {
 
     document.querySelector(`#${id}`).classList.remove("hidden");
     // alert("element: " + document.querySelector(`#${id}`));
+    html.classList.add("overflow-hidden");
     body.classList.add("overflow-hidden");
   });
 });
@@ -50,6 +52,7 @@ projectWindows.forEach((projectWindow) => {
 
   closeProjectBtn.addEventListener("click", () => {
     projectWindow.classList.add("hidden");
+    html.classList.remove("overflow-hidden");
     body.classList.remove("overflow-hidden");
   });
 
@@ -57,6 +60,7 @@ projectWindows.forEach((projectWindow) => {
     // If `projectWindow` itself was just clicked, rather than a descendent
     if (e.target == e.currentTarget) {
       projectWindow.classList.add("hidden");
+      html.classList.remove("overflow-hidden");
       body.classList.remove("overflow-hidden");
     }
   });
