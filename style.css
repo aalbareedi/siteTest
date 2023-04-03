@@ -1814,10 +1814,6 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
-.my-name {
-  background-color: orange;
-}
-
 .nav-dock {
   height: 62px;
   width: 100%;

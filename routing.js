@@ -3,6 +3,9 @@
 
 const root = location.href.split("/").slice(0, -1).join("/");
 
+const html = document.querySelector("html");
+const body = document.querySelector("body");
+
 // Make the links work
 document.querySelectorAll(".tab-content").forEach((page) => {
   document.querySelectorAll(`[href='#${page.id}']`).forEach((a) => {
@@ -19,6 +22,8 @@ document.querySelectorAll(".tab-content").forEach((page) => {
 function showPageFromAddress() {
   document.querySelectorAll(".project-window").forEach((projectWindow) => {
     projectWindow.classList.add("hidden");
+    html.classList.remove("overflow-hidden");
+    body.classList.remove("overflow-hidden");
   });
 
   // Cut off the file name
