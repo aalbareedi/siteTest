@@ -1097,7 +1097,7 @@ body.menu-open .hide-menu {
   flex-wrap: wrap;
   column-gap: 8px;
   row-gap: 8px;
-  margin-top: -7px;
+  // margin-top: -7px;
   // background: #f5f5f5;
   // border: 2px solid #c1c1ec;
   border-radius: 10px;
@@ -1117,7 +1117,10 @@ body.menu-open .hide-menu {
 }
 .web-tools-title {
   padding-left: 2px;
-  min-width: 86px;
+  // min-width: 86px;
+  // display: inline;
+  padding-top: 7px;
+  margin-right: 4px;
 }
 #sass-skill-img {
   width: 34px;
@@ -1395,9 +1398,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-mobile-icon {
   display: none !important;
 }
-.my-name {
-  background-color: yellow;
-}
+// .my-name {
+//   background-color: yellow;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1752,7 +1755,7 @@ input.contactFormInput:valid ~ .formIcon {
     // align-items: center;
     // column-gap: 20px;
     // padding-left: 20px;
-    background-color: #e1e1fb;
+    background-color: #f3f3ff;
     position: relative;
     min-height: initial;
     height: 80px;
@@ -1770,6 +1773,7 @@ input.contactFormInput:valid ~ .formIcon {
     text-align: center;
     position: initial;
     align-items: initial;
+    background-color: initial;
   }
   .landing-title-wrapper {
     height: 100%;
@@ -1830,7 +1834,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .landing-contact-btn {
     box-shadow: none;
-    background: #e1e1fb;
+    background: #f3f3ff;
     position: relative;
     height: 80px;
     width: 50%;
@@ -1903,7 +1907,7 @@ input.contactFormInput:valid ~ .formIcon {
     flex-direction: column;
     row-gap: 8px;
   }
-  .web-skill-icons {
-    margin-top: 0px;
-  }
+  // .web-skill-icons {
+  //   margin-top: 0px;
+  // }
 }

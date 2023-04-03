@@ -1467,7 +1467,6 @@ body.menu-open .hide-menu {
   -webkit-column-gap: 8px;
           column-gap: 8px;
   row-gap: 8px;
-  margin-top: -7px;
   border-radius: 10px;
 }
 
@@ -1496,7 +1495,8 @@ body.menu-open .hide-menu {
 
 .web-tools-title {
   padding-left: 2px;
-  min-width: 86px;
+  padding-top: 7px;
+  margin-right: 4px;
 }
 
 #sass-skill-img {
@@ -1816,10 +1816,6 @@ input.contactFormInput:valid ~ .formIcon {
 
 .landing-mobile-icon {
   display: none !important;
-}
-
-.my-name {
-  background-color: yellow;
 }
 
 .nav-dock {
@@ -2251,7 +2247,7 @@ input.contactFormInput:valid ~ .formIcon {
     min-width: 24px;
   }
   .grid-item {
-    background-color: #e1e1fb;
+    background-color: #f3f3ff;
     position: relative;
     min-height: initial;
     height: 80px;
@@ -2270,6 +2266,7 @@ input.contactFormInput:valid ~ .formIcon {
     -webkit-box-align: initial;
         -ms-flex-align: initial;
             align-items: initial;
+    background-color: initial;
   }
   .landing-title-wrapper {
     height: 100%;
@@ -2322,7 +2319,7 @@ input.contactFormInput:valid ~ .formIcon {
   .landing-contact-btn {
     -webkit-box-shadow: none;
             box-shadow: none;
-    background: #e1e1fb;
+    background: #f3f3ff;
     position: relative;
     height: 80px;
     width: 50%;
@@ -2405,9 +2402,6 @@ input.contactFormInput:valid ~ .formIcon {
         -ms-flex-direction: column;
             flex-direction: column;
     row-gap: 8px;
-  }
-  .web-skill-icons {
-    margin-top: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */
