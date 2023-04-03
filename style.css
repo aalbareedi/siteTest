@@ -949,6 +949,9 @@ body.menu-open .hide-menu {
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 100px;
+  height: 100vh;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .project-window-blur {
@@ -963,6 +966,7 @@ body.menu-open .hide-menu {
 }
 
 .project-window-content {
+  background-color: whitesmoke;
   max-height: 660px;
   width: 100%;
   border-radius: 20px;
@@ -1814,6 +1818,10 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
+.my-name {
+  background-color: yellow;
+}
+
 .nav-dock {
   height: 62px;
   width: 100%;
@@ -1948,12 +1956,18 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 1300px) {
+  .menu-open .project-window {
+    left: 260px;
+  }
   .project-window-points {
     border-left: none;
   }
   .project-window-info {
     max-height: initial;
     overflow-y: initial;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   .close-project-btn {
     right: initial;
@@ -1974,7 +1988,9 @@ input.contactFormInput:valid ~ .formIcon {
   .project-window {
     padding: 0px;
     padding-top: calc(64px + 68px);
+    height: initial;
     position: fixed;
+    left: 72px;
   }
   .project-btns {
     height: 72px;
@@ -2144,6 +2160,9 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 640px) {
+  .project-window {
+    left: initial;
+  }
   .project-window-btns {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2196,6 +2215,7 @@ input.contactFormInput:valid ~ .formIcon {
   [data-page="resume"] #resume-dock-btn {
     background: #a0a0ff;
     color: #ffffff;
+    border-bottom: 4px solid #e7e7ff;
   }
   .tab-content {
     padding: 30px;

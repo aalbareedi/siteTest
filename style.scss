@@ -728,7 +728,8 @@ body.menu-open .hide-menu {
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 100px;
-  // height: 100vh;
+  height: 100vh;
+  transition: all 0.2s;
 }
 .project-window-blur {
   display: none;
@@ -740,7 +741,7 @@ body.menu-open .hide-menu {
   filter: blur(26px);
 }
 .project-window-content {
-  // background-color: pink;
+  background-color: whitesmoke;
   max-height: 660px;
   width: 100%;
   border-radius: 20px;
@@ -1394,9 +1395,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-mobile-icon {
   display: none !important;
 }
-// .my-name {
-//   background-color: orange;
-// }
+.my-name {
+  background-color: yellow;
+}
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1508,12 +1509,16 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 1300px) {
+  .menu-open .project-window {
+    left: $sidenav-open-width;
+  }
   .project-window-points {
     border-left: none;
   }
   .project-window-info {
     max-height: initial;
     overflow-y: initial;
+    flex-grow: 1;
   }
   .close-project-btn {
     right: initial;
@@ -1534,9 +1539,10 @@ input.contactFormInput:valid ~ .formIcon {
   .project-window {
     padding: 0px;
     padding-top: calc(#{$header-height} + #{$project-window-title-height});
-
-    // z-index: 999999;
+    height: initial;
     position: fixed;
+    left: $sidenav-close-width;
+    // z-index: 999999;
     // opacity: 1;
     // visibility: visible;
     // display: flex;
@@ -1660,6 +1666,9 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 640px) {
+  .project-window {
+    left: initial;
+  }
   .project-window-btns {
     justify-content: center;
   }
@@ -1703,6 +1712,7 @@ input.contactFormInput:valid ~ .formIcon {
   [data-page="resume"] #resume-dock-btn {
     background: #a0a0ff;
     color: #ffffff;
+    border-bottom: 4px solid #e7e7ff;
   }
   .tab-content {
     padding: 30px;
