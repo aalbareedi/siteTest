@@ -613,7 +613,7 @@ body.menu-open .hide-menu {
 }
 .landing-exp .grid-item-box,
 .landing-edu .grid-item-box {
-  background-color: whitesmoke;
+  background-color: #f3f3ff;
   border: 2px solid #c1c1ec;
 }
 .landing-projects .grid-item-box {
@@ -658,7 +658,7 @@ body.menu-open .hide-menu {
   background-image: linear-gradient(
       to top,
       rgba(188, 188, 188, 0.2),
-      rgba(55, 55, 132, 0.99) 76%
+      rgba(55, 55, 132, 0.99) 74%
     ),
     url("./orthoImg.png");
 }
@@ -667,15 +667,15 @@ body.menu-open .hide-menu {
   background-image: linear-gradient(
       to top,
       rgba(188, 188, 188, 0.2),
-      rgba(55, 55, 132, 0.99) 76%
+      rgba(55, 55, 132, 0.99) 74%
     ),
     url("./portfolioImg.png");
 }
 .landing-project-title {
   font-size: 18px;
   position: absolute;
-  top: 16px;
-  left: 18px;
+  top: 18px;
+  left: 20px;
   color: #f0f0f0;
 }
 .tab-content {
@@ -1012,6 +1012,13 @@ body.menu-open .hide-menu {
   font-size: 18px;
   line-height: 20px;
 }
+.skills-content {
+  background: #ffffff;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 20px;
+}
 .web-skills {
   background-color: #c1c1ec;
   display: flex;
@@ -1021,8 +1028,16 @@ body.menu-open .hide-menu {
   overflow: hidden;
   column-gap: 2px;
   padding: 2px;
-  max-width: 1300px;
-  margin: 0 auto;
+  // max-width: 1300px;
+  // margin: 0 auto;
+}
+.skills-content-title {
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 30px;
+  color: #393838;
+  // max-width: 1300px;
+  // margin: 0px auto 20px auto;
 }
 .web-skill-item {
   background-color: #d3d3ff;
@@ -1503,9 +1518,9 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 1300px) {
-  .skills-content {
-    padding: 0px 60px;
-  }
+  // .skills-content {
+  //   padding: 0px 60px;
+  // }
   .menu-open .project-window {
     left: $sidenav-open-width;
   }
@@ -1565,6 +1580,7 @@ input.contactFormInput:valid ~ .formIcon {
     flex-direction: column;
     background-color: initial;
     row-gap: 30px;
+    padding: 0px 60px;
   }
   .web-skill-item:first-of-type,
   .web-skill-item:last-of-type {
@@ -1634,7 +1650,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 780px) {
-  .skills-content {
+  .web-skills {
     padding: initial;
   }
   .landing-project-title {
@@ -1670,6 +1686,10 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 640px) {
+  .skills-content {
+    background-color: initial;
+    padding: initial;
+  }
   .project-window {
     left: initial;
   }

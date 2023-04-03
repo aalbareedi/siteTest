@@ -811,7 +811,7 @@ body.menu-open .hide-menu {
 
 .landing-exp .grid-item-box,
 .landing-edu .grid-item-box {
-  background-color: whitesmoke;
+  background-color: #f3f3ff;
   border: 2px solid #c1c1ec;
 }
 
@@ -864,20 +864,20 @@ body.menu-open .hide-menu {
 }
 
 #landing-braces-img {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(188, 188, 188, 0.2)), color-stop(76%, rgba(55, 55, 132, 0.99))), url("./orthoImg.png");
-  background-image: linear-gradient(to top, rgba(188, 188, 188, 0.2), rgba(55, 55, 132, 0.99) 76%), url("./orthoImg.png");
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(188, 188, 188, 0.2)), color-stop(74%, rgba(55, 55, 132, 0.99))), url("./orthoImg.png");
+  background-image: linear-gradient(to top, rgba(188, 188, 188, 0.2), rgba(55, 55, 132, 0.99) 74%), url("./orthoImg.png");
 }
 
 #landing-portfolio-img {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(188, 188, 188, 0.2)), color-stop(76%, rgba(55, 55, 132, 0.99))), url("./portfolioImg.png");
-  background-image: linear-gradient(to top, rgba(188, 188, 188, 0.2), rgba(55, 55, 132, 0.99) 76%), url("./portfolioImg.png");
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(188, 188, 188, 0.2)), color-stop(74%, rgba(55, 55, 132, 0.99))), url("./portfolioImg.png");
+  background-image: linear-gradient(to top, rgba(188, 188, 188, 0.2), rgba(55, 55, 132, 0.99) 74%), url("./portfolioImg.png");
 }
 
 .landing-project-title {
   font-size: 18px;
   position: absolute;
-  top: 16px;
-  left: 18px;
+  top: 18px;
+  left: 20px;
   color: #f0f0f0;
 }
 
@@ -1336,6 +1336,14 @@ body.menu-open .hide-menu {
   line-height: 20px;
 }
 
+.skills-content {
+  background: #ffffff;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 20px;
+}
+
 .web-skills {
   background-color: #c1c1ec;
   display: -webkit-box;
@@ -1350,8 +1358,13 @@ body.menu-open .hide-menu {
   -webkit-column-gap: 2px;
           column-gap: 2px;
   padding: 2px;
-  max-width: 1300px;
-  margin: 0 auto;
+}
+
+.skills-content-title {
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 30px;
+  color: #393838;
 }
 
 .web-skill-item {
@@ -1925,9 +1938,6 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 1300px) {
-  .skills-content {
-    padding: 0px 60px;
-  }
   .menu-open .project-window {
     left: 260px;
   }
@@ -1996,6 +2006,7 @@ input.contactFormInput:valid ~ .formIcon {
             flex-direction: column;
     background-color: initial;
     row-gap: 30px;
+    padding: 0px 60px;
   }
   .web-skill-item:first-of-type,
   .web-skill-item:last-of-type {
@@ -2081,7 +2092,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 780px) {
-  .skills-content {
+  .web-skills {
     padding: initial;
   }
   .landing-project-title {
@@ -2139,6 +2150,10 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 640px) {
+  .skills-content {
+    background-color: initial;
+    padding: initial;
+  }
   .project-window {
     left: initial;
   }
