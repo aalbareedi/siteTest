@@ -1816,7 +1816,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: green;
+  background-color: yellow;
 }
 
 .nav-dock {
@@ -1979,7 +1979,7 @@ input.contactFormInput:valid ~ .formIcon {
   .project-window {
     padding: 0px;
     padding-top: calc(64px + 68px);
-    z-index: 999999;
+    position: fixed;
   }
   .project-btns {
     height: 72px;
