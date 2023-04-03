@@ -35,9 +35,12 @@ const body = document.querySelector("body");
 
 projectBtns.forEach((projectBtn) => {
   projectBtn.addEventListener("click", () => {
+    alert("click");
     const id = projectBtn.getAttribute("data-modal-id");
+    alert("id: " + id);
 
     document.querySelector(`#${id}`).classList.remove("hidden");
+    alert("element: " + document.querySelector(`#${id}`));
     body.classList.add("overflow-hidden");
   });
 });

@@ -1816,7 +1816,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: red;
+  background-color: yellow;
 }
 
 .nav-dock {
