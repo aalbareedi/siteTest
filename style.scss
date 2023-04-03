@@ -728,7 +728,7 @@ body.menu-open .hide-menu {
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 100px;
-  height: 100vh;
+  // height: 100vh;
 }
 .project-window-blur {
   display: none;
@@ -1395,7 +1395,7 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 .my-name {
-  background-color: green;
+  background-color: orange;
 }
 // .mapWrapper {
 //   // margin: 0px auto;

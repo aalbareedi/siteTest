@@ -949,7 +949,6 @@ body.menu-open .hide-menu {
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 100px;
-  height: 100vh;
 }
 
 .project-window-blur {
@@ -1816,7 +1815,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: green;
+  background-color: orange;
 }
 
 .nav-dock {
