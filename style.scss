@@ -1516,11 +1516,58 @@ input.contactFormInput:valid ~ .formIcon {
   .landing-skills-content {
     padding: 10px 0px;
   }
+  .skills-content-wrapper {
+    padding: 0px 100px;
+  }
+  .web-skills {
+    flex-direction: column;
+    background-color: initial;
+    row-gap: 30px;
+    padding: initial;
+  }
+  .web-skill-item:first-of-type,
+  .web-skill-item:last-of-type {
+    border-radius: 18px;
+  }
+  .web-skill-item {
+    width: initial;
+    flex-grow: initial;
+    flex-basis: initial;
+    flex-shrink: initial;
+    padding: 0px;
+    position: relative;
+    padding-top: 26px;
+    border: 2px solid #c1c1ec;
+    border-radius: 18px;
+    display: initial;
+  }
+  .web-skill-info-wrapper {
+    margin-bottom: 0px;
+    min-height: initial;
+  }
+  .web-skill-content {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 30px;
+  }
+  .web-skill-emblem {
+    margin: 0px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 50px;
+  }
+  .web-skill-title {
+    margin: 0px 0px 20px 0px;
+  }
+  .web-tools-title {
+    padding-left: initial;
+  }
 }
 @media only screen and (max-width: 1300px) {
-  // .skills-content {
-  //   padding: 0px 60px;
-  // }
+  .skills-content-wrapper {
+    padding: 0px 60px;
+  }
   .menu-open .project-window {
     left: $sidenav-open-width;
   }
@@ -1576,50 +1623,6 @@ input.contactFormInput:valid ~ .formIcon {
   .project-window-images {
     min-height: 320px;
   }
-  .web-skills {
-    flex-direction: column;
-    background-color: initial;
-    row-gap: 30px;
-    padding: 0px 60px;
-  }
-  .web-skill-item:first-of-type,
-  .web-skill-item:last-of-type {
-    border-radius: 18px;
-  }
-  .web-skill-item {
-    width: initial;
-    flex-grow: initial;
-    flex-basis: initial;
-    flex-shrink: initial;
-    padding: 0px;
-    position: relative;
-    padding-top: 26px;
-    border: 2px solid #c1c1ec;
-    border-radius: 18px;
-    display: initial;
-  }
-  .web-skill-info-wrapper {
-    margin-bottom: 0px;
-    min-height: initial;
-  }
-  .web-skill-content {
-    display: flex;
-    flex-direction: column-reverse;
-    row-gap: 30px;
-  }
-  .web-skill-emblem {
-    margin: 0px;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    width: 50px;
-  }
-  .web-skill-title {
-    margin: 0px 0px 20px 0px;
-  }
-  .web-tools-title {
-    padding-left: initial;
-  }
 }
 @media only screen and (max-width: 1100px) {
   .sidebar {
@@ -1639,6 +1642,9 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 940px) {
+  .skills-content-wrapper {
+    padding: initial;
+  }
   .project-btns {
     height: 56px;
   }
@@ -1650,9 +1656,6 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 780px) {
-  .web-skills {
-    padding: initial;
-  }
   .landing-project-title {
     font-size: 16px;
     top: 14px;
