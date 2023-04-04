@@ -1489,27 +1489,32 @@ input.contactFormInput:valid ~ .formIcon {
 // }
 @media only screen and (max-width: 1500px) {
   .landing-intro-grid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
     // height: calc(100% - #{$intro-title-height});
   }
   // .projects-content-grid {
   //   grid-template-columns: repeat(2, minmax(0, 1fr));
   // }
   .landing-skills {
-    grid-area: 3 / 1 / 4 / 4;
+    // grid-area: 3 / 1 / 4 / 4;
+    grid-area: 4 / 1 / 5 / 2;
   }
   .landing-contact {
-    grid-area: 3 / 4 / 4 / 5;
+    // grid-area: 3 / 4 / 4 / 5;
+    display: none;
   }
   .landing-projects {
-    grid-area: 1 / 1 / 3 / 3;
+    // grid-area: 1 / 1 / 3 / 3;
+    grid-area: 1 / 1 / 4 / 2;
   }
   .landing-edu {
-    grid-area: 2 / 3 / 3 / 5;
+    // grid-area: 2 / 3 / 3 / 5;
+    grid-area: 3 / 2 / 5 / 3;
   }
   .landing-exp {
-    grid-area: 1 / 3 / 2 / 5;
+    // grid-area: 1 / 3 / 2 / 5;
+    grid-area: 1 / 2 / 3 / 3;
   }
   .landing-skills-content {
     padding: 10px 0px;
@@ -1658,30 +1663,27 @@ input.contactFormInput:valid ~ .formIcon {
     font-size: 16px;
     top: 14px;
   }
-  .landing-intro-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  // .landing-intro-grid {
+  //   grid-template-columns: repeat(2, minmax(0, 1fr));
+  // }
   .landing-projects .grid-item-box {
     height: 160px;
   }
-  .landing-projects {
-    grid-area: 1 / 1 / 3 / 2;
-  }
-  .landing-exp {
-    grid-area: 1 / 2 / 2 / 3;
-  }
-  .landing-edu {
-    grid-area: 2 / 2 / 3 / 3;
-  }
-  .landing-skills {
-    grid-area: 3 / 1 / 4 / 2;
-  }
-  .landing-contact {
-    grid-area: 3 / 2 / 4 / 3;
-  }
-  .landing-contact-btn {
-    max-width: initial;
-  }
+  // .landing-projects {
+  //   grid-area: 1 / 1 / 3 / 2;
+  // }
+  // .landing-exp {
+  //   grid-area: 1 / 2 / 2 / 3;
+  // }
+  // .landing-edu {
+  //   grid-area: 2 / 2 / 3 / 3;
+  // }
+  // .landing-skills {
+  //   grid-area: 3 / 1 / 4 / 2;
+  // }
+  // .landing-contact {
+  //   grid-area: 3 / 2 / 4 / 3;
+  // }
   .grid-item-box {
     font-size: 14px;
   }
@@ -1846,12 +1848,14 @@ input.contactFormInput:valid ~ .formIcon {
   //   border: 3px solid #c1c1ec;
   // }
   .landing-contact {
+    display: flex;
     grid-area: initial;
     flex-direction: initial;
     grid-column: span 2;
     column-gap: 20px;
   }
   .landing-contact-btn {
+    max-width: initial;
     box-shadow: none;
     background: #f3f3ff;
     position: relative;
