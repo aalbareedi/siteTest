@@ -1,3 +1,9 @@
+const header = document.querySelector(".header");
+disableScrollBehind(header);
+
+const navDock = document.querySelector(".nav-dock");
+disableScrollBehind(navDock);
+
 const menuIconButton = document.querySelector("[data-menu-icon-btn]");
 const sidebar = document.querySelector("[data-sidebar]");
 const navOverlay = document.querySelector(".nav-overlay");
@@ -35,17 +41,17 @@ const html = document.querySelector("html");
 const body = document.querySelector("body");
 
 projectBtns.forEach((projectBtn) => {
-  projectBtn.addEventListener("click", () => {
-    // alert("click");
-    const id = projectBtn.getAttribute("data-modal-id");
-    // alert("id: " + id);
+  const id = projectBtn.getAttribute("data-modal-id");
+  const content = document.querySelector(`#${id} .project-window-content`);
+  if (content) {
+    disableScrollBehind(content);
+  }
 
+  projectBtn.addEventListener("click", () => {
     document.querySelector(`#${id}`).classList.remove("hidden");
 
-    disableScrollBehind(document.querySelector(`#${id}`));
-    // alert("element: " + document.querySelector(`#${id}`));
-    html.classList.add("overflow-hidden");
-    // body.classList.add("overflow-hidden");
+    // html.classList.add("overflow-hidden");
+    body.classList.add("overflow-hidden");
   });
 });
 
