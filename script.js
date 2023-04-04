@@ -43,7 +43,7 @@ projectBtns.forEach((projectBtn) => {
     document.querySelector(`#${id}`).classList.remove("hidden");
     // alert("element: " + document.querySelector(`#${id}`));
     html.classList.add("overflow-hidden");
-    body.classList.add("overflow-hidden");
+    // body.classList.add("overflow-hidden");
   });
 });
 
