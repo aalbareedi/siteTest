@@ -808,7 +808,7 @@ body.menu-open .hide-menu {
 
 .grid-item-box {
   border-radius: 10px;
-  padding: 16px;
+  padding: 16px 18px;
   font-size: 16px;
   line-height: 22px;
   color: #393838;
@@ -845,6 +845,10 @@ body.menu-open .hide-menu {
   padding-left: 6px;
   margin-bottom: 6px;
   word-spacing: 0.4px;
+}
+
+.landing-content-info:last-child {
+  margin-bottom: 0px;
 }
 
 .bp {
