@@ -99,13 +99,13 @@ window.addEventListener("resize", () => {
   }
 });
 
-// let pageSize = document.querySelector(".pageSize");
+let pageSize = document.querySelector(".pageSize");
 
-// setTimeout(function () {
-//   // Setting the innerHTML of an element removes all of the event listeners on its children
-//   pageSize.innerHTML = window.innerWidth + ", " + window.innerHeight;
-//   pageSize.classList.remove("hidden");
-// }, 3000);
+setTimeout(function () {
+  // Setting the innerHTML of an element removes all of the event listeners on its children
+  pageSize.innerHTML = window.innerWidth + ", " + window.innerHeight;
+  pageSize.classList.remove("hidden");
+}, 3000);
 
 const swiper = new Swiper(".swiper", {
   // Optional parameters
