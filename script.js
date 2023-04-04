@@ -3,8 +3,10 @@ disableScrollBehind(header);
 
 const navDock = document.querySelector(".nav-dock");
 disableScrollBehind(navDock);
-
-navDock.querySelectorAll("a").forEach((a) => disableScrollBehind(a));
+navDock.onscroll = (e) => e.stopPropagation();
+navDock.onscroll = (e) => e.preventDefault();
+navDock.ontouchmove = (e) => e.stopPropagation();
+navDock.ontouchmove = (e) => e.preventDefault();
 
 const menuIconButton = document.querySelector("[data-menu-icon-btn]");
 const sidebar = document.querySelector("[data-sidebar]");
