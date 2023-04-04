@@ -57,6 +57,11 @@ body {
 button {
   cursor: pointer;
 }
+.emphasis-text {
+  // font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 header {
   position: sticky;
   top: 0;
@@ -68,7 +73,6 @@ header {
   display: flex;
   font-family: "Roboto", sans-serif;
   // height: 100% added for contact form but ruins mobile landing page scroll
-  // height: 100%;
 }
 .menu-icon {
   font-size: 24px;
@@ -1404,9 +1408,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-mobile-icon {
   display: none !important;
 }
-.my-name {
-  background-color: yellow;
-}
+// .my-name {
+//   background-color: yellow;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1484,7 +1488,6 @@ input.contactFormInput:valid ~ .formIcon {
   font-size: 16px;
   display: none;
 }
-
 @media only screen and (max-width: 1500px) {
   .landing-intro-grid {
     grid-template-columns: repeat(4, 1fr);

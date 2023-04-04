@@ -45,6 +45,11 @@ button {
   cursor: pointer;
 }
 
+.emphasis-text {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 header {
   position: -webkit-sticky;
   position: sticky;
@@ -1811,10 +1816,6 @@ input.contactFormInput:valid ~ .formIcon {
 
 .landing-mobile-icon {
   display: none !important;
-}
-
-.my-name {
-  background-color: yellow;
 }
 
 .nav-dock {
