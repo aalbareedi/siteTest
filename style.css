@@ -833,7 +833,7 @@ body.menu-open .hide-menu {
 }
 
 .landing-content-years {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .landing-content-info {
@@ -842,8 +842,8 @@ body.menu-open .hide-menu {
   display: flex;
   -webkit-column-gap: 6px;
           column-gap: 6px;
-  padding-left: 4px;
-  margin-bottom: 4px;
+  padding-left: 6px;
+  margin-bottom: 6px;
   word-spacing: 0.4px;
 }
 
