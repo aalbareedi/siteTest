@@ -2229,9 +2229,6 @@ input.contactFormInput:valid ~ .formIcon {
   .carousel-wrapper {
     display: none !important;
   }
-  #landing-projects-content {
-    display: none;
-  }
   #overview {
     height: auto;
   }
