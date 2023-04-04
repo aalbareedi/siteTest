@@ -4,6 +4,8 @@ disableScrollBehind(header);
 const navDock = document.querySelector(".nav-dock");
 disableScrollBehind(navDock);
 
+navDock.querySelectorAll("a").forEach((a) => disableScrollBehind(a));
+
 const menuIconButton = document.querySelector("[data-menu-icon-btn]");
 const sidebar = document.querySelector("[data-sidebar]");
 const navOverlay = document.querySelector(".nav-overlay");
@@ -42,6 +44,11 @@ const body = document.querySelector("body");
 
 projectBtns.forEach((projectBtn) => {
   const id = projectBtn.getAttribute("data-modal-id");
+  const title = document.querySelector(`#${id} .project-window-title`);
+  if (title) {
+    disableScrollBehind(title);
+  }
+
   const content = document.querySelector(`#${id} .project-window-content`);
   if (content) {
     disableScrollBehind(content);
