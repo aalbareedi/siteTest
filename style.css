@@ -625,9 +625,7 @@ body.menu-open .hide-menu {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: 2 / 1 / 3 / 3;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 155px;
 }
 
 .pause-button {
@@ -1823,7 +1821,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: orange;
+  background-color: yellow;
 }
 
 .nav-dock {
