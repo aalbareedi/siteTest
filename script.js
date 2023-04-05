@@ -137,4 +137,4 @@ setTimeout(() => {
   // });
   // navDock.style.bottom = "0";
   navDock.classList.remove("hidden");
-}, 1);
+}, 100);
