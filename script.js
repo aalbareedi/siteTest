@@ -127,6 +127,6 @@ const swiper = new Swiper(".swiper", {
 setTimeout(() => {
   const navDock = document.querySelector(".nav-dock");
   const sidebar = document.querySelector(".sidebar");
-  const x = navDock.offsetHeight;
-  const y = sidebar.offsetHeight;
+  void navDock.offsetHeight;
+  void sidebar.offsetHeight;
 }, 5000);
