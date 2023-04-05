@@ -1404,9 +1404,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-mobile-icon {
   display: none !important;
 }
-.my-name {
-  background-color: yellow;
-}
+// .my-name {
+//   background-color: yellow;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1645,6 +1645,46 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 940px) {
+  .sidebar {
+    display: none;
+  }
+  header {
+    display: none;
+  }
+  .nav-dock {
+    display: flex;
+  }
+  #overview {
+    height: calc(100vh - #{$nav-dock-height});
+  }
+  [data-page="projects"] #projects-dock-btn,
+  [data-page="skills"] #skills-dock-btn,
+  [data-page="work"] #work-dock-btn,
+  [data-page="edu"] #edu-dock-btn,
+  [data-page="resume"] #resume-dock-btn {
+    background: #a0a0ff;
+    color: #ffffff;
+    border-bottom: 4px solid #e7e7ff;
+  }
+  [data-page] header {
+    display: block;
+    border-bottom: 1px solid #e7e7ff;
+  }
+  .menu-icon-btn {
+    display: none;
+  }
+  .content {
+    margin-left: initial;
+  }
+  .tab-content {
+    padding: 30px;
+    scroll-margin: 400px;
+    // height: calc(100vh - 64px - 64px);
+  }
+  [data-page] .content,
+  .project-window {
+    padding-bottom: $nav-dock-height;
+  }
   .skills-content-wrapper {
     padding: initial;
   }
@@ -1722,29 +1762,11 @@ input.contactFormInput:valid ~ .formIcon {
   .content-item {
     padding: 30px 20px;
   }
-  header {
+  .nav-dock {
     display: none;
-  }
-  [data-page] header {
-    display: block;
-    border-bottom: 1px solid #e7e7ff;
   }
   [data-page] .nav-dock {
     display: flex;
-  }
-  [data-page="projects"] #projects-dock-btn,
-  [data-page="skills"] #skills-dock-btn,
-  [data-page="work"] #work-dock-btn,
-  [data-page="edu"] #edu-dock-btn,
-  [data-page="resume"] #resume-dock-btn {
-    background: #a0a0ff;
-    color: #ffffff;
-    border-bottom: 4px solid #e7e7ff;
-  }
-  .tab-content {
-    padding: 30px;
-    scroll-margin: 400px;
-    // height: calc(100vh - 64px - 64px);
   }
   .carousel-wrapper {
     display: none !important;
@@ -1816,19 +1838,6 @@ input.contactFormInput:valid ~ .formIcon {
     display: none;
   }
   .pause-button {
-    display: none;
-  }
-  .sidebar {
-    display: none;
-  }
-  .content {
-    margin-left: 0px;
-  }
-  [data-page] .content,
-  .project-window {
-    padding-bottom: $nav-dock-height;
-  }
-  .menu-icon-btn {
     display: none;
   }
   // #contact-me-btn {
