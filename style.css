@@ -10,7 +10,7 @@
 }
 
 html {
-  height: 100%;
+  height: auto;
 }
 
 body {
@@ -1823,7 +1823,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: purple;
+  background-color: orange;
 }
 
 .nav-dock {
