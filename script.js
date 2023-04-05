@@ -97,6 +97,8 @@ window.addEventListener("resize", () => {
   } else {
     body.classList.add("menu-open");
   }
+
+  navDock.style.bottom = "0";
 });
 
 let pageSize = document.querySelector(".pageSize");
@@ -125,9 +127,14 @@ const swiper = new Swiper(".swiper", {
 });
 
 setTimeout(() => {
-  const navDock = document.querySelector(".nav-dock");
-  const sidebar = document.querySelector(".sidebar");
-  void navDock.offsetHeight;
-  void sidebar.offsetHeight;
-  void document.documentElement.offsetHeight;
+  // const navDock = document.querySelector(".nav-dock");
+  // const sidebar = document.querySelector(".sidebar");
+  // void navDock.offsetHeight;
+  // void sidebar.offsetHeight;
+  // void document.documentElement.offsetHeight;
+  // $(window).on("resize", function () {
+  //   var windowHeight = $(window).height();
+  //   var fixedElementHeight = $(".fixed-bottom").outerHeight();
+  //   $(".fixed-bottom").css("bottom", windowHeight - fixedElementHeight);
+  // });
 }, 5000);
