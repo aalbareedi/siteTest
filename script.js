@@ -129,4 +129,5 @@ setTimeout(() => {
   const sidebar = document.querySelector(".sidebar");
   void navDock.offsetHeight;
   void sidebar.offsetHeight;
+  void document.documentElement.offsetHeight;
 }, 5000);
