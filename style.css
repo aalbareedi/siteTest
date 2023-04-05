@@ -55,10 +55,16 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
   background-color: #7676e3;
   height: 64px;
   z-index: 1;
+  left: 72px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.menu-open header {
+  left: 260px;
 }
 
 .container {
@@ -526,8 +532,8 @@ body.menu-open .hide-menu {
   position: relative;
   max-width: 100%;
   margin-left: 72px;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: margin-left 0.2s;
+  transition: margin-left 0.2s;
   padding-top: 64px;
 }
 
@@ -1823,10 +1829,6 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
-.my-name {
-  background-color: pink;
-}
-
 .nav-dock {
   height: 62px;
   width: 100%;
@@ -2081,11 +2083,6 @@ input.contactFormInput:valid ~ .formIcon {
   .menu-open .content {
     margin-left: 72px;
   }
-  .menu-open .menu-icon-btn {
-    left: calc(260px - 72px);
-    top: 0px;
-    height: 64px;
-  }
   .nav-overlay {
     display: initial;
   }
@@ -2096,6 +2093,7 @@ input.contactFormInput:valid ~ .formIcon {
     display: none;
   }
   header {
+    left: 0px;
     display: none;
   }
   .nav-dock {
@@ -2132,6 +2130,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   [data-page] .content,
   .project-window {
+    padding-top: 64px;
     padding-bottom: 62px;
   }
   .project-window {
