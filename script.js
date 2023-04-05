@@ -123,3 +123,10 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+setTimeout(() => {
+  const navDock = document.querySelector(".nav-dock");
+  const sidebar = document.querySelector(".sidebar");
+  const x = navDock.offsetHeight;
+  const y = sidebar.offsetHeight;
+}, 5000);
