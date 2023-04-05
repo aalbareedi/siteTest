@@ -1823,14 +1823,14 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: red;
+  background-color: blue;
 }
 
 .nav-dock {
   height: 62px;
   width: 100%;
   position: fixed;
-  top: calc(100vh - 62px);
+  bottom: 0px;
   left: 0px;
   right: 0px;
   z-index: 100;
