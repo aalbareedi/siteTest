@@ -124,16 +124,17 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// setTimeout(() => {
-//   // const navDock = document.querySelector(".nav-dock");
-//   // const sidebar = document.querySelector(".sidebar");
-//   // void navDock.offsetHeight;
-//   // void sidebar.offsetHeight;
-//   // void document.documentElement.offsetHeight;
-//   // $(window).on("resize", function () {
-//   //   var windowHeight = $(window).height();
-//   //   var fixedElementHeight = $(".fixed-bottom").outerHeight();
-//   //   $(".fixed-bottom").css("bottom", windowHeight - fixedElementHeight);
-//   // });
-//   // navDock.style.bottom = "0";
-// }, 5000);
+setTimeout(() => {
+  // const navDock = document.querySelector(".nav-dock");
+  // const sidebar = document.querySelector(".sidebar");
+  // void navDock.offsetHeight;
+  // void sidebar.offsetHeight;
+  // void document.documentElement.offsetHeight;
+  // $(window).on("resize", function () {
+  //   var windowHeight = $(window).height();
+  //   var fixedElementHeight = $(".fixed-bottom").outerHeight();
+  //   $(".fixed-bottom").css("bottom", windowHeight - fixedElementHeight);
+  // });
+  // navDock.style.bottom = "0";
+  navDock.classList.remove("hidden");
+}, 5000);
