@@ -98,7 +98,7 @@ window.addEventListener("resize", () => {
     body.classList.add("menu-open");
   }
 
-  navDock.style.bottom = "0";
+  // navDock.style.bottom = "0";
 });
 
 let pageSize = document.querySelector(".pageSize");

@@ -1405,7 +1405,7 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 .my-name {
-  background-color: pink;
+  background-color: orange;
 }
 // .mapWrapper {
 //   // margin: 0px auto;
@@ -1426,6 +1426,7 @@ input.contactFormInput:valid ~ .formIcon {
   height: $nav-dock-height;
   width: 100%;
   position: fixed;
+  top: calc(100vh - 62px);
   bottom: 0px;
   left: 0px;
   right: 0px;
