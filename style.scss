@@ -1404,9 +1404,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-mobile-icon {
   display: none !important;
 }
-// .my-name {
-//   background-color: yellow;
-// }
+.my-name {
+  background-color: orange;
+}
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1685,6 +1685,9 @@ input.contactFormInput:valid ~ .formIcon {
   .project-window {
     padding-bottom: $nav-dock-height;
   }
+  .project-window {
+    left: initial;
+  }
   .skills-content-wrapper {
     padding: initial;
   }
@@ -1696,6 +1699,13 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .projects-content-grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .nav-logo-link {
+    display: flex;
+  }
+  .nav-name,
+  .nav-title {
+    display: block;
   }
 }
 @media only screen and (max-width: 780px) {
@@ -1751,13 +1761,6 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .form-wrapper {
     margin: 0px auto;
-  }
-  .nav-logo-link {
-    display: flex;
-  }
-  .nav-name,
-  .nav-title {
-    display: block;
   }
   .content-item {
     padding: 30px 20px;

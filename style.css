@@ -1822,6 +1822,10 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
+.my-name {
+  background-color: orange;
+}
+
 .nav-dock {
   height: 62px;
   width: 100%;
@@ -2128,6 +2132,9 @@ input.contactFormInput:valid ~ .formIcon {
   .project-window {
     padding-bottom: 62px;
   }
+  .project-window {
+    left: initial;
+  }
   .skills-content-wrapper {
     padding: initial;
   }
@@ -2143,6 +2150,15 @@ input.contactFormInput:valid ~ .formIcon {
   .projects-content-grid {
     -ms-grid-columns: (minmax(0, 1fr))[1];
         grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .nav-logo-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-name,
+  .nav-title {
+    display: block;
   }
 }
 
@@ -2187,15 +2203,6 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .form-wrapper {
     margin: 0px auto;
-  }
-  .nav-logo-link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .nav-name,
-  .nav-title {
-    display: block;
   }
   .content-item {
     padding: 30px 20px;
