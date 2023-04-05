@@ -19,8 +19,7 @@ $project-window-title-height: 68px;
   box-sizing: border-box;
 }
 html {
-  // height: 100%;
-  height: auto;
+  height: 100%;
 }
 body {
   background-color: #e7e7ff;
@@ -74,6 +73,7 @@ header {
   display: flex;
   font-family: "Roboto", sans-serif;
   // height: 100% added for contact form but ruins mobile landing page scroll
+  height: 100%;
 }
 .menu-icon {
   font-size: 24px;
@@ -1407,7 +1407,7 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 .my-name {
-  background-color: yellow;
+  background-color: green;
 }
 // .mapWrapper {
 //   // margin: 0px auto;

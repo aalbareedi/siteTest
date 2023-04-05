@@ -10,7 +10,7 @@
 }
 
 html {
-  height: auto;
+  height: 100%;
 }
 
 body {
@@ -64,6 +64,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   font-family: "Roboto", sans-serif;
+  height: 100%;
 }
 
 .menu-icon {
@@ -1821,7 +1822,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: yellow;
+  background-color: green;
 }
 
 .nav-dock {
