@@ -1822,7 +1822,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: yellow;
+  background-color: red;
 }
 
 .nav-dock {
