@@ -1829,6 +1829,10 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
+.my-name {
+  background-color: yellow;
+}
+
 .nav-dock {
   height: 62px;
   width: 100%;
@@ -2104,6 +2108,7 @@ input.contactFormInput:valid ~ .formIcon {
   #overview {
     height: calc(100vh - 62px);
   }
+  #home-dock-btn,
   [data-page="projects"] #projects-dock-btn,
   [data-page="skills"] #skills-dock-btn,
   [data-page="work"] #work-dock-btn,
@@ -2117,6 +2122,11 @@ input.contactFormInput:valid ~ .formIcon {
     display: block;
     border-bottom: 1px solid #e7e7ff;
   }
+  [data-page] #home-dock-btn {
+    border-bottom: none;
+    background: initial;
+    color: #e7e7ff;
+  }
   .menu-icon-btn {
     display: none;
   }
@@ -2128,9 +2138,11 @@ input.contactFormInput:valid ~ .formIcon {
     padding: 30px;
     scroll-margin: 400px;
   }
-  [data-page] .content,
-  .project-window {
+  [data-page] .content {
     padding-top: 64px;
+    padding-bottom: 62px;
+  }
+  .project-window {
     padding-bottom: 62px;
   }
   .project-window {
