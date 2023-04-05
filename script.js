@@ -97,8 +97,6 @@ window.addEventListener("resize", () => {
   } else {
     body.classList.add("menu-open");
   }
-
-  // navDock.style.bottom = "0";
 });
 
 let pageSize = document.querySelector(".pageSize");
@@ -137,4 +135,6 @@ setTimeout(() => {
   //   var fixedElementHeight = $(".fixed-bottom").outerHeight();
   //   $(".fixed-bottom").css("bottom", windowHeight - fixedElementHeight);
   // });
+
+  navDock.style.bottom = "0";
 }, 5000);
