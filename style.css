@@ -51,9 +51,11 @@ button {
 }
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   background-color: #7676e3;
   height: 64px;
   z-index: 1;
@@ -64,7 +66,6 @@ header {
   display: -ms-flexbox;
   display: flex;
   font-family: "Roboto", sans-serif;
-  height: 100%;
 }
 
 .menu-icon {
@@ -527,6 +528,7 @@ body.menu-open .hide-menu {
   margin-left: 72px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  padding-top: 64px;
 }
 
 .menu-open .content {
@@ -1822,7 +1824,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: blue;
+  background-color: pink;
 }
 
 .nav-dock {
@@ -2122,6 +2124,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .content {
     margin-left: initial;
+    padding-top: initial;
   }
   .tab-content {
     padding: 30px;

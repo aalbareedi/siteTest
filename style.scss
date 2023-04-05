@@ -63,8 +63,11 @@ button {
   text-underline-offset: 2px;
 }
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   background-color: #7676e3;
   height: $header-height;
   z-index: 1;
@@ -73,7 +76,7 @@ header {
   display: flex;
   font-family: "Roboto", sans-serif;
   // height: 100% added for contact form but ruins mobile landing page scroll
-  height: 100%;
+  // height: 100%;
 }
 .menu-icon {
   font-size: 24px;
@@ -422,6 +425,7 @@ body.menu-open .hide-menu {
   max-width: 100%;
   margin-left: $sidenav-close-width;
   transition: all 0.2s;
+  padding-top: $header-height;
 }
 .menu-open .content {
   margin-left: $sidenav-open-width;
@@ -1407,7 +1411,7 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 .my-name {
-  background-color: blue;
+  background-color: pink;
 }
 // .mapWrapper {
 //   // margin: 0px auto;
@@ -1677,6 +1681,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .content {
     margin-left: initial;
+    padding-top: initial;
   }
   .tab-content {
     padding: 30px;
