@@ -1829,12 +1829,8 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
-.my-name {
-  background-color: yellow;
-}
-
 .nav-dock {
-  height: 62px;
+  height: 72px;
   width: 100%;
   position: fixed;
   bottom: 0px;
@@ -1867,6 +1863,15 @@ input.contactFormInput:valid ~ .formIcon {
   height: 100%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 6px;
+}
+
+.dock-btn-text {
+  font-size: 14px;
 }
 
 .nav-logo-link {
@@ -2106,7 +2111,7 @@ input.contactFormInput:valid ~ .formIcon {
     display: flex;
   }
   #overview {
-    height: calc(100vh - 62px);
+    height: calc(100vh - 72px);
   }
   #home-dock-btn,
   [data-page="projects"] #projects-dock-btn,
@@ -2140,10 +2145,10 @@ input.contactFormInput:valid ~ .formIcon {
   }
   [data-page] .content {
     padding-top: 64px;
-    padding-bottom: 62px;
+    padding-bottom: 72px;
   }
   .project-window {
-    padding-bottom: 62px;
+    padding-bottom: 72px;
   }
   .project-window {
     left: initial;
@@ -2189,6 +2194,12 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 640px) {
+  [data-page] .content {
+    padding-bottom: 62px;
+  }
+  .dock-btn-text {
+    display: none;
+  }
   .skills-content {
     background-color: initial;
     padding: initial;
@@ -2221,6 +2232,7 @@ input.contactFormInput:valid ~ .formIcon {
     padding: 30px 20px;
   }
   .nav-dock {
+    height: 62px;
     display: none;
   }
   [data-page] .nav-dock {
