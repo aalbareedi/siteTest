@@ -113,7 +113,7 @@ window.addEventListener("resize", () => {
   }
 
   if (document.documentElement.offsetWidth <= 1100) {
-    body.classList.remove("menu-open");
+    // body.classList.remove("menu-open");
   } else {
     body.classList.add("menu-open");
   }
