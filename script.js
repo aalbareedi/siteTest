@@ -91,13 +91,23 @@ if (window.innerWidth <= 1100) {
 
 body.classList.remove("hidden");
 
-// window.addEventListener("resize", () => {
-//   if (window.innerWidth <= 1100) {
-//     body.classList.remove("menu-open");
-//   } else {
-//     body.classList.add("menu-open");
-//   }
-// });
+let isTouching = false;
+window.addEventListener("touchstart", () => {
+  isTouching = true;
+});
+window.addEventListener("touchend", () => {
+  isTouching = false;
+});
+
+window.addEventListener("resize", () => {
+  if (!isTouching) {
+    if (window.innerWidth <= 1100) {
+      body.classList.remove("menu-open");
+    } else {
+      body.classList.add("menu-open");
+    }
+  }
+});
 
 let pageSize = document.querySelector(".pageSize");
 
