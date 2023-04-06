@@ -94,7 +94,7 @@ body.classList.remove("hidden");
 let previousWidth = window.innerWidth;
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth == initialWidth) {
+  if (window.innerWidth == previousWidth) {
     return;
   }
   previousWidth = window.innerWidth;
