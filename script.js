@@ -125,16 +125,6 @@ const swiper = new Swiper(".swiper", {
 });
 
 setTimeout(() => {
-  // const navDock = document.querySelector(".nav-dock");
-  // const sidebar = document.querySelector(".sidebar");
-  // void navDock.offsetHeight;
-  // void sidebar.offsetHeight;
-  // void document.documentElement.offsetHeight;
-  // $(window).on("resize", function () {
-  //   var windowHeight = $(window).height();
-  //   var fixedElementHeight = $(".fixed-bottom").outerHeight();
-  //   $(".fixed-bottom").css("bottom", windowHeight - fixedElementHeight);
-  // });
-  // navDock.style.bottom = "0";
+  sidebar.classList.remove("hidden");
   navDock.classList.remove("hidden");
 }, 100);
