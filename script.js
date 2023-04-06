@@ -83,7 +83,7 @@ projectWindows.forEach((projectWindow) => {
   });
 });
 
-if (window.innerWidth <= 1100) {
+if (document.body.offsetWidth <= 1100) {
   body.classList.remove("menu-open");
 } else {
   body.classList.add("menu-open");
@@ -91,21 +91,11 @@ if (window.innerWidth <= 1100) {
 
 body.classList.remove("hidden");
 
-let isTouching = false;
-window.addEventListener("touchstart", () => {
-  isTouching = true;
-});
-window.addEventListener("touchend", () => {
-  isTouching = false;
-});
-
 window.addEventListener("resize", () => {
-  if (!isTouching) {
-    if (window.innerWidth <= 1100) {
-      body.classList.remove("menu-open");
-    } else {
-      body.classList.add("menu-open");
-    }
+  if (document.body.offsetWidth <= 1100) {
+    body.classList.remove("menu-open");
+  } else {
+    body.classList.add("menu-open");
   }
 });
 
