@@ -91,13 +91,20 @@ if (window.innerWidth <= 1100) {
 
 body.classList.remove("hidden");
 
-// window.addEventListener("resize", () => {
-//   if (document.querySelector("body").scrollWidth <= 1100) {
-//     body.classList.remove("menu-open");
-//   } else {
-//     body.classList.add("menu-open");
-//   }
-// });
+window.addEventListener("resize", () => {
+  const debug = document.querySelector(".debug");
+  debug.innerHTML = `
+  <div>clientWidth: ${document.documentElement.clientWidth}</div>
+  <div>offsetWidth: ${document.documentElement.offsetWidth}</div>
+  <div>scrollWidth: ${document.documentElement.scrollWidth}</div>
+  `;
+
+  if (document.documentElement.offsetWidth <= 1100) {
+    body.classList.remove("menu-open");
+  } else {
+    body.classList.add("menu-open");
+  }
+});
 
 let pageSize = document.querySelector(".pageSize");
 
