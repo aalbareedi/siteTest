@@ -98,6 +98,8 @@ debug.innerHTML = `
 <div>scrollWidth: ${document.documentElement.scrollWidth}</div>
 `;
 
+const initialWidth = document.documentElement.offsetWidth;
+
 window.addEventListener("resize", () => {
   const debug = document.querySelector(".debug");
   debug.innerHTML = `
@@ -105,6 +107,10 @@ window.addEventListener("resize", () => {
   <div>offsetWidth: ${document.documentElement.offsetWidth}</div>
   <div>scrollWidth: ${document.documentElement.scrollWidth}</div>
   `;
+
+  if (initialWidth != document.documentElement.offsetWidth) {
+    alert("IT CHANGED TO " + document.documentElement.offsetWidth);
+  }
 
   if (document.documentElement.offsetWidth <= 1100) {
     body.classList.remove("menu-open");
