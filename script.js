@@ -91,6 +91,13 @@ if (window.innerWidth <= 1100) {
 
 body.classList.remove("hidden");
 
+const debug = document.querySelector(".debug");
+debug.innerHTML = `
+<div>clientWidth: ${document.documentElement.clientWidth}</div>
+<div>offsetWidth: ${document.documentElement.offsetWidth}</div>
+<div>scrollWidth: ${document.documentElement.scrollWidth}</div>
+`;
+
 window.addEventListener("resize", () => {
   const debug = document.querySelector(".debug");
   debug.innerHTML = `
