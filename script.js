@@ -91,29 +91,16 @@ if (window.innerWidth <= 1100) {
 
 body.classList.remove("hidden");
 
-const debug = document.querySelector(".debug");
-debug.innerHTML = `
-<div>clientWidth: ${document.documentElement.clientWidth}</div>
-<div>offsetWidth: ${document.documentElement.offsetWidth}</div>
-<div>scrollWidth: ${document.documentElement.scrollWidth}</div>
-`;
-
-const initialWidth = document.documentElement.offsetWidth;
+let previousWidth = window.innerWidth;
 
 window.addEventListener("resize", () => {
-  const debug = document.querySelector(".debug");
-  debug.innerHTML = `
-  <div>clientWidth: ${document.documentElement.clientWidth}</div>
-  <div>offsetWidth: ${document.documentElement.offsetWidth}</div>
-  <div>scrollWidth: ${document.documentElement.scrollWidth}</div>
-  `;
-
-  if (initialWidth != document.documentElement.offsetWidth) {
-    alert("IT CHANGED TO " + document.documentElement.offsetWidth);
+  if (window.innerWidth == initialWidth) {
+    return;
   }
+  previousWidth = window.innerWidth;
 
-  if (document.documentElement.offsetWidth <= 1100) {
-    // body.classList.remove("menu-open");
+  if (window.innerWidth <= 1100) {
+    body.classList.remove("menu-open");
   } else {
     body.classList.add("menu-open");
   }
