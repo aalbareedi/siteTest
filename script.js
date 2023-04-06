@@ -83,7 +83,7 @@ projectWindows.forEach((projectWindow) => {
   });
 });
 
-if (document.body.offsetWidth <= 1100) {
+if (window.innerWidth <= 1100) {
   body.classList.remove("menu-open");
 } else {
   body.classList.add("menu-open");
@@ -92,7 +92,7 @@ if (document.body.offsetWidth <= 1100) {
 body.classList.remove("hidden");
 
 window.addEventListener("resize", () => {
-  if (document.body.offsetWidth <= 1100) {
+  if (document.querySelector("body").offsetWidth <= 1100) {
     body.classList.remove("menu-open");
   } else {
     body.classList.add("menu-open");
