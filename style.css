@@ -95,10 +95,6 @@ header {
   left: 0px;
 }
 
-.menu-icon-btn:hover {
-  color: #addcff;
-}
-
 .hide-icon {
   height: 18px;
   -webkit-transform: scale(-1, 1);
@@ -149,11 +145,6 @@ header {
           transform: rotate(90deg);
 }
 
-.menu-icon-btn:hover .toggle-nav-tooltip {
-  opacity: 1;
-  visibility: initial;
-}
-
 .nav-tooltip {
   text-align: center;
   display: -webkit-box;
@@ -195,11 +186,6 @@ header {
   border-color: #9da1e7 transparent transparent transparent;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-}
-
-.sidebar-link:hover .nav-tooltip {
-  opacity: 1;
-  visibility: initial;
 }
 
 .landing-title-wrapper {
@@ -253,24 +239,20 @@ header {
           transform: rotate(270deg);
 }
 
-.pause-button:hover .landing-skills-tooltip {
-  opacity: 1;
-  visibility: initial;
-}
-
-.is-paused .pause-tooltip {
+.is-paused .pause-tooltip,
+.play-tooltip,
+body.menu-open .show-menu,
+.hide-menu,
+.pause-button .play-icon,
+.is-paused .pause-icon,
+.toggle-skill-btn {
   display: none;
 }
 
-.play-tooltip {
-  display: none;
-}
-
-.pause-tooltip {
-  display: block;
-}
-
-.is-paused .play-tooltip {
+.pause-tooltip,
+.is-paused .play-tooltip,
+.show-menu,
+body.menu-open .hide-menu {
   display: block;
 }
 
@@ -420,14 +402,6 @@ body.menu-open .sidebar-link {
   background-color: #7676e3;
 }
 
-.sidebar-list-item:hover .sidebar-nav-box {
-  background-color: #e7e7ff;
-}
-
-.sidebar-list-item.active:hover .sidebar-nav-box {
-  background-color: #7676e3;
-}
-
 .sidebar-icon {
   width: 24px;
   height: 24px;
@@ -485,22 +459,6 @@ body.menu-open .sidebar {
 
 body.menu-open .sidebar-nav-box {
   padding-left: 18px;
-}
-
-body.menu-open .show-menu {
-  display: none;
-}
-
-.show-menu {
-  display: block;
-}
-
-body.menu-open .hide-menu {
-  display: block;
-}
-
-.hide-menu {
-  display: none;
 }
 
 .together {
@@ -653,16 +611,6 @@ body.menu-open .hide-menu {
   transition: all 0.2s;
 }
 
-.pause-button:hover {
-  border-color: #9292f8;
-  background: whitesmoke;
-}
-
-.pause-button .play-icon,
-.is-paused .pause-icon {
-  display: none;
-}
-
 .is-paused .play-icon {
   display: inline-block;
   padding-left: 2px;
@@ -695,11 +643,6 @@ body.menu-open .hide-menu {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-.skill-img-wrapper:hover .skill-img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
 }
 
 #landing-jquery-logo {
@@ -1107,13 +1050,6 @@ body.menu-open .hide-menu {
   text-decoration: none;
 }
 
-.project-window-btn:hover {
-  background: #ececff;
-  -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
-          box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
-  border-color: #a8a8e3;
-}
-
 .github-project-icon {
   font-size: 18px;
 }
@@ -1132,10 +1068,20 @@ body.menu-open .hide-menu {
   color: #7676e3;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-}
-
-.close-project-btn:hover {
-  background-color: #ccccee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 4px;
 }
 
 .project-item {
@@ -1148,11 +1094,6 @@ body.menu-open .hide-menu {
   background-color: #d7d7d7;
   position: relative;
   border: 3px solid #ceceff;
-}
-
-.project-item:hover {
-  -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
-          box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
 }
 
 .project-preview {
@@ -1465,10 +1406,6 @@ body.menu-open .hide-menu {
   color: #393838;
 }
 
-.web-skill-icon-link:hover .web-skill-icon {
-  background: #c1c1ec;
-}
-
 .web-skill-icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1512,10 +1449,6 @@ body.menu-open .hide-menu {
 
 #sass-skill-img {
   width: 34px;
-}
-
-.toggle-skill-btn {
-  display: none;
 }
 
 .time-line {
@@ -1650,10 +1583,6 @@ body.menu-open .hide-menu {
   background-color: #dbdbff;
 }
 
-.contact-entry:hover {
-  background-color: #ffffff;
-}
-
 .contact-icon {
   font-size: 20px;
   color: #7676e3;
@@ -1783,30 +1712,6 @@ input.contactFormInput:valid ~ .formIcon {
   opacity: 0;
 }
 
-.grid-item:hover {
-  border-color: #9292f8;
-  -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
-          box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
-  cursor: pointer;
-}
-
-.landing-contact-btn:hover {
-  border-color: #9292f8;
-}
-
-.landing-projects .grid-item-box:hover {
-  -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
-          box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
-}
-
-.landing-projects .grid-item-box:hover .landing-project-img {
-  border-color: #9292f8;
-}
-
-.project-btn:hover {
-  background-color: #ededed;
-}
-
 .swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
           transition-timing-function: linear !important;
@@ -1829,12 +1734,8 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
-.my-name {
-  background-color: red;
-}
-
 .nav-dock {
-  height: 72px;
+  height: 74px;
   width: 100%;
   position: fixed;
   bottom: 0px;
@@ -1917,6 +1818,81 @@ input.contactFormInput:valid ~ .formIcon {
   word-spacing: 1.6px;
   font-size: 16px;
   display: none;
+}
+
+.close-btn-text {
+  font-size: 14px;
+  display: none;
+}
+
+@media only screen and (hover: hover) {
+  .menu-icon-btn:hover {
+    color: #addcff;
+  }
+  .sidebar-link:hover .nav-tooltip {
+    opacity: 1;
+    visibility: initial;
+  }
+  .menu-icon-btn:hover .toggle-nav-tooltip {
+    opacity: 1;
+    visibility: initial;
+  }
+  .pause-button:hover .landing-skills-tooltip {
+    opacity: 1;
+    visibility: initial;
+  }
+  .sidebar-list-item:hover .sidebar-nav-box {
+    background-color: #e7e7ff;
+  }
+  .sidebar-list-item.active:hover .sidebar-nav-box {
+    background-color: #7676e3;
+  }
+  .close-project-btn:hover {
+    background-color: #ccccee;
+  }
+  .project-window-btn:hover {
+    background: #ececff;
+    -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+            box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+    border-color: #a8a8e3;
+  }
+  .skill-img-wrapper:hover .skill-img {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .pause-button:hover {
+    border-color: #9292f8;
+    background: whitesmoke;
+  }
+  .project-item:hover {
+    -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+            box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+  }
+  .grid-item:hover {
+    border-color: #9292f8;
+    -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+            box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+    cursor: pointer;
+  }
+  .landing-contact-btn:hover {
+    border-color: #9292f8;
+  }
+  .landing-projects .grid-item-box:hover {
+    -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+            box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+  }
+  .landing-projects .grid-item-box:hover .landing-project-img {
+    border-color: #9292f8;
+  }
+  .project-btn:hover {
+    background-color: #ededed;
+  }
+  .contact-entry:hover {
+    background-color: #ffffff;
+  }
+  .web-skill-icon-link:hover .web-skill-icon {
+    background: #c1c1ec;
+  }
 }
 
 @media only screen and (max-width: 1500px) {
@@ -2022,6 +1998,9 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 1300px) {
+  .close-btn-text {
+    display: initial;
+  }
   .skills-content-wrapper {
     padding: 0px 60px;
   }
@@ -2115,7 +2094,7 @@ input.contactFormInput:valid ~ .formIcon {
     display: flex;
   }
   #overview {
-    height: calc(100vh - 72px);
+    height: calc(100vh - 74px);
   }
   #home-dock-btn,
   [data-page="projects"] #projects-dock-btn,
@@ -2149,12 +2128,10 @@ input.contactFormInput:valid ~ .formIcon {
   }
   [data-page] .content {
     padding-top: 64px;
-    padding-bottom: 72px;
+    padding-bottom: 74px;
   }
   .project-window {
-    padding-bottom: 72px;
-  }
-  .project-window {
+    padding-bottom: 74px;
     left: initial;
   }
   .skills-content-wrapper {
@@ -2209,7 +2186,7 @@ input.contactFormInput:valid ~ .formIcon {
     padding: initial;
   }
   .project-window {
-    left: initial;
+    padding-bottom: 62px;
   }
   .project-window-btns {
     -webkit-box-pack: center;
