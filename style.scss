@@ -7,8 +7,8 @@ $sidenav-open-width: 260px;
 $sidenav-close-width: 72px;
 $contact-btn-height: 64px;
 $nav-dock-height-mobile: 62px;
-$nav-dock-height-tablet: 74px;
-$project-window-title-height: 68px;
+$nav-dock-height-tablet: 76px;
+$project-window-title-height: 76px;
 
 * {
   /* Remove Gray Highlight When Tapping Links in Mobile Safari */
@@ -804,8 +804,8 @@ body.menu-open .sidebar-nav-box {
   position: absolute;
   right: 0px;
   top: 0px;
-  width: 68px;
-  height: 68px;
+  width: $project-window-title-height;
+  height: $project-window-title-height;
   border-radius: 0px 20px 0px 0px;
   font-size: 24px;
   border: none;
@@ -1321,7 +1321,7 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 .my-name {
-  background-color: yellow;
+  background-color: red;
 }
 // .mapWrapper {
 //   // margin: 0px auto;

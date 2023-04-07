@@ -948,7 +948,7 @@ body.menu-open .sidebar-nav-box {
   font-size: 20px;
   line-height: 24px;
   word-spacing: 0.4px;
-  height: 68px;
+  height: 76px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1059,8 +1059,8 @@ body.menu-open .sidebar-nav-box {
   position: absolute;
   right: 0px;
   top: 0px;
-  width: 68px;
-  height: 68px;
+  width: 76px;
+  height: 76px;
   border-radius: 0px 20px 0px 0px;
   font-size: 24px;
   border: none;
@@ -1735,11 +1735,11 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: yellow;
+  background-color: red;
 }
 
 .nav-dock {
-  height: 74px;
+  height: 76px;
   width: 100%;
   position: fixed;
   bottom: 0px;
@@ -2039,7 +2039,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .project-window {
     padding: 0px;
-    padding-top: calc(64px + 68px);
+    padding-top: calc(64px + 76px);
     height: initial;
     position: fixed;
     left: 72px;
@@ -2098,7 +2098,7 @@ input.contactFormInput:valid ~ .formIcon {
     display: flex;
   }
   #overview {
-    height: calc(100vh - 74px);
+    height: calc(100vh - 76px);
   }
   #home-dock-btn,
   [data-page="projects"] #projects-dock-btn,
@@ -2132,10 +2132,10 @@ input.contactFormInput:valid ~ .formIcon {
   }
   [data-page] .content {
     padding-top: 64px;
-    padding-bottom: 74px;
+    padding-bottom: 76px;
   }
   .project-window {
-    padding-bottom: 74px;
+    padding-bottom: 76px;
     left: initial;
   }
   .skills-content-wrapper {
