@@ -1320,9 +1320,9 @@ input.contactFormInput:valid ~ .formIcon {
 .landing-mobile-icon {
   display: none !important;
 }
-.my-name {
-  background-color: red;
-}
+// .my-name {
+//   background-color: red;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1364,7 +1364,7 @@ input.contactFormInput:valid ~ .formIcon {
   height: 100%;
   transition: all 0.5s;
   flex-direction: column;
-  row-gap: 6px;
+  row-gap: 8px;
 }
 .dock-btn-text {
   font-size: 14px;
@@ -1630,6 +1630,9 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 940px) {
+  .form-wrapper {
+    margin: 0px auto;
+  }
   .sidebar {
     display: none;
   }
@@ -1648,7 +1651,8 @@ input.contactFormInput:valid ~ .formIcon {
   [data-page="skills"] #skills-dock-btn,
   [data-page="work"] #work-dock-btn,
   [data-page="edu"] #edu-dock-btn,
-  [data-page="resume"] #resume-dock-btn {
+  [data-page="resume"] #resume-dock-btn,
+  [data-page="contact"] #contact-dock-btn {
     background: #a0a0ff;
     color: #ffffff;
     border-bottom: 4px solid #e7e7ff;
@@ -1895,6 +1899,9 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 500px) {
+  .nav-dock a[href$="/contact"] {
+    display: none;
+  }
   .project-window-points {
     padding: 30px 26px 38px 26px;
   }
