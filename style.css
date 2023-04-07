@@ -1255,6 +1255,9 @@ body.menu-open .sidebar-nav-box {
   padding: 0px 28px;
   color: white;
   border-radius: 0px 0px 20px 0px;
+  border: 2px solid #ceceff;
+  border-top: none;
+  border-left: none;
 }
 
 .project-btns {
