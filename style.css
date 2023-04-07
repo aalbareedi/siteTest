@@ -1240,6 +1240,23 @@ body.menu-open .sidebar-nav-box {
   pointer-events: none;
 }
 
+.project-title {
+  background-color: #7676e3;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 28px;
+  color: white;
+  border-radius: 0px 0px 20px 0px;
+}
+
 .project-btns {
   height: 56px;
   display: -webkit-box;
