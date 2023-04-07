@@ -188,18 +188,6 @@ header {
           transform: rotate(90deg);
 }
 
-.landing-title-wrapper {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
-}
-
 .landing-skills-tooltip {
   text-align: center;
   display: -webkit-box;
@@ -559,10 +547,23 @@ body.menu-open .sidebar-nav-box {
   min-height: 54px;
 }
 
+.landing-title-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  height: 54px;
+  border-bottom: 2px solid #d1d1fa;
+}
+
 .landing-grid-title {
   position: relative;
   background-color: #e1e1fb;
-  height: 54px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -575,6 +576,7 @@ body.menu-open .sidebar-nav-box {
   font-weight: bold;
   word-spacing: 0.8px;
   width: 100%;
+  height: 100%;
   letter-spacing: 0px;
 }
 
@@ -1245,7 +1247,7 @@ body.menu-open .sidebar-nav-box {
   position: absolute;
   top: 0px;
   left: 0px;
-  height: 56px;
+  height: 58px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1261,7 +1263,7 @@ body.menu-open .sidebar-nav-box {
 }
 
 .project-btns {
-  height: 56px;
+  height: 58px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1754,6 +1756,10 @@ input.contactFormInput:valid ~ .formIcon {
   display: none !important;
 }
 
+.my-name {
+  background-color: yellow;
+}
+
 .nav-dock {
   height: 76px;
   width: 100%;
@@ -2162,7 +2168,7 @@ input.contactFormInput:valid ~ .formIcon {
     padding: initial;
   }
   .project-btns {
-    height: 56px;
+    height: 58px;
   }
   .project-btn {
     -webkit-box-orient: horizontal;
@@ -2304,6 +2310,7 @@ input.contactFormInput:valid ~ .formIcon {
         -ms-flex-pack: center;
             justify-content: center;
     padding-top: 2px;
+    border-bottom: none;
   }
   .landing-intro-grid {
     height: initial;
