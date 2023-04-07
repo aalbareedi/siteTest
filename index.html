@@ -80,7 +80,7 @@
       <div class="nav-overlay invisible"></div>
       <aside class="sidebar hidden" data-sidebar>
         <div class="top-sidebar">
-          <a href="#overview" class="channel-logo">
+          <a href="/overview" class="channel-logo">
             <img src="./nameLogo.svg" alt="Channel Logo" />
           </a>
           <div class="hidden-sidebar" id="channel-name">Amer Albareedi</div>
@@ -89,7 +89,7 @@
         <div class="middle-sidebar">
           <ul class="sidebar-list">
             <li class="sidebar-list-item">
-              <a href="#overview" class="sidebar-link">
+              <a href="/overview" class="sidebar-link">
                 <div class="sidebar-nav-box">
                   <i class="fa-solid fa-house-chimney sidebar-icon"></i>
                   <div class="hidden-sidebar">Overview</div>
@@ -98,7 +98,7 @@
               </a>
             </li>
             <li class="sidebar-list-item">
-              <a href="#projects" class="sidebar-link">
+              <a href="/projects" class="sidebar-link">
                 <div class="sidebar-nav-box">
                   <i class="fa-regular fa-folder-open sidebar-icon"></i>
                   <div class="hidden-sidebar">Projects</div>
@@ -107,7 +107,7 @@
               </a>
             </li>
             <li class="sidebar-list-item">
-              <a href="#skills" class="sidebar-link">
+              <a href="/skills" class="sidebar-link">
                 <div class="sidebar-nav-box">
                   <i class="fas fa-list sidebar-icon"></i>
                   <div class="hidden-sidebar">Skills</div>
@@ -116,7 +116,7 @@
               </a>
             </li>
             <li class="sidebar-list-item">
-              <a href="#work" class="sidebar-link">
+              <a href="/work" class="sidebar-link">
                 <div class="sidebar-nav-box">
                   <i class="fas fa-chart-line sidebar-icon"></i>
                   <div class="hidden-sidebar">Work Experience</div>
@@ -125,7 +125,7 @@
               </a>
             </li>
             <li class="sidebar-list-item">
-              <a href="#edu" class="sidebar-link">
+              <a href="/edu" class="sidebar-link">
                 <div class="sidebar-nav-box">
                   <i class="fa-solid fa-graduation-cap sidebar-icon"></i>
                   <div class="hidden-sidebar">Education</div>
@@ -134,7 +134,7 @@
               </a>
             </li>
             <li class="sidebar-list-item">
-              <a href="#resume" class="sidebar-link">
+              <a href="/resume" class="sidebar-link">
                 <div class="sidebar-nav-box">
                   <i class="fa-solid fa-address-card sidebar-icon"></i>
                   <div class="hidden-sidebar">Resume</div>
@@ -143,7 +143,7 @@
               </a>
             </li>
             <li class="sidebar-list-item">
-              <a href="#contact" class="sidebar-link">
+              <a href="/contact" class="sidebar-link">
                 <div class="sidebar-nav-box">
                   <i class="fa-solid fa-comment sidebar-icon"></i>
                   <div class="hidden-sidebar">Contact Me</div>
@@ -192,7 +192,7 @@
       </aside>
       <main class="content">
         <header class="header">
-          <a class="nav-logo-link" href="#overview">
+          <a class="nav-logo-link" href="/overview">
             <img
               src="./nameLogo.svg"
               class="nav-logo"
@@ -245,19 +245,20 @@
             </div>
           </div>
           <div class="landing-intro-grid">
-            <a href="#projects" class="grid-item landing-projects">
+            <div class="grid-item landing-projects">
+              <!-- <a href="/projects" class="grid-item landing-projects"> -->
               <div class="landing-title-wrapper">
                 <i class="fa-regular fa-folder-open landing-mobile-icon"></i>
                 <div class="landing-grid-title">Projects</div>
               </div>
               <div class="grid-item-content">
-                <div class="grid-item-box">
+                <a class="grid-item-box" href="/projects/braces-specialist">
                   <div
                     class="landing-project-img"
                     id="landing-braces-img"
                   ></div>
                   <div class="landing-project-title">Full Website Makeover</div>
-                </div>
+                </a>
                 <div class="grid-item-box">
                   <div
                     class="landing-project-img"
@@ -266,8 +267,9 @@
                   <div class="landing-project-title">React Portfolio v1</div>
                 </div>
               </div>
-            </a>
-            <a href="#skills" class="grid-item landing-skills">
+              <!-- </a> -->
+            </div>
+            <a href="/skills" class="grid-item landing-skills">
               <div class="landing-title-wrapper">
                 <i class="fas fa-list landing-mobile-icon"></i>
                 <div class="landing-grid-title">
@@ -346,7 +348,7 @@
                 </div>
               </div>
             </a>
-            <a href="#work" class="grid-item landing-exp">
+            <a href="/work" class="grid-item landing-exp">
               <div class="landing-title-wrapper">
                 <i class="fas fa-chart-line landing-mobile-icon"></i>
                 <div class="landing-grid-title">
@@ -418,7 +420,7 @@
                 </div>
               </div>
             </a>
-            <a href="#edu" class="grid-item landing-edu">
+            <a href="/edu" class="grid-item landing-edu">
               <div class="landing-title-wrapper">
                 <i class="fa-solid fa-graduation-cap landing-mobile-icon"></i>
                 <div class="landing-grid-title">Education</div>
@@ -471,7 +473,7 @@
             </a>
             <div class="landing-contact">
               <a
-                href="#resume"
+                href="/resume"
                 class="landing-contact-btn"
                 id="contact-resume-btn"
               >
@@ -483,7 +485,7 @@
                 </div>
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 class="landing-contact-btn"
                 id="contact-me-btn"
               >
@@ -504,10 +506,15 @@
               <div class="project-preview"></div>
               <div class="preview-overlay">
                 <div class="project-btns">
-                  <button class="project-btn" data-modal-id="braces-specialist">
+                  <!-- <button class="project-btn" data-modal-id="braces-specialist">
                     <i class="fa-solid fa-circle-info"></i>
                     Details
-                  </button>
+                  </button> -->
+                  <!-- data-modal-id="braces-specialist" -->
+                  <a class="project-btn" href="/projects/braces-specialist">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Details
+                  </a>
                   <a
                     class="project-btn"
                     target="_blank"
@@ -880,7 +887,12 @@
             </form>
           </div>
         </div>
-        <div id="braces-specialist" class="project-window hidden">
+        <div
+          id="braces-specialist"
+          data-path="/projects/braces-specialist"
+          data-root="/projects"
+          class="project-window hidden"
+        >
           <div class="project-window-blur"></div>
           <div class="project-window-content">
             <div class="project-window-title">Orthodontic Specialty Center</div>
@@ -1082,37 +1094,37 @@
         </div> -->
       </main>
       <div class="nav-dock hidden">
-        <a href="#overview" class="dock-btn-link">
+        <a href="/overview" class="dock-btn-link">
           <div class="dock-btn" id="home-dock-btn">
             <i class="fa-solid fa-house-chimney"></i>
             <div class="dock-btn-text">Home</div>
           </div>
         </a>
-        <a href="#projects" class="dock-btn-link">
+        <a href="/projects" class="dock-btn-link">
           <div class="dock-btn" id="projects-dock-btn">
             <i class="fa-regular fa-folder-open"></i>
             <div class="dock-btn-text">Projects</div>
           </div>
         </a>
-        <a href="#skills" class="dock-btn-link">
+        <a href="/skills" class="dock-btn-link">
           <div class="dock-btn" id="skills-dock-btn">
             <i class="fas fa-list"></i>
             <div class="dock-btn-text">Skills</div>
           </div>
         </a>
-        <a href="#work" class="dock-btn-link">
+        <a href="/work" class="dock-btn-link">
           <div class="dock-btn" id="work-dock-btn">
             <i class="fas fa-chart-line"></i>
             <div class="dock-btn-text">Experience</div>
           </div>
         </a>
-        <a href="#edu" class="dock-btn-link">
+        <a href="/edu" class="dock-btn-link">
           <div class="dock-btn" id="edu-dock-btn">
             <i class="fa-solid fa-graduation-cap"></i>
             <div class="dock-btn-text">Education</div>
           </div>
         </a>
-        <a href="#resume" class="dock-btn-link">
+        <a href="/resume" class="dock-btn-link">
           <div class="dock-btn" id="resume-dock-btn">
             <i class="fa-solid fa-address-card"></i>
             <div class="dock-btn-text">Resume</div>

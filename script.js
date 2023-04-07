@@ -57,10 +57,7 @@ projectBtns.forEach((projectBtn) => {
   }
 
   projectBtn.addEventListener("click", () => {
-    document.querySelector(`#${id}`).classList.remove("hidden");
-
-    // html.classList.add("overflow-hidden");
-    body.classList.add("overflow-hidden");
+    showModal(document.querySelector(`#${id}`));
   });
 });
 
@@ -68,20 +65,36 @@ projectWindows.forEach((projectWindow) => {
   const closeProjectBtn = projectWindow.querySelector(".close-project-btn");
 
   closeProjectBtn.addEventListener("click", () => {
-    projectWindow.classList.add("hidden");
-    html.classList.remove("overflow-hidden");
-    body.classList.remove("overflow-hidden");
+    hideModal(projectWindow);
   });
 
   projectWindow.addEventListener("click", (e) => {
     // If `projectWindow` itself was just clicked, rather than a descendent
     if (e.target == e.currentTarget) {
-      projectWindow.classList.add("hidden");
-      html.classList.remove("overflow-hidden");
-      body.classList.remove("overflow-hidden");
+      hideModal(projectWindow);
     }
   });
 });
+
+function showModal(modal) {
+  if (modal) {
+    modal.classList.remove("hidden");
+  }
+  // html.classList.add("overflow-hidden");
+  body.classList.add("overflow-hidden");
+}
+
+function hideModal(modal) {
+  if (modal) {
+    modal.classList.add("hidden");
+
+    if (modal.dataset.root) {
+      history.replaceState({}, null, modal.dataset.root);
+    }
+  }
+  // html.classList.remove("overflow-hidden");
+  body.classList.remove("overflow-hidden");
+}
 
 if (window.innerWidth <= 1100) {
   body.classList.remove("menu-open");

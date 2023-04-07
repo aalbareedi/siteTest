@@ -7,16 +7,24 @@ const html = document.querySelector("html");
 const body = document.querySelector("body");
 
 // Make the links work
-document.querySelectorAll(".tab-content").forEach((page) => {
-  document.querySelectorAll(`[href='#${page.id}']`).forEach((a) => {
-    a.onclick = (e) => {
-      e.preventDefault();
-      const page = a.hash.substr(1);
-      history.pushState({}, null, `${root}/${page}`);
-      showPageFromAddress();
-      window.onpopstate();
-    };
-  });
+document.querySelectorAll(".tab-content, [data-path]").forEach((page) => {
+  document
+    .querySelectorAll(`[href='${page.dataset.path || "/" + page.id}']`)
+    .forEach((a) => {
+      a.onclick = (e) => {
+        e.preventDefault();
+        const url = new URL(a.href);
+        const pageName = url.hash.substring(1) || url.pathname.substring(1);
+
+        if (page.dataset.root) {
+          history.pushState({}, null, page.dataset.root);
+        }
+
+        history.pushState({}, null, `${root}/${pageName}`);
+        showPageFromAddress();
+        window.onpopstate();
+      };
+    });
 });
 
 function showPageFromAddress() {
@@ -28,21 +36,27 @@ function showPageFromAddress() {
 
   // Cut off the file name
   if (location.pathname == "/index.html") {
-    history.pushState({}, null, `${root}/`);
+    history.replaceState({}, null, `${root}/`);
   }
 
   const homepageId = "overview";
   const notFoundPageId = "not-found";
 
-  // Get the page name or "route" from the address bar
-  const pageName = location.pathname.split("/").pop().replaceAll("/", "");
+  const parts = location.pathname.split("/");
+  parts.shift();
 
-  if (pageName == homepageId) {
-    history.pushState({}, null, `${root}/`);
+  // Get the page name or "route" from the address bar
+  const pageName = parts[0];
+
+  // Show any element with data-path equal to the address bar path
+  const element = document.querySelector(`[data-path='${location.pathname}']`);
+  if (element) {
+    element.classList.remove("hidden");
   }
 
-  // console.log("location.pathname: ", location.pathname);
-  // console.log("pageName: ", pageName);
+  if (pageName == homepageId) {
+    history.replaceState({}, null, `${root}/`);
+  }
 
   // Find the page, default to 404
   const page =
@@ -58,7 +72,7 @@ function showPageFromAddress() {
   }
 
   const link = document.querySelector(
-    `.middle-sidebar [href='#${pageName || homepageId}']`
+    `.middle-sidebar [href='/${pageName || homepageId}']`
   );
 
   if (link) {
