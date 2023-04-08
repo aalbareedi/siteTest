@@ -420,7 +420,7 @@ body.menu-open .sidebar-link {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 58px;
+  height: 60px;
   position: relative;
   padding: 2px 6px;
 }
@@ -1260,6 +1260,7 @@ body.menu-open .sidebar-nav-box {
   border: 2px solid #ceceff;
   border-top: none;
   border-left: none;
+  font-size: 18px;
 }
 
 .project-btns {
@@ -1321,10 +1322,11 @@ body.menu-open .sidebar-nav-box {
   margin: 0 auto;
   padding: 40px;
   border-radius: 20px;
+  border: 3px solid #dadaff;
 }
 
 .web-skills {
-  background-color: #c1c1ec;
+  background-color: #bbbbff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1334,9 +1336,9 @@ body.menu-open .sidebar-nav-box {
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
-  -webkit-column-gap: 2px;
-          column-gap: 2px;
-  padding: 2px;
+  -webkit-column-gap: 3px;
+          column-gap: 3px;
+  padding: 3px;
 }
 
 .skills-content-title {
@@ -1754,10 +1756,6 @@ input.contactFormInput:valid ~ .formIcon {
 
 .landing-mobile-icon {
   display: none !important;
-}
-
-.my-name {
-  background-color: yellow;
 }
 
 .nav-dock {
@@ -2214,6 +2212,7 @@ input.contactFormInput:valid ~ .formIcon {
   .skills-content {
     background-color: initial;
     padding: initial;
+    border: none;
   }
   .project-window {
     padding-bottom: 62px;
