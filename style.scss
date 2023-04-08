@@ -624,7 +624,7 @@ body.menu-open .sidebar-nav-box {
       rgba(188, 188, 188, 0.2),
       rgba(55, 55, 132, 0.99) 74%
     ),
-    url("./orthoImg.png");
+    url("./braces1.png");
 }
 #landing-portfolio-img {
   // background-image: url("./portfolioImg.png");
@@ -641,6 +641,7 @@ body.menu-open .sidebar-nav-box {
   top: 18px;
   left: 20px;
   color: #f0f0f0;
+  word-spacing: 0.4px;
 }
 .tab-content {
   position: absolute;
@@ -844,7 +845,7 @@ body.menu-open .sidebar-nav-box {
   transition: all 0.2s;
 }
 #osc-project .project-preview {
-  background-image: url("./orthoImg.png");
+  background-image: url("./braces1.png");
 }
 #portfolio-project .project-preview {
   background-image: url("./portfolioImg.png");
@@ -940,11 +941,12 @@ body.menu-open .sidebar-nav-box {
   align-items: center;
   padding: 0px 28px;
   color: white;
-  border-radius: 0px 0px 20px 0px;
+  border-radius: 0px 0px 12px 0px;
   border: 2px solid #ceceff;
   border-top: none;
   border-left: none;
   font-size: 18px;
+  word-spacing: 0.4px;
 }
 .project-btns {
   height: 58px;
