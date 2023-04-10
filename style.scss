@@ -60,7 +60,7 @@ header {
   // width: 100%;
   background-color: #7676e3;
   height: $header-height;
-  z-index: 1;
+  z-index: 10;
   left: $sidenav-close-width;
   transition: all 0.2s;
 }
@@ -221,7 +221,7 @@ body.menu-open .hide-menu {
   transition: width 200ms ease-in-out;
   background-color: whitesmoke;
   height: 100%;
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   top: 0;
   // height: 100vh;
@@ -1350,7 +1350,7 @@ input.contactFormInput:valid ~ .formIcon {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  z-index: 2;
   display: none;
   transition: all 0.2s;
 }
@@ -1366,7 +1366,7 @@ input.contactFormInput:valid ~ .formIcon {
   // transition: all 0.3s;
 }
 .my-name {
-  background-color: yellow;
+  background-color: orange;
 }
 // .mapWrapper {
 //   // margin: 0px auto;

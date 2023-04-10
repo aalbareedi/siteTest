@@ -57,7 +57,7 @@ header {
   right: 0;
   background-color: #7676e3;
   height: 64px;
-  z-index: 1;
+  z-index: 10;
   left: 72px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -269,7 +269,7 @@ body.menu-open .hide-menu {
   transition: width 200ms ease-in-out;
   background-color: whitesmoke;
   height: 100%;
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   top: 0;
   height: 100%;
@@ -1765,7 +1765,7 @@ input.contactFormInput:valid ~ .formIcon {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  z-index: 2;
   display: none;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -1783,7 +1783,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: yellow;
+  background-color: orange;
 }
 
 .nav-dock {
