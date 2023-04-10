@@ -20,7 +20,7 @@ document.querySelectorAll(".tab-content, [data-path]").forEach((page) => {
           history.pushState({}, null, page.dataset.root);
         }
 
-        history.pushState({}, null, `${root}/${pageName}`);
+        history.pushState({}, null, `${root.origin}/${pageName}`);
         showPageFromAddress();
         window.onpopstate();
       };
@@ -45,7 +45,7 @@ function showPageFromAddress() {
   // Cut off the file name
   if (parts[parts.length - 1] == "index.html") {
     parts.pop();
-    history.replaceState({}, null, `${root}/`);
+    history.replaceState({}, null, `${root}`);
   }
 
   const homepageId = "overview";
@@ -61,7 +61,7 @@ function showPageFromAddress() {
   }
 
   if (pageName == homepageId) {
-    history.replaceState({}, null, `${root}/`);
+    history.replaceState({}, null, `${root}`);
   }
 
   // Find the page, default to 404
