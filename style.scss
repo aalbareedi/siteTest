@@ -1246,19 +1246,6 @@ body.menu-open .sidebar-nav-box {
   width: 100%;
   position: relative;
 }
-// .inputPlaceholder {
-//   position: absolute;
-//   top: -30px;
-//   left: 0px;
-//   font-size: 20px;
-//   letter-spacing: 0.5px;
-//   word-spacing: 0.5px;
-//   color: #9a9ae7;
-//   pointer-events: none;
-//   // transition: top 0.5s, font-size 0.5s, color 0.5s;
-//   transition: all 0.4s;
-//   font-family: "Roboto", sans-serif;
-// }
 .formIcon {
   pointer-events: none;
   position: absolute;
@@ -1363,11 +1350,10 @@ input.contactFormInput:valid ~ .formIcon {
   left: 16px;
   z-index: 1;
   padding-bottom: 2px;
-  // transition: all 0.3s;
 }
-.my-name {
-  background-color: orange;
-}
+// .my-name {
+//   background-color: red;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1523,27 +1509,19 @@ input.contactFormInput:valid ~ .formIcon {
     grid-template-rows: repeat(4, auto);
     // height: calc(100% - #{$intro-title-height});
   }
-  // .projects-content-grid {
-  //   grid-template-columns: repeat(2, minmax(0, 1fr));
-  // }
   .landing-skills {
-    // grid-area: 3 / 1 / 4 / 4;
     grid-area: 4 / 1 / 5 / 2;
   }
   .landing-contact {
-    // grid-area: 3 / 4 / 4 / 5;
     display: none;
   }
   .landing-projects {
-    // grid-area: 1 / 1 / 3 / 3;
     grid-area: 1 / 1 / 4 / 2;
   }
   .landing-edu {
-    // grid-area: 2 / 3 / 3 / 5;
     grid-area: 3 / 2 / 5 / 3;
   }
   .landing-exp {
-    // grid-area: 1 / 3 / 2 / 5;
     grid-area: 1 / 2 / 3 / 3;
   }
   .landing-skills-content {
@@ -1557,6 +1535,7 @@ input.contactFormInput:valid ~ .formIcon {
     background-color: initial;
     row-gap: 30px;
     padding: initial;
+    border-radius: initial;
   }
   .web-skill-item:first-of-type,
   .web-skill-item:last-of-type {

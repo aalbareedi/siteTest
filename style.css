@@ -1782,10 +1782,6 @@ input.contactFormInput:valid ~ .formIcon {
   padding-bottom: 2px;
 }
 
-.my-name {
-  background-color: orange;
-}
-
 .nav-dock {
   height: 76px;
   width: 100%;
@@ -1999,6 +1995,7 @@ input.contactFormInput:valid ~ .formIcon {
     background-color: initial;
     row-gap: 30px;
     padding: initial;
+    border-radius: initial;
   }
   .web-skill-item:first-of-type,
   .web-skill-item:last-of-type {
