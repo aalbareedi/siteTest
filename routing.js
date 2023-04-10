@@ -20,7 +20,7 @@ document.querySelectorAll(".tab-content, [data-path]").forEach((page) => {
           history.pushState({}, null, page.dataset.root);
         }
 
-        history.pushState({}, null, `${root.origin}/${pageName}`);
+        history.pushState({}, null, `${root}/${pageName}`);
         showPageFromAddress();
         window.onpopstate();
       };
@@ -43,15 +43,16 @@ function showPageFromAddress() {
   const path = "/" + parts.join("/");
 
   // Cut off the file name
-  if (parts[parts.length - 1] == "/index.html") {
-    history.replaceState({}, null, `${root.origin}/`);
+  if (parts[parts.length - 1] == "index.html") {
+    parts.pop();
+    history.replaceState({}, null, `${root}/`);
   }
 
   const homepageId = "overview";
   const notFoundPageId = "not-found";
 
   // Get the page name or "route" from the address bar
-  const pageName = parts[0];
+  const pageName = parts[0] || homepageId;
 
   // Show any element with data-path equal to the address bar path
   const element = document.querySelector(`[data-path='${path}']`);
@@ -60,7 +61,7 @@ function showPageFromAddress() {
   }
 
   if (pageName == homepageId) {
-    history.replaceState({}, null, `${root.origin}/`);
+    history.replaceState({}, null, `${root}/`);
   }
 
   // Find the page, default to 404
@@ -102,9 +103,11 @@ function showPageFromAddress() {
 }
 
 const iframe = document.querySelector("#resume iframe");
-iframe.onload = () => {
-  resizeResume();
-};
+if (iframe) {
+  iframe.onload = () => {
+    resizeResume();
+  };
+}
 
 window.addEventListener("resize", resizeResume);
 
