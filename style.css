@@ -513,7 +513,7 @@ body.menu-open .sidebar-nav-box {
 .title-wrapper {
   margin-bottom: 40px;
   position: relative;
-  padding-left: 44px;
+  padding-left: 40px;
 }
 
 .title-text {
@@ -527,7 +527,7 @@ body.menu-open .sidebar-nav-box {
 .title-text-icon {
   position: absolute;
   top: 3px;
-  left: 0px;
+  left: -5px;
   font-size: 26px;
   color: #7676e3;
 }
@@ -1779,10 +1779,6 @@ input.contactFormInput:valid ~ .formIcon {
   left: 16px;
   z-index: 1;
   padding-bottom: 2px;
-}
-
-.my-name {
-  background-color: pink;
 }
 
 .nav-dock {

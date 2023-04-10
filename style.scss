@@ -404,7 +404,7 @@ body.menu-open .sidebar-nav-box {
 .title-wrapper {
   margin-bottom: 40px;
   position: relative;
-  padding-left: 44px;
+  padding-left: 40px;
 }
 .title-text {
   color: #393838;
@@ -416,7 +416,7 @@ body.menu-open .sidebar-nav-box {
 .title-text-icon {
   position: absolute;
   top: 3px;
-  left: 0px;
+  left: -5px;
   font-size: 26px;
   color: #7676e3;
 }
@@ -1363,9 +1363,9 @@ input.contactFormInput:valid ~ .formIcon {
   padding-bottom: 2px;
   // transition: all 0.3s;
 }
-.my-name {
-  background-color: pink;
-}
+// .my-name {
+//   background-color: pink;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
