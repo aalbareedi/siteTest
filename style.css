@@ -1634,6 +1634,7 @@ body.menu-open .sidebar-nav-box {
   border-radius: 10px;
   max-width: 480px;
   width: 100%;
+  border: 3px solid #bbbbff;
 }
 
 .formOption {
@@ -1685,7 +1686,7 @@ body.menu-open .sidebar-nav-box {
 }
 
 .contactFormInput {
-  background-color: initial;
+  background-color: #ebebff;
   border: 3px solid #9a9ae7;
   width: 100%;
   outline: none;
@@ -1779,6 +1780,10 @@ input.contactFormInput:valid ~ .formIcon {
   left: 16px;
   z-index: 1;
   padding-bottom: 2px;
+}
+
+.my-name {
+  background-color: yellow;
 }
 
 .nav-dock {
