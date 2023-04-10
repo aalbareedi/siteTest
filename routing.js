@@ -1,7 +1,7 @@
 // Dependencies:
 // Web server must redirect all requests to the SPA (usually index.html)
 
-const root = location.href.split("/").slice(0, -1).join("/");
+const root = new URL(location.href.split("/").slice(0, -1).join("/"));
 
 const html = document.querySelector("html");
 const body = document.querySelector("body");
@@ -20,7 +20,7 @@ document.querySelectorAll(".tab-content, [data-path]").forEach((page) => {
           history.pushState({}, null, page.dataset.root);
         }
 
-        history.pushState({}, null, `${root}/${pageName}`);
+        history.pushState({}, null, `${root.origin}/${pageName}`);
         showPageFromAddress();
         window.onpopstate();
       };
@@ -34,28 +34,33 @@ function showPageFromAddress() {
     body.classList.remove("overflow-hidden");
   });
 
+  const parts = location.pathname.split("/");
+  parts.shift();
+  if ("/" + parts[0] == root.pathname) {
+    parts.shift();
+  }
+
+  const path = "/" + parts.join("/");
+
   // Cut off the file name
-  if (location.pathname == "/index.html") {
-    history.replaceState({}, null, `${root}/`);
+  if (parts[parts.length - 1] == "/index.html") {
+    history.replaceState({}, null, `${root.origin}/`);
   }
 
   const homepageId = "overview";
   const notFoundPageId = "not-found";
 
-  const parts = location.pathname.split("/");
-  parts.shift();
-
   // Get the page name or "route" from the address bar
   const pageName = parts[0];
 
   // Show any element with data-path equal to the address bar path
-  const element = document.querySelector(`[data-path='${location.pathname}']`);
+  const element = document.querySelector(`[data-path='${path}']`);
   if (element) {
     element.classList.remove("hidden");
   }
 
   if (pageName == homepageId) {
-    history.replaceState({}, null, `${root}/`);
+    history.replaceState({}, null, `${root.origin}/`);
   }
 
   // Find the page, default to 404

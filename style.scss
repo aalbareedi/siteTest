@@ -569,7 +569,7 @@ body.menu-open .sidebar-nav-box {
   border-radius: 10px;
   padding: 16px 18px;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 24px;
   color: #393838;
 }
 .landing-exp .grid-item-box,
@@ -1352,9 +1352,9 @@ input.contactFormInput:valid ~ .formIcon {
   padding-bottom: 2px;
   // transition: all 0.3s;
 }
-// .my-name {
-//   background-color: yellow;
-// }
+.my-name {
+  background-color: orange;
+}
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;

@@ -767,7 +767,7 @@ body.menu-open .sidebar-nav-box {
   border-radius: 10px;
   padding: 16px 18px;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 24px;
   color: #393838;
 }
 
@@ -1770,6 +1770,10 @@ input.contactFormInput:valid ~ .formIcon {
   left: 16px;
   z-index: 1;
   padding-bottom: 2px;
+}
+
+.my-name {
+  background-color: orange;
 }
 
 .nav-dock {
