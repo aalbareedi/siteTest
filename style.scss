@@ -1344,9 +1344,9 @@ input.contactFormInput:valid ~ .formIcon {
   z-index: 1;
   padding-bottom: 2px;
 }
-.my-name {
-  background-color: gray;
-}
+// .my-name {
+//   background-color: gray;
+// }
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1437,7 +1437,7 @@ input.contactFormInput:valid ~ .formIcon {
   background-position: center;
   width: 100%;
   height: 100%;
-  cursor: e-resize;
+  cursor: ew-resize;
 }
 .splide,
 .splide__track {
@@ -1676,6 +1676,7 @@ input.contactFormInput:valid ~ .formIcon {
     border-radius: initial;
     overflow-y: auto;
     position: initial;
+    border: none;
   }
   .project-window-images {
     min-height: 400px;
@@ -1989,6 +1990,7 @@ input.contactFormInput:valid ~ .formIcon {
   .form-wrapper {
     background: initial;
     padding: 0px;
+    border: none;
   }
   .content-container {
     margin-left: 0px;
