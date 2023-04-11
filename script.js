@@ -144,7 +144,9 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-setTimeout(() => {
-  sidebar.classList.remove("hidden");
-  navDock.classList.remove("hidden");
-}, 100);
+window.onload = () => {
+  setTimeout(() => {
+    sidebar.classList.remove("hidden");
+    navDock.classList.remove("hidden");
+  }, 100);
+};
