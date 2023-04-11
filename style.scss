@@ -495,10 +495,13 @@ body.menu-open .sidebar-nav-box {
   display: inline-block;
   padding-left: 2px;
 }
+.carousel-wrapper {
+  background-color: #f3f3ff;
+}
 .landing-skills-content {
   padding: 14px 0px 12px 0px;
   display: flex;
-  background: #eaeafd;
+  // background: #eaeafd;
 }
 .skill-img-wrapper {
   display: flex;
@@ -696,6 +699,7 @@ body.menu-open .sidebar-nav-box {
 }
 .project-window-content {
   background-color: whitesmoke;
+  border: 2px solid white;
   max-height: 660px;
   width: 100%;
   border-radius: 20px;
@@ -1340,9 +1344,9 @@ input.contactFormInput:valid ~ .formIcon {
   z-index: 1;
   padding-bottom: 2px;
 }
-// .my-name {
-//   background-color: orange;
-// }
+.my-name {
+  background-color: gray;
+}
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1433,6 +1437,7 @@ input.contactFormInput:valid ~ .formIcon {
   background-position: center;
   width: 100%;
   height: 100%;
+  cursor: e-resize;
 }
 .splide,
 .splide__track {
@@ -1440,21 +1445,37 @@ input.contactFormInput:valid ~ .formIcon {
 }
 .splide__pagination {
   column-gap: 2px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   width: fit-content;
   margin: 0px auto;
   padding: 10px;
   border-radius: 20px;
   bottom: 20px;
+  border: 2px solid white;
 }
 .splide__pagination button {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   opacity: 1;
   background: rgba(204, 204, 204, 0.7);
 }
 .splide__pagination__page.is-active {
-  transform: scale(1.3);
+  transform: initial;
+}
+.splide:not(.is-overflow) .splide__pagination {
+  display: flex;
+}
+.splide__arrow svg {
+  fill: #fff;
+  width: 24px;
+  height: 24px;
+}
+.splide__arrow {
+  border: 2px solid white;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  width: 40px;
+  height: 40px;
 }
 
 @media only screen and (hover: hover) {
@@ -1657,7 +1678,7 @@ input.contactFormInput:valid ~ .formIcon {
     position: initial;
   }
   .project-window-images {
-    min-height: 320px;
+    min-height: 400px;
   }
 }
 @media only screen and (max-width: 1100px) {
@@ -1947,6 +1968,9 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 500px) {
+  .project-window-images {
+    min-height: 320px;
+  }
   .nav-dock a[href$="/contact"] {
     display: none;
   }
