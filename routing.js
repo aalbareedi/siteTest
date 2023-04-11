@@ -1,7 +1,8 @@
 // Dependencies:
 // Web server must redirect all requests to the SPA (usually index.html)
 
-const root = new URL(location.href.split("/").slice(0, -1).join("/"));
+// const root = new URL(location.href.split("/").slice(0, -1).join("/"));
+const root = new URL(location.origin);
 
 const html = document.querySelector("html");
 const body = document.querySelector("body");
@@ -30,15 +31,18 @@ document.querySelectorAll(".tab-content, [data-path]").forEach((page) => {
 function showPageFromAddress() {
   document.querySelectorAll(".project-window").forEach((projectWindow) => {
     projectWindow.classList.add("hidden");
-    html.classList.remove("overflow-hidden");
+    // html.classList.remove("overflow-hidden");
     body.classList.remove("overflow-hidden");
   });
 
   const parts = location.pathname.split("/");
+
+  // console.log("parts before: ", parts);
   parts.shift();
-  if ("/" + parts[0] == root.pathname) {
-    parts.shift();
-  }
+  // console.log("root: " + root);
+  // if ("/" + parts[0] == root.pathname) {
+  //   parts.shift();
+  // }
 
   const path = "/" + parts.join("/");
 
@@ -54,14 +58,14 @@ function showPageFromAddress() {
   // Get the page name or "route" from the address bar
   const pageName = parts[0] || homepageId;
 
-  console.log("parts: ", parts);
-  console.log("pageName: ", pageName);
-  console.log("path: ", path);
+  // console.log("pageName: ", pageName);
+  // console.log("path: ", path);
 
   // Show any element with data-path equal to the address bar path
   const element = document.querySelector(`[data-path='${path}']`);
   if (element) {
     element.classList.remove("hidden");
+    body.classList.add("overflow-hidden");
   }
 
   if (pageName == homepageId) {
