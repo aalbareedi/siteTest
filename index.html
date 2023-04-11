@@ -53,24 +53,17 @@
 
     <link rel="stylesheet" href="/normalize.css" />
     <link rel="stylesheet" href="/carousel.css" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
 
     <script
       src="https://kit.fontawesome.com/c82a5882c2.js"
       crossorigin="anonymous"
     ></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="/style.css" />
   </head>
@@ -919,23 +912,36 @@
           <div class="project-window-content">
             <div class="project-window-title">Orthodontic Specialty Center</div>
             <div class="project-window-images">
-              <!-- Slider main container -->
-              <div class="swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img class="web-skill-img" src="/braces1.png" alt="Sass" />
-                  </div>
-                  <div class="swiper-slide">
-                    <img
-                      class="web-skill-img"
-                      src="/svgs/bootstrap.svg"
-                      alt="Bootstrap"
-                    />
-                  </div>
+              <div
+                class="splide"
+                role="group"
+                aria-label="Splide Basic HTML Example"
+              >
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <div
+                        class="slider-img"
+                        style="background-image: url('/braces1.png')"
+                      ></div>
+                      <!-- <img src="/braces1.png" alt="" /> -->
+                    </li>
+                    <li class="splide__slide">
+                      <div
+                        class="slider-img"
+                        style="background-image: url('/braces2.png')"
+                      ></div>
+                      <!-- <img src="/braces2.png" alt="" /> -->
+                    </li>
+                    <li class="splide__slide">
+                      <div
+                        class="slider-img"
+                        style="background-image: url('/braces3.png')"
+                      ></div>
+                      <!-- <img src="/braces3.png" alt="" /> -->
+                    </li>
+                  </ul>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
               </div>
             </div>
             <div class="project-window-info">
