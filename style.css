@@ -1271,6 +1271,8 @@ body.menu-open .sidebar-nav-box {
   font-size: 18px;
   word-spacing: 0.4px;
   text-decoration: none;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
 }
 
 .project-btns {
@@ -1747,6 +1749,25 @@ input.contactFormInput:valid ~ .formIcon {
   opacity: 0;
 }
 
+.loading-modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .nav-overlay {
   position: fixed;
   top: 0;
@@ -1984,6 +2005,9 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .web-skill-icon-link:hover .web-skill-icon {
     background: #c1c1ec;
+  }
+  .project-title:hover {
+    background-color: #6157d4;
   }
 }
 

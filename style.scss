@@ -688,7 +688,6 @@ body.menu-open .sidebar-nav-box {
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 100px;
-  // height: 100vh;
   height: calc(100vh - #{$header-height});
   transition: all 0.2s;
 }
@@ -955,6 +954,7 @@ body.menu-open .sidebar-nav-box {
   font-size: 18px;
   word-spacing: 0.4px;
   text-decoration: none;
+  transition: background-color 0.4s;
 }
 .project-btns {
   height: 58px;
@@ -1324,12 +1324,18 @@ input.contactFormInput:valid {
 input.contactFormInput:valid ~ .formIcon {
   opacity: 0;
 }
-// .swiper-wrapper {
-//   transition-timing-function: linear !important;
-// }
-// .project-window-images img {
-//   max-width: 100%;
-// }
+.loading-modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .nav-overlay {
   position: fixed;
   top: 0;
@@ -1550,6 +1556,9 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .web-skill-icon-link:hover .web-skill-icon {
     background: #c1c1ec;
+  }
+  .project-title:hover {
+    background-color: #6157d4;
   }
 }
 @media only screen and (max-width: 1500px) {
