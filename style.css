@@ -672,6 +672,10 @@ body.menu-open .sidebar-nav-box {
   width: 60px;
 }
 
+#landing-cloudflare-logo {
+  width: 60px;
+}
+
 .landing-exp {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
@@ -1098,6 +1102,8 @@ body.menu-open .sidebar-nav-box {
   background-color: #d7d7d7;
   position: relative;
   border: 3px solid #ceceff;
+  -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
+          box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
 }
 
 .project-preview {
@@ -1264,6 +1270,7 @@ body.menu-open .sidebar-nav-box {
   border-left: none;
   font-size: 18px;
   word-spacing: 0.4px;
+  text-decoration: none;
 }
 
 .project-btns {
@@ -1910,8 +1917,8 @@ input.contactFormInput:valid ~ .formIcon {
   border: 2px solid white;
   background: rgba(0, 0, 0, 0.4);
   opacity: 1;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
 }
 
 @media only screen and (hover: hover) {
@@ -1952,10 +1959,6 @@ input.contactFormInput:valid ~ .formIcon {
   .pause-button:hover {
     border-color: #9292f8;
     background: whitesmoke;
-  }
-  .project-item:hover {
-    -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
-            box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
   }
   .grid-item:hover {
     border-color: #9292f8;
