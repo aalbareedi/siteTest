@@ -135,3 +135,14 @@ window.onload = () => {
 };
 
 new Splide(".splide").mount();
+
+const contactForm = document.querySelector("#contact-form");
+
+contactForm.querySelectorAll("input, textarea").forEach((input) => {
+  input.addEventListener("focus", () => {
+    navDock.classList.add("hidden-on-touchscreen");
+  });
+  input.addEventListener("blur", () => {
+    navDock.classList.remove("hidden-on-touchscreen");
+  });
+});

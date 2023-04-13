@@ -8,9 +8,15 @@ form.onsubmit = async (e) => {
   const errorModal = document.querySelector(".error-overlay");
 
   try {
-    const fullName = form.querySelector("[name='name']").value;
-    const emailAddress = form.querySelector("[name='email']").value;
-    const message = form.querySelector("[name='message']").value;
+    const fullName = encodeURIComponent(
+      form.querySelector("[name='name']").value
+    );
+    const emailAddress = encodeURIComponent(
+      form.querySelector("[name='email']").value
+    );
+    const message = encodeURIComponent(
+      form.querySelector("[name='message']").value
+    );
 
     showModal(loadingModal);
 
@@ -28,6 +34,7 @@ form.onsubmit = async (e) => {
       throw new Error(error);
     }
 
+    form.reset();
     showModal(successModal);
     setTimeout(() => {
       hideModal(successModal);

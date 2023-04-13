@@ -41,6 +41,14 @@ body {
   display: none !important;
 }
 
+/* pointer: coarse means an "inaccurate" pointing device (i.e. touchscreen) */
+/* Source: https://stackoverflow.com/a/14457567 */
+@media (pointer: coarse) {
+  .hidden-on-touchscreen {
+    display: none !important;
+  }
+}
+
 button {
   cursor: pointer;
 }
@@ -1814,7 +1822,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .my-name {
-  background-color: green;
+  background-color: orange;
 }
 
 .nav-dock {
