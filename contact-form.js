@@ -3,9 +3,9 @@ const form = document.querySelector("#contact-form");
 form.onsubmit = async (e) => {
   e.preventDefault();
 
-  const loadingModal = document.querySelector(".loading-modal-overlay");
-  const successModal = document.querySelector(".success-modal-overlay");
-  const errorModal = document.querySelector(".error-modal-overlay");
+  const loadingModal = document.querySelector(".loading-overlay");
+  const successModal = document.querySelector(".success-overlay");
+  const errorModal = document.querySelector(".error-overlay");
 
   try {
     const fullName = form.querySelector("[name='name']").value;

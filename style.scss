@@ -1324,7 +1324,7 @@ input.contactFormInput:valid {
 input.contactFormInput:valid ~ .formIcon {
   opacity: 0;
 }
-.loading-modal-overlay {
+.form-overlay {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -1335,6 +1335,24 @@ input.contactFormInput:valid ~ .formIcon {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.form-modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  width: 67%;
+  height: 180px;
+  padding-top: 28px;
+}
+.form-sent-icon {
+  color: #2ba52b;
+  font-size: 56px;
+}
+.form-modal-title {
+  font-size: 20px;
+  margin-top: 10px;
+  color: gainsboro;
+  letter-spacing: 1px;
+  text-align: center;
 }
 .nav-overlay {
   position: fixed;
@@ -1357,9 +1375,9 @@ input.contactFormInput:valid ~ .formIcon {
   z-index: 1;
   padding-bottom: 2px;
 }
-// .my-name {
-//   background-color: yellow;
-// }
+.my-name {
+  background-color: green;
+}
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;

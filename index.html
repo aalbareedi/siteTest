@@ -1175,7 +1175,7 @@
         </a>
       </div>
     </div>
-    <div class="loading-modal-overlay hidden">
+    <div class="loading-overlay form-overlay hidden">
       <div class="sk-chase">
         <div class="sk-chase-dot"></div>
         <div class="sk-chase-dot"></div>
@@ -1185,11 +1185,19 @@
         <div class="sk-chase-dot"></div>
       </div>
     </div>
-    <div class="success-modal-overlay hidden">
-      <div class="modal">Message sent!</div>
+    <div class="success-overlay form-overlay hidden">
+      <div class="form-modal">
+        <i class="fa-regular fa-circle-check form-sent-icon"></i>
+        <div class="form-modal-title">Message Sent</div>
+        <div class="form-modal-message">Thank You!</div>
+      </div>
     </div>
-    <div class="error-modal-overlay hidden">
-      <div class="modal">Sending failed.</div>
+    <div class="error-overlay form-overlay hidden">
+      <div class="form-modal">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <div class="form-modal-title">Sending Failed</div>
+        <div class="form-modal-message">Please try again!</div>
+      </div>
     </div>
     <script src="/routing.js" type="module"></script>
     <script src="/carousel.js" type="module"></script>
