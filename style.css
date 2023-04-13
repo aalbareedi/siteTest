@@ -2565,6 +2565,17 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .project-window-title {
     font-size: 18px;
+    height: 64px;
+  }
+  .close-project-btn {
+    height: 64px;
+    width: 64px;
+  }
+  .close-btn-text {
+    display: none;
+  }
+  .project-window {
+    padding-top: calc(64px + 64px);
   }
   .project-btns {
     height: 72px;
