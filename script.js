@@ -90,6 +90,7 @@ function hideModal(modal) {
 
     if (modal.dataset.root) {
       history.replaceState({}, null, modal.dataset.root);
+      document.body.dataset.path = modal.dataset.root;
     }
   }
   // html.classList.remove("overflow-hidden");
@@ -127,12 +128,13 @@ setTimeout(function () {
   pageSize.classList.remove("hidden");
 }, 3000);
 
-window.onload = () => {
+window.addEventListener("load", () => {
   setTimeout(() => {
+    header.classList.remove("hidden");
     sidebar.classList.remove("hidden");
     navDock.classList.remove("hidden");
   }, 100);
-};
+});
 
 new Splide(".splide").mount();
 

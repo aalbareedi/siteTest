@@ -134,12 +134,13 @@ window.onpopstate = () => {
   showPageFromAddress();
 
   // Get the page name or "route" from the address bar
-  const page = location.pathname.split("/").pop().replaceAll("/", "");
+  // const page = location.pathname.split("/").pop().replaceAll("/", "");
+  const path = location.pathname;
 
-  if (page) {
-    document.body.dataset.page = page;
+  if (path) {
+    document.body.dataset.path = path;
   } else {
-    delete document.body.dataset.page;
+    delete document.body.dataset.path;
   }
 };
 

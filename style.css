@@ -1821,10 +1821,6 @@ input.contactFormInput:valid ~ .formIcon {
   padding-bottom: 2px;
 }
 
-.my-name {
-  background-color: orange;
-}
-
 .nav-dock {
   height: 76px;
   width: 100%;
@@ -2251,21 +2247,21 @@ input.contactFormInput:valid ~ .formIcon {
     height: calc(100vh - 76px);
   }
   #home-dock-btn,
-  [data-page="projects"] #projects-dock-btn,
-  [data-page="skills"] #skills-dock-btn,
-  [data-page="work"] #work-dock-btn,
-  [data-page="edu"] #edu-dock-btn,
-  [data-page="resume"] #resume-dock-btn,
-  [data-page="contact"] #contact-dock-btn {
+  [data-path^="/projects"] #projects-dock-btn,
+  [data-path="/skills"] #skills-dock-btn,
+  [data-path="/work"] #work-dock-btn,
+  [data-path="/edu"] #edu-dock-btn,
+  [data-path="/resume"] #resume-dock-btn,
+  [data-path="/contact"] #contact-dock-btn {
     background: #a0a0ff;
     color: #ffffff;
     border-bottom: 4px solid #e7e7ff;
   }
-  [data-page] header {
+  body:not([data-path="/"]) header {
     display: block;
     border-bottom: 1px solid #e7e7ff;
   }
-  [data-page] #home-dock-btn {
+  body:not([data-path="/"]) #home-dock-btn {
     border-bottom: none;
     background: initial;
     color: #e7e7ff;
@@ -2281,7 +2277,7 @@ input.contactFormInput:valid ~ .formIcon {
     padding: 30px;
     scroll-margin: 400px;
   }
-  [data-page] .content {
+  body:not([data-path="/"]) .content {
     padding-top: 64px;
     padding-bottom: 76px;
   }
@@ -2330,7 +2326,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 640px) {
-  [data-page] .content {
+  body:not([data-path="/"]) .content {
     padding-bottom: 62px;
   }
   .dock-btn-text {
@@ -2372,7 +2368,7 @@ input.contactFormInput:valid ~ .formIcon {
     height: 62px;
     display: none;
   }
-  [data-page] .nav-dock {
+  body:not([data-path="/"]) .nav-dock {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
