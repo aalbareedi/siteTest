@@ -16,6 +16,7 @@ html {
 body {
   background-color: #e7e7ff;
   height: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
 .overflow-hidden {
@@ -79,7 +80,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: "Roboto", sans-serif;
 }
 
 .menu-icon {
@@ -1774,14 +1774,28 @@ input.contactFormInput:valid ~ .formIcon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 30px;
 }
 
 .form-modal {
   background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 15px;
-  width: 67%;
-  height: 180px;
-  padding-top: 28px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .form-sent-icon {
@@ -1789,12 +1803,23 @@ input.contactFormInput:valid ~ .formIcon {
   font-size: 56px;
 }
 
+.form-error-icon {
+  color: #962727;
+  font-size: 50px;
+}
+
 .form-modal-title {
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 10px;
   color: gainsboro;
   letter-spacing: 1px;
-  text-align: center;
+}
+
+.form-modal-message {
+  color: #a0a0a0;
+  margin-top: 20px;
+  letter-spacing: 0.7px;
+  font-size: 18px;
 }
 
 .nav-overlay {
@@ -1819,6 +1844,10 @@ input.contactFormInput:valid ~ .formIcon {
   left: 16px;
   z-index: 1;
   padding-bottom: 2px;
+}
+
+.my-name {
+  background-color: yellow;
 }
 
 .nav-dock {
@@ -2313,6 +2342,9 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 780px) {
+  .form-modal {
+    max-width: 340px;
+  }
   .landing-project-title {
     font-size: 16px;
     top: 14px;
