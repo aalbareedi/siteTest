@@ -144,24 +144,6 @@
                 <div class="nav-tooltip">Contact</div>
               </a>
             </li>
-            <!-- <li class="sidebar-list-item" title="Monetization">
-              <a href="#" class="sidebar-link">
-                <i class="fas fa-dollar-sign sidebar-icon"></i>
-                <div class="hidden-sidebar">Monetization</div>
-              </a>
-            </li> -->
-            <!-- <li class="sidebar-list-item" title="Customization">
-              <a href="#" class="sidebar-link">
-                <i class="fas fa-sliders-h sidebar-icon"></i>
-                <div class="hidden-sidebar">Customization</div>
-              </a>
-            </li> -->
-            <!-- <li class="sidebar-list-item" title="Audio Library">
-              <a href="#" class="sidebar-link">
-                <i class="fas fa-music sidebar-icon"></i>
-                <div class="hidden-sidebar">Audio Library</div>
-              </a>
-            </li> -->
           </ul>
         </div>
         <div class="bottom-sidebar">
@@ -744,8 +726,9 @@
               <div class="content-item-info">
                 <div class="bp">•</div>
                 <div>
-                  Played a key role in contributing to 21% overall revenue
-                  increase for the entire company during my first year in 2022.
+                  Played a key role in contributing to
+                  <span class="emphasis-text">21% overall revenue increase</span
+                  >&nbsp;for the entire company during my first year in 2022.
                 </div>
               </div>
               <div class="content-item-info">
@@ -849,67 +832,103 @@
             <div class="title-text">Contact Me</div>
             <i class="fa-solid fa-comment title-text-icon"></i>
           </div>
-          <div class="form-wrapper">
-            <div class="contact-intro">Let's get to solving problems</div>
-            <div class="contact-text">
-              Send me a message & I'll reply back asap!
+          <div class="form-title">Let's get to solving problems</div>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-socials">
+                <a href="mailto:aalbareedi@yahoo.com" class="contact-entry">
+                  <i class="fa-solid fa-envelope contact-icon"></i>
+                  <div>aalbareedi@yahoo.com</div>
+                </a>
+                <a
+                  href="https://github.com/aalbareedi"
+                  target="_blank"
+                  class="contact-entry"
+                >
+                  <i class="fab fa-github contact-icon"></i>
+                  <div>github.com/aalbareedi</div>
+                </a>
+                <!-- <a
+                  href="https://instagram.com/sir.real"
+                  target="_blank"
+                  class="contact-entry"
+                >
+                  <i class="fa-brands fa-instagram contact-icon"></i>
+                  <div>instagram.com/sir.real</div>
+                </a> -->
+                <!-- <a href="tel:630-408-1407" class="contact-entry">
+                  <i class="fa-solid fa-phone contact-icon"></i>
+                  <div>(630) 408-1407</div>
+                </a> -->
+              </div>
             </div>
-            <form id="contact-form">
-              <div class="formOption">
-                <label class="contact-form-label" for="nameInput">
-                  Full Name</label
-                >
-                <div class="fullNameField">
-                  <input
-                    required
-                    id="nameInput"
-                    name="name"
-                    type="text"
-                    class="contactFormInput"
-                    placeholder="Bob Smith"
-                  />
-                  <div class="formIcon" id="fullNameIcon">
-                    <i class="fas fa-user"></i>
+            <div class="form-container">
+              <div class="form-wrapper">
+                <div class="contact-text">
+                  You can send me a message here & I'll email you back asap!
+                </div>
+                <form id="contact-form">
+                  <div class="form-content">
+                    <div class="contact-group">
+                      <div class="formOption">
+                        <label class="contact-form-label" for="nameInput">
+                          Full Name</label
+                        >
+                        <div class="fullNameField">
+                          <input
+                            required
+                            id="nameInput"
+                            name="name"
+                            type="text"
+                            class="contactFormInput"
+                            placeholder="Bob Smith"
+                          />
+                          <div class="formIcon" id="fullNameIcon">
+                            <i class="fas fa-user"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="formOption">
+                        <label class="contact-form-label" for="emailInput"
+                          >Email Address</label
+                        >
+                        <div class="emailField">
+                          <input
+                            required
+                            id="emailInput"
+                            name="email"
+                            type="email"
+                            class="contactFormInput"
+                            placeholder="email@address.com"
+                            pattern=".+@.+\..{2,}$"
+                          />
+                          <div class="formIcon" id="emailIcon">
+                            <i class="fas fa-envelope"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="messageWrapper">
+                      <label class="contact-form-label" for="messageInput"
+                        >Message</label
+                      >
+                      <div class="formMessage">
+                        <textarea
+                          required
+                          class="contactFormInput"
+                          id="messageInput"
+                          name="message"
+                          placeholder="What's on your mind?"
+                        ></textarea>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="formOption">
-                <label class="contact-form-label" for="emailInput"
-                  >Email Address</label
-                >
-                <div class="emailField">
-                  <input
-                    required
-                    id="emailInput"
-                    name="email"
-                    type="email"
-                    class="contactFormInput"
-                    placeholder="email@address.com"
-                    pattern=".+@.+\..{2,}$"
-                  />
-                  <div class="formIcon" id="emailIcon">
-                    <i class="fas fa-envelope"></i>
+                  <div class="formBtns">
+                    <button class="sendBtn" type="submit">Send Message</button>
                   </div>
-                </div>
+                </form>
               </div>
-              <div class="messageWrapper">
-                <label class="contact-form-label" for="messageInput"
-                  >Message</label
-                >
-                <div class="formMessage">
-                  <textarea
-                    required
-                    class="contactFormInput"
-                    id="messageInput"
-                    name="message"
-                    placeholder="What's on your mind?"
-                  ></textarea>
-                </div>
-              </div>
-              <div class="formBtns">
-                <button class="sendBtn" type="submit">Send Message</button>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
         <div
@@ -947,12 +966,6 @@
                         style="background-image: url('/braces3.png')"
                       ></div>
                     </li>
-                    <!-- <li class="splide__slide">
-                      <div
-                        class="slider-img"
-                        style="background-image: url('/braces4.png')"
-                      ></div>
-                    </li> -->
                   </ul>
                 </div>
               </div>
@@ -1176,7 +1189,6 @@
       </div>
       <a href="/contact" class="mobile-contact-btn">
         <i class="fa-solid fa-comment"></i>
-        <!-- <div>Contact Me</div> -->
       </a>
     </div>
     <div class="loading-overlay form-overlay hidden">
