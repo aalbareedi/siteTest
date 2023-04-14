@@ -1668,12 +1668,12 @@ body.menu-open .sidebar-nav-box {
 
 .contact-text {
   font-size: 20px;
-  line-height: 24px;
+  line-height: 28px;
   margin-bottom: 30px;
 }
 
 .form-wrapper {
-  padding: 30px;
+  padding: 30px 40px;
   background: #dbdbff;
   border-radius: 10px;
   border: 3px solid #a7a7ff;
@@ -2433,6 +2433,26 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 780px) {
+  #messageInput {
+    height: 140px;
+  }
+  .sendBtn {
+    max-width: initial;
+    margin-left: initial;
+  }
+  .contact-content {
+    margin-bottom: 30px;
+  }
+  .form-container {
+    max-width: 480px;
+  }
+  .form-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 30px;
+  }
   .form-modal {
     max-width: 340px;
   }
@@ -2615,6 +2635,9 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 500px) {
+  .form-container {
+    background: none;
+  }
   .mobile-contact-btn {
     display: -webkit-box;
     display: -ms-flexbox;
