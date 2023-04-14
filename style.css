@@ -1587,7 +1587,6 @@ body.menu-open .sidebar-nav-box {
   background: #bebeff;
   border-radius: 14px;
   padding: 20px;
-  margin: 0px auto;
   width: 100%;
   max-width: 880px;
 }
@@ -2445,6 +2444,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .form-container {
     max-width: 480px;
+    margin: 0px auto;
   }
   .form-content {
     -webkit-box-orient: vertical;
@@ -2635,8 +2635,24 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 @media only screen and (max-width: 500px) {
+  #contact {
+    padding: 0px;
+  }
+  .contact-intro {
+    padding: 30px 30px 0px 30px;
+  }
+  .contact-info {
+    padding: 0px 30px;
+  }
   .form-container {
-    background: none;
+    border-radius: 0px;
+    background: #dbdbff;
+    max-width: initial;
+    padding-bottom: 30px;
+  }
+  .contact-content {
+    margin-bottom: 0px;
+    row-gap: 40px;
   }
   .mobile-contact-btn {
     display: -webkit-box;
@@ -2682,7 +2698,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
   .form-wrapper {
     background: initial;
-    padding: 0px;
+    padding: 10px;
     border: none;
   }
   .content-container {
