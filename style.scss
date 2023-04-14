@@ -1793,22 +1793,22 @@ input.contactFormInput:valid ~ .formIcon {
     height: calc(100vh - #{$nav-dock-height-tablet});
   }
   #home-dock-btn,
-  [data-path^="/projects"] #projects-dock-btn,
-  [data-path="/skills"] #skills-dock-btn,
-  [data-path="/work"] #work-dock-btn,
-  [data-path="/edu"] #edu-dock-btn,
-  [data-path="/resume"] #resume-dock-btn,
-  [data-path="/contact"] #contact-dock-btn {
+  [data-current-path^="/projects"] #projects-dock-btn,
+  [data-current-path="/skills"] #skills-dock-btn,
+  [data-current-path="/work"] #work-dock-btn,
+  [data-current-path="/edu"] #edu-dock-btn,
+  [data-current-path="/resume"] #resume-dock-btn,
+  [data-current-path="/contact"] #contact-dock-btn {
     background: #a0a0ff;
     color: #ffffff;
     // border-bottom: 4px solid #e7e7ff;
     border-bottom: 4px solid #ffffff;
   }
-  body:not([data-path="/"]) header {
+  body:not([data-current-path="/"]) header {
     display: block;
     border-bottom: 2px solid #d3d3ff;
   }
-  body:not([data-path="/"]) #home-dock-btn {
+  body:not([data-current-path="/"]) #home-dock-btn {
     border-bottom: none;
     background: initial;
     color: #e7e7ff;
@@ -1825,7 +1825,7 @@ input.contactFormInput:valid ~ .formIcon {
     scroll-margin: 400px;
     // height: calc(100vh - 64px - 64px);
   }
-  body:not([data-path="/"]) .content {
+  body:not([data-current-path="/"]) .content {
     padding-top: $header-height;
     padding-bottom: $nav-dock-height-tablet;
   }
@@ -1887,7 +1887,7 @@ input.contactFormInput:valid ~ .formIcon {
   }
 }
 @media only screen and (max-width: 640px) {
-  body:not([data-path="/"]) .content {
+  body:not([data-current-path="/"]) .content {
     padding-bottom: $nav-dock-height-mobile;
   }
   .dock-btn-text {
@@ -1924,7 +1924,7 @@ input.contactFormInput:valid ~ .formIcon {
     height: $nav-dock-height-mobile;
     display: none;
   }
-  body:not([data-path="/"]) .nav-dock {
+  body:not([data-current-path="/"]) .nav-dock {
     display: flex;
   }
   .carousel-wrapper {
@@ -2052,8 +2052,9 @@ input.contactFormInput:valid ~ .formIcon {
   .mobile-contact-btn {
     display: flex;
   }
-  [data-path="/contact"] .mobile-contact-btn,
-  [data-path="/"] .mobile-contact-btn {
+  [data-current-path="/contact"] .mobile-contact-btn,
+  [data-current-path="/"] .mobile-contact-btn,
+  [data-current-path^="/projects/"] .mobile-contact-btn {
     display: none;
   }
   .project-window-images {

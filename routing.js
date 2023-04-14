@@ -8,7 +8,7 @@ const html = document.querySelector("html");
 const body = document.querySelector("body");
 
 // Make the links work
-document.querySelectorAll(".tab-content, [data-path]").forEach((page) => {
+document.querySelectorAll("[data-path]").forEach((page) => {
   document
     .querySelectorAll(`[href='${page.dataset.path || "/" + page.id}']`)
     .forEach((a) => {
@@ -22,7 +22,6 @@ document.querySelectorAll(".tab-content, [data-path]").forEach((page) => {
         }
 
         history.pushState({}, null, `${root.origin}/${pageName}`);
-        showPageFromAddress();
         window.onpopstate();
       };
     });
@@ -31,8 +30,7 @@ document.querySelectorAll(".tab-content, [data-path]").forEach((page) => {
 function showPageFromAddress() {
   document.querySelectorAll(".project-window").forEach((projectWindow) => {
     projectWindow.classList.add("hidden");
-    // html.classList.remove("overflow-hidden");
-    body.classList.remove("overflow-hidden");
+    // body.classList.remove("overflow-hidden");
   });
 
   const parts = location.pathname.split("/");
@@ -65,21 +63,27 @@ function showPageFromAddress() {
   const element = document.querySelector(`[data-path='${path}']`);
   if (element) {
     element.classList.remove("hidden");
-    body.classList.add("overflow-hidden");
+    // body.classList.add("overflow-hidden");
   }
 
   if (pageName == homepageId) {
     history.replaceState({}, null, `${root}`);
   }
 
+  console.log("path: ", path);
+
   // Find the page, default to 404
   const page =
-    document.querySelector(`#${pageName || homepageId}`) ||
+    document.querySelector(`[data-path="${path}"]`) ||
+    document.querySelector(`#${homepageId}`) ||
     document.querySelector(`#${notFoundPageId}`);
 
   if (page) {
-    document.querySelectorAll(".tab-content.open").forEach((a) => {
-      a.classList.remove("open");
+    document.querySelectorAll(`[data-path]`).forEach((element) => {
+      // if (!path.startsWith(element.dataset.path)) {
+      console.log("closing: ", element);
+      element.classList.remove("open");
+      // }
     });
 
     page.classList.add("open");
@@ -138,9 +142,9 @@ window.onpopstate = () => {
   const path = location.pathname;
 
   if (path) {
-    document.body.dataset.path = path;
+    document.body.dataset.currentPath = path;
   } else {
-    delete document.body.dataset.path;
+    delete document.body.dataset.currentPath;
   }
 };
 

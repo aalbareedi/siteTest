@@ -56,9 +56,9 @@ projectBtns.forEach((projectBtn) => {
     disableScrollBehind(content);
   }
 
-  projectBtn.addEventListener("click", () => {
-    showModal(document.querySelector(`#${id}`));
-  });
+  // projectBtn.addEventListener("click", () => {
+  //   showModal(document.querySelector(`#${id}`));
+  // });
 });
 
 projectWindows.forEach((projectWindow) => {
@@ -80,8 +80,7 @@ function showModal(modal) {
   if (modal) {
     modal.classList.remove("hidden");
   }
-  // html.classList.add("overflow-hidden");
-  body.classList.add("overflow-hidden");
+  // body.classList.add("overflow-hidden");
 }
 
 function hideModal(modal) {
@@ -93,8 +92,7 @@ function hideModal(modal) {
       document.body.dataset.path = modal.dataset.root;
     }
   }
-  // html.classList.remove("overflow-hidden");
-  body.classList.remove("overflow-hidden");
+  // body.classList.remove("overflow-hidden");
 }
 
 if (window.innerWidth <= 1100) {
