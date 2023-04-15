@@ -272,6 +272,7 @@ body.menu-open .top-sidebar {
 }
 .menu-open .middle-sidebar {
   margin-top: 18px;
+  padding-bottom: 60px;
 }
 .bottom-sidebar {
   width: 100%;
@@ -1438,9 +1439,9 @@ input.contactFormInput:valid ~ .formIcon {
   z-index: 1;
   padding-bottom: 2px;
 }
-// .my-name {
-//   background-color: red;
-// }
+.my-name {
+  background-color: pink;
+}
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
