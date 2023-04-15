@@ -153,6 +153,7 @@ header {
   position: fixed;
   left: 67px;
   pointer-events: none;
+  z-index: 3;
 }
 .menu-open .nav-tooltip {
   left: 255px;
@@ -315,6 +316,10 @@ body.menu-open .sidebar-link {
   color: #eaeafd;
   background-color: #7676e3;
 }
+.sidebar-list-item.active .sidebar-contact-info {
+  background-color: #7676e3;
+}
+
 // [data-current-path="/"] .sidebar-link[href="/"] .sidebar-nav-box {
 //   color: #eaeafd;
 //   background-color: #7676e3;
@@ -752,7 +757,7 @@ body.menu-open .sidebar-nav-box {
   height: $project-window-title-height;
   display: flex;
   align-items: center;
-  padding-left: 24px;
+  padding-left: 36px;
   background: #dbdbff;
   border-bottom: 2px solid #ccccee;
   border-left: 2px solid #ccccee;
@@ -766,9 +771,8 @@ body.menu-open .sidebar-nav-box {
   font-size: 16px;
   line-height: 24px;
   word-spacing: 1px;
-  // max-height: calc(100% - 66px);
   border-left: 2px solid #ccccee;
-  padding: 30px 38px 38px 30px;
+  padding: 32px 50px 38px 38px;
 }
 // .project-point {
 //   display: flex;
@@ -1522,8 +1526,8 @@ input.contactFormInput:valid ~ .formIcon {
   color: #ffffff;
   position: fixed;
   border-radius: 50%;
-  height: 48px;
-  width: 48px;
+  height: 50px;
+  width: 50px;
   border: none;
   background-color: rgba(51, 51, 51, 0.5);
   border: 2px solid #ffffff;
@@ -1624,9 +1628,6 @@ input.contactFormInput:valid ~ .formIcon {
   background-size: 50% 100%;
   border-radius: inherit;
 }
-#sidebar-contact:hover::before {
-  animation: animate_border 0.75s linear infinite;
-}
 body.menu-open .sidebar-contact-info {
   padding-left: 20px;
 }
@@ -1646,9 +1647,9 @@ body.menu-open .sidebar-contact-info {
 }
 
 @media only screen and (hover: hover) {
-  // .grid-item:hover .landing-mobile-icon {
-  //   transform: scale(1.2);
-  // }
+  .sidebar-list-item:hover #sidebar-contact::before {
+    animation: animate_border 0.75s linear infinite;
+  }
   .menu-icon-btn:hover {
     color: #addcff;
   }
@@ -1664,13 +1665,20 @@ body.menu-open .sidebar-contact-info {
     opacity: 1;
     visibility: initial;
   }
+  .sidebar-list-item.active:hover .sidebar-nav-box {
+    color: #eaeafd;
+  }
   .sidebar-list-item:hover .sidebar-nav-box {
     background-color: #e7e7ff;
+    color: #7676e3;
   }
-  .sidebar-list-item.active:hover .sidebar-nav-box {
+  .sidebar-list-item:hover .sidebar-contact-info {
+    background-color: #e7e7ff;
+  }
+  .sidebar-list-item.active:hover .sidebar-nav-box,
+  .sidebar-list-item.active:hover .sidebar-contact-info {
     background-color: #7676e3;
   }
-
   .close-project-btn:hover {
     background-color: #ccccee;
   }
@@ -1686,9 +1694,6 @@ body.menu-open .sidebar-contact-info {
     border-color: #9292f8;
     background: whitesmoke;
   }
-  // .project-item:hover {
-  //   box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
-  // }
   .grid-item:hover {
     border-color: $main-grid-hover;
     box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
@@ -1717,6 +1722,12 @@ body.menu-open .sidebar-contact-info {
   }
 }
 @media only screen and (max-width: 1500px) {
+  .project-window-title {
+    padding-left: 28px;
+  }
+  .project-window-points {
+    padding: 30px 38px 38px 30px;
+  }
   .landing-intro-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
