@@ -28,12 +28,18 @@ navOverlay.addEventListener("click", () => {
 
 navItems.forEach((navItem) => {
   navItem.addEventListener("click", () => {
-    console.log("clicked");
-
     if (window.innerWidth <= 1100) {
       document.body.classList.remove("menu-open");
       navOverlay.classList.add("invisible");
     }
+
+    // Scroll to top of new page
+    setTimeout(() => {
+      // page.scrollIntoView();
+      // document.querySelector(".container").scrollIntoView();
+      window.scroll(0, -200);
+      document.querySelector(".landing-contact-btn").offsetHeight;
+    }, 20);
   });
 });
 
@@ -80,7 +86,7 @@ function showModal(modal) {
   if (modal) {
     modal.classList.remove("hidden");
   }
-  // body.classList.add("overflow-hidden");
+  body.classList.add("overflow-hidden");
 }
 
 function hideModal(modal) {
@@ -89,10 +95,11 @@ function hideModal(modal) {
 
     if (modal.dataset.root) {
       history.replaceState({}, null, modal.dataset.root);
-      document.body.dataset.path = modal.dataset.root;
+      document.body.dataset.currentPath = modal.dataset.root;
+      window.onpopstate();
     }
   }
-  // body.classList.remove("overflow-hidden");
+  body.classList.remove("overflow-hidden");
 }
 
 if (window.innerWidth <= 1100) {

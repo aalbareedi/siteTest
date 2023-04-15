@@ -315,6 +315,10 @@ body.menu-open .sidebar-link {
   color: #eaeafd;
   background-color: #7676e3;
 }
+// [data-current-path="/"] .sidebar-link[href="/"] .sidebar-nav-box {
+//   color: #eaeafd;
+//   background-color: #7676e3;
+// }
 // .sidebar-list-item.active::before {
 //   content: "";
 //   background-color: $current-nav;
@@ -1429,9 +1433,9 @@ input.contactFormInput:valid ~ .formIcon {
   z-index: 1;
   padding-bottom: 2px;
 }
-// .my-name {
-//   background-color: yellow;
-// }
+.my-name {
+  background-color: yellow;
+}
 // .mapWrapper {
 //   // margin: 0px auto;
 //   // max-width: 310px;
@@ -1582,6 +1586,18 @@ input.contactFormInput:valid ~ .formIcon {
   height: 42px;
 }
 
+// .gradient-border {
+//   --white: linear-gradient(white, white);
+//   --gradient: liner-gradient(to right, #31cccc, #3b86de);
+
+//   border: solid 0.25rem transparent;
+//   border-radius: 0.5rem;
+//   background: var(--white) padding-box, var(--gradient) border-box;
+// }
+// [href$="/contact"] .sidebar-nav-box {
+//   border: 2px solid red;
+// }
+
 @media only screen and (hover: hover) {
   // .grid-item:hover .landing-mobile-icon {
   //   transform: scale(1.2);
@@ -1607,6 +1623,7 @@ input.contactFormInput:valid ~ .formIcon {
   .sidebar-list-item.active:hover .sidebar-nav-box {
     background-color: #7676e3;
   }
+
   .close-project-btn:hover {
     background-color: #ccccee;
   }

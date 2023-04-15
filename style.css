@@ -1915,6 +1915,10 @@ input.contactFormInput:valid ~ .formIcon {
   padding-bottom: 2px;
 }
 
+.my-name {
+  background-color: yellow;
+}
+
 .nav-dock {
   height: 76px;
   width: 100%;

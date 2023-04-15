@@ -17,9 +17,10 @@ document.querySelectorAll("[data-path]").forEach((page) => {
         const url = new URL(a.href);
         const pageName = url.hash.substring(1) || url.pathname.substring(1);
 
-        if (page.dataset.root) {
-          history.pushState({}, null, page.dataset.root);
-        }
+        // TODO: Investigate this
+        // if (page.dataset.root) {
+        //   history.pushState({}, null, page.dataset.root);
+        // }
 
         history.pushState({}, null, `${root.origin}/${pageName}`);
         window.onpopstate();
@@ -30,18 +31,11 @@ document.querySelectorAll("[data-path]").forEach((page) => {
 function showPageFromAddress() {
   document.querySelectorAll(".project-window").forEach((projectWindow) => {
     projectWindow.classList.add("hidden");
-    // body.classList.remove("overflow-hidden");
+    body.classList.remove("overflow-hidden");
   });
 
   const parts = location.pathname.split("/");
-
-  // console.log("parts before: ", parts);
   parts.shift();
-  // console.log("root: " + root);
-  // if ("/" + parts[0] == root.pathname) {
-  //   parts.shift();
-  // }
-
   const path = "/" + parts.join("/");
 
   // Cut off the file name
@@ -50,48 +44,38 @@ function showPageFromAddress() {
     history.replaceState({}, null, `${root}`);
   }
 
-  const homepageId = "overview";
   const notFoundPageId = "not-found";
 
   // Get the page name or "route" from the address bar
-  const pageName = parts[0] || homepageId;
-
-  // console.log("pageName: ", pageName);
-  // console.log("path: ", path);
+  const pageName = parts[0];
 
   // Show any element with data-path equal to the address bar path
   const element = document.querySelector(`[data-path='${path}']`);
   if (element) {
     element.classList.remove("hidden");
-    // body.classList.add("overflow-hidden");
-  }
 
-  if (pageName == homepageId) {
-    history.replaceState({}, null, `${root}`);
+    // NOTE: Assuming this means it's a modal
+    if (parts.length > 1) {
+      body.classList.add("overflow-hidden");
+    }
   }
-
-  console.log("path: ", path);
 
   // Find the page, default to 404
   const page =
     document.querySelector(`[data-path="${path}"]`) ||
-    document.querySelector(`#${homepageId}`) ||
     document.querySelector(`#${notFoundPageId}`);
 
   if (page) {
     document.querySelectorAll(`[data-path]`).forEach((element) => {
-      // if (!path.startsWith(element.dataset.path)) {
-      console.log("closing: ", element);
-      element.classList.remove("open");
-      // }
+      if (!path.startsWith(element.dataset.path)) {
+        element.classList.remove("open");
+      }
     });
 
     page.classList.add("open");
   }
 
-  const link = document.querySelector(
-    `.middle-sidebar [href='/${pageName || homepageId}']`
-  );
+  const link = document.querySelector(`.middle-sidebar [href='/${pageName}']`);
 
   if (link) {
     document.querySelectorAll(".middle-sidebar li.active").forEach((li) => {
@@ -103,13 +87,6 @@ function showPageFromAddress() {
   }
 
   // window.scroll(0, 0);
-
-  setTimeout(() => {
-    // page.scrollIntoView();
-    // document.querySelector(".container").scrollIntoView();
-    window.scroll(0, -200);
-    document.querySelector(".landing-contact-btn").offsetHeight;
-  }, 20);
 
   resizeResume();
 }
