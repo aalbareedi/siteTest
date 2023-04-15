@@ -11,7 +11,9 @@ navDock.ontouchmove = (e) => e.preventDefault();
 const menuIconButton = document.querySelector("[data-menu-icon-btn]");
 const sidebar = document.querySelector("[data-sidebar]");
 const navOverlay = document.querySelector(".nav-overlay");
-const navItems = document.querySelectorAll(".sidebar-list-item");
+const navItems = document.querySelectorAll(
+  ".sidebar-list-item, .dock-btn-link, .mobile-contact-btn"
+);
 
 menuIconButton.addEventListener("click", () => {
   document.body.classList.toggle("menu-open");
@@ -38,7 +40,7 @@ navItems.forEach((navItem) => {
       // page.scrollIntoView();
       // document.querySelector(".container").scrollIntoView();
       window.scroll(0, -200);
-      document.querySelector(".landing-contact-btn").offsetHeight;
+      // document.querySelector(".landing-contact-btn").offsetHeight;
     }, 20);
   });
 });

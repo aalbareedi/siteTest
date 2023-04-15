@@ -65,9 +65,15 @@ function showPageFromAddress() {
     document.querySelector(`[data-path="${path}"]`) ||
     document.querySelector(`#${notFoundPageId}`);
 
+  console.log(parts);
+
   if (page) {
     document.querySelectorAll(`[data-path]`).forEach((element) => {
-      if (!path.startsWith(element.dataset.path)) {
+      // NOTE: Assuming the homepage is an exception to the "keep open" rule
+      if (
+        !path.startsWith(element.dataset.path) ||
+        element.dataset.path == "/"
+      ) {
         element.classList.remove("open");
       }
     });
