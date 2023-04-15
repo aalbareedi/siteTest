@@ -368,7 +368,8 @@ body.menu-open .sidebar {
   padding-left: 17px;
 }
 body.menu-open .sidebar-nav-box {
-  padding-left: 18px;
+  // padding-left: 18px;
+  padding-left: 24px;
 }
 .together {
   white-space: nowrap;
@@ -1587,16 +1588,62 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 // .gradient-border {
-//   --white: linear-gradient(white, white);
-//   --gradient: liner-gradient(to right, #31cccc, #3b86de);
-
-//   border: solid 0.25rem transparent;
-//   border-radius: 0.5rem;
-//   background: var(--white) padding-box, var(--gradient) border-box;
+//   background: linear-gradient(whitesmoke, whitesmoke) padding-box,
+//     linear-gradient(to right, #7676e3, darkorchid) border-box;
+//   border-radius: 50em;
+//   border: 4px solid transparent;
 // }
 // [href$="/contact"] .sidebar-nav-box {
 //   border: 2px solid red;
 // }
+
+#sidebar-contact {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  // color: #fff;
+  padding: 4px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+#sidebar-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    #4fcf70,
+    #fad648,
+    #a767e5,
+    #12bcfe,
+    #44ce7b
+  );
+  background-size: 50% 100%;
+  border-radius: inherit;
+}
+#sidebar-contact:hover::before {
+  animation: animate_border 0.75s linear infinite;
+}
+body.menu-open .sidebar-contact-info {
+  padding-left: 20px;
+}
+.sidebar-contact-info {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  background-color: whitesmoke;
+  padding: 12px 20px 12px 14px;
+  border-radius: 4px;
+}
+@keyframes animate_border {
+  to {
+    transform: translateX(-50%);
+  }
+}
 
 @media only screen and (hover: hover) {
   // .grid-item:hover .landing-mobile-icon {
