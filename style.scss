@@ -405,6 +405,8 @@ body.menu-open .sidebar-nav-box {
   margin-left: $sidenav-close-width;
   transition: margin-left 0.2s;
   padding-top: $header-height;
+  // fix for homepage ribbon causing x-scrollbar
+  // overflow-x: hidden;
 }
 .menu-open .content {
   margin-left: $sidenav-open-width;
@@ -1697,6 +1699,26 @@ body.menu-open .sidebar-contact-info {
   }
 }
 
+.homepage-ribbon {
+  position: absolute;
+  top: 111px;
+  right: -12px;
+  width: 400px;
+  height: 50px;
+  background-color: #f3c81c;
+  // border: 2px solid #c2c2fa;
+  transform: translateX(30%) translateY(0%) rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  word-spacing: 1.2px;
+  // pointer-events: none;
+}
+[data-current-path="/"] .content {
+  overflow-x: hidden;
+}
+
 @media only screen and (hover: hover) {
   .sidebar-list-item:hover #sidebar-contact::before {
     animation: animate_border 0.75s linear infinite;
@@ -1940,6 +1962,9 @@ body.menu-open .sidebar-contact-info {
   }
 }
 @media only screen and (max-width: 940px) {
+  .homepage-ribbon {
+    display: none;
+  }
   .form-wrapper {
     margin: 0px auto;
   }
