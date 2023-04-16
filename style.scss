@@ -627,7 +627,7 @@ body.menu-open .sidebar-nav-box {
   margin-bottom: 0px;
 }
 .bp {
-  font-size: 18px;
+  font-size: 20px;
   color: #585858;
 }
 .landing-content-title {
@@ -1173,7 +1173,8 @@ body.menu-open .sidebar-nav-box {
   flex-grow: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 20px;
 }
 .contact-promo-wrapper {
   background-color: #d8d8f8;
@@ -1213,6 +1214,8 @@ body.menu-open .sidebar-nav-box {
   margin-top: 20px;
   border: 2px solid #d8d8f8;
   text-decoration: none;
+  font-size: 16px;
+  word-spacing: 0.8px;
 }
 .content-item {
   background-color: #e0e0fb;
@@ -1770,6 +1773,13 @@ body.menu-open .sidebar-contact-info {
   }
 }
 @media only screen and (max-width: 1500px) {
+  .info-content-wrapper {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .promo-container {
+    padding-top: 0px;
+  }
   .project-window-title {
     padding-left: 28px;
   }
@@ -1849,10 +1859,6 @@ body.menu-open .sidebar-contact-info {
   }
 }
 @media only screen and (max-width: 1300px) {
-  .info-content-wrapper {
-    flex-direction: column;
-    row-gap: 40px;
-  }
   .close-btn-text {
     display: initial;
   }
@@ -2012,6 +2018,9 @@ body.menu-open .sidebar-contact-info {
   }
 }
 @media only screen and (max-width: 780px) {
+  .bp {
+    font-size: 18px;
+  }
   #messageInput {
     height: 140px;
   }
