@@ -1636,6 +1636,8 @@ body.menu-open .sidebar-nav-box {
   text-decoration: none;
   font-size: 16px;
   word-spacing: 0.8px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .content-item {
@@ -1672,7 +1674,7 @@ body.menu-open .sidebar-nav-box {
   padding-left: 4px;
   word-spacing: 1px;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 24px;
 }
 
 #resume iframe {
@@ -2252,7 +2254,8 @@ body.menu-open .sidebar-contact-info {
   right: -12px;
   width: 400px;
   height: 50px;
-  background-color: #f3c81c;
+  background-color: #fbfbff;
+  border: 4px solid #f3c81c;
   -webkit-transform: translateX(30%) translateY(0%) rotate(45deg);
           transform: translateX(30%) translateY(0%) rotate(45deg);
   display: -webkit-box;
@@ -2273,6 +2276,9 @@ body.menu-open .sidebar-contact-info {
 }
 
 @media only screen and (hover: hover) {
+  .contact-promo-btn:hover {
+    background-color: #5555bc;
+  }
   .sidebar-list-item:hover #sidebar-contact::before {
     -webkit-animation: animate_border 0.75s linear infinite;
             animation: animate_border 0.75s linear infinite;

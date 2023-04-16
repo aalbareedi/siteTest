@@ -1218,6 +1218,7 @@ body.menu-open .sidebar-nav-box {
   text-decoration: none;
   font-size: 16px;
   word-spacing: 0.8px;
+  transition: all 0.3s;
 }
 .content-item {
   background-color: #e0e0fb;
@@ -1247,7 +1248,7 @@ body.menu-open .sidebar-nav-box {
   padding-left: 4px;
   word-spacing: 1px;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 24px;
 }
 #resume iframe {
   width: 100%;
@@ -1705,8 +1706,9 @@ body.menu-open .sidebar-contact-info {
   right: -12px;
   width: 400px;
   height: 50px;
-  background-color: #f3c81c;
-  // border: 2px solid #c2c2fa;
+  // background-color: #f3c81c;
+  background-color: #fbfbff;
+  border: 4px solid #f3c81c;
   transform: translateX(30%) translateY(0%) rotate(45deg);
   display: flex;
   justify-content: center;
@@ -1720,6 +1722,9 @@ body.menu-open .sidebar-contact-info {
 }
 
 @media only screen and (hover: hover) {
+  .contact-promo-btn:hover {
+    background-color: #5555bc;
+  }
   .sidebar-list-item:hover #sidebar-contact::before {
     animation: animate_border 0.75s linear infinite;
   }
