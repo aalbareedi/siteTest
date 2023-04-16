@@ -1545,8 +1545,9 @@ body.menu-open .sidebar-nav-box {
           flex-direction: column;
   row-gap: 30px;
   position: relative;
-  padding: 0px 60px;
-  margin-left: 20px;
+  padding: 0px 0px 0px 60px;
+  margin-left: 22px;
+  max-width: 900px;
 }
 
 .content-item {
@@ -1557,7 +1558,7 @@ body.menu-open .sidebar-nav-box {
   font-size: 16px;
   color: #393838;
   border: 3px solid #bdbdf0;
-  max-width: 1040px;
+  max-width: 940px;
 }
 
 .content-item-name {
@@ -2733,15 +2734,14 @@ body.menu-open .sidebar-contact-info {
     margin-bottom: 0px;
     row-gap: 40px;
   }
-  .mobile-contact-btn {
+  [data-current-path="/projects"] .mobile-contact-btn,
+  [data-current-path="/skills"] .mobile-contact-btn,
+  [data-current-path="/work"] .mobile-contact-btn,
+  [data-current-path="/edu"] .mobile-contact-btn,
+  [data-current-path="/resume"] .mobile-contact-btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  [data-current-path="/contact"] .mobile-contact-btn,
-  [data-current-path="/"] .mobile-contact-btn,
-  [data-current-path^="/projects/"] .mobile-contact-btn {
-    display: none;
   }
   .project-window-images {
     min-height: 320px;
