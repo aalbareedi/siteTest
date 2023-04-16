@@ -131,4 +131,6 @@ window.onpopstate = () => {
   }
 };
 
-window.onpopstate();
+window.addEventListener("load", () => {
+  window.onpopstate();
+});
