@@ -729,10 +729,10 @@ body.menu-open .sidebar-nav-box {
   border-radius: 20px;
   overflow: hidden;
   position: relative;
-  // pointer-events: none;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(2, auto);
+  // grid-template-rows: repeat(2, auto);
+  grid-template-rows: min-content auto;
   height: 100%;
 }
 .project-window-images {
@@ -1545,10 +1545,6 @@ input.contactFormInput:valid ~ .formIcon {
   display: none;
 }
 .slider-img {
-  // background-image: url("braces1.png");
-  // background-size: 34px;
-  // background-repeat: no-repeat;
-  // background-position: right 18px center;
   background-size: cover;
   background-position: center;
   width: 100%;
