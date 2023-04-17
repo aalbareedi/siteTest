@@ -1163,6 +1163,7 @@ body.menu-open .sidebar-nav-box {
 .info-content-wrapper {
   display: flex;
   column-gap: 40px;
+  padding-bottom: 30px;
 }
 .content-container {
   display: flex;
@@ -1187,9 +1188,14 @@ body.menu-open .sidebar-nav-box {
   background-color: #d8d8f8;
   padding: 8px;
   border-radius: 20px;
+  width: 316px;
+}
+.skills-content-wrapper .contact-promo-wrapper,
+.resume-container .contact-promo-wrapper {
+  margin: 40px auto 30px auto;
 }
 .contact-promo {
-  width: 300px;
+  // width: 300px;
   background-color: #c7c7ff;
   border: 3px solid #b9b9ff;
   border-radius: 16px;
@@ -1255,6 +1261,9 @@ body.menu-open .sidebar-nav-box {
   font-size: 16px;
   line-height: 24px;
 }
+// .resume-container {
+//   padding-bottom: 30px;
+// }
 #resume iframe {
   width: 100%;
   overflow: hidden;
@@ -1712,7 +1721,6 @@ body.menu-open .sidebar-contact-info {
   right: -12px;
   width: 400px;
   height: 50px;
-  // background-color: #f3c81c;
   background-color: #fbfbff;
   border: 4px solid #f3c81c;
   transform: translateX(30%) translateY(0%) rotate(45deg);
@@ -1721,7 +1729,9 @@ body.menu-open .sidebar-contact-info {
   align-items: center;
   font-size: 16px;
   word-spacing: 1.2px;
-  // pointer-events: none;
+  user-select: none;
+  text-decoration: none;
+  color: #1c1c1c;
 }
 // [data-current-path="/"] .content {
 //   overflow-x: hidden;

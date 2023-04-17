@@ -1550,6 +1550,7 @@ body.menu-open .sidebar-nav-box {
   display: flex;
   -webkit-column-gap: 40px;
           column-gap: 40px;
+  padding-bottom: 30px;
 }
 
 .content-container {
@@ -1590,10 +1591,15 @@ body.menu-open .sidebar-nav-box {
   background-color: #d8d8f8;
   padding: 8px;
   border-radius: 20px;
+  width: 316px;
+}
+
+.skills-content-wrapper .contact-promo-wrapper,
+.resume-container .contact-promo-wrapper {
+  margin: 40px auto 30px auto;
 }
 
 .contact-promo {
-  width: 300px;
   background-color: #c7c7ff;
   border: 3px solid #b9b9ff;
   border-radius: 16px;
@@ -2277,6 +2283,12 @@ body.menu-open .sidebar-contact-info {
           align-items: center;
   font-size: 16px;
   word-spacing: 1.2px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+  color: #1c1c1c;
 }
 
 [data-current-path^="/projects/"] .menu-icon-btn {
