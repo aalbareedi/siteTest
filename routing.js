@@ -33,7 +33,6 @@ function showPageFromAddress() {
     projectWindow.classList.add("hidden");
     body.classList.remove("overflow-hidden");
   });
-
   const parts = location.pathname.split("/");
   parts.shift();
   const path = "/" + parts.join("/");
@@ -47,7 +46,7 @@ function showPageFromAddress() {
   const notFoundPageId = "not-found";
 
   // Get the page name or "route" from the address bar
-  const pageName = parts[0];
+  const pageName = parts[0] || "";
 
   // Show any element with data-path equal to the address bar path
   const element = document.querySelector(`[data-path='${path}']`);

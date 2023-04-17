@@ -1702,7 +1702,7 @@ body.menu-open .sidebar-contact-info {
 }
 
 .homepage-ribbon {
-  position: absolute;
+  position: fixed;
   top: 111px;
   right: -12px;
   width: 400px;
@@ -1718,9 +1718,9 @@ body.menu-open .sidebar-contact-info {
   word-spacing: 1.2px;
   // pointer-events: none;
 }
-[data-current-path="/"] .content {
-  overflow-x: hidden;
-}
+// [data-current-path="/"] .content {
+//   overflow-x: hidden;
+// }
 
 @media only screen and (hover: hover) {
   .contact-promo-btn:hover {
