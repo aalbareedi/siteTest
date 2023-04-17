@@ -2621,6 +2621,7 @@ body.menu-open .sidebar-contact-info {
   .project-window {
     padding-bottom: 76px;
     left: initial;
+    width: 100%;
   }
   .skills-content-wrapper {
     padding: initial;

@@ -24,6 +24,16 @@ document.querySelectorAll("[data-path]").forEach((page) => {
 
         history.pushState({}, null, `${root.origin}/${pageName}`);
         window.onpopstate();
+
+        if ("scrollsToTop" in a.dataset) {
+          // Scroll to top of new page
+          setTimeout(() => {
+            // page.scrollIntoView();
+            // document.querySelector(".container").scrollIntoView();
+            window.scroll(0, -200);
+            // document.querySelector(".landing-contact-btn").offsetHeight;
+          }, 20);
+        }
       };
     });
 });

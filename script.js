@@ -147,9 +147,6 @@ document
   .querySelectorAll(".splide")
   .forEach((element) => new Splide(element).mount());
 
-// new Splide(".splide").mount();
-// new Splide(".splide-2").mount();
-
 const contactForm = document.querySelector("#contact-form");
 
 contactForm.querySelectorAll("input, textarea").forEach((input) => {
