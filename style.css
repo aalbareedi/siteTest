@@ -84,6 +84,10 @@ header {
   display: flex;
 }
 
+[data-current-path="/"] .container {
+  height: 100%;
+}
+
 .menu-icon {
   font-size: 24px;
   -webkit-transform: scale(-1, 1);
@@ -499,6 +503,10 @@ body.menu-open .sidebar-nav-box {
   padding-top: 64px;
 }
 
+[data-current-path="/"] .content {
+  height: 100%;
+}
+
 .menu-open .content {
   margin-left: 260px;
 }
@@ -883,7 +891,7 @@ body.menu-open .sidebar-nav-box {
 }
 
 #overview {
-  height: calc(100vh - 64px);
+  height: 100%;
 }
 
 .projects-content-grid {
@@ -2559,6 +2567,9 @@ body.menu-open .sidebar-contact-info {
 }
 
 @media only screen and (max-width: 940px) {
+  [data-current-path="/"] .content {
+    padding-bottom: 76px;
+  }
   .homepage-ribbon {
     font-size: 14px;
     height: 46px;
@@ -2579,9 +2590,6 @@ body.menu-open .sidebar-contact-info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  #overview {
-    height: calc(100vh - 76px);
   }
   #home-dock-btn,
   [data-current-path^="/projects"] #projects-dock-btn,
@@ -2694,6 +2702,13 @@ body.menu-open .sidebar-contact-info {
 }
 
 @media only screen and (max-width: 640px) {
+  [data-current-path="/"] .content {
+    padding-bottom: initial;
+  }
+  .container,
+  .content {
+    height: initial;
+  }
   body:not([data-current-path="/"]) .content {
     padding-bottom: 62px;
   }

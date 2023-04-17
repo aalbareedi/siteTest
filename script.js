@@ -118,13 +118,16 @@ window.addEventListener("resize", () => {
   if (window.innerWidth == previousWidth) {
     return;
   }
-  previousWidth = window.innerWidth;
 
-  if (window.innerWidth <= 1100) {
+  if (previousWidth >= 1100 && window.innerWidth <= 1100) {
     body.classList.remove("menu-open");
-  } else {
+  }
+
+  if (previousWidth <= 1100 && window.innerWidth >= 1100) {
     body.classList.add("menu-open");
   }
+
+  previousWidth = window.innerWidth;
 });
 
 let pageSize = document.querySelector(".pageSize");
