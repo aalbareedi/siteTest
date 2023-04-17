@@ -55,25 +55,26 @@ body {
 }
 .contactText {
   font-size: 16px;
-  margin-left: 6px;
+  margin-left: 8px;
   color: #0303e6;
   text-decoration: none;
+  letter-spacing: 0.5px;
 }
 .contactIcon {
   color: #aeb7c3;
   font-size: 21px;
 }
 #addressIcon {
-  margin-left: 2px;
-  margin-right: 2px;
+  // margin-left: 2px;
+  // margin-right: 2px;
   font-size: 22px;
 }
-#phoneIcon {
-  margin-right: -1px;
-}
+// #phoneIcon {
+//   margin-right: -1px;
+// }
 #githubIcon {
   font-size: 24px;
-  margin-right: -2px;
+  // margin-right: -2px;
   margin-left: -1px;
 }
 // #emailIcon {
@@ -95,18 +96,18 @@ body {
   background: #e8e8e8;
   padding: 14px;
   border-radius: 10px;
+  border: 2px solid #e3e3e3;
 }
 .webSkill {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 6px;
-  // background-color: #073763;
   background-color: #7f7ff9;
   color: whitesmoke;
   letter-spacing: 0.5px;
-  padding: 0px 10px;
-  height: 28px;
+  padding: 0px 12px;
+  height: 30px;
   line-height: 16px;
 }
 .skillYears {
@@ -160,18 +161,33 @@ body {
 .projectBox {
   margin-bottom: 12px;
 }
+.project-link-container {
+  margin-top: 12px;
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
 .projectLink {
-  font-size: 15px;
-  margin-top: 6px;
-  font-style: italic;
-  display: inline-block;
-  color: #0303e6;
+  color: #6868cc;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+.projectLink i {
+  font-size: 18px;
   text-decoration: none;
 }
 .projectImgLink {
-  display: inline-block;
+  display: block;
+  height: 240px;
   margin-top: 6px;
   position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .projectImgLink:active .projectHover {
   color: blue;
@@ -211,10 +227,11 @@ body {
 }
 .jobInfo {
   display: flex;
+  margin-bottom: 2px;
 }
 .job,
 .school {
-  margin-bottom: 8px;
+  margin-bottom: 14px;
 }
 div.skillInfoSpace {
   margin-bottom: 2px;
@@ -232,10 +249,17 @@ div.skillInfoSpace {
   line-height: 22px;
   word-spacing: 1.4px;
 }
-.orthoImg {
-  border: 1px solid black;
-  width: 100%;
+#ortho-project {
+  background-image: url(./images/orthoImg.png);
 }
+#portfolio-project {
+  background-image: url(./images/portfolioimg.png);
+  background-position-x: left;
+}
+// .orthoImg {
+//   border: 1px solid black;
+//   width: 100%;
+// }
 .eduCourse {
   font-style: italic;
   margin-top: 1px;
@@ -288,11 +312,11 @@ div.skillInfoSpace {
 }
 
 // active states
-a.contactText:active,
-a.projectLink:active {
-  text-decoration: underline;
-  color: black;
-}
+// a.contactText:active,
+// a.projectLink:active {
+//   text-decoration: underline;
+//   color: black;
+// }
 .saveBtns .saveBtn:active {
   background-color: #a9a9a9;
   border-color: #a9a9a9;

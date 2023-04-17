@@ -97,11 +97,6 @@
 }
 
 @media only screen and (hover: hover) {
-  .contactText:hover,
-  .projectLink:hover {
-    text-decoration: underline;
-    color: #af4cce;
-  }
   .projectImgLink:hover .projectHover {
     opacity: 1;
   }
