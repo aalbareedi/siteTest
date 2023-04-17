@@ -1,6 +1,10 @@
 // Dependencies:
 // Web server must redirect all requests to the SPA (usually index.html)
 
+// Attributes:
+// data-current-path: automatically applied to the body tag to indicate location path
+// data-scrolls-to-top: can be used on <a> tags to scroll to top of the page after navigating
+
 // const root = new URL(location.href.split("/").slice(0, -1).join("/"));
 const root = new URL(location.origin);
 

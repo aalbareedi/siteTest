@@ -2279,6 +2279,10 @@ body.menu-open .sidebar-contact-info {
   word-spacing: 1.2px;
 }
 
+[data-current-path^="/projects/"] .menu-icon-btn {
+  display: none;
+}
+
 @media only screen and (hover: hover) {
   .contact-promo-btn:hover {
     background-color: #5555bc;
