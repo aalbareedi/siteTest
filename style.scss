@@ -628,7 +628,7 @@ body.menu-open .sidebar-nav-box {
   column-gap: 6px;
   padding-left: 6px;
   margin-bottom: 6px;
-  word-spacing: 0.4px;
+  word-spacing: 0.5px;
 }
 .landing-content-info:last-child {
   margin-bottom: 0px;
@@ -1732,6 +1732,7 @@ body.menu-open .sidebar-contact-info {
   user-select: none;
   text-decoration: none;
   color: #1c1c1c;
+  // box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
 }
 // [data-current-path="/"] .content {
 //   overflow-x: hidden;
