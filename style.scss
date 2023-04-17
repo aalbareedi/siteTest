@@ -434,7 +434,7 @@ body.menu-open .sidebar-nav-box {
   font-size: 24px;
   font-weight: bold;
   word-spacing: 2px;
-  line-height: 34px;
+  line-height: 36px;
 }
 .title-text-icon {
   position: absolute;
@@ -1655,6 +1655,7 @@ input.contactFormInput:valid ~ .formIcon {
   border: 4px solid transparent;
 }
 
+// gradient effect for sidebar Contact Tab
 #sidebar-contact {
   position: relative;
   display: inline-block;
@@ -1968,7 +1969,10 @@ body.menu-open .sidebar-contact-info {
 }
 @media only screen and (max-width: 940px) {
   .homepage-ribbon {
-    display: none;
+    font-size: 14px;
+    height: 46px;
+    top: 34px;
+    right: -24px;
   }
   .form-wrapper {
     margin: 0px auto;
@@ -2048,6 +2052,9 @@ body.menu-open .sidebar-contact-info {
   }
 }
 @media only screen and (max-width: 780px) {
+  #overview .title-text {
+    max-width: 390px;
+  }
   .bp {
     font-size: 18px;
   }
@@ -2151,6 +2158,7 @@ body.menu-open .sidebar-contact-info {
   }
   #overview .title-text {
     padding-left: 2px;
+    max-width: initial;
   }
   .landing-intro-title {
     flex-direction: column;
