@@ -345,6 +345,7 @@ body.menu-open .top-sidebar {
 
 .bottom-sidebar {
   width: 100%;
+  display: none;
 }
 
 body.menu-open .channel-logo {
@@ -862,6 +863,12 @@ body.menu-open .sidebar-nav-box {
   background-image: linear-gradient(to top, rgba(188, 188, 188, 0.2), rgba(55, 55, 132, 0.99) 74%), url("./react-portfolio-1.png");
 }
 
+#landing-wordpress-img {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(188, 188, 188, 0.2)), color-stop(74%, rgba(55, 55, 132, 0.99))), url("./wordpress-1.png");
+  background-image: linear-gradient(to top, rgba(188, 188, 188, 0.2), rgba(55, 55, 132, 0.99) 74%), url("./wordpress-1.png");
+  background-position: center;
+}
+
 .landing-project-title {
   font-size: 18px;
   position: absolute;
@@ -899,8 +906,8 @@ body.menu-open .sidebar-nav-box {
   display: grid;
   -ms-grid-columns: (minmax(0, 1fr))[2];
       grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
 }
 
 .project-window {
@@ -1147,6 +1154,11 @@ body.menu-open .sidebar-nav-box {
   background-image: url("./react-portfolio-1.png");
 }
 
+#wordpress-project .project-preview {
+  background-image: url("./wordpress-1.png");
+  background-position: center;
+}
+
 #osc-project .preview-logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1161,10 +1173,6 @@ body.menu-open .sidebar-nav-box {
           align-items: center;
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  opacity: 1;
-  visibility: visible;
 }
 
 #portfolio-project .preview-logo {
@@ -1179,10 +1187,6 @@ body.menu-open .sidebar-nav-box {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  opacity: 1;
-  visibility: visible;
 }
 
 #osc-project .preview-logo img {
@@ -1191,6 +1195,10 @@ body.menu-open .sidebar-nav-box {
 
 #portfolio-project .preview-logo img {
   width: 78px;
+}
+
+#wordpress-project .preview-logo img {
+  width: 86px;
 }
 
 #osc-project .preview-logo-name {
@@ -1249,6 +1257,10 @@ body.menu-open .sidebar-nav-box {
 
 #portfolio-project .preview-overlay {
   background-color: rgba(97, 69, 135, 0.9);
+}
+
+#wordpress-project .preview-overlay {
+  background-color: rgba(16, 16, 16, 0.9);
 }
 
 .preview-logo-layer {
@@ -2028,7 +2040,7 @@ input.contactFormInput:valid ~ .formIcon {
 }
 
 .nav-dock {
-  height: 76px;
+  height: 80px;
   width: 100%;
   position: fixed;
   bottom: 0px;
@@ -2579,7 +2591,7 @@ body.menu-open .sidebar-contact-info {
 
 @media only screen and (max-width: 940px) {
   [data-current-path="/"] .content {
-    padding-bottom: 76px;
+    padding-bottom: 80px;
   }
   .homepage-ribbon {
     font-size: 14px;
@@ -2635,10 +2647,10 @@ body.menu-open .sidebar-contact-info {
   }
   body:not([data-current-path="/"]) .content {
     padding-top: 64px;
-    padding-bottom: 76px;
+    padding-bottom: 80px;
   }
   .project-window {
-    padding-bottom: 76px;
+    padding-bottom: 80px;
     left: initial;
     width: 100%;
   }
@@ -2718,7 +2730,7 @@ body.menu-open .sidebar-contact-info {
     height: initial;
   }
   body:not([data-current-path="/"]) .content {
-    padding-bottom: 64px;
+    padding-bottom: 70px;
   }
   .dock-btn-text {
     display: none;
@@ -2729,7 +2741,7 @@ body.menu-open .sidebar-contact-info {
     border: none;
   }
   .project-window {
-    padding-bottom: 64px;
+    padding-bottom: 70px;
   }
   .project-window-btns {
     -webkit-box-pack: center;
@@ -2756,7 +2768,7 @@ body.menu-open .sidebar-contact-info {
     padding: 30px 20px;
   }
   .nav-dock {
-    height: 64px;
+    height: 70px;
     display: none;
   }
   body:not([data-current-path="/"]) .nav-dock {
@@ -2924,6 +2936,7 @@ body.menu-open .sidebar-contact-info {
   .project-window-title {
     font-size: 18px;
     height: 64px;
+    padding-left: 84px;
   }
   .close-project-btn {
     height: 64px;

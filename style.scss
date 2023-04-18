@@ -6,8 +6,8 @@ $landing-item-title-height: 54px;
 $sidenav-open-width: 260px;
 $sidenav-close-width: 72px;
 $contact-btn-height: 64px;
-$nav-dock-height-mobile: 64px;
-$nav-dock-height-tablet: 76px;
+$nav-dock-height-mobile: 70px;
+$nav-dock-height-tablet: 80px;
 $project-window-title-height: 76px;
 
 * {
@@ -281,6 +281,7 @@ body.menu-open .top-sidebar {
   width: 100%;
   // padding: 0px 0px 8px 0px;
   // border-top: 2px solid #e0e0e0;
+  display: none;
 }
 body.menu-open .channel-logo {
   width: 118px;
@@ -668,6 +669,16 @@ body.menu-open .sidebar-nav-box {
     ),
     url("./react-portfolio-1.png");
 }
+#landing-wordpress-img {
+  // background-image: url("./portfolioImg.png");
+  background-image: linear-gradient(
+      to top,
+      rgba(188, 188, 188, 0.2),
+      rgba(55, 55, 132, 0.99) 74%
+    ),
+    url("./wordpress-1.png");
+  background-position: center;
+}
 .landing-project-title {
   font-size: 18px;
   position: absolute;
@@ -702,8 +713,8 @@ body.menu-open .sidebar-nav-box {
 .projects-content-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
 }
 .project-window {
   display: flex;
@@ -880,8 +891,11 @@ body.menu-open .sidebar-nav-box {
   background-image: url("./braces1.png");
 }
 #portfolio-project .project-preview {
-  // background-image: url("./portfolioImg.png");
   background-image: url("./react-portfolio-1.png");
+}
+#wordpress-project .project-preview {
+  background-image: url("./wordpress-1.png");
+  background-position: center;
 }
 #osc-project .preview-logo {
   display: flex;
@@ -889,24 +903,27 @@ body.menu-open .sidebar-nav-box {
   justify-content: center;
   align-items: center;
   transform: scale(1.15);
-  transition: all 0.2s;
-  opacity: 1;
-  visibility: visible;
+  // transition: all 0.2s;
+  // opacity: 1;
+  // visibility: visible;
 }
 #portfolio-project .preview-logo {
   display: flex;
   column-gap: 10px;
   justify-content: center;
   align-items: center;
-  transition: all 0.2s;
-  opacity: 1;
-  visibility: visible;
+  // transition: all 0.2s;
+  // opacity: 1;
+  // visibility: visible;
 }
 #osc-project .preview-logo img {
   width: 48px;
 }
 #portfolio-project .preview-logo img {
   width: 78px;
+}
+#wordpress-project .preview-logo img {
+  width: 86px;
 }
 #osc-project .preview-logo-name {
   color: white;
@@ -951,6 +968,9 @@ body.menu-open .sidebar-nav-box {
 }
 #portfolio-project .preview-overlay {
   background-color: rgba(97, 69, 135, 0.9);
+}
+#wordpress-project .preview-overlay {
+  background-color: rgba(16, 16, 16, 0.9);
 }
 .preview-logo-layer {
   position: absolute;
@@ -2345,7 +2365,9 @@ body.menu-open .sidebar-contact-info {
   }
   .project-window-title {
     font-size: 18px;
+    // 64px need to be $project-window-title-height new
     height: 64px;
+    padding-left: 84px;
   }
   .close-project-btn {
     height: 64px;
