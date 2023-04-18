@@ -2718,7 +2718,7 @@ body.menu-open .sidebar-contact-info {
     height: initial;
   }
   body:not([data-current-path="/"]) .content {
-    padding-bottom: 62px;
+    padding-bottom: 64px;
   }
   .dock-btn-text {
     display: none;
@@ -2729,7 +2729,7 @@ body.menu-open .sidebar-contact-info {
     border: none;
   }
   .project-window {
-    padding-bottom: 62px;
+    padding-bottom: 64px;
   }
   .project-window-btns {
     -webkit-box-pack: center;
@@ -2756,7 +2756,7 @@ body.menu-open .sidebar-contact-info {
     padding: 30px 20px;
   }
   .nav-dock {
-    height: 62px;
+    height: 64px;
     display: none;
   }
   body:not([data-current-path="/"]) .nav-dock {

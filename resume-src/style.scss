@@ -145,6 +145,11 @@ body {
   margin-bottom: 20px;
   margin-top: 10px;
 }
+.projects {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
 .projects,
 .exp,
 .edu,
@@ -178,6 +183,9 @@ body {
 .projectLink i {
   font-size: 18px;
   text-decoration: none;
+}
+.projectLink-text {
+  padding-top: 1px;
 }
 .projectImgLink {
   display: block;

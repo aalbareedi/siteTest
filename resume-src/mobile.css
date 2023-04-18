@@ -44,10 +44,11 @@
 
 @media screen and (min-width: 650px), print {
   .projects {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     margin-bottom: 8px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .projectBox {
     margin-right: initial;
