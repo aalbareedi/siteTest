@@ -144,11 +144,27 @@ window.addEventListener("load", () => {
     sidebar.classList.remove("hidden");
     navDock.classList.remove("hidden");
   }, 100);
-});
 
-document
-  .querySelectorAll(".splide")
-  .forEach((element) => new Splide(element).mount());
+  document.querySelectorAll(".splide").forEach((element) => {
+    const splide = new Splide(element, {
+      type: "loop",
+    }).mount();
+
+    // When the element becomes visible...
+    new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0) {
+          // ...trigger splide's resize event.
+          splide.emit("resize");
+        }
+      });
+    }, {}).observe(element);
+
+    new ResizeObserver(() => {
+      splide.emit("resize");
+    }).observe(element);
+  });
+});
 
 const contactForm = document.querySelector("#contact-form");
 

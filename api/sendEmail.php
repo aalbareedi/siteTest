@@ -5,10 +5,7 @@ class HttpError extends Error
 }
 
 try {
-    // if(filter_var($_GET["email"], FILTER_VALIDATE_EMAIL)) 
 
-    // GET array is automatically defined for you with the key/values from the query string
-    // calling mail function in PHP (target address, subject, body)
     $body = "<b>Name: </b>" . htmlspecialchars($_GET["name"]) .
         "<br>" . "<b>Email: </b>" . htmlspecialchars($_GET["email"]) .
         "<br>" . "<b>Message: </b>" . htmlspecialchars($_GET["msg"]);

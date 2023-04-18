@@ -4,6 +4,7 @@
 // Attributes:
 // data-current-path: automatically applied to the body tag to indicate location path
 // data-scrolls-to-top: can be used on <a> tags to scroll to top of the page after navigating
+// data-path: can be used on a page section to cause <a> tags to link to it
 
 // const root = new URL(location.href.split("/").slice(0, -1).join("/"));
 const root = new URL(location.origin);

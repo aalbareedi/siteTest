@@ -20,19 +20,33 @@ form.onsubmit = async (e) => {
 
     showModal(loadingModal);
 
-    const response = await fetch(
-      "api/sendEmail.php?name=" +
-        fullName +
-        "&email=" +
-        emailAddress +
-        "&msg=" +
-        message
-    );
+    // Wait for either...
+    await Promise.race([
+      // 3 seconds, or...
+      new Promise((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 3000);
+      }),
+      // ...the email sending to finish
+      (async () => {
+        const response = await fetch(
+          "api/sendEmail.php?name=" +
+            fullName +
+            "&email=" +
+            emailAddress +
+            "&msg=" +
+            message
+        );
 
-    if (!response.ok) {
-      const { error } = await response.json();
-      throw new Error(error);
-    }
+        if (!response.ok) {
+          const { error } = await response.json();
+          throw new Error(error);
+        }
+
+        const data = await response.json();
+      })(),
+    ]);
 
     form.reset();
     showModal(successModal);
@@ -40,7 +54,6 @@ form.onsubmit = async (e) => {
       hideModal(successModal);
     }, 3000);
 
-    const data = await response.json();
     // console.log("Success!");
     // console.log("data: ", data);
   } catch (error) {

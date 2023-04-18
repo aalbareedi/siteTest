@@ -1740,9 +1740,9 @@ body.menu-open .sidebar-contact-info {
 // }
 
 // [data-current-path^="/projects/"] is when project is opened
-[data-current-path^="/projects/"] .menu-icon-btn {
-  display: none;
-}
+// [data-current-path^="/projects/"] .menu-icon-btn {
+//   display: none;
+// }
 
 @media only screen and (hover: hover) {
   .contact-promo-btn:hover {
