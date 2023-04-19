@@ -1129,9 +1129,9 @@ body.menu-open .sidebar-nav-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #d7d7d7;
+  background-color: #bbbbff;
   position: relative;
-  border: 3px solid #ceceff;
+  border: 4px solid #bbbbff;
   -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
           box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
 }
@@ -1194,7 +1194,7 @@ body.menu-open .sidebar-nav-box {
 }
 
 #portfolio-project .preview-logo img {
-  width: 78px;
+  width: 72px;
 }
 
 #wordpress-project .preview-logo img {
@@ -1300,7 +1300,7 @@ body.menu-open .sidebar-nav-box {
   padding: 0px 28px;
   color: white;
   border-radius: 0px 0px 12px 0px;
-  border: 2px solid #ceceff;
+  border: 3px solid #bbbbff;
   border-top: none;
   border-left: none;
   font-size: 18px;
@@ -2214,12 +2214,6 @@ input.contactFormInput:valid ~ .formIcon {
   height: 42px;
 }
 
-.gradient-border {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(white)) padding-box, -webkit-gradient(linear, left top, right top, from(#7f7ff9), to(darkorchid)) border-box;
-  background: linear-gradient(white, white) padding-box, linear-gradient(to right, #7f7ff9, darkorchid) border-box;
-  border: 4px solid transparent;
-}
-
 #sidebar-contact {
   position: relative;
   display: inline-block;
@@ -2236,7 +2230,7 @@ input.contactFormInput:valid ~ .formIcon {
   left: 0;
   width: 200%;
   height: 100%;
-  background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+  background: linear-gradient(115deg, #4fcf70, #fad648, #f47898, #a767e5, #12bcfe, #44ce7b);
   background-size: 50% 100%;
   border-radius: inherit;
 }
@@ -2896,6 +2890,9 @@ body.menu-open .sidebar-contact-info {
 }
 
 @media only screen and (max-width: 500px) {
+  .project-title {
+    padding: 0px 22px;
+  }
   #contact {
     padding: 0px;
   }

@@ -1,3 +1,4 @@
+$theme-color: #7f7ff9;
 $header-height: 64px;
 $current-nav: #a2a2ff;
 $main-grid-hover: #9292f8;
@@ -69,7 +70,7 @@ header {
   left: 0;
   right: 0;
   // width: 100%;
-  background-color: #7f7ff9;
+  background-color: $theme-color;
   height: $header-height;
   z-index: 10;
   left: $sidenav-close-width;
@@ -319,15 +320,15 @@ body.menu-open .sidebar-link {
 }
 .sidebar-list-item.active .sidebar-nav-box {
   color: #eaeafd;
-  background-color: #7f7ff9;
+  background-color: $theme-color;
 }
 .sidebar-list-item.active .sidebar-contact-info {
-  background-color: #7f7ff9;
+  background-color: $theme-color;
 }
 
 // [data-current-path="/"] .sidebar-link[href="/"] .sidebar-nav-box {
 //   color: #eaeafd;
-//   background-color: #7f7ff9;
+//   background-color: $theme-color;
 // }
 // .sidebar-list-item.active::before {
 //   content: "";
@@ -447,7 +448,7 @@ body.menu-open .sidebar-nav-box {
   top: 3px;
   left: -5px;
   font-size: 26px;
-  color: #7f7ff9;
+  color: $theme-color;
 }
 // #overview .title-text {
 //   margin-bottom: 0px;
@@ -838,7 +839,7 @@ body.menu-open .sidebar-nav-box {
   background: transparent;
   border-radius: 30px;
   column-gap: 10px;
-  color: #7f7ff9;
+  color: $theme-color;
   font-size: 16px;
   transition: all 0.2s;
   text-decoration: none;
@@ -857,7 +858,7 @@ body.menu-open .sidebar-nav-box {
   font-size: 24px;
   border: none;
   border-left: 2px solid #ccccee;
-  color: #7f7ff9;
+  color: $theme-color;
   transition: all 0.2s;
   display: flex;
   flex-direction: column;
@@ -870,9 +871,10 @@ body.menu-open .sidebar-nav-box {
   border-radius: 10px;
   overflow: hidden;
   display: flex;
-  background-color: #d7d7d7;
+  background-color: #bbbbff;
   position: relative;
-  border: 3px solid #ceceff;
+  // border: 3px solid #ceceff;
+  border: 4px solid #bbbbff;
   box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
   // transition: box-shadow 0.4s;
 }
@@ -920,7 +922,7 @@ body.menu-open .sidebar-nav-box {
   width: 48px;
 }
 #portfolio-project .preview-logo img {
-  width: 78px;
+  width: 72px;
 }
 #wordpress-project .preview-logo img {
   width: 86px;
@@ -985,7 +987,7 @@ body.menu-open .sidebar-nav-box {
   pointer-events: none;
 }
 .project-title {
-  background-color: #7f7ff9;
+  background-color: $theme-color;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -995,7 +997,7 @@ body.menu-open .sidebar-nav-box {
   padding: 0px 28px;
   color: white;
   border-radius: 0px 0px 12px 0px;
-  border: 2px solid #ceceff;
+  border: 3px solid #bbbbff;
   border-top: none;
   border-left: none;
   font-size: 18px;
@@ -1027,7 +1029,7 @@ body.menu-open .sidebar-nav-box {
   align-items: center;
   column-gap: 9px;
   row-gap: 4px;
-  color: #7f7ff9;
+  color: $theme-color;
   transition: all 0.2s;
   text-decoration: none;
 }
@@ -1164,7 +1166,7 @@ body.menu-open .sidebar-nav-box {
 .time-point {
   width: 31px;
   height: 31px;
-  background-color: #7f7ff9;
+  background-color: $theme-color;
   border: 4px solid white;
   border-radius: 50%;
   position: absolute;
@@ -1236,7 +1238,7 @@ body.menu-open .sidebar-nav-box {
 .contact-promo-btn {
   width: 200px;
   height: 42px;
-  background: #7f7ff9;
+  background: $theme-color;
   border-radius: 50px;
   border: none;
   display: flex;
@@ -1334,14 +1336,14 @@ body.menu-open .sidebar-nav-box {
   padding: 12px 22px;
   border-radius: 50px;
   transition: all 0.3s;
-  color: #7f7ff9;
+  color: $theme-color;
   font-size: 16px;
   background-color: #dbdbff;
   border: 3px solid #bbbbff;
 }
 .contact-icon {
   font-size: 20px;
-  color: #7f7ff9;
+  color: $theme-color;
 }
 .form-title {
   font-size: 20px;
@@ -1447,7 +1449,7 @@ form:invalid .sendBtn {
   width: 100%;
   height: 50px;
   border-radius: 30px;
-  background-color: #7f7ff9;
+  background-color: $theme-color;
   border: none;
   // margin: 30px 0px 0px 0px;
   color: #dcdcdc;
@@ -1560,7 +1562,7 @@ input.contactFormInput:valid ~ .formIcon {
   left: 0px;
   right: 0px;
   z-index: 100;
-  background: #7f7ff9;
+  background: $theme-color;
   border-top: 2px solid #d3d3ff;
   display: none;
 }
@@ -1683,12 +1685,12 @@ input.contactFormInput:valid ~ .formIcon {
   height: 42px;
 }
 
-.gradient-border {
-  background: linear-gradient(white, white) padding-box,
-    linear-gradient(to right, #7f7ff9, darkorchid) border-box;
-  // border-radius: 50em;
-  border: 4px solid transparent;
-}
+// .gradient-border {
+//   background: linear-gradient(white, white) padding-box,
+//     linear-gradient(to right, #7f7ff9, darkorchid) border-box;
+//   // border-radius: 50em;
+//   border: 4px solid transparent;
+// }
 
 // gradient effect for sidebar Contact Tab
 #sidebar-contact {
@@ -1711,6 +1713,7 @@ input.contactFormInput:valid ~ .formIcon {
     115deg,
     #4fcf70,
     #fad648,
+    #f47898,
     #a767e5,
     #12bcfe,
     #44ce7b
@@ -1791,14 +1794,14 @@ body.menu-open .sidebar-contact-info {
   }
   .sidebar-list-item:hover .sidebar-nav-box {
     background-color: #e7e7ff;
-    color: #7f7ff9;
+    color: $theme-color;
   }
   .sidebar-list-item:hover .sidebar-contact-info {
     background-color: #e7e7ff;
   }
   .sidebar-list-item.active:hover .sidebar-nav-box,
   .sidebar-list-item.active:hover .sidebar-contact-info {
-    background-color: #7f7ff9;
+    background-color: $theme-color;
   }
   .close-project-btn:hover {
     background-color: #ccccee;
@@ -2272,7 +2275,7 @@ body.menu-open .sidebar-contact-info {
     display: none;
   }
   // #contact-me-btn {
-  //   background-color: #7f7ff9;
+  //   background-color: $theme-color;
   //   position: fixed;
   //   bottom: 0px;
   //   left: 0px;
@@ -2322,6 +2325,9 @@ body.menu-open .sidebar-contact-info {
   }
 }
 @media only screen and (max-width: 500px) {
+  .project-title {
+    padding: 0px 22px;
+  }
   #contact {
     padding: 0px;
   }
