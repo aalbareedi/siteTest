@@ -445,7 +445,7 @@ body.menu-open .sidebar-nav-box {
 }
 .title-text-icon {
   position: absolute;
-  top: 3px;
+  top: 5px;
   left: -5px;
   font-size: 26px;
   color: $theme-color;
@@ -1266,12 +1266,17 @@ body.menu-open .sidebar-nav-box {
 .content-item-name {
   font-weight: bold;
   font-size: 20px;
-  line-height: 25px;
-  margin-bottom: 7px;
+  line-height: 26px;
+  margin-bottom: 4px;
 }
-.content-item-years {
+.content-item-sub-name {
   font-size: 18px;
   line-height: 24px;
+  margin-bottom: 2px;
+}
+.content-item-years {
+  font-size: 16px;
+  line-height: 20px;
   margin-bottom: 12px;
 }
 .content-item-info {
@@ -1283,9 +1288,6 @@ body.menu-open .sidebar-nav-box {
   font-size: 16px;
   line-height: 24px;
 }
-// .resume-container {
-//   padding-bottom: 30px;
-// }
 #resume iframe {
   width: 100%;
   overflow: hidden;
@@ -1294,7 +1296,6 @@ body.menu-open .sidebar-nav-box {
   background: #bebeff;
   border-radius: 14px;
   padding: 20px;
-  // width: fit-content;
   width: 100%;
   max-width: 880px;
 }
@@ -1310,7 +1311,6 @@ body.menu-open .sidebar-nav-box {
 .contact-content {
   display: flex;
   column-gap: 80px;
-  // padding-left: 20px;
   flex-direction: column;
   row-gap: 50px;
   margin-bottom: 50px;
@@ -1322,7 +1322,6 @@ body.menu-open .sidebar-nav-box {
 // }
 .contact-socials {
   display: flex;
-  // flex-direction: column;
   row-gap: 20px;
   column-gap: 20px;
   flex-wrap: wrap;
@@ -2325,6 +2324,22 @@ body.menu-open .sidebar-contact-info {
   }
 }
 @media only screen and (max-width: 500px) {
+  #osc-project .preview-logo {
+    transform: initial;
+  }
+  #portfolio-project .preview-logo img {
+    width: 58px;
+  }
+  #portfolio-project .logo-name-first {
+    font-size: 24px;
+  }
+  #portfolio-project .logo-name-second {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+  }
+  // #portfolio-project .preview-logo-name {
+  //   transform: scale(0.9);
+  // }
   .project-title {
     padding: 0px 22px;
   }

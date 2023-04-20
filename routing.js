@@ -71,6 +71,12 @@ function showPageFromAddress() {
     // NOTE: Assuming this means it's a modal
     if (parts.length > 1) {
       body.classList.add("overflow-hidden");
+
+      // Scroll to top of new page
+      setTimeout(() => {
+        // window.scroll(0, -200);
+        element.scrollTop = 0;
+      }, 20);
     }
   }
 
@@ -79,7 +85,10 @@ function showPageFromAddress() {
     document.querySelector(`[data-path="${path}"]`) ||
     document.querySelector(`#${notFoundPageId}`);
 
-  console.log(parts);
+  console.log("path: ", path);
+  console.log("parts: ", parts);
+  console.log("pageName: ", pageName);
+  console.log("page: ", page);
 
   if (page) {
     document.querySelectorAll(`[data-path]`).forEach((element) => {

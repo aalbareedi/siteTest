@@ -551,7 +551,7 @@ body.menu-open .sidebar-nav-box {
 
 .title-text-icon {
   position: absolute;
-  top: 3px;
+  top: 5px;
   left: -5px;
   font-size: 26px;
   color: #7f7ff9;
@@ -1678,13 +1678,19 @@ body.menu-open .sidebar-nav-box {
 .content-item-name {
   font-weight: bold;
   font-size: 20px;
-  line-height: 25px;
-  margin-bottom: 7px;
+  line-height: 26px;
+  margin-bottom: 4px;
+}
+
+.content-item-sub-name {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 2px;
 }
 
 .content-item-years {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 20px;
   margin-bottom: 12px;
 }
 
@@ -2890,6 +2896,20 @@ body.menu-open .sidebar-contact-info {
 }
 
 @media only screen and (max-width: 500px) {
+  #osc-project .preview-logo {
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  #portfolio-project .preview-logo img {
+    width: 58px;
+  }
+  #portfolio-project .logo-name-first {
+    font-size: 24px;
+  }
+  #portfolio-project .logo-name-second {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+  }
   .project-title {
     padding: 0px 22px;
   }

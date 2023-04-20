@@ -164,6 +164,18 @@ window.addEventListener("load", () => {
       splide.emit("resize");
     }).observe(element);
   });
+
+  document.querySelectorAll(".project-window-content").forEach((element) => {
+    // When the element becomes visible...
+    new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0) {
+          // ...trigger splide's resize event.
+          element.scrollTop = 0;
+        }
+      });
+    }, {}).observe(element);
+  });
 });
 
 const contactForm = document.querySelector("#contact-form");
