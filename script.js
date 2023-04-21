@@ -76,7 +76,18 @@ projectWindows.forEach((projectWindow) => {
     hideModal(projectWindow);
   });
 
+  let startElement = null;
+  projectWindow.addEventListener("mousedown", (e) => {
+    startElement = e.target;
+  });
+
   projectWindow.addEventListener("click", (e) => {
+    if (e.target != startElement) {
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+
     // If `projectWindow` itself was just clicked, rather than a descendent
     if (e.target == e.currentTarget) {
       hideModal(projectWindow);

@@ -98,6 +98,8 @@ function showPageFromAddress() {
         element.dataset.path == "/"
       ) {
         element.classList.remove("open");
+      } else {
+        element.classList.add("open");
       }
     });
 
