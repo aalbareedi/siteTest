@@ -187,6 +187,23 @@ window.addEventListener("load", () => {
       });
     }, {}).observe(element);
   });
+
+  // document.querySelectorAll(".promo-container").forEach((element) => {
+  //   // When the element becomes visible...
+  //   new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => {
+  //       const contactButton = document.querySelector(".mobile-contact-btn");
+
+  //       if (contactButton) {
+  //         if (entry.intersectionRatio > 0) {
+  //           contactButton.classList.add("hidden");
+  //         } else {
+  //           contactButton.classList.remove("hidden");
+  //         }
+  //       }
+  //     });
+  //   }, {}).observe(element);
+  // });
 });
 
 const contactForm = document.querySelector("#contact-form");
