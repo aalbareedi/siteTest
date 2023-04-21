@@ -50,12 +50,12 @@ body {
   margin-bottom: 30px;
 }
 .contact {
-  margin-left: 73px;
+  margin-left: 60px;
   padding-bottom: 18px;
 }
 .contactText {
   font-size: 16px;
-  margin-left: 8px;
+  // margin-left: 8px;
   color: #000000;
   text-decoration: none;
   letter-spacing: 0.5px;
@@ -83,7 +83,13 @@ body {
 .contactInfo {
   display: flex;
   align-items: center;
-  margin-bottom: 12px;
+  // margin-bottom: 12px;
+  text-decoration: none;
+  column-gap: 8px;
+  border-radius: 30px;
+  padding: 10px 14px;
+  width: fit-content;
+  transition: background-color 0.3s;
 }
 .headings {
   font-family: "PT Sans", sans-serif;
@@ -150,7 +156,7 @@ body {
 .projects {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 20px;
 }
 .projects,
 .exp,
@@ -166,21 +172,24 @@ body {
   margin-bottom: 2px;
 }
 .projectBox {
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 .project-link-container {
-  margin-top: 12px;
-  padding-left: 8px;
+  margin-top: 6px;
+  // padding-left: 8px;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
 .projectLink {
-  color: #6868cc;
+  color: #7f7ff9;
   text-decoration: none;
   display: flex;
   align-items: center;
-  column-gap: 6px;
+  column-gap: 8px;
+  border-radius: 30px;
+  padding: 10px 14px;
+  width: fit-content;
 }
 .projectLink i {
   font-size: 18px;
@@ -188,6 +197,7 @@ body {
 }
 .projectLink-text {
   padding-top: 1px;
+  color: #000000;
 }
 .projectImgLink {
   display: block;

@@ -19,10 +19,11 @@
 @media screen and (min-width: 540px), print {
   .contact {
     display: flex;
+    // column-gap: 30px;
   }
-  .contactSection:last-child {
-    margin-left: 33px;
-  }
+  // .contactSection:last-child {
+  //   margin-left: 33px;
+  // }
   .wrapper {
     padding: 40px 42px 30px 42px;
   }
@@ -107,5 +108,9 @@
   .saveBtn:hover .iconToolTip {
     opacity: 1;
     visibility: initial;
+  }
+  .contactInfo:hover,
+  .projectLink:hover {
+    background-color: #f2f2ff;
   }
 }
