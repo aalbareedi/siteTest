@@ -1,0 +1,116 @@
+@media screen and (min-width: 375px), print {
+  .saveBtns {
+    top: 20px;
+    right: 20px;
+    bottom: initial;
+    left: initial;
+    margin-left: initial;
+    display: initial;
+  }
+  .saveBtn:first-child {
+    margin-bottom: 12px;
+    margin-right: initial;
+  }
+  .wrapper {
+    padding: 20px 22px 22px 22px;
+  }
+}
+
+@media screen and (min-width: 540px), print {
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contactSection:last-child {
+    margin-left: 33px;
+  }
+  .wrapper {
+    padding: 40px 42px 30px 42px;
+  }
+  .projectBox {
+    margin-right: 30px;
+  }
+  .saveBtns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .saveBtn:first-child {
+    margin-bottom: initial;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 650px), print {
+  .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 8px;
+  }
+  .projectBox {
+    margin-right: initial;
+    width: 50%;
+  }
+  .projectBox:first-child {
+    margin-right: 30px;
+  }
+  .saveBtns {
+    top: 30px;
+    right: 30px;
+  }
+  .iconToolTip {
+    display: initial;
+    left: -88px;
+  }
+  .saveBtns {
+    display: initial;
+  }
+  .saveBtn:first-child {
+    margin-bottom: 12px;
+    margin-right: initial;
+  }
+}
+
+@media screen and (min-width: 1200px), print {
+  .saveBtns {
+    position: fixed;
+    right: 50%;
+    margin-right: -496px;
+  }
+  .iconToolTip {
+    left: 58px;
+    text-align: initial;
+  }
+}
+
+@media only print {
+  .saveBtns {
+    display: none;
+  }
+  .pageBreak {
+    display: block;
+    page-break-before: always;
+    height: 50px;
+  }
+}
+
+@media only screen and (hover: hover) {
+  .contactText:hover,
+  .projectLink:hover {
+    text-decoration: underline;
+    color: #af4cce;
+  }
+  .projectImgLink:hover .projectHover {
+    opacity: 1;
+  }
+  .saveBtn:hover {
+    background-color: #d3d3d3;
+  }
+  .saveBtn:hover .iconToolTip {
+    opacity: 1;
+    visibility: initial;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */
