@@ -241,20 +241,14 @@ body {
   margin-left: 5px;
   margin-bottom: 1px;
 }
-.skillInfo {
-  display: flex;
-  margin-bottom: 6px;
-}
 .jobInfo {
   display: flex;
   margin-bottom: 2px;
+  column-gap: 4px;
 }
 .job,
 .school {
   margin-bottom: 14px;
-}
-div.skillInfoSpace {
-  margin-bottom: 2px;
 }
 .emphasize {
   text-decoration: underline;
@@ -262,7 +256,8 @@ div.skillInfoSpace {
 }
 .skillPoint {
   font-size: 28px;
-  margin-right: 4px;
+  // margin-right: 4px;
+  margin-left: 2px;
   line-height: 22px;
 }
 .skillText {

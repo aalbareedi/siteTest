@@ -162,6 +162,10 @@ window.addEventListener("load", () => {
   document.querySelectorAll(".splide").forEach((element) => {
     const splide = new Splide(element, {
       type: "loop",
+      // drag: "free",
+      // snap: true,
+      // try between 50 - 600
+      // flickPower: 300,
     }).mount();
 
     // When the element becomes visible...
