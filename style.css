@@ -242,6 +242,7 @@ header {
           transform: rotate(270deg);
 }
 
+.landing-contact .landing-mobile-icon,
 .is-paused .pause-tooltip,
 .play-tooltip,
 body.menu-open .show-menu,
@@ -613,10 +614,6 @@ body.menu-open .sidebar-nav-box {
   width: 100%;
   height: 100%;
   letter-spacing: 0px;
-}
-
-.landing-contact .landing-mobile-icon {
-  display: none;
 }
 
 .landing-projects {
@@ -1122,6 +1119,19 @@ body.menu-open .sidebar-nav-box {
   row-gap: 4px;
 }
 
+#projects-promo {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: initial;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .project-item {
   height: 340px;
   border-radius: 10px;
@@ -1601,12 +1611,22 @@ body.menu-open .sidebar-nav-box {
   background-color: #d8d8f8;
   padding: 8px;
   border-radius: 20px;
-  width: 316px;
+  max-width: 316px;
+  width: 100%;
 }
 
-.skills-content-wrapper .contact-promo-wrapper,
-.resume-container .contact-promo-wrapper {
+.skills-content-wrapper .contact-promo-wrapper {
   margin: 40px auto 30px auto;
+}
+
+.resume-promo-container {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding: 0px 30px;
+}
+
+.resume-container .contact-promo-wrapper {
+  margin: 0px auto;
 }
 
 .contact-promo {
@@ -1656,7 +1676,7 @@ body.menu-open .sidebar-nav-box {
           column-gap: 10px;
   color: #e7e7ff;
   margin-top: 20px;
-  border: 2px solid #d8d8f8;
+  border: 3px solid #d8d8f8;
   text-decoration: none;
   font-size: 16px;
   word-spacing: 0.8px;
@@ -1878,7 +1898,7 @@ body.menu-open .sidebar-nav-box {
 
 .contactFormInput:focus,
 .contactFormInput:focus-within {
-  border-color: #067ffc;
+  border-color: #009fff;
   outline: none;
 }
 
@@ -1899,6 +1919,8 @@ body.menu-open .sidebar-nav-box {
   height: 70px;
   font-size: 18px;
   line-height: 24px;
+  -webkit-transition: border 0.2s;
+  transition: border 0.2s;
 }
 
 .contactFormInput::-webkit-input-placeholder {
@@ -2300,6 +2322,10 @@ body.menu-open .sidebar-contact-info {
           user-select: none;
   text-decoration: none;
   color: #1c1c1c;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 
 @media only screen and (hover: hover) {
@@ -2313,14 +2339,8 @@ body.menu-open .sidebar-contact-info {
   .menu-icon-btn:hover {
     color: #addcff;
   }
-  .sidebar-link:hover .nav-tooltip {
-    opacity: 1;
-    visibility: initial;
-  }
-  .menu-icon-btn:hover .toggle-nav-tooltip {
-    opacity: 1;
-    visibility: initial;
-  }
+  .sidebar-link:hover .nav-tooltip,
+  .menu-icon-btn:hover .toggle-nav-tooltip,
   .pause-button:hover .landing-skills-tooltip {
     opacity: 1;
     visibility: initial;
@@ -2362,13 +2382,12 @@ body.menu-open .sidebar-contact-info {
             box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
     cursor: pointer;
   }
-  .landing-contact-btn:hover {
-    border-color: #9292f8;
-  }
+  .homepage-ribbon:hover,
   .landing-projects .grid-item-box:hover {
     -webkit-box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
             box-shadow: 0 5px 10px rgba(30, 32, 37, 0.12);
   }
+  .landing-contact-btn:hover,
   .landing-projects .grid-item-box:hover .landing-project-img {
     border-color: #9292f8;
   }
@@ -2590,6 +2609,10 @@ body.menu-open .sidebar-contact-info {
 }
 
 @media only screen and (max-width: 940px) {
+  #projects-promo {
+    height: initial;
+    padding-bottom: 30px;
+  }
   [data-current-path="/"] .content {
     padding-bottom: 80px;
   }
@@ -2602,14 +2625,16 @@ body.menu-open .sidebar-contact-info {
   .form-wrapper {
     margin: 0px auto;
   }
-  .sidebar {
+  .sidebar,
+  .menu-icon-btn {
     display: none;
   }
   header {
     left: 0px;
     display: none;
   }
-  .nav-dock {
+  .nav-dock,
+  .nav-logo-link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2633,9 +2658,6 @@ body.menu-open .sidebar-contact-info {
     border-bottom: none;
     background: initial;
     color: #e7e7ff;
-  }
-  .menu-icon-btn {
-    display: none;
   }
   .content {
     margin-left: initial;
@@ -2669,11 +2691,6 @@ body.menu-open .sidebar-contact-info {
   .projects-content-grid {
     -ms-grid-columns: (minmax(0, 1fr))[1];
         grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-  .nav-logo-link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
   .nav-name,
   .nav-title {
@@ -2732,9 +2749,6 @@ body.menu-open .sidebar-contact-info {
   body:not([data-current-path="/"]) .content {
     padding-bottom: 70px;
   }
-  .dock-btn-text {
-    display: none;
-  }
   .skills-content {
     background-color: initial;
     padding: initial;
@@ -2758,7 +2772,10 @@ body.menu-open .sidebar-contact-info {
   }
   .work-word,
   .view-word,
-  .me-word {
+  .me-word,
+  .dock-btn-text,
+  .grid-item-content,
+  .pause-button {
     display: none;
   }
   .form-wrapper {
@@ -2843,12 +2860,6 @@ body.menu-open .sidebar-contact-info {
     grid-column-gap: 20px;
     -ms-grid-rows: initial;
         grid-template-rows: initial;
-  }
-  .grid-item-content {
-    display: none;
-  }
-  .pause-button {
-    display: none;
   }
   .landing-contact {
     display: -webkit-box;
