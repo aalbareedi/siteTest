@@ -109,7 +109,10 @@ function hideModal(modal) {
     if (modal.dataset.root) {
       history.replaceState({}, null, modal.dataset.root);
       document.body.dataset.currentPath = modal.dataset.root;
-      window.onpopstate();
+      // window.onpopstate();
+      window.dispatchEvent(
+        new PopStateEvent("popstate", { state: history.state })
+      );
     }
   }
   body.classList.remove("overflow-hidden");

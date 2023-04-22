@@ -28,7 +28,10 @@ document.querySelectorAll("[data-path]").forEach((page) => {
         // }
 
         history.pushState({}, null, `${root.origin}/${pageName}`);
-        window.onpopstate();
+        // window.onpopstate();
+        window.dispatchEvent(
+          new PopStateEvent("popstate", { state: history.state })
+        );
 
         if ("scrollsToTop" in a.dataset) {
           // Scroll to top of new page
@@ -56,6 +59,10 @@ function showPageFromAddress() {
   if (parts[parts.length - 1] == "index.html") {
     parts.pop();
     history.replaceState({}, null, `${root}`);
+    window.dispatchEvent(
+      new PopStateEvent("popstate", { state: history.state })
+    );
+    return;
   }
 
   const notFoundPageId = "not-found";
@@ -157,5 +164,6 @@ window.onpopstate = () => {
 };
 
 window.addEventListener("load", () => {
-  window.onpopstate();
+  // window.onpopstate();
+  window.dispatchEvent(new PopStateEvent("popstate", { state: history.state }));
 });
