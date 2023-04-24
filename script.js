@@ -8,6 +8,18 @@ navDock.onscroll = (e) => e.preventDefault();
 navDock.ontouchmove = (e) => e.stopPropagation();
 navDock.ontouchmove = (e) => e.preventDefault();
 
+disableScrollBehind(document.querySelector(".sidebar"));
+disableScrollBehind(document.querySelector(".nav-overlay"));
+
+disableScrollBehind(document.querySelector(".landing-exp .grid-item-content"));
+disableScrollBehind(document.querySelector(".landing-edu .grid-item-content"));
+disableScrollBehind(
+  document.querySelector(".landing-projects .grid-item-content")
+);
+disableScrollBehind(
+  document.querySelector(".landing-skills .carousel-wrapper")
+);
+
 const menuIconButton = document.querySelector("[data-menu-icon-btn]");
 const sidebar = document.querySelector("[data-sidebar]");
 const navOverlay = document.querySelector(".nav-overlay");

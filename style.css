@@ -2596,6 +2596,9 @@ body.menu-open .sidebar-contact-info {
 }
 
 @media only screen and (max-width: 1100px) {
+  .menu-open .project-window {
+    left: 72px;
+  }
   .sidebar {
     position: fixed;
   }
