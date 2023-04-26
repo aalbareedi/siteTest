@@ -1276,10 +1276,10 @@ body.menu-open .sidebar-nav-box {
 
 .preview-logo-layer {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 0px;
+  bottom: 8px;
+  left: 0px;
+  right: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2526,6 +2526,9 @@ body.menu-open .sidebar-contact-info {
 }
 
 @media only screen and (max-width: 1300px) {
+  .preview-logo-layer {
+    bottom: 16px;
+  }
   .close-btn-text {
     display: initial;
   }
@@ -2613,6 +2616,9 @@ body.menu-open .sidebar-contact-info {
 }
 
 @media only screen and (max-width: 940px) {
+  .preview-logo-layer {
+    bottom: 8px;
+  }
   #projects-promo {
     height: initial;
     padding-bottom: 30px;
@@ -2911,6 +2917,9 @@ body.menu-open .sidebar-contact-info {
 }
 
 @media only screen and (max-width: 500px) {
+  .preview-logo-layer {
+    bottom: 16px;
+  }
   #osc-project .preview-logo {
     -webkit-transform: initial;
             transform: initial;
