@@ -2,7 +2,7 @@ $theme-color: #7f7ff9;
 $header-height: 64px;
 $current-nav: #a2a2ff;
 $main-grid-hover: #9292f8;
-$intro-title-height: 110px;
+$intro-title-height: 130px;
 $landing-item-title-height: 54px;
 $sidenav-open-width: 260px;
 $sidenav-close-width: 72px;
@@ -425,6 +425,9 @@ body.menu-open .sidebar-nav-box {
   height: 110px;
   border-radius: 50%;
   user-select: none;
+  // user-drag: none;
+  // -webkit-user-drag: none;
+  pointer-events: none;
 }
 .title-wrapper {
   margin-bottom: 40px;

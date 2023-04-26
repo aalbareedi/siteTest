@@ -382,6 +382,8 @@ body {
           align-items: center;
   cursor: pointer;
   position: relative;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
 }
 
 .saveBtn:first-child {

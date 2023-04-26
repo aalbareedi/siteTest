@@ -301,6 +301,7 @@ body {
   // outline: none;
   cursor: pointer;
   position: relative;
+  transition: background-color 0.4s;
 }
 .saveBtn:first-child {
   margin-right: 18px;
