@@ -1,3 +1,7 @@
+$nav-height: 60px;
+$font-one: "Changa", sans-serif;
+// $font-one: "REM", sans-serif;
+
 * {
   /* Remove Gray Highlight When Tapping Links in Mobile Safari */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -13,10 +17,63 @@ button {
 }
 body {
   background-color: lightgrey;
+  padding-top: $nav-height;
+  color: #1f1f1f;
+  font-family: "Kanit", sans-serif;
+}
+nav {
+  height: $nav-height;
+  background-color: #eaeaea;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  border-bottom: 1px solid #cfcfcf;
+}
+.nav-logo {
+  display: flex;
+}
+.nav-company-image {
+  width: 40px;
+  border-radius: 50%;
+  margin: 10px 4px 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #63a062;
+}
+.nav-company-main-name {
+  font-family: $font-one;
+  font-size: 20px;
+  line-height: 18px;
+}
+.nav-company-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1px;
+}
+.nav-company-sub-name {
+  font-size: 14px;
+  padding-left: 1px;
+}
+.nav-menu-btn {
+  width: $nav-height;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  color: #969696;
 }
 .main-title {
   margin: 20px 0px 0px 20px;
-  font-size: 24px;
+  font-size: 26px;
+  font-weight: initial;
+  font-family: $font-one;
 }
 .stock-list {
   display: flex;
@@ -46,7 +103,7 @@ body {
   flex-direction: column;
 }
 // .stock-symbol {
-//   font-size: 18px;
+//   font-family: "Kanit", sans-serif;
 // }
 .stock-name-text {
   font-size: 14px;
@@ -62,9 +119,18 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+.stock-list-header-price span {
+  color: #7a7a7a;
+  font-size: 14px;
+}
+.stock-list-header-percent {
+  min-width: 80px;
+}
 .percent-change {
   border-radius: 4px;
   padding: 4px 8px;
+  min-width: 80px;
+  text-align: center;
 }
 .negative {
   background-color: rgba(221, 0, 0, 0.5);

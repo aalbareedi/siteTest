@@ -7,14 +7,54 @@
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Stocks</title>
+    <!-- google fonts used -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- test fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=REM&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/c82a5882c2.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+    <nav>
+      <div class="nav-logo">
+        <div class="nav-company-image">
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <div class="nav-company-name">
+          <div class="nav-company-main-name">Uni-Fi</div>
+          <div class="nav-company-sub-name">Universal Finance</div>
+        </div>
+      </div>
+      <button class="nav-menu-btn" type="button">
+        <i class="fa-solid fa-gear"></i>
+      </button>
+    </nav>
     <h1 class="main-title">Stocks</h1>
     <div class="stock-list">
       <div class="stock-list-header">
         <div>Name</div>
-        <div class="stock-list-header-price">Price</div>
-        <div>% Change</div>
+        <div class="stock-list-header-price">Price <span>(USD)</span></div>
+        <div class="stock-list-header-percent">% Change</div>
       </div>
       <div class="stock-entry">
         <div class="stock-name">
