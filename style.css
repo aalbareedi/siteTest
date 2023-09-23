@@ -22,7 +22,7 @@ body {
   font-family: "Kanit", sans-serif;
 }
 
-nav {
+header {
   height: 60px;
   background-color: #eaeaea;
   position: fixed;
@@ -36,7 +36,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 1;
-  border-bottom: 1px solid #cfcfcf;
+  border-bottom: 2px solid #cfcfcf;
 }
 
 .nav-logo {
@@ -94,6 +94,57 @@ nav {
   background-color: transparent;
   font-size: 20px;
   color: #969696;
+}
+
+.main-dock {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 2px;
+          column-gap: 2px;
+  background-color: #cfcfcf;
+  border-top: 2px solid #cfcfcf;
+}
+
+.main-dock-btn {
+  font-family: "Changa", sans-serif;
+  background-color: #eaeaea;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+  border: none;
+  color: #969696;
+}
+
+.main-dock-btn i {
+  font-size: 20px;
+}
+
+.dock-btn-selected {
+  color: #489447 !important;
+}
+
+.main-content {
+  padding-bottom: 60px;
 }
 
 .main-title {

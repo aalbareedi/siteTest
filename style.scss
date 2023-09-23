@@ -21,7 +21,7 @@ body {
   color: #1f1f1f;
   font-family: "Kanit", sans-serif;
 }
-nav {
+header {
   height: $nav-height;
   background-color: #eaeaea;
   position: fixed;
@@ -31,7 +31,7 @@ nav {
   display: flex;
   justify-content: space-between;
   z-index: 1;
-  border-bottom: 1px solid #cfcfcf;
+  border-bottom: 2px solid #cfcfcf;
 }
 .nav-logo {
   display: flex;
@@ -68,6 +68,39 @@ nav {
   background-color: transparent;
   font-size: 20px;
   color: #969696;
+}
+.main-dock {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+  height: $nav-height;
+  display: flex;
+  column-gap: 2px;
+  background-color: #cfcfcf;
+  border-top: 2px solid #cfcfcf;
+}
+.main-dock-btn {
+  font-family: $font-one;
+  background-color: #eaeaea;
+  flex-grow: 1;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+  border: none;
+  color: #969696;
+}
+.main-dock-btn i {
+  font-size: 20px;
+}
+.dock-btn-selected {
+  color: #489447 !important;
+}
+.main-content {
+  padding-bottom: $nav-height;
 }
 .main-title {
   margin: 20px 0px 0px 20px;
