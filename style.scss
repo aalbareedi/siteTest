@@ -1,6 +1,5 @@
 $nav-height: 60px;
 $font-one: "Changa", sans-serif;
-// $font-one: "REM", sans-serif;
 
 * {
   /* Remove Gray Highlight When Tapping Links in Mobile Safari */
@@ -20,6 +19,7 @@ body {
   padding-top: $nav-height;
   color: #1f1f1f;
   font-family: "Kanit", sans-serif;
+  font-size: 16px;
 }
 header {
   height: $nav-height;
@@ -60,14 +60,19 @@ header {
 .nav-company-sub-name {
   font-size: 14px;
   padding-left: 1px;
+  word-spacing: 1px;
+  letter-spacing: 0.2px;
 }
 .nav-menu-btn {
   width: $nav-height;
   height: 100%;
   border: none;
   background-color: transparent;
-  font-size: 20px;
+  font-size: 22px;
   color: #969696;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main-dock {
   position: fixed;
@@ -89,21 +94,22 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 8px;
+  column-gap: 10px;
   border: none;
   color: #969696;
+  transition: all 0.5s;
 }
 .main-dock-btn i {
-  font-size: 20px;
+  font-size: 22px;
 }
 .dock-btn-selected {
   color: #489447 !important;
 }
 .main-content {
-  padding-bottom: $nav-height;
+  padding-top: 20px;
 }
 .main-title {
-  margin: 20px 0px 0px 20px;
+  margin: 0px 0px 0px 20px;
   font-size: 26px;
   font-weight: initial;
   font-family: $font-one;
@@ -125,7 +131,6 @@ header {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  font-size: 16px;
   border-top: 1px solid #b5b5b5;
 }
 // .stock-entry + .stock-entry {
@@ -135,9 +140,6 @@ header {
   display: flex;
   flex-direction: column;
 }
-// .stock-symbol {
-//   font-family: "Kanit", sans-serif;
-// }
 .stock-name-text {
   font-size: 14px;
   color: #7a7a7a;
@@ -145,6 +147,7 @@ header {
   overflow: hidden;
   white-space: nowrap;
   max-width: 100px;
+  letter-spacing: 0.2px;
 }
 .stock-price,
 .stock-list-header-price {
@@ -170,4 +173,187 @@ header {
 }
 .positive {
   background-color: rgba(16, 143, 15, 0.5);
+}
+footer {
+  background-color: #e7e7ff;
+  padding: 24px 20px 30px 20px;
+  margin-bottom: $nav-height;
+}
+.footer-credits {
+  font-size: 14px;
+  margin-bottom: 20px;
+  word-spacing: 1px;
+  line-height: 20px;
+}
+.footer-contacts {
+  display: flex;
+  column-gap: 8px;
+}
+.footer-contact-btn {
+  background-color: #7f7ff9;
+  color: whitesmoke;
+  border-radius: 30px;
+  flex-grow: 1;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 6px;
+  height: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.5s;
+}
+.footer-contact-btn i {
+  font-size: 16px;
+}
+.nav-menu-btn-text {
+  display: none;
+}
+
+// TABLET styles
+@media only screen and (min-width: 740px) {
+  body {
+    font-size: 20px;
+  }
+  .main-title {
+    font-size: 30px;
+  }
+  .stock-name-text {
+    max-width: 240px;
+    font-size: 16px;
+  }
+  .percent-change,
+  .stock-list-header-percent {
+    min-width: 100px;
+  }
+  .main-dock-btn {
+    column-gap: 12px;
+  }
+  .main-dock-btn i {
+    font-size: 26px;
+  }
+  .stock-entry {
+    height: 64px;
+  }
+  .stock-list-header-price span {
+    font-size: 16px;
+  }
+  .footer-credits {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+  .footer-contacts {
+    column-gap: 14px;
+  }
+  .footer-contact-btn {
+    height: 40px;
+    font-size: 18px;
+    column-gap: 10px;
+  }
+  .footer-contact-btn i {
+    font-size: 20px;
+  }
+}
+// DESKTOP styles
+@media only screen and (min-width: 1020px) {
+  .main-title {
+    display: none;
+  }
+  .main-dock {
+    position: initial;
+    border: none;
+    background-color: #c6c6c6;
+    height: 44px;
+    column-gap: 0px;
+    border-radius: 50px;
+    width: fit-content;
+    margin-left: 10%;
+    margin-top: 10px;
+  }
+  .main-dock-btn {
+    background-color: transparent;
+    border-radius: 50px;
+    width: 160px;
+  }
+  .main-dock-btn:hover {
+    color: #f9f9f9;
+  }
+  .dock-btn-selected {
+    background-color: white !important;
+  }
+  .stock-list {
+    padding: 30px;
+  }
+  .stock-list {
+    max-width: 80%;
+    margin: 0 auto;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  footer {
+    padding: 30px;
+    margin-bottom: 0px;
+  }
+  header {
+    height: 70px;
+  }
+  body {
+    padding-top: 70px;
+    font-size: 22px;
+  }
+  .nav-company-main-name {
+    font-size: 26px;
+    line-height: 22px;
+  }
+  .nav-company-sub-name {
+    font-size: 16px;
+  }
+  .nav-company-image {
+    font-size: 38px;
+    margin: 10px;
+  }
+  .nav-menu-btn-text {
+    display: initial;
+  }
+  .nav-menu-btn {
+    width: initial;
+    column-gap: 10px;
+    padding: 0px 30px;
+    background-color: #e2e2e2;
+    border-bottom: 6px solid #e2e2e2;
+    transition: all 0.5s;
+  }
+  footer {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .footer-credits,
+  .footer-contacts {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-credits {
+    font-size: 20px;
+    line-height: 28px;
+    word-spacing: 1.4px;
+  }
+  .footer-contact-btn {
+    height: 50px;
+    font-size: 20px;
+  }
+  .footer-contact-btn i {
+    font-size: 24px;
+  }
+}
+// hover styles
+@media only screen and (hover: hover) {
+  .footer-contact-btn:hover {
+    background-color: #43438c;
+  }
+  .nav-menu-btn:hover {
+    border-color: #71b170;
+  }
 }

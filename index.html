@@ -14,18 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
       rel="stylesheet"
     />
-    <!-- test fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Changa&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=REM&display=swap"
       rel="stylesheet"
     />
     <!-- font awesome -->
@@ -42,24 +32,25 @@
         </div>
         <div class="nav-company-name">
           <div class="nav-company-main-name">Uni-Fi</div>
-          <div class="nav-company-sub-name">Universal Finance</div>
+          <div class="nav-company-sub-name">Unified Finance</div>
         </div>
       </div>
       <button class="nav-menu-btn" type="button">
         <i class="fa-solid fa-gear"></i>
+        <div class="nav-menu-btn-text">Settings</div>
       </button>
     </header>
-    <nav class="main-dock">
-      <button class="main-dock-btn dock-btn-selected" type="button">
-        <i class="fa-solid fa-arrow-trend-up"></i>
-        <div class="main-dock-btn-text">Stocks</div>
-      </button>
-      <button class="main-dock-btn" type="button">
-        <i class="fab fa-bitcoin"></i>
-        <div class="main-dock-btn-text">Crypto</div>
-      </button>
-    </nav>
-    <div class="main-content">
+    <main class="main-content">
+      <nav class="main-dock">
+        <button class="main-dock-btn dock-btn-selected" type="button">
+          <i class="fa-solid fa-arrow-trend-up"></i>
+          <div class="main-dock-btn-text">Stocks</div>
+        </button>
+        <button class="main-dock-btn" type="button">
+          <i class="fab fa-bitcoin"></i>
+          <div class="main-dock-btn-text">Crypto</div>
+        </button>
+      </nav>
       <h1 class="main-title">Stocks</h1>
       <div class="stock-list">
         <div class="stock-list-header">
@@ -67,6 +58,7 @@
           <div class="stock-list-header-price">Price <span>(USD)</span></div>
           <div class="stock-list-header-percent">% Change</div>
         </div>
+
         <div class="stock-entry">
           <div class="stock-name">
             <div class="stock-symbol">AAPL</div>
@@ -212,6 +204,34 @@
           <div class="percent-change positive">+1.63%</div>
         </div>
       </div>
-    </div>
+    </main>
+    <footer>
+      <div class="footer-credits">
+        All of the UI in this app is 100% completely designed & developed from
+        scratch by Amer Albareedi within the span of 48 hours 😁
+      </div>
+      <div class="footer-contacts">
+        <a
+          href="https://albareedi.com/"
+          target="_blank"
+          class="footer-contact-btn"
+        >
+          <i class="fa-solid fa-globe"></i>
+          <div>Portfolio</div>
+        </a>
+        <a href="mailto:aalbareedi@yahoo.com" class="footer-contact-btn">
+          <i class="fa-solid fa-envelope"></i>
+          <div>Email</div>
+        </a>
+        <a
+          href="https://github.com/aalbareedi"
+          target="_blank"
+          class="footer-contact-btn"
+        >
+          <i class="fab fa-github"></i>
+          <div>GitHub</div>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
