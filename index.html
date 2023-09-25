@@ -42,166 +42,207 @@
     </header>
     <main class="main-content">
       <nav class="main-dock">
-        <button class="main-dock-btn dock-btn-selected" type="button">
+        <button
+          id="stocks-dock-btn"
+          class="main-dock-btn dock-btn-selected"
+          type="button"
+        >
           <i class="fa-solid fa-arrow-trend-up"></i>
           <div class="main-dock-btn-text">Stocks</div>
         </button>
-        <button class="main-dock-btn" type="button">
+        <button id="crypto-dock-btn" class="main-dock-btn" type="button">
           <i class="fab fa-bitcoin"></i>
           <div class="main-dock-btn-text">Crypto</div>
         </button>
       </nav>
-      <h1 class="main-title">Stocks</h1>
-      <div class="stock-list">
-        <div class="stock-list-header">
-          <div>Name</div>
-          <div class="stock-list-header-price">Price <span>(USD)</span></div>
-          <div class="stock-list-header-percent">% Change</div>
-        </div>
+      <div id="crypto" class="display-hidden">
+        <h1 class="main-title">Crypto</h1>
+        <div class="stock-list">
+          <div class="stock-list-header">
+            <div>Name</div>
+            <div class="stock-list-header-price">Price <span>(USD)</span></div>
+            <div class="stock-list-header-percent">% Change</div>
+          </div>
 
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">AAPL</div>
-            <div class="stock-name-text">Apple Inc.</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">BTC</div>
+              <div class="stock-name-text">Apple Inc.</div>
+            </div>
+            <div class="stock-price">$175.43</div>
+            <div class="percent-change negative"><span>-</span>1.08%</div>
           </div>
-          <div class="stock-price">$175.43</div>
-          <div class="percent-change negative"><span>-</span>1.08%</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">ETH</div>
+              <div class="stock-name-text">Alphabet Inc.</div>
+            </div>
+            <div class="stock-price">$124.61</div>
+            <div class="percent-change negative"><span>-</span>1.82%</div>
+          </div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">MCD</div>
+              <div class="stock-name-text">McDonald's Corporation</div>
+            </div>
+            <div class="stock-price">$286.04</div>
+            <div class="percent-change positive"><span>+</span>1.63%</div>
+          </div>
         </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">GOOGL</div>
-            <div class="stock-name-text">Alphabet Inc.</div>
+      </div>
+      <div id="stocks">
+        <h1 class="main-title">Stocks</h1>
+        <div class="stock-list">
+          <div class="stock-list-header">
+            <div>Name</div>
+            <div class="stock-list-header-price">Price <span>(USD)</span></div>
+            <div class="stock-list-header-percent">% Change</div>
           </div>
-          <div class="stock-price">$124.61</div>
-          <div class="percent-change negative"><span>-</span>1.82%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">TSLA</div>
-            <div class="stock-name-text">Tesla, Inc.</div>
+
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">AAPL</div>
+              <div class="stock-name-text">Apple Inc.</div>
+            </div>
+            <div class="stock-price">$175.43</div>
+            <div class="percent-change negative"><span>-</span>1.08%</div>
           </div>
-          <div class="stock-price">$193.17</div>
-          <div class="percent-change positive"><span>+</span>1.21%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">META</div>
-            <div class="stock-name-text">Meta Platforms, Inc.</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">GOOGL</div>
+              <div class="stock-name-text">Alphabet Inc.</div>
+            </div>
+            <div class="stock-price">$124.61</div>
+            <div class="percent-change negative"><span>-</span>1.82%</div>
           </div>
-          <div class="stock-price">$262.04</div>
-          <div class="percent-change negative"><span>-</span>0.28%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">KO</div>
-            <div class="stock-name-text">The Coca-Cola Company</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">TSLA</div>
+              <div class="stock-name-text">Tesla, Inc.</div>
+            </div>
+            <div class="stock-price">$193.17</div>
+            <div class="percent-change positive"><span>+</span>1.21%</div>
           </div>
-          <div class="stock-price">$60.26</div>
-          <div class="percent-change negative"><span>-</span>1.89%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">PEP</div>
-            <div class="stock-name-text">PepsiCo, Inc.</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">META</div>
+              <div class="stock-name-text">Meta Platforms, Inc.</div>
+            </div>
+            <div class="stock-price">$262.04</div>
+            <div class="percent-change negative"><span>-</span>0.28%</div>
           </div>
-          <div class="stock-price">$183.58</div>
-          <div class="percent-change positive"><span>+</span>0.64%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">AMZN</div>
-            <div class="stock-name-text">Amazon.com, Inc.</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">KO</div>
+              <div class="stock-name-text">The Coca-Cola Company</div>
+            </div>
+            <div class="stock-price">$60.26</div>
+            <div class="percent-change negative"><span>-</span>1.89%</div>
           </div>
-          <div class="stock-price">$120.11</div>
-          <div class="percent-change positive"><span>+</span>1.43%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">DE</div>
-            <div class="stock-name-text">Deere & Company</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">PEP</div>
+              <div class="stock-name-text">PepsiCo, Inc.</div>
+            </div>
+            <div class="stock-price">$183.58</div>
+            <div class="percent-change positive"><span>+</span>0.64%</div>
           </div>
-          <div class="stock-price">$351.21</div>
-          <div class="percent-change negative"><span>-</span>0.23%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">BA</div>
-            <div class="stock-name-text">The Boeing Company</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">AMZN</div>
+              <div class="stock-name-text">Amazon.com, Inc.</div>
+            </div>
+            <div class="stock-price">$120.11</div>
+            <div class="percent-change positive"><span>+</span>1.43%</div>
           </div>
-          <div class="stock-price">$203.63</div>
-          <div class="percent-change positive"><span>+</span>1.93%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">SPY</div>
-            <div class="stock-name-text">SPDR S&P 500 ETF Trust</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">DE</div>
+              <div class="stock-name-text">Deere & Company</div>
+            </div>
+            <div class="stock-price">$351.21</div>
+            <div class="percent-change negative"><span>-</span>0.23%</div>
           </div>
-          <div class="stock-price">$420.02</div>
-          <div class="percent-change positive"><span>+</span>1.50%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">QQQ</div>
-            <div class="stock-name-text">Invesco QQQ Trust</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">BA</div>
+              <div class="stock-name-text">The Boeing Company</div>
+            </div>
+            <div class="stock-price">$203.63</div>
+            <div class="percent-change positive"><span>+</span>1.93%</div>
           </div>
-          <div class="stock-price">$348.40</div>
-          <div class="percent-change negative"><span>-</span>0.21%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">IWM</div>
-            <div class="stock-name-text">iShares Russell 2000 ETF</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">SPY</div>
+              <div class="stock-name-text">SPDR S&P 500 ETF Trust</div>
+            </div>
+            <div class="stock-price">$420.02</div>
+            <div class="percent-change positive"><span>+</span>1.50%</div>
           </div>
-          <div class="stock-price">$176.15</div>
-          <div class="percent-change negative"><span>-</span>0.07%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">F</div>
-            <div class="stock-name-text">Ford Motor Company</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">QQQ</div>
+              <div class="stock-name-text">Invesco QQQ Trust</div>
+            </div>
+            <div class="stock-price">$348.40</div>
+            <div class="percent-change negative"><span>-</span>0.21%</div>
           </div>
-          <div class="stock-price">$12.09</div>
-          <div class="percent-change positive"><span>+</span>1.72%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">AMD</div>
-            <div class="stock-name-text">Advanced Micro Devices, Inc.</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">IWM</div>
+              <div class="stock-name-text">iShares Russell 2000 ETF</div>
+            </div>
+            <div class="stock-price">$176.15</div>
+            <div class="percent-change negative"><span>-</span>0.07%</div>
           </div>
-          <div class="stock-price">$127.03</div>
-          <div class="percent-change negative"><span>-</span>0.97%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">NVDA</div>
-            <div class="stock-name-text">NVIDIA Corporation</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">F</div>
+              <div class="stock-name-text">Ford Motor Company</div>
+            </div>
+            <div class="stock-price">$12.09</div>
+            <div class="percent-change positive"><span>+</span>1.72%</div>
           </div>
-          <div class="stock-price">$389.46</div>
-          <div class="percent-change positive"><span>+</span>0.22%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">GS</div>
-            <div class="stock-name-text">The Goldman Sachs Group, Inc.</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">AMD</div>
+              <div class="stock-name-text">Advanced Micro Devices, Inc.</div>
+            </div>
+            <div class="stock-price">$127.03</div>
+            <div class="percent-change negative"><span>-</span>0.97%</div>
           </div>
-          <div class="stock-price">$332.01</div>
-          <div class="percent-change negative"><span>-</span>2.01%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">UAL</div>
-            <div class="stock-name-text">United Airlines Holdings, Inc.</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">NVDA</div>
+              <div class="stock-name-text">NVIDIA Corporation</div>
+            </div>
+            <div class="stock-price">$389.46</div>
+            <div class="percent-change positive"><span>+</span>0.22%</div>
           </div>
-          <div class="stock-price">$47.26</div>
-          <div class="percent-change positive"><span>+</span>0.90%</div>
-        </div>
-        <div class="stock-entry">
-          <div class="stock-name">
-            <div class="stock-symbol">MCD</div>
-            <div class="stock-name-text">McDonald's Corporation</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">GS</div>
+              <div class="stock-name-text">The Goldman Sachs Group, Inc.</div>
+            </div>
+            <div class="stock-price">$332.01</div>
+            <div class="percent-change negative"><span>-</span>2.01%</div>
           </div>
-          <div class="stock-price">$286.04</div>
-          <div class="percent-change positive"><span>+</span>1.63%</div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">UAL</div>
+              <div class="stock-name-text">United Airlines Holdings, Inc.</div>
+            </div>
+            <div class="stock-price">$47.26</div>
+            <div class="percent-change positive"><span>+</span>0.90%</div>
+          </div>
+          <div class="stock-entry">
+            <div class="stock-name">
+              <div class="stock-symbol">MCD</div>
+              <div class="stock-name-text">McDonald's Corporation</div>
+            </div>
+            <div class="stock-price">$286.04</div>
+            <div class="percent-change positive"><span>+</span>1.63%</div>
+          </div>
         </div>
       </div>
       <nav class="settings-window">

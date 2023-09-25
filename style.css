@@ -15,6 +15,10 @@ button {
   cursor: pointer;
 }
 
+.display-hidden {
+  display: none !important;
+}
+
 body {
   background-color: #e0e0e0;
   padding-top: 60px;
@@ -96,7 +100,7 @@ header {
   border: none;
   background-color: transparent;
   font-size: 22px;
-  color: #969696;
+  color: #a7a7a7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,14 +122,13 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 2px;
-          column-gap: 2px;
   background-color: lightgrey;
   border-top: 2px solid #dadada;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  padding: 8px;
 }
 
 .main-dock-btn {
@@ -147,8 +150,9 @@ header {
           align-items: center;
   -webkit-column-gap: 10px;
           column-gap: 10px;
-  border: none;
-  color: #969696;
+  border: 2px solid lightgrey;
+  color: #a7a7a7;
+  border-radius: 40px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -158,10 +162,9 @@ header {
 }
 
 .dock-btn-selected {
-  color: #489447 !important;
-  background-color: #eaeaea !important;
-  margin: 8px;
-  border-radius: 40px;
+  color: #489447;
+  background-color: #eaeaea;
+  border-color: #d0d0d0;
 }
 
 .main-content {

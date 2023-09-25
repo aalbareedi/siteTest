@@ -14,6 +14,9 @@ $font-one: "Changa", sans-serif;
 button {
   cursor: pointer;
 }
+.display-hidden {
+  display: none !important;
+}
 body {
   background-color: #e0e0e0;
   padding-top: $nav-height;
@@ -69,7 +72,7 @@ header {
   border: none;
   background-color: transparent;
   font-size: 22px;
-  color: #969696;
+  color: #a7a7a7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,10 +85,10 @@ header {
   z-index: 10;
   height: $nav-height;
   display: flex;
-  column-gap: 2px;
   background-color: lightgrey;
   border-top: 2px solid #dadada;
   flex-direction: row-reverse;
+  padding: 8px;
 }
 .main-dock-btn {
   font-family: $font-one;
@@ -96,18 +99,18 @@ header {
   justify-content: center;
   align-items: center;
   column-gap: 10px;
-  border: none;
-  color: #969696;
+  border: 2px solid lightgrey;
+  color: #a7a7a7;
+  border-radius: 40px;
   transition: all 0.5s;
 }
 .main-dock-btn i {
   font-size: 22px;
 }
 .dock-btn-selected {
-  color: #489447 !important;
-  background-color: #eaeaea !important;
-  margin: 8px;
-  border-radius: 40px;
+  color: #489447;
+  background-color: #eaeaea;
+  border-color: #d0d0d0;
 }
 .main-content {
   padding-top: 20px;
