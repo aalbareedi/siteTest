@@ -15,7 +15,7 @@ button {
   cursor: pointer;
 }
 body {
-  background-color: lightgrey;
+  background-color: #e0e0e0;
   padding-top: $nav-height;
   color: #1f1f1f;
   font-family: "Kanit", sans-serif;
@@ -31,7 +31,7 @@ header {
   display: flex;
   justify-content: space-between;
   z-index: 20;
-  border-bottom: 2px solid #cfcfcf;
+  border-bottom: 2px solid #dadada;
 }
 .nav-logo {
   display: flex;
@@ -83,12 +83,13 @@ header {
   height: $nav-height;
   display: flex;
   column-gap: 2px;
-  background-color: #cfcfcf;
-  border-top: 2px solid #cfcfcf;
+  background-color: lightgrey;
+  border-top: 2px solid #dadada;
+  flex-direction: row-reverse;
 }
 .main-dock-btn {
   font-family: $font-one;
-  background-color: #eaeaea;
+  background-color: transparent;
   flex-grow: 1;
   flex-basis: 100%;
   display: flex;
@@ -104,6 +105,9 @@ header {
 }
 .dock-btn-selected {
   color: #489447 !important;
+  background-color: #eaeaea !important;
+  margin: 8px;
+  border-radius: 40px;
 }
 .main-content {
   padding-top: 20px;
@@ -131,7 +135,7 @@ header {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  border-top: 1px solid #b5b5b5;
+  border-top: 1px solid #cacaca;
 }
 // .stock-entry + .stock-entry {
 //   border-top: 1px solid #b5b5b5;
