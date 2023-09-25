@@ -393,7 +393,75 @@ footer {
 .settings-window-section {
   background-color: #cacaca;
   min-height: 120px;
-  border-radius: 10px;
+  border-radius: 20px;
+}
+
+.settings-window-row {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 16px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.settings-window-row + .settings-window-row {
+  border-top: 1px solid lightgrey;
+}
+
+.settings-row-title {
+  word-spacing: 0.4px;
+}
+
+.settings-row-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.settings-row-value {
+  color: gray;
+}
+
+.settings-row-arrow {
+  padding-top: 1px;
+}
+
+.settings-pref-markets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  background: #b6b6b6;
+  border-radius: 50px;
+}
+
+.pref-market-opt {
+  border-radius: 50px;
+  width: 70px;
+  height: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #5e5e5e;
+}
+
+.selected-pref-market {
+  background-color: #75ad74 !important;
+  color: whitesmoke !important;
 }
 
 @media only screen and (min-width: 740px) {
@@ -472,6 +540,7 @@ footer {
   }
   .dock-btn-selected {
     background-color: white !important;
+    margin: 0px;
   }
   .stock-list {
     padding: 30px;
