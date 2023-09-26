@@ -178,6 +178,7 @@ header {
   font-family: "Changa", sans-serif;
 }
 
+.crypto-list,
 .stock-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,6 +190,7 @@ header {
   padding: 20px;
 }
 
+.crypto-list-header,
 .stock-list-header {
   position: relative;
   display: -webkit-box;
@@ -200,6 +202,7 @@ header {
   margin-bottom: 10px;
 }
 
+.crypto-entry,
 .stock-entry {
   height: 60px;
   display: -webkit-box;
@@ -215,6 +218,7 @@ header {
   border-top: 1px solid #cacaca;
 }
 
+.crypto-name,
 .stock-name {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,6 +229,7 @@ header {
           flex-direction: column;
 }
 
+.crypto-name-text,
 .stock-name-text {
   font-size: 14px;
   color: #7a7a7a;
@@ -235,6 +240,8 @@ header {
   letter-spacing: 0.2px;
 }
 
+.crypto-price,
+.crypto-list-header-price,
 .stock-price,
 .stock-list-header-price {
   position: absolute;
@@ -243,23 +250,27 @@ header {
           transform: translateX(-50%);
 }
 
+.crypto-list-header-price span,
 .stock-list-header-price span {
   color: #7a7a7a;
   font-size: 14px;
 }
 
+.crypto-list-header-percent,
 .stock-list-header-percent {
   min-width: 80px;
 }
 
-.percent-change {
+#crypto .percent-change,
+#stocks .percent-change {
   border-radius: 4px;
   padding: 4px 8px;
   min-width: 80px;
   text-align: center;
 }
 
-.percent-change span {
+#crypto .percent-change span,
+#stocks .percent-change span {
   margin-right: 2px;
 }
 
