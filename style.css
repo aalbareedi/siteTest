@@ -391,9 +391,21 @@ footer {
   border-top: 3px solid #c5c5c5;
 }
 
-.showSettings {
+.showSettings .settings-window {
   bottom: -57px;
   padding: 0px 20px;
+}
+
+.showSettings i.settings-nav-btn-icon {
+  display: none;
+}
+
+i.close-nav-btn-icon {
+  display: none;
+}
+
+.showSettings i.close-nav-btn-icon {
+  display: initial;
 }
 
 .drag-to-close {

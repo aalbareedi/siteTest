@@ -1,3 +1,4 @@
+let body = document.querySelector("body");
 let navBtn = document.querySelector(".nav-menu-btn");
 let settings = document.querySelector(".settings-window");
 let cryptoDockBtn = document.querySelector("#crypto-dock-btn");
@@ -6,7 +7,8 @@ let stocksDockBtn = document.querySelector("#stocks-dock-btn");
 let stocks = document.querySelector("#stocks");
 
 navBtn.onclick = () => {
-  settings.classList.add("showSettings");
+  // settings.classList.add("showSettings");
+  body.classList.toggle("showSettings");
 };
 
 cryptoDockBtn.onclick = () => {
