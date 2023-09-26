@@ -42,20 +42,20 @@
     </header>
     <main class="main-content">
       <nav class="main-dock">
-        <button
-          id="stocks-dock-btn"
-          class="main-dock-btn dock-btn-selected"
-          type="button"
-        >
+        <button id="stocks-dock-btn" class="main-dock-btn" type="button">
           <i class="fa-solid fa-arrow-trend-up"></i>
           <div class="main-dock-btn-text">Stocks</div>
         </button>
-        <button id="crypto-dock-btn" class="main-dock-btn" type="button">
+        <button
+          id="crypto-dock-btn"
+          class="main-dock-btn dock-btn-selected"
+          type="button"
+        >
           <i class="fab fa-bitcoin"></i>
           <div class="main-dock-btn-text">Crypto</div>
         </button>
       </nav>
-      <div id="crypto" class="display-hidden">
+      <div id="crypto">
         <h1 class="main-title">Crypto</h1>
         <div class="stock-list">
           <div class="stock-list-header">
@@ -90,7 +90,7 @@
           </div>
         </div>
       </div>
-      <div id="stocks">
+      <div id="stocks" class="display-hidden">
         <h1 class="main-title">Stocks</h1>
         <div class="stock-list">
           <div class="stock-list-header">
