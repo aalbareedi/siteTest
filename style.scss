@@ -121,6 +121,33 @@ header {
   font-weight: initial;
   font-family: $font-one;
 }
+.crypto-options {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.crypto-tabs {
+  background: #cbcbcb;
+  border: 2px solid #cbcbcb;
+  display: flex;
+  border-radius: 10px;
+  margin: 0px 20px;
+  column-gap: 2px;
+  overflow: hidden;
+}
+.crypto-tab {
+  flex-grow: 1;
+  flex-basis: 100%;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d1d1d1;
+  font-size: 14px;
+}
+.selected-crypto-tab {
+  background: #eaeaea;
+}
 .crypto-controls {
   display: flex;
   padding: 0px 20px;
