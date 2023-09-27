@@ -172,10 +172,42 @@ header {
 }
 
 .main-title {
-  margin: 0px 0px 0px 20px;
+  margin: 0px 0px 20px 20px;
   font-size: 26px;
   font-weight: initial;
   font-family: "Changa", sans-serif;
+}
+
+.crypto-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 20px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.crypto-control-btn {
+  background: #d1d1d1;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 20px;
+  height: 38px;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+  font-size: 14px;
+}
+
+.crypto-control-arrow {
+  padding-top: 2px;
 }
 
 .crypto-list,
