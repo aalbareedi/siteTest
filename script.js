@@ -7,20 +7,20 @@ let stocksDockBtn = document.querySelector("#stocks-dock-btn");
 let stocks = document.querySelector("#stocks");
 
 navBtn.onclick = () => {
-  // settings.classList.add("showSettings");
-  body.classList.toggle("showSettings");
+    // settings.classList.add("showSettings");
+    body.classList.toggle("showSettings");
 };
 
 cryptoDockBtn.onclick = () => {
-  crypto.classList.remove("display-hidden");
-  stocks.classList.add("display-hidden");
-  stocksDockBtn.classList.remove("dock-btn-selected");
-  cryptoDockBtn.classList.add("dock-btn-selected");
+    crypto.classList.remove("display-hidden");
+    stocks.classList.add("display-hidden");
+    stocksDockBtn.classList.remove("dock-btn-selected");
+    cryptoDockBtn.classList.add("dock-btn-selected");
 };
 
 stocksDockBtn.onclick = () => {
-  crypto.classList.add("display-hidden");
-  stocks.classList.remove("display-hidden");
-  stocksDockBtn.classList.add("dock-btn-selected");
-  cryptoDockBtn.classList.remove("dock-btn-selected");
+    crypto.classList.add("display-hidden");
+    stocks.classList.remove("display-hidden");
+    stocksDockBtn.classList.add("dock-btn-selected");
+    cryptoDockBtn.classList.remove("dock-btn-selected");
 };

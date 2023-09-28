@@ -1,398 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Stocks</title>
-    <!-- google fonts used -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Changa&display=swap"
-      rel="stylesheet"
-    />
-    <!-- font awesome -->
-    <script
-      src="https://kit.fontawesome.com/c82a5882c2.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <header>
-      <div class="nav-logo">
-        <div class="nav-company-image">
-          <i class="fa-solid fa-globe"></i>
-        </div>
-        <div class="nav-company-name">
-          <div class="nav-company-main-name">Uni-Fi</div>
-          <div class="nav-company-sub-name">Unified Finance</div>
-        </div>
-      </div>
-      <button class="nav-menu-btn" type="button">
-        <i class="fa-solid fa-gear settings-nav-btn-icon"></i>
-        <i class="fas fa-times close-nav-btn-icon"></i>
-        <div class="nav-menu-btn-text">Settings</div>
-      </button>
-    </header>
-    <main class="main-content">
-      <nav class="main-dock">
-        <button id="stocks-dock-btn" class="main-dock-btn" type="button">
-          <i class="fa-solid fa-arrow-trend-up"></i>
-          <div class="main-dock-btn-text">Stocks</div>
-        </button>
-        <button
-          id="crypto-dock-btn"
-          class="main-dock-btn dock-btn-selected"
-          type="button"
-        >
-          <i class="fab fa-bitcoin"></i>
-          <div class="main-dock-btn-text">Crypto</div>
-        </button>
-      </nav>
-      <div id="crypto">
-        <h1 class="main-title">Cryptocurrency</h1>
-        <div class="crypto-options">
-          <div class="crypto-tabs">
-            <div class="crypto-tab selected-crypto-tab">Markets</div>
-            <div class="crypto-tab">Watchlist</div>
-          </div>
-          <div class="crypto-controls">
-            <div class="crypto-control-btn">
-              <!-- All Coins / Top 100 / Top 200 -->
-              <div class="crypto-control-btn-text">All Coins</div>
-              <div class="crypto-control-arrow">
-                <i class="fas fa-angle-down"></i>
-              </div>
-            </div>
-            <div class="crypto-control-btn">
-              <!-- 1h % / 24h % / 7d % / 30d % -->
-              <div class="crypto-control-btn-text">24H</div>
-              <div class="crypto-control-arrow">
-                <i class="fas fa-angle-down"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="crypto-list">
-          <div class="crypto-list-header">
-            <div class="crypto-entry-pair">
-              <div class="crypto-list-header-number">#</div>
-              <div>Name</div>
-            </div>
-            <div class="crypto-list-header-price">Price <span>(USD)</span></div>
-            <div class="crypto-list-header-percent">% Change</div>
-          </div>
-          <div class="crypto-entry">
-            <div class="crypto-entry-pair">
-              <div class="crypto-number">1</div>
-              <div class="crypto-name-wrapper">
-                <div class="crypto-logo"></div>
-                <div class="crypto-name">
-                  <div class="crypto-symbol">BTC</div>
-                  <div class="crypto-name-text">Bitcoin</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="normalize.css" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Stocks</title>
+        <!-- google fonts used -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Changa&display=swap"
+            rel="stylesheet"
+        />
+        <!-- font awesome -->
+        <script
+            src="https://kit.fontawesome.com/c82a5882c2.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <header>
+            <div class="nav-logo">
+                <div class="nav-company-image">
+                    <i class="fa-solid fa-globe"></i>
                 </div>
-              </div>
-            </div>
-            <div class="crypto-price">$33,375.43</div>
-            <div class="percent-change negative"><span>-</span>1.08%</div>
-          </div>
-          <div class="crypto-entry">
-            <div class="crypto-entry-pair">
-              <div class="crypto-number">2</div>
-              <div class="crypto-name-wrapper">
-                <div class="crypto-logo"></div>
-                <div class="crypto-name">
-                  <div class="crypto-symbol">ETH</div>
-                  <div class="crypto-name-text">Ethereum</div>
+                <div class="nav-company-name">
+                    <div class="nav-company-main-name">Uni-Fi</div>
+                    <div class="nav-company-sub-name">Unified Finance</div>
                 </div>
-              </div>
             </div>
-            <div class="crypto-price">$2,286.04</div>
-            <div class="percent-change positive"><span>+</span>1.63%</div>
-          </div>
-          <div class="crypto-entry">
-            <div class="crypto-entry-pair">
-              <div class="crypto-number">1</div>
-              <div class="crypto-name-wrapper">
-                <div class="crypto-logo"></div>
-                <div class="crypto-name">
-                  <div class="crypto-symbol">BTC</div>
-                  <div class="crypto-name-text">Bitcoin</div>
+            <button class="nav-menu-btn" type="button">
+                <i class="fa-solid fa-gear settings-nav-btn-icon"></i>
+                <i class="fas fa-times close-nav-btn-icon"></i>
+                <div class="nav-menu-btn-text">Settings</div>
+            </button>
+        </header>
+        <main class="main-content">
+            <nav class="main-dock">
+                <button
+                    id="stocks-dock-btn"
+                    class="main-dock-btn"
+                    type="button"
+                >
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <div class="main-dock-btn-text">Stocks</div>
+                </button>
+                <button
+                    id="crypto-dock-btn"
+                    class="main-dock-btn dock-btn-selected"
+                    type="button"
+                >
+                    <i class="fab fa-bitcoin"></i>
+                    <div class="main-dock-btn-text">Crypto</div>
+                </button>
+            </nav>
+            <div id="crypto">
+                <h1 class="main-title">Cryptocurrency</h1>
+                <div class="crypto-options">
+                    <div class="crypto-tabs">
+                        <div class="crypto-tab selected-crypto-tab">
+                            Markets
+                        </div>
+                        <div class="crypto-tab">Watchlist</div>
+                    </div>
+                    <div class="crypto-controls">
+                        <div class="crypto-control-btn">
+                            <!-- All Coins / Top 100 / Top 200 -->
+                            <div class="crypto-control-btn-text">All Coins</div>
+                            <div class="crypto-control-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+                        <div class="crypto-control-btn">
+                            <!-- 1h % / 24h % / 7d % / 30d % -->
+                            <div class="crypto-control-btn-text">24H</div>
+                            <div class="crypto-control-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="crypto-price">$33,375.43</div>
-            <div class="percent-change negative"><span>-</span>1.08%</div>
-          </div>
-          <div class="crypto-entry">
-            <div class="crypto-entry-pair">
-              <div class="crypto-number">2</div>
-              <div class="crypto-name-wrapper">
-                <div class="crypto-logo"></div>
-                <div class="crypto-name">
-                  <div class="crypto-symbol">ETH</div>
-                  <div class="crypto-name-text">Ethereum</div>
+                <div class="crypto-list">
+                    <div class="crypto-list-header">
+                        <div class="crypto-entry-pair">
+                            <div class="crypto-list-header-number">#</div>
+                            <div>Name</div>
+                        </div>
+                        <div class="crypto-list-header-price">
+                            Price <span>(USD)</span>
+                        </div>
+                        <div class="crypto-list-header-percent">% Change</div>
+                    </div>
+                    <!-- <div class="crypto-entry">
+                        <div class="crypto-entry-pair">
+                            <div class="crypto-number">1</div>
+                            <div class="crypto-name-wrapper">
+                                <div class="crypto-logo"></div>
+                                <div class="crypto-name">
+                                    <div class="crypto-symbol">BTC</div>
+                                    <div class="crypto-name-text">Bitcoin</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crypto-price">$33,375.43</div>
+                        <div class="percent-change negative">
+                            <span>-</span>1.08%
+                        </div>
+                    </div>
+                    <div class="crypto-entry">
+                        <div class="crypto-entry-pair">
+                            <div class="crypto-number">2</div>
+                            <div class="crypto-name-wrapper">
+                                <div class="crypto-logo"></div>
+                                <div class="crypto-name">
+                                    <div class="crypto-symbol">ETH</div>
+                                    <div class="crypto-name-text">Ethereum</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crypto-price">$2,286.04</div>
+                        <div class="percent-change positive">
+                            <span>+</span>1.63%
+                        </div>
+                    </div> -->
                 </div>
-              </div>
-            </div>
-            <div class="crypto-price">$2,286.04</div>
-            <div class="percent-change positive"><span>+</span>1.63%</div>
-          </div>
-          <div class="crypto-entry">
-            <div class="crypto-entry-pair">
-              <div class="crypto-number">1</div>
-              <div class="crypto-name-wrapper">
-                <div class="crypto-logo"></div>
-                <div class="crypto-name">
-                  <div class="crypto-symbol">BTC</div>
-                  <div class="crypto-name-text">Bitcoin</div>
-                </div>
-              </div>
-            </div>
-            <div class="crypto-price">$33,375.43</div>
-            <div class="percent-change negative"><span>-</span>1.08%</div>
-          </div>
-          <div class="crypto-entry">
-            <div class="crypto-entry-pair">
-              <div class="crypto-number">2</div>
-              <div class="crypto-name-wrapper">
-                <div class="crypto-logo"></div>
-                <div class="crypto-name">
-                  <div class="crypto-symbol">ETH</div>
-                  <div class="crypto-name-text">Ethereum</div>
-                </div>
-              </div>
-            </div>
-            <div class="crypto-price">$2,286.04</div>
-            <div class="percent-change positive"><span>+</span>1.63%</div>
-          </div>
-        </div>
-      </div>
-      <div id="stocks" class="display-hidden">
-        <h1 class="main-title">Stocks</h1>
-        <div class="stock-list">
-          <div class="stock-list-header">
-            <div>Name</div>
-            <div class="stock-list-header-price">Price <span>(USD)</span></div>
-            <div class="stock-list-header-percent">% Change</div>
-          </div>
+                <script src="components/crypto-entry.js"></script>
+                <script src="api/crypto.js"></script>
+                <script>
+                    const list = document.querySelector(".crypto-list");
+                    const entries = getCryptoEntries();
 
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">AAPL</div>
-              <div class="stock-name-text">Apple Inc.</div>
+                    for (let i = 0; i < entries.length; i++) {
+                        list.append(CryptoEntry(i + 1, entries[i]));
+                    }
+                </script>
             </div>
-            <div class="stock-price">$175.43</div>
-            <div class="percent-change negative"><span>-</span>1.08%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">GOOGL</div>
-              <div class="stock-name-text">Alphabet Inc.</div>
+            <div id="stocks" class="display-hidden">
+                <h1 class="main-title">Stocks</h1>
+                <div class="stock-list">
+                    <div class="stock-list-header">
+                        <div>Name</div>
+                        <div class="stock-list-header-price">
+                            Price <span>(USD)</span>
+                        </div>
+                        <div class="stock-list-header-percent">% Change</div>
+                    </div>
+
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">AAPL</div>
+                            <div class="stock-name-text">Apple Inc.</div>
+                        </div>
+                        <div class="stock-price">$175.43</div>
+                        <div class="percent-change negative">
+                            <span>-</span>1.08%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">GOOGL</div>
+                            <div class="stock-name-text">Alphabet Inc.</div>
+                        </div>
+                        <div class="stock-price">$124.61</div>
+                        <div class="percent-change negative">
+                            <span>-</span>1.82%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">TSLA</div>
+                            <div class="stock-name-text">Tesla, Inc.</div>
+                        </div>
+                        <div class="stock-price">$193.17</div>
+                        <div class="percent-change positive">
+                            <span>+</span>1.21%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">META</div>
+                            <div class="stock-name-text">
+                                Meta Platforms, Inc.
+                            </div>
+                        </div>
+                        <div class="stock-price">$262.04</div>
+                        <div class="percent-change negative">
+                            <span>-</span>0.28%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">KO</div>
+                            <div class="stock-name-text">
+                                The Coca-Cola Company
+                            </div>
+                        </div>
+                        <div class="stock-price">$60.26</div>
+                        <div class="percent-change negative">
+                            <span>-</span>1.89%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">PEP</div>
+                            <div class="stock-name-text">PepsiCo, Inc.</div>
+                        </div>
+                        <div class="stock-price">$183.58</div>
+                        <div class="percent-change positive">
+                            <span>+</span>0.64%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">AMZN</div>
+                            <div class="stock-name-text">Amazon.com, Inc.</div>
+                        </div>
+                        <div class="stock-price">$120.11</div>
+                        <div class="percent-change positive">
+                            <span>+</span>1.43%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">DE</div>
+                            <div class="stock-name-text">Deere & Company</div>
+                        </div>
+                        <div class="stock-price">$351.21</div>
+                        <div class="percent-change negative">
+                            <span>-</span>0.23%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">BA</div>
+                            <div class="stock-name-text">
+                                The Boeing Company
+                            </div>
+                        </div>
+                        <div class="stock-price">$203.63</div>
+                        <div class="percent-change positive">
+                            <span>+</span>1.93%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">SPY</div>
+                            <div class="stock-name-text">
+                                SPDR S&P 500 ETF Trust
+                            </div>
+                        </div>
+                        <div class="stock-price">$420.02</div>
+                        <div class="percent-change positive">
+                            <span>+</span>1.50%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">QQQ</div>
+                            <div class="stock-name-text">Invesco QQQ Trust</div>
+                        </div>
+                        <div class="stock-price">$348.40</div>
+                        <div class="percent-change negative">
+                            <span>-</span>0.21%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">IWM</div>
+                            <div class="stock-name-text">
+                                iShares Russell 2000 ETF
+                            </div>
+                        </div>
+                        <div class="stock-price">$176.15</div>
+                        <div class="percent-change negative">
+                            <span>-</span>0.07%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">F</div>
+                            <div class="stock-name-text">
+                                Ford Motor Company
+                            </div>
+                        </div>
+                        <div class="stock-price">$12.09</div>
+                        <div class="percent-change positive">
+                            <span>+</span>1.72%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">AMD</div>
+                            <div class="stock-name-text">
+                                Advanced Micro Devices, Inc.
+                            </div>
+                        </div>
+                        <div class="stock-price">$127.03</div>
+                        <div class="percent-change negative">
+                            <span>-</span>0.97%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">NVDA</div>
+                            <div class="stock-name-text">
+                                NVIDIA Corporation
+                            </div>
+                        </div>
+                        <div class="stock-price">$389.46</div>
+                        <div class="percent-change positive">
+                            <span>+</span>0.22%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">GS</div>
+                            <div class="stock-name-text">
+                                The Goldman Sachs Group, Inc.
+                            </div>
+                        </div>
+                        <div class="stock-price">$332.01</div>
+                        <div class="percent-change negative">
+                            <span>-</span>2.01%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">UAL</div>
+                            <div class="stock-name-text">
+                                United Airlines Holdings, Inc.
+                            </div>
+                        </div>
+                        <div class="stock-price">$47.26</div>
+                        <div class="percent-change positive">
+                            <span>+</span>0.90%
+                        </div>
+                    </div>
+                    <div class="stock-entry">
+                        <div class="stock-name">
+                            <div class="stock-symbol">MCD</div>
+                            <div class="stock-name-text">
+                                McDonald's Corporation
+                            </div>
+                        </div>
+                        <div class="stock-price">$286.04</div>
+                        <div class="percent-change positive">
+                            <span>+</span>1.63%
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="stock-price">$124.61</div>
-            <div class="percent-change negative"><span>-</span>1.82%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">TSLA</div>
-              <div class="stock-name-text">Tesla, Inc.</div>
-            </div>
-            <div class="stock-price">$193.17</div>
-            <div class="percent-change positive"><span>+</span>1.21%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">META</div>
-              <div class="stock-name-text">Meta Platforms, Inc.</div>
-            </div>
-            <div class="stock-price">$262.04</div>
-            <div class="percent-change negative"><span>-</span>0.28%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">KO</div>
-              <div class="stock-name-text">The Coca-Cola Company</div>
-            </div>
-            <div class="stock-price">$60.26</div>
-            <div class="percent-change negative"><span>-</span>1.89%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">PEP</div>
-              <div class="stock-name-text">PepsiCo, Inc.</div>
-            </div>
-            <div class="stock-price">$183.58</div>
-            <div class="percent-change positive"><span>+</span>0.64%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">AMZN</div>
-              <div class="stock-name-text">Amazon.com, Inc.</div>
-            </div>
-            <div class="stock-price">$120.11</div>
-            <div class="percent-change positive"><span>+</span>1.43%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">DE</div>
-              <div class="stock-name-text">Deere & Company</div>
-            </div>
-            <div class="stock-price">$351.21</div>
-            <div class="percent-change negative"><span>-</span>0.23%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">BA</div>
-              <div class="stock-name-text">The Boeing Company</div>
-            </div>
-            <div class="stock-price">$203.63</div>
-            <div class="percent-change positive"><span>+</span>1.93%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">SPY</div>
-              <div class="stock-name-text">SPDR S&P 500 ETF Trust</div>
-            </div>
-            <div class="stock-price">$420.02</div>
-            <div class="percent-change positive"><span>+</span>1.50%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">QQQ</div>
-              <div class="stock-name-text">Invesco QQQ Trust</div>
-            </div>
-            <div class="stock-price">$348.40</div>
-            <div class="percent-change negative"><span>-</span>0.21%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">IWM</div>
-              <div class="stock-name-text">iShares Russell 2000 ETF</div>
-            </div>
-            <div class="stock-price">$176.15</div>
-            <div class="percent-change negative"><span>-</span>0.07%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">F</div>
-              <div class="stock-name-text">Ford Motor Company</div>
-            </div>
-            <div class="stock-price">$12.09</div>
-            <div class="percent-change positive"><span>+</span>1.72%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">AMD</div>
-              <div class="stock-name-text">Advanced Micro Devices, Inc.</div>
-            </div>
-            <div class="stock-price">$127.03</div>
-            <div class="percent-change negative"><span>-</span>0.97%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">NVDA</div>
-              <div class="stock-name-text">NVIDIA Corporation</div>
-            </div>
-            <div class="stock-price">$389.46</div>
-            <div class="percent-change positive"><span>+</span>0.22%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">GS</div>
-              <div class="stock-name-text">The Goldman Sachs Group, Inc.</div>
-            </div>
-            <div class="stock-price">$332.01</div>
-            <div class="percent-change negative"><span>-</span>2.01%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">UAL</div>
-              <div class="stock-name-text">United Airlines Holdings, Inc.</div>
-            </div>
-            <div class="stock-price">$47.26</div>
-            <div class="percent-change positive"><span>+</span>0.90%</div>
-          </div>
-          <div class="stock-entry">
-            <div class="stock-name">
-              <div class="stock-symbol">MCD</div>
-              <div class="stock-name-text">McDonald's Corporation</div>
-            </div>
-            <div class="stock-price">$286.04</div>
-            <div class="percent-change positive"><span>+</span>1.63%</div>
-          </div>
-        </div>
-      </div>
-      <nav class="settings-window">
-        <div class="drag-to-close">
-          <div class="drag-bar"></div>
-        </div>
-        <div class="settings-account-btns">
-          <button type="button">
-            <div>Log in</div>
-          </button>
-          <button type="button">
-            <div>Sign up</div>
-          </button>
-        </div>
-        <div class="settings-window-section">
-          <div class="settings-window-row">
-            <div class="settings-row-title">Dark Mode</div>
-          </div>
-          <div class="settings-window-row">
-            <div class="settings-row-title">Default Currency</div>
-            <div class="settings-row-content">
-              <div class="settings-row-value">$USD</div>
-              <!-- <div class="settings-row-arrow">
+            <nav class="settings-window">
+                <div class="drag-to-close">
+                    <div class="drag-bar"></div>
+                </div>
+                <div class="settings-account-btns">
+                    <button type="button">
+                        <div>Log in</div>
+                    </button>
+                    <button type="button">
+                        <div>Sign up</div>
+                    </button>
+                </div>
+                <div class="settings-window-section">
+                    <div class="settings-window-row">
+                        <div class="settings-row-title">Dark Mode</div>
+                    </div>
+                    <div class="settings-window-row">
+                        <div class="settings-row-title">Default Currency</div>
+                        <div class="settings-row-content">
+                            <div class="settings-row-value">$USD</div>
+                            <!-- <div class="settings-row-arrow">
                 <i class="fas fa-angle-right"></i>
               </div> -->
+                        </div>
+                    </div>
+                    <div class="settings-window-row">
+                        <div class="settings-row-title">Preferred Market</div>
+                        <div class="settings-pref-markets">
+                            <div class="pref-market-opt selected-pref-market">
+                                Crypto
+                            </div>
+                            <div class="pref-market-opt">Stocks</div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </main>
+        <footer>
+            <div class="footer-credits">
+                All of the UI in this app is 100% completely designed &
+                developed from scratch by <span>Amer Albareedi 😁</span>
             </div>
-          </div>
-          <div class="settings-window-row">
-            <div class="settings-row-title">Preferred Market</div>
-            <div class="settings-pref-markets">
-              <div class="pref-market-opt selected-pref-market">Crypto</div>
-              <div class="pref-market-opt">Stocks</div>
+            <div class="footer-contacts">
+                <a
+                    href="https://albareedi.com/"
+                    target="_blank"
+                    class="footer-contact-btn"
+                >
+                    <i class="fa-solid fa-globe"></i>
+                    <div>Portfolio</div>
+                </a>
+                <a
+                    href="mailto:aalbareedi@yahoo.com"
+                    class="footer-contact-btn"
+                >
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>Email</div>
+                </a>
+                <a
+                    href="https://github.com/aalbareedi"
+                    target="_blank"
+                    class="footer-contact-btn"
+                >
+                    <i class="fab fa-github"></i>
+                    <div>GitHub</div>
+                </a>
             </div>
-          </div>
-        </div>
-      </nav>
-    </main>
-    <footer>
-      <div class="footer-credits">
-        All of the UI in this app is 100% completely designed & developed from
-        scratch by <span>Amer Albareedi 😁</span>
-      </div>
-      <div class="footer-contacts">
-        <a
-          href="https://albareedi.com/"
-          target="_blank"
-          class="footer-contact-btn"
-        >
-          <i class="fa-solid fa-globe"></i>
-          <div>Portfolio</div>
-        </a>
-        <a href="mailto:aalbareedi@yahoo.com" class="footer-contact-btn">
-          <i class="fa-solid fa-envelope"></i>
-          <div>Email</div>
-        </a>
-        <a
-          href="https://github.com/aalbareedi"
-          target="_blank"
-          class="footer-contact-btn"
-        >
-          <i class="fab fa-github"></i>
-          <div>GitHub</div>
-        </a>
-      </div>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+        </footer>
+        <script src="script.js"></script>
+    </body>
 </html>
