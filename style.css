@@ -258,7 +258,18 @@ header {
   padding-top: 2px;
 }
 
-.crypto-list,
+.crypto-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 20px 20px 20px;
+  font-size: 14px;
+}
+
 .stock-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -271,7 +282,22 @@ header {
   font-size: 14px;
 }
 
-.crypto-list-header,
+.crypto-list-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0px;
+  background-color: #e0e0e0;
+  border-bottom: 1px solid #cacaca;
+  z-index: 20;
+}
+
 .stock-list-header {
   position: relative;
   display: -webkit-box;
@@ -296,7 +322,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  border-top: 1px solid #cacaca;
+  border-bottom: 1px solid #cacaca;
 }
 
 .crypto-entry-pair {
