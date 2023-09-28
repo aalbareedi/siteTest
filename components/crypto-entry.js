@@ -35,12 +35,14 @@ function CryptoEntry(number, { symbol, name, quote }) {
             <div class="crypto-logo"></div>
             <div class="crypto-name">
                 <div class="crypto-symbol">${symbol}</div>
-                <div class="crypto-name-text">${name}</div>
+                <div class="crypto-name-text display-hidden">${name}</div>
+                <div class="crypto-name-text">${usdFormatter.format(
+                    quote.USD.price
+                )}</div>
             </div>
             </div>
         </div>
-        <div class="crypto-price">${usdFormatter.format(quote.USD.price)}</div>
-        <div>999.99b</div>
+        <div class="crypto-mcap">$999.99b</div>
         <div class="percent-change positive">${percentFormatter.format(
             quote.USD.percent_change_24h
         )}</div>

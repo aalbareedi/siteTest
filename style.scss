@@ -238,7 +238,8 @@ header {
     display: flex;
     flex-direction: column;
 }
-.crypto-name-text {
+.crypto-name-text,
+.crypto-price {
     font-size: 14px;
     color: #7a7a7a;
     text-overflow: ellipsis;
@@ -246,7 +247,6 @@ header {
     white-space: nowrap;
     max-width: 100px;
     letter-spacing: 0.2px;
-    display: none;
 }
 .stock-name-text {
     font-size: 14px;
@@ -270,10 +270,14 @@ header {
     color: #7a7a7a;
     font-size: 14px;
 }
-.crypto-list-header-percent,
-.stock-list-header-percent {
-    width: 70px;
+.sort-arrow {
+    margin-left: 6px;
+    color: #bdbdbd;
 }
+// .crypto-list-header-percent,
+// .stock-list-header-percent {
+//     width: 70px;
+// }
 #crypto .percent-change,
 #stocks .percent-change {
     border-radius: 4px;
