@@ -40,6 +40,7 @@ function CryptoEntry(number, { symbol, name, quote }) {
             </div>
         </div>
         <div class="crypto-price">${usdFormatter.format(quote.USD.price)}</div>
+        <div>999.99b</div>
         <div class="percent-change positive">${percentFormatter.format(
             quote.USD.percent_change_24h
         )}</div>
