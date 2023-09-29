@@ -17,6 +17,9 @@ button {
 .display-hidden {
     display: none !important;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #e0e0e0;
     padding-top: $nav-height;
@@ -29,11 +32,11 @@ header {
     background-color: #eaeaea;
     position: fixed;
     top: 0px;
-    left: 0;
-    right: 0;
+    left: 0px;
+    right: 0px;
     display: flex;
     justify-content: space-between;
-    z-index: 20;
+    z-index: 21;
     border-bottom: 2px solid #dadada;
 }
 .nav-logo {
@@ -112,7 +115,7 @@ header {
     background-color: #eaeaea;
     border-color: #d0d0d0;
 }
-.main-content {
+#main-content {
     padding-top: 20px;
 }
 .main-title {
@@ -127,7 +130,6 @@ header {
     row-gap: 20px;
 }
 .crypto-tabs {
-    // background: #cbcbcb;
     background: #d1d1d1;
     border: 2px solid #d1d1d1;
     display: flex;
@@ -143,7 +145,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    // background: #d1d1d1;
     font-size: 14px;
     border-radius: 40px;
 }
@@ -447,7 +448,32 @@ i.close-nav-btn-icon {
     background-color: #75ad74 !important;
     color: whitesmoke !important;
 }
-
+#back-to-top-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: $nav-height + 24px;
+    right: 20px;
+    border-radius: 50%;
+    height: 38px;
+    width: 38px;
+    border: none;
+    background-color: rgba(51, 51, 51, 0.4);
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    z-index: 9;
+    font-size: 18px;
+    user-select: none;
+    opacity: 1;
+    visibility: initial;
+    transition: opacity 1s;
+    text-decoration: none;
+}
+.opacity-zero {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
 // padding-top: calc(#{$header-height} + #{$project-window-title-height});
 
 // TABLET styles

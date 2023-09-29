@@ -5,6 +5,9 @@ let cryptoDockBtn = document.querySelector("#crypto-dock-btn");
 let crypto = document.querySelector("#crypto");
 let stocksDockBtn = document.querySelector("#stocks-dock-btn");
 let stocks = document.querySelector("#stocks");
+let backToTopBtn = document.querySelector("#back-to-top-btn");
+let scrollingElement =
+    document.scrollingElement || document.documentElement || body;
 
 navBtn.onclick = () => {
     // settings.classList.add("showSettings");
@@ -23,4 +26,12 @@ stocksDockBtn.onclick = () => {
     stocks.classList.remove("display-hidden");
     stocksDockBtn.classList.add("dock-btn-selected");
     cryptoDockBtn.classList.remove("dock-btn-selected");
+};
+
+body.onscroll = function () {
+    if (scrollingElement.scrollTop > 0) {
+        backToTopBtn.classList.remove("opacity-zero");
+    } else {
+        backToTopBtn.classList.add("opacity-zero");
+    }
 };
