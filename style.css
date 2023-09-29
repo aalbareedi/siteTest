@@ -257,7 +257,7 @@ header {
 
 .crypto-control-arrow {
   padding-top: 2px;
-  color: #7a7a7a;
+  color: #9b9b9b;
 }
 
 .crypto-list {
@@ -650,6 +650,49 @@ i.close-nav-btn-icon {
   color: whitesmoke !important;
 }
 
+.main-crypto-stats {
+  font-size: 14px;
+  padding: 0px 20px;
+  margin-bottom: 2px;
+}
+
+.crypto-stat-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 6px;
+          column-gap: 6px;
+}
+
+.crypto-stat-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 6px;
+          column-gap: 6px;
+}
+
+.crypto-stat-value {
+  color: #7a7a7a;
+}
+
+.crypto-stat-value span {
+  color: #57b555;
+}
+
+.crypto-stat-percent {
+  color: #57b555;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 2px;
+          column-gap: 2px;
+}
+
+.crypto-stat-percent i {
+  padding-top: 2px;
+}
+
 #back-to-top-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -682,6 +725,7 @@ i.close-nav-btn-icon {
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
   text-decoration: none;
+  padding-top: 2px;
 }
 
 .opacity-zero {
