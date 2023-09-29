@@ -257,6 +257,7 @@ header {
 
 .crypto-control-arrow {
   padding-top: 2px;
+  color: #7a7a7a;
 }
 
 .crypto-list {
@@ -340,10 +341,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #7a7a7a;
 }
 
 .crypto-list-header-number {
   min-width: 28px;
+  color: #7a7a7a;
 }
 
 .crypto-name-wrapper {
@@ -422,8 +425,8 @@ header {
 #crypto .percent-change,
 #stocks .percent-change {
   border-radius: 4px;
-  padding: 4px 0px;
-  width: 70px;
+  padding: 4px;
+  min-width: 70px;
   text-align: center;
 }
 
