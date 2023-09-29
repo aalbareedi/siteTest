@@ -233,9 +233,6 @@ header {
   padding: 0px 20px;
   -webkit-column-gap: 10px;
           column-gap: 10px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .crypto-control-btn {

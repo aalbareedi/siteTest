@@ -41,15 +41,15 @@ function CryptoEntry(number, { symbol, name, quote }, metadata) {
             </div>
             </div>
         </div>
-        <div class="crypto-mcap">
-            ${getUsdFormatter(quote.USD.market_cap).format(
-                quote.USD.market_cap
-            )}
-        </div>
         <div class="percent-change ${
             quote.USD.percent_change_24h >= 0 ? "positive" : "negative"
         }">
             ${percentFormatter.format(quote.USD.percent_change_24h)}
+        </div>
+        <div class="crypto-mcap">
+            ${getUsdFormatter(quote.USD.market_cap).format(
+                quote.USD.market_cap
+            )}
         </div>
     `;
 
