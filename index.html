@@ -129,10 +129,15 @@
                 <script src="api/crypto.js"></script>
                 <script>
                     const list = document.querySelector(".crypto-list");
-                    const entries = getCryptoEntries();
+                    const coins = getCryptoCoins();
+                    const metadata = getCryptoMetadata(
+                        coins.map((coin) => coin.id)
+                    );
 
-                    for (let i = 0; i < entries.length; i++) {
-                        list.append(CryptoEntry(i + 1, entries[i]));
+                    for (let i = 0; i < coins.length; i++) {
+                        list.append(
+                            CryptoEntry(i + 1, coins[i], metadata[coins[i].id])
+                        );
                     }
                 </script>
             </div>

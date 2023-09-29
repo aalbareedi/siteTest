@@ -233,6 +233,9 @@ header {
     height: 30px;
     border-radius: 50%;
 }
+.crypto-logo img {
+    max-width: 100%;
+}
 .crypto-name,
 .stock-name {
     display: flex;
@@ -285,8 +288,11 @@ header {
     width: 70px;
     text-align: center;
 }
-#crypto .percent-change span,
-#stocks .percent-change span {
+// #crypto .percent-change span,
+// #stocks .percent-change span {
+//     margin-right: 2px;
+// }
+.percent-change::first-letter {
     margin-right: 2px;
 }
 .negative {
