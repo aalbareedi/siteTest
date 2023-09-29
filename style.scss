@@ -453,11 +453,14 @@ i.close-nav-btn-icon {
 }
 .main-crypto-stats {
     font-size: 14px;
-    padding: 0px 20px;
+    padding: 0px 40px;
     margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
 }
 .crypto-stat-group {
     display: flex;
+    flex-direction: column;
     column-gap: 6px;
 }
 // .crypto-stat-label {
@@ -465,6 +468,7 @@ i.close-nav-btn-icon {
 // }
 .crypto-stat-result {
     display: flex;
+    flex-direction: column;
     column-gap: 6px;
 }
 .crypto-stat-value {

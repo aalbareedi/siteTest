@@ -652,14 +652,24 @@ i.close-nav-btn-icon {
 
 .main-crypto-stats {
   font-size: 14px;
-  padding: 0px 20px;
+  padding: 0px 40px;
   margin-bottom: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .crypto-stat-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-column-gap: 6px;
           column-gap: 6px;
 }
@@ -668,6 +678,10 @@ i.close-nav-btn-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-column-gap: 6px;
           column-gap: 6px;
 }
