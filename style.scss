@@ -323,10 +323,10 @@ header {
     margin-right: 2px;
 }
 .negative-entry {
-    background-color: rgba(221, 0, 0, 0.1);
+    background-color: rgba(221, 0, 0, 0.2);
 }
 .positive-entry {
-    background-color: rgba(16, 143, 15, 0.1);
+    background-color: rgba(16, 143, 15, 0.2);
 }
 footer {
     background-color: #e7e7ff;
@@ -588,6 +588,13 @@ i.close-nav-btn-icon {
 .crypto-select-opt i {
     color: #489447;
     font-size: 18px;
+    opacity: 0;
+}
+.selected-crypto-opt {
+    color: #489447;
+}
+.selected-crypto-opt i {
+    opacity: 1;
 }
 
 // padding-top: calc(#{$header-height} + #{$project-window-title-height});
