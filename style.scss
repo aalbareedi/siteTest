@@ -285,24 +285,20 @@ header {
 // .stock-list-header-percent {
 //     width: 70px;
 // }
-#crypto .percent-change,
+#crypto .crypto-entry-perc,
 #stocks .percent-change {
     border-radius: 4px;
     padding: 4px;
     min-width: 70px;
     text-align: center;
 }
-// #crypto .percent-change span,
-// #stocks .percent-change span {
-//     margin-right: 2px;
-// }
-.percent-change::first-letter {
+.crypto-entry-perc::first-letter {
     margin-right: 2px;
 }
-.negative {
+.negative-entry {
     background-color: rgba(221, 0, 0, 0.5);
 }
-.positive {
+.positive-entry {
     background-color: rgba(16, 143, 15, 0.5);
 }
 footer {
@@ -457,6 +453,7 @@ i.close-nav-btn-icon {
     margin-bottom: 2px;
     display: flex;
     justify-content: space-between;
+    display: none;
 }
 .crypto-stat-group {
     display: flex;
@@ -477,12 +474,12 @@ i.close-nav-btn-icon {
 .crypto-stat-value span {
     color: #57b555;
 }
-.crypto-stat-percent {
+.crypto-stat-perc {
     color: #57b555;
     display: flex;
     column-gap: 2px;
 }
-.crypto-stat-percent i {
+.crypto-stat-perc i {
     padding-top: 2px;
 }
 #back-to-top-btn {

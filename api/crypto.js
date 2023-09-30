@@ -1,4 +1,4 @@
-function getCryptoCoins() {
+export function getCryptoCoins() {
     return [
         {
             id: 1,
@@ -5013,7 +5013,7 @@ function getCryptoCoins() {
     ];
 }
 
-function getCryptoMetadata(ids) {
+export function getCryptoMetadata(ids) {
     return {
         1: {
             id: 1,

@@ -74,9 +74,9 @@
                             <div class="crypto-stat-label">Market Cap:</div>
                             <div class="crypto-stat-result">
                                 <div class="crypto-stat-value">$1.08T</div>
-                                <div class="crypto-stat-percent">
+                                <div class="crypto-stat-perc">
                                     <i class="fas fa-caret-up"></i>
-                                    <div class="crypto-stat-percent-val">
+                                    <div class="crypto-stat-perc-val">
                                         2.12%
                                     </div>
                                 </div>
@@ -86,9 +86,9 @@
                             <div class="crypto-stat-label">24h Vol:</div>
                             <div class="crypto-stat-result">
                                 <div class="crypto-stat-value">$31.17B</div>
-                                <div class="crypto-stat-percent">
+                                <div class="crypto-stat-perc">
                                     <i class="fas fa-caret-up"></i>
-                                    <div class="crypto-stat-percent-val">
+                                    <div class="crypto-stat-perc-val">
                                         5.82%
                                     </div>
                                 </div>
@@ -146,9 +146,14 @@
                         </div>
                     </div>
                 </div>
-                <script src="components/crypto-entry.js"></script>
-                <script src="api/crypto.js"></script>
-                <script>
+
+                <script type="module">
+                    import CryptoEntry from "./components/crypto-entry.js";
+                    import {
+                        getCryptoCoins,
+                        getCryptoMetadata,
+                    } from "./api/crypto.js";
+
                     const list = document.querySelector(".crypto-list");
                     const coins = getCryptoCoins();
                     const metadata = getCryptoMetadata(
