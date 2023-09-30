@@ -219,11 +219,7 @@ header {
 }
 .crypto-entry {
     height: 60px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
-    position: relative;
-    border-bottom: 1px solid #cacaca;
+    // border-bottom: 1px solid #cacaca;
 }
 .stock-entry {
     height: 60px;
@@ -233,23 +229,14 @@ header {
     position: relative;
     border-bottom: 1px solid #cacaca;
 }
-
 .crypto-entry-pair {
     display: flex;
 }
-// .crypto-list-header-price,
-// .crypto-price {
-//     width: 84px;
-//     text-align: right;
-// }
 .crypto-number {
-    // min-width: 28px;
-    // display: flex;
-    // align-items: center;
     color: #7a7a7a;
+    padding-right: 2px;
 }
 .crypto-list-header-number {
-    // min-width: 28px;
     color: #7a7a7a;
 }
 .crypto-name-wrapper {
@@ -281,7 +268,7 @@ header {
     // max-width: 100px;
     letter-spacing: 0.2px;
 }
-
+// joe ?
 .collapse-zeroes {
     display: inline-block;
     max-width: 20px;
@@ -289,8 +276,8 @@ header {
     white-space: nowrap;
     overflow: hidden;
     vertical-align: bottom;
+    // margin-right: -2px;
 }
-
 .stock-name-text {
     font-size: 14px;
     color: #7a7a7a;
@@ -300,8 +287,6 @@ header {
     max-width: 100px;
     letter-spacing: 0.2px;
 }
-// .crypto-price,
-// .crypto-list-header-price,
 .stock-price,
 .stock-list-header-price {
     position: absolute;
@@ -317,14 +302,21 @@ header {
     font-size: 14px;
 }
 .sort-arrow {
-    margin-left: 6px;
+    margin-left: 4px;
     color: #bdbdbd;
 }
 // .crypto-list-header-percent,
 // .stock-list-header-percent {
 //     width: 70px;
 // }
-#crypto .crypto-entry-perc,
+.crypto-entry-perc {
+    border-radius: 4px;
+    padding: 4px;
+    min-width: 70px;
+    text-align: center;
+    width: fit-content;
+    margin: 0px auto;
+}
 #stocks .percent-change {
     border-radius: 4px;
     padding: 4px;

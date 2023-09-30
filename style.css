@@ -323,8 +323,6 @@ header {
 
 .crypto-entry {
   height: 60px;
-  position: relative;
-  border-bottom: 1px solid #cacaca;
 }
 
 .stock-entry {
@@ -350,6 +348,7 @@ header {
 
 .crypto-number {
   color: #7a7a7a;
+  padding-right: 2px;
 }
 
 .crypto-list-header-number {
@@ -437,11 +436,21 @@ header {
 }
 
 .sort-arrow {
-  margin-left: 6px;
+  margin-left: 4px;
   color: #bdbdbd;
 }
 
-#crypto .crypto-entry-perc,
+.crypto-entry-perc {
+  border-radius: 4px;
+  padding: 4px;
+  min-width: 70px;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px auto;
+}
+
 #stocks .percent-change {
   border-radius: 4px;
   padding: 4px;
