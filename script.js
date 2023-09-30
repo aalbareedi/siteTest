@@ -8,6 +8,9 @@ let stocks = document.querySelector("#stocks");
 let backToTopBtn = document.querySelector("#back-to-top-btn");
 let scrollingElement =
     document.scrollingElement || document.documentElement || body;
+let cryptoTimeframeSelect = document.querySelector("#crypto-timeframe-select");
+let cryptoSelectWindow = document.querySelector(".crypto-select-window");
+let selectCloseBtn = document.querySelector(".select-close-btn");
 
 navBtn.onclick = () => {
     // settings.classList.add("showSettings");
@@ -34,4 +37,12 @@ body.onscroll = function () {
     } else {
         backToTopBtn.classList.add("opacity-zero");
     }
+};
+
+cryptoTimeframeSelect.onclick = () => {
+    cryptoSelectWindow.classList.remove("display-hidden");
+};
+
+selectCloseBtn.onclick = () => {
+    cryptoSelectWindow.classList.add("display-hidden");
 };
