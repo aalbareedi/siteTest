@@ -278,9 +278,19 @@ header {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    max-width: 100px;
+    // max-width: 100px;
     letter-spacing: 0.2px;
 }
+
+.collapse-zeroes {
+    display: inline-block;
+    max-width: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
 .stock-name-text {
     font-size: 14px;
     color: #7a7a7a;

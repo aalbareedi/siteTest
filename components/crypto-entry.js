@@ -1,4 +1,8 @@
-import { formatUsd, formatPercent } from "../utils/data-formatter.js";
+import {
+    formatUsd,
+    formatPercent,
+    collapseZeros,
+} from "../utils/data-formatter.js";
 
 /* <div class="crypto-entry">
 <div class="crypto-entry-pair">
@@ -19,6 +23,8 @@ export default function CryptoEntry(number, { symbol, name, quote }, metadata) {
     // Return a new element/DOM object
     const element = document.createElement("tr");
     element.classList.add("crypto-entry");
+    // ${collapseZeros(formatUsd(quote.USD.price))}
+    // $0.<span class="collapse">0000</span>000123
 
     element.innerHTML += `
         <td class="crypto-number">${number}</td>
@@ -31,7 +37,7 @@ export default function CryptoEntry(number, { symbol, name, quote }, metadata) {
                     <div class="crypto-symbol">${symbol}</div>
                     <div class="crypto-name-text display-hidden">${name}</div>
                     <div class="crypto-name-text">
-                        ${formatUsd(quote.USD.price)}
+                        ${collapseZeros(formatUsd(quote.USD.price))}
                     </div>
                 </div>
             </div>
