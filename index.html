@@ -123,28 +123,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="crypto-list">
-                    <div class="crypto-list-header">
-                        <div class="crypto-entry-pair">
-                            <div class="crypto-list-header-number">#</div>
-                            <div class="crypto-list-header-price">
-                                Coin Price <span>(USD)</span>
-                            </div>
-                            <span class="sort-arrow"
-                                ><i class="fas fa-sort"></i
-                            ></span>
-                        </div>
-                        <div class="crypto-list-header-percent">
-                            24h %<span class="sort-arrow"
-                                ><i class="fas fa-sort"></i
-                            ></span>
-                        </div>
-                        <div>
-                            Market Cap<span class="sort-arrow"
-                                ><i class="fas fa-sort"></i
-                            ></span>
-                        </div>
-                    </div>
+                <div class="crypto-table-wrapper">
+                    <table class="crypto-list">
+                        <thead class="crypto-list-header">
+                            <tr>
+                                <td class="crypto-list-header-number">#</td>
+                                <td>
+                                    Coin Price
+                                    <span class="currency-header-label"
+                                        >(USD)</span
+                                    >
+                                    <span class="sort-arrow">
+                                        <i class="fas fa-sort"></i>
+                                    </span>
+                                </td>
+                                <td class="crypto-list-header-percent">
+                                    24h %
+                                    <span class="sort-arrow">
+                                        <i class="fas fa-sort"></i>
+                                    </span>
+                                </td>
+                                <td class="crypto-list-header-mcap">
+                                    Market Cap
+                                    <span class="sort-arrow">
+                                        <i class="fas fa-sort"></i>
+                                    </span>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
 
                 <script type="module">
@@ -154,14 +162,16 @@
                         getCryptoMetadata,
                     } from "./api/crypto.js";
 
-                    const list = document.querySelector(".crypto-list");
+                    const tbody = document.querySelector(
+                        ".crypto-list > tbody"
+                    );
                     const coins = getCryptoCoins();
                     const metadata = getCryptoMetadata(
                         coins.map((coin) => coin.id)
                     );
 
                     for (let i = 0; i < coins.length; i++) {
-                        list.append(
+                        tbody.append(
                             CryptoEntry(i + 1, coins[i], metadata[coins[i].id])
                         );
                     }

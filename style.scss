@@ -171,11 +171,22 @@ header {
     padding-top: 2px;
     color: #9b9b9b;
 }
-.crypto-list {
-    display: flex;
-    flex-direction: column;
+.crypto-table-wrapper {
     padding: 10px 20px 20px 20px;
+}
+.crypto-list {
+    // display: flex;
+    // flex-direction: column;
     font-size: 14px;
+    width: 100%;
+    // border-collapse: collapse;
+    border-spacing: 0px;
+}
+.crypto-list td {
+    border-bottom: 1px solid #cacaca;
+}
+.crypto-mcap {
+    text-align: right;
 }
 .stock-list {
     display: flex;
@@ -186,12 +197,13 @@ header {
 .crypto-list-header {
     position: sticky;
     top: $nav-height;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0px;
+    // display: flex;
+    // justify-content: space-between;
     background-color: #e0e0e0;
-    border-bottom: 1px solid #cacaca;
     z-index: 20;
+}
+.crypto-list-header td {
+    padding: 10px 0px;
 }
 .stock-list-header {
     position: relative;
@@ -199,7 +211,20 @@ header {
     justify-content: space-between;
     margin-bottom: 10px;
 }
-.crypto-entry,
+.crypto-list-header-percent {
+    text-align: center;
+}
+.crypto-list-header-mcap {
+    text-align: right;
+}
+.crypto-entry {
+    height: 60px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    position: relative;
+    border-bottom: 1px solid #cacaca;
+}
 .stock-entry {
     height: 60px;
     display: flex;
@@ -208,6 +233,7 @@ header {
     position: relative;
     border-bottom: 1px solid #cacaca;
 }
+
 .crypto-entry-pair {
     display: flex;
 }
@@ -217,13 +243,13 @@ header {
 //     text-align: right;
 // }
 .crypto-number {
-    min-width: 28px;
-    display: flex;
-    align-items: center;
+    // min-width: 28px;
+    // display: flex;
+    // align-items: center;
     color: #7a7a7a;
 }
 .crypto-list-header-number {
-    min-width: 28px;
+    // min-width: 28px;
     color: #7a7a7a;
 }
 .crypto-name-wrapper {
@@ -272,7 +298,10 @@ header {
     left: 50%;
     transform: translateX(-50%);
 }
-.crypto-list-header-price span,
+.currency-header-label {
+    color: #7a7a7a;
+    font-size: 14px;
+}
 .stock-list-header-price span {
     color: #7a7a7a;
     font-size: 14px;
