@@ -430,6 +430,7 @@ i.close-nav-btn-icon {
     background-color: #cacaca;
     min-height: 120px;
     border-radius: 20px;
+    font-size: 14px;
 }
 .settings-window-row {
     height: 60px;
@@ -472,6 +473,13 @@ i.close-nav-btn-icon {
 .selected-pref-market {
     background-color: #75ad74 !important;
     color: whitesmoke !important;
+}
+.pref-market-detail-text {
+    font-size: 14px;
+    padding: 6px 15px 0px 15px;
+    color: #7a7a7a;
+    word-spacing: 1px;
+    line-height: 18px;
 }
 .main-crypto-stats {
     font-size: 14px;
@@ -587,10 +595,14 @@ i.close-nav-btn-icon {
 .crypto-select-opt + .crypto-select-opt {
     border-top: 1px solid lightgrey;
 }
+.crypto-select-opt-text {
+    padding-left: 2px;
+}
 .crypto-select-opt i {
     color: #489447;
     font-size: 18px;
     opacity: 0;
+    padding-right: 2px;
 }
 .selected-crypto-opt {
     color: #489447;
