@@ -167,10 +167,12 @@
                     const tbody = document.querySelector(
                         ".crypto-list > tbody"
                     );
-                    const coins = getCryptoCoins();
+                    const coins = await getCryptoCoins();
                     const metadata = getCryptoMetadata(
                         coins.map((coin) => coin.id)
                     );
+
+                    tbody.innerHTML = "";
 
                     for (let i = 0; i < coins.length; i++) {
                         tbody.append(
