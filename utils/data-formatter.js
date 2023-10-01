@@ -54,7 +54,6 @@ export function collapseZeros(data) {
 
         if (start === null && string[i] == 0) {
             start = i;
-            end = i;
         }
 
         if (start !== null && i - start >= MAX_ZEROS) {
