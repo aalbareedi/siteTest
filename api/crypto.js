@@ -1,6 +1,8 @@
 const API_URL =
     location.hostname == "127.0.0.1" || location.hostname == "localhost"
         ? "http://localhost:3000"
+        : location.hostname == "10.0.0.180"
+        ? "http://10.0.0.180:3000"
         : "https://stocks-backend-production.up.railway.app";
 
 export async function getCryptoCoins() {
