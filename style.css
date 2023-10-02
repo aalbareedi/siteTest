@@ -444,7 +444,7 @@ header {
 .crypto-entry-perc {
   border-radius: 4px;
   padding: 4px;
-  min-width: 70px;
+  min-width: 68px;
   text-align: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -537,16 +537,41 @@ footer {
   left: 0;
   z-index: 50;
   background-color: lightgrey;
-  height: 100%;
+  height: calc(100% - 60px);
   width: 100%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border-top: 2px solid #dadada;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 20px 20px 20px;
 }
 
 .showSettings .settings-window {
-  bottom: -57px;
-  padding: 0px 20px;
+  bottom: 0px;
+}
+
+.settings-close-btn {
+  border: 2px solid #c7c5c5;
+  border: none;
+  display: block;
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #cacaca;
+  border: 2px solid #c4c4c4;
+  color: #4f4f4f;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .showSettings i.settings-nav-btn-icon {
@@ -610,6 +635,7 @@ i.close-nav-btn-icon {
   min-height: 120px;
   border-radius: 20px;
   font-size: 14px;
+  color: #4f4f4f;
 }
 
 .settings-window-row {
@@ -662,7 +688,7 @@ i.close-nav-btn-icon {
 .pref-market-opt {
   border-radius: 50px;
   width: 70px;
-  height: 28px;
+  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -825,8 +851,7 @@ i.close-nav-btn-icon {
 }
 
 .select-close-btn {
-  border: 2px solid #c7c5c5;
-  border: none;
+  border: 2px solid #c4c4c4;
   display: block;
   width: 100%;
   height: 48px;

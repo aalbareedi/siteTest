@@ -1,6 +1,6 @@
 let body = document.querySelector("body");
 let navBtn = document.querySelector(".nav-menu-btn");
-let settings = document.querySelector(".settings-window");
+// let settings = document.querySelector(".settings-window");
 let cryptoDockBtn = document.querySelector("#crypto-dock-btn");
 let crypto = document.querySelector("#crypto");
 let stocksDockBtn = document.querySelector("#stocks-dock-btn");
@@ -11,9 +11,14 @@ let scrollingElement =
 let cryptoTimeframeSelect = document.querySelector("#crypto-timeframe-select");
 let cryptoSelectWindow = document.querySelector(".crypto-select-window");
 let selectCloseBtn = document.querySelector(".select-close-btn");
+let settingsCloseBtn = document.querySelector(".settings-close-btn");
+let cryptoSelectContent = document.querySelector(".crypto-select-content");
 
 navBtn.onclick = () => {
-    // settings.classList.add("showSettings");
+    body.classList.toggle("showSettings");
+};
+
+settingsCloseBtn.onclick = () => {
     body.classList.toggle("showSettings");
 };
 
@@ -45,4 +50,10 @@ cryptoTimeframeSelect.onclick = () => {
 
 selectCloseBtn.onclick = () => {
     cryptoSelectWindow.classList.add("display-hidden");
+};
+cryptoSelectWindow.onclick = () => {
+    cryptoSelectWindow.classList.add("display-hidden");
+};
+cryptoSelectContent.onclick = (e) => {
+    e.stopPropagation();
 };
