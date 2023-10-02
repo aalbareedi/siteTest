@@ -190,7 +190,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 10px;
+  row-gap: 12px;
 }
 
 .crypto-tabs {
@@ -235,8 +235,8 @@ header {
   display: -ms-flexbox;
   display: flex;
   padding: 0px 20px;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
 }
 
 .crypto-control-btn {
@@ -257,6 +257,24 @@ header {
 
 .crypto-control-arrow {
   padding-top: 2px;
+  color: #9b9b9b;
+}
+
+.search-crypto-btn {
+  background: #d1d1d1;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 38px;
+  width: 38px;
+  margin-left: auto;
   color: #9b9b9b;
 }
 
@@ -857,7 +875,7 @@ i.close-nav-btn-icon {
   height: 48px;
   border-radius: 10px;
   background-color: #d1d1d1;
-  color: #7a7a7a;
+  color: #4f4f4f;
 }
 
 .crypto-select-options {

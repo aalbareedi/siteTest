@@ -127,7 +127,7 @@ header {
 .crypto-options {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 12px;
 }
 .crypto-tabs {
     background: #d1d1d1;
@@ -154,7 +154,7 @@ header {
 .crypto-controls {
     display: flex;
     padding: 0px 20px;
-    column-gap: 10px;
+    column-gap: 12px;
     // justify-content: space-between;
 }
 .crypto-control-btn {
@@ -169,6 +169,17 @@ header {
 }
 .crypto-control-arrow {
     padding-top: 2px;
+    color: #9b9b9b;
+}
+.search-crypto-btn {
+    background: #d1d1d1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    width: 38px;
+    margin-left: auto;
     color: #9b9b9b;
 }
 .crypto-table-wrapper {
@@ -253,6 +264,7 @@ header {
 .stock-name {
     display: flex;
     flex-direction: column;
+    // row-gap: 2px;
 }
 .crypto-name-text,
 .crypto-price {
@@ -590,7 +602,8 @@ i.close-nav-btn-icon {
     height: 48px;
     border-radius: 10px;
     background-color: #d1d1d1;
-    color: #7a7a7a;
+    // color: #7a7a7a;
+    color: #4f4f4f;
 }
 .crypto-select-options {
     margin-bottom: 20px;
