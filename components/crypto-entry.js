@@ -26,6 +26,11 @@ export default function CryptoEntry(number, { symbol, name, quote }, metadata) {
     // ${collapseZeros(formatUsd(quote.USD.price))}
     // $0.<span class="collapse">0000</span>000123
 
+    if (symbol == "BTC") {
+        console.log(quote.USD.percent_change_24h);
+        console.log(formatPercent(quote.USD.percent_change_24h / 100));
+    }
+
     element.innerHTML += `
         <td class="crypto-number">${number}</td>
         <td>
@@ -50,7 +55,7 @@ export default function CryptoEntry(number, { symbol, name, quote }, metadata) {
                         : "negative-entry"
                 }"
             >
-                ${formatPercent(quote.USD.percent_change_24h)}
+                ${formatPercent(quote.USD.percent_change_24h / 100)}
             </div>
         </td>
         <td class="crypto-mcap">
