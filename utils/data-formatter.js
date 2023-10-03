@@ -32,7 +32,7 @@ export function formatPercent(data) {
         style: "percent",
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
-        signDisplay: "always",
+        signDisplay: "never",
     }).format(data);
 }
 

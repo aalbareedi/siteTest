@@ -218,9 +218,9 @@ header {
     justify-content: space-between;
     margin-bottom: 10px;
 }
-.crypto-list-header-percent {
-    text-align: center;
-}
+// .crypto-list-header-percent {
+//     text-align: center;
+// }
 .crypto-list-header-mcap {
     text-align: right;
 }
@@ -260,6 +260,8 @@ header {
 }
 .crypto-logo img {
     max-width: 100%;
+    pointer-events: none;
+    user-select: none;
 }
 .crypto-name,
 .stock-name {
@@ -318,29 +320,43 @@ header {
 //     width: 70px;
 // }
 .crypto-entry-perc {
-    border-radius: 4px;
-    padding: 4px;
-    // min-width: 68px;
-    text-align: center;
+    // text-align: center;
+    // padding: 4px;
+    // margin: 0px auto;
+    // min-width: 54px;
     width: fit-content;
-    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 6px;
+    border-radius: 4px;
 }
+// .crypto-entry-perc i {
+//     padding-right: 4px;
+// }
 #stocks .percent-change {
     border-radius: 4px;
     padding: 4px;
     min-width: 70px;
     text-align: center;
 }
-.crypto-entry-perc::first-letter {
-    margin-right: 2px;
-}
+// .crypto-entry-perc::first-letter {
+//     margin-right: 2px;
+// }
 .negative-entry {
     // background-color: rgba(221, 0, 0, 0.2);
     color: #d46666;
 }
+.negative-entry i {
+    transform: scale(1, -1);
+    padding-top: 1px;
+}
 .positive-entry {
     // background-color: rgba(16, 143, 15, 0.2);
     color: #489447;
+}
+.positive-entry i {
+    padding-top: 2px;
 }
 footer {
     background-color: #e7e7ff;

@@ -39,7 +39,9 @@ export default function CryptoEntry(number, { symbol, name, quote }, metadata) {
                         ? "positive-entry"
                         : "negative-entry"
                 }"
-            >${formatPercent(quote.USD.percent_change_24h / 100)}</div>
+            ><i class="fas fa-caret-up"></i>${formatPercent(
+                quote.USD.percent_change_24h / 100
+            )}</div>
         </td>
         <td class="crypto-mcap">${formatUsd(quote.USD.market_cap)}</td>
     `;
