@@ -171,7 +171,7 @@
                         ".crypto-list > tbody"
                     );
                     const coins = await getCryptoCoins();
-                    const metadata = getCryptoMetadata(
+                    const metadata = await getCryptoMetadata(
                         coins.map((coin) => coin.id)
                     );
 

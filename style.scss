@@ -252,10 +252,11 @@ header {
     column-gap: 8px;
 }
 .crypto-logo {
-    background-color: orange;
+    // background-color: orange;
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    overflow: hidden;
 }
 .crypto-logo img {
     max-width: 100%;
