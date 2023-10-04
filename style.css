@@ -172,11 +172,11 @@ header {
 }
 
 #main-content {
-  padding-top: 20px;
+  padding-top: 22px;
 }
 
 .main-title {
-  margin: 0px 0px 20px 20px;
+  margin: 0px 0px 22px 20px;
   font-size: 26px;
   font-weight: initial;
   font-family: "Changa", sans-serif;
@@ -204,6 +204,7 @@ header {
   -webkit-column-gap: 2px;
           column-gap: 2px;
   overflow: hidden;
+  display: none;
 }
 
 .crypto-tab {
@@ -756,6 +757,18 @@ i.close-nav-btn-icon {
   line-height: 18px;
 }
 
+.main-stats-wrapper {
+  margin: 0px 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50px;
+  height: 42px;
+  border: 2px solid #d1d1d1;
+  font-size: 14px;
+}
+
 .main-crypto-stats {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -769,11 +782,18 @@ i.close-nav-btn-icon {
   padding: 0px 10px;
   background: #eaeaea;
   z-index: 20;
-  border-radius: 10px;
-  border: 2px solid #d1d1d1;
-  margin: 0px 20px;
-  height: 42px;
   letter-spacing: 0.4px;
+  border-radius: 50px 0px 0px 50px;
+}
+
+.crypto-pause-btn {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 42px;
+  border: none;
+  color: #a7a7a7;
+  background-color: #eaeaea;
+  padding-top: 2px;
 }
 
 .crypto-stat-group {

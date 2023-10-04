@@ -116,10 +116,10 @@ header {
     border-color: #d0d0d0;
 }
 #main-content {
-    padding-top: 20px;
+    padding-top: 22px;
 }
 .main-title {
-    margin: 0px 0px 20px 20px;
+    margin: 0px 0px 22px 20px;
     font-size: 26px;
     font-weight: initial;
     font-family: $font-one;
@@ -137,6 +137,7 @@ header {
     margin: 0px 20px;
     column-gap: 2px;
     overflow: hidden;
+    display: none;
 }
 .crypto-tab {
     flex-grow: 1;
@@ -189,7 +190,7 @@ header {
     padding: 16px 20px 20px 20px;
 }
 .crypto-list {
-    // **** change to 14px for 320px width screen***
+    // **** qwe change to 14px for 320px width screen***
     font-size: 16px;
     width: 100%;
     // border-collapse: collapse;
@@ -468,11 +469,9 @@ i.close-nav-btn-icon {
     justify-content: center;
     align-items: center;
     border: none;
-    // background-color: transparent;
     background-color: #cacaca;
     flex-grow: 1;
     flex-basis: 100%;
-    // border: 2px solid #e7e7e7;
     border: 2px solid #c4c4c4;
     color: #4f4f4f;
 }
@@ -532,20 +531,34 @@ i.close-nav-btn-icon {
     word-spacing: 1px;
     line-height: 18px;
 }
+.main-stats-wrapper {
+    margin: 0px 20px;
+    overflow: hidden;
+    display: flex;
+    border-radius: 50px;
+    height: 42px;
+    border: 2px solid #d1d1d1;
+    font-size: 14px;
+}
 .main-crypto-stats {
     display: flex;
     align-items: center;
     column-gap: 20px;
-    // display: none;
     overflow-x: auto;
     padding: 0px 10px;
     background: #eaeaea;
     z-index: 20;
-    border-radius: 10px;
-    border: 2px solid #d1d1d1;
-    margin: 0px 20px;
-    height: 42px;
     letter-spacing: 0.4px;
+    border-radius: 50px 0px 0px 50px;
+}
+.crypto-pause-btn {
+    flex-shrink: 0;
+    width: 42px;
+    border: none;
+    color: #a7a7a7;
+    background-color: #eaeaea;
+    // background-color: orange;
+    padding-top: 2px;
 }
 .crypto-stat-group {
     display: flex;

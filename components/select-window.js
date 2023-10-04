@@ -23,8 +23,7 @@ export default function SelectWindow({
             <div class="select-title">
                 ${title}
             </div>
-            <div class="select-options">
-            </div>
+            <div class="select-options"></div>
             <button type="button" class="select-close-btn">
                 Close
             </button>
