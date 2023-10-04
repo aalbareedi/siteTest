@@ -4,17 +4,25 @@ import {
     collapseZeros,
 } from "../utils/data-formatter.js";
 
-export default function CryptoEntry(number, { symbol, name, quote }, metadata) {
+/**
+ *
+ * @param {number} number
+ * @param {{symbol: string, name: string, quote: object}} coin
+ * @param {object} metadata
+ * @param {"1h"|"24h"|"7d"|"30d"} changeTimeframe
+ * @returns
+ */
+export default function CryptoEntry(
+    number,
+    { symbol, name, quote },
+    metadata,
+    changeTimeframe
+) {
     // Return a new element/DOM object
     const element = document.createElement("tr");
     element.classList.add("crypto-entry");
     // ${collapseZeros(formatUsd(quote.USD.price))}
     // $0.<span class="collapse">0000</span>000123
-
-    if (symbol == "BTC") {
-        console.log(quote.USD.percent_change_24h);
-        console.log(formatPercent(quote.USD.percent_change_24h / 100));
-    }
 
     element.innerHTML += `
         <td class="crypto-number">${number}</td>
@@ -35,12 +43,12 @@ export default function CryptoEntry(number, { symbol, name, quote }, metadata) {
         <td>
             <div
                 class="crypto-entry-perc ${
-                    quote.USD.percent_change_24h >= 0
+                    quote.USD["percent_change_" + changeTimeframe] >= 0
                         ? "positive-entry"
                         : "negative-entry"
                 }"
             ><i class="fas fa-caret-up"></i>${formatPercent(
-                quote.USD.percent_change_24h / 100
+                quote.USD["percent_change_" + changeTimeframe] / 100
             )}</div>
         </td>
         <td class="crypto-mcap">${formatUsd(quote.USD.market_cap)}</td>

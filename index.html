@@ -119,11 +119,21 @@
                             id="crypto-timeframe-select"
                         >
                             <!-- 1h % / 24h % / 7d % / 30d % -->
-                            <div class="crypto-control-btn-text">24h %</div>
+                            <div class="crypto-control-btn-text"></div>
                             <div class="crypto-control-arrow">
                                 <i class="fas fa-angle-down"></i>
                             </div>
                         </div>
+                        <script type="module">
+                            import { handleCryptoTimeframeChange } from "./utils/state.js";
+
+                            handleCryptoTimeframeChange((cryptoTimeframe) => {
+                                document.querySelector(
+                                    "#crypto-timeframe-select .crypto-control-btn-text"
+                                ).innerHTML = `${cryptoTimeframe} %`;
+                            });
+                        </script>
+
                         <div class="search-crypto-btn">
                             <i class="fas fa-search"></i>
                         </div>
@@ -144,11 +154,24 @@
                                     </span>
                                 </td>
                                 <td class="crypto-list-header-percent">
-                                    24h %
+                                    <span class="crypto-timeframe-val"></span> %
                                     <span class="sort-arrow">
                                         <i class="fas fa-sort"></i>
                                     </span>
                                 </td>
+
+                                <script type="module">
+                                    import { handleCryptoTimeframeChange } from "./utils/state.js";
+
+                                    handleCryptoTimeframeChange(
+                                        (cryptoTimeframe) => {
+                                            document.querySelector(
+                                                ".crypto-list-header-percent .crypto-timeframe-val"
+                                            ).innerHTML = cryptoTimeframe;
+                                        }
+                                    );
+                                </script>
+
                                 <td class="crypto-list-header-mcap">
                                     Market Cap
                                     <span class="sort-arrow">
@@ -166,6 +189,7 @@
                         getCryptoCoins,
                         getCryptoMetadata,
                     } from "./api/crypto.js";
+                    import { handleCryptoTimeframeChange } from "./utils/state.js";
 
                     const tbody = document.querySelector(
                         ".crypto-list > tbody"
@@ -175,13 +199,20 @@
                         coins.map((coin) => coin.id)
                     );
 
-                    tbody.innerHTML = "";
+                    handleCryptoTimeframeChange((cryptoTimeframe) => {
+                        tbody.innerHTML = "";
 
-                    for (let i = 0; i < coins.length; i++) {
-                        tbody.append(
-                            CryptoEntry(i + 1, coins[i], metadata[coins[i].id])
-                        );
-                    }
+                        for (let i = 0; i < coins.length; i++) {
+                            tbody.append(
+                                CryptoEntry(
+                                    i + 1,
+                                    coins[i],
+                                    metadata[coins[i].id],
+                                    cryptoTimeframe
+                                )
+                            );
+                        }
+                    });
                 </script>
             </div>
             <div id="stocks" class="display-hidden">
@@ -402,14 +433,29 @@
             <div id="crypto-select-window-wrapper"></div>
             <script type="module">
                 import SelectWindow from "./components/select-window.js";
+                import {
+                    handleCryptoTimeframeChange,
+                    setCryptoTimeframe,
+                } from "./utils/state.js";
 
-                document.querySelector("#crypto-select-window-wrapper").append(
-                    SelectWindow({
-                        title: "Price % Change Timeframe",
-                        options: ["1h", "24h", "7h", "30d"],
-                        selectedOpt: "24h",
-                    })
-                );
+                handleCryptoTimeframeChange((cryptoTimeframe) => {
+                    const wrapper = document.querySelector(
+                        "#crypto-select-window-wrapper"
+                    );
+                    wrapper.innerHTML = "";
+
+                    wrapper.append(
+                        SelectWindow({
+                            title: "Price % Change Timeframe",
+                            options: ["1h", "24h", "7d", "30d"],
+                            selectedOpt: cryptoTimeframe,
+                            onSelect: (opt) => {
+                                // cryptoTimeframe = opt;
+                                setCryptoTimeframe(opt);
+                            },
+                        })
+                    );
+                });
             </script>
 
             <nav class="settings-window">
