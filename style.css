@@ -251,7 +251,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0px 20px;
-  height: 38px;
+  height: 42px;
   -webkit-column-gap: 8px;
           column-gap: 8px;
   min-width: 106px;
@@ -274,10 +274,12 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 38px;
-  width: 38px;
+  height: 42px;
+  width: 42px;
   margin-left: auto;
   color: #9b9b9b;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .crypto-table-wrapper {
@@ -296,6 +298,7 @@ header {
 
 .crypto-mcap {
   text-align: right;
+  letter-spacing: 0.4px;
 }
 
 .stock-list {
@@ -319,7 +322,7 @@ header {
 }
 
 .crypto-list-header td {
-  padding: 10px 0px;
+  padding: 12px 0px;
   font-size: 14px;
 }
 
@@ -384,8 +387,8 @@ header {
 }
 
 .crypto-logo {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -420,7 +423,7 @@ header {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.4px;
 }
 
 .collapse-zeroes {
@@ -482,6 +485,7 @@ header {
   -webkit-column-gap: 6px;
           column-gap: 6px;
   border-radius: 4px;
+  letter-spacing: 0.4px;
 }
 
 #stocks .percent-change {
@@ -753,47 +757,60 @@ i.close-nav-btn-icon {
 }
 
 .main-crypto-stats {
-  font-size: 14px;
-  padding: 0px 40px;
-  margin-bottom: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  overflow-x: auto;
+  padding: 0px 10px;
+  background: #eaeaea;
+  z-index: 20;
+  border-radius: 10px;
+  border: 2px solid #d1d1d1;
+  margin: 0px 20px;
+  height: 42px;
+  letter-spacing: 0.4px;
 }
 
 .crypto-stat-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-column-gap: 6px;
-          column-gap: 6px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .crypto-stat-result {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-column-gap: 6px;
-          column-gap: 6px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 .crypto-stat-value {
   color: #7a7a7a;
 }
 
-.crypto-stat-value span {
+.crypto-dom-val {
+  color: #7a7a7a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
+}
+
+.crypto-dom-val span {
   color: #57b555;
 }
 
@@ -802,8 +819,8 @@ i.close-nav-btn-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 2px;
-          column-gap: 2px;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
 }
 
 .crypto-stat-perc i {
@@ -824,8 +841,8 @@ i.close-nav-btn-icon {
   bottom: 84px;
   right: 20px;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  height: 42px;
+  width: 42px;
   border: none;
   background-color: rgba(51, 51, 51, 0.4);
   color: rgba(255, 255, 255, 0.8);
