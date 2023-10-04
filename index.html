@@ -399,34 +399,19 @@
                     </div>
                 </div>
             </div>
-            <div class="crypto-select-window display-hidden">
-                <div class="crypto-select-content">
-                    <div class="crypto-select-title">
-                        Price % Change Timeframe
-                    </div>
-                    <div class="crypto-select-options">
-                        <div class="crypto-select-opt">
-                            <div class="crypto-select-opt-text">1h</div>
-                            <i class="fas fa-check"></i>
-                        </div>
-                        <div class="crypto-select-opt selected-crypto-opt">
-                            <div class="crypto-select-opt-text">24h</div>
-                            <i class="fas fa-check"></i>
-                        </div>
-                        <div class="crypto-select-opt">
-                            <div class="crypto-select-opt-text">7h</div>
-                            <i class="fas fa-check"></i>
-                        </div>
-                        <div class="crypto-select-opt">
-                            <div class="crypto-select-opt-text">30d</div>
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                    <button type="button" class="select-close-btn">
-                        Close
-                    </button>
-                </div>
-            </div>
+            <div id="crypto-select-window-wrapper"></div>
+            <script type="module">
+                import SelectWindow from "./components/select-window.js";
+
+                document.querySelector("#crypto-select-window-wrapper").append(
+                    SelectWindow({
+                        title: "Price % Change Timeframe",
+                        options: ["1h", "24h", "7h", "30d"],
+                        selectedOpt: "24h",
+                    })
+                );
+            </script>
+
             <nav class="settings-window">
                 <div>
                     <div class="drag-to-close">
@@ -511,6 +496,6 @@
                 </a>
             </div>
         </footer>
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
     </body>
 </html>

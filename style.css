@@ -190,7 +190,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 12px;
+  row-gap: 14px;
 }
 
 .crypto-tabs {
@@ -235,8 +235,8 @@ header {
   display: -ms-flexbox;
   display: flex;
   padding: 0px 20px;
-  -webkit-column-gap: 12px;
-          column-gap: 12px;
+  -webkit-column-gap: 14px;
+          column-gap: 14px;
 }
 
 .crypto-control-btn {
@@ -279,11 +279,11 @@ header {
 }
 
 .crypto-table-wrapper {
-  padding: 14px 20px 20px 20px;
+  padding: 16px 20px 20px 20px;
 }
 
 .crypto-list {
-  font-size: 14px;
+  font-size: 16px;
   width: 100%;
   border-spacing: 0px;
 }
@@ -381,8 +381,8 @@ header {
 }
 
 .crypto-logo {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -405,11 +405,14 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  row-gap: 2px;
 }
 
-.crypto-name-text,
-.crypto-price {
-  font-size: 14px;
+.crypto-symbol {
+  font-weight: bold;
+}
+
+.crypto-name-text {
   color: #7a7a7a;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -844,7 +847,7 @@ i.close-nav-btn-icon {
   visibility: hidden !important;
 }
 
-.crypto-select-window {
+.select-window {
   position: fixed;
   top: 0;
   right: 0;
@@ -854,7 +857,7 @@ i.close-nav-btn-icon {
   z-index: 100;
 }
 
-.crypto-select-content {
+.select-content {
   background-color: #e0e0e0;
   position: absolute;
   bottom: 0px;
@@ -874,7 +877,7 @@ i.close-nav-btn-icon {
           justify-content: space-between;
 }
 
-.crypto-select-title {
+.select-title {
   text-align: center;
   padding: 20px 0px;
   color: #7a7a7a;
@@ -892,11 +895,11 @@ i.close-nav-btn-icon {
   color: #4f4f4f;
 }
 
-.crypto-select-options {
+.select-options {
   margin-bottom: 20px;
 }
 
-.crypto-select-opt {
+.select-opt {
   height: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -909,26 +912,26 @@ i.close-nav-btn-icon {
           justify-content: space-between;
 }
 
-.crypto-select-opt + .crypto-select-opt {
+.select-opt + .select-opt {
   border-top: 1px solid lightgrey;
 }
 
-.crypto-select-opt-text {
+.select-opt-text {
   padding-left: 2px;
 }
 
-.crypto-select-opt i {
+.select-opt i {
   color: #489447;
   font-size: 18px;
   opacity: 0;
   padding-right: 2px;
 }
 
-.selected-crypto-opt {
+.selected-opt {
   color: #489447;
 }
 
-.selected-crypto-opt i {
+.selected-opt i {
   opacity: 1;
 }
 

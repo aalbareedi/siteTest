@@ -9,7 +9,9 @@ let backToTopBtn = document.querySelector("#back-to-top-btn");
 let scrollingElement =
     document.scrollingElement || document.documentElement || body;
 let cryptoTimeframeSelect = document.querySelector("#crypto-timeframe-select");
-let cryptoSelectWindow = document.querySelector(".crypto-select-window");
+let cryptoSelectWindow = document.querySelector(
+    "#crypto-select-window-wrapper .select-window"
+);
 let selectCloseBtn = document.querySelector(".select-close-btn");
 let settingsCloseBtn = document.querySelector(".settings-close-btn");
 let cryptoSelectContent = document.querySelector(".crypto-select-content");
@@ -19,7 +21,7 @@ navBtn.onclick = () => {
 };
 
 settingsCloseBtn.onclick = () => {
-    body.classList.toggle("showSettings");
+    body.classList.remove("showSettings");
 };
 
 cryptoDockBtn.onclick = () => {
