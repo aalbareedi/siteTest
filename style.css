@@ -167,8 +167,8 @@ header {
 
 .dock-btn-selected {
   color: #489447;
-  background-color: #eaeaea;
-  border-color: #d0d0d0;
+  background-color: #ffffff;
+  border-color: #e9e9e9;
 }
 
 #main-content {
@@ -887,6 +887,11 @@ i.close-nav-btn-icon {
   visibility: hidden !important;
 }
 
+.overlay-hidden {
+  background-color: rgba(0, 0, 0, 0) !important;
+  pointer-events: none;
+}
+
 .select-window {
   position: fixed;
   top: 0;
@@ -895,6 +900,8 @@ i.close-nav-btn-icon {
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 100;
+  -webkit-transition: all 2s;
+  transition: all 2s;
 }
 
 .select-content {
@@ -958,6 +965,7 @@ i.close-nav-btn-icon {
 
 .select-opt-text {
   padding-left: 2px;
+  word-spacing: 1px;
 }
 
 .select-opt i {

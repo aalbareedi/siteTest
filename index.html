@@ -254,6 +254,12 @@
                                 )
                             );
                         }
+
+                        tbody.innerHTML += `
+                            <tr>
+                                <td colspan="4" class="loading-spinner"></td>
+                            </tr>
+                        `;
                     }
                 </script>
             </div>
@@ -516,7 +522,7 @@
 
                     wrapper.append(
                         SelectWindow({
-                            title: "Coin Quantity",
+                            title: "Coin Display Amount",
                             options: ["All Coins", "Top 100", "Top 200"],
                             selectedOpt: cryptoQuantity,
                             onSelect: (opt) => {

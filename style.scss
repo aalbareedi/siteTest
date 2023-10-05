@@ -112,8 +112,8 @@ header {
 }
 .dock-btn-selected {
     color: #489447;
-    background-color: #eaeaea;
-    border-color: #d0d0d0;
+    background-color: #ffffff;
+    border-color: #e9e9e9;
 }
 #main-content {
     padding-top: 22px;
@@ -619,6 +619,11 @@ i.close-nav-btn-icon {
     opacity: 0 !important;
     visibility: hidden !important;
 }
+.overlay-hidden {
+    background-color: rgba(0, 0, 0, 0) !important;
+    // opacity: 0;
+    pointer-events: none;
+}
 .select-window {
     position: fixed;
     top: 0;
@@ -627,6 +632,8 @@ i.close-nav-btn-icon {
     left: 0;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 100;
+    transition: all 2s;
+    // opacity: 1;
 }
 .select-content {
     background-color: #e0e0e0;
@@ -634,7 +641,6 @@ i.close-nav-btn-icon {
     bottom: 0px;
     left: 0px;
     right: 0px;
-    // height: 50%;
     border-radius: 20px 20px 0px 0px;
     padding: 0px 20px 20px 20px;
     display: flex;
@@ -672,6 +678,7 @@ i.close-nav-btn-icon {
 }
 .select-opt-text {
     padding-left: 2px;
+    word-spacing: 1px;
 }
 .select-opt i {
     color: #489447;

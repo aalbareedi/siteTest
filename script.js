@@ -10,10 +10,26 @@ let scrollingElement =
     document.scrollingElement || document.documentElement || body;
 let cryptoTimeframeSelect = document.querySelector("#crypto-timeframe-select");
 let cryptoQuantitySelect = document.querySelector("#crypto-quantity-select");
-
 let selectCloseBtn = document.querySelector(".select-close-btn");
 let settingsCloseBtn = document.querySelector(".settings-close-btn");
 let cryptoSelectContent = document.querySelector(".crypto-select-content");
+let originalGlobalStatsTop = document.querySelector(".main-stats-wrapper");
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    console.log("doc ready");
+
+    document.onscroll = function () {
+        console.log("scroll");
+    };
+});
+
+body.onscroll = function () {
+    if (scrollingElement.scrollTop > 0) {
+        backToTopBtn.classList.remove("opacity-zero");
+    } else {
+        backToTopBtn.classList.add("opacity-zero");
+    }
+};
 
 navBtn.onclick = () => {
     body.classList.toggle("showSettings");
@@ -37,19 +53,10 @@ stocksDockBtn.onclick = () => {
     cryptoDockBtn.classList.remove("dock-btn-selected");
 };
 
-body.onscroll = function () {
-    if (scrollingElement.scrollTop > 0) {
-        backToTopBtn.classList.remove("opacity-zero");
-    } else {
-        backToTopBtn.classList.add("opacity-zero");
-    }
-};
-
 cryptoTimeframeSelect.onclick = () => {
     const selectWindow = document.querySelector(
         "#crypto-timeframe-select-window .select-window"
     );
-
     selectWindow.classList.remove("display-hidden");
 };
 
@@ -57,7 +64,6 @@ cryptoQuantitySelect.onclick = () => {
     const selectWindow = document.querySelector(
         "#crypto-quantity-select-window .select-window"
     );
-
     selectWindow.classList.remove("display-hidden");
 };
 
