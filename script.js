@@ -9,6 +9,7 @@ let backToTopBtn = document.querySelector("#back-to-top-btn");
 let scrollingElement =
     document.scrollingElement || document.documentElement || body;
 let cryptoTimeframeSelect = document.querySelector("#crypto-timeframe-select");
+let cryptoQuantitySelect = document.querySelector("#crypto-quantity-select");
 
 let selectCloseBtn = document.querySelector(".select-close-btn");
 let settingsCloseBtn = document.querySelector(".settings-close-btn");
@@ -45,16 +46,24 @@ body.onscroll = function () {
 };
 
 cryptoTimeframeSelect.onclick = () => {
-    let cryptoSelectWindow = document.querySelector(
-        "#crypto-select-window-wrapper .select-window"
+    const selectWindow = document.querySelector(
+        "#crypto-timeframe-select-window .select-window"
     );
 
-    cryptoSelectWindow.classList.remove("display-hidden");
+    selectWindow.classList.remove("display-hidden");
+};
+
+cryptoQuantitySelect.onclick = () => {
+    const selectWindow = document.querySelector(
+        "#crypto-quantity-select-window .select-window"
+    );
+
+    selectWindow.classList.remove("display-hidden");
 };
 
 // cryptoSelectWindow.onclick = () => {
 //     let cryptoSelectWindow = document.querySelector(
-//         "#crypto-select-window-wrapper .select-window"
+//         "#crypto-timeframe-select-window .select-window"
 //     );
 
 //     cryptoSelectWindow.classList.add("display-hidden");

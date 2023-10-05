@@ -114,13 +114,26 @@
                         <div class="crypto-tab">Watchlist</div>
                     </div>
                     <div class="crypto-controls">
-                        <div class="crypto-control-btn">
+                        <div
+                            class="crypto-control-btn"
+                            id="crypto-quantity-select"
+                        >
                             <!-- All Coins / Top 100 / Top 200 -->
-                            <div class="crypto-control-btn-text">All Coins</div>
+                            <div class="crypto-control-btn-text"></div>
                             <div class="crypto-control-arrow">
                                 <i class="fas fa-angle-down"></i>
                             </div>
                         </div>
+                        <script type="module">
+                            import { handleCryptoQuantityChange } from "./states/crypto-quantity.js";
+
+                            handleCryptoQuantityChange((cryptoQuantity) => {
+                                document.querySelector(
+                                    "#crypto-quantity-select .crypto-control-btn-text"
+                                ).innerHTML = cryptoQuantity;
+                            });
+                        </script>
+
                         <div
                             class="crypto-control-btn"
                             id="crypto-timeframe-select"
@@ -131,7 +144,7 @@
                             </div>
                         </div>
                         <script type="module">
-                            import { handleCryptoTimeframeChange } from "./utils/state.js";
+                            import { handleCryptoTimeframeChange } from "./states/crypto-timeframe.js";
 
                             handleCryptoTimeframeChange((cryptoTimeframe) => {
                                 document.querySelector(
@@ -167,7 +180,7 @@
                                 </td>
 
                                 <script type="module">
-                                    import { handleCryptoTimeframeChange } from "./utils/state.js";
+                                    import { handleCryptoTimeframeChange } from "./states/crypto-timeframe.js";
 
                                     handleCryptoTimeframeChange(
                                         (cryptoTimeframe) => {
@@ -195,19 +208,42 @@
                         getCryptoCoins,
                         getCryptoMetadata,
                     } from "./api/crypto.js";
-                    import { handleCryptoTimeframeChange } from "./utils/state.js";
+                    import {
+                        cryptoQuantity,
+                        handleCryptoQuantityChange,
+                    } from "./states/crypto-quantity.js";
+                    import {
+                        cryptoTimeframe,
+                        handleCryptoTimeframeChange,
+                    } from "./states/crypto-timeframe.js";
 
                     const tbody = document.querySelector(
                         ".crypto-list > tbody"
                     );
-                    const coins = await getCryptoCoins();
-                    const metadata = await getCryptoMetadata(
-                        coins.map((coin) => coin.id)
-                    );
 
-                    handleCryptoTimeframeChange((cryptoTimeframe) => {
+                    let coins = null;
+                    let metadata = null;
+
+                    handleCryptoQuantityChange(async () => {
+                        coins = await getCryptoCoins({
+                            quantity: cryptoQuantity,
+                        });
+                        metadata = await getCryptoMetadata({
+                            coinIds: coins.map((coin) => coin.id),
+                        });
+
+                        render();
+                    });
+
+                    handleCryptoTimeframeChange(() => {
+                        render();
+                    });
+
+                    function render() {
+                        if (!coins || !metadata) {
+                            return;
+                        }
                         tbody.innerHTML = "";
-
                         for (let i = 0; i < coins.length; i++) {
                             tbody.append(
                                 CryptoEntry(
@@ -218,7 +254,7 @@
                                 )
                             );
                         }
-                    });
+                    }
                 </script>
             </div>
             <div id="stocks" class="display-hidden">
@@ -436,17 +472,17 @@
                     </div>
                 </div>
             </div>
-            <div id="crypto-select-window-wrapper"></div>
+            <div id="crypto-timeframe-select-window"></div>
             <script type="module">
                 import SelectWindow from "./components/select-window.js";
                 import {
                     handleCryptoTimeframeChange,
                     setCryptoTimeframe,
-                } from "./utils/state.js";
+                } from "./states/crypto-timeframe.js";
 
                 handleCryptoTimeframeChange((cryptoTimeframe) => {
                     const wrapper = document.querySelector(
-                        "#crypto-select-window-wrapper"
+                        "#crypto-timeframe-select-window"
                     );
                     wrapper.innerHTML = "";
 
@@ -458,6 +494,33 @@
                             onSelect: (opt) => {
                                 // cryptoTimeframe = opt;
                                 setCryptoTimeframe(opt);
+                            },
+                        })
+                    );
+                });
+            </script>
+
+            <div id="crypto-quantity-select-window"></div>
+            <script type="module">
+                import SelectWindow from "./components/select-window.js";
+                import {
+                    handleCryptoQuantityChange,
+                    setCryptoQuantity,
+                } from "./states/crypto-quantity.js";
+
+                handleCryptoQuantityChange((cryptoQuantity) => {
+                    const wrapper = document.querySelector(
+                        "#crypto-quantity-select-window"
+                    );
+                    wrapper.innerHTML = "";
+
+                    wrapper.append(
+                        SelectWindow({
+                            title: "Coin Quantity",
+                            options: ["All Coins", "Top 100", "Top 200"],
+                            selectedOpt: cryptoQuantity,
+                            onSelect: (opt) => {
+                                setCryptoQuantity(opt);
                             },
                         })
                     );

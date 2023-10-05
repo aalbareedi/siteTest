@@ -1,3 +1,5 @@
+import { MAX_SIGNIFICANT_DIGITS } from "./constants.js";
+
 export function formatUsd(data) {
     if (data >= 1000000) {
         return Intl.NumberFormat("en-US", {
@@ -22,7 +24,7 @@ export function formatUsd(data) {
     return Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "USD",
-        maximumSignificantDigits: 4,
+        maximumSignificantDigits: MAX_SIGNIFICANT_DIGITS,
         roundingMode: "trunc",
     }).format(data);
 }

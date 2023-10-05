@@ -14,7 +14,7 @@ import {
  */
 export default function CryptoEntry(
     number,
-    { symbol, name, quote },
+    { symbol, name, quote, cmc_rank },
     metadata,
     changeTimeframe
 ) {
@@ -25,7 +25,7 @@ export default function CryptoEntry(
     // $0.<span class="collapse">0000</span>000123
 
     element.innerHTML += `
-        <td class="crypto-number">${number}</td>
+        <td class="crypto-number">${cmc_rank}</td>
         <td>
             <div class="crypto-name-wrapper">
                 <div class="crypto-logo">

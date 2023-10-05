@@ -5,8 +5,18 @@ const API_URL =
         ? "http://10.0.0.180:3000"
         : "https://stocks-backend-production.up.railway.app";
 
-export async function getCryptoCoins() {
-    const response = await fetch(`${API_URL}/api/crypto`, {
+/**
+ *
+ * @param {{
+ *  quantity: "All Coins"|"Top 100"|"Top 200"
+ * }}
+ * @returns {[]}
+ */
+export async function getCryptoCoins({ quantity }) {
+    const limit =
+        quantity == "Top 100" ? 100 : quantity == "Top 200" ? 200 : 100;
+
+    const response = await fetch(`${API_URL}/api/crypto?limit=${limit}`, {
         method: "GET",
     });
 
@@ -17,10 +27,20 @@ export async function getCryptoCoins() {
     return await response.json();
 }
 
-export async function getCryptoMetadata(ids) {
-    const response = await fetch(`${API_URL}/api/crypto/metadata?ids=${ids}`, {
-        method: "GET",
-    });
+/**
+ *
+ * @param {{
+ *  coinIds: number[]
+ * }}
+ * @returns {[]}
+ */
+export async function getCryptoMetadata({ coinIds }) {
+    const response = await fetch(
+        `${API_URL}/api/crypto/metadata?ids=${coinIds}`,
+        {
+            method: "GET",
+        }
+    );
 
     if (!response.ok) {
         throw new Error("Something went wrong.");

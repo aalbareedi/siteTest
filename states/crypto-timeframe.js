@@ -1,4 +1,6 @@
-export let cryptoTimeframe = "24h";
+import { DEFAULT_CRYPTO_TIMEFRAME } from "../utils/constants.js";
+
+export let cryptoTimeframe = DEFAULT_CRYPTO_TIMEFRAME;
 const callbacks = [];
 
 export function setCryptoTimeframe(value) {
