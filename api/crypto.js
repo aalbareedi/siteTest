@@ -48,3 +48,15 @@ export async function getCryptoMetadata({ coinIds }) {
 
     return await response.json();
 }
+
+export async function getCryptoGlobalMetrics() {
+    const response = await fetch(`${API_URL}/api/crypto/global-metrics`, {
+        method: "GET",
+    });
+
+    if (!response.ok) {
+        throw new Error("Something went wrong.");
+    }
+
+    return await response.json();
+}

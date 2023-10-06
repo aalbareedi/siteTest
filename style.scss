@@ -544,7 +544,15 @@ i.close-nav-btn-icon {
     z-index: 20;
 }
 .sticking {
-    margin: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    border-radius: 0px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+.sticking .main-crypto-stats {
+    border-radius: 0px;
 }
 .main-crypto-stats {
     display: flex;

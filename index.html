@@ -68,7 +68,7 @@
                             <div class="crypto-stat-label">
                                 Global Market Cap:
                             </div>
-                            <div class="crypto-stat-result">
+                            <div class="crypto-stat-result" id="global-mcap">
                                 <div class="crypto-stat-value">$1.08T</div>
                                 <div class="crypto-stat-perc">
                                     <i class="fas fa-caret-up"></i>
@@ -80,7 +80,7 @@
                         </div>
                         <div class="crypto-stat-group">
                             <div class="crypto-stat-label">24h Vol:</div>
-                            <div class="crypto-stat-result">
+                            <div class="crypto-stat-result" id="global-vol">
                                 <div class="crypto-stat-value">$31.17B</div>
                                 <div class="crypto-stat-perc">
                                     <i class="fas fa-caret-up"></i>
@@ -93,20 +93,44 @@
                         <div class="crypto-stat-group">
                             <div class="crypto-stat-label">Dominance:</div>
                             <div class="crypto-stat-result">
-                                <div class="crypto-dom-val">
+                                <div class="crypto-dom-val" id="btc-dom">
                                     BTC <span>48.8%</span>
                                 </div>
-                                <div class="crypto-dom-val">
+                                <div class="crypto-dom-val" id="eth-dom">
                                     ETH <span>18.7%</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <script type="module">
+                        import { getCryptoGlobalMetrics } from "./api/crypto.js";
+                        import {
+                            formatUsd,
+                            formatPercent,
+                        } from "./utils/data-formatter.js";
+
+                        const data = await getCryptoGlobalMetrics();
+
+                        // console.log("data: ", data);
+
+                        document.querySelector(
+                            "#global-mcap .crypto-stat-value"
+                        ).innerHTML = formatUsd(
+                            data.quote.USD.total_market_cap
+                        );
+
+                        document.querySelector(
+                            "#global-mcap .crypto-stat-perc-val"
+                        ).innerHTML = formatPercent(
+                            data.quote.USD
+                                .total_market_cap_yesterday_percentage_change /
+                                100
+                        );
+                    </script>
                     <button class="crypto-pause-btn">
                         <i class="fas fa-pause"></i>
                     </button>
                 </div>
-
                 <div class="crypto-options">
                     <div class="crypto-tabs">
                         <div class="crypto-tab selected-crypto-tab">
@@ -119,7 +143,6 @@
                             class="crypto-control-btn"
                             id="crypto-quantity-select"
                         >
-                            <!-- All Coins / Top 100 / Top 200 -->
                             <div class="crypto-control-btn-text"></div>
                             <div class="crypto-control-arrow">
                                 <i class="fas fa-angle-down"></i>
@@ -134,7 +157,6 @@
                                 ).innerHTML = cryptoQuantity;
                             });
                         </script>
-
                         <div
                             class="crypto-control-btn"
                             id="crypto-timeframe-select"
@@ -153,7 +175,6 @@
                                 ).innerHTML = `${cryptoTimeframe} %`;
                             });
                         </script>
-
                         <div class="search-crypto-btn">
                             <i class="fas fa-search"></i>
                         </div>
@@ -480,7 +501,6 @@
                 </div>
             </div>
             <div id="crypto-timeframe-select-window"></div>
-
             <script type="module">
                 import SelectWindow from "./components/select-window.js";
                 import {
@@ -506,9 +526,7 @@
                         .replaceWith(newSelectWindow);
                 });
             </script>
-
             <div id="crypto-quantity-select-window"></div>
-
             <script type="module">
                 import SelectWindow from "./components/select-window.js";
                 import {
@@ -533,7 +551,6 @@
                         .replaceWith(newSelectWindow);
                 });
             </script>
-
             <nav class="settings-window">
                 <div>
                     <div class="drag-to-close">
