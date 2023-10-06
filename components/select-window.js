@@ -1,3 +1,5 @@
+import { html } from "../utils/html.js";
+
 /**
  *
  * @param {{
@@ -14,21 +16,19 @@ export default function SelectWindow({
     selectedOpt,
     onSelect,
 }) {
-    const selectWindow = document.createElement("div");
-    selectWindow.classList.add("select-window");
-    selectWindow.classList.add("display-hidden");
-
-    selectWindow.innerHTML += `
-        <div class="select-content">
-            <div class="select-title">
-                ${title}
+    const selectWindow = html(`
+        <div class="select-window display-hidden">
+            <div class="select-content">
+                <div class="select-title">
+                    ${title}
+                </div>
+                <div class="select-options"></div>
+                <button type="button" class="select-close-btn">
+                    Close
+                </button>
             </div>
-            <div class="select-options"></div>
-            <button type="button" class="select-close-btn">
-                Close
-            </button>
         </div>
-    `;
+    `);
 
     for (let i = 0; i < options.length; i++) {
         // element.querySelector(".select-options").innerHTML += `
@@ -40,16 +40,14 @@ export default function SelectWindow({
         //     </div>
         // `;
 
-        const selectOpt = document.createElement("div");
-        selectOpt.classList.add("select-opt");
-        if (options[i] == selectedOpt) {
-            selectOpt.classList.add("selected-opt");
-        }
-
-        selectOpt.innerHTML = `
-            <div class="select-opt-text">${options[i]}</div>
-            <i class="fas fa-check"></i>
-        `;
+        const selectOpt = html(`
+            <div class="select-opt ${
+                options[i] == selectedOpt ? "selected-opt" : ""
+            }">
+                <div class="select-opt-text">${options[i]}</div>
+                <i class="fas fa-check"></i>
+            </div>
+        `);
 
         selectOpt.onclick = () => {
             onSelect(options[i]);

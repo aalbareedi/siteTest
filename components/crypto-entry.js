@@ -3,6 +3,7 @@ import {
     formatPercent,
     collapseZeros,
 } from "../utils/data-formatter.js";
+import { html } from "../utils/html.js";
 
 /**
  *
@@ -19,40 +20,37 @@ export default function CryptoEntry(
     changeTimeframe
 ) {
     // Return a new element/DOM object
-    const element = document.createElement("tr");
-    element.classList.add("crypto-entry");
-    // ${collapseZeros(formatUsd(quote.USD.price))}
-    // $0.<span class="collapse">0000</span>000123
-
-    element.innerHTML += `
-        <td class="crypto-number">${cmc_rank}</td>
-        <td>
-            <div class="crypto-name-wrapper">
-                <div class="crypto-logo">
-                    <img src="${metadata ? metadata.logo : ""}" />
+    const element = html(`
+        <tr class="crypto-entry">
+            <td class="crypto-number">${cmc_rank}</td>
+            <td>
+                <div class="crypto-name-wrapper">
+                    <div class="crypto-logo">
+                        <img src="${metadata ? metadata.logo : ""}" />
+                    </div>
+                    <div class="crypto-name">
+                        <div class="crypto-symbol">${symbol}</div>
+                        <div class="crypto-name-text display-hidden">${name}</div>
+                        <div class="crypto-name-text">${collapseZeros(
+                            formatUsd(quote.USD.price)
+                        )}</div>
+                    </div>
                 </div>
-                <div class="crypto-name">
-                    <div class="crypto-symbol">${symbol}</div>
-                    <div class="crypto-name-text display-hidden">${name}</div>
-                    <div class="crypto-name-text">${collapseZeros(
-                        formatUsd(quote.USD.price)
-                    )}</div>
-                </div>
-            </div>
-        </td>
-        <td>
-            <div
-                class="crypto-entry-perc ${
-                    quote.USD["percent_change_" + changeTimeframe] >= 0
-                        ? "positive-entry"
-                        : "negative-entry"
-                }"
-            ><i class="fas fa-caret-up"></i>${formatPercent(
-                quote.USD["percent_change_" + changeTimeframe] / 100
-            )}</div>
-        </td>
-        <td class="crypto-mcap">${formatUsd(quote.USD.market_cap)}</td>
-    `;
+            </td>
+            <td>
+                <div
+                    class="crypto-entry-perc ${
+                        quote.USD["percent_change_" + changeTimeframe] >= 0
+                            ? "positive-entry"
+                            : "negative-entry"
+                    }"
+                ><i class="fas fa-caret-up"></i>${formatPercent(
+                    quote.USD["percent_change_" + changeTimeframe] / 100
+                )}</div>
+            </td>
+            <td class="crypto-mcap">${formatUsd(quote.USD.market_cap)}</td>
+        </tr>
+    `);
 
     return element;
 }

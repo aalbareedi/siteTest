@@ -8,7 +8,7 @@ let stocks = document.querySelector("#stocks");
 let backToTopBtn = document.querySelector("#back-to-top-btn");
 let scrollingElement =
     document.scrollingElement || document.documentElement || body;
-let cryptoTimeframeSelect = document.querySelector("#crypto-timeframe-select");
+
 let cryptoQuantitySelect = document.querySelector("#crypto-quantity-select");
 let selectCloseBtn = document.querySelector(".select-close-btn");
 let settingsCloseBtn = document.querySelector(".settings-close-btn");
@@ -53,6 +53,7 @@ stocksDockBtn.onclick = () => {
     cryptoDockBtn.classList.remove("dock-btn-selected");
 };
 
+let cryptoTimeframeSelect = document.querySelector("#crypto-timeframe-select");
 cryptoTimeframeSelect.onclick = () => {
     const selectWindow = document.querySelector(
         "#crypto-timeframe-select-window .select-window"
