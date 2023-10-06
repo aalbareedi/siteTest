@@ -13,7 +13,6 @@ let cryptoQuantitySelect = document.querySelector("#crypto-quantity-select");
 let selectCloseBtn = document.querySelector(".select-close-btn");
 let settingsCloseBtn = document.querySelector(".settings-close-btn");
 let cryptoSelectContent = document.querySelector(".crypto-select-content");
-let originalGlobalStatsTop = document.querySelector(".main-stats-wrapper");
 
 document.addEventListener("DOMContentLoaded", function (event) {
     console.log("doc ready");
@@ -29,7 +28,25 @@ body.onscroll = function () {
     } else {
         backToTopBtn.classList.add("opacity-zero");
     }
+
+    let originalGlobalStatsTop = document.querySelector(".main-stats-wrapper");
+    if (scrollingElement.scrollTop > 74) {
+        originalGlobalStatsTop.classList.add("sticking");
+    } else {
+        originalGlobalStatsTop.classList.remove("sticking");
+    }
 };
+
+// let originalGlobalStatsTop = document.querySelector(".main-stats-wrapper");
+
+// new IntersectionObserver(
+//     ([e]) => {
+//         e.target.classList.toggle("sticking", e.intersectionRatio < 1);
+//     },
+//     {
+//         threshold: [1],
+//     }
+// ).observe(originalGlobalStatsTop);
 
 navBtn.onclick = () => {
     body.classList.toggle("showSettings");

@@ -211,7 +211,7 @@ header {
 }
 .crypto-list-header {
     position: sticky;
-    top: $nav-height;
+    top: $nav-height + 42px;
     background-color: #e0e0e0;
     z-index: 20;
 }
@@ -532,13 +532,19 @@ i.close-nav-btn-icon {
     line-height: 18px;
 }
 .main-stats-wrapper {
-    margin: 0px 20px;
+    margin: 0px 20px 20px 20px;
     overflow: hidden;
     display: flex;
     border-radius: 50px;
     height: 42px;
     border: 2px solid #d1d1d1;
     font-size: 14px;
+    position: sticky;
+    top: $nav-height;
+    z-index: 20;
+}
+.sticking {
+    margin: 0px;
 }
 .main-crypto-stats {
     display: flex;
