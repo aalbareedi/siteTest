@@ -211,14 +211,13 @@ header {
 }
 .crypto-list-header {
     position: sticky;
-    top: $nav-height + 42px;
+    top: $nav-height + 41px;
     background-color: #e0e0e0;
     z-index: 20;
 }
 .crypto-list-header td {
-    padding: 12px 0px;
     font-size: 14px;
-    // font-weight: bold;
+    height: 42px;
 }
 .stock-list-header {
     position: relative;
@@ -540,8 +539,9 @@ i.close-nav-btn-icon {
     border: 2px solid #d1d1d1;
     font-size: 14px;
     position: sticky;
-    top: $nav-height;
+    top: $nav-height - 1;
     z-index: 20;
+    transition: margin 0.3s;
 }
 .sticking {
     margin-right: 0px;
@@ -550,9 +550,13 @@ i.close-nav-btn-icon {
     border-right: none;
     border-left: none;
     border-top: none;
+    border-color: #dadada;
 }
 .sticking .main-crypto-stats {
     border-radius: 0px;
+}
+.sticking .crypto-pause-btn {
+    width: 60px;
 }
 .main-crypto-stats {
     display: flex;
@@ -573,6 +577,7 @@ i.close-nav-btn-icon {
     background-color: #eaeaea;
     // background-color: orange;
     padding-top: 2px;
+    transition: width 0.3s;
 }
 .crypto-stat-group {
     display: flex;

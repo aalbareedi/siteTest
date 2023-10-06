@@ -317,14 +317,14 @@ header {
 .crypto-list-header {
   position: -webkit-sticky;
   position: sticky;
-  top: 102px;
+  top: 101px;
   background-color: #e0e0e0;
   z-index: 20;
 }
 
 .crypto-list-header td {
-  padding: 12px 0px;
   font-size: 14px;
+  height: 42px;
 }
 
 .stock-list-header {
@@ -769,8 +769,10 @@ i.close-nav-btn-icon {
   font-size: 14px;
   position: -webkit-sticky;
   position: sticky;
-  top: 60px;
+  top: 59px;
   z-index: 20;
+  -webkit-transition: margin 0.3s;
+  transition: margin 0.3s;
 }
 
 .sticking {
@@ -780,10 +782,15 @@ i.close-nav-btn-icon {
   border-right: none;
   border-left: none;
   border-top: none;
+  border-color: #dadada;
 }
 
 .sticking .main-crypto-stats {
   border-radius: 0px;
+}
+
+.sticking .crypto-pause-btn {
+  width: 60px;
 }
 
 .main-crypto-stats {
@@ -811,6 +818,8 @@ i.close-nav-btn-icon {
   color: #a7a7a7;
   background-color: #eaeaea;
   padding-top: 2px;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
 }
 
 .crypto-stat-group {
