@@ -9,7 +9,6 @@ let backToTopBtn = document.querySelector("#back-to-top-btn");
 let scrollingElement =
     document.scrollingElement || document.documentElement || body;
 
-let cryptoQuantitySelect = document.querySelector("#crypto-quantity-select");
 let selectCloseBtn = document.querySelector(".select-close-btn");
 let settingsCloseBtn = document.querySelector(".settings-close-btn");
 let cryptoSelectContent = document.querySelector(".crypto-select-content");
@@ -73,26 +72,15 @@ stocksDockBtn.onclick = () => {
 let cryptoTimeframeSelect = document.querySelector("#crypto-timeframe-select");
 cryptoTimeframeSelect.onclick = () => {
     const selectWindow = document.querySelector(
-        "#crypto-timeframe-select-window .select-window"
+        "#crypto-timeframe-select-window"
     );
-    selectWindow.classList.remove("display-hidden");
+    selectWindow.classList.remove("overlay-hidden");
 };
 
+let cryptoQuantitySelect = document.querySelector("#crypto-quantity-select");
 cryptoQuantitySelect.onclick = () => {
     const selectWindow = document.querySelector(
-        "#crypto-quantity-select-window .select-window"
+        "#crypto-quantity-select-window"
     );
-    selectWindow.classList.remove("display-hidden");
+    selectWindow.classList.remove("overlay-hidden");
 };
-
-// cryptoSelectWindow.onclick = () => {
-//     let cryptoSelectWindow = document.querySelector(
-//         "#crypto-timeframe-select-window .select-window"
-//     );
-
-//     cryptoSelectWindow.classList.add("display-hidden");
-// };
-// TODO: Fix console error caused by this...
-// cryptoSelectContent.onclick = (e) => {
-//     e.stopPropagation();
-// };

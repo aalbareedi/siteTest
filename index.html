@@ -480,57 +480,57 @@
                 </div>
             </div>
             <div id="crypto-timeframe-select-window"></div>
+
             <script type="module">
                 import SelectWindow from "./components/select-window.js";
                 import {
                     handleCryptoTimeframeChange,
+                    cryptoTimeframe,
                     setCryptoTimeframe,
                 } from "./states/crypto-timeframe.js";
 
-                handleCryptoTimeframeChange((cryptoTimeframe) => {
-                    const wrapper = document.querySelector(
-                        "#crypto-timeframe-select-window"
-                    );
-                    wrapper.innerHTML = "";
+                handleCryptoTimeframeChange(() => {
+                    const newSelectWindow = SelectWindow({
+                        title: "Price % Change Timeframe",
+                        options: ["1h", "24h", "7d", "30d"],
+                        selectedOpt: cryptoTimeframe,
+                        onSelect: (opt) => {
+                            // cryptoTimeframe = opt;
+                            setCryptoTimeframe(opt);
+                        },
+                    });
+                    newSelectWindow.id = "crypto-timeframe-select-window";
 
-                    wrapper.append(
-                        SelectWindow({
-                            title: "Price % Change Timeframe",
-                            options: ["1h", "24h", "7d", "30d"],
-                            selectedOpt: cryptoTimeframe,
-                            onSelect: (opt) => {
-                                // cryptoTimeframe = opt;
-                                setCryptoTimeframe(opt);
-                            },
-                        })
-                    );
+                    document
+                        .querySelector(`#${newSelectWindow.id}`)
+                        .replaceWith(newSelectWindow);
                 });
             </script>
 
             <div id="crypto-quantity-select-window"></div>
+
             <script type="module">
                 import SelectWindow from "./components/select-window.js";
                 import {
                     handleCryptoQuantityChange,
+                    cryptoQuantity,
                     setCryptoQuantity,
                 } from "./states/crypto-quantity.js";
 
-                handleCryptoQuantityChange((cryptoQuantity) => {
-                    const wrapper = document.querySelector(
-                        "#crypto-quantity-select-window"
-                    );
-                    wrapper.innerHTML = "";
+                handleCryptoQuantityChange(() => {
+                    const newSelectWindow = SelectWindow({
+                        title: "Coin Display Amount",
+                        options: ["All Coins", "Top 100", "Top 200"],
+                        selectedOpt: cryptoQuantity,
+                        onSelect: (opt) => {
+                            setCryptoQuantity(opt);
+                        },
+                    });
+                    newSelectWindow.id = "crypto-quantity-select-window";
 
-                    wrapper.append(
-                        SelectWindow({
-                            title: "Coin Display Amount",
-                            options: ["All Coins", "Top 100", "Top 200"],
-                            selectedOpt: cryptoQuantity,
-                            onSelect: (opt) => {
-                                setCryptoQuantity(opt);
-                            },
-                        })
-                    );
+                    document
+                        .querySelector(`#${newSelectWindow.id}`)
+                        .replaceWith(newSelectWindow);
                 });
             </script>
 

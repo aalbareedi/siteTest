@@ -17,7 +17,7 @@ export default function SelectWindow({
     onSelect,
 }) {
     const selectWindow = html(`
-        <div class="select-window display-hidden">
+        <div class="select-window overlay-hidden">
             <div class="select-content">
                 <div class="select-title">
                     ${title}
@@ -57,11 +57,11 @@ export default function SelectWindow({
     }
 
     selectWindow.querySelector(".select-close-btn").onclick = () => {
-        selectWindow.classList.add("display-hidden");
+        selectWindow.classList.add("overlay-hidden");
     };
 
     selectWindow.onclick = () => {
-        selectWindow.classList.add("display-hidden");
+        selectWindow.classList.add("overlay-hidden");
     };
 
     selectWindow.querySelector(".select-content").onclick = (e) => {
