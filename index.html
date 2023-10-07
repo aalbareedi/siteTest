@@ -267,6 +267,7 @@
                     import {
                         getCryptoCoins,
                         getCryptoMetadata,
+                        getCyptoTotalCount,
                     } from "./api/crypto.js";
                     import {
                         cryptoQuantity,
@@ -284,6 +285,7 @@
                     );
 
                     let coins = null;
+                    let cryptoTotalCount = null;
                     let metadata = null;
 
                     handleCryptoQuantityChange(async () => {
@@ -295,6 +297,9 @@
                                     ? 200
                                     : 100,
                         });
+
+                        cryptoTotalCount = await getCyptoTotalCount();
+
                         metadata = await getCryptoMetadata({
                             coinIds: coins.map((coin) => coin.id),
                         });
@@ -323,18 +328,28 @@
                         }
 
                         const scrollDetector = html(
-                            `<div id="crypto-infinite-scroller">x</div>`
+                            `<div id="crypto-infinite-scroller" class="${
+                                cryptoQuantity != "All Coins" ||
+                                coins.length >= cryptoTotalCount
+                                    ? "display-hidden"
+                                    : ""
+                            }">Loading...</div>`
                         );
 
                         onScrollTo(scrollDetector, async () => {
-                            coins = await getCryptoCoins({
-                                quantity: coins.length + 100,
-                            });
-                            metadata = await getCryptoMetadata({
-                                coinIds: coins.map((coin) => coin.id),
-                            });
+                            if (cryptoQuantity == "All Coins") {
+                                coins = await getCryptoCoins({
+                                    quantity: coins.length + 100,
+                                });
 
-                            render();
+                                cryptoTotalCount = await getCyptoTotalCount();
+
+                                metadata = await getCryptoMetadata({
+                                    coinIds: coins.map((coin) => coin.id),
+                                });
+
+                                render();
+                            }
                         });
                         document
                             .querySelector(`#${scrollDetector.id}`)

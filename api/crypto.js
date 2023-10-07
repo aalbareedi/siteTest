@@ -1,3 +1,6 @@
+import { coins, cryptoTotalCount } from "../sandbox/crypto-data.js";
+import { USE_SANDBOX_DATA } from "../utils/constants.js";
+
 const API_URL =
     location.hostname == "127.0.0.1" || location.hostname == "localhost"
         ? "http://localhost:3000"
@@ -8,11 +11,15 @@ const API_URL =
 /**
  *
  * @param {{
- *  quantity: "All Coins"|"Top 100"|"Top 200"
+ *  quantity: number
  * }}
  * @returns {[]}
  */
 export async function getCryptoCoins({ quantity }) {
+    if (USE_SANDBOX_DATA) {
+        return coins;
+    }
+
     const limit = quantity;
 
     const response = await fetch(`${API_URL}/api/crypto?limit=${limit}`, {
@@ -24,6 +31,27 @@ export async function getCryptoCoins({ quantity }) {
     }
 
     return await response.json();
+}
+
+/**
+ * @returns {number}
+ */
+export async function getCyptoTotalCount() {
+    if (USE_SANDBOX_DATA) {
+        return cryptoTotalCount;
+    }
+
+    const response = await fetch(`${API_URL}/api/crypto-total-count`, {
+        method: "GET",
+    });
+
+    if (!response.ok) {
+        throw new Error("Something went wrong.");
+    }
+
+    const data = await response.json();
+
+    return data.totalCount;
 }
 
 /**

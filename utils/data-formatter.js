@@ -35,6 +35,7 @@ export function formatPercent(data) {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
         signDisplay: "never",
+        notation: "compact",
     }).format(data);
 }
 
