@@ -13,6 +13,7 @@ export function onStick(element, callback) {
 
     const observer = new IntersectionObserver(
         ([e]) => {
+            // console.log(e.intersectionRatio);
             if (e.intersectionRatio < 1) {
                 callback();
             }
@@ -38,7 +39,7 @@ export function onUnstick(element, callback) {
 
     const observer = new IntersectionObserver(
         ([e]) => {
-            if (e.intersectionRatio <= 1) {
+            if (e.intersectionRatio >= 1) {
                 callback();
             }
         },
