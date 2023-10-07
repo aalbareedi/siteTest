@@ -38,6 +38,7 @@ header {
     justify-content: space-between;
     z-index: 21;
     border-bottom: 2px solid #dadada;
+    user-select: none;
 }
 .nav-logo {
     display: flex;
@@ -106,6 +107,7 @@ header {
     color: #a7a7a7;
     border-radius: 40px;
     transition: all 0.5s;
+    user-select: none;
 }
 .main-dock-btn i {
     font-size: 22px;
@@ -168,6 +170,7 @@ header {
     height: 42px;
     column-gap: 8px;
     // font-size: 14px;
+    user-select: none;
 }
 #crypto-quantity-select {
     min-width: 124px;
@@ -200,6 +203,7 @@ header {
     width: 100%;
     // border-collapse: collapse;
     border-spacing: 0px;
+    user-select: none;
 }
 .crypto-list td {
     border-bottom: 1px solid #cacaca;
@@ -426,6 +430,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     padding: 0px 20px 20px 20px;
+    user-select: none;
 }
 .showSettings .settings-window {
     bottom: 0px;
@@ -547,6 +552,7 @@ i.close-nav-btn-icon {
     top: $nav-height - 1;
     z-index: 20;
     transition: margin 0.3s, border-color 0.3s;
+    user-select: none;
 }
 .sticking {
     margin-right: 0px;
@@ -629,7 +635,7 @@ i.close-nav-btn-icon {
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: $nav-height + 24px;
+    bottom: $nav-height + 30px;
     right: 20px;
     border-radius: 50%;
     height: 42px;
@@ -661,7 +667,7 @@ i.close-nav-btn-icon {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 100;
     transition: all 0.4s;
 }
@@ -683,6 +689,7 @@ i.close-nav-btn-icon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    user-select: none;
 }
 .select-title {
     text-align: center;
@@ -732,150 +739,6 @@ i.close-nav-btn-icon {
 
 // padding-top: calc(#{$header-height} + #{$project-window-title-height});
 
-// TABLET styles
-@media only screen and (min-width: 740px) {
-    body {
-        font-size: 20px;
-    }
-    .main-title {
-        font-size: 30px;
-    }
-    .stock-name-text {
-        max-width: 240px;
-        font-size: 16px;
-    }
-    .percent-change,
-    .stock-list-header-percent {
-        min-width: 100px;
-    }
-    .main-dock-btn {
-        column-gap: 12px;
-    }
-    .main-dock-btn i {
-        font-size: 26px;
-    }
-    .stock-entry {
-        height: 64px;
-    }
-    .stock-list-header-price span {
-        font-size: 16px;
-    }
-    .footer-credits {
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 24px;
-    }
-    .footer-contacts {
-        column-gap: 14px;
-    }
-    .footer-contact-btn {
-        height: 40px;
-        font-size: 18px;
-        column-gap: 10px;
-    }
-    .footer-contact-btn i {
-        font-size: 20px;
-    }
-}
-// DESKTOP styles
-@media only screen and (min-width: 1020px) {
-    .main-title {
-        display: none;
-    }
-    .main-dock {
-        position: initial;
-        border: none;
-        background-color: #c6c6c6;
-        height: 44px;
-        column-gap: 0px;
-        border-radius: 50px;
-        width: fit-content;
-        margin-left: 10%;
-        margin-top: 10px;
-    }
-    .main-dock-btn {
-        background-color: transparent;
-        border-radius: 50px;
-        width: 160px;
-    }
-    .main-dock-btn:hover {
-        color: #f9f9f9;
-    }
-    .dock-btn-selected {
-        background-color: white !important;
-        margin: 0px;
-    }
-    .stock-list {
-        padding: 30px;
-    }
-    .stock-list {
-        max-width: 80%;
-        margin: 0 auto;
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    footer {
-        padding: 30px;
-        margin-bottom: 0px;
-    }
-    header {
-        height: 70px;
-    }
-    body {
-        padding-top: 70px;
-        font-size: 22px;
-    }
-    .nav-company-main-name {
-        font-size: 26px;
-        line-height: 22px;
-    }
-    .nav-company-sub-name {
-        font-size: 16px;
-    }
-    .nav-company-image {
-        font-size: 38px;
-        margin: 10px;
-    }
-    .nav-menu-btn-text {
-        display: initial;
-    }
-    .nav-menu-btn {
-        width: initial;
-        column-gap: 10px;
-        padding: 0px 30px;
-        background-color: #e2e2e2;
-        border-bottom: 6px solid #e2e2e2;
-        transition: all 0.5s;
-    }
-    footer {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    .footer-credits,
-    .footer-contacts {
-        max-width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .footer-credits {
-        font-size: 20px;
-        line-height: 28px;
-        word-spacing: 1.4px;
-    }
-    .footer-contact-btn {
-        height: 50px;
-        font-size: 20px;
-    }
-    .footer-contact-btn i {
-        font-size: 24px;
-    }
-}
+// @media only screen and (min-width: 740px) {}
 // hover styles
-@media only screen and (hover: hover) {
-    .footer-contact-btn:hover {
-        background-color: #43438c;
-    }
-    .nav-menu-btn:hover {
-        border-color: #71b170;
-    }
-}
+// @media only screen and (hover: hover) {}
