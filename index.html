@@ -110,21 +110,59 @@
 
                         const data = await getCryptoGlobalMetrics();
 
-                        console.log("data: ", data);
+                        // console.log("data: ", data);
 
-                        document.querySelector(
-                            "#global-mcap .crypto-stat-value"
-                        ).innerHTML = formatUsd(
-                            data.quote.USD.total_market_cap
-                        );
-
-                        document.querySelector(
-                            "#global-mcap .crypto-stat-perc-val"
-                        ).innerHTML = formatPercent(
+                        renderGlobalStat(
+                            document.querySelector(
+                                "#global-mcap .crypto-stat-value"
+                            ),
+                            document.querySelector(
+                                "#global-mcap .crypto-stat-perc"
+                            ),
+                            data.quote.USD.total_market_cap,
                             data.quote.USD
-                                .total_market_cap_yesterday_percentage_change /
-                                100
+                                .total_market_cap_yesterday_percentage_change
                         );
+
+                        renderGlobalStat(
+                            document.querySelector(
+                                "#global-vol .crypto-stat-value"
+                            ),
+                            document.querySelector(
+                                "#global-vol .crypto-stat-perc"
+                            ),
+                            data.quote.USD.total_volume_24h,
+                            data.quote.USD
+                                .total_volume_24h_yesterday_percentage_change
+                        );
+
+                        function renderGlobalStat(
+                            valElement,
+                            percElement,
+                            value,
+                            perc
+                        ) {
+                            valElement.innerHTML = formatUsd(value);
+
+                            percElement.querySelector(
+                                ".crypto-stat-perc-val"
+                            ).innerHTML = formatPercent(perc / 100);
+
+                            percElement.classList.toggle(
+                                "global-positive",
+                                perc >= 0
+                            );
+
+                            percElement.classList.toggle(
+                                "global-negative",
+                                perc < 0
+                            );
+                        }
+
+                        document.querySelector("#btc-dom span").innerHTML =
+                            formatPercent(data.btc_dominance / 100);
+                        document.querySelector("#eth-dom span").innerHTML =
+                            formatPercent(data.eth_dominance / 100);
                     </script>
                     <button class="crypto-pause-btn">
                         <i class="fas fa-pause"></i>
