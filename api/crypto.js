@@ -13,8 +13,7 @@ const API_URL =
  * @returns {[]}
  */
 export async function getCryptoCoins({ quantity }) {
-    const limit =
-        quantity == "Top 100" ? 100 : quantity == "Top 200" ? 200 : 100;
+    const limit = quantity;
 
     const response = await fetch(`${API_URL}/api/crypto?limit=${limit}`, {
         method: "GET",

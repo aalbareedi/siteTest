@@ -15,13 +15,13 @@ let selectCloseBtn = document.querySelector(".select-close-btn");
 let settingsCloseBtn = document.querySelector(".settings-close-btn");
 let cryptoSelectContent = document.querySelector(".crypto-select-content");
 
-document.addEventListener("DOMContentLoaded", function (event) {
-    console.log("doc ready");
+// document.addEventListener("DOMContentLoaded", function (event) {
+//     console.log("doc ready");
 
-    document.onscroll = function () {
-        console.log("scroll");
-    };
-});
+//     document.onscroll = function () {
+//         console.log("scroll");
+//     };
+// });
 
 body.onscroll = function () {
     if (scrollingElement.scrollTop > 0) {
