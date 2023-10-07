@@ -23,6 +23,7 @@
             src="https://kit.fontawesome.com/c82a5882c2.js"
             crossorigin="anonymous"
         ></script>
+        <script src="https://cdn.jsdelivr.net/npm/css-typed-om@0.4.0/index.umd.min.js"></script>
     </head>
     <body>
         <header>
@@ -69,12 +70,10 @@
                                 Global Market Cap:
                             </div>
                             <div class="crypto-stat-result" id="global-mcap">
-                                <div class="crypto-stat-value">$1.08T</div>
-                                <div class="crypto-stat-perc">
+                                <div class="crypto-stat-value"></div>
+                                <div class="crypto-stat-perc global-positive">
                                     <i class="fas fa-caret-up"></i>
-                                    <div class="crypto-stat-perc-val">
-                                        2.12%
-                                    </div>
+                                    <div class="crypto-stat-perc-val"></div>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +81,7 @@
                             <div class="crypto-stat-label">24h Vol:</div>
                             <div class="crypto-stat-result" id="global-vol">
                                 <div class="crypto-stat-value">$31.17B</div>
-                                <div class="crypto-stat-perc">
+                                <div class="crypto-stat-perc global-positive">
                                     <i class="fas fa-caret-up"></i>
                                     <div class="crypto-stat-perc-val">
                                         5.82%
@@ -635,6 +634,6 @@
                 </a>
             </div>
         </footer>
-        <script src="script.js" defer></script>
+        <script src="script.js" defer type="module"></script>
     </body>
 </html>

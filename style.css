@@ -255,6 +255,13 @@ header {
   height: 42px;
   -webkit-column-gap: 8px;
           column-gap: 8px;
+}
+
+#crypto-quantity-select {
+  min-width: 124px;
+}
+
+#crypto-timeframe-select {
   min-width: 106px;
 }
 
@@ -771,8 +778,8 @@ i.close-nav-btn-icon {
   position: sticky;
   top: 59px;
   z-index: 20;
-  -webkit-transition: margin 0.3s;
-  transition: margin 0.3s;
+  -webkit-transition: margin 0.3s, border-color 0.3s;
+  transition: margin 0.3s, border-color 0.3s;
 }
 
 .sticking {
@@ -861,7 +868,6 @@ i.close-nav-btn-icon {
 }
 
 .crypto-stat-perc {
-  color: #57b555;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -871,6 +877,19 @@ i.close-nav-btn-icon {
 
 .crypto-stat-perc i {
   padding-top: 2px;
+}
+
+.global-positive {
+  color: #57b555;
+}
+
+.global-negative {
+  color: #d46666;
+}
+
+.global-negative i {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
 }
 
 #back-to-top-btn {
@@ -926,8 +945,8 @@ i.close-nav-btn-icon {
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 100;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .overlay-hidden .select-content {

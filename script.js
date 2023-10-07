@@ -1,3 +1,5 @@
+import { onStick, onUnstick } from "./utils/sticky-handler.js";
+
 let body = document.querySelector("body");
 let navBtn = document.querySelector(".nav-menu-btn");
 // let settings = document.querySelector(".settings-window");
@@ -35,6 +37,14 @@ body.onscroll = function () {
         originalGlobalStatsTop.classList.remove("sticking");
     }
 };
+
+const stats = document.querySelector(".main-stats-wrapper");
+onStick(stats, () => {
+    stats.classList.add("sticking");
+});
+onUnstick(stats, () => {
+    stats.classList.remove("sticking");
+});
 
 // let originalGlobalStatsTop = document.querySelector(".main-stats-wrapper");
 
