@@ -544,7 +544,7 @@ i.close-nav-btn-icon {
     margin: 0px 20px 20px 20px;
     overflow: hidden;
     display: flex;
-    border-radius: 50px;
+    border-radius: 10px;
     height: 42px;
     border: 2px solid #dadada;
     font-size: 14px;
@@ -672,7 +672,7 @@ i.play-icon {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 100;
     transition: all 0.4s;
 }
