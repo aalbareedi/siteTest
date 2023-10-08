@@ -792,14 +792,14 @@ i.close-nav-btn-icon {
   display: flex;
   border-radius: 50px;
   height: 42px;
-  border: 2px solid #d1d1d1;
+  border: 2px solid #dadada;
   font-size: 14px;
   position: -webkit-sticky;
   position: sticky;
   top: 59px;
   z-index: 20;
-  -webkit-transition: margin 0.3s, border-color 0.3s;
-  transition: margin 0.3s, border-color 0.3s;
+  -webkit-transition: margin 0.3s;
+  transition: margin 0.3s;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -813,11 +813,6 @@ i.close-nav-btn-icon {
   border-right: none;
   border-left: none;
   border-top: none;
-  border-color: #dadada;
-}
-
-.sticking .main-crypto-stats .carousel {
-  border-radius: 0px;
 }
 
 .sticking .crypto-pause-btn {
@@ -837,8 +832,6 @@ i.close-nav-btn-icon {
   padding: 0px 10px;
   background: #eaeaea;
   z-index: 20;
-  letter-spacing: 0.4px;
-  border-radius: 50px 0px 0px 50px;
 }
 
 .crypto-pause-btn {
@@ -851,6 +844,16 @@ i.close-nav-btn-icon {
   padding-top: 2px;
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
+  border-left: 2px solid #dadada;
+}
+
+.is-paused .pause-icon,
+i.play-icon {
+  display: none;
+}
+
+.is-paused .play-icon {
+  display: initial;
 }
 
 .crypto-stat-group {
