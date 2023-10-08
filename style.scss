@@ -563,17 +563,17 @@ i.close-nav-btn-icon {
     border-top: none;
     border-color: #dadada;
 }
-.sticking .main-crypto-stats {
+.sticking .main-crypto-stats .carousel {
     border-radius: 0px;
 }
 .sticking .crypto-pause-btn {
     width: 60px;
 }
-.main-crypto-stats {
+.main-crypto-stats .carousel {
     display: flex;
     align-items: center;
     column-gap: 20px;
-    overflow-x: auto;
+    overflow-x: hidden;
     padding: 0px 10px;
     background: #eaeaea;
     z-index: 20;

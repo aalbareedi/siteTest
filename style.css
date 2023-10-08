@@ -816,7 +816,7 @@ i.close-nav-btn-icon {
   border-color: #dadada;
 }
 
-.sticking .main-crypto-stats {
+.sticking .main-crypto-stats .carousel {
   border-radius: 0px;
 }
 
@@ -824,7 +824,7 @@ i.close-nav-btn-icon {
   width: 60px;
 }
 
-.main-crypto-stats {
+.main-crypto-stats .carousel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -833,7 +833,7 @@ i.close-nav-btn-icon {
           align-items: center;
   -webkit-column-gap: 20px;
           column-gap: 20px;
-  overflow-x: auto;
+  overflow-x: hidden;
   padding: 0px 10px;
   background: #eaeaea;
   z-index: 20;
