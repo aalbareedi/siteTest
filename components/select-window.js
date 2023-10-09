@@ -1,3 +1,4 @@
+import { disableScrollBehind } from "../utils/disable-scroll-behind.js";
 import { html } from "../utils/html.js";
 
 /**
@@ -29,6 +30,8 @@ export default function SelectWindow({
             </div>
         </div>
     `);
+
+    disableScrollBehind(selectWindow);
 
     for (let i = 0; i < options.length; i++) {
         // element.querySelector(".select-options").innerHTML += `

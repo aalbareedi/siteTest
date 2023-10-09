@@ -698,6 +698,11 @@
                 </div>
                 <button type="button" class="settings-close-btn">Close</button>
             </nav>
+            <script type="module">
+                import { disableScrollBehind } from "./utils/disable-scroll-behind.js";
+
+                disableScrollBehind(document.querySelector(".settings-window"));
+            </script>
             <a id="back-to-top-btn" class="opacity-zero" href="#">
                 <i class="fas fa-chevron-up"></i>
             </a>
