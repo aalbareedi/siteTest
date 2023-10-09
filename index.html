@@ -360,11 +360,25 @@
                         // );
 
                         const scrollDetector = html(`
-                            <tr>
-                                <td>a</td>
-                                <td>b</td>
-                                <td>c</td>
-                                <td>d</td>
+                            <tr class="skeleton-row">
+                                <td>
+                                    <div class="skeleton-row-rank"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton-row-price-wrapper">
+                                        <div class="skeleton-row-logo"></div>
+                                        <div class="skeleton-row-info">
+                                            <div class="skeleton-row-name"></div>
+                                            <div class="skeleton-row-price"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="skeleton-row-perc-change"></div>
+                                </td>
+                                <td>
+                                    <div class="skeleton-row-mcap"></div>
+                                </td>
                             </tr>
                         `);
 
@@ -728,7 +742,7 @@
                 <i class="fas fa-chevron-up"></i>
             </a>
         </main>
-        <footer>
+        <!-- <footer>
             <div class="footer-credits">
                 All of the UI in this app is 100% completely designed &
                 developed from scratch by <span>Amer Albareedi 😁</span>
@@ -758,7 +772,7 @@
                     <div>GitHub</div>
                 </a>
             </div>
-        </footer>
+        </footer> -->
         <script src="script.js" defer type="module"></script>
         <script src="carousel/carousel.js" defer type="module"></script>
     </body>
