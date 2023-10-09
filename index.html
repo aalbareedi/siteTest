@@ -286,7 +286,7 @@
                         </thead>
                         <tbody></tbody>
                     </table>
-                    <div id="crypto-infinite-scroller"></div>
+                    <!-- <div id="crypto-infinite-scroller"></div> -->
                 </div>
                 <script type="module">
                     import CryptoEntry from "./components/crypto-entry.js";
@@ -305,6 +305,7 @@
                     } from "./states/crypto-timeframe.js";
                     import { html } from "./utils/html.js";
                     import { onScrollTo } from "./utils/on-scroll-to.js";
+                    import { DISABLE_INFINITE_SCROLLING } from "./utils/constants.js";
 
                     const tbody = document.querySelector(
                         ".crypto-list > tbody"
@@ -353,16 +354,41 @@
                             );
                         }
 
-                        const scrollDetector = html(
-                            `<div id="crypto-infinite-scroller" class="${
-                                cryptoQuantity != "All Coins" ||
-                                coins.length >= cryptoTotalCount
-                                    ? "display-hidden"
-                                    : ""
-                            }">Loading...</div>`
-                        );
+                        // const scrollDetector = CryptoEntry(
+                        //     coins.length,
+                        //     coins[coins.length - 1],
+                        //     metadata[coins[coins.length - 1].id],
+                        //     cryptoTimeframe
+                        // );
+
+                        const scrollDetector = html(`
+                            <tr>
+                                <td>a</td>
+                                <td>b</td>
+                                <td>c</td>
+                                <td>d</td>
+                            </tr>
+                        `);
+
+                        tbody.append(scrollDetector);
+
+                        // const scrollDetector = html(
+                        //     `<div id="crypto-infinite-scroller" class="loading-spinner ${
+                        //         cryptoQuantity != "All Coins" ||
+                        //         coins.length >= cryptoTotalCount
+                        //             ? "display-hidden"
+                        //             : ""
+                        //     }">Loading...</div>`
+                        // );
+                        // document
+                        //     .querySelector(`#${scrollDetector.id}`)
+                        //     .replaceWith(scrollDetector);
 
                         onScrollTo(scrollDetector, async () => {
+                            if (DISABLE_INFINITE_SCROLLING) {
+                                return;
+                            }
+
                             if (cryptoQuantity == "All Coins") {
                                 coins = await getCryptoCoins({
                                     quantity: coins.length + 100,
@@ -377,9 +403,6 @@
                                 render();
                             }
                         });
-                        document
-                            .querySelector(`#${scrollDetector.id}`)
-                            .replaceWith(scrollDetector);
                     }
                 </script>
             </div>
