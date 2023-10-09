@@ -513,6 +513,10 @@ header {
   letter-spacing: 0.4px;
 }
 
+.crypto-entry-perc i {
+  font-size: 14px;
+}
+
 #stocks .percent-change {
   border-radius: 4px;
   padding: 4px;
