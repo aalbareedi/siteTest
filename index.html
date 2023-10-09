@@ -72,10 +72,7 @@
                                 <div class="crypto-stat-label">
                                     Global Market Cap:
                                 </div>
-                                <div
-                                    class="crypto-stat-result"
-                                    id="global-mcap"
-                                >
+                                <div class="crypto-stat-result global-mcap">
                                     <div class="crypto-stat-value"></div>
                                     <div
                                         class="crypto-stat-perc global-positive"
@@ -87,7 +84,7 @@
                             </div>
                             <div class="crypto-stat-group">
                                 <div class="crypto-stat-label">24h Vol:</div>
-                                <div class="crypto-stat-result" id="global-vol">
+                                <div class="crypto-stat-result global-vol">
                                     <div class="crypto-stat-value">$31.17B</div>
                                     <div
                                         class="crypto-stat-perc global-positive"
@@ -102,10 +99,10 @@
                             <div class="crypto-stat-group">
                                 <div class="crypto-stat-label">Dominance:</div>
                                 <div class="crypto-stat-result">
-                                    <div class="crypto-dom-val" id="btc-dom">
+                                    <div class="crypto-dom-val btc-dom">
                                         BTC <span>48.8%</span>
                                     </div>
-                                    <div class="crypto-dom-val" id="eth-dom">
+                                    <div class="crypto-dom-val eth-dom">
                                         ETH <span>18.7%</span>
                                     </div>
                                 </div>
@@ -130,28 +127,6 @@
 
                     const data = await getCryptoGlobalMetrics();
 
-                    renderGlobalStat(
-                        document.querySelector(
-                            "#global-mcap .crypto-stat-value"
-                        ),
-                        document.querySelector(
-                            "#global-mcap .crypto-stat-perc"
-                        ),
-                        data.quote.USD.total_market_cap,
-                        data.quote.USD
-                            .total_market_cap_yesterday_percentage_change
-                    );
-
-                    renderGlobalStat(
-                        document.querySelector(
-                            "#global-vol .crypto-stat-value"
-                        ),
-                        document.querySelector("#global-vol .crypto-stat-perc"),
-                        data.quote.USD.total_volume_24h,
-                        data.quote.USD
-                            .total_volume_24h_yesterday_percentage_change
-                    );
-
                     makeCarouselWork(
                         document.querySelector(".main-crypto-stats .carousel")
                     );
@@ -163,33 +138,62 @@
                         document.querySelector(".main-crypto-stats .carousel")
                     );
 
-                    function renderGlobalStat(
-                        valElement,
-                        percElement,
-                        value,
-                        perc
-                    ) {
-                        valElement.innerHTML = formatUsd(value);
+                    const carousels = document.querySelectorAll(
+                        ".main-crypto-stats .carousel"
+                    );
 
-                        percElement.querySelector(
-                            ".crypto-stat-perc-val"
-                        ).innerHTML = formatPercent(perc / 100);
-
-                        percElement.classList.toggle(
-                            "global-positive",
-                            perc >= 0
+                    carousels.forEach((carousel) => {
+                        renderGlobalStat(
+                            carousel.querySelector(
+                                ".global-mcap .crypto-stat-value"
+                            ),
+                            carousel.querySelector(
+                                ".global-mcap .crypto-stat-perc"
+                            ),
+                            data.quote.USD.total_market_cap,
+                            data.quote.USD
+                                .total_market_cap_yesterday_percentage_change
                         );
 
-                        percElement.classList.toggle(
-                            "global-negative",
-                            perc < 0
+                        renderGlobalStat(
+                            carousel.querySelector(
+                                ".global-vol .crypto-stat-value"
+                            ),
+                            carousel.querySelector(
+                                ".global-vol .crypto-stat-perc"
+                            ),
+                            data.quote.USD.total_volume_24h,
+                            data.quote.USD
+                                .total_volume_24h_yesterday_percentage_change
                         );
-                    }
 
-                    document.querySelector("#btc-dom span").innerHTML =
-                        formatPercent(data.btc_dominance / 100);
-                    document.querySelector("#eth-dom span").innerHTML =
-                        formatPercent(data.eth_dominance / 100);
+                        function renderGlobalStat(
+                            valElement,
+                            percElement,
+                            value,
+                            perc
+                        ) {
+                            valElement.innerHTML = formatUsd(value);
+
+                            percElement.querySelector(
+                                ".crypto-stat-perc-val"
+                            ).innerHTML = formatPercent(perc / 100);
+
+                            percElement.classList.toggle(
+                                "global-positive",
+                                perc >= 0
+                            );
+
+                            percElement.classList.toggle(
+                                "global-negative",
+                                perc < 0
+                            );
+                        }
+                        carousel.querySelector(".btc-dom span").innerHTML =
+                            formatPercent(data.btc_dominance / 100);
+                        carousel.querySelector(".eth-dom span").innerHTML =
+                            formatPercent(data.eth_dominance / 100);
+                    });
                 </script>
 
                 <div class="crypto-options">
