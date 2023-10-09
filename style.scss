@@ -578,6 +578,13 @@ i.close-nav-btn-icon {
     z-index: 20;
     // border-radius: 50px 0px 0px 50px;
 }
+.global-crypto-label {
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    border-right: 2px solid #dadada;
+    padding: 0px 10px;
+}
 .crypto-pause-btn {
     flex-shrink: 0;
     width: 42px;
