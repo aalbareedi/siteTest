@@ -945,7 +945,7 @@ i.play-icon {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  bottom: 90px;
+  bottom: 100px;
   right: 20px;
   border-radius: 50%;
   height: 42px;
@@ -1091,7 +1091,7 @@ i.play-icon {
 .skeleton-row-rank {
   height: 20px;
   background: #cfcfcf;
-  width: 26px;
+  margin-right: 8px;
   border-radius: 6px;
 }
 

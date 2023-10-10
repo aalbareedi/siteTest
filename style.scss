@@ -649,7 +649,7 @@ i.play-icon {
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: $nav-height + 30px;
+    bottom: $nav-height + 40px;
     right: 20px;
     border-radius: 50%;
     height: 42px;
@@ -756,7 +756,8 @@ i.play-icon {
 .skeleton-row-rank {
     height: 20px;
     background: #cfcfcf;
-    width: 26px;
+    // width: 26px;
+    margin-right: 8px;
     border-radius: 6px;
 }
 .skeleton-row-logo {
