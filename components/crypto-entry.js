@@ -21,7 +21,7 @@ export default function CryptoEntry(
 ) {
     // Return a new element/DOM object
     const element = html(`
-        <tr class="crypto-entry">
+        <tr class="crypto-entry card-skeleton">
             <td class="crypto-number">${cmc_rank}</td>
             <td>
                 <div class="crypto-name-wrapper">

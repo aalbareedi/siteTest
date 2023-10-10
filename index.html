@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="normalize.css" />
         <link rel="stylesheet" href="carousel/carousel.css" />
+        <link rel="stylesheet" href="skeleton/skeleton.css" />
         <link rel="stylesheet" href="style.css" />
         <title>Stocks</title>
         <!-- google fonts used -->
@@ -282,7 +283,7 @@
                                 </td>
                             </tr>
                         </thead>
-                        <tbody></tbody>
+                        <tbody class="skeleton-animated-background"></tbody>
                     </table>
                     <!-- <div id="crypto-infinite-scroller"></div> -->
                 </div>
@@ -382,39 +383,42 @@
                             </tr>
                         `);
 
-                        tbody.append(scrollDetector);
+                        if (cryptoQuantity == "All Coins") {
+                            tbody.append(scrollDetector);
 
-                        // const scrollDetector = html(
-                        //     `<div id="crypto-infinite-scroller" class="loading-spinner ${
-                        //         cryptoQuantity != "All Coins" ||
-                        //         coins.length >= cryptoTotalCount
-                        //             ? "display-hidden"
-                        //             : ""
-                        //     }">Loading...</div>`
-                        // );
-                        // document
-                        //     .querySelector(`#${scrollDetector.id}`)
-                        //     .replaceWith(scrollDetector);
+                            // const scrollDetector = html(
+                            //     `<div id="crypto-infinite-scroller" class="loading-spinner ${
+                            //         cryptoQuantity != "All Coins" ||
+                            //         coins.length >= cryptoTotalCount
+                            //             ? "display-hidden"
+                            //             : ""
+                            //     }">Loading...</div>`
+                            // );
+                            // document
+                            //     .querySelector(`#${scrollDetector.id}`)
+                            //     .replaceWith(scrollDetector);
 
-                        onScrollTo(scrollDetector, async () => {
-                            if (DISABLE_INFINITE_SCROLLING) {
-                                return;
-                            }
+                            onScrollTo(scrollDetector, async () => {
+                                if (DISABLE_INFINITE_SCROLLING) {
+                                    return;
+                                }
 
-                            if (cryptoQuantity == "All Coins") {
-                                coins = await getCryptoCoins({
-                                    quantity: coins.length + 100,
-                                });
+                                if (cryptoQuantity == "All Coins") {
+                                    coins = await getCryptoCoins({
+                                        quantity: coins.length + 100,
+                                    });
 
-                                cryptoTotalCount = await getCyptoTotalCount();
+                                    cryptoTotalCount =
+                                        await getCyptoTotalCount();
 
-                                metadata = await getCryptoMetadata({
-                                    coinIds: coins.map((coin) => coin.id),
-                                });
+                                    metadata = await getCryptoMetadata({
+                                        coinIds: coins.map((coin) => coin.id),
+                                    });
 
-                                render();
-                            }
-                        });
+                                    render();
+                                }
+                            });
+                        }
                     }
                 </script>
             </div>
