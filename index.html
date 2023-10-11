@@ -254,15 +254,15 @@
                                     <span class="currency-header-label"
                                         >(USD)</span
                                     >
-                                    <span class="sort-arrow">
+                                    <div class="sort-arrow">
                                         <i class="fas fa-sort"></i>
-                                    </span>
+                                    </div>
                                 </th>
                                 <th class="crypto-list-header-percent">
                                     <span class="crypto-timeframe-val"></span> %
-                                    <span class="sort-arrow">
+                                    <div class="sort-arrow">
                                         <i class="fas fa-sort"></i>
-                                    </span>
+                                    </div>
                                 </th>
                                 <script type="module">
                                     import { handleCryptoTimeframeChange } from "./states/crypto-timeframe.js";
@@ -276,11 +276,35 @@
                                     );
                                 </script>
                                 <th class="crypto-list-header-mcap">
-                                    <span>Market Cap</span>
-                                    <span class="sort-arrow">
-                                        <i class="fas fa-sort"></i>
-                                    </span>
+                                    <div class="mcap-header-content">
+                                        <span>Market Cap</span>
+                                        <div class="sort-arrow">
+                                            <i class="fas fa-sort-up"></i>
+                                            <i class="fas fa-sort-down"></i>
+                                        </div>
+                                    </div>
                                 </th>
+                                <script type="module">
+                                    import { getCryptoCoins } from "./api/crypto.js";
+                                    import {
+                                        cryptoSort,
+                                        setCryptoSort,
+                                    } from "./states/crypto-sort.js";
+
+                                    document.querySelector(
+                                        ".crypto-list-header-mcap"
+                                    ).onclick = () => {
+                                        setCryptoSort({
+                                            property: "market_cap",
+                                            direction:
+                                                cryptoSort.property ==
+                                                    "market_cap" &&
+                                                cryptoSort.direction == "desc"
+                                                    ? "asc"
+                                                    : "desc",
+                                        });
+                                    };
+                                </script>
                             </tr>
                         </thead>
                         <tbody></tbody>
@@ -305,6 +329,10 @@
                     import { html } from "./utils/html.js";
                     import { onScrollTo } from "./utils/on-scroll-to.js";
                     import { DISABLE_INFINITE_SCROLLING } from "./utils/constants.js";
+                    import {
+                        cryptoSort,
+                        handleCryptoSortChange,
+                    } from "./states/crypto-sort.js";
 
                     const tbody = document.querySelector(
                         ".crypto-list > tbody"
@@ -334,6 +362,20 @@
                     });
 
                     handleCryptoTimeframeChange(() => {
+                        render();
+                    });
+
+                    handleCryptoSortChange(async () => {
+                        coins = await getCryptoCoins({
+                            quantity:
+                                cryptoQuantity == "Top 100"
+                                    ? 100
+                                    : cryptoQuantity == "Top 200"
+                                    ? 200
+                                    : 100,
+                            sort: cryptoSort,
+                        });
+
                         render();
                     });
 

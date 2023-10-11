@@ -491,9 +491,45 @@ th.crypto-list-header-mcap {
   font-size: 14px;
 }
 
+.mcap-header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-column-gap: 6px;
+          column-gap: 6px;
+}
+
 .sort-arrow {
-  margin-left: 4px;
   color: #bdbdbd;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sort-arrow i {
+  line-height: initial;
+  display: block;
+  height: 7.5px;
+}
+
+.sort-arrow i.fa-sort-down {
+  position: relative;
+}
+
+.sort-arrow i.fa-sort-down::before {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
 }
 
 .crypto-entry-perc {

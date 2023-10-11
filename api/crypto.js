@@ -11,18 +11,28 @@ const API_URL =
 /**
  *
  * @param {{
- *  quantity: number
+ *  quantity: number,
+ *  sort: {
+ *    property: "market_cap"|"price"|"percent_change_24h"|"percent_change_1h"|"percent_change_7d"|"percent_change_30d",
+ *    direction: "asc"|"desc"
+ *  }
  * }}
  * @returns {[]}
  */
-export async function getCryptoCoins({ quantity }) {
+export async function getCryptoCoins({ quantity, sort = null }) {
     if (USE_SANDBOX_DATA) {
         return coins;
     }
 
     const limit = quantity;
 
-    const response = await fetch(`${API_URL}/api/crypto?limit=${limit}`, {
+    const url = new URL(`${API_URL}/api/crypto`);
+    url.searchParams.set("limit", limit);
+    if (sort) {
+        url.searchParams.set("sort", JSON.stringify(sort));
+    }
+
+    const response = await fetch(url, {
         method: "GET",
     });
 
