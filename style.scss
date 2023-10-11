@@ -206,6 +206,7 @@ header {
     border-spacing: 0px;
     user-select: none;
 }
+.crypto-list th,
 .crypto-list td {
     border-bottom: 1px solid #cacaca;
 }
@@ -225,9 +226,11 @@ header {
     background-color: #e0e0e0;
     z-index: 20;
 }
-.crypto-list-header td {
+.crypto-list-header th {
     font-size: 14px;
     height: 42px;
+    font-weight: initial;
+    text-align: left;
 }
 .stock-list-header {
     position: relative;
@@ -238,7 +241,7 @@ header {
 // .crypto-list-header-percent {
 //     text-align: center;
 // }
-.crypto-list-header-mcap {
+th.crypto-list-header-mcap {
     text-align: right;
 }
 .crypto-entry {

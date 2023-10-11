@@ -317,6 +317,7 @@ header {
           user-select: none;
 }
 
+.crypto-list th,
 .crypto-list td {
   border-bottom: 1px solid #cacaca;
 }
@@ -345,9 +346,11 @@ header {
   z-index: 20;
 }
 
-.crypto-list-header td {
+.crypto-list-header th {
   font-size: 14px;
   height: 42px;
+  font-weight: initial;
+  text-align: left;
 }
 
 .stock-list-header {
@@ -361,7 +364,7 @@ header {
   margin-bottom: 10px;
 }
 
-.crypto-list-header-mcap {
+th.crypto-list-header-mcap {
   text-align: right;
 }
 

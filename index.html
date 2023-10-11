@@ -248,8 +248,8 @@
                     <table class="crypto-list">
                         <thead class="crypto-list-header">
                             <tr>
-                                <td class="crypto-list-header-number">#</td>
-                                <td>
+                                <th class="crypto-list-header-number">#</th>
+                                <th>
                                     Coin Price
                                     <span class="currency-header-label"
                                         >(USD)</span
@@ -257,13 +257,13 @@
                                     <span class="sort-arrow">
                                         <i class="fas fa-sort"></i>
                                     </span>
-                                </td>
-                                <td class="crypto-list-header-percent">
+                                </th>
+                                <th class="crypto-list-header-percent">
                                     <span class="crypto-timeframe-val"></span> %
                                     <span class="sort-arrow">
                                         <i class="fas fa-sort"></i>
                                     </span>
-                                </td>
+                                </th>
                                 <script type="module">
                                     import { handleCryptoTimeframeChange } from "./states/crypto-timeframe.js";
 
@@ -275,15 +275,15 @@
                                         }
                                     );
                                 </script>
-                                <td class="crypto-list-header-mcap">
+                                <th class="crypto-list-header-mcap">
                                     <span>Market Cap</span>
                                     <span class="sort-arrow">
                                         <i class="fas fa-sort"></i>
                                     </span>
-                                </td>
+                                </th>
                             </tr>
                         </thead>
-                        <tbody class="skeleton-animated-background"></tbody>
+                        <tbody></tbody>
                     </table>
                     <!-- <div id="crypto-infinite-scroller"></div> -->
                 </div>
@@ -363,22 +363,22 @@
                         const scrollDetector = html(`
                             <tr class="skeleton-row">
                                 <td>
-                                    <div class="skeleton-row-rank"></div>
+                                    <div class="skeleton-row-rank skeleton-box"></div>
                                 </td>
                                 <td>
                                     <div class="skeleton-row-price-wrapper">
-                                        <div class="skeleton-row-logo"></div>
+                                        <div class="skeleton-row-logo skeleton-box"></div>
                                         <div class="skeleton-row-info">
-                                            <div class="skeleton-row-name"></div>
-                                            <div class="skeleton-row-price"></div>
+                                            <div class="skeleton-row-name skeleton-box"></div>
+                                            <div class="skeleton-row-price skeleton-box"></div>
                                         </div>
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="skeleton-row-perc-change"></div>
+                                    <div class="skeleton-row-perc-change skeleton-box"></div>
                                 </td>
                                 <td>
-                                    <div class="skeleton-row-mcap"></div>
+                                    <div class="skeleton-row-mcap skeleton-box"></div>
                                 </td>
                             </tr>
                         `);
