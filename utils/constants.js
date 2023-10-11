@@ -1,5 +1,5 @@
 export const USE_SANDBOX_DATA = false;
-export const DISABLE_INFINITE_SCROLLING = false;
+export const DISABLE_INFINITE_SCROLLING = true;
 
 export const MAX_SIGNIFICANT_DIGITS = 4;
 export const DEFAULT_CRYPTO_TIMEFRAME = "24h";
