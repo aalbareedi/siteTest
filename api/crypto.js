@@ -43,6 +43,46 @@ export async function getCryptoCoins({ quantity, sort = null }) {
     return await response.json();
 }
 
+export async function getCryptoCoinsFinal(
+    oldCoins,
+    cryptoQuantity,
+    cryptoSort
+) {
+    const coins = await getCryptoCoins({
+        quantity:
+            cryptoQuantity == "Top 100"
+                ? 100
+                : cryptoQuantity == "Top 200"
+                ? 200
+                : (oldCoins || []).length + 100,
+        sort:
+            cryptoQuantity == "Top 100" || cryptoQuantity == "Top 200"
+                ? null
+                : cryptoSort,
+    });
+
+    if (
+        cryptoSort &&
+        (cryptoQuantity == "Top 100" || cryptoQuantity == "Top 200")
+    ) {
+        coins.sort((a, b) => {
+            if (cryptoSort.direction == "desc") {
+                return (
+                    b.quote.USD[cryptoSort.property] -
+                    a.quote.USD[cryptoSort.property]
+                );
+            } else {
+                return (
+                    a.quote.USD[cryptoSort.property] -
+                    b.quote.USD[cryptoSort.property]
+                );
+            }
+        });
+    }
+
+    return coins;
+}
+
 /**
  * @returns {number}
  */

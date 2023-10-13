@@ -439,6 +439,7 @@
                     import CryptoEntry from "./components/crypto-entry.js";
                     import {
                         getCryptoCoins,
+                        getCryptoCoinsFinal,
                         getCryptoMetadata,
                         getCyptoTotalCount,
                     } from "./api/crypto.js";
@@ -467,14 +468,11 @@
                     let metadata = null;
 
                     handleCryptoQuantityChange(async () => {
-                        coins = await getCryptoCoins({
-                            quantity:
-                                cryptoQuantity == "Top 100"
-                                    ? 100
-                                    : cryptoQuantity == "Top 200"
-                                    ? 200
-                                    : 100,
-                        });
+                        coins = await getCryptoCoinsFinal(
+                            coins,
+                            cryptoQuantity,
+                            cryptoSort
+                        );
 
                         cryptoTotalCount = await getCyptoTotalCount();
 
@@ -490,39 +488,11 @@
                     });
 
                     handleCryptoSortChange(async () => {
-                        coins = await getCryptoCoins({
-                            quantity:
-                                cryptoQuantity == "Top 100"
-                                    ? 100
-                                    : cryptoQuantity == "Top 200"
-                                    ? 200
-                                    : 100,
-                            sort:
-                                cryptoQuantity == "Top 100" ||
-                                cryptoQuantity == "Top 200"
-                                    ? null
-                                    : cryptoSort,
-                        });
-
-                        if (
-                            cryptoSort &&
-                            (cryptoQuantity == "Top 100" ||
-                                cryptoQuantity == "Top 200")
-                        ) {
-                            coins.sort((a, b) => {
-                                if (cryptoSort.direction == "desc") {
-                                    return (
-                                        b.quote.USD[cryptoSort.property] -
-                                        a.quote.USD[cryptoSort.property]
-                                    );
-                                } else {
-                                    return (
-                                        a.quote.USD[cryptoSort.property] -
-                                        b.quote.USD[cryptoSort.property]
-                                    );
-                                }
-                            });
-                        }
+                        coins = await getCryptoCoinsFinal(
+                            coins,
+                            cryptoQuantity,
+                            cryptoSort
+                        );
 
                         render();
                     });
@@ -594,9 +564,11 @@
                                 }
 
                                 if (cryptoQuantity == "All Coins") {
-                                    coins = await getCryptoCoins({
-                                        quantity: coins.length + 100,
-                                    });
+                                    coins = await getCryptoCoinsFinal(
+                                        coins,
+                                        cryptoQuantity,
+                                        cryptoSort
+                                    );
 
                                     cryptoTotalCount =
                                         await getCyptoTotalCount();
