@@ -444,13 +444,14 @@ th.crypto-list-header-mcap {
 
 .crypto-symbol {
   font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 80px;
 }
 
 .crypto-name-text {
   color: #7a7a7a;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
   letter-spacing: 0.4px;
 }
 
@@ -461,7 +462,6 @@ th.crypto-list-header-mcap {
   white-space: nowrap;
   overflow: hidden;
   vertical-align: bottom;
-  margin-right: -2px;
 }
 
 .stock-name-text {
