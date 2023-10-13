@@ -291,25 +291,48 @@
                                     import {
                                         cryptoSort,
                                         setCryptoSort,
+                                        handleCryptoSortChange,
                                     } from "./states/crypto-sort.js";
                                     import {
                                         cryptoTimeframe,
                                         handleCryptoTimeframeChange,
                                     } from "./states/crypto-timeframe.js";
 
-                                    handleHeaderClick(
-                                        document.querySelector(
-                                            ".crypto-list-header-price"
-                                        ),
-                                        "price"
-                                    );
-
                                     handleCryptoTimeframeChange(() => {
-                                        if (cryptoTimeframe == "30d") {
+                                        render();
+                                    });
+
+                                    handleCryptoSortChange(() => {
+                                        render();
+                                    });
+
+                                    function render() {
+                                        const table =
                                             document.querySelector(
+                                                ".crypto-list"
+                                            );
+
+                                        table
+                                            .querySelectorAll(".sort-arrow")
+                                            .forEach((sortArrow) => {
+                                                sortArrow.classList.remove(
+                                                    "desc",
+                                                    "asc"
+                                                );
+                                            });
+
+                                        handleHeaderClick(
+                                            table.querySelector(
+                                                ".crypto-list-header-price"
+                                            ),
+                                            "price"
+                                        );
+
+                                        if (cryptoTimeframe == "30d") {
+                                            table.querySelector(
                                                 ".crypto-list-header-percent"
                                             ).onclick = () => {};
-                                            document
+                                            table
                                                 .querySelector(
                                                     ".crypto-list-header-percent .sort-arrow"
                                                 )
@@ -318,26 +341,63 @@
                                                 );
                                             return;
                                         }
-                                        document
+                                        table
                                             .querySelector(
                                                 ".crypto-list-header-percent .sort-arrow"
                                             )
                                             .classList.remove("display-hidden");
 
                                         handleHeaderClick(
-                                            document.querySelector(
+                                            table.querySelector(
                                                 ".crypto-list-header-percent"
                                             ),
                                             `percent_change_${cryptoTimeframe}`
                                         );
-                                    });
 
-                                    handleHeaderClick(
-                                        document.querySelector(
-                                            ".crypto-list-header-mcap"
-                                        ),
-                                        "market_cap"
-                                    );
+                                        handleHeaderClick(
+                                            table.querySelector(
+                                                ".crypto-list-header-mcap"
+                                            ),
+                                            "market_cap"
+                                        );
+
+                                        if (!cryptoSort) {
+                                            return;
+                                        }
+
+                                        const columnHeader =
+                                            cryptoSort.property == "market_cap"
+                                                ? table.querySelector(
+                                                      ".crypto-list-header-mcap"
+                                                  )
+                                                : cryptoSort.property == "price"
+                                                ? table.querySelector(
+                                                      ".crypto-list-header-price"
+                                                  )
+                                                : cryptoSort.property.startsWith(
+                                                      "percent_change_"
+                                                  )
+                                                ? table.querySelector(
+                                                      ".crypto-list-header-percent"
+                                                  )
+                                                : null;
+
+                                        const isSortedDesc =
+                                            cryptoSort.direction == "desc";
+
+                                        const sortArrow =
+                                            columnHeader.querySelector(
+                                                ".sort-arrow"
+                                            );
+
+                                        sortArrow.classList.remove(
+                                            isSortedDesc ? "desc" : "asc"
+                                        );
+
+                                        sortArrow.classList.add(
+                                            isSortedDesc ? "asc" : "desc"
+                                        );
+                                    }
 
                                     function handleHeaderClick(
                                         columnHeader,
@@ -345,6 +405,7 @@
                                     ) {
                                         columnHeader.onclick = () => {
                                             const isSortedDesc =
+                                                cryptoSort &&
                                                 cryptoSort.property ==
                                                     property &&
                                                 cryptoSort.direction == "desc";
@@ -354,20 +415,8 @@
                                                 direction: isSortedDesc
                                                     ? "asc"
                                                     : "desc",
+                                                columnHeader: columnHeader,
                                             });
-
-                                            const sortArrow =
-                                                columnHeader.querySelector(
-                                                    ".sort-arrow"
-                                                );
-
-                                            sortArrow.classList.remove(
-                                                isSortedDesc ? "desc" : "asc"
-                                            );
-
-                                            sortArrow.classList.add(
-                                                isSortedDesc ? "asc" : "desc"
-                                            );
                                         };
                                     }
                                 </script>
