@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="normalize.css" />
         <link rel="stylesheet" href="carousel/carousel.css" />
-        <link rel="stylesheet" href="skeleton/skeleton.css" />
+        <!-- <link rel="stylesheet" href="skeleton/skeleton.css" /> -->
+        <link rel="stylesheet" href="skeletonize/skeletonize.css" />
         <link rel="stylesheet" href="style.css" />
         <title>Stocks</title>
         <!-- google fonts used -->
@@ -250,20 +251,31 @@
                             <tr>
                                 <th class="crypto-list-header-number">#</th>
                                 <th class="crypto-list-header-price">
-                                    Coin Price
-                                    <span class="currency-header-label"
-                                        >(USD)</span
-                                    >
-                                    <div class="sort-arrow">
-                                        <i class="fas fa-sort-up"></i>
-                                        <i class="fas fa-sort-down"></i>
+                                    <div class="crypto-header-content">
+                                        <div>
+                                            Coin Price
+                                            <span class="currency-header-label"
+                                                >(USD)</span
+                                            >
+                                        </div>
+                                        <div class="sort-arrow">
+                                            <i class="fas fa-sort-up"></i>
+                                            <i class="fas fa-sort-down"></i>
+                                        </div>
                                     </div>
                                 </th>
                                 <th class="crypto-list-header-percent">
-                                    <span class="crypto-timeframe-val"></span> %
-                                    <div class="sort-arrow">
-                                        <i class="fas fa-sort-up"></i>
-                                        <i class="fas fa-sort-down"></i>
+                                    <div class="crypto-header-content">
+                                        <div>
+                                            <span
+                                                class="crypto-timeframe-val"
+                                            ></span>
+                                            %
+                                        </div>
+                                        <div class="sort-arrow">
+                                            <i class="fas fa-sort-up"></i>
+                                            <i class="fas fa-sort-down"></i>
+                                        </div>
                                     </div>
                                 </th>
                                 <script type="module">
@@ -278,8 +290,8 @@
                                     );
                                 </script>
                                 <th class="crypto-list-header-mcap">
-                                    <div class="mcap-header-content">
-                                        <span>Market Cap</span>
+                                    <div class="crypto-header-content">
+                                        <div>Market Cap</div>
                                         <div class="sort-arrow">
                                             <i class="fas fa-sort-up"></i>
                                             <i class="fas fa-sort-down"></i>
@@ -458,6 +470,7 @@
                         cryptoSort,
                         handleCryptoSortChange,
                     } from "./states/crypto-sort.js";
+                    import { skeletonize } from "./skeletonize/skeletonize.js";
 
                     const tbody = document.querySelector(
                         ".crypto-list > tbody"
@@ -519,35 +532,37 @@
                             );
                         }
 
-                        // const scrollDetector = CryptoEntry(
-                        //     coins.length,
-                        //     coins[coins.length - 1],
-                        //     metadata[coins[coins.length - 1].id],
-                        //     cryptoTimeframe
-                        // );
+                        const scrollDetector = skeletonize(
+                            CryptoEntry(
+                                coins.length,
+                                coins[coins.length - 1],
+                                metadata[coins[coins.length - 1].id],
+                                cryptoTimeframe
+                            )
+                        );
 
-                        const scrollDetector = html(`
-                            <tr class="skeleton-row">
-                                <td>
-                                    <div class="skeleton-row-rank skeleton-box"></div>
-                                </td>
-                                <td>
-                                    <div class="skeleton-row-price-wrapper">
-                                        <div class="skeleton-row-logo skeleton-box"></div>
-                                        <div class="skeleton-row-info">
-                                            <div class="skeleton-row-name skeleton-box"></div>
-                                            <div class="skeleton-row-price skeleton-box"></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="skeleton-row-perc-change skeleton-box"></div>
-                                </td>
-                                <td>
-                                    <div class="skeleton-row-mcap skeleton-box"></div>
-                                </td>
-                            </tr>
-                        `);
+                        // const scrollDetector = html(`
+                        //     <tr class="skeleton-row">
+                        //         <td>
+                        //             <div class="skeleton-row-rank skeleton-box"></div>
+                        //         </td>
+                        //         <td>
+                        //             <div class="skeleton-row-price-wrapper">
+                        //                 <div class="skeleton-row-logo skeleton-box"></div>
+                        //                 <div class="skeleton-row-info">
+                        //                     <div class="skeleton-row-name skeleton-box"></div>
+                        //                     <div class="skeleton-row-price skeleton-box"></div>
+                        //                 </div>
+                        //             </div>
+                        //         </td>
+                        //         <td>
+                        //             <div class="skeleton-row-perc-change skeleton-box"></div>
+                        //         </td>
+                        //         <td>
+                        //             <div class="skeleton-row-mcap skeleton-box"></div>
+                        //         </td>
+                        //     </tr>
+                        // `);
 
                         if (
                             cryptoQuantity == "All Coins" &&

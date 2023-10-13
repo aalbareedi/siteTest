@@ -491,18 +491,21 @@ th.crypto-list-header-mcap {
   font-size: 14px;
 }
 
-.mcap-header-content {
+.crypto-header-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 6px;
+          column-gap: 6px;
+}
+
+.crypto-list-header-mcap .crypto-header-content {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-column-gap: 6px;
-          column-gap: 6px;
 }
 
 .asc .fa-sort-up,
@@ -511,7 +514,7 @@ th.crypto-list-header-mcap {
 }
 
 .sort-arrow {
-  color: #bdbdbd;
+  color: #c8c8c8;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1126,71 +1129,5 @@ i.play-icon {
 
 .selected-opt i {
   opacity: 1;
-}
-
-.skeleton-row {
-  height: 60px;
-}
-
-.skeleton-row-rank {
-  height: 20px;
-  background: #cfcfcf;
-  margin-right: 8px;
-  border-radius: 6px;
-}
-
-.skeleton-row-logo {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #cfcfcf;
-}
-
-.skeleton-row-price-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-column-gap: 8px;
-          column-gap: 8px;
-}
-
-.skeleton-row-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 4px;
-}
-
-.skeleton-row-name {
-  height: 16px;
-  background: #cfcfcf;
-  width: 44px;
-  border-radius: 6px;
-}
-
-.skeleton-row-price {
-  height: 16px;
-  background: #cfcfcf;
-  width: 88px;
-  border-radius: 6px;
-}
-
-.skeleton-row-mcap {
-  height: 16px;
-  background: #cfcfcf;
-  width: 70px;
-  border-radius: 6px;
-  margin-left: auto;
-}
-
-.skeleton-row-perc-change {
-  height: 16px;
-  background: #cfcfcf;
-  width: 60px;
-  border-radius: 6px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -332,30 +332,28 @@ th.crypto-list-header-mcap {
     color: #7a7a7a;
     font-size: 14px;
 }
-.mcap-header-content {
+.crypto-header-content {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     column-gap: 6px;
+}
+.crypto-list-header-mcap .crypto-header-content {
+    justify-content: flex-end;
 }
 .asc .fa-sort-up,
 .desc .fa-sort-down {
     color: #939393;
 }
 .sort-arrow {
-    color: #bdbdbd;
+    color: #c8c8c8;
     display: inline-flex;
     flex-direction: column;
-    // row-gap: 4px;
 }
 .sort-arrow i {
     line-height: initial;
     display: block;
-    // background-color: orange;
-
     height: 7.5px;
 }
-
 .sort-arrow i.fa-sort-down {
     position: relative;
 }
@@ -781,56 +779,56 @@ i.play-icon {
 .selected-opt i {
     opacity: 1;
 }
-.skeleton-row {
-    height: 60px;
-}
-.skeleton-row-rank {
-    height: 20px;
-    background: #cfcfcf;
-    // width: 26px;
-    margin-right: 8px;
-    border-radius: 6px;
-}
-.skeleton-row-logo {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: #cfcfcf;
-}
-.skeleton-row-price-wrapper {
-    display: flex;
-    column-gap: 8px;
-}
-.skeleton-row-info {
-    display: flex;
-    flex-direction: column;
-    row-gap: 4px;
-}
-.skeleton-row-name {
-    height: 16px;
-    background: #cfcfcf;
-    width: 44px;
-    border-radius: 6px;
-}
-.skeleton-row-price {
-    height: 16px;
-    background: #cfcfcf;
-    width: 88px;
-    border-radius: 6px;
-}
-.skeleton-row-mcap {
-    height: 16px;
-    background: #cfcfcf;
-    width: 70px;
-    border-radius: 6px;
-    margin-left: auto;
-}
-.skeleton-row-perc-change {
-    height: 16px;
-    background: #cfcfcf;
-    width: 60px;
-    border-radius: 6px;
-}
+// .skeleton-row {
+//     height: 60px;
+// }
+// .skeleton-row-rank {
+//     height: 20px;
+//     background: #cfcfcf;
+//     // width: 26px;
+//     margin-right: 8px;
+//     border-radius: 6px;
+// }
+// .skeleton-row-logo {
+//     width: 34px;
+//     height: 34px;
+//     border-radius: 50%;
+//     background: #cfcfcf;
+// }
+// .skeleton-row-price-wrapper {
+//     display: flex;
+//     column-gap: 8px;
+// }
+// .skeleton-row-info {
+//     display: flex;
+//     flex-direction: column;
+//     row-gap: 4px;
+// }
+// .skeleton-row-name {
+//     height: 16px;
+//     background: #cfcfcf;
+//     width: 44px;
+//     border-radius: 6px;
+// }
+// .skeleton-row-price {
+//     height: 16px;
+//     background: #cfcfcf;
+//     width: 88px;
+//     border-radius: 6px;
+// }
+// .skeleton-row-mcap {
+//     height: 16px;
+//     background: #cfcfcf;
+//     width: 70px;
+//     border-radius: 6px;
+//     margin-left: auto;
+// }
+// .skeleton-row-perc-change {
+//     height: 16px;
+//     background: #cfcfcf;
+//     width: 60px;
+//     border-radius: 6px;
+// }
 
 // padding-top: calc(#{$header-height} + #{$project-window-title-height});
 
