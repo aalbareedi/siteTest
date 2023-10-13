@@ -494,6 +494,12 @@
                             cryptoSort
                         );
 
+                        cryptoTotalCount = await getCyptoTotalCount();
+
+                        metadata = await getCryptoMetadata({
+                            coinIds: coins.map((coin) => coin.id),
+                        });
+
                         render();
                     });
 
@@ -543,7 +549,10 @@
                             </tr>
                         `);
 
-                        if (cryptoQuantity == "All Coins") {
+                        if (
+                            cryptoQuantity == "All Coins" &&
+                            coins.length < cryptoTotalCount
+                        ) {
                             tbody.append(scrollDetector);
 
                             // const scrollDetector = html(
