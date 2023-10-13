@@ -297,6 +297,14 @@
                                         cryptoTimeframe,
                                         handleCryptoTimeframeChange,
                                     } from "./states/crypto-timeframe.js";
+                                    import {
+                                        cryptoQuantity,
+                                        handleCryptoQuantityChange,
+                                    } from "./states/crypto-quantity.js";
+
+                                    handleCryptoQuantityChange(() => {
+                                        render();
+                                    });
 
                                     handleCryptoTimeframeChange(() => {
                                         render();
@@ -312,6 +320,7 @@
                                                 ".crypto-list"
                                             );
 
+                                        // Reset sort arrows
                                         table
                                             .querySelectorAll(".sort-arrow")
                                             .forEach((sortArrow) => {
@@ -391,11 +400,11 @@
                                             );
 
                                         sortArrow.classList.remove(
-                                            isSortedDesc ? "desc" : "asc"
+                                            isSortedDesc ? "asc" : "desc"
                                         );
 
                                         sortArrow.classList.add(
-                                            isSortedDesc ? "asc" : "desc"
+                                            isSortedDesc ? "desc" : "asc"
                                         );
                                     }
 
@@ -488,8 +497,32 @@
                                     : cryptoQuantity == "Top 200"
                                     ? 200
                                     : 100,
-                            sort: cryptoSort,
+                            sort:
+                                cryptoQuantity == "Top 100" ||
+                                cryptoQuantity == "Top 200"
+                                    ? null
+                                    : cryptoSort,
                         });
+
+                        if (
+                            cryptoSort &&
+                            (cryptoQuantity == "Top 100" ||
+                                cryptoQuantity == "Top 200")
+                        ) {
+                            coins.sort((a, b) => {
+                                if (cryptoSort.direction == "desc") {
+                                    return (
+                                        b.quote.USD[cryptoSort.property] -
+                                        a.quote.USD[cryptoSort.property]
+                                    );
+                                } else {
+                                    return (
+                                        a.quote.USD[cryptoSort.property] -
+                                        b.quote.USD[cryptoSort.property]
+                                    );
+                                }
+                            });
+                        }
 
                         render();
                     });
