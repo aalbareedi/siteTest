@@ -249,19 +249,21 @@
                         <thead class="crypto-list-header">
                             <tr>
                                 <th class="crypto-list-header-number">#</th>
-                                <th>
+                                <th class="crypto-list-header-price">
                                     Coin Price
                                     <span class="currency-header-label"
                                         >(USD)</span
                                     >
                                     <div class="sort-arrow">
-                                        <i class="fas fa-sort"></i>
+                                        <i class="fas fa-sort-up"></i>
+                                        <i class="fas fa-sort-down"></i>
                                     </div>
                                 </th>
                                 <th class="crypto-list-header-percent">
                                     <span class="crypto-timeframe-val"></span> %
                                     <div class="sort-arrow">
-                                        <i class="fas fa-sort"></i>
+                                        <i class="fas fa-sort-up"></i>
+                                        <i class="fas fa-sort-down"></i>
                                     </div>
                                 </th>
                                 <script type="module">
@@ -290,20 +292,84 @@
                                         cryptoSort,
                                         setCryptoSort,
                                     } from "./states/crypto-sort.js";
+                                    import {
+                                        cryptoTimeframe,
+                                        handleCryptoTimeframeChange,
+                                    } from "./states/crypto-timeframe.js";
 
-                                    document.querySelector(
-                                        ".crypto-list-header-mcap"
-                                    ).onclick = () => {
-                                        setCryptoSort({
-                                            property: "market_cap",
-                                            direction:
+                                    handleHeaderClick(
+                                        document.querySelector(
+                                            ".crypto-list-header-price"
+                                        ),
+                                        "price"
+                                    );
+
+                                    handleCryptoTimeframeChange(() => {
+                                        if (cryptoTimeframe == "30d") {
+                                            document.querySelector(
+                                                ".crypto-list-header-percent"
+                                            ).onclick = () => {};
+                                            document
+                                                .querySelector(
+                                                    ".crypto-list-header-percent .sort-arrow"
+                                                )
+                                                .classList.add(
+                                                    "display-hidden"
+                                                );
+                                            return;
+                                        }
+                                        document
+                                            .querySelector(
+                                                ".crypto-list-header-percent .sort-arrow"
+                                            )
+                                            .classList.remove("display-hidden");
+
+                                        handleHeaderClick(
+                                            document.querySelector(
+                                                ".crypto-list-header-percent"
+                                            ),
+                                            `percent_change_${cryptoTimeframe}`
+                                        );
+                                    });
+
+                                    handleHeaderClick(
+                                        document.querySelector(
+                                            ".crypto-list-header-mcap"
+                                        ),
+                                        "market_cap"
+                                    );
+
+                                    function handleHeaderClick(
+                                        columnHeader,
+                                        property
+                                    ) {
+                                        columnHeader.onclick = () => {
+                                            const isSortedDesc =
                                                 cryptoSort.property ==
-                                                    "market_cap" &&
-                                                cryptoSort.direction == "desc"
+                                                    property &&
+                                                cryptoSort.direction == "desc";
+
+                                            setCryptoSort({
+                                                property: property,
+                                                direction: isSortedDesc
                                                     ? "asc"
                                                     : "desc",
-                                        });
-                                    };
+                                            });
+
+                                            const sortArrow =
+                                                columnHeader.querySelector(
+                                                    ".sort-arrow"
+                                                );
+
+                                            sortArrow.classList.remove(
+                                                isSortedDesc ? "desc" : "asc"
+                                            );
+
+                                            sortArrow.classList.add(
+                                                isSortedDesc ? "asc" : "desc"
+                                            );
+                                        };
+                                    }
                                 </script>
                             </tr>
                         </thead>

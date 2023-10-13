@@ -225,9 +225,9 @@ header {
     top: $nav-height + 41px;
     background-color: #e0e0e0;
     z-index: 20;
+    font-size: 14px;
 }
 .crypto-list-header th {
-    font-size: 14px;
     height: 42px;
     font-weight: initial;
     text-align: left;
@@ -262,6 +262,7 @@ th.crypto-list-header-mcap {
 .crypto-number {
     color: #7a7a7a;
     padding-right: 6px;
+    font-size: 14px;
 }
 .crypto-list-header-number {
     color: #7a7a7a;
@@ -326,7 +327,6 @@ th.crypto-list-header-mcap {
 }
 .currency-header-label {
     color: #7a7a7a;
-    font-size: 14px;
 }
 .stock-list-header-price span {
     color: #7a7a7a;
@@ -337,6 +337,10 @@ th.crypto-list-header-mcap {
     align-items: center;
     justify-content: flex-end;
     column-gap: 6px;
+}
+.asc .fa-sort-up,
+.desc .fa-sort-down {
+    color: #939393;
 }
 .sort-arrow {
     color: #bdbdbd;
