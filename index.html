@@ -436,7 +436,6 @@
                                                 direction: isSortedDesc
                                                     ? "asc"
                                                     : "desc",
-                                                columnHeader: columnHeader,
                                             });
                                         };
                                     }
@@ -484,6 +483,7 @@
                         coins = await getCryptoCoinsFinal(
                             coins,
                             cryptoQuantity,
+                            0,
                             cryptoSort
                         );
 
@@ -504,6 +504,7 @@
                         coins = await getCryptoCoinsFinal(
                             coins,
                             cryptoQuantity,
+                            0,
                             cryptoSort
                         );
 
@@ -591,6 +592,7 @@
                                     coins = await getCryptoCoinsFinal(
                                         coins,
                                         cryptoQuantity,
+                                        100,
                                         cryptoSort
                                     );
 

@@ -46,15 +46,18 @@ export async function getCryptoCoins({ quantity, sort = null }) {
 export async function getCryptoCoinsFinal(
     oldCoins,
     cryptoQuantity,
+    quantityModifier,
     cryptoSort
 ) {
+    const oldQuantity = oldCoins ? oldCoins.length : 100;
+
     const coins = await getCryptoCoins({
         quantity:
             cryptoQuantity == "Top 100"
                 ? 100
                 : cryptoQuantity == "Top 200"
                 ? 200
-                : (oldCoins || []).length + 100,
+                : oldQuantity + quantityModifier,
         sort:
             cryptoQuantity == "Top 100" || cryptoQuantity == "Top 200"
                 ? null
