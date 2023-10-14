@@ -278,6 +278,7 @@ th.crypto-list-header-mcap {
     height: 34px;
     border-radius: 50%;
     overflow: hidden;
+    flex-shrink: 0;
 }
 .crypto-logo img {
     max-width: 100%;
@@ -833,6 +834,23 @@ i.play-icon {
 //     width: 60px;
 //     border-radius: 6px;
 // }
+
+.skeleton .crypto-entry-perc i {
+    display: none;
+}
+.skeleton-data-placeholder {
+    border-radius: 4px;
+}
+.skeleton .crypto-name {
+    row-gap: 4px;
+}
+.skeleton .crypto-entry-perc {
+    width: 100%;
+}
+.skeleton .crypto-entry-perc .skeleton-data-placeholder {
+    width: 100%;
+    margin-right: 8px;
+}
 
 // padding-top: calc(#{$header-height} + #{$project-window-title-height});
 
