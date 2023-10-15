@@ -1,4 +1,5 @@
 export const USE_SANDBOX_DATA = false;
+export const DISABLE_RENDER_DATA = false;
 export const DISABLE_INFINITE_SCROLLING = false;
 
 export const MAX_SIGNIFICANT_DIGITS = 4;

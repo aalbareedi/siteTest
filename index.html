@@ -464,7 +464,10 @@
                     } from "./states/crypto-timeframe.js";
                     import { html } from "./utils/html.js";
                     import { onScrollTo } from "./utils/on-scroll-to.js";
-                    import { DISABLE_INFINITE_SCROLLING } from "./utils/constants.js";
+                    import {
+                        DISABLE_INFINITE_SCROLLING,
+                        DISABLE_RENDER_DATA,
+                    } from "./utils/constants.js";
                     import {
                         cryptoSort,
                         handleCryptoSortChange,
@@ -480,6 +483,9 @@
                     let metadata = null;
 
                     handleCryptoQuantityChange(async () => {
+                        tbody.innerHTML = "";
+                        renderScrollDetector(false);
+
                         coins = await getCryptoCoinsFinal(
                             coins,
                             cryptoQuantity,
@@ -497,10 +503,15 @@
                     });
 
                     handleCryptoTimeframeChange(() => {
+                        tbody.innerHTML = "";
+                        renderScrollDetector(false);
                         render();
                     });
 
                     handleCryptoSortChange(async () => {
+                        tbody.innerHTML = "";
+                        renderScrollDetector(false);
+
                         coins = await getCryptoCoinsFinal(
                             coins,
                             cryptoQuantity,
@@ -518,10 +529,15 @@
                     });
 
                     function render() {
+                        if (DISABLE_RENDER_DATA) {
+                            return;
+                        }
+
                         if (!coins || !metadata) {
                             return;
                         }
                         tbody.innerHTML = "";
+
                         for (let i = 0; i < coins.length; i++) {
                             tbody.append(
                                 CryptoEntry(
@@ -533,14 +549,12 @@
                             );
                         }
 
-                        const scrollDetector = skeletonize(
-                            CryptoEntry(
-                                coins.length,
-                                coins[coins.length - 1],
-                                metadata[coins[coins.length - 1].id],
-                                cryptoTimeframe
-                            )
-                        );
+                        if (
+                            cryptoQuantity == "All Coins" &&
+                            coins.length < cryptoTotalCount
+                        ) {
+                            renderScrollDetector(true);
+                        }
 
                         // const scrollDetector = html(`
                         //     <tr class="skeleton-row">
@@ -564,31 +578,57 @@
                         //         </td>
                         //     </tr>
                         // `);
+                    }
 
-                        if (
-                            cryptoQuantity == "All Coins" &&
-                            coins.length < cryptoTotalCount
-                        ) {
-                            tbody.append(scrollDetector);
+                    /**
+                     * @param {bool} shouldDetectScroll
+                     **/
+                    function renderScrollDetector(shouldDetectScroll) {
+                        const scrollDetector = skeletonize(
+                            CryptoEntry(
+                                0,
+                                {
+                                    symbol: "BTCB",
+                                    name: "Bitcoin",
+                                    quote: {
+                                        USD: {
+                                            price: 0.000099,
+                                            market_cap: 4000000,
+                                        },
+                                    },
+                                    cmc_rank: 123,
+                                },
+                                {
+                                    logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png",
+                                },
+                                cryptoTimeframe
+                            )
+                        );
 
-                            // const scrollDetector = html(
-                            //     `<div id="crypto-infinite-scroller" class="loading-spinner ${
-                            //         cryptoQuantity != "All Coins" ||
-                            //         coins.length >= cryptoTotalCount
-                            //             ? "display-hidden"
-                            //             : ""
-                            //     }">Loading...</div>`
-                            // );
-                            // document
-                            //     .querySelector(`#${scrollDetector.id}`)
-                            //     .replaceWith(scrollDetector);
+                        tbody.append(scrollDetector);
 
+                        // const scrollDetector = html(
+                        //     `<div id="crypto-infinite-scroller" class="loading-spinner ${
+                        //         cryptoQuantity != "All Coins" ||
+                        //         coins.length >= cryptoTotalCount
+                        //             ? "display-hidden"
+                        //             : ""
+                        //     }">Loading...</div>`
+                        // );
+                        // document
+                        //     .querySelector(`#${scrollDetector.id}`)
+                        //     .replaceWith(scrollDetector);
+
+                        if (shouldDetectScroll) {
                             onScrollTo(scrollDetector, async () => {
                                 if (DISABLE_INFINITE_SCROLLING) {
                                     return;
                                 }
 
-                                if (cryptoQuantity == "All Coins") {
+                                if (
+                                    cryptoQuantity == "All Coins" &&
+                                    coins.length < cryptoTotalCount
+                                ) {
                                     coins = await getCryptoCoinsFinal(
                                         coins,
                                         cryptoQuantity,
