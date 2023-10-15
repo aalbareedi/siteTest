@@ -191,6 +191,11 @@ header {
   font-family: "Changa", sans-serif;
 }
 
+.global-stats-title {
+  padding: 0px 20px 4px 20px;
+  font-size: 14px;
+}
+
 .crypto-options {
   display: -webkit-box;
   display: -ms-flexbox;
