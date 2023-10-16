@@ -1,5 +1,6 @@
 // Import and expand on polyfills if necessary (https://caniuse.com/?search=CSSStyleValue)
 if (!window.CSSStyleValue) {
+    // TODO: Use Promise.all
     const { default: polyfill } = await import(
         "https://cdn.jsdelivr.net/npm/css-typed-om@0.4.0/index.es.min.js"
     );
@@ -70,13 +71,13 @@ if (!window.CSSStyleValue) {
  * @param {function} callback
  */
 export function onStick(element, callback) {
-    const style = getComputedStyle(element);
-    const top = CSSStyleValue.parse("top", style.top);
-    const marginTop = CSS.px(top.to("px").value * -1 - 1);
+    // const style = getComputedStyle(element);
+    // const top = CSSStyleValue.parse("top", style.top);
+    // const marginTop = CSS.px(top.to("px").value * -1 - 1);
 
-    if (style.position != "sticky") {
-        throw new Error("Element must have `position: sticky`");
-    }
+    // if (style.position != "sticky") {
+    //     throw new Error("Element must have `position: sticky`");
+    // }
 
     const observer = new IntersectionObserver(
         ([e]) => {
@@ -84,7 +85,7 @@ export function onStick(element, callback) {
                 callback();
             }
         },
-        { threshold: [1], rootMargin: `${marginTop.value}px 0px 0px 0px` }
+        { threshold: [1], rootMargin: `-61px 0px 0px 0px` }
     );
 
     observer.observe(element);

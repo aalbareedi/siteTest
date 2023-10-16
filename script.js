@@ -30,21 +30,30 @@ body.onscroll = function () {
         backToTopBtn.classList.add("opacity-zero");
     }
 
-    // let originalGlobalStatsTop = document.querySelector(".main-stats-wrapper");
-    // if (scrollingElement.scrollTop > 74) {
-    //     originalGlobalStatsTop.classList.add("sticking");
-    // } else {
-    //     originalGlobalStatsTop.classList.remove("sticking");
-    // }
+    let originalGlobalStatsTop = document.querySelector(".main-stats-wrapper");
+    // const rect = originalGlobalStatsTop.getBoundingClientRect();
+
+    if (scrollingElement.scrollTop > 74) {
+        originalGlobalStatsTop.classList.add("sticking");
+    } else {
+        originalGlobalStatsTop.classList.remove("sticking");
+    }
 };
 
-const stats = document.querySelector(".main-stats-wrapper");
-onStick(stats, () => {
-    stats.classList.add("sticking");
-});
-onUnstick(stats, () => {
-    stats.classList.remove("sticking");
-});
+backToTopBtn.onclick = (e) => {
+    e.preventDefault();
+
+    // NOTE: Must use -1 for this to work in Safari mobile
+    window.scrollTo({ top: -1, behavior: "smooth" });
+};
+
+// const stats = document.querySelector(".main-stats-wrapper");
+// onStick(stats, () => {
+//     stats.classList.add("sticking");
+// });
+// onUnstick(stats, () => {
+//     stats.classList.remove("sticking");
+// });
 
 // let originalGlobalStatsTop = document.querySelector(".main-stats-wrapper");
 

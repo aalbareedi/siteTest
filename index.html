@@ -487,7 +487,7 @@
 
                     handleCryptoQuantityChange(async () => {
                         document.body.style.overflow = "hidden";
-                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        window.scrollTo({ top: -1, behavior: "smooth" });
 
                         renderSkeletonRows();
 
@@ -510,7 +510,7 @@
 
                     handleCryptoTimeframeChange(() => {
                         document.body.style.overflow = "hidden";
-                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        window.scrollTo({ top: -1, behavior: "smooth" });
 
                         renderSkeletonRows();
 
@@ -521,7 +521,7 @@
 
                     handleCryptoSortChange(async () => {
                         document.body.style.overflow = "hidden";
-                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        window.scrollTo({ top: -1, behavior: "smooth" });
 
                         renderSkeletonRows();
 
@@ -598,7 +598,10 @@
 
                     function renderSkeletonRows() {
                         tbody.innerHTML = "";
-                        for (let i = 0; i < 20; i++) {
+                        const rowCount = coins
+                            ? Math.max(100, coins.length)
+                            : 100;
+                        for (let i = 0; i < rowCount; i++) {
                             tbody.append(
                                 skeletonize(
                                     CryptoEntry(
