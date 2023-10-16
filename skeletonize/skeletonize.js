@@ -1,13 +1,4 @@
-/**
- *
- * @param {Element} element
- * @returns {Element}
- */
 export function skeletonize(element) {
-    if (element.classList.contains("skeleton")) {
-        return element;
-    }
-
     element.classList.add("skeleton");
     [...textNodesUnder(element), ...element.querySelectorAll("img")].forEach(
         (dataNode) => {

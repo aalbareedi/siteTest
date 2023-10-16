@@ -162,8 +162,7 @@ header {
 .crypto-controls {
     display: flex;
     padding: 0px 20px;
-    column-gap: 14px;
-    // justify-content: space-between;
+    column-gap: 16px;
 }
 .crypto-control-btn {
     background: #d1d1d1;
@@ -212,7 +211,7 @@ header {
 }
 .crypto-list th,
 .crypto-list td {
-    border-bottom: 1px solid #cacaca;
+    border-bottom: 1px solid #cfcfcf;
 }
 .crypto-mcap {
     text-align: right;
@@ -245,12 +244,8 @@ header {
 // .crypto-list-header-percent {
 //     text-align: center;
 // }
-th.crypto-list-header-mcap {
-    text-align: right;
-}
 .crypto-entry {
     height: 60px;
-    // border-bottom: 1px solid #cacaca;
 }
 .stock-entry {
     height: 60px;
@@ -258,7 +253,7 @@ th.crypto-list-header-mcap {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    border-bottom: 1px solid #cacaca;
+    border-bottom: 1px solid #cfcfcf;
 }
 .crypto-entry-pair {
     display: flex;
@@ -341,13 +336,20 @@ th.crypto-list-header-mcap {
     color: #7a7a7a;
     font-size: 14px;
 }
-.crypto-header-content {
+.crypto-th-content {
     display: flex;
     align-items: center;
     column-gap: 6px;
+    width: fit-content;
 }
-.crypto-list-header-mcap .crypto-header-content {
+th.crypto-th-mcap {
+    text-align: right;
+    // background-color: orange;
+}
+.crypto-th-mcap .crypto-th-content {
     justify-content: flex-end;
+    margin-left: auto;
+    // background-color: pink;
 }
 .asc .fa-sort-up,
 .desc .fa-sort-down {
