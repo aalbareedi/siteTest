@@ -474,6 +474,9 @@
                     } from "./states/crypto-sort.js";
                     import { skeletonize } from "./skeletonize/skeletonize.js";
 
+                    /**
+                     * @type {Element}
+                     */
                     const tbody = document.querySelector(
                         ".crypto-list > tbody"
                     );
@@ -483,8 +486,10 @@
                     let metadata = null;
 
                     handleCryptoQuantityChange(async () => {
-                        tbody.innerHTML = "";
-                        renderScrollDetector(false);
+                        document.body.style.overflow = "hidden";
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+
+                        renderSkeletonRows();
 
                         coins = await getCryptoCoinsFinal(
                             coins,
@@ -500,17 +505,27 @@
                         });
 
                         render();
+                        document.body.style.overflow = "initial";
                     });
 
                     handleCryptoTimeframeChange(() => {
-                        tbody.innerHTML = "";
-                        renderScrollDetector(false);
+                        document.body.style.overflow = "hidden";
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+
+                        renderSkeletonRows();
+
+                        // renderScrollDetector(false);
                         render();
+                        document.body.style.overflow = "initial";
                     });
 
                     handleCryptoSortChange(async () => {
-                        tbody.innerHTML = "";
-                        renderScrollDetector(false);
+                        document.body.style.overflow = "hidden";
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+
+                        renderSkeletonRows();
+
+                        // renderScrollDetector(false);
 
                         coins = await getCryptoCoinsFinal(
                             coins,
@@ -526,6 +541,7 @@
                         });
 
                         render();
+                        document.body.style.overflow = "initial";
                     });
 
                     function render() {
@@ -580,6 +596,38 @@
                         // `);
                     }
 
+                    function renderSkeletonRows() {
+                        tbody.innerHTML = "";
+                        for (let i = 0; i < 20; i++) {
+                            tbody.append(
+                                skeletonize(
+                                    CryptoEntry(
+                                        0,
+                                        {
+                                            symbol: "BTCB",
+                                            name: "Bitcoin",
+                                            quote: {
+                                                USD: {
+                                                    price: 0.000099,
+                                                    market_cap: 4000000,
+                                                    percent_change_1h: 90.0,
+                                                    percent_change_24h: 90.0,
+                                                    percent_change_7d: 90.0,
+                                                    percent_change_30d: 90.0,
+                                                },
+                                            },
+                                            cmc_rank: 888,
+                                        },
+                                        {
+                                            logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png",
+                                        },
+                                        cryptoTimeframe
+                                    )
+                                )
+                            );
+                        }
+                    }
+
                     /**
                      * @param {bool} shouldDetectScroll
                      **/
@@ -594,6 +642,10 @@
                                         USD: {
                                             price: 0.000099,
                                             market_cap: 4000000,
+                                            percent_change_1h: 90.0,
+                                            percent_change_24h: 90.0,
+                                            percent_change_7d: 90.0,
+                                            percent_change_30d: 90.0,
                                         },
                                     },
                                     cmc_rank: 888,

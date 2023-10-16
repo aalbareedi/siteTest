@@ -1149,13 +1149,4 @@ i.play-icon {
 .skeleton .crypto-name {
   row-gap: 4px;
 }
-
-.skeleton .crypto-entry-perc {
-  width: 100%;
-}
-
-.skeleton .crypto-entry-perc .skeleton-data-placeholder {
-  width: 100%;
-  margin-right: 8px;
-}
 /*# sourceMappingURL=style.css.map */

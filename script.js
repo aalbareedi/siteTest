@@ -30,12 +30,12 @@ body.onscroll = function () {
         backToTopBtn.classList.add("opacity-zero");
     }
 
-    let originalGlobalStatsTop = document.querySelector(".main-stats-wrapper");
-    if (scrollingElement.scrollTop > 74) {
-        originalGlobalStatsTop.classList.add("sticking");
-    } else {
-        originalGlobalStatsTop.classList.remove("sticking");
-    }
+    // let originalGlobalStatsTop = document.querySelector(".main-stats-wrapper");
+    // if (scrollingElement.scrollTop > 74) {
+    //     originalGlobalStatsTop.classList.add("sticking");
+    // } else {
+    //     originalGlobalStatsTop.classList.remove("sticking");
+    // }
 };
 
 const stats = document.querySelector(".main-stats-wrapper");
