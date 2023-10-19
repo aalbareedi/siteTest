@@ -170,21 +170,47 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px 20px;
     height: 42px;
     column-gap: 8px;
-    // font-size: 14px;
+    font-size: 14px;
     user-select: none;
 }
 #crypto-quantity-select {
-    min-width: 124px;
+    // min-width: 124px;
+    min-width: 114px;
 }
 #crypto-timeframe-select {
-    min-width: 106px;
+    // min-width: 106px;
+    min-width: 98px;
 }
 .crypto-control-arrow {
     padding-top: 2px;
     color: #9b9b9b;
+}
+.crypto-view-toggler {
+    background: #d1d1d1;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 6px;
+    height: 42px;
+    user-select: none;
+    margin-left: auto;
+    column-gap: 4px;
+}
+.crypto-toggle-opt {
+    color: #9b9b9b;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 40px;
+}
+.crypto-card-view {
+    background: transparent;
 }
 .search-crypto-btn {
     background: #d1d1d1;
@@ -739,7 +765,7 @@ i.play-icon {
     left: 0px;
     right: 0px;
     border-radius: 20px 20px 0px 0px;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 0px 20px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -755,12 +781,13 @@ i.play-icon {
 .select-close-btn {
     border: 2px solid #c4c4c4;
     display: block;
-    width: 100%;
+    // width: 100%;
     height: 48px;
     border-radius: 10px;
     background-color: #d1d1d1;
     // color: #7a7a7a;
     color: #4f4f4f;
+    margin: 0px 20px;
 }
 .select-options {
     margin-bottom: 20px;
@@ -770,6 +797,7 @@ i.play-icon {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0px 20px;
 }
 .select-opt + .select-opt {
     border-top: 1px solid lightgrey;
@@ -786,6 +814,7 @@ i.play-icon {
 }
 .selected-opt {
     color: #489447;
+    background-color: lightgrey;
 }
 .selected-opt i {
     opacity: 1;
