@@ -363,19 +363,6 @@
                                             "price"
                                         );
 
-                                        if (cryptoTimeframe == "30d") {
-                                            table.querySelector(
-                                                ".crypto-list-header-percent"
-                                            ).onclick = () => {};
-                                            table
-                                                .querySelector(
-                                                    ".crypto-list-header-percent .sort-arrow"
-                                                )
-                                                .classList.add(
-                                                    "display-hidden"
-                                                );
-                                            return;
-                                        }
                                         table
                                             .querySelector(
                                                 ".crypto-list-header-percent .sort-arrow"
@@ -439,6 +426,20 @@
                                         sortArrow.classList.add(
                                             isSortedDesc ? "desc" : "asc"
                                         );
+
+                                        if (cryptoTimeframe == "30d") {
+                                            table.querySelector(
+                                                ".crypto-list-header-percent"
+                                            ).onclick = () => {};
+                                            table
+                                                .querySelector(
+                                                    ".crypto-list-header-percent .sort-arrow"
+                                                )
+                                                .classList.add(
+                                                    "display-hidden"
+                                                );
+                                            return;
+                                        }
                                     }
 
                                     function handleHeaderClick(
