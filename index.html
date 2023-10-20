@@ -506,6 +506,7 @@
                     let coins = null;
                     let cryptoTotalCount = null;
                     let metadata = null;
+                    let abortController = null;
 
                     handleCryptoQuantityChange(async () => {
                         document.body.style.overflow = "hidden";
@@ -513,12 +514,23 @@
 
                         renderSkeletonRows();
 
-                        coins = await getCryptoCoinsFinal(
+                        // Abort the current fetch (if any)
+                        if (abortController) {
+                            abortController.abort();
+                        }
+
+                        abortController = new AbortController();
+                        coins = await getCryptoCoinsFinal({
                             coins,
                             cryptoQuantity,
-                            0,
-                            cryptoSort
-                        );
+                            quantityModifier: 0,
+                            cryptoSort,
+                            abortSignal: abortController.signal,
+                        });
+
+                        if (!coins) {
+                            return;
+                        }
 
                         cryptoTotalCount = await getCyptoTotalCount();
 
@@ -549,12 +561,23 @@
 
                         // renderScrollDetector(false);
 
-                        coins = await getCryptoCoinsFinal(
+                        // Abort the current fetch (if any)
+                        if (abortController) {
+                            abortController.abort();
+                        }
+
+                        abortController = new AbortController();
+                        coins = await getCryptoCoinsFinal({
                             coins,
                             cryptoQuantity,
-                            0,
-                            cryptoSort
-                        );
+                            quantityModifier: 0,
+                            cryptoSort,
+                            abortSignal: abortController.signal,
+                        });
+
+                        if (!coins) {
+                            return;
+                        }
 
                         cryptoTotalCount = await getCyptoTotalCount();
 
@@ -706,12 +729,23 @@
                                     cryptoQuantity == "All Coins" &&
                                     coins.length < cryptoTotalCount
                                 ) {
-                                    coins = await getCryptoCoinsFinal(
+                                    // Abort the current fetch (if any)
+                                    if (abortController) {
+                                        abortController.abort();
+                                    }
+
+                                    abortController = new AbortController();
+                                    coins = await getCryptoCoinsFinal({
                                         coins,
                                         cryptoQuantity,
-                                        100,
-                                        cryptoSort
-                                    );
+                                        quantityModifier: 100,
+                                        cryptoSort,
+                                        abortSignal: abortController.signal,
+                                    });
+
+                                    if (!coins) {
+                                        return;
+                                    }
 
                                     cryptoTotalCount =
                                         await getCyptoTotalCount();

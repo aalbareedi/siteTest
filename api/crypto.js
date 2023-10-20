@@ -14,12 +14,13 @@ const API_URL =
  *  quantity: number,
  *  sort: {
  *    property: "market_cap"|"price"|"percent_change_24h"|"percent_change_1h"|"percent_change_7d"|"percent_change_30d",
- *    direction: "asc"|"desc"
+ *    direction: "asc"|"desc",
+ *    abortSignal: AbortSignal
  *  }
  * }}
  * @returns {[]}
  */
-export async function getCryptoCoins({ quantity, sort = null }) {
+export async function getCryptoCoins({ quantity, sort = null, abortSignal }) {
     if (USE_SANDBOX_DATA) {
         return coins;
     }
@@ -32,23 +33,44 @@ export async function getCryptoCoins({ quantity, sort = null }) {
         url.searchParams.set("sort", JSON.stringify(sort));
     }
 
-    const response = await fetch(url, {
-        method: "GET",
-    });
+    try {
+        const response = await fetch(url, {
+            method: "GET",
+            signal: abortSignal,
+        });
 
-    if (!response.ok) {
-        throw new Error("Something went wrong.");
+        if (!response.ok) {
+            throw new Error("Something went wrong.");
+        }
+
+        return await response.json();
+    } catch (error) {
+        if (error.name == "AbortError") {
+            return null;
+        }
+
+        throw error;
     }
-
-    return await response.json();
 }
 
-export async function getCryptoCoinsFinal(
+/**
+ *
+ * @param {{
+ *  oldCoins: object[],
+ *  cryptoQuantity: string,
+ *  quantityModifier: number,
+ *  cryptoSort: object,
+ *  abortSignal: AbortSignal
+ * }}
+ * @returns
+ */
+export async function getCryptoCoinsFinal({
     oldCoins,
     cryptoQuantity,
     quantityModifier,
-    cryptoSort
-) {
+    cryptoSort,
+    abortSignal,
+}) {
     const oldQuantity = oldCoins ? oldCoins.length : 100;
 
     const coins = await getCryptoCoins({
@@ -62,7 +84,12 @@ export async function getCryptoCoinsFinal(
             cryptoQuantity == "Top 100" || cryptoQuantity == "Top 200"
                 ? null
                 : cryptoSort,
+        abortSignal: abortSignal,
     });
+
+    if (!coins) {
+        return coins;
+    }
 
     if (
         cryptoSort &&
