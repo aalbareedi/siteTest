@@ -408,12 +408,22 @@
                                             "market_cap"
                                         );
 
-                                        handleHeaderClick(
-                                            table.querySelector(
-                                                ".crypto-list-header-number"
-                                            ),
-                                            "market_cap"
-                                        );
+                                        table.querySelector(
+                                            ".crypto-list-header-number"
+                                        ).onclick = () => {
+                                            if (
+                                                cryptoSort.property ==
+                                                    "market_cap" &&
+                                                cryptoSort.direction == "desc"
+                                            ) {
+                                                return;
+                                            }
+
+                                            setCryptoSort({
+                                                property: "market_cap",
+                                                direction: "desc",
+                                            });
+                                        };
 
                                         if (!cryptoSort) {
                                             return;
