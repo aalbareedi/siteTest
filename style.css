@@ -30,6 +30,17 @@ body {
   color: #1f1f1f;
   font-family: "Kanit", sans-serif;
   font-size: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fixed-wrapper {
+  position: fixed;
+  min-height: 100dvh;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 header {
