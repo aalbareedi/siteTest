@@ -946,8 +946,11 @@ i.play-icon {
 
 // DARK MODE
 
-$dark-color-one: #0f0f0f;
-$dark-color-two: #1a1a1a;
+// $dark-color-one: #0f0f0f;
+$dark-color-one: #131517;
+// $dark-color-two: #1a1a1a;
+$dark-color-two: #1e1f24;
+$dark-color-three: #2e3037;
 
 body.dark {
     background-color: $dark-color-one;
@@ -956,7 +959,10 @@ body.dark {
 .dark {
     header {
         background-color: $dark-color-two;
-        border-color: #282828;
+        border-color: $dark-color-three;
+    }
+    #back-to-top-btn {
+        box-shadow: none;
     }
 }
 .dark .crypto-list-header {
@@ -973,37 +979,39 @@ body.dark {
 }
 .dark .main-dock {
     background-color: $dark-color-two;
-    border-color: #282828;
+    border-color: $dark-color-three;
 }
 .dark .main-dock-btn {
     border-color: $dark-color-two;
 }
 .dark .dock-btn-selected {
-    background-color: #323232;
-    border-color: #232323;
+    // background-color: #2e2f34;
+    background-color: $dark-color-three;
+    border-color: #3d3f46;
 }
 .dark .crypto-toggle-opt {
-    background-color: #323232;
+    background-color: $dark-color-three;
 }
 .dark .crypto-card-view {
     background-color: transparent;
 }
 .dark .main-stats-wrapper {
     background-color: $dark-color-two;
-    border-color: #2d2d2d;
+    border-color: $dark-color-three;
 }
 .dark .global-crypto-label {
-    border-color: #2d2d2d;
+    border-color: $dark-color-three;
 }
 .dark .crypto-pause-btn {
-    border-color: #2d2d2d;
+    border-color: $dark-color-three;
 }
 .dark .sort-arrow {
-    color: #272727;
+    color: #22262a;
 }
 .dark .crypto-list th,
 .dark .crypto-list td {
-    border-bottom: 1px solid #222222;
+    // #222222
+    border-bottom: 1px solid $dark-color-two;
 }
 .dark .skeleton-data-placeholder {
     filter: invert(1) brightness(0.6);
