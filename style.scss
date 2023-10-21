@@ -988,6 +988,9 @@ body.dark {
 .dark .crypto-list td {
     border-bottom: 1px solid #222222;
 }
+.dark .skeleton-data-placeholder {
+    filter: invert(1) brightness(0.6);
+}
 
 // @media only screen and (min-width: 740px) {}
 // hover styles

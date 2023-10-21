@@ -1325,4 +1325,9 @@ body.dark {
 .dark .crypto-list td {
   border-bottom: 1px solid #222222;
 }
+
+.dark .skeleton-data-placeholder {
+  -webkit-filter: invert(1) brightness(0.6);
+          filter: invert(1) brightness(0.6);
+}
 /*# sourceMappingURL=style.css.map */

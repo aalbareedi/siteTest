@@ -45,16 +45,24 @@
             </button>
             <script type="module">
                 const button = document.querySelector(".color-mode-btn");
-                let prefersDark = window.matchMedia(
-                    "(prefers-color-scheme: dark)"
-                ).matches;
-                if (prefersDark) {
-                    document.body.classList.add("dark");
-                }
+                let colorMode =
+                    localStorage.getItem("color-mode") ||
+                    (window.matchMedia("(prefers-color-scheme: dark)").matches
+                        ? "dark"
+                        : "light");
+
+                saveColorMode();
 
                 button.onclick = () => {
-                    document.body.classList.toggle("dark");
+                    // Toggle
+                    colorMode = colorMode == "dark" ? "light" : "dark";
+                    saveColorMode();
                 };
+
+                function saveColorMode() {
+                    document.body.classList.toggle("dark", colorMode == "dark");
+                    localStorage.setItem("color-mode", colorMode);
+                }
             </script>
             <button class="nav-menu-btn" type="button">
                 <i class="fa-solid fa-gear settings-nav-btn-icon"></i>

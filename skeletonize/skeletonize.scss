@@ -1,5 +1,3 @@
-$animation-duration: 2s;
-
 @keyframes skeleton-shimmer {
     0% {
         background-position: -200px 0;
@@ -15,7 +13,8 @@ $animation-duration: 2s;
     background-attachment: fixed;
     background-color: #d8d8d8;
     background-image: linear-gradient(90deg, #d8d8d8, #bdbdbd, #d8d8d8);
-    animation: skeleton-shimmer $animation-duration ease-in-out infinite;
+    // animation: skeleton-shimmer $animation-duration ease-in-out infinite;
+    animation: skeleton-shimmer 1.6s linear infinite;
     background-size: 200px 100%;
     background-repeat: no-repeat;
     color: transparent;
