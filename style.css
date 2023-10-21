@@ -1203,12 +1203,12 @@ i.play-icon {
 }
 
 .select-close-btn {
-  border: 2px solid #c4c4c4;
+  border: 2px solid #cbcbcb;
   display: block;
   height: 48px;
   border-radius: 10px;
   background-color: #d1d1d1;
-  color: #4f4f4f;
+  color: #817e7e;
   margin: 0px 20px;
 }
 
@@ -1228,6 +1228,7 @@ i.play-icon {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0px 20px;
+  color: #7a7a7a;
 }
 
 .select-opt + .select-opt {
@@ -1247,7 +1248,7 @@ i.play-icon {
 }
 
 .selected-opt {
-  color: #489447;
+  color: #489447 !important;
   background-color: lightgrey;
 }
 
@@ -1337,13 +1338,39 @@ body.dark {
   color: #22262a;
 }
 
+.dark .skeleton-data-placeholder {
+  -webkit-filter: invert(1) brightness(0.6);
+          filter: invert(1) brightness(0.6);
+}
+
 .dark .crypto-list th,
 .dark .crypto-list td {
   border-bottom: 1px solid #1e1f24;
 }
 
-.dark .skeleton-data-placeholder {
-  -webkit-filter: invert(1) brightness(0.6);
-          filter: invert(1) brightness(0.6);
+.dark .select-content {
+  background-color: #1e1f24;
+}
+
+.dark .select-title {
+  color: #c4c4c4;
+}
+
+.dark .select-opt {
+  color: #c4c4c4;
+}
+
+.dark .selected-opt {
+  background-color: #2e3037;
+}
+
+.dark .select-opt + .select-opt {
+  border-color: #4a4d59;
+}
+
+.dark .select-close-btn {
+  color: #c4c4c4;
+  background-color: #2e3037;
+  border-color: #4a4d59;
 }
 /*# sourceMappingURL=style.css.map */
