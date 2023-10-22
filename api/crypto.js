@@ -95,22 +95,40 @@ export async function getCryptoCoinsFinal({
         cryptoSort &&
         (cryptoQuantity == "Top 100" || cryptoQuantity == "Top 200")
     ) {
-        coins.sort((a, b) => {
-            if (cryptoSort.direction == "desc") {
-                return (
-                    b.quote.USD[cryptoSort.property] -
-                    a.quote.USD[cryptoSort.property]
-                );
-            } else {
-                return (
-                    a.quote.USD[cryptoSort.property] -
-                    b.quote.USD[cryptoSort.property]
-                );
-            }
-        });
+        // coins.sort((a, b) => {
+        //     if (cryptoSort.direction == "desc") {
+        //         return (
+        //             b.quote.USD[cryptoSort.property] -
+        //             a.quote.USD[cryptoSort.property]
+        //         );
+        //     } else {
+        //         return (
+        //             a.quote.USD[cryptoSort.property] -
+        //             b.quote.USD[cryptoSort.property]
+        //         );
+        //     }
+        // });
+
+        sortCoins(coins, cryptoSort.property, cryptoSort.direction);
     }
 
     return coins;
+}
+
+/**
+ *
+ * @param {object[]} coins
+ * @param {string} property
+ * @param {"asc"|"desc"} direction
+ */
+export function sortCoins(coins, property, direction) {
+    coins.sort((a, b) => {
+        if (direction == "desc") {
+            return b.quote.USD[property] - a.quote.USD[property];
+        } else {
+            return a.quote.USD[property] - b.quote.USD[property];
+        }
+    });
 }
 
 /**

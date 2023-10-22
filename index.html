@@ -499,6 +499,7 @@
                         getCryptoCoinsFinal,
                         getCryptoMetadata,
                         getCyptoTotalCount,
+                        sortCoins,
                     } from "./api/crypto.js";
                     import {
                         cryptoQuantity,
@@ -516,6 +517,7 @@
                     } from "./utils/constants.js";
                     import {
                         cryptoSort,
+                        setCryptoSort,
                         handleCryptoSortChange,
                     } from "./states/crypto-sort.js";
                     import { skeletonize } from "./skeletonize/skeletonize.js";
@@ -538,39 +540,36 @@
 
                         renderSkeletonRows();
 
-                        // Abort the current fetch (if any)
-                        if (abortController) {
-                            abortController.abort();
-                        }
-
-                        abortController = new AbortController();
-                        coins = await getCryptoCoinsFinal({
-                            coins,
-                            cryptoQuantity,
-                            quantityModifier: 0,
-                            cryptoSort,
-                            abortSignal: abortController.signal,
-                        });
-
-                        if (!coins) {
-                            return;
-                        }
-
-                        cryptoTotalCount = await getCyptoTotalCount();
-
-                        metadata = await getCryptoMetadata({
-                            coinIds: coins.map((coin) => coin.id),
-                        });
+                        await requestCoinData();
 
                         render();
                         document.body.style.overflow = "initial";
                     });
 
-                    handleCryptoTimeframeChange(() => {
+                    handleCryptoTimeframeChange(async () => {
                         document.body.style.overflow = "hidden";
                         window.scrollTo({ top: -1, behavior: "smooth" });
 
                         renderSkeletonRows();
+
+                        // If we're sorting by percent change, update to new timeframe
+                        if (cryptoSort.property.startsWith("percent_change_")) {
+                            if (cryptoTimeframe == "30d") {
+                                setCryptoSort({
+                                    property: `market_cap`,
+                                    direction: "desc",
+                                });
+
+                                return;
+                            }
+
+                            setCryptoSort({
+                                property: `percent_change_${cryptoTimeframe}`,
+                                direction: cryptoSort.direction,
+                            });
+
+                            return;
+                        }
 
                         // renderScrollDetector(false);
                         render();
@@ -585,6 +584,13 @@
 
                         // renderScrollDetector(false);
 
+                        await requestCoinData();
+
+                        render();
+                        document.body.style.overflow = "initial";
+                    });
+
+                    async function requestCoinData() {
                         // Abort the current fetch (if any)
                         if (abortController) {
                             abortController.abort();
@@ -608,10 +614,7 @@
                         metadata = await getCryptoMetadata({
                             coinIds: coins.map((coin) => coin.id),
                         });
-
-                        render();
-                        document.body.style.overflow = "initial";
-                    });
+                    }
 
                     function render() {
                         if (DISABLE_RENDER_DATA) {
