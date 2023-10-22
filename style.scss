@@ -185,17 +185,29 @@ header {
     flex-shrink: 0;
     display: none;
 }
-.crypto-search-bar {
+.crypto-search-bar-wrapper {
+    position: relative;
+    margin: 0px 20px;
+    color: #9b9b9b;
+}
+#crypto-search-bar {
     background: #d1d1d1;
     border-radius: 10px;
     height: 44px;
-    margin: 0px 20px;
-    position: relative;
     padding-left: 40px;
     display: flex;
     align-items: center;
-    color: #9b9b9b;
     word-spacing: 2px;
+    border: none;
+    width: 100%;
+    border: 2px solid transparent;
+}
+#crypto-search-bar::placeholder {
+    color: #9b9b9b;
+}
+#crypto-search-bar:focus {
+    outline: none;
+    border-color: #4094ff;
 }
 .search-bar-icon {
     position: absolute;
@@ -972,7 +984,7 @@ body.dark {
     .crypto-view-toggler {
         background-color: $dark-color-two;
     }
-    .crypto-search-bar {
+    #crypto-search-bar {
         background-color: $dark-color-two;
     }
     .main-dock {
