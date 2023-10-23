@@ -193,6 +193,7 @@ header {
     margin: 0px 20px 0px 20px;
     color: #9b9b9b;
     display: flex;
+    scroll-margin-top: $nav-height + 55px;
 }
 #crypto-search-bar {
     background: #d1d1d1;

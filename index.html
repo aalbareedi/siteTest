@@ -535,7 +535,10 @@
 
                     handleCryptoQuantityChange(async () => {
                         document.body.style.overflow = "hidden";
-                        window.scrollTo({ top: -1, behavior: "smooth" });
+                        // window.scrollTo({ top: -1, behavior: "smooth" });
+                        document
+                            .querySelector(".crypto-search-bar-wrapper")
+                            .scrollIntoView({ block: "nearest" });
 
                         renderSkeletonRows();
 
@@ -547,7 +550,10 @@
 
                     handleCryptoTimeframeChange(async () => {
                         document.body.style.overflow = "hidden";
-                        window.scrollTo({ top: -1, behavior: "smooth" });
+                        // window.scrollTo({ top: -1, behavior: "smooth" });
+                        document
+                            .querySelector(".crypto-search-bar-wrapper")
+                            .scrollIntoView({ block: "nearest" });
 
                         renderSkeletonRows();
 
@@ -577,7 +583,10 @@
 
                     handleCryptoSortChange(async () => {
                         document.body.style.overflow = "hidden";
-                        window.scrollTo({ top: -1, behavior: "smooth" });
+                        // window.scrollTo({ top: -1, behavior: "smooth" });
+                        document
+                            .querySelector(".crypto-search-bar-wrapper")
+                            .scrollIntoView({ block: "nearest" });
 
                         renderSkeletonRows();
 

@@ -277,6 +277,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  scroll-margin-top: 115px;
 }
 
 #crypto-search-bar {
