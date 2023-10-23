@@ -188,9 +188,23 @@ header {
     flex-shrink: 0;
     display: none;
 }
+.search-focused {
+    header {
+        display: none;
+    }
+    // .main-stats-wrapper {
+    //     top: 150px;
+    // }
+    .crypto-cancel-search-btn {
+        display: initial;
+    }
+    #crypto-search-bar {
+        margin-right: 0px;
+    }
+}
 .crypto-search-bar-wrapper {
     position: relative;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 0px 0px 20px;
     color: #9b9b9b;
     display: flex;
     scroll-margin-top: $nav-height + 55px;
@@ -206,6 +220,8 @@ header {
     border: none;
     width: 100%;
     border: 2px solid transparent;
+    scroll-margin-top: 55px;
+    margin-right: 20px;
 }
 #crypto-search-bar::placeholder {
     color: #9b9b9b;
@@ -222,11 +238,18 @@ header {
 }
 .crypto-cancel-search-btn {
     background-color: transparent;
-    font-size: 20px;
-    padding: 0px 0px 0px 18px;
+    font-size: 14px;
+    // padding: 0px 0px 0px 18px;
     // color: #1f1f1f;
     color: #9b9b9b;
     border: none;
+    width: 60px;
+    // background-color: orange;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
 }
 .crypto-tabs {
     background: #d1d1d1;
@@ -372,6 +395,10 @@ header {
 .crypto-list-header-number {
     color: #7a7a7a;
 }
+// .crypto-list-header-price {
+//     width: 1px;
+//     white-space: nowrap;
+// }
 .crypto-name-wrapper {
     display: flex;
     align-items: center;
@@ -452,8 +479,8 @@ th.crypto-th-mcap {
     text-align: right;
     // background-color: orange;
     // fit column around content
-    width: 1px;
-    white-space: nowrap;
+    // width: 1px;
+    // white-space: nowrap;
 }
 .crypto-th-mcap .crypto-th-content {
     justify-content: flex-end;

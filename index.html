@@ -211,9 +211,23 @@
                             id="crypto-search-bar"
                             placeholder="Search Cryptocurrencies"
                         />
+                        <script type="module">
+                            const searchBar =
+                                document.querySelector("#crypto-search-bar");
+                            searchBar.onfocus = () => {
+                                document.body.classList.add("search-focused");
+                                searchBar.scrollIntoView();
+                            };
+                            searchBar.onblur = () => {
+                                document.body.classList.remove(
+                                    "search-focused"
+                                );
+                            };
+                        </script>
                         <i class="fas fa-search search-bar-icon"></i>
                         <button type="button" class="crypto-cancel-search-btn">
-                            <i class="fas fa-times"></i>
+                            Cancel
+                            <!-- <i class="fas fa-times"></i> -->
                         </button>
                     </form>
                     <div class="crypto-tabs">

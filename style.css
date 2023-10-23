@@ -270,9 +270,21 @@ header {
   display: none;
 }
 
+.search-focused header {
+  display: none;
+}
+
+.search-focused .crypto-cancel-search-btn {
+  display: initial;
+}
+
+.search-focused #crypto-search-bar {
+  margin-right: 0px;
+}
+
 .crypto-search-bar-wrapper {
   position: relative;
-  margin: 0px 20px 0px 20px;
+  margin: 0px 0px 0px 20px;
   color: #9b9b9b;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,6 +307,8 @@ header {
   border: none;
   width: 100%;
   border: 2px solid transparent;
+  scroll-margin-top: 55px;
+  margin-right: 20px;
 }
 
 #crypto-search-bar::-webkit-input-placeholder {
@@ -327,10 +341,22 @@ header {
 
 .crypto-cancel-search-btn {
   background-color: transparent;
-  font-size: 20px;
-  padding: 0px 0px 0px 18px;
+  font-size: 14px;
   color: #9b9b9b;
   border: none;
+  width: 60px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
 }
 
 .crypto-tabs {
@@ -661,8 +687,6 @@ header {
 
 th.crypto-th-mcap {
   text-align: right;
-  width: 1px;
-  white-space: nowrap;
 }
 
 .crypto-th-mcap .crypto-th-content {
