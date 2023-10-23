@@ -450,6 +450,9 @@ header {
 th.crypto-th-mcap {
     text-align: right;
     // background-color: orange;
+    // fit column around content
+    width: 1px;
+    white-space: nowrap;
 }
 .crypto-th-mcap .crypto-th-content {
     justify-content: flex-end;

@@ -660,6 +660,8 @@ header {
 
 th.crypto-th-mcap {
   text-align: right;
+  width: 1px;
+  white-space: nowrap;
 }
 
 .crypto-th-mcap .crypto-th-content {
