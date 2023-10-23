@@ -119,18 +119,21 @@ header {
 }
 .main-dock {
     position: fixed;
-    // top: calc(100dvh - $nav-height);
+    // top: calc(var(--100vh) - 60px);
     bottom: 0px;
     left: 0px;
     right: 0px;
     z-index: 10;
-    height: $nav-height;
+    // height: $nav-height;
+    // FIX FOR SAFARI FLICKERING ON MOBILE SCROLL, make height more than nav height or else flicker occurs...
+    height: 62px;
     display: flex;
     background-color: lightgrey;
     border-top: 2px solid #dadada;
     flex-direction: row-reverse;
     padding: 8px;
 }
+
 .main-dock-btn {
     font-family: $font-one;
     background-color: transparent;

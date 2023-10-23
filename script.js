@@ -103,30 +103,3 @@ cryptoQuantitySelect.onclick = () => {
     );
     selectWindow.classList.remove("overlay-hidden");
 };
-
-// document.documentElement.style.setProperty(
-//     "--100vh",
-//     window.innerHeight + "px"
-// );
-// document.querySelector("#window-size").innerHTML = `
-// <div>1: ${window.innerHeight + "px"}</div>
-// <div>2: ${window.screen.height + "px"}</div>
-// <div>3: ${window.screen.availHeight + "px"}</div>
-// <div>4: ${document.documentElement.clientHeight + "px"}</div>
-// <div>5: ${document.body.clientHeight + "px"}</div>
-// `;
-
-// window.onresize = () => {
-//     document.documentElement.style.setProperty(
-//         "--100vh",
-//         window.innerHeight + "px"
-//     );
-
-//     document.querySelector("#window-size").innerHTML = `
-//     <div>1: ${window.innerHeight + "px"}</div>
-//     <div>2: ${window.screen.height + "px"}</div>
-//     <div>3: ${window.screen.availHeight + "px"}</div>
-//     <div>4: ${document.documentElement.clientHeight + "px"}</div>
-//     <div>5: ${document.body.clientHeight + "px"}</div>
-//     `;
-// };
