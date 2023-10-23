@@ -272,8 +272,11 @@ header {
 
 .crypto-search-bar-wrapper {
   position: relative;
-  margin: 0px 20px;
+  margin: 0px 20px 0px 20px;
   color: #9b9b9b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #crypto-search-bar {
@@ -319,6 +322,14 @@ header {
   left: 14px;
   top: 14px;
   font-size: 16px;
+}
+
+.crypto-cancel-search-btn {
+  background-color: transparent;
+  font-size: 20px;
+  padding: 0px 0px 0px 18px;
+  color: #9b9b9b;
+  border: none;
 }
 
 .crypto-tabs {
@@ -1392,7 +1403,7 @@ body.dark {
 }
 
 .dark .select-opt + .select-opt {
-  border-color: #4a4d59;
+  border-color: #41434d;
 }
 
 .dark .select-close-btn {

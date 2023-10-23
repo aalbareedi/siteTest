@@ -71,6 +71,20 @@
             </button>
         </header>
 
+        <nav class="main-dock">
+            <button id="stocks-dock-btn" class="main-dock-btn" type="button">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <div class="main-dock-btn-text">Stocks</div>
+            </button>
+            <button
+                id="crypto-dock-btn"
+                class="main-dock-btn dock-btn-selected"
+                type="button"
+            >
+                <i class="fab fa-bitcoin"></i>
+                <div class="main-dock-btn-text">Crypto</div>
+            </button>
+        </nav>
         <main id="main-content">
             <div id="crypto">
                 <h1 class="main-title">Cryptocurrency</h1>
@@ -205,7 +219,7 @@
                     });
                 </script>
                 <div class="crypto-options">
-                    <div class="crypto-search-bar-wrapper">
+                    <form class="crypto-search-bar-wrapper" action="">
                         <input
                             type="search"
                             name=""
@@ -213,10 +227,10 @@
                             placeholder="Search Cryptocurrencies"
                         />
                         <i class="fas fa-search search-bar-icon"></i>
-                        <!-- <div class="search-bar-placeholder">
-                            Search Cryptocurrencies
-                        </div> -->
-                    </div>
+                        <button type="button" class="crypto-cancel-search-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </form>
                     <div class="crypto-tabs">
                         <div class="crypto-tab selected-crypto-tab">
                             Markets
@@ -1113,20 +1127,16 @@
             </a>
         </main>
 
-        <nav class="main-dock">
-            <button id="stocks-dock-btn" class="main-dock-btn" type="button">
-                <i class="fa-solid fa-arrow-trend-up"></i>
-                <div class="main-dock-btn-text">Stocks</div>
-            </button>
-            <button
-                id="crypto-dock-btn"
-                class="main-dock-btn dock-btn-selected"
-                type="button"
-            >
-                <i class="fab fa-bitcoin"></i>
-                <div class="main-dock-btn-text">Crypto</div>
-            </button>
-        </nav>
+        <div
+            id="window-size"
+            style="
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 999999;
+                background: white;
+            "
+        ></div>
         <!-- <footer>
             <div class="footer-credits">
                 All of the UI in this app is 100% completely designed &

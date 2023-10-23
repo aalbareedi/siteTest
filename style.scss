@@ -118,8 +118,8 @@ header {
     display: none;
 }
 .main-dock {
-    // position: absolute;
     position: fixed;
+    // top: calc(100dvh - $nav-height);
     bottom: 0px;
     left: 0px;
     right: 0px;
@@ -187,8 +187,9 @@ header {
 }
 .crypto-search-bar-wrapper {
     position: relative;
-    margin: 0px 20px;
+    margin: 0px 20px 0px 20px;
     color: #9b9b9b;
+    display: flex;
 }
 #crypto-search-bar {
     background: #d1d1d1;
@@ -214,6 +215,14 @@ header {
     left: 14px;
     top: 14px;
     font-size: 16px;
+}
+.crypto-cancel-search-btn {
+    background-color: transparent;
+    font-size: 20px;
+    padding: 0px 0px 0px 18px;
+    // color: #1f1f1f;
+    color: #9b9b9b;
+    border: none;
 }
 .crypto-tabs {
     background: #d1d1d1;
@@ -1038,7 +1047,7 @@ body.dark {
         background-color: #2e3037;
     }
     .select-opt + .select-opt {
-        border-color: #4a4d59;
+        border-color: #41434d;
     }
     .select-close-btn {
         color: #c4c4c4;
