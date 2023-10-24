@@ -216,7 +216,7 @@
                                 document.querySelector("#crypto-search-bar");
                             searchBar.onfocus = () => {
                                 document.body.classList.add("search-focused");
-                                searchBar.scrollIntoView();
+                                // searchBar.scrollIntoView();
                             };
                             searchBar.onblur = () => {
                                 document.body.classList.remove(
@@ -551,7 +551,7 @@
                         document.body.style.overflow = "hidden";
                         // window.scrollTo({ top: -1, behavior: "smooth" });
                         document
-                            .querySelector(".crypto-search-bar-wrapper")
+                            .querySelector("#crypto-search-bar")
                             .scrollIntoView({ block: "nearest" });
 
                         renderSkeletonRows();
@@ -566,7 +566,7 @@
                         document.body.style.overflow = "hidden";
                         // window.scrollTo({ top: -1, behavior: "smooth" });
                         document
-                            .querySelector(".crypto-search-bar-wrapper")
+                            .querySelector("#crypto-search-bar")
                             .scrollIntoView({ block: "nearest" });
 
                         renderSkeletonRows();
@@ -599,7 +599,7 @@
                         document.body.style.overflow = "hidden";
                         // window.scrollTo({ top: -1, behavior: "smooth" });
                         document
-                            .querySelector(".crypto-search-bar-wrapper")
+                            .querySelector("#crypto-search-bar")
                             .scrollIntoView({ block: "nearest" });
 
                         renderSkeletonRows();

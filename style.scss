@@ -189,9 +189,9 @@ header {
     display: none;
 }
 .search-focused {
-    header {
-        display: none;
-    }
+    // header {
+    //     display: none;
+    // }
     // .main-stats-wrapper {
     //     top: 150px;
     // }
@@ -207,7 +207,6 @@ header {
     margin: 0px 0px 0px 20px;
     color: #9b9b9b;
     display: flex;
-    scroll-margin-top: $nav-height + 55px;
 }
 #crypto-search-bar {
     background: #d1d1d1;
@@ -220,7 +219,7 @@ header {
     border: none;
     width: 100%;
     border: 2px solid transparent;
-    scroll-margin-top: 55px;
+    scroll-margin-top: $nav-height + 55px;
     margin-right: 20px;
 }
 #crypto-search-bar::placeholder {

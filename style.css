@@ -270,10 +270,6 @@ header {
   display: none;
 }
 
-.search-focused header {
-  display: none;
-}
-
 .search-focused .crypto-cancel-search-btn {
   display: initial;
 }
@@ -289,7 +285,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  scroll-margin-top: 115px;
 }
 
 #crypto-search-bar {
@@ -307,7 +302,7 @@ header {
   border: none;
   width: 100%;
   border: 2px solid transparent;
-  scroll-margin-top: 55px;
+  scroll-margin-top: 115px;
   margin-right: 20px;
 }
 
