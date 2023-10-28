@@ -606,13 +606,13 @@
 
                         // renderScrollDetector(false);
 
-                        await requestCoinData();
+                        await requestCoinData(true);
 
                         render();
                         document.body.style.overflow = "initial";
                     });
 
-                    async function requestCoinData(restart = false) {
+                    async function requestCoinData(reset = false) {
                         // Abort the current fetch (if any)
                         if (abortController) {
                             abortController.abort();
@@ -620,7 +620,7 @@
 
                         abortController = new AbortController();
                         coins = await getCryptoCoinsFinal({
-                            oldCoins: restart ? null : coins,
+                            oldCoins: reset ? null : coins,
                             cryptoQuantity,
                             quantityModifier: 0,
                             cryptoSort,
