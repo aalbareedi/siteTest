@@ -556,7 +556,7 @@
 
                         renderSkeletonRows();
 
-                        await requestCoinData();
+                        await requestCoinData(true);
 
                         render();
                         document.body.style.overflow = "initial";
@@ -612,7 +612,7 @@
                         document.body.style.overflow = "initial";
                     });
 
-                    async function requestCoinData() {
+                    async function requestCoinData(restart = false) {
                         // Abort the current fetch (if any)
                         if (abortController) {
                             abortController.abort();
@@ -620,7 +620,7 @@
 
                         abortController = new AbortController();
                         coins = await getCryptoCoinsFinal({
-                            coins,
+                            oldCoins: restart ? null : coins,
                             cryptoQuantity,
                             quantityModifier: 0,
                             cryptoSort,
@@ -785,9 +785,9 @@
 
                                     abortController = new AbortController();
                                     coins = await getCryptoCoinsFinal({
-                                        coins,
+                                        oldCoins: coins,
                                         cryptoQuantity,
-                                        quantityModifier: 100,
+                                        quantityModifier: 20,
                                         cryptoSort,
                                         abortSignal: abortController.signal,
                                     });
