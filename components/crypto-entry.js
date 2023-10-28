@@ -4,21 +4,24 @@ import {
     collapseZeros,
 } from "../utils/data-formatter.js";
 import { html } from "../utils/html.js";
+import { skeletonize } from "../skeletonize/skeletonize.js";
+import { DISABLE_COIN_EXPIRATION } from "../utils/constants.js";
 
 /**
  *
- * @param {number} number
  * @param {{symbol: string, name: string, quote: object}} coin
  * @param {object} metadata
  * @param {"1h"|"24h"|"7d"|"30d"} changeTimeframe
+ * @param {number} lifespan - The amount of time (in ms) before this data expires.
  * @returns
  */
-export default function CryptoEntry(
-    number,
-    { symbol, name, quote, cmc_rank },
+export default function CryptoEntry({
+    coin,
     metadata,
-    changeTimeframe
-) {
+    changeTimeframe,
+    lifespan = 60000,
+}) {
+    const { symbol, name, quote, cmc_rank } = coin;
     // Return a new element/DOM object
     const element = html(`
         <tr class="crypto-entry">
@@ -51,6 +54,12 @@ export default function CryptoEntry(
             <td class="crypto-mcap">${formatUsd(quote.USD.market_cap)}</td>
         </tr>
     `);
+
+    setTimeout(() => {
+        if (!DISABLE_COIN_EXPIRATION) {
+            skeletonize(element);
+        }
+    }, lifespan);
 
     return element;
 }

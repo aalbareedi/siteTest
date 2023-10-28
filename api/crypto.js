@@ -72,8 +72,6 @@ export async function getCryptoCoinsFinal({
     abortSignal,
 }) {
     const oldQuantity = oldCoins ? oldCoins.length : 20;
-    console.log("oldCoins: ", oldCoins);
-    console.log("quantityModifier: ", quantityModifier);
 
     const coins = await getCryptoCoins({
         quantity:

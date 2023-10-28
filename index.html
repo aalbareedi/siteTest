@@ -650,12 +650,11 @@
 
                         for (let i = 0; i < coins.length; i++) {
                             tbody.append(
-                                CryptoEntry(
-                                    i + 1,
-                                    coins[i],
-                                    metadata[coins[i].id],
-                                    cryptoTimeframe
-                                )
+                                CryptoEntry({
+                                    coin: coins[i],
+                                    metadata: metadata[coins[i].id],
+                                    changeTimeframe: cryptoTimeframe,
+                                })
                             );
                         }
 
@@ -698,9 +697,8 @@
                         for (let i = 0; i < rowCount; i++) {
                             tbody.append(
                                 skeletonize(
-                                    CryptoEntry(
-                                        0,
-                                        {
+                                    CryptoEntry({
+                                        coin: {
                                             symbol: "BTCB",
                                             name: "Bitcoin",
                                             quote: {
@@ -715,11 +713,11 @@
                                             },
                                             cmc_rank: 888,
                                         },
-                                        {
+                                        metadata: {
                                             logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png",
                                         },
-                                        cryptoTimeframe
-                                    )
+                                        changeTimeframe: cryptoTimeframe,
+                                    })
                                 )
                             );
                         }
@@ -730,9 +728,8 @@
                      **/
                     function renderScrollDetector(shouldDetectScroll) {
                         const scrollDetector = skeletonize(
-                            CryptoEntry(
-                                0,
-                                {
+                            CryptoEntry({
+                                coin: {
                                     symbol: "BTCB",
                                     name: "Bitcoin",
                                     quote: {
@@ -747,11 +744,11 @@
                                     },
                                     cmc_rank: 888,
                                 },
-                                {
+                                metadata: {
                                     logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png",
                                 },
-                                cryptoTimeframe
-                            )
+                                changeTimeframe: cryptoTimeframe,
+                            })
                         );
 
                         tbody.append(scrollDetector);
