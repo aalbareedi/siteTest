@@ -281,6 +281,28 @@
                                 <i class="fas fa-th-large"></i>
                             </div>
                         </div>
+                        <script type="module">
+                            import {
+                                cryptoView,
+                                setCryptoView,
+                                handleCryptoViewChange,
+                            } from "./states/crypto-view.js";
+
+                            const toggler = document.querySelector(
+                                ".crypto-view-toggler"
+                            );
+                            toggler.onclick = () => {
+                                setCryptoView(
+                                    cryptoView == "table" ? "card" : "table"
+                                );
+                            };
+
+                            handleCryptoViewChange(() => {
+                                toggler.classList.remove("table-view");
+                                toggler.classList.remove("card-view");
+                                toggler.classList.add(cryptoView + "-view");
+                            });
+                        </script>
                         <div class="search-crypto-btn">
                             <i class="fas fa-search"></i>
                         </div>
@@ -505,6 +527,7 @@
                     </table>
                     <!-- <div id="crypto-infinite-scroller"></div> -->
                 </div>
+                <div class="crypto-cards-wrapper"></div>
                 <script type="module">
                     import CryptoEntry from "./components/crypto-entry.js";
                     import {
@@ -533,6 +556,10 @@
                         setCryptoSort,
                         handleCryptoSortChange,
                     } from "./states/crypto-sort.js";
+                    import {
+                        cryptoView,
+                        handleCryptoViewChange,
+                    } from "./states/crypto-view.js";
                     import { skeletonize } from "./skeletonize/skeletonize.js";
 
                     /**
@@ -546,6 +573,21 @@
                     let cryptoTotalCount = null;
                     let metadata = null;
                     let abortController = null;
+
+                    handleCryptoViewChange(() => {
+                        document
+                            .querySelector(".crypto-table-wrapper")
+                            .classList.toggle(
+                                "display-hidden",
+                                cryptoView == "card"
+                            );
+                        document
+                            .querySelector(".crypto-cards-wrapper")
+                            .classList.toggle(
+                                "display-hidden",
+                                cryptoView == "table"
+                            );
+                    });
 
                     handleCryptoQuantityChange(async () => {
                         document.body.style.overflow = "hidden";
