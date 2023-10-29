@@ -472,12 +472,13 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #e0e0e0;
+  background-color: transparent;
   border-radius: 40px;
 }
 
-.crypto-card-view {
-  background: transparent;
+.table-view .crypto-table-view,
+.card-view .crypto-card-view {
+  background-color: #e0e0e0;
 }
 
 .crypto-table-wrapper {
@@ -1328,6 +1329,22 @@ i.play-icon {
   row-gap: 4px;
 }
 
+.crypto-cards-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+  padding: 20px;
+}
+
+.crypto-card {
+  border-radius: 10px;
+  height: 120px;
+  background-color: #d1d1d1;
+}
+
 body.dark {
   background-color: #131517;
   color: #c4c4c4;
@@ -1373,12 +1390,9 @@ body.dark {
   border-color: #3d3f46;
 }
 
-.dark .crypto-toggle-opt {
+.dark .table-view .crypto-table-view,
+.dark .card-view .crypto-card-view {
   background-color: #2e3037;
-}
-
-.dark .crypto-card-view {
-  background-color: transparent;
 }
 
 .dark .main-stats-wrapper {
