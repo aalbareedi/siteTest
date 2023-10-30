@@ -1010,14 +1010,19 @@ i.play-icon {
 }
 .crypto-card {
     border-radius: 10px;
-    height: 120px;
+    // height: 120px;
     background-color: #d1d1d1;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
 }
 .crypto-card-intro {
     display: flex;
     align-items: center;
     column-gap: 8px;
-    padding: 10px 10px 10px 10px;
+    // margin: 10px 12px 0px 12px;
+    // border-bottom: 1px solid #c2c2c2;
 }
 .crypto-card-logo {
     width: 30px;
@@ -1033,6 +1038,46 @@ i.play-icon {
 .crypto-card-name {
     display: flex;
     flex-direction: column;
+}
+.crypto-card-symbol {
+    font-weight: bold;
+    font-size: 16px;
+}
+.crypto-card-name-text {
+    color: #7a7a7a;
+    font-size: 14px;
+}
+.crypto-card-stats-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // margin: 10px 12px;
+}
+.crypto-card-row-perc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4px;
+}
+.crypto-card-row-perc i {
+    padding-top: 2px;
+    font-size: 12px;
+}
+.card-positive-entry {
+    color: #489447;
+}
+.card-negative-entry {
+    color: #d46666;
+}
+.crypto-card-stats {
+    font-size: 14px;
+}
+.crypto-card-mcap {
+    color: #7a7a7a;
+    display: none;
+}
+.crypto-card-price {
+    font-size: 14px;
 }
 
 // DARK MODE

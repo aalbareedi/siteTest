@@ -35,19 +35,25 @@ export default function CryptoCard({
                     <div class="crypto-card-name-text">${name}</div>
                 </div>
             </div>
-            <div class="crypto-card-price">${collapseZeros(
-                formatUsd(quote.USD.price)
-            )}</div>
-            <div class="crypto-card-row-perc ${
-                quote.USD["percent_change_" + changeTimeframe] >= 0
-                    ? "card-positive-entry"
-                    : "card-negative-entry"
-            }">
-                <i class="fas fa-caret-up"></i>${formatPercent(
-                    quote.USD["percent_change_" + changeTimeframe] / 100
-                )}
+            <div class="crypto-card-stats-wrapper">
+                <div class="crypto-card-stats">
+                    <div class="crypto-card-row-perc ${
+                        quote.USD["percent_change_" + changeTimeframe] >= 0
+                            ? "card-positive-entry"
+                            : "card-negative-entry"
+                    }">
+                        <i class="fas fa-caret-up"></i>${formatPercent(
+                            quote.USD["percent_change_" + changeTimeframe] / 100
+                        )}
+                    </div>
+                    <div class="crypto-card-mcap">${formatUsd(
+                        quote.USD.market_cap
+                    )}</div>
+                </div>
+                <div class="crypto-card-price">${collapseZeros(
+                    formatUsd(quote.USD.price)
+                )}</div>
             </div>
-            <div>${formatUsd(quote.USD.market_cap)}</div>
         </div>
     `);
 

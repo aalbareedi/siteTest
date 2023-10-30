@@ -1340,8 +1340,16 @@ i.play-icon {
 
 .crypto-card {
   border-radius: 10px;
-  height: 120px;
   background-color: #d1d1d1;
+  padding: 10px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 14px;
 }
 
 .crypto-card-intro {
@@ -1353,7 +1361,6 @@ i.play-icon {
           align-items: center;
   -webkit-column-gap: 8px;
           column-gap: 8px;
-  padding: 10px 10px 10px 10px;
 }
 
 .crypto-card-logo {
@@ -1381,6 +1388,68 @@ i.play-icon {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.crypto-card-symbol {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.crypto-card-name-text {
+  color: #7a7a7a;
+  font-size: 14px;
+}
+
+.crypto-card-stats-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.crypto-card-row-perc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 4px;
+          column-gap: 4px;
+}
+
+.crypto-card-row-perc i {
+  padding-top: 2px;
+  font-size: 12px;
+}
+
+.card-positive-entry {
+  color: #489447;
+}
+
+.card-negative-entry {
+  color: #d46666;
+}
+
+.crypto-card-stats {
+  font-size: 14px;
+}
+
+.crypto-card-mcap {
+  color: #7a7a7a;
+  display: none;
+}
+
+.crypto-card-price {
+  font-size: 14px;
 }
 
 body.dark {
