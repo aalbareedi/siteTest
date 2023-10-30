@@ -22,34 +22,31 @@ export default function CryptoCard({
     lifespan = 60000,
 }) {
     const { symbol, name, quote, cmc_rank } = coin;
+    // <div>${cmc_rank}</div>
     // Return a new element/DOM object
     const element = html(`
         <div class="crypto-card">
-            <div>${cmc_rank}</div>
-
-            <div class="crypto-card-name">
+            <div class="crypto-card-intro">
                 <div class="crypto-card-logo">
                     <img src="${metadata ? metadata.logo : ""}" />
                 </div>
-                <div class="crypto-name">
-                    <div class="crypto-symbol">${symbol}</div>
-                    <div class="crypto-name-text">${name}</div>
-                    <div class="crypto-name-text">${collapseZeros(
-                        formatUsd(quote.USD.price)
-                    )}</div>
+                <div class="crypto-card-name">
+                    <div class="crypto-card-symbol">${symbol}</div>
+                    <div class="crypto-card-name-text">${name}</div>
                 </div>
             </div>
-            
-            <div
-            class="crypto-row-perc ${
-                quote.USD["percent_change_" + changeTimeframe] >= 0
-                    ? "positive-entry"
-                    : "negative-entry"
-            }"
-            ><i class="fas fa-caret-up"></i>${formatPercent(
-                quote.USD["percent_change_" + changeTimeframe] / 100
+            <div class="crypto-card-price">${collapseZeros(
+                formatUsd(quote.USD.price)
             )}</div>
-
+            <div class="crypto-card-row-perc ${
+                quote.USD["percent_change_" + changeTimeframe] >= 0
+                    ? "card-positive-entry"
+                    : "card-negative-entry"
+            }">
+                <i class="fas fa-caret-up"></i>${formatPercent(
+                    quote.USD["percent_change_" + changeTimeframe] / 100
+                )}
+            </div>
             <div>${formatUsd(quote.USD.market_cap)}</div>
         </div>
     `);

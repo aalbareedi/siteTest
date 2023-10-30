@@ -415,7 +415,6 @@ header {
 }
 .crypto-logo img {
     max-width: 100%;
-    pointer-events: none;
     user-select: none;
 }
 .crypto-name,
@@ -1004,7 +1003,7 @@ i.play-icon {
 // CARDS VIEW
 .crypto-cards-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-column-gap: 12px;
     grid-row-gap: 12px;
     padding: 20px;
@@ -1014,8 +1013,26 @@ i.play-icon {
     height: 120px;
     background-color: #d1d1d1;
 }
+.crypto-card-intro {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    padding: 10px 10px 10px 10px;
+}
+.crypto-card-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.crypto-card-logo img {
+    max-width: 100%;
+    user-select: none;
+}
 .crypto-card-name {
     display: flex;
+    flex-direction: column;
 }
 
 // DARK MODE
