@@ -291,10 +291,17 @@
                             const toggler = document.querySelector(
                                 ".crypto-view-toggler"
                             );
-                            toggler.onclick = () => {
-                                setCryptoView(
-                                    cryptoView == "table" ? "card" : "table"
-                                );
+
+                            const tableViewButton =
+                                document.querySelector(".crypto-table-view");
+                            tableViewButton.onclick = () => {
+                                setCryptoView("table");
+                            };
+
+                            const cardViewButton =
+                                document.querySelector(".crypto-card-view");
+                            cardViewButton.onclick = () => {
+                                setCryptoView("card");
                             };
 
                             handleCryptoViewChange(() => {
@@ -528,7 +535,13 @@
                     <!-- <div id="crypto-infinite-scroller"></div> -->
                 </div>
                 <div class="crypto-cards-wrapper">
-                    <div class="crypto-card"></div>
+                    <div class="crypto-card">
+                        <div class="crypto-card-name">
+                            <div class="crypto-card-logo">
+                                <img src="" />
+                            </div>
+                        </div>
+                    </div>
                     <div class="crypto-card"></div>
                     <div class="crypto-card"></div>
                 </div>
