@@ -374,7 +374,7 @@ header {
 // .crypto-list-header-percent {
 //     text-align: center;
 // }
-.crypto-entry {
+.crypto-row {
     height: 60px;
 }
 .stock-entry {
@@ -385,7 +385,7 @@ header {
     position: relative;
     border-bottom: 1px solid #cfcfcf;
 }
-.crypto-entry-pair {
+.crypto-row-pair {
     display: flex;
 }
 .crypto-number {
@@ -514,7 +514,7 @@ th.crypto-th-mcap {
 // .stock-list-header-percent {
 //     width: 70px;
 // }
-.crypto-entry-perc {
+.crypto-row-perc {
     // text-align: center;
     // padding: 4px;
     // margin: 0px auto;
@@ -527,7 +527,7 @@ th.crypto-th-mcap {
     border-radius: 4px;
     // letter-spacing: 0.4px;
 }
-.crypto-entry-perc i {
+.crypto-row-perc i {
     // padding-right: 4px;
     font-size: 14px;
 }
@@ -537,7 +537,7 @@ th.crypto-th-mcap {
     min-width: 70px;
     text-align: center;
 }
-// .crypto-entry-perc::first-letter {
+// .crypto-row-perc::first-letter {
 //     margin-right: 2px;
 // }
 .negative-entry {
@@ -982,7 +982,7 @@ i.play-icon {
 //     border-radius: 6px;
 // }
 
-.skeleton .crypto-entry-perc i {
+.skeleton .crypto-row-perc i {
     display: none;
 }
 .skeleton-data-placeholder {
@@ -991,10 +991,10 @@ i.play-icon {
 .skeleton .crypto-name {
     row-gap: 4px;
 }
-// .skeleton .crypto-entry-perc {
+// .skeleton .crypto-row-perc {
 //     width: 100%;
 // }
-// .skeleton .crypto-entry-perc .skeleton-data-placeholder {
+// .skeleton .crypto-row-perc .skeleton-data-placeholder {
 //     width: 100%;
 //     margin-right: 8px;
 // }
@@ -1013,6 +1013,9 @@ i.play-icon {
     border-radius: 10px;
     height: 120px;
     background-color: #d1d1d1;
+}
+.crypto-card-name {
+    display: flex;
 }
 
 // DARK MODE

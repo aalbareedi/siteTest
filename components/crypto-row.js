@@ -15,7 +15,7 @@ import { DISABLE_COIN_EXPIRATION } from "../utils/constants.js";
  * @param {number} lifespan - The amount of time (in ms) before this data expires.
  * @returns
  */
-export default function CryptoEntry({
+export default function CryptoRow({
     coin,
     metadata,
     changeTimeframe,
@@ -24,7 +24,7 @@ export default function CryptoEntry({
     const { symbol, name, quote, cmc_rank } = coin;
     // Return a new element/DOM object
     const element = html(`
-        <tr class="crypto-entry">
+        <tr class="crypto-row">
             <td class="crypto-number">${cmc_rank}</td>
             <td>
                 <div class="crypto-name-wrapper">
@@ -42,7 +42,7 @@ export default function CryptoEntry({
             </td>
             <td>
                 <div
-                    class="crypto-entry-perc ${
+                    class="crypto-row-perc ${
                         quote.USD["percent_change_" + changeTimeframe] >= 0
                             ? "positive-entry"
                             : "negative-entry"

@@ -542,7 +542,7 @@ header {
   margin-bottom: 10px;
 }
 
-.crypto-entry {
+.crypto-row {
   height: 60px;
 }
 
@@ -561,7 +561,7 @@ header {
   border-bottom: 1px solid #cfcfcf;
 }
 
-.crypto-entry-pair {
+.crypto-row-pair {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -724,7 +724,7 @@ th.crypto-th-mcap {
   bottom: 0px;
 }
 
-.crypto-entry-perc {
+.crypto-row-perc {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -742,7 +742,7 @@ th.crypto-th-mcap {
   border-radius: 4px;
 }
 
-.crypto-entry-perc i {
+.crypto-row-perc i {
   font-size: 14px;
 }
 
@@ -1317,7 +1317,7 @@ i.play-icon {
   opacity: 1;
 }
 
-.skeleton .crypto-entry-perc i {
+.skeleton .crypto-row-perc i {
   display: none;
 }
 
@@ -1343,6 +1343,12 @@ i.play-icon {
   border-radius: 10px;
   height: 120px;
   background-color: #d1d1d1;
+}
+
+.crypto-card-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 body.dark {
