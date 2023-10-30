@@ -36,6 +36,9 @@ export default function CryptoCard({
                 </div>
             </div>
             <div class="crypto-card-stats-wrapper">
+                <div class="crypto-card-price">${collapseZeros(
+                    formatUsd(quote.USD.price)
+                )}</div>
                 <div class="crypto-card-stats">
                     <div class="crypto-card-row-perc ${
                         quote.USD["percent_change_" + changeTimeframe] >= 0
@@ -50,9 +53,6 @@ export default function CryptoCard({
                         quote.USD.market_cap
                     )}</div>
                 </div>
-                <div class="crypto-card-price">${collapseZeros(
-                    formatUsd(quote.USD.price)
-                )}</div>
             </div>
         </div>
     `);
