@@ -3,7 +3,8 @@ import { DEFAULT_CRYPTO_VIEW } from "../utils/constants.js";
 /**
  * @type {"table"|"card"}
  */
-export let cryptoView = DEFAULT_CRYPTO_VIEW;
+export let cryptoView =
+    localStorage.getItem("crypto-view") || DEFAULT_CRYPTO_VIEW;
 const callbacks = [];
 
 /**
@@ -11,6 +12,7 @@ const callbacks = [];
  */
 export function setCryptoView(value) {
     cryptoView = value;
+    localStorage.setItem("crypto-view", value);
     for (let i = 0; i < callbacks.length; i++) {
         callbacks[i](value);
     }
