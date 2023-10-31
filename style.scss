@@ -321,12 +321,12 @@ header {
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    // background-color: #e0e0e0;
     border-radius: 40px;
+    transition: background-color 0.3s;
 }
 .table-view .crypto-table-view,
 .card-view .crypto-card-view {
-    background-color: #e0e0e0;
+    background-color: #eaeaea;
 }
 .crypto-table-wrapper {
     padding: 16px 20px 20px 20px;
@@ -527,7 +527,6 @@ th.crypto-th-mcap {
     // letter-spacing: 0.4px;
 }
 .crypto-row-perc i {
-    // padding-right: 4px;
     font-size: 14px;
 }
 #stocks .percent-change {
@@ -1018,6 +1017,7 @@ i.play-icon {
     row-gap: 14px;
     position: relative;
     box-shadow: 0px 8px 15px rgba(182, 182, 182, 0.2);
+    overflow: hidden;
 }
 .crypto-card-intro {
     display: flex;
@@ -1085,6 +1085,16 @@ i.play-icon {
 .crypto-card-price {
     font-size: 14px;
     padding-left: 1px;
+}
+.crypto-card-rank {
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 0px 0px 0px 10px;
+    color: #7a7a7a;
 }
 
 // DARK MODE

@@ -22,10 +22,10 @@ export default function CryptoCard({
     lifespan = 60000,
 }) {
     const { symbol, name, quote, cmc_rank } = coin;
-    // <div>${cmc_rank}</div>
     // Return a new element/DOM object
     const element = html(`
         <div class="crypto-card">
+            <div class="crypto-card-rank">${cmc_rank}</div>
             <div class="crypto-card-intro">
                 <div class="crypto-card-logo">
                     <img src="${metadata ? metadata.logo : ""}" />
