@@ -1394,6 +1394,7 @@ i.play-icon {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
 }
 
 .crypto-card-symbol {
@@ -1404,6 +1405,9 @@ i.play-icon {
 .crypto-card-name-text {
   color: #7a7a7a;
   font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .crypto-card-stats-wrapper {
