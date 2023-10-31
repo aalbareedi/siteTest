@@ -1340,8 +1340,14 @@ i.play-icon {
   padding: 20px;
 }
 
-.crypto-card {
+.crypto-card-wrap {
+  overflow: hidden;
+  -webkit-box-shadow: 0px 8px 15px rgba(182, 182, 182, 0.2);
+          box-shadow: 0px 8px 15px rgba(182, 182, 182, 0.2);
   border-radius: 10px;
+}
+
+.crypto-card {
   background-color: #eeeeee;
   padding: 10px 12px;
   display: -webkit-box;
@@ -1353,9 +1359,8 @@ i.play-icon {
           flex-direction: column;
   row-gap: 14px;
   position: relative;
-  -webkit-box-shadow: 0px 8px 15px rgba(182, 182, 182, 0.2);
-          box-shadow: 0px 8px 15px rgba(182, 182, 182, 0.2);
-  overflow: hidden;
+  border: 1px solid #f9f9f9;
+  border-radius: 10px;
 }
 
 .crypto-card-intro {
@@ -1472,10 +1477,10 @@ i.play-icon {
 .crypto-card-rank {
   background-color: #f9f9f9;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: -2px;
+  right: -2px;
   font-size: 12px;
-  padding: 4px 8px;
+  padding: 6px 10px 4px 9px;
   border-radius: 0px 0px 0px 10px;
   color: #7a7a7a;
 }
@@ -1581,5 +1586,19 @@ body.dark {
   color: #c4c4c4;
   background-color: #2e3037;
   border-color: #4a4d59;
+}
+
+.dark .crypto-card-wrap {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.dark .crypto-card {
+  background-color: #1e1f24;
+  border-color: #2e3037;
+}
+
+.dark .crypto-card-rank {
+  background-color: #2e3037;
 }
 /*# sourceMappingURL=style.css.map */

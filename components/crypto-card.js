@@ -24,34 +24,37 @@ export default function CryptoCard({
     const { symbol, name, quote, cmc_rank } = coin;
     // Return a new element/DOM object
     const element = html(`
-        <div class="crypto-card">
-            <div class="crypto-card-rank">${cmc_rank}</div>
-            <div class="crypto-card-intro">
-                <div class="crypto-card-logo">
-                    <img src="${metadata ? metadata.logo : ""}" />
-                </div>
-                <div class="crypto-card-name">
-                    <div class="crypto-card-symbol">${symbol}</div>
-                    <div class="crypto-card-name-text">${name}</div>
-                </div>
-            </div>
-            <div class="crypto-card-stats-wrapper">
-                <div class="crypto-card-price">${collapseZeros(
-                    formatUsd(quote.USD.price)
-                )}</div>
-                <div class="crypto-card-stats">
-                    <div class="crypto-card-row-perc ${
-                        quote.USD["percent_change_" + changeTimeframe] >= 0
-                            ? "card-positive-entry"
-                            : "card-negative-entry"
-                    }">
-                        <i class="fas fa-caret-up"></i>${formatPercent(
-                            quote.USD["percent_change_" + changeTimeframe] / 100
-                        )}
+        <div class="crypto-card-wrap">
+            <div class="crypto-card">
+                <div class="crypto-card-rank">${cmc_rank}</div>
+                <div class="crypto-card-intro">
+                    <div class="crypto-card-logo">
+                        <img src="${metadata ? metadata.logo : ""}" />
                     </div>
-                    <div class="crypto-card-mcap">${formatUsd(
-                        quote.USD.market_cap
+                    <div class="crypto-card-name">
+                        <div class="crypto-card-symbol">${symbol}</div>
+                        <div class="crypto-card-name-text">${name}</div>
+                    </div>
+                </div>
+                <div class="crypto-card-stats-wrapper">
+                    <div class="crypto-card-price">${collapseZeros(
+                        formatUsd(quote.USD.price)
                     )}</div>
+                    <div class="crypto-card-stats">
+                        <div class="crypto-card-row-perc ${
+                            quote.USD["percent_change_" + changeTimeframe] >= 0
+                                ? "card-positive-entry"
+                                : "card-negative-entry"
+                        }">
+                            <i class="fas fa-caret-up"></i>${formatPercent(
+                                quote.USD["percent_change_" + changeTimeframe] /
+                                    100
+                            )}
+                        </div>
+                        <div class="crypto-card-mcap">${formatUsd(
+                            quote.USD.market_cap
+                        )}</div>
+                    </div>
                 </div>
             </div>
         </div>
