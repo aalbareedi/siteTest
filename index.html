@@ -680,7 +680,7 @@
                         coins = await getCryptoCoinsFinal({
                             oldCoins: reset ? null : coins,
                             cryptoQuantity,
-                            quantityModifier: 0,
+                            quantityNumber: 20,
                             cryptoSort,
                             abortSignal: abortController.signal,
                         });
@@ -706,7 +706,16 @@
                         }
 
                         if (cryptoView == "table") {
-                            tbody.innerHTML = "";
+                            if (
+                                cryptoQuantity == "Top 100" ||
+                                cryptoQuantity == "Top 200"
+                            ) {
+                                tbody.innerHTML = "";
+                            }
+
+                            [...tbody.children].forEach((row) =>
+                                skeletonize(row)
+                            );
 
                             for (let i = 0; i < coins.length; i++) {
                                 tbody.append(
@@ -859,7 +868,7 @@
                                     coins = await getCryptoCoinsFinal({
                                         oldCoins: coins,
                                         cryptoQuantity,
-                                        quantityModifier: 20,
+                                        quantityNumber: 20,
                                         cryptoSort,
                                         abortSignal: abortController.signal,
                                     });

@@ -11,16 +11,17 @@ const API_URL =
 /**
  *
  * @param {{
+ *  start: number,
  *  quantity: number,
  *  sort: {
  *    property: "market_cap"|"price"|"percent_change_24h"|"percent_change_1h"|"percent_change_7d"|"percent_change_30d",
- *    direction: "asc"|"desc",
- *    abortSignal: AbortSignal
- *  }
+ *    direction: "asc"|"desc"
+ *  },
+ *  abortSignal: AbortSignal
  * }}
  * @returns {[]}
  */
-export async function getCryptoCoins({ quantity, sort = null, abortSignal }) {
+export async function getCryptoCoins({ start, quantity, sort, abortSignal }) {
     if (USE_SANDBOX_DATA) {
         return coins;
     }
@@ -28,10 +29,9 @@ export async function getCryptoCoins({ quantity, sort = null, abortSignal }) {
     const limit = quantity;
 
     const url = new URL(`${API_URL}/api/crypto`);
+    url.searchParams.set("start", start);
     url.searchParams.set("limit", limit);
-    if (sort) {
-        url.searchParams.set("sort", JSON.stringify(sort));
-    }
+    url.searchParams.set("sort", JSON.stringify(sort));
 
     try {
         const response = await fetch(url, {
@@ -58,7 +58,7 @@ export async function getCryptoCoins({ quantity, sort = null, abortSignal }) {
  * @param {{
  *  oldCoins: object[],
  *  cryptoQuantity: string,
- *  quantityModifier: number,
+ *  quantityNumber: number,
  *  cryptoSort: object,
  *  abortSignal: AbortSignal
  * }}
@@ -67,22 +67,26 @@ export async function getCryptoCoins({ quantity, sort = null, abortSignal }) {
 export async function getCryptoCoinsFinal({
     oldCoins,
     cryptoQuantity,
-    quantityModifier,
+    quantityNumber,
     cryptoSort,
     abortSignal,
 }) {
-    const oldQuantity = oldCoins ? oldCoins.length : 20;
+    const oldEndIndex = oldCoins ? oldCoins.length : 0;
 
     const coins = await getCryptoCoins({
+        start:
+            cryptoQuantity == "Top 100" || cryptoQuantity == "Top 200"
+                ? 0
+                : oldEndIndex,
         quantity:
             cryptoQuantity == "Top 100"
                 ? 100
                 : cryptoQuantity == "Top 200"
                 ? 200
-                : oldQuantity + quantityModifier,
+                : quantityNumber,
         sort:
             cryptoQuantity == "Top 100" || cryptoQuantity == "Top 200"
-                ? null
+                ? { property: "market_cap", direction: "desc" }
                 : cryptoSort,
         abortSignal: abortSignal,
     });
