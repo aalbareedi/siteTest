@@ -584,6 +584,7 @@
                     );
 
                     let coins = null;
+                    let coinStartIndex = 0;
                     let cryptoTotalCount = null;
                     let metadata = null;
                     let abortController = null;
@@ -612,7 +613,9 @@
                             .querySelector("#crypto-search-bar")
                             .scrollIntoView({ block: "nearest" });
 
-                        renderSkeletonRows();
+                        renderSkeletonRows(
+                            coins ? Math.max(100, coins.length) : 100
+                        );
 
                         await requestCoinData(true);
 
@@ -627,7 +630,9 @@
                             .querySelector("#crypto-search-bar")
                             .scrollIntoView({ block: "nearest" });
 
-                        renderSkeletonRows();
+                        renderSkeletonRows(
+                            coins ? Math.max(100, coins.length) : 100
+                        );
 
                         // If we're sorting by percent change, update to new timeframe
                         if (cryptoSort.property.startsWith("percent_change_")) {
@@ -660,7 +665,9 @@
                             .querySelector("#crypto-search-bar")
                             .scrollIntoView({ block: "nearest" });
 
-                        renderSkeletonRows();
+                        renderSkeletonRows(
+                            coins ? Math.max(100, coins.length) : 100
+                        );
 
                         // renderScrollDetector(false);
 
@@ -671,6 +678,10 @@
                     });
 
                     async function requestCoinData(reset = false) {
+                        coinStartIndex = reset
+                            ? 0
+                            : coinStartIndex + coins.length;
+
                         // Abort the current fetch (if any)
                         if (abortController) {
                             abortController.abort();
@@ -678,7 +689,7 @@
 
                         abortController = new AbortController();
                         coins = await getCryptoCoinsFinal({
-                            oldCoins: reset ? null : coins,
+                            start: coinStartIndex,
                             cryptoQuantity,
                             quantityNumber: 20,
                             cryptoSort,
@@ -706,16 +717,13 @@
                         }
 
                         if (cryptoView == "table") {
+                            tbody.innerHTML = "";
                             if (
-                                cryptoQuantity == "Top 100" ||
-                                cryptoQuantity == "Top 200"
+                                cryptoQuantity != "Top 100" &&
+                                cryptoQuantity != "Top 200"
                             ) {
-                                tbody.innerHTML = "";
+                                renderSkeletonRows(coinStartIndex);
                             }
-
-                            [...tbody.children].forEach((row) =>
-                                skeletonize(row)
-                            );
 
                             for (let i = 0; i < coins.length; i++) {
                                 tbody.append(
@@ -773,11 +781,8 @@
                         // `);
                     }
 
-                    function renderSkeletonRows() {
+                    function renderSkeletonRows(rowCount) {
                         tbody.innerHTML = "";
-                        const rowCount = coins
-                            ? Math.max(100, coins.length)
-                            : 100;
                         for (let i = 0; i < rowCount; i++) {
                             tbody.append(
                                 skeletonize(
@@ -859,6 +864,9 @@
                                     cryptoQuantity == "All Coins" &&
                                     coins.length < cryptoTotalCount
                                 ) {
+                                    coinStartIndex =
+                                        coinStartIndex + coins.length;
+
                                     // Abort the current fetch (if any)
                                     if (abortController) {
                                         abortController.abort();
@@ -866,7 +874,7 @@
 
                                     abortController = new AbortController();
                                     coins = await getCryptoCoinsFinal({
-                                        oldCoins: coins,
+                                        start: coinStartIndex,
                                         cryptoQuantity,
                                         quantityNumber: 20,
                                         cryptoSort,

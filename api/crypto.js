@@ -56,7 +56,7 @@ export async function getCryptoCoins({ start, quantity, sort, abortSignal }) {
 /**
  *
  * @param {{
- *  oldCoins: object[],
+ *  start: number,
  *  cryptoQuantity: string,
  *  quantityNumber: number,
  *  cryptoSort: object,
@@ -65,19 +65,17 @@ export async function getCryptoCoins({ start, quantity, sort, abortSignal }) {
  * @returns
  */
 export async function getCryptoCoinsFinal({
-    oldCoins,
+    start = null,
     cryptoQuantity,
     quantityNumber,
     cryptoSort,
     abortSignal,
 }) {
-    const oldEndIndex = oldCoins ? oldCoins.length : 0;
-
     const coins = await getCryptoCoins({
         start:
             cryptoQuantity == "Top 100" || cryptoQuantity == "Top 200"
                 ? 0
-                : oldEndIndex,
+                : start,
         quantity:
             cryptoQuantity == "Top 100"
                 ? 100
