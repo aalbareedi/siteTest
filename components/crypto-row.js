@@ -16,10 +16,12 @@ import { DISABLE_COIN_EXPIRATION } from "../utils/constants.js";
  * @returns
  */
 export default function CryptoRow({
+    index,
     coin,
     metadata,
     changeTimeframe,
-    lifespan = 60000,
+    lifespan = 5000,
+    onScrollTo = () => {},
 }) {
     const { symbol, name, quote, cmc_rank } = coin;
     // Return a new element/DOM object
@@ -55,11 +57,24 @@ export default function CryptoRow({
         </tr>
     `);
 
+    let isExpired = false;
+
     setTimeout(() => {
         if (!DISABLE_COIN_EXPIRATION) {
-            skeletonize(element);
+            // skeletonize(element);
+            isExpired = true;
         }
     }, lifespan);
+
+    new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.intersectionRatio > 0) {
+                if (isExpired) {
+                    onScrollTo(index);
+                }
+            }
+        });
+    }).observe(element);
 
     return element;
 }

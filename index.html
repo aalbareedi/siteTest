@@ -717,22 +717,54 @@
                         }
 
                         if (cryptoView == "table") {
-                            tbody.innerHTML = "";
-                            if (
-                                cryptoQuantity != "Top 100" &&
-                                cryptoQuantity != "Top 200"
-                            ) {
-                                renderSkeletonRows(coinStartIndex);
+                            // tbody.innerHTML = "";
+
+                            // Remove all rows after the current page
+                            [...tbody.children]
+                                .slice(coinStartIndex + 20)
+                                .forEach((row) => {
+                                    row.remove();
+                                });
+
+                            // if (cryptoQuantity == "All Coins") {
+                            //     renderSkeletonRows(coinStartIndex);
+                            // }
+
+                            let timeout = null;
+
+                            function debounceCallback(callback) {
+                                if (timeout) {
+                                    clearTimeout(timeout);
+                                }
+
+                                timeout = setTimeout(() => {
+                                    callback();
+                                }, 1000);
                             }
 
                             for (let i = 0; i < coins.length; i++) {
-                                tbody.append(
-                                    CryptoRow({
-                                        coin: coins[i],
-                                        metadata: metadata[coins[i].id],
-                                        changeTimeframe: cryptoTimeframe,
-                                    })
-                                );
+                                const existingRow =
+                                    tbody.children[coinStartIndex + i];
+                                const newRow = CryptoRow({
+                                    index: coinStartIndex + i,
+                                    coin: coins[i],
+                                    metadata: metadata[coins[i].id],
+                                    changeTimeframe: cryptoTimeframe,
+                                    onScrollTo: (index) => {
+                                        debounceCallback(() => {
+                                            const nearestPageStart =
+                                                Math.floor(index / 20) * 20;
+
+                                            // TODO: Update the 20 coins before and after `nearestPageStart`
+                                        });
+                                    },
+                                });
+
+                                if (existingRow) {
+                                    existingRow.replaceWith(newRow);
+                                } else {
+                                    tbody.append(newRow);
+                                }
                             }
                         }
 
@@ -787,6 +819,7 @@
                             tbody.append(
                                 skeletonize(
                                     CryptoRow({
+                                        index: i,
                                         coin: {
                                             symbol: "BTCB",
                                             name: "Bitcoin",
@@ -818,6 +851,7 @@
                     function renderScrollDetector(shouldDetectScroll) {
                         const scrollDetector = skeletonize(
                             CryptoRow({
+                                index: i,
                                 coin: {
                                     symbol: "BTCB",
                                     name: "Bitcoin",
