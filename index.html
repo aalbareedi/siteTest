@@ -569,6 +569,7 @@
                         handleCryptoViewChange,
                     } from "./states/crypto-view.js";
                     import { skeletonize } from "./skeletonize/skeletonize.js";
+                    import { debounce } from "./utils/debounce/crypto-debounce.js";
 
                     /**
                      * @type {Element}
@@ -739,39 +740,31 @@
                             //     renderSkeletonRows(coinStartIndex);
                             // }
 
-                            let timeout = null;
-
-                            function debounceCallback(callback) {
-                                if (timeout) {
-                                    clearTimeout(timeout);
-                                }
-
-                                timeout = setTimeout(() => {
-                                    callback();
-                                }, 1000);
-                            }
                             // console.log("coins: ", coins.length);
 
                             // console.log(
                             //     `Adding coins starting at ${coinStartIndex}...`
                             // );
                             for (let i = 0; i < coins.length; i++) {
-                                const existingRow =
-                                    tbody.children[coinStartIndex + i];
+                                const rowIndex = coinStartIndex + i;
+
+                                const existingRow = tbody.children[rowIndex];
 
                                 const newRow = CryptoRow({
-                                    index: coinStartIndex + i,
+                                    index: rowIndex,
                                     coin: coins[i],
                                     metadata: metadata[coins[i].id],
                                     changeTimeframe: cryptoTimeframe,
-                                    onScrollTo: (index) => {
-                                        debounceCallback(async () => {
+                                    lifespan: 60000,
+                                    onScrollTo: (isExpired) => {
+                                        if (!isExpired) {
+                                            return;
+                                        }
+
+                                        debounce(rowIndex, async () => {
                                             const nearestPageStart =
-                                                Math.floor(index / 20) * 20;
-                                            // console.log(
-                                            //     "Requesting 40 coins after index " +
-                                            //         nearestPageStart
-                                            // );
+                                                Math.floor(rowIndex / 20) * 20;
+
                                             await requestCoinData({
                                                 startIndex: nearestPageStart,
                                                 quantity: 40,
@@ -783,6 +776,52 @@
 
                                             render();
                                         });
+                                    },
+                                    onExpire: () => {
+                                        const observer =
+                                            new IntersectionObserver(
+                                                (entries) => {
+                                                    entries.forEach(
+                                                        async (entry) => {
+                                                            if (
+                                                                !entry.isIntersecting
+                                                            ) {
+                                                                return;
+                                                            }
+
+                                                            debounce(
+                                                                rowIndex,
+                                                                async () => {
+                                                                    const nearestPageStart =
+                                                                        Math.floor(
+                                                                            rowIndex /
+                                                                                20
+                                                                        ) * 20;
+
+                                                                    await requestCoinData(
+                                                                        {
+                                                                            startIndex:
+                                                                                nearestPageStart,
+                                                                            quantity: 40,
+                                                                        }
+                                                                    );
+
+                                                                    if (
+                                                                        !coins
+                                                                    ) {
+                                                                        return;
+                                                                    }
+
+                                                                    render();
+                                                                }
+                                                            );
+                                                        }
+                                                    );
+                                                    observer.disconnect();
+                                                }
+                                            );
+
+                                        observer.observe(newRow);
                                     },
                                 });
 

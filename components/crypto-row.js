@@ -13,6 +13,8 @@ import { DISABLE_COIN_EXPIRATION } from "../utils/constants.js";
  * @param {object} metadata
  * @param {"1h"|"24h"|"7d"|"30d"} changeTimeframe
  * @param {number} lifespan - The amount of time (in ms) before this data expires.
+ * @param {Function} onScrollTo
+ * @param {Function} onExpire
  * @returns
  */
 export default function CryptoRow({
@@ -20,8 +22,9 @@ export default function CryptoRow({
     coin,
     metadata,
     changeTimeframe,
-    lifespan = 5000,
+    lifespan = null,
     onScrollTo = () => {},
+    onExpire = () => {},
 }) {
     const { symbol, name, quote, cmc_rank } = coin;
     // Return a new element/DOM object
@@ -57,24 +60,25 @@ export default function CryptoRow({
         </tr>
     `);
 
-    let isExpired = false;
+    if (lifespan !== null) {
+        let isExpired = false;
 
-    setTimeout(() => {
-        if (!DISABLE_COIN_EXPIRATION) {
-            // skeletonize(element);
-            isExpired = true;
-        }
-    }, lifespan);
-
-    new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.intersectionRatio > 0) {
-                if (isExpired) {
-                    onScrollTo(index);
-                }
+        setTimeout(() => {
+            if (!DISABLE_COIN_EXPIRATION) {
+                // skeletonize(element);
+                isExpired = true;
+                onExpire();
             }
-        });
-    }).observe(element);
+        }, lifespan);
+
+        new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.intersectionRatio > 0) {
+                    onScrollTo(isExpired);
+                }
+            });
+        }).observe(element);
+    }
 
     return element;
 }
