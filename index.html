@@ -617,7 +617,11 @@
                             coins ? Math.max(100, coins.length) : 100
                         );
 
-                        await requestCoinData(true);
+                        await requestCoinData({ reset: true });
+
+                        if (!coins) {
+                            return;
+                        }
 
                         render();
                         document.body.style.overflow = "initial";
@@ -671,16 +675,28 @@
 
                         // renderScrollDetector(false);
 
-                        await requestCoinData(true);
+                        await requestCoinData({ reset: true });
+
+                        if (!coins) {
+                            return;
+                        }
 
                         render();
                         document.body.style.overflow = "initial";
                     });
 
-                    async function requestCoinData(reset = false) {
+                    async function requestCoinData({
+                        startIndex = null,
+                        quantity = 20,
+                        reset = false,
+                    }) {
                         coinStartIndex = reset
                             ? 0
                             : coinStartIndex + coins.length;
+
+                        if (startIndex !== null) {
+                            coinStartIndex = startIndex;
+                        }
 
                         // Abort the current fetch (if any)
                         if (abortController) {
@@ -691,7 +707,7 @@
                         coins = await getCryptoCoinsFinal({
                             start: coinStartIndex,
                             cryptoQuantity,
-                            quantityNumber: 20,
+                            quantityNumber: quantity,
                             cryptoSort,
                             abortSignal: abortController.signal,
                         });
@@ -719,13 +735,6 @@
                         if (cryptoView == "table") {
                             // tbody.innerHTML = "";
 
-                            // Remove all rows after the current page
-                            [...tbody.children]
-                                .slice(coinStartIndex + 20)
-                                .forEach((row) => {
-                                    row.remove();
-                                });
-
                             // if (cryptoQuantity == "All Coins") {
                             //     renderSkeletonRows(coinStartIndex);
                             // }
@@ -741,31 +750,63 @@
                                     callback();
                                 }, 1000);
                             }
+                            // console.log("coins: ", coins.length);
 
+                            // console.log(
+                            //     `Adding coins starting at ${coinStartIndex}...`
+                            // );
                             for (let i = 0; i < coins.length; i++) {
                                 const existingRow =
                                     tbody.children[coinStartIndex + i];
+
                                 const newRow = CryptoRow({
                                     index: coinStartIndex + i,
                                     coin: coins[i],
                                     metadata: metadata[coins[i].id],
                                     changeTimeframe: cryptoTimeframe,
                                     onScrollTo: (index) => {
-                                        debounceCallback(() => {
+                                        debounceCallback(async () => {
                                             const nearestPageStart =
                                                 Math.floor(index / 20) * 20;
+                                            // console.log(
+                                            //     "Requesting 40 coins after index " +
+                                            //         nearestPageStart
+                                            // );
+                                            await requestCoinData({
+                                                startIndex: nearestPageStart,
+                                                quantity: 40,
+                                            });
 
-                                            // TODO: Update the 20 coins before and after `nearestPageStart`
+                                            if (!coins) {
+                                                return;
+                                            }
+
+                                            render();
                                         });
                                     },
                                 });
 
                                 if (existingRow) {
+                                    // console.log("Replacing...");
                                     existingRow.replaceWith(newRow);
                                 } else {
+                                    // console.log("Appending...");
                                     tbody.append(newRow);
                                 }
                             }
+
+                            // console.log(
+                            //     `Removing coins ${
+                            //         coinStartIndex + coins.length
+                            //     } - ${tbody.children.length - 1}`
+                            // );
+
+                            // Remove all rows after the current page
+                            [...tbody.children]
+                                .slice(coinStartIndex + coins.length)
+                                .forEach((row) => {
+                                    row.remove();
+                                });
                         }
 
                         if (cryptoView == "card") {
@@ -851,7 +892,7 @@
                     function renderScrollDetector(shouldDetectScroll) {
                         const scrollDetector = skeletonize(
                             CryptoRow({
-                                index: i,
+                                index: coins.length,
                                 coin: {
                                     symbol: "BTCB",
                                     name: "Bitcoin",
