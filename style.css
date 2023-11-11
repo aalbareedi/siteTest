@@ -548,6 +548,10 @@ header {
   height: 60px;
 }
 
+.crypto-row .lifespan-meter {
+  border-bottom: 1px solid blue;
+}
+
 .stock-entry {
   height: 60px;
   display: -webkit-box;

@@ -44,6 +44,7 @@ export default function CryptoRow({
                         )}</div>
                     </div>
                 </div>
+                <div class="lifespan-meter"></div>
             </td>
             <td>
                 <div
@@ -62,6 +63,15 @@ export default function CryptoRow({
 
     if (lifespan !== null) {
         let isExpired = false;
+
+        if (!DISABLE_COIN_EXPIRATION) {
+            let time = 0;
+            setInterval(() => {
+                time += 1000;
+                element.querySelector(".lifespan-meter").style.width =
+                    100 - (time / lifespan) * 100 + "%";
+            }, 1000);
+        }
 
         setTimeout(() => {
             if (!DISABLE_COIN_EXPIRATION) {
