@@ -10,11 +10,11 @@ export function debounce(index, callback) {
         lowestIndex = index;
 
         timeout = setTimeout(() => {
-            console.log("Calling callback...");
+            console.log("Updating coins...");
             callback();
 
             timeout = null;
             lowestIndex = null;
-        }, 3000);
+        }, 1000);
     }
 }
