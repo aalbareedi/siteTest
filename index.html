@@ -558,6 +558,7 @@
                     import {
                         DISABLE_INFINITE_SCROLLING,
                         DISABLE_RENDER_DATA,
+                        COIN_EXPIRE_LIFESPAN,
                     } from "./utils/constants.js";
                     import {
                         cryptoSort,
@@ -755,7 +756,7 @@
                                     coin: coins[i],
                                     metadata: metadata[coins[i].id],
                                     changeTimeframe: cryptoTimeframe,
-                                    lifespan: 60000,
+                                    lifespan: COIN_EXPIRE_LIFESPAN,
                                     onScrollTo: (isExpired) => {
                                         if (!isExpired) {
                                             return;

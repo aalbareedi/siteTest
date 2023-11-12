@@ -66,7 +66,12 @@ export default function CryptoRow({
 
         if (!DISABLE_COIN_EXPIRATION) {
             let time = 0;
-            setInterval(() => {
+            const interval = setInterval(() => {
+                if (!element.isConnected) {
+                    clearInterval(interval);
+                    return;
+                }
+
                 time += 1000;
                 element.querySelector(".lifespan-meter").style.width =
                     100 - (time / lifespan) * 100 + "%";
@@ -74,6 +79,10 @@ export default function CryptoRow({
         }
 
         setTimeout(() => {
+            if (!element.isConnected) {
+                return;
+            }
+
             if (!DISABLE_COIN_EXPIRATION) {
                 // skeletonize(element);
                 isExpired = true;
