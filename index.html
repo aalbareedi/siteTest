@@ -559,12 +559,14 @@
                         DISABLE_INFINITE_SCROLLING,
                         DISABLE_RENDER_DATA,
                         COIN_EXPIRE_LIFESPAN,
+                        SKELETON_ROW_OPTIONS,
                     } from "./utils/constants.js";
                     import {
                         cryptoSort,
                         setCryptoSort,
                         handleCryptoSortChange,
                     } from "./states/crypto-sort.js";
+                    import { scrollSpeed } from "./utils/scroll-speed.js";
                     import {
                         cryptoView,
                         handleCryptoViewChange,
@@ -777,6 +779,21 @@
 
                                             render();
                                         });
+
+                                        if (
+                                            rowIndex < 20 &&
+                                            isExpired &&
+                                            scrollSpeed > 1000
+                                        ) {
+                                            newRow.replaceWith(
+                                                skeletonize(
+                                                    CryptoRow({
+                                                        ...SKELETON_ROW_OPTIONS,
+                                                        index: rowIndex,
+                                                    })
+                                                )
+                                            );
+                                        }
                                     },
                                     onExpire: () => {
                                         const observer =
@@ -900,26 +917,8 @@
                             tbody.append(
                                 skeletonize(
                                     CryptoRow({
+                                        ...SKELETON_ROW_OPTIONS,
                                         index: i,
-                                        coin: {
-                                            symbol: "BTCB",
-                                            name: "Bitcoin",
-                                            quote: {
-                                                USD: {
-                                                    price: 0.000099,
-                                                    market_cap: 44000000,
-                                                    percent_change_1h: 90.0,
-                                                    percent_change_24h: 90.0,
-                                                    percent_change_7d: 90.0,
-                                                    percent_change_30d: 90.0,
-                                                },
-                                            },
-                                            cmc_rank: 888,
-                                        },
-                                        metadata: {
-                                            logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png",
-                                        },
-                                        changeTimeframe: cryptoTimeframe,
                                     })
                                 )
                             );
@@ -932,26 +931,8 @@
                     function renderScrollDetector(shouldDetectScroll) {
                         const scrollDetector = skeletonize(
                             CryptoRow({
+                                ...SKELETON_ROW_OPTIONS,
                                 index: coins.length,
-                                coin: {
-                                    symbol: "BTCB",
-                                    name: "Bitcoin",
-                                    quote: {
-                                        USD: {
-                                            price: 0.000099,
-                                            market_cap: 44000000,
-                                            percent_change_1h: 90.0,
-                                            percent_change_24h: 90.0,
-                                            percent_change_7d: 90.0,
-                                            percent_change_30d: 90.0,
-                                        },
-                                    },
-                                    cmc_rank: 888,
-                                },
-                                metadata: {
-                                    logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png",
-                                },
-                                changeTimeframe: cryptoTimeframe,
                             })
                         );
 
