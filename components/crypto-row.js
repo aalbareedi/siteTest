@@ -5,7 +5,10 @@ import {
 } from "../utils/data-formatter.js";
 import { html } from "../utils/html.js";
 import { skeletonize } from "../skeletonize/skeletonize.js";
-import { DISABLE_COIN_EXPIRATION } from "../utils/constants.js";
+import {
+    DISABLE_COIN_EXPIRATION,
+    DISABLE_COIN_LIFESPAN_METER,
+} from "../utils/constants.js";
 
 /**
  *
@@ -44,7 +47,9 @@ export default function CryptoRow({
                         )}</div>
                     </div>
                 </div>
-                <div class="lifespan-meter"></div>
+                <div class="lifespan-meter ${
+                    DISABLE_COIN_LIFESPAN_METER ? "display-hidden" : ""
+                }"></div>
             </td>
             <td>
                 <div
