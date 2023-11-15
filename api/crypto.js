@@ -8,6 +8,8 @@ const API_URL =
         ? "http://10.0.0.180:3000"
         : "https://stocks-backend-production.up.railway.app";
 
+let runningQueries = [];
+
 /**
  *
  * @param {{
@@ -25,6 +27,16 @@ export async function getCryptoCoins({ start, quantity, sort, abortSignal }) {
     if (USE_SANDBOX_DATA) {
         return coins;
     }
+
+    const query = { start, quantity, sort };
+
+    // If this query is already running...
+    if (runningQueries.includes(JSON.stringify(query))) {
+        return null;
+    }
+
+    // Add the query
+    runningQueries.push(JSON.stringify(query));
 
     const limit = quantity;
 
@@ -50,6 +62,11 @@ export async function getCryptoCoins({ start, quantity, sort, abortSignal }) {
         }
 
         throw error;
+    } finally {
+        // Remove the query
+        runningQueries = runningQueries.filter(
+            (x) => x != JSON.stringify(query)
+        );
     }
 }
 

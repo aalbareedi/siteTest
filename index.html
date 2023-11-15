@@ -710,7 +710,7 @@
 
                         // Abort the current fetch (if any)
                         if (abortController) {
-                            abortController.abort();
+                            // abortController.abort();
                         }
 
                         abortController = new AbortController();
@@ -765,26 +765,26 @@
                                     metadata: metadata[coins[i].id],
                                     changeTimeframe: cryptoTimeframe,
                                     lifespan: COIN_EXPIRE_LIFESPAN,
-                                    onScrollTo: (isExpired) => {
+                                    onScrollTo: async (isExpired) => {
                                         if (!isExpired) {
                                             return;
                                         }
 
-                                        debounce(rowIndex, async () => {
-                                            const nearestPageStart =
-                                                Math.floor(rowIndex / 20) * 20;
+                                        // debounce(rowIndex, async () => {
+                                        const nearestPageStart =
+                                            Math.floor(rowIndex / 20) * 20;
 
-                                            await requestCoinData({
-                                                startIndex: nearestPageStart,
-                                                quantity: 40,
-                                            });
-
-                                            if (!coins) {
-                                                return;
-                                            }
-
-                                            render();
+                                        await requestCoinData({
+                                            startIndex: nearestPageStart,
+                                            quantity: 40,
                                         });
+
+                                        if (!coins) {
+                                            return;
+                                        }
+
+                                        render();
+                                        // });
 
                                         if (
                                             rowIndex < 20 &&
@@ -971,7 +971,7 @@
 
                                     // Abort the current fetch (if any)
                                     if (abortController) {
-                                        abortController.abort();
+                                        // abortController.abort();
                                     }
 
                                     abortController = new AbortController();
