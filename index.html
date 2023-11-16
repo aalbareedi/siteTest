@@ -714,7 +714,7 @@
                         }
 
                         abortController = new AbortController();
-                        coins = await getCryptoCoinsFinal({
+                        const newCoins = await getCryptoCoinsFinal({
                             start: coinStartIndex,
                             cryptoQuantity,
                             quantityNumber: quantity,
@@ -722,9 +722,11 @@
                             abortSignal: abortController.signal,
                         });
 
-                        if (!coins) {
+                        if (!newCoins) {
                             return;
                         }
+
+                        coins = newCoins;
 
                         cryptoTotalCount = await getCyptoTotalCount();
 
