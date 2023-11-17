@@ -32,6 +32,7 @@ export async function getCryptoCoins({ start, quantity, sort, abortSignal }) {
 
     // If this query is already running...
     if (runningQueries.includes(JSON.stringify(query))) {
+        console.log("Duplicate query: ", JSON.stringify(query));
         return null;
     }
 
@@ -64,6 +65,7 @@ export async function getCryptoCoins({ start, quantity, sort, abortSignal }) {
         throw error;
     } finally {
         // Remove the query
+        console.log("Removing query: ", JSON.stringify(query));
         runningQueries = runningQueries.filter(
             (x) => x != JSON.stringify(query)
         );
@@ -194,6 +196,7 @@ export async function getCryptoMetadata({ coinIds }) {
 }
 
 export async function getCryptoGlobalMetrics() {
+    console.log("Updating global stats...");
     const response = await fetch(`${API_URL}/api/crypto/global-metrics`, {
         method: "GET",
     });
@@ -202,5 +205,20 @@ export async function getCryptoGlobalMetrics() {
         throw new Error("Something went wrong.");
     }
 
-    return await response.json();
+    const data = await response.json();
+    console.log(`
+        date: ${new Date()},
+        Market Cap: ${data.quote.USD.total_market_cap},
+        Market Cap Change: ${
+            data.quote.USD.total_market_cap_yesterday_percentage_change
+        },
+        24h Vol: ${data.quote.USD.total_volume_24h},
+        24h Vol Change: ${
+            data.quote.USD.total_volume_24h_yesterday_percentage_change
+        },
+        BTC Dom: ${data.btc_dominance},
+        ETH Dom: ${data.eth_dominance},
+    `);
+
+    return data;
 }
