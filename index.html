@@ -340,6 +340,9 @@
                                         </div>
                                     </div>
                                 </th>
+                                <th>
+                                    <div class="crypto-th-content">Price</div>
+                                </th>
                                 <th class="crypto-list-header-percent">
                                     <div class="crypto-th-content">
                                         <div>
@@ -581,6 +584,10 @@
                     import { debounce } from "./utils/debounce/crypto-debounce.js";
 
                     /**
+                     * @typedef {{ id: number, index: number, cmc_rank: number, symbol: string, quote: { USD: {price: number, market_cap: number} } }} Coin
+                     */
+
+                    /**
                      * @type {Element}
                      */
                     const tbody = document.querySelector(
@@ -593,6 +600,9 @@
                         ".crypto-cards-wrapper"
                     );
 
+                    /**
+                     * @type Coin[]
+                     */
                     let coins = null;
                     let coinStartIndex = 0;
                     let cryptoTotalCount = null;

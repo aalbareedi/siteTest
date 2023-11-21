@@ -3,7 +3,7 @@ export const DISABLE_RENDER_DATA = false;
 export const DISABLE_INFINITE_SCROLLING = false;
 export const DISABLE_COIN_EXPIRATION = false;
 export const DISABLE_COIN_LIFESPAN_METER = false;
-export const COIN_EXPIRE_LIFESPAN = 60000;
+export const COIN_EXPIRE_LIFESPAN = 20000;
 
 export const DEFAULT_CRYPTO_VIEW = "table";
 export const MAX_SIGNIFICANT_DIGITS = 4;
