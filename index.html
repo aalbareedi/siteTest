@@ -736,12 +736,19 @@
                             return;
                         }
 
-                        coins = newCoins;
+                        coins = newCoins.reduce((total, current) => {
+                            const copy = [...total];
+                            copy[current.index] = current;
+                            return copy;
+                        }, coins || []);
 
                         cryptoTotalCount = await getCyptoTotalCount();
 
                         metadata = await getCryptoMetadata({
-                            coinIds: coins.map((coin) => coin.id),
+                            coinIds: coins.reduce((total, coin) => {
+                                if (coin) return [...total, coin.id];
+                                return total;
+                            }, []),
                         });
                     }
 
@@ -767,7 +774,12 @@
                             //     `Adding coins starting at ${coinStartIndex}...`
                             // );
                             for (let i = 0; i < coins.length; i++) {
-                                const rowIndex = coinStartIndex + i;
+                                if (!coins[i]) {
+                                    // TODO: Possibly render a skeleton row here instead
+                                    continue;
+                                }
+
+                                const rowIndex = coins[i].index;
 
                                 const existingRow = tbody.children[rowIndex];
 
@@ -987,7 +999,7 @@
                                     }
 
                                     abortController = new AbortController();
-                                    coins = await getCryptoCoinsFinal({
+                                    const newCoins = await getCryptoCoinsFinal({
                                         start: coinStartIndex,
                                         cryptoQuantity,
                                         quantityNumber: 20,
@@ -995,15 +1007,28 @@
                                         abortSignal: abortController.signal,
                                     });
 
-                                    if (!coins) {
+                                    if (!newCoins) {
                                         return;
                                     }
+
+                                    coins = newCoins.reduce(
+                                        (total, current) => {
+                                            const copy = [...total];
+                                            copy[current.index] = current;
+                                            return copy;
+                                        },
+                                        coins || []
+                                    );
 
                                     cryptoTotalCount =
                                         await getCyptoTotalCount();
 
                                     metadata = await getCryptoMetadata({
-                                        coinIds: coins.map((coin) => coin.id),
+                                        coinIds: coins.reduce((total, coin) => {
+                                            if (coin)
+                                                return [...total, coin.id];
+                                            return total;
+                                        }, []),
                                     });
 
                                     render();
