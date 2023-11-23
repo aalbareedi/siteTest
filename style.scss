@@ -365,6 +365,10 @@ header {
     font-weight: initial;
     text-align: left;
 }
+.crypto-header-price-col,
+.crypto-price-col {
+    display: none;
+}
 .stock-list-header {
     position: relative;
     display: flex;
@@ -377,11 +381,9 @@ header {
 .crypto-row {
     height: 60px;
 }
-
 .crypto-row .lifespan-meter {
     border-bottom: 1px solid blue;
 }
-
 .stock-entry {
     height: 60px;
     display: flex;
@@ -437,10 +439,14 @@ header {
 }
 .crypto-name-text {
     color: #7a7a7a;
+    letter-spacing: 0.4px;
     // text-overflow: ellipsis;
     // overflow: hidden;
     // white-space: nowrap;
     // max-width: 100px;
+}
+.crypto-price-text {
+    color: #7a7a7a;
     letter-spacing: 0.4px;
 }
 .collapse-zeroes {
@@ -1207,6 +1213,11 @@ body.dark {
     }
 }
 
-// @media only screen and (min-width: 740px) {}
+@media only screen and (min-width: 480px) {
+    .crypto-header-price-col,
+    .crypto-price-col {
+        display: table-cell;
+    }
+}
 // hover styles
 // @media only screen and (hover: hover) {}

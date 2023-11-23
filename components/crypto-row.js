@@ -31,8 +31,6 @@ export default function CryptoRow({
 }) {
     const { symbol, name, quote, cmc_rank } = coin;
 
-    console.log("coin: ", coin);
-
     // Return a new element/DOM object
     const element = html(`
         <tr class="crypto-row">
@@ -45,7 +43,7 @@ export default function CryptoRow({
                     <div class="crypto-name">
                         <div class="crypto-symbol">${symbol}</div>
                         <div class="crypto-name-text display-hidden">${name}</div>
-                        <div class="crypto-name-text">${collapseZeros(
+                        <div class="crypto-price-text">${collapseZeros(
                             formatUsd(quote.USD.price)
                         )}</div>
                     </div>
@@ -54,7 +52,7 @@ export default function CryptoRow({
                     DISABLE_COIN_LIFESPAN_METER ? "display-hidden" : ""
                 }"></div>
             </td>
-            <td class="crypto-price">${collapseZeros(
+            <td class="crypto-price-col">${collapseZeros(
                 formatUsd(quote.USD.price)
             )}</td>
             <td>

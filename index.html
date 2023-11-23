@@ -340,7 +340,7 @@
                                         </div>
                                     </div>
                                 </th>
-                                <th>
+                                <th class="crypto-header-price-col">
                                     <div class="crypto-th-content">Price</div>
                                 </th>
                                 <th class="crypto-list-header-percent">
@@ -736,11 +736,28 @@
                             return;
                         }
 
+                        // console.log(
+                        //     "combining coins: ",
+                        //     coins
+                        //         ? coins.map((x) => (x ? x.index : undefined))
+                        //         : null
+                        // );
+
+                        // console.log(
+                        //     "with newCoins: ",
+                        //     newCoins.map((x) => (x ? x.index : undefined))
+                        // );
+
                         coins = newCoins.reduce((total, current) => {
                             const copy = [...total];
                             copy[current.index] = current;
                             return copy;
                         }, coins || []);
+
+                        // console.log(
+                        //     "result: ",
+                        //     coins.map((x) => (x ? x.index : undefined))
+                        // );
 
                         cryptoTotalCount = await getCyptoTotalCount();
 
@@ -890,7 +907,7 @@
 
                             // Remove all rows after the current page
                             [...tbody.children]
-                                .slice(coinStartIndex + coins.length)
+                                .slice(coins.length)
                                 .forEach((row) => {
                                     row.remove();
                                 });
@@ -990,8 +1007,7 @@
                                     cryptoQuantity == "All Coins" &&
                                     coins.length < cryptoTotalCount
                                 ) {
-                                    coinStartIndex =
-                                        coinStartIndex + coins.length;
+                                    coinStartIndex = coins.length;
 
                                     // Abort the current fetch (if any)
                                     if (abortController) {
@@ -1011,6 +1027,22 @@
                                         return;
                                     }
 
+                                    // console.log(
+                                    //     "combining coins: ",
+                                    //     coins
+                                    //         ? coins.map((x) =>
+                                    //               x ? x.index : undefined
+                                    //           )
+                                    //         : null
+                                    // );
+
+                                    // console.log(
+                                    //     "with newCoins: ",
+                                    //     newCoins.map((x) =>
+                                    //         x ? x.index : undefined
+                                    //     )
+                                    // );
+
                                     coins = newCoins.reduce(
                                         (total, current) => {
                                             const copy = [...total];
@@ -1019,6 +1051,13 @@
                                         },
                                         coins || []
                                     );
+
+                                    // console.log(
+                                    //     "result: ",
+                                    //     coins.map((x) =>
+                                    //         x ? x.index : undefined
+                                    //     )
+                                    // );
 
                                     cryptoTotalCount =
                                         await getCyptoTotalCount();

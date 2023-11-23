@@ -533,6 +533,11 @@ header {
   text-align: left;
 }
 
+.crypto-header-price-col,
+.crypto-price-col {
+  display: none;
+}
+
 .stock-list-header {
   position: relative;
   display: -webkit-box;
@@ -631,6 +636,11 @@ header {
 }
 
 .crypto-name-text {
+  color: #7a7a7a;
+  letter-spacing: 0.4px;
+}
+
+.crypto-price-text {
   color: #7a7a7a;
   letter-spacing: 0.4px;
 }
@@ -1604,5 +1614,12 @@ body.dark {
 
 .dark .crypto-card-rank {
   background-color: #2e3037;
+}
+
+@media only screen and (min-width: 480px) {
+  .crypto-header-price-col,
+  .crypto-price-col {
+    display: table-cell;
+  }
 }
 /*# sourceMappingURL=style.css.map */
