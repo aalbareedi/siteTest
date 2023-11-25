@@ -567,7 +567,7 @@
                     import {
                         DISABLE_INFINITE_SCROLLING,
                         DISABLE_RENDER_DATA,
-                        COIN_EXPIRE_LIFESPAN,
+                        COIN_LIFESPAN,
                         SKELETON_ROW_OPTIONS,
                     } from "./utils/constants.js";
                     import {
@@ -752,6 +752,7 @@
                         //     newCoins.map((x) => (x ? x.index : undefined))
                         // );
 
+                        // Group coins by index
                         coins = newCoins.reduce((total, current) => {
                             const copy = [...total];
                             copy[current.index] = current;
@@ -809,7 +810,7 @@
                                     coin: coins[i],
                                     metadata: metadata[coins[i].id],
                                     changeTimeframe: cryptoTimeframe,
-                                    lifespan: COIN_EXPIRE_LIFESPAN,
+                                    lifespan: COIN_LIFESPAN,
                                     onScrollTo: async (isExpired) => {
                                         if (!isExpired) {
                                             return;
@@ -1047,6 +1048,7 @@
                                     //     )
                                     // );
 
+                                    // Group coins by index
                                     coins = newCoins.reduce(
                                         (total, current) => {
                                             const copy = [...total];

@@ -6,16 +6,15 @@ import {
 import { html } from "../utils/html.js";
 import { skeletonize } from "../skeletonize/skeletonize.js";
 import {
+    COIN_LIFESPAN,
     DISABLE_COIN_EXPIRATION,
     DISABLE_COIN_LIFESPAN_METER,
 } from "../utils/constants.js";
 
 /**
- *
- * @param {{symbol: string, name: string, quote: object}} coin
+ * @param {{symbol: string, name: string, quote: object, index: number, lifespan: number}} coin
  * @param {object} metadata
  * @param {"1h"|"24h"|"7d"|"30d"} changeTimeframe
- * @param {number} lifespan - The amount of time (in ms) before this data expires.
  * @param {Function} onScrollTo
  * @param {Function} onExpire
  * @returns
@@ -25,7 +24,6 @@ export default function CryptoRow({
     coin,
     metadata,
     changeTimeframe,
-    lifespan = null,
     onScrollTo = () => {},
     onExpire = () => {},
 }) {
@@ -70,21 +68,23 @@ export default function CryptoRow({
         </tr>
     `);
 
-    if (lifespan !== null) {
+    if (coin.lifespan !== null) {
         let isExpired = false;
 
         if (!DISABLE_COIN_EXPIRATION) {
-            let time = 0;
             const interval = setInterval(() => {
                 if (!element.isConnected) {
                     clearInterval(interval);
                     return;
                 }
 
-                time += 1000;
+                coin.lifespan -= 1000;
                 element.querySelector(".lifespan-meter").style.width =
-                    100 - (time / lifespan) * 100 + "%";
+                    (coin.lifespan / COIN_LIFESPAN) * 100 + "%";
             }, 1000);
+
+            element.querySelector(".lifespan-meter").style.width =
+                (coin.lifespan / COIN_LIFESPAN) * 100 + "%";
         }
 
         setTimeout(() => {
@@ -97,7 +97,7 @@ export default function CryptoRow({
                 isExpired = true;
                 onExpire();
             }
-        }, lifespan);
+        }, coin.lifespan);
 
         new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
