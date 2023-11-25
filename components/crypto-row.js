@@ -35,7 +35,7 @@ export default function CryptoRow({
     const element = html(`
         <tr class="crypto-row">
             <td class="crypto-number">${cmc_rank}</td>
-            <td>
+            <td class="crypto-name-price-col">
                 <div class="crypto-name-wrapper">
                     <div class="crypto-logo">
                         <img src="${metadata ? metadata.logo : ""}" />

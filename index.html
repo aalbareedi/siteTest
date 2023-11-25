@@ -633,6 +633,8 @@
                             .querySelector("#crypto-search-bar")
                             .scrollIntoView({ block: "nearest" });
 
+                        coins = null;
+
                         renderSkeletonRows(
                             coins ? Math.max(100, coins.length) : 100
                         );
@@ -688,6 +690,8 @@
                         document
                             .querySelector("#crypto-search-bar")
                             .scrollIntoView({ block: "nearest" });
+
+                        coins = null;
 
                         renderSkeletonRows(
                             coins ? Math.max(100, coins.length) : 100
