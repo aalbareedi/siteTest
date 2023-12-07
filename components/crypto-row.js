@@ -92,12 +92,22 @@ export default function CryptoRow({
                 }
 
                 coin.lifespan -= 1000;
-                element.querySelector(".lifespan-meter").style.width =
-                    (coin.lifespan / COIN_LIFESPAN) * 100 + "%";
+                element
+                    .querySelectorAll(".lifespan-meter")
+                    .forEach(
+                        (x) =>
+                            (x.style.width =
+                                (coin.lifespan / COIN_LIFESPAN) * 100 + "%")
+                    );
             }, 1000);
 
-            element.querySelector(".lifespan-meter").style.width =
-                (coin.lifespan / COIN_LIFESPAN) * 100 + "%";
+            element
+                .querySelectorAll(".lifespan-meter")
+                .forEach(
+                    (x) =>
+                        (x.style.width =
+                            (coin.lifespan / COIN_LIFESPAN) * 100 + "%")
+                );
         }
 
         setTimeout(() => {
