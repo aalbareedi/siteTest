@@ -40,10 +40,23 @@ export default function CryptoRow({
                     </div>
                     <div class="crypto-name">
                         <div class="crypto-symbol">${symbol}</div>
-                        <div class="crypto-name-text display-hidden">${name}</div>
                         <div class="crypto-price-text">${collapseZeros(
                             formatUsd(quote.USD.price)
                         )}</div>
+                    </div>
+                </div>
+                <div class="lifespan-meter ${
+                    DISABLE_COIN_LIFESPAN_METER ? "display-hidden" : ""
+                }"></div>
+            </td>
+            <td class="crypto-name-col">
+                <div class="crypto-name-wrapper">
+                    <div class="crypto-logo">
+                        <img src="${metadata ? metadata.logo : ""}" />
+                    </div>
+                    <div class="crypto-name">
+                        <div class="crypto-symbol">${symbol}</div>
+                        <div class="crypto-name-text">${name}</div>
                     </div>
                 </div>
                 <div class="lifespan-meter ${

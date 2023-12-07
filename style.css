@@ -534,7 +534,9 @@ header {
 }
 
 .crypto-header-price-col,
-.crypto-price-col {
+.crypto-price-col,
+.crypto-header-name-col,
+.crypto-name-col {
   display: none;
 }
 
@@ -638,6 +640,10 @@ header {
 .crypto-name-text {
   color: #7a7a7a;
   letter-spacing: 0.4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100px;
 }
 
 .crypto-price-text {
@@ -694,16 +700,11 @@ header {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-th.crypto-th-mcap {
-  text-align: right;
+  white-space: nowrap;
+  word-spacing: 1px;
 }
 
 .crypto-th-mcap .crypto-th-content {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   margin-left: auto;
 }
 
@@ -726,7 +727,7 @@ th.crypto-th-mcap {
 .sort-arrow i {
   line-height: initial;
   display: block;
-  height: 8px;
+  height: 8.5px;
 }
 
 .sort-arrow i.fa-sort-down {
@@ -1618,8 +1619,14 @@ body.dark {
 
 @media only screen and (min-width: 480px) {
   .crypto-header-price-col,
-  .crypto-price-col {
+  .crypto-price-col,
+  .crypto-header-name-col,
+  .crypto-name-col {
     display: table-cell;
+  }
+  .crypto-list-header-price,
+  .crypto-name-price-col {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
