@@ -33,7 +33,7 @@ body {
 }
 .input-group {
     display: flex;
-    column-gap: 40px;
+    gap: 40px;
     width: 100%;
 }
 .input-item {
@@ -47,26 +47,33 @@ body {
     width: fit-content;
     margin-bottom: 14px;
     font-size: 18px;
+    line-height: 26px;
     word-spacing: 0.6px;
 }
 .input-group .field-label {
     margin-bottom: 10px;
+}
+.label-number {
+    margin-right: 2px;
 }
 .answer-input {
     width: 100%;
     border: 2px solid #b0b0f6;
     border-radius: 10px;
     height: 52px;
-    padding: 0px 14px;
+    padding: 0px 16px;
     font-size: 18px;
+    line-height: 26px;
     background-color: whitesmoke;
 }
 .answer-textarea {
     width: 100%;
     max-width: 100%;
+    min-width: 100%;
+    min-height: 100px;
     border: 2px solid #b0b0f6;
     border-radius: 10px;
-    padding: 14px 14px;
+    padding: 14px 16px;
     font-size: 18px;
     line-height: 26px;
     background-color: whitesmoke;
@@ -85,4 +92,18 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+}
+
+// @media only screen and (hover: hover) {}
+
+@media only screen and (max-width: 820px) {
+    .questionnaire-form {
+        background-color: initial;
+        padding: 0px;
+    }
+}
+@media only screen and (max-width: 660px) {
+    .input-group {
+        flex-direction: column;
+    }
 }

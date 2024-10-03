@@ -47,8 +47,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 40px;
-          column-gap: 40px;
+  gap: 40px;
   width: 100%;
 }
 
@@ -66,6 +65,7 @@ body {
   width: fit-content;
   margin-bottom: 14px;
   font-size: 18px;
+  line-height: 26px;
   word-spacing: 0.6px;
 }
 
@@ -73,22 +73,29 @@ body {
   margin-bottom: 10px;
 }
 
+.label-number {
+  margin-right: 2px;
+}
+
 .answer-input {
   width: 100%;
   border: 2px solid #b0b0f6;
   border-radius: 10px;
   height: 52px;
-  padding: 0px 14px;
+  padding: 0px 16px;
   font-size: 18px;
+  line-height: 26px;
   background-color: whitesmoke;
 }
 
 .answer-textarea {
   width: 100%;
   max-width: 100%;
+  min-width: 100%;
+  min-height: 100px;
   border: 2px solid #b0b0f6;
   border-radius: 10px;
-  padding: 14px 14px;
+  padding: 14px 16px;
   font-size: 18px;
   line-height: 26px;
   background-color: whitesmoke;
@@ -114,5 +121,21 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 20px;
+}
+
+@media only screen and (max-width: 820px) {
+  .questionnaire-form {
+    background-color: initial;
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .input-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */
