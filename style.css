@@ -61,7 +61,9 @@ body {
 }
 
 .field-label {
-  width: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-bottom: 14px;
   font-size: 18px;
   word-spacing: 0.6px;
@@ -78,6 +80,7 @@ body {
   height: 52px;
   padding: 0px 14px;
   font-size: 18px;
+  background-color: whitesmoke;
 }
 
 .answer-textarea {
@@ -87,6 +90,8 @@ body {
   border-radius: 10px;
   padding: 14px 14px;
   font-size: 18px;
+  line-height: 26px;
+  background-color: whitesmoke;
 }
 
 .submit-btn {
