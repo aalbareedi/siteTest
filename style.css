@@ -20,6 +20,7 @@ button {
 body {
   background-color: #7f7ff9;
   padding: 60px 40px;
+  font-family: "Open Sans", sans-serif;
 }
 
 .questionnaire-form {
@@ -34,7 +35,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 40px;
-  background: #ffffff6b;
+  background-color: #9999ff;
   padding: 40px;
   border-radius: 20px;
   -webkit-box-align: center;
@@ -53,7 +54,7 @@ body {
 
 .input-item {
   background-color: #dadaff;
-  border: 3px solid #9999ff;
+  border: 3px solid #8e8eff;
   padding: 20px;
   border-radius: 20px;
   width: 100%;
@@ -61,16 +62,30 @@ body {
 
 .field-label {
   width: auto;
-  margin-bottom: 6px;
+  margin-bottom: 14px;
   font-size: 18px;
+  word-spacing: 0.6px;
+}
+
+.input-group .field-label {
+  margin-bottom: 10px;
 }
 
 .answer-input {
   width: 100%;
   border: 2px solid #b0b0f6;
   border-radius: 10px;
-  height: 50px;
-  padding: 0px 12px;
+  height: 52px;
+  padding: 0px 14px;
+  font-size: 18px;
+}
+
+.answer-textarea {
+  width: 100%;
+  max-width: 100%;
+  border: 2px solid #b0b0f6;
+  border-radius: 10px;
+  padding: 14px 14px;
   font-size: 18px;
 }
 
