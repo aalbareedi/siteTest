@@ -24,9 +24,16 @@
 
         <link rel="stylesheet" href="normalize.css" />
         <link rel="stylesheet" href="style.css" />
+        <!-- font awesome -->
+        <script
+            src="https://kit.fontawesome.com/c82a5882c2.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/css-typed-om@0.4.0/index.umd.min.js"></script>
     </head>
     <body>
         <form class="questionnaire-form">
+            <!-- Name & Email -->
             <div class="input-group">
                 <label class="input-item">
                     <div class="field-label">Fullname:</div>
@@ -49,6 +56,7 @@
                     />
                 </label>
             </div>
+            <!-- Business Name & Website -->
             <div class="input-group">
                 <label class="input-item">
                     <div class="field-label">Business Name:</div>
@@ -61,7 +69,7 @@
                     />
                 </label>
                 <label class="input-item">
-                    <div class="field-label">Current Website:</div>
+                    <div class="field-label">Current Website URL:</div>
                     <input
                         class="answer-input"
                         required
@@ -71,6 +79,7 @@
                     />
                 </label>
             </div>
+            <!-- What does your business do? -->
             <label class="input-item">
                 <div class="field-label">
                     <span class="label-number">#1)</span> What does your
@@ -84,6 +93,7 @@
                     placeholder="Describe what your business is about."
                 ></textarea>
             </label>
+            <!-- What problem(s) does your business solve? -->
             <label class="input-item">
                 <div class="field-label">
                     <span class="label-number">#2)</span> What problem(s) does
@@ -97,9 +107,46 @@
                     placeholder="Explain the solution "
                 ></textarea>
             </label>
+            <!-- What service(s) does your business offer? -->
             <label class="input-item">
                 <div class="field-label">
-                    <span class="label-number">#3)</span> What is your unique
+                    <span class="label-number">#3)</span> What service(s) does
+                    your business offer?
+                </div>
+                <div class="service-inputs">
+                    <div class="service-inputs-item">
+                        <div class="input-bullet-point"></div>
+                        <textarea
+                            required
+                            class="answer-textarea"
+                            rows="3"
+                            name="services"
+                            placeholder="Service name & description"
+                        ></textarea>
+                        <button
+                            class="remove-btn"
+                            type="button"
+                            x-ancestor-to-remove=".service-inputs-item"
+                            x-exclusive-with=".service-inputs.remove-btn"
+                            x-exclusive-minimum="1"
+                        >
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                </div>
+                <button
+                    class="add-more-btn"
+                    x-element-to-copy=".service-inputs-item"
+                    x-destination=".service-inputs"
+                    type="button"
+                >
+                    <i class="fa-solid fa-plus"></i> Add Service
+                </button>
+            </label>
+            <!-- What is your unique selling proposition (USP)? -->
+            <label class="input-item">
+                <div class="field-label">
+                    <span class="label-number">#4)</span> What is your unique
                     selling proposition (USP)?
                 </div>
                 <textarea
@@ -110,9 +157,10 @@
                     placeholder="What sets your business apart from your competitors?"
                 ></textarea>
             </label>
+            <!-- Who is your target audience? -->
             <label class="input-item">
                 <div class="field-label">
-                    <span class="label-number">#4)</span> Who is your target
+                    <span class="label-number">#5)</span> Who is your target
                     audience?
                 </div>
                 <textarea
@@ -123,9 +171,10 @@
                     placeholder="(demographics, industries, etc)"
                 ></textarea>
             </label>
+            <!-- What should the primary Call To Action (CTA) be for users? -->
             <label class="input-item">
                 <div class="field-label">
-                    <span class="label-number">#5)</span> What should the
+                    <span class="label-number">#6)</span> What should the
                     primary Call To Action (CTA) be for users?
                 </div>
                 <textarea
@@ -136,9 +185,10 @@
                     placeholder="What is the overall intended goal with the website?"
                 ></textarea>
             </label>
+            <!-- Are there any existing brand guidelines to include? -->
             <label class="input-item">
                 <div class="field-label">
-                    <span class="label-number">#6)</span> Are there any existing
+                    <span class="label-number">#7)</span> Are there any existing
                     brand guidelines to include?
                 </div>
                 <textarea
@@ -149,29 +199,7 @@
                     placeholder="Logos, Colors, Fonts"
                 ></textarea>
             </label>
-            <label class="input-item">
-                <div class="field-label">
-                    What service(s) does your business offer?
-                </div>
-                <div class="service-inputs">
-                    <div class="service-1">
-                        <input
-                            class="answer-input"
-                            required
-                            type="text"
-                            name="items"
-                        />
-                        <button class="remove-button hidden">Remove</button>
-                    </div>
-                </div>
-                <button
-                    class="add-more-btn"
-                    x-element-to-copy=".service-1"
-                    x-destination="service-inputs"
-                >
-                    +
-                </button>
-            </label>
+            <!-- Image Uploader -->
             <label class="input-item">
                 <div class="field-label">
                     Attach any images that need to be used.
@@ -183,5 +211,7 @@
         </form>
         <script type="module" src="index.js"></script>
         <script type="module" src="add-more-btn.js"></script>
+        <script type="module" src="remove-btn.js"></script>
+        <script type="module" src="exclusive-with.js"></script>
     </body>
 </html>
