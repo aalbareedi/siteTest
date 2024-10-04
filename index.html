@@ -35,7 +35,7 @@
         <form class="questionnaire-form">
             <!-- Name & Email -->
             <div class="input-group">
-                <label class="input-item">
+                <div class="input-item">
                     <div class="field-label">Fullname:</div>
                     <input
                         class="answer-input"
@@ -44,8 +44,8 @@
                         name="fullName"
                         placeholder="Firstname Lastname"
                     />
-                </label>
-                <label class="input-item">
+                </div>
+                <div class="input-item">
                     <div class="field-label">Email:</div>
                     <input
                         class="answer-input"
@@ -54,11 +54,11 @@
                         name="email"
                         placeholder="email@address.com"
                     />
-                </label>
+                </div>
             </div>
             <!-- Business Name & Website -->
             <div class="input-group">
-                <label class="input-item">
+                <div class="input-item">
                     <div class="field-label">Business Name:</div>
                     <input
                         class="answer-input"
@@ -67,8 +67,8 @@
                         name="businessName"
                         placeholder="Name of Business"
                     />
-                </label>
-                <label class="input-item">
+                </div>
+                <div class="input-item">
                     <div class="field-label">Current Website URL:</div>
                     <input
                         class="answer-input"
@@ -77,10 +77,10 @@
                         name="current-website"
                         placeholder="www.website.com"
                     />
-                </label>
+                </div>
             </div>
             <!-- What does your business do? -->
-            <label class="input-item">
+            <div class="input-item">
                 <div class="field-label">
                     <span class="label-number">#1)</span> What does your
                     business do?
@@ -92,9 +92,9 @@
                     name=""
                     placeholder="Describe what your business is about."
                 ></textarea>
-            </label>
+            </div>
             <!-- What problem(s) does your business solve? -->
-            <label class="input-item">
+            <div class="input-item">
                 <div class="field-label">
                     <span class="label-number">#2)</span> What problem(s) does
                     your business solve?
@@ -106,9 +106,9 @@
                     name=""
                     placeholder="Explain the solution "
                 ></textarea>
-            </label>
+            </div>
             <!-- What service(s) does your business offer? -->
-            <label class="input-item">
+            <div class="input-item">
                 <div class="field-label">
                     <span class="label-number">#3)</span> What service(s) does
                     your business offer?
@@ -134,17 +134,23 @@
                         </button>
                     </div>
                 </div>
-                <button
-                    class="add-more-btn"
-                    x-element-to-copy=".service-inputs-item"
-                    x-destination=".service-inputs"
-                    type="button"
-                >
-                    <i class="fa-solid fa-plus"></i> Add Service
-                </button>
-            </label>
+                <div class="add-row">
+                    <button
+                        class="add-more-btn"
+                        x-element-to-copy=".service-inputs-item"
+                        x-destination=".service-inputs"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-plus"></i> Add Service
+                    </button>
+                    <div class="remainder-info">
+                        <span class="remainder-amount">5</span> Optional
+                        Remaining
+                    </div>
+                </div>
+            </div>
             <!-- What is your unique selling proposition (USP)? -->
-            <label class="input-item">
+            <div class="input-item">
                 <div class="field-label">
                     <span class="label-number">#4)</span> What is your unique
                     selling proposition (USP)?
@@ -156,9 +162,9 @@
                     name=""
                     placeholder="What sets your business apart from your competitors?"
                 ></textarea>
-            </label>
+            </div>
             <!-- Who is your target audience? -->
-            <label class="input-item">
+            <div class="input-item">
                 <div class="field-label">
                     <span class="label-number">#5)</span> Who is your target
                     audience?
@@ -170,9 +176,9 @@
                     name=""
                     placeholder="(demographics, industries, etc)"
                 ></textarea>
-            </label>
+            </div>
             <!-- What should the primary Call To Action (CTA) be for users? -->
-            <label class="input-item">
+            <div class="input-item">
                 <div class="field-label">
                     <span class="label-number">#6)</span> What should the
                     primary Call To Action (CTA) be for users?
@@ -184,9 +190,9 @@
                     name=""
                     placeholder="What is the overall intended goal with the website?"
                 ></textarea>
-            </label>
+            </div>
             <!-- Are there any existing brand guidelines to include? -->
-            <label class="input-item">
+            <div class="input-item">
                 <div class="field-label">
                     <span class="label-number">#7)</span> Are there any existing
                     brand guidelines to include?
@@ -198,14 +204,14 @@
                     name=""
                     placeholder="Logos, Colors, Fonts"
                 ></textarea>
-            </label>
+            </div>
             <!-- Image Uploader -->
-            <label class="input-item">
+            <div class="input-item">
                 <div class="field-label">
                     Attach any images that need to be used.
                 </div>
                 <input class="" required type="file" name="image" />
-            </label>
+            </div>
             <button class="submit-btn" type="submit">Submit</button>
             <div class="submission-message hidden"></div>
         </form>
