@@ -22,7 +22,7 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 .questionnaire-form {
-    max-width: 1080px;
+    max-width: 1040px;
     margin: 0 auto;
     width: 100%;
     display: flex;
@@ -81,16 +81,16 @@ body {
     background-color: whitesmoke;
     word-spacing: 0.5px;
 }
-.service-inputs {
+.service-inputs-group {
     display: flex;
     flex-direction: column;
     row-gap: 22px;
 }
-.service-inputs-item {
+.service-input-item {
     display: flex;
     column-gap: 12px;
 }
-.service-inputs-item .answer-textarea {
+.service-input-item .answer-textarea {
     max-width: initial;
     min-width: initial;
 }
@@ -125,7 +125,8 @@ body {
     margin-top: 20px;
 }
 .add-more-btn {
-    width: 152px;
+    // width: 152px;
+    padding: 0px 18px;
     height: 44px;
     background-color: #3898ec;
     border-radius: 10px;
@@ -144,6 +145,7 @@ body {
 }
 .remainder-info {
     font-size: 16px;
+    color: #2e2e2e;
 }
 .submit-btn {
     width: 140px;

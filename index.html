@@ -73,13 +73,13 @@
                     <input
                         class="answer-input"
                         required
-                        type="text"
+                        type="url"
                         name="current-website"
                         placeholder="www.website.com"
                     />
                 </div>
             </div>
-            <!-- What does your business do? -->
+            <!-- 1) What does your business do? -->
             <div class="input-item">
                 <div class="field-label">
                     <span class="label-number">#1)</span> What does your
@@ -93,7 +93,7 @@
                     placeholder="Describe what your business is about."
                 ></textarea>
             </div>
-            <!-- What problem(s) does your business solve? -->
+            <!-- 2) What problem(s) does your business solve? -->
             <div class="input-item">
                 <div class="field-label">
                     <span class="label-number">#2)</span> What problem(s) does
@@ -107,14 +107,14 @@
                     placeholder="Explain the solution "
                 ></textarea>
             </div>
-            <!-- What service(s) does your business offer? -->
+            <!-- 3) What service(s) does your business offer? -->
             <div class="input-item">
                 <div class="field-label">
                     <span class="label-number">#3)</span> What service(s) does
                     your business offer?
                 </div>
-                <div class="service-inputs">
-                    <div class="service-inputs-item">
+                <div class="service-inputs-group">
+                    <div class="service-input-item">
                         <div class="input-bullet-point"></div>
                         <textarea
                             required
@@ -126,8 +126,8 @@
                         <button
                             class="remove-btn"
                             type="button"
-                            x-ancestor-to-remove=".service-inputs-item"
-                            x-exclusive-with=".service-inputs.remove-btn"
+                            x-ancestor-to-remove=".service-input-item"
+                            x-exclusive-with=".service-inputs-group.remove-btn"
                             x-exclusive-minimum="1"
                         >
                             <i class="fa-solid fa-trash-can"></i>
@@ -137,8 +137,8 @@
                 <div class="add-row">
                     <button
                         class="add-more-btn"
-                        x-element-to-copy=".service-inputs-item"
-                        x-destination=".service-inputs"
+                        x-element-to-copy=".service-input-item"
+                        x-destination=".service-inputs-group"
                         type="button"
                     >
                         <i class="fa-solid fa-plus"></i> Add Service
@@ -149,7 +149,7 @@
                     </div>
                 </div>
             </div>
-            <!-- What is your unique selling proposition (USP)? -->
+            <!-- 4) What is your unique selling proposition (USP)? -->
             <div class="input-item">
                 <div class="field-label">
                     <span class="label-number">#4)</span> What is your unique
@@ -163,7 +163,7 @@
                     placeholder="What sets your business apart from your competitors?"
                 ></textarea>
             </div>
-            <!-- Who is your target audience? -->
+            <!-- 5) Who is your target audience? -->
             <div class="input-item">
                 <div class="field-label">
                     <span class="label-number">#5)</span> Who is your target
@@ -177,7 +177,7 @@
                     placeholder="(demographics, industries, etc)"
                 ></textarea>
             </div>
-            <!-- What should the primary Call To Action (CTA) be for users? -->
+            <!-- 6) What should the primary Call To Action (CTA) be for users? -->
             <div class="input-item">
                 <div class="field-label">
                     <span class="label-number">#6)</span> What should the
@@ -191,10 +191,52 @@
                     placeholder="What is the overall intended goal with the website?"
                 ></textarea>
             </div>
-            <!-- Are there any existing brand guidelines to include? -->
+            <!-- 7) Who are your competitors? -->
             <div class="input-item">
                 <div class="field-label">
-                    <span class="label-number">#7)</span> Are there any existing
+                    <span class="label-number">#7)</span> Who are your
+                    competitors?
+                </div>
+                <div class="service-inputs-group">
+                    <div class="service-input-item">
+                        <div class="input-bullet-point"></div>
+                        <input
+                            class="answer-input"
+                            required
+                            type="url"
+                            name="comp-website"
+                            placeholder="www.website.com"
+                        />
+                        <button
+                            class="remove-btn"
+                            type="button"
+                            x-ancestor-to-remove=".service-input-item"
+                            x-exclusive-with=".service-inputs-group.remove-btn"
+                            x-exclusive-minimum="1"
+                        >
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="add-row">
+                    <button
+                        class="add-more-btn"
+                        x-element-to-copy=".service-input-item"
+                        x-destination=".service-inputs-group"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-plus"></i> Add Competitor
+                    </button>
+                    <div class="remainder-info">
+                        <span class="remainder-amount">2</span> Optional
+                        Remaining
+                    </div>
+                </div>
+            </div>
+            <!-- 8) Are there any existing brand guidelines to include? -->
+            <div class="input-item">
+                <div class="field-label">
+                    <span class="label-number">#8)</span> Are there any existing
                     brand guidelines to include?
                 </div>
                 <textarea
@@ -212,6 +254,20 @@
                 </div>
                 <input class="" required type="file" name="image" />
             </div>
+            <!-- Any other notable information? -->
+            <div class="input-item">
+                <div class="field-label">
+                    <span class="label-number">#x)</span> Any other notable
+                    information to consider?
+                </div>
+                <textarea
+                    class="answer-textarea"
+                    rows="4"
+                    name=""
+                    placeholder="Add anything else that's relevant"
+                ></textarea>
+            </div>
+
             <button class="submit-btn" type="submit">Submit</button>
             <div class="submission-message hidden"></div>
         </form>
