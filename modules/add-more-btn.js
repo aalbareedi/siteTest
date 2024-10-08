@@ -41,14 +41,15 @@ const observer = new MutationObserver((mutationsList) => {
     for (let mutation of mutationsList) {
         if (mutation.type === "childList") {
             mutation.addedNodes.forEach((x) => {
+                if (!(x instanceof Element)) {
+                    return;
+                }
+
                 x.querySelectorAll(".add-more-btn").forEach((x) =>
                     AddMoreBtn(x)
                 );
 
-                if (
-                    x instanceof Element &&
-                    x.classList.contains("add-more-btn")
-                ) {
+                if (x.classList.contains("add-more-btn")) {
                     AddMoreBtn(x);
                 }
             });

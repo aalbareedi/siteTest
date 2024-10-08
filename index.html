@@ -36,7 +36,7 @@
             <!-- Name & Email -->
             <div class="input-group">
                 <div class="input-item">
-                    <div class="field-label">Fullname:</div>
+                    <label class="field-label">Fullname:</label>
                     <input
                         class="answer-input"
                         required
@@ -46,7 +46,7 @@
                     />
                 </div>
                 <div class="input-item">
-                    <div class="field-label">Email:</div>
+                    <label class="field-label">Email:</label>
                     <input
                         class="answer-input"
                         required
@@ -59,7 +59,7 @@
             <!-- Business Name & Website -->
             <div class="input-group">
                 <div class="input-item">
-                    <div class="field-label">Business Name:</div>
+                    <label class="field-label">Business Name:</label>
                     <input
                         class="answer-input"
                         required
@@ -69,7 +69,7 @@
                     />
                 </div>
                 <div class="input-item">
-                    <div class="field-label">Current Website URL:</div>
+                    <label class="field-label">Current Website URL:</label>
                     <input
                         class="answer-input"
                         required
@@ -81,10 +81,10 @@
             </div>
             <!-- 1) What does your business do? -->
             <div class="input-item">
-                <div class="field-label">
+                <label class="field-label">
                     <span class="label-number">#1)</span> What does your
                     business do?
-                </div>
+                </label>
                 <textarea
                     required
                     class="answer-textarea"
@@ -95,10 +95,10 @@
             </div>
             <!-- 2) What problem(s) does your business solve? -->
             <div class="input-item">
-                <div class="field-label">
+                <label class="field-label">
                     <span class="label-number">#2)</span> What problem(s) does
                     your business solve?
-                </div>
+                </label>
                 <textarea
                     required
                     class="answer-textarea"
@@ -107,54 +107,12 @@
                     placeholder="Explain the solution "
                 ></textarea>
             </div>
-            <!-- 3) What service(s) does your business offer? -->
-            <div class="input-item">
-                <div class="field-label">
-                    <span class="label-number">#3)</span> What service(s) does
-                    your business offer?
-                </div>
-                <div class="service-inputs-group">
-                    <div class="service-input-item">
-                        <div class="input-bullet-point"></div>
-                        <textarea
-                            required
-                            class="answer-textarea"
-                            rows="3"
-                            name="services"
-                            placeholder="Service name & description"
-                        ></textarea>
-                        <button
-                            class="remove-btn"
-                            type="button"
-                            x-ancestor-to-remove=".service-input-item"
-                            x-exclusive-with=".service-inputs-group.remove-btn"
-                            x-exclusive-minimum="1"
-                        >
-                            <i class="fa-solid fa-trash-can"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="add-row">
-                    <button
-                        class="add-more-btn"
-                        x-element-to-copy=".service-input-item"
-                        x-destination=".service-inputs-group"
-                        type="button"
-                    >
-                        <i class="fa-solid fa-plus"></i> Add Service
-                    </button>
-                    <div class="remainder-info">
-                        <span class="remainder-amount">5</span> Optional
-                        Remaining
-                    </div>
-                </div>
-            </div>
             <!-- 4) What is your unique selling proposition (USP)? -->
             <div class="input-item">
-                <div class="field-label">
+                <label class="field-label">
                     <span class="label-number">#4)</span> What is your unique
                     selling proposition (USP)?
-                </div>
+                </label>
                 <textarea
                     required
                     class="answer-textarea"
@@ -165,10 +123,10 @@
             </div>
             <!-- 5) Who is your target audience? -->
             <div class="input-item">
-                <div class="field-label">
+                <label class="field-label">
                     <span class="label-number">#5)</span> Who is your target
                     audience?
-                </div>
+                </label>
                 <textarea
                     required
                     class="answer-textarea"
@@ -179,10 +137,10 @@
             </div>
             <!-- 6) What should the primary Call To Action (CTA) be for users? -->
             <div class="input-item">
-                <div class="field-label">
+                <label class="field-label">
                     <span class="label-number">#6)</span> What should the
                     primary Call To Action (CTA) be for users?
-                </div>
+                </label>
                 <textarea
                     required
                     class="answer-textarea"
@@ -191,14 +149,64 @@
                     placeholder="What is the overall intended goal with the website?"
                 ></textarea>
             </div>
+            <!-- 3) What service(s) does your business offer? -->
+            <div class="input-item service-input-item">
+                <label class="field-label">
+                    <span class="label-number">#3)</span> What service(s) does
+                    your business offer?
+                </label>
+                <div class="list-inputs-group">
+                    <div class="list-input-item">
+                        <div class="input-bullet-point"></div>
+                        <textarea
+                            required
+                            class="answer-textarea"
+                            rows="3"
+                            name="services"
+                            placeholder="Service name & description"
+                        ></textarea>
+                        <button
+                            class="remove-btn"
+                            x-ancestor-to-remove=".service-input-item .list-input-item"
+                            type="button"
+                        >
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="add-row">
+                    <button
+                        class="add-more-btn"
+                        x-element-to-copy=".service-input-item .list-input-item"
+                        x-destination=".service-input-item .list-inputs-group"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-plus"></i> Add Service
+                    </button>
+                    <div class="remainder-info">
+                        <span class="remainder-amount"></span> Optional
+                        Remaining
+                    </div>
+                </div>
+                <script type="module">
+                    import InputListSection from "./input-list-section.js";
+
+                    const MINIMUM = 1;
+                    const MAXIMUM = 6;
+                    const SECTION = document.querySelector(
+                        ".service-input-item"
+                    );
+                    InputListSection(SECTION, MINIMUM, MAXIMUM);
+                </script>
+            </div>
             <!-- 7) Who are your competitors? -->
-            <div class="input-item">
-                <div class="field-label">
+            <div class="input-item comp-input-item">
+                <label class="field-label">
                     <span class="label-number">#7)</span> Who are your
                     competitors?
-                </div>
-                <div class="service-inputs-group">
-                    <div class="service-input-item">
+                </label>
+                <div class="list-inputs-group">
+                    <div class="list-input-item">
                         <div class="input-bullet-point"></div>
                         <input
                             class="answer-input"
@@ -209,10 +217,8 @@
                         />
                         <button
                             class="remove-btn"
+                            x-ancestor-to-remove=".comp-input-item .list-input-item"
                             type="button"
-                            x-ancestor-to-remove=".service-input-item"
-                            x-exclusive-with=".service-inputs-group.remove-btn"
-                            x-exclusive-minimum="1"
                         >
                             <i class="fa-solid fa-trash-can"></i>
                         </button>
@@ -221,24 +227,86 @@
                 <div class="add-row">
                     <button
                         class="add-more-btn"
-                        x-element-to-copy=".service-input-item"
-                        x-destination=".service-inputs-group"
+                        x-element-to-copy=".comp-input-item .list-input-item"
+                        x-destination=".comp-input-item .list-inputs-group"
                         type="button"
                     >
                         <i class="fa-solid fa-plus"></i> Add Competitor
                     </button>
                     <div class="remainder-info">
-                        <span class="remainder-amount">2</span> Optional
+                        <span class="remainder-amount"></span> Optional
                         Remaining
                     </div>
                 </div>
+                <script type="module">
+                    import InputListSection from "./input-list-section.js";
+
+                    const MINIMUM = 1;
+                    const MAXIMUM = 3;
+                    const SECTION = document.querySelector(".comp-input-item");
+                    InputListSection(SECTION, MINIMUM, MAXIMUM);
+                </script>
             </div>
-            <!-- 8) Are there any existing brand guidelines to include? -->
-            <div class="input-item">
-                <div class="field-label">
-                    <span class="label-number">#8)</span> Are there any existing
-                    brand guidelines to include?
+            <!-- 8) What are the benefits / features of your product/business? -->
+            <div class="input-item benefit-input-item">
+                <label class="field-label">
+                    <span class="label-number">#8)</span> What are the benefits
+                    / features of your product/business?
+                </label>
+                <div class="list-inputs-group">
+                    <div class="list-input-item">
+                        <div class="input-bullet-point"></div>
+                        <textarea
+                            required
+                            class="answer-textarea"
+                            rows="2"
+                            name="benefits"
+                            placeholder="Benefit"
+                        ></textarea>
+                        <button
+                            class="remove-btn"
+                            x-ancestor-to-remove=".benefit-input-item .list-input-item"
+                            type="button"
+                        >
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
                 </div>
+                <div class="add-row">
+                    <button
+                        class="add-more-btn"
+                        x-element-to-copy=".benefit-input-item .list-input-item"
+                        x-destination=".benefit-input-item .list-inputs-group"
+                        type="button"
+                    >
+                        <i class="fa-solid fa-plus"></i> Add Benefit
+                    </button>
+                    <div class="remainder-info">
+                        <span class="remainder-amount"></span> Optional
+                        Remaining
+                    </div>
+                </div>
+                <script type="module">
+                    import InputListSection from "./input-list-section.js";
+
+                    const MINIMUM = 1;
+                    const MAXIMUM = 6;
+                    const SECTION = document.querySelector(
+                        ".benefit-input-item"
+                    );
+                    InputListSection(SECTION, MINIMUM, MAXIMUM);
+                </script>
+            </div>
+            <!-- 9) How does it work? -->
+            <!-- 10) Why choose you? -->
+            <!-- 11) Testimonials -->
+            <!-- 12) FAQs -->
+            <!-- 13) Are there any existing brand guidelines to include? -->
+            <div class="input-item">
+                <label class="field-label">
+                    <span class="label-number">#13)</span> Are there any
+                    existing brand guidelines to include?
+                </label>
                 <textarea
                     required
                     class="answer-textarea"
@@ -247,19 +315,20 @@
                     placeholder="Logos, Colors, Fonts"
                 ></textarea>
             </div>
-            <!-- Image Uploader -->
+            <!-- 14) Image Uploader -->
             <div class="input-item">
-                <div class="field-label">
-                    Attach any images that need to be used.
-                </div>
+                <label class="field-label">
+                    <span class="label-number">#14)</span> Attach any images
+                    that need to be used.
+                </label>
                 <input class="" required type="file" name="image" />
             </div>
-            <!-- Any other notable information? -->
+            <!-- 15) Any other notable information? -->
             <div class="input-item">
-                <div class="field-label">
-                    <span class="label-number">#x)</span> Any other notable
+                <label class="field-label">
+                    <span class="label-number">#15)</span> Any other notable
                     information to consider?
-                </div>
+                </label>
                 <textarea
                     class="answer-textarea"
                     rows="4"
@@ -272,8 +341,7 @@
             <div class="submission-message hidden"></div>
         </form>
         <script type="module" src="index.js"></script>
-        <script type="module" src="add-more-btn.js"></script>
-        <script type="module" src="remove-btn.js"></script>
-        <script type="module" src="exclusive-with.js"></script>
+        <script type="module" src="./modules/add-more-btn.js"></script>
+        <script type="module" src="./modules/remove-btn.js"></script>
     </body>
 </html>

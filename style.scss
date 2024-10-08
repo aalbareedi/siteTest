@@ -15,6 +15,7 @@ button {
 }
 .invisible {
     visibility: hidden;
+    opacity: 0;
 }
 body {
     background-color: #7f7ff9;
@@ -51,6 +52,7 @@ body {
     font-size: 18px;
     line-height: 26px;
     word-spacing: 0.5px;
+    display: block;
 }
 .input-group .field-label {
     margin-bottom: 10px;
@@ -60,37 +62,37 @@ body {
 }
 .answer-input {
     width: 100%;
-    border: 2px solid #b0b0f6;
+    background-color: #ececff;
+    border: 2px solid #b7b7ff;
     border-radius: 10px;
     height: 52px;
     padding: 0px 16px;
     font-size: 18px;
     line-height: 26px;
-    background-color: whitesmoke;
 }
 .answer-textarea {
     width: 100%;
     max-width: 100%;
     min-width: 100%;
     min-height: 100px;
-    border: 2px solid #b0b0f6;
+    background-color: #ececff;
+    border: 2px solid #b7b7ff;
     border-radius: 10px;
     padding: 14px 16px;
     font-size: 18px;
     line-height: 26px;
-    background-color: whitesmoke;
     word-spacing: 0.5px;
 }
-.service-inputs-group {
+.list-inputs-group {
     display: flex;
     flex-direction: column;
     row-gap: 22px;
 }
-.service-input-item {
+.list-input-item {
     display: flex;
     column-gap: 12px;
 }
-.service-input-item .answer-textarea {
+.list-input-item .answer-textarea {
     max-width: initial;
     min-width: initial;
 }
@@ -121,11 +123,13 @@ body {
     display: flex;
     align-items: center;
     column-gap: 12px;
+    row-gap: 6px;
     padding-left: 32px;
+    padding-right: 10px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 .add-more-btn {
-    // width: 152px;
     padding: 0px 18px;
     height: 44px;
     background-color: #3898ec;
@@ -139,13 +143,19 @@ body {
     column-gap: 8px;
     word-spacing: 0.5px;
     transition: all 0.2s;
+    white-space: nowrap;
 }
 .add-more-btn i {
     font-size: 18px;
 }
+.disabled-add-btn {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
 .remainder-info {
     font-size: 16px;
     color: #2e2e2e;
+    white-space: nowrap;
 }
 .submit-btn {
     width: 140px;
@@ -161,6 +171,9 @@ body {
 @media only screen and (hover: hover) {
     .add-more-btn:hover {
         background-color: #2a79be;
+    }
+    .disabled-add-btn:hover {
+        background-color: #3898ec;
     }
     .remove-btn:hover {
         background-color: #b23737;

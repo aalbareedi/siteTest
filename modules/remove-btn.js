@@ -28,12 +28,13 @@ const observer = new MutationObserver((mutationsList) => {
     for (let mutation of mutationsList) {
         if (mutation.type === "childList") {
             mutation.addedNodes.forEach((x) => {
+                if (!(x instanceof Element)) {
+                    return;
+                }
+
                 x.querySelectorAll(".remove-btn").forEach((x) => RemoveBtn(x));
 
-                if (
-                    x instanceof Element &&
-                    x.classList.contains("remove-btn")
-                ) {
+                if (x.classList.contains("remove-btn")) {
                     RemoveBtn(x);
                 }
             });
