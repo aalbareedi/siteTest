@@ -1,0 +1,23 @@
+{
+    "name": "questionnaire",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "node src/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aalbareedi/questionnaire.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/aalbareedi/questionnaire/issues"
+    },
+    "homepage": "https://github.com/aalbareedi/questionnaire#readme",
+    "dependencies": {
+        "express": "^4.21.1"
+    }
+}
